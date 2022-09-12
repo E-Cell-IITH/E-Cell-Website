@@ -1,0 +1,108 @@
+.QC {
+    color: rgba(255, 255, 255, 1);
+    background: linear-gradient(180deg, #281332 0%, #000000 100%);
+    width: 100%;
+    height: 18vw;
+}
+
+.img31 {
+    width: 40%;
+}
+
+.img30 {
+    width: 20%;
+}
+
+.QL {
+    text-align: left;
+}
+
+.QL2 {
+    text-align: left;
+}
+
+.ql {
+    font-size: 2vw;
+    font-weight: bold;
+}
+.log {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.logo {
+    width: 4vw;
+}
+
+.loc {
+    width: 1.2vw;
+    height: 1.5vw;
+    margin-right: 1.9vw;
+    margin-left: 1vw;
+}
+
+.list {
+    line-height: 3vw;
+    font-size: 1.3vw;
+}
+.list1 {
+    line-height: 1.6vw;
+    font-size: 1.3vw;
+}
+
+.icon {
+    width: 1.7vw;
+    height: auto;
+    margin: 1vw;
+}
+.final{
+    color: rgba(255, 255, 255, 1);
+}
+.image{
+    display: flex;
+    justify-content: center;
+}
+.ecell{
+    margin-top: 3vw;
+    width: 10vw;
+    height: auto;
+}
+.think{
+    color:  rgba(255, 255, 255, 0.9);;
+    display: flex;
+    justify-content: center;
+    font-size: 1.6vw;
+}
+.images{
+    display: flex;
+    justify-content: center;
+}
+
+@media (max-width:1100px){
+    .ecell{
+        margin-top: 5vw;
+        width: 12vw;
+        height: auto;
+    }
+    .think{
+        font-size: 1.4vw;
+    }
+    .icon {
+        margin: 1vw;
+        width: 2vw;
+        height: auto;
+    }
+    .list {
+        line-height: 4vw;
+        font-size: 1.9vw;
+    }
+    .list1 {
+        line-height: 2.6vw;
+        font-size: 1.85vw;
+    }
+    .q1{
+        text-align: center;
+        font-size: 4vw;
+    }
+}

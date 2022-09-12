@@ -1,0 +1,13 @@
+html,
+body {
+  padding: 0vw;
+  margin: 0vw;
+  overflow-x: hidden;
+  font-family: 'Montserrat', serif;
+  background-color: rgba(0, 0, 0, 1);
+}
+
+* {
+  box-sizing: border-box;
+}
+
