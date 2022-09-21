@@ -122,7 +122,7 @@ export default function Second() {
           <Grid item xs={2}></Grid>
           <Grid item xs={8} className={style.cont} id={style.cont}>
             <br />
-            PR & Networking domain collaborates with media companies and signs deals so as to spread the word about our events. We also collaborate with social media partners/influencers. The deals are signed based on mutual agreement between both the parties. The collaborations happen usually around 1-2 weeks before the e-cell. The companies collaborating with us are introduced as our 'media partner'. The companies acquire higher reach because of the high foot fall of the E-cell. The companies get to have their advertising during our flagship event. Their commercials/logos can be aired in between the e-summit depending on the needs of the respective company.
+            PR &#38; Networking domain collaborates with media companies and signs deals so as to spread the word about our events. We also collaborate with social media partners/influencers. The deals are signed based on mutual agreement between both the parties. The collaborations happen usually around 1-2 weeks before the e-cell. The companies collaborating with us are introduced as our &#39;media partner&#39;. The companies acquire higher reach because of the high foot fall of the E-cell. The companies get to have their advertising during our flagship event. Their commercials/logos can be aired in between the e-summit depending on the needs of the respective company.
 
           </Grid>
           <Grid item xs={1}></Grid>
