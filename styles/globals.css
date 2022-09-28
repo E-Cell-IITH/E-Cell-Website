@@ -3,8 +3,8 @@ body {
   padding: 0vw;
   margin: 0vw;
   overflow-x: hidden;
-  font-family: "Montserrat", serif;
   background-color: rgba(0, 0, 0, 1);
+  font-family: "Poppins", sans-serif;
 }
 
 * {
@@ -13,229 +13,30 @@ body {
 
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap");
-*,
-*::after,
-*::before {
-  margin: 0;
-  padding: 0;
-  box-sizing: inherit;
-}
-
-html {
-  font-size: 62.5%;
-}
-
-body {
-  box-sizing: border-box;
-}
-
-body {
-  font-family: "Poppins", sans-serif;
-  font-weight: 500;
-  line-height: 1.7;
-  color: #777;
-}
-
-.heading-primary {
-  color: #ffc93c;
-  text-transform: uppercase;
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-  margin-bottom: 6rem;
-}
-.heading-primary--main {
-  font-family: "Playfair Display", sans-serif;
-  display: block;
-  font-size: 8rem;
-  font-weight: 500;
-  letter-spacing: 3.5rem;
-  margin-bottom: 1rem;
-}
-@media only screen and (max-width: 37.5em) {
-  .heading-primary--main {
-    letter-spacing: 1rem;
-    font-size: 4rem;
-  }
-}
-.heading-primary--sub {
-  display: block;
-  font-size: 2rem;
-  width: 50rem;
-  font-weight: 500;
-  letter-spacing: 0.6rem;
-  line-height: 3rem;
-}
-@media only screen and (max-width: 37.5em) {
-  .heading-primary--sub {
-    letter-spacing: 0.5rem;
-    font-size: 1.3rem;
-    width: 30rem;
-  }
-}
-
-.heading-secondary {
-  text-transform: uppercase;
-  font-size: 3rem;
-  font-weight: 700;
-  color: #ffc93c;
-  display: inline-block;
-  transition: all 0.2s;
-  letter-spacing: 2px;
-}
-@media only screen and (max-width: 56.25em) {
-  .heading-secondary {
-    font-size: 2rem;
-  }
-}
-@media only screen and (max-width: 37.5em) {
-  .heading-secondary {
-    font-size: 1.5rem;
-    letter-spacing: 1px;
-  }
-}
-.heading-secondary:hover {
-  transform: scale(1.1);
-  text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.2);
-}
-
-.heading-teritiary {
-  color: #ffc93c;
-  margin-bottom: 3rem;
-  font-size: 2rem;
-  font-weight: 700;
-  text-transform: uppercase;
-}
-@media only screen and (max-width: 56.25em) {
-  .heading-teritiary {
-    margin-bottom: 1rem;
-    font-size: 1.6rem;
-  }
-}
-
-.paragraph {
-  color: #eee;
-  font-size: 1.6rem;
-}
-.paragraph:not(:last-child) {
-  margin-bottom: 3rem;
-}
-@media only screen and (max-width: 37.5em) {
-  .paragraph {
-    font-size: 1.3rem;
-    letter-spacing: 1px;
-  }
-}
-
-.grid {
-  display: grid;
-  gap: 10rem;
-  max-width: 135rem;
-  margin: 0 auto;
-}
-@media only screen and (max-width: 75em) {
-  .grid {
-    max-width: 50rem;
-  }
-}
-@media only screen and (max-width: 37.5em) {
-  .grid {
-    max-width: 40rem;
-  }
-}
-
-.grid-2 {
-  grid-template-columns: repeat(2, 1fr);
-}
-@media only screen and (max-width: 75em) {
-  .grid-2 {
-    grid-template-columns: repeat(1, 1fr);
-  }
-}
-
-.grid-3 {
-  grid-template-columns: repeat(3, 1fr);
-}
-@media only screen and (max-width: 75em) {
-  .grid-3 {
-    grid-template-columns: repeat(2, 1fr);
-    max-width: 80rem;
-  }
-}
-@media only screen and (max-width: 75em) {
-  .grid-3 {
-    grid-template-columns: repeat(2, 1fr);
-    max-width: 80rem;
-  }
-}
-@media only screen and (max-width: 37.5em) {
-  .grid-3 {
-    grid-template-columns: repeat(1, 1fr);
-    max-width: 30rem;
-  }
-}
-
-.u-center-text {
-  text-align: center;
-}
-
-.u-margin-bottom-big {
-  margin-bottom: 8rem !important;
-}
-@media only screen and (max-width: 56.25em) {
-  .u-margin-bottom-big {
-    margin-bottom: 5rem !important;
-  }
-}
-
-.u-margin-bottom-medium {
-  margin-bottom: 4rem !important;
-}
-@media only screen and (max-width: 56.25em) {
-  .u-margin-bottom-medium {
-    margin-bottom: 3rem !important;
-  }
-}
-
-.u-margin-bottom-small {
-  margin-bottom: 1.5rem !important;
-}
-
-.u-margin-top-big {
-  margin-top: 8rem !important;
-}
-@media only screen and (max-width: 56.25em) {
-  .u-margin-top-big {
-    margin-bottom: 5rem !important;
-  }
-}
-
-.u-margin-top-huge {
-  margin-top: 10rem !important;
-}
 
 .navigation__checkbox {
   display: none;
 }
 .navigation__button {
   background-color: #1b1a17;
-  height: 7rem;
-  width: 7rem;
+  height: 5rem;
+  width: 5rem;
   position: fixed;
   border-radius: 50%;
-  top: 6rem;
-  right: 6rem;
+  top: 4rem;
+  right: 4rem;
   z-index: 2000;
   box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.1);
   text-align: center;
   cursor: pointer;
 }
 .navigation__background {
-  height: 6rem;
-  width: 6rem;
+  height: 4rem;
+  width: 4rem;
   border-radius: 50%;
   background-image: radial-gradient(#413f42, #1b1a17);
-  top: 6.5rem;
-  right: 6.5rem;
+  top: 4.5rem;
+  right: 4.5rem;
   position: fixed;
   z-index: 1000;
   transition: transform 0.8s cubic-bezier(0.83, 0, 0.17, 1);
@@ -266,19 +67,19 @@ body {
 .navigation__link:link,
 .navigation__link:visited {
   display: inline-block;
-  font-size: 3rem;
+  font-size: 2rem;
   font-weight: 300;
   padding: 1rem 2rem;
   background-size: cover;
   text-transform: uppercase;
   text-decoration: none;
-  color: #ffc93c;
+  color: #7a4daf;
   background-size: 235%;
   background-image: linear-gradient(
     120deg,
     transparent 0%,
     transparent 50%,
-    #ffc93c 50%
+    #7a4daf 50%
   );
   transition: all 0.4s;
 }
@@ -302,14 +103,14 @@ body {
 }
 .navigation__icon {
   position: relative;
-  margin-top: 3.5rem;
+  margin-top: 2.6rem;
 }
 .navigation__icon,
 .navigation__icon::after,
 .navigation__icon::before {
-  width: 3rem;
+  width: 2rem;
   height: 2.4px;
-  background-color: #ffc93c;
+  background-color: #7a4daf;
   display: inline-block;
 }
 .navigation__icon::after,
@@ -320,17 +121,17 @@ body {
   transition: all 0.2s;
 }
 .navigation__icon::before {
-  top: -0.8rem;
+  top: -0.6rem;
 }
 .navigation__icon::after {
-  top: 0.8rem;
+  top: 0.6rem;
 }
 @media screen and (min-width: 600px) {
   .navigation__button:hover .navigation__icon::before {
-    top: -1rem;
+    top: -0.8rem;
   }
   .navigation__button:hover .navigation__icon::after {
-    top: 1rem;
+    top: 0.8rem;
   }
 }
 .navigation__checkbox:checked + .navigation__button .navigation__icon {
