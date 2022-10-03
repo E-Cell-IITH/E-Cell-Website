@@ -31,8 +31,8 @@ const eventsData = [
   {
     name: "STARTUP FAIR",
     description: [
-      "An initiative to serve as a platform at IIT Hyderabad for bringing together budding entrepreneurs, venture capitalists, investors, and start-ups. It creates a networking hub for people from various domains by involving corporations, working professionals, and students of IIT Hyderabad and across the nation at our very own institute. We aim to promote entrepreneurial spirit among students of IIT Hyderabad with this event.
-",
+      "An initiative to serve as a platform at IIT Hyderabad for bringing together budding entrepreneurs, venture capitalists, investors, and start-ups. It creates a networking hub for people from various domains by involving corporations, working professionals, and students of IIT Hyderabad and across the nation at our very own institute. We aim to promote entrepreneurial spirit among students of IIT Hyderabad with this event."
+      ,
     ],
   },
   {
@@ -83,8 +83,7 @@ const competitionData = [
   {
     name: "E-PIC",
     description: [
-      "An integral part of inducting an idea into a startup is to present it to your clients and sponsors. Time is of the essence here, even more so if you are meeting them in an elevator. 
-That's where pitching skills are put to the test. Elevator pitch or E-Pic for short is a competition where you and your team needs to pitch your startup idea under time limit. The most creative of those stand to win goodies and cash prizes along with certificates and much more.",
+      "An integral part of inducting an idea into a startup is to present it to your clients and sponsors. Time is of the essence here, even more so if you are meeting them in an elevator.That's where pitching skills are put to the test. Elevator pitch or E-Pic for short is a competition where you and your team needs to pitch your startup idea under time limit. The most creative of those stand to win goodies and cash prizes along with certificates and much more.",
     ],
   },
   {
