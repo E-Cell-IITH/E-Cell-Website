@@ -110,7 +110,7 @@ export default function Third() {
   const [competitionIndex, setCompetitionIndex] = useState(0);
   return (
     <div>
-      <div className={style.container}>
+      <div className={style.container} id="events">
         <Grid container className={style.grid}>
           <Grid item xs={1.6}></Grid>
           <Grid item xs={8}>
@@ -227,7 +227,7 @@ export default function Third() {
         <br />
         <br />
         <br />
-        <Grid container className={style.grid}>
+        <Grid container className={style.grid} id="competitions">
           <Grid item xs={1.6}></Grid>
           <Grid item xs={8}>
             <div className={style.events}>COMPETITIONS</div>
