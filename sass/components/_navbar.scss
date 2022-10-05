@@ -14,12 +14,12 @@
     box-shadow: 0 1rem 3rem rgba($color-black, 0.1);
     text-align: center;
     cursor: pointer;
-    // @include respond(tab-port) {
-    //   height: 5rem;
-    //   width: 5rem;
-    //   top: 4rem;
-    //   right: 4rem;
-    // }
+    @include respond(tab-port) {
+      height: 5rem;
+      width: 5rem;
+      top: 4rem;
+      right: 4rem;
+    }
   }
   &__background {
     height: 6rem;
@@ -34,12 +34,12 @@
     position: fixed;
     z-index: 1000;
     transition: transform 0.8s cubic-bezier(0.83, 0, 0.17, 1);
-    // @include respond(tab-port) {
-    //   height: 4rem;
-    //   width: 4rem;
-    //   top: 4.5rem;
-    //   right: 4.5rem;
-    // }
+    @include respond(tab-port) {
+      height: 4rem;
+      width: 4rem;
+      top: 4.5rem;
+      right: 4.5rem;
+    }
   }
   &__nav {
     height: 100vh;
@@ -83,10 +83,10 @@
         $color-gold 50%
       );
       transition: all 0.4s;
-      // @include respond(phone) {
-      //   font-size: 2.2rem;
-      //   padding: 0;
-      // }
+      @include respond(phone) {
+        font-size: 2.2rem;
+        padding: 0;
+      }
     }
     &:hover,
     &:active {
@@ -112,9 +112,9 @@
   &__icon {
     position: relative;
     margin-top: 3.5rem;
-    // @include respond(tab-port) {
-    //   margin-top: 2.5rem;
-    // }
+    @include respond(tab-port) {
+      margin-top: 2.5rem;
+    }
     &,
     &::after,
     &::before {
@@ -122,9 +122,9 @@
       height: 2.4px;
       background-color: $color-gold;
       display: inline-block;
-      // @include respond(tab-port) {
-      //   width: 2rem;
-      // }
+      @include respond(tab-port) {
+        width: 2rem;
+      }
     }
     &::after,
     &::before {
@@ -135,15 +135,15 @@
     }
     &::before {
       top: -0.8rem;
-      // @include respond(tab-port) {
-      //   top: -0.6rem;
-      // }
+      @include respond(tab-port) {
+        top: -0.6rem;
+      }
     }
     &::after {
       top: 0.8rem;
-      // @include respond(tab-port) {
-      //   top: 0.6rem;
-      // }
+      @include respond(tab-port) {
+        top: 0.6rem;
+      }
     }
   }
 
