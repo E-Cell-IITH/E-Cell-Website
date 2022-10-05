@@ -19,28 +19,40 @@ const Navbar = () => {
       <nav className="navigation__nav">
         <ul className="navigation__list">
           <li className="navigation__item">
-            <a href="https://ecell.ac.in/#about" className="navigation__link">
+            <a
+              href="https://ecell.iith.ac.in/#about"
+              className="navigation__link"
+            >
               About
             </a>
           </li>
           <li className="navigation__item">
-            <a href="https://ecell.ac.in/#motto" className="navigation__link">
+            <a
+              href="https://ecell.iith.ac.in/#motto"
+              className="navigation__link"
+            >
               Motto
             </a>
           </li>
           <li className="navigation__item">
-            <a href="https://ecell.ac.in/#vision" className="navigation__link">
+            <a
+              href="https://ecell.iith.ac.in/#vision"
+              className="navigation__link"
+            >
               Vision
             </a>
           </li>
           <li className="navigation__item">
-            <a href="https://ecell.ac.in/#events" className="navigation__link">
+            <a
+              href="https://ecell.iith.ac.in/#events"
+              className="navigation__link"
+            >
               Events
             </a>
           </li>
           <li className="navigation__item">
             <a
-              href="https://ecell.ac.in/#competitions"
+              href="https://ecell.iith.ac.in/#competitions"
               className="navigation__link"
             >
               Competitions
@@ -48,7 +60,7 @@ const Navbar = () => {
           </li>
           <li className="navigation__item">
             <a
-              href="https://ecell.ac.in/#sponsors"
+              href="https://ecell.iith.ac.in/#sponsors"
               className="navigation__link"
             >
               Sponsors
