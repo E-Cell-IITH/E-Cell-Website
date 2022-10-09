@@ -4,12 +4,11 @@ import React from "react";
 import { BounceLoader } from "react-spinners";
 
 function MyApp({ Component, pageProps }) {
-  const [loading, setLoading] = React.useState(false);
+  const [loading, setLoading] = React.useState(true);
   // React.useEffect(() => {
   //   setLoading(true);
   // }, []);
   React.useEffect(() => {
-    setLoading(true);
     setTimeout(() => setLoading(false), 1000);
   }, []);
   const override = {
