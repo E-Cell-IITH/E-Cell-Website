@@ -10,8 +10,9 @@ const TextButton = (props) => {
       onClick={props.onClick}
       variant="text"
       sx={{
+        textAlign:"left",
         color: "white",
-        fontSize: "1.5vw",
+        fontSize: {xs:"2.6vw",sm:"1.9vw",md:"1.65vw"},
         fontFamily: "Montserrat",
       }}
     >
@@ -54,15 +55,9 @@ const eventsData = [
     ],
   },
   {
-    name: "CAMPUS AMBASSADOR",
+    name: "CAMPUS AMBASSADOR PROGRAM",
     description: [
       "ECell of IIT Hyderabad hosts a Campus Ambassador program for students outside of IIT Hyderabad looking to inculcate entrepreneurial ideas within them and spread such ideas at their campus. This program usually starts around 1.5-2 months before the E-Summit. In 2022, we had around ___ Campus Ambassadors as a part of the ECell IIT Hyderabad family. Each CA has a chance to learn effective communication through engaging events and various tasks. You will be awarded points based on the events and games you complete. These points decide your position on the overall leaderboard. The toppers of the leaderboard win exciting prizes!",
-    ],
-  },
-  {
-    name: "PROGRAM",
-    description: [
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus, a?",
     ],
   },
 ];
@@ -118,8 +113,8 @@ export default function Third() {
             <div className={style.events}>EVENTS</div>
           </Grid>
           <Grid item xs={2.2}></Grid>
-          <Grid item xs={1.4}></Grid>
-          <Grid item xs={4}>
+          <Grid item xs={0.4}></Grid>
+          <Grid item xs={5}>
             <ul className={style.head}>{eventsData[eventIndex].name}</ul>
             <ul className={style.list}>
               <li className="power">
@@ -191,11 +186,11 @@ export default function Third() {
                       setEventIndex(5);
                     }}
                   >
-                    CAMPUS AMBASSADOR
+                    CAMPUS AMBASSADOR PROGRAM
                   </TextButton>
                 )}
               </li>
-              <li className="power">
+              {/* <li className="power">
                 {eventIndex !== 6 && (
                   <TextButton
                     variant="text"
@@ -206,11 +201,11 @@ export default function Third() {
                     PROGRAM
                   </TextButton>
                 )}
-              </li>
+              </li> */}
             </ul>
           </Grid>
           <Grid item xs={0.1} className={style.border}></Grid>
-          <Grid item xs={4.5} justifyContent="center" className={style.content}>
+          <Grid item xs={5.4} justifyContent="center" className={style.content}>
             <div className={style.box}>
               {eventsData[eventIndex].description.map((desc) => (
                 <>
@@ -234,8 +229,8 @@ export default function Third() {
             <div className={style.events}>COMPETITIONS</div>
           </Grid>
           <Grid item xs={2.2}></Grid>
-          <Grid item xs={1.4}></Grid>
-          <Grid item xs={4}>
+          <Grid item xs={0.4}></Grid>
+          <Grid item xs={5}>
             <ul className={style.head}>
               {competitionData[competitionIndex].name}
             </ul>
@@ -311,7 +306,7 @@ export default function Third() {
           <Grid item xs={0.1} className={style.border1}></Grid>
           <Grid
             item
-            xs={4.5}
+            xs={5.5}
             justifyContent="center"
             alignContent="center"
             className={style.content}

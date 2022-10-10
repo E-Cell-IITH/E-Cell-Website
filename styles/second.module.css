@@ -276,7 +276,7 @@
 
     .motto,
     .vision {
-        font-size: 4vw;
+        font-size: 6vw;
     }
 
     .stuff1,
@@ -304,7 +304,6 @@
     .card {
         font-size: 2vw;
         height: auto;
-
     }
 }
 
@@ -312,5 +311,59 @@
     .imgContainer{
         width: 150%;
         transform: translateY(-130vw);
+    }
+    .motto{
+        margin-bottom: 1vw;
+    }
+    .cont {
+        font-size: 2.5vw;
+    }
+    .stuff1,
+    .stuff,
+    .partner{
+        text-align: center;
+        font-size: 6vw;
+        margin-bottom: 2vw;
+    }
+    .grad{
+        font-size: 6vw;
+    }
+    .heading{
+        font-size: 2.5vw;
+    }
+    .motto,
+    .vision {
+        font-size: 6vw;
+    }
+}
+
+@media (max-width:400px){
+    .imgContainer{
+        width: 150%;
+        transform: translateY(-130vw);
+    }
+    .cont {
+        font-size: 2.7vw;
+    }
+    .stuff1,
+    .stuff,
+    .partner{
+        text-align: center;
+        font-size: 6vw;
+        margin-bottom: 2vw;
+    }
+    .grad{
+        font-size: 6vw;
+    }
+    .motto,
+    .vision {
+        font-size: 6vw;
+    }
+    .heading{
+        font-size: 2.8vw;
+    }
+    
+    .content{
+        font-size: 2.6vw;
     }
 }
