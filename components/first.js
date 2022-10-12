@@ -5,7 +5,7 @@ export default function Navbar() {
   return (
     <div className={style.container}>
       <div className={style.image}>
-        <img className={style.logo} src="/static/logo.png" alt="no" />
+        <image className={style.logo} src="/static/logo.png" alt="no" />
       </div>
       <br />
       <br />
@@ -22,11 +22,11 @@ export default function Navbar() {
       <br />
       <div className={style.think}>THINK | BUILD | INSPIRE</div>
       <div className={style.box}>
-        <img className={style.images} src="/static/instagram.png" alt="" />
-        <img className={style.images} src="/static/linkedin.png" alt="" />
-        <img className={style.images} src="/static/twitter.png" alt="" />
-        <img className={style.images} src="/static/facebook.png" alt="" />
-        <img className={style.images} src="/static/youtube.png" alt="" />
+        <image className={style.images} src="/static/instagram.png" alt="" />
+        <image className={style.images} src="/static/linkedin.png" alt="" />
+        <image className={style.images} src="/static/twitter.png" alt="" />
+        <image className={style.images} src="/static/facebook.png" alt="" />
+        <image className={style.images} src="/static/youtube.png" alt="" />
         <br />
       </div>
       <div className={style.container2} id="about">
