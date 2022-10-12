@@ -5,10 +5,14 @@
     font-size: 3.5vw;
 }
 
-.container{
+.slider{
     display: flex;
-    background-color: rgba(217, 217, 217, 0.15);;
+    overflow: hidden;
+    width: calc(350px*6);
+    animation: scroll 30s linear infinite    ;
 }
+
+
 
 .img{
     width: 8vw;
@@ -19,5 +23,22 @@
     .img{
         width: 12vw;
         height: auto;
+    }
+}
+
+.bg{
+    overflow-x: hidden;
+    position: relative;
+    padding: 1rem;
+    width: 100% ;
+    
+    background-color: rgba(217, 217, 217, 0.15);
+}
+
+@keyframes scroll{
+    0% {
+        transform: translateX(0);
+    } 100% {
+        transform: translateX(calc(-50%));
     }
 }
