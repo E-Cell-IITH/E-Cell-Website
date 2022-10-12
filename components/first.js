@@ -1,5 +1,6 @@
 import style from "../styles/first.module.css";
 import Grid from "@mui/material/Grid";
+import Image from "next/image";
 
 export default function Navbar() {
   return (
