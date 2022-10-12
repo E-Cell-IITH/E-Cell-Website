@@ -26,7 +26,13 @@ export default function Second() {
               alignItems: "center",
             }}
           >
-            <Image className={style.img} src="/static/2.png" alt="" width="100" height="100"/>
+            <Image
+              className={style.img}
+              src="/static/2.png"
+              alt="IIT Hyderabad Hostel"
+              width="100"
+              height="100"
+            />
             <br />
             <br />
             <div className={style.card}>
@@ -53,7 +59,13 @@ export default function Second() {
               alignItems: "center",
             }}
           >
-            <Image className={style.img} src="/static/3.png" alt="" width="100" height="100" />
+            <Image
+              className={style.img}
+              src="/static/3.png"
+              alt="ECell Build Logo"
+              width="100"
+              height="100"
+            />
             <br />
             <br />
             <div className={style.card}>
@@ -80,7 +92,13 @@ export default function Second() {
               alignItems: "center",
             }}
           >
-            <Image className={style.img} src="/static/4.png" alt="" width="100" height="100"/>
+            <Image
+              className={style.img}
+              src="/static/4.png"
+              alt="ECell IITH Inspire logo"
+              width="100"
+              height="100"
+            />
             <br />
             <br />
             <div className={style.card}>
@@ -100,7 +118,12 @@ export default function Second() {
       <div className={style.container} id="vision">
         <div className={style.div2}>
           <div className={style.imgContainer}>
-            <img src="/static/R13.png" className={style.rect} />
+            <Image
+              src="/static/R13.png"
+              layout="fill"
+              className={style.rect}
+              alt="stylistic triangle"
+            />
           </div>
           <div className={style.vision}>OUR VISION</div> <br />
           <Grid
@@ -163,8 +186,12 @@ export default function Second() {
         </div>
 
         <div className={style.div}>
-          <div>
-            <img src="/static/R19.png" className={style.rect2} />
+          <div className={style.rect2}>
+            <Image
+              src="/static/R19.png"
+              layout="fill"
+              alt="stylistic triangle"
+            />
           </div>
           <Grid container className={style.whole2}>
             <Grid item xs={2}></Grid>

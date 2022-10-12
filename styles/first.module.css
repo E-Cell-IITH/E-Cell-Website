@@ -3,7 +3,7 @@
     padding-top: 0vw;
     width: 100vw;
     height: 100%;
-    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 1)), url('../public/static/bg.png');
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 1));
     background-size: cover;
 }
 
@@ -16,6 +16,9 @@
 }
 
 .about {
+    position: relative;
+    
+    z-index: 3;
     text-align: center;
     color: rgba(211, 211, 211, 1);
     font-weight: 700;
@@ -26,6 +29,8 @@
 .cont {
     padding-top: 1vw;
     padding-bottom: 18vw;
+    position: relative;
+    z-index: 3;
 }
 
 .logo {
@@ -35,14 +40,20 @@
 }
 
 .image {
-    width: 6vw;
+    width: 8rem;
+    height: 3rem;
     /* height: auto; */
+    z-index: 3;
     margin-left: 1.5vw;
+    position: relative;
 }
 
 .title {
+    position: relative;
     margin-top: 2vw;
     text-align: center;
+    
+    z-index: 3;
     font-size: 6vw;
     font-weight: 700;
     background: linear-gradient(92.42deg, #BD63C3 23.03%, #3E15A0 88.79%);
@@ -55,6 +66,8 @@
 }
 
 .iit {
+    position: relative;
+    z-index: 3;
     text-align: center;
     font-size: 6vw;
     font-weight: 700;
@@ -63,6 +76,8 @@
 
 .think {
     text-align: center;
+    position: relative;
+    z-index: 3;
     font-size: 2.5vw;
     color: #D3D3D3E5;
     margin-bottom: 8vw;
@@ -86,6 +101,8 @@
 
 .box {
     display: flex;
+    position: relative;
+    z-index: 3;
     padding-bottom: 15vw;
     margin-left: 3vw;
 }
@@ -135,15 +152,15 @@
     }
 
     .title {
-        font-size: 8vw;
+        font-size: 6vw;
     }
 
     .iit {
-        font-size: 7vw;
+        font-size: 5vw;
     }
 
     .think {
-        font-size: 3.5vw;
+        font-size: 3vw;
     }
 
     .images {

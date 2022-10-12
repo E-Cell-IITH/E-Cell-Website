@@ -29,9 +29,15 @@ export default function Fourth() {
             flexWrap: "nowrap",
             justifyContent: "center",
             width: "200%",
+            marginBottom: "-12px",
           }}
         >
-          <Grid item md={1.6} sx={{ position: "relative", height: "8vw" }}>
+          <Grid
+            item
+            md={1.6}
+            xs={2}
+            sx={{ position: "relative", height: "8vw" }}
+          >
             <Image
               className={style.img}
               src="/static/image 5.png"
@@ -40,7 +46,12 @@ export default function Fourth() {
               objectFit="contain"
             />
           </Grid>
-          <Grid item md={1.6} sx={{ position: "relative", height: "8vw" }}>
+          <Grid
+            item
+            md={1.6}
+            xs={2}
+            sx={{ position: "relative", height: "8vw" }}
+          >
             <Image
               className={style.img}
               src="/static/image 1.png"
@@ -49,7 +60,12 @@ export default function Fourth() {
               objectFit="contain"
             />
           </Grid>
-          <Grid item md={1.6} sx={{ position: "relative", height: "8vw" }}>
+          <Grid
+            item
+            md={1.6}
+            xs={2}
+            sx={{ position: "relative", height: "8vw" }}
+          >
             <Image
               className={style.img}
               src="/static/image 4.png"
@@ -58,7 +74,12 @@ export default function Fourth() {
               objectFit="contain"
             />
           </Grid>
-          <Grid item md={1.6} sx={{ position: "relative", height: "8vw" }}>
+          <Grid
+            item
+            md={1.6}
+            xs={2}
+            sx={{ position: "relative", height: "8vw" }}
+          >
             <Image
               className={style.img}
               src="/static/image 3.png"
@@ -67,7 +88,12 @@ export default function Fourth() {
               objectFit="contain"
             />
           </Grid>
-          <Grid item md={1.6} sx={{ position: "relative", height: "8vw" }}>
+          <Grid
+            item
+            md={1.6}
+            xs={2}
+            sx={{ position: "relative", height: "8vw" }}
+          >
             <Image
               className={style.img}
               src="/static/image 6.png"
@@ -76,7 +102,12 @@ export default function Fourth() {
               objectFit="contain"
             />
           </Grid>
-          <Grid item md={1.6} sx={{ position: "relative", height: "8vw" }}>
+          <Grid
+            item
+            md={1.6}
+            xs={2}
+            sx={{ position: "relative", height: "8vw" }}
+          >
             <Image
               className={style.img}
               src="/static/image 7.png"
@@ -85,7 +116,12 @@ export default function Fourth() {
               objectFit="contain"
             />
           </Grid>
-          <Grid item md={1.6} sx={{ position: "relative", height: "8vw" }}>
+          <Grid
+            item
+            md={1.6}
+            xs={2}
+            sx={{ position: "relative", height: "8vw" }}
+          >
             <Image
               className={style.img}
               src="/static/image 5.png"
@@ -94,7 +130,12 @@ export default function Fourth() {
               objectFit="contain"
             />
           </Grid>
-          <Grid item md={1.6} sx={{ position: "relative", height: "8vw" }}>
+          <Grid
+            item
+            md={1.6}
+            xs={2}
+            sx={{ position: "relative", height: "8vw" }}
+          >
             <Image
               className={style.img}
               src="/static/image 1.png"
@@ -103,7 +144,12 @@ export default function Fourth() {
               objectFit="contain"
             />
           </Grid>
-          <Grid item md={1.6} sx={{ position: "relative", height: "8vw" }}>
+          <Grid
+            item
+            md={1.6}
+            xs={2}
+            sx={{ position: "relative", height: "8vw" }}
+          >
             <Image
               className={style.img}
               src="/static/image 4.png"
@@ -112,7 +158,12 @@ export default function Fourth() {
               objectFit="contain"
             />
           </Grid>
-          <Grid item md={1.6} sx={{ position: "relative", height: "8vw" }}>
+          <Grid
+            item
+            md={1.6}
+            xs={2}
+            sx={{ position: "relative", height: "8vw" }}
+          >
             <Image
               className={style.img}
               src="/static/image 3.png"
@@ -121,7 +172,12 @@ export default function Fourth() {
               objectFit="contain"
             />
           </Grid>
-          <Grid item md={1.6} sx={{ position: "relative", height: "8vw" }}>
+          <Grid
+            item
+            md={1.6}
+            xs={2}
+            sx={{ position: "relative", height: "8vw" }}
+          >
             <Image
               className={style.img}
               src="/static/image 6.png"
@@ -130,7 +186,12 @@ export default function Fourth() {
               objectFit="contain"
             />
           </Grid>
-          <Grid item md={1.6} sx={{ position: "relative", height: "8vw" }}>
+          <Grid
+            item
+            md={1.6}
+            xs={2}
+            sx={{ position: "relative", height: "8vw" }}
+          >
             <Image
               className={style.img}
               src="/static/image 7.png"

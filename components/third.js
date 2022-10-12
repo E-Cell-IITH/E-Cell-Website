@@ -3,6 +3,7 @@ import style from "../styles/third.module.css";
 import Grid from "@mui/material/Grid";
 import { Button } from "@mui/material";
 import { useState } from "react";
+import Box from "@mui/material/Box";
 
 const TextButton = (props) => {
   return (
@@ -10,9 +11,9 @@ const TextButton = (props) => {
       onClick={props.onClick}
       variant="text"
       sx={{
-        textAlign:"left",
+        textAlign: "left",
         color: "white",
-        fontSize: {xs:"2.6vw",sm:"1.9vw",md:"1.65vw"},
+        fontSize: { xs: "2.6vw", sm: "1.9vw", md: "1.65vw" },
         fontFamily: "Montserrat",
       }}
     >
@@ -32,8 +33,7 @@ const eventsData = [
   {
     name: "STARTUP FAIR",
     description: [
-      "An initiative to serve as a platform at IIT Hyderabad for bringing together budding entrepreneurs, venture capitalists, investors, and start-ups. It creates a networking hub for people from various domains by involving corporations, working professionals, and students of IIT Hyderabad and across the nation at our very own institute. We aim to promote entrepreneurial spirit among students of IIT Hyderabad with this event."
-      ,
+      "An initiative to serve as a platform at IIT Hyderabad for bringing together budding entrepreneurs, venture capitalists, investors, and start-ups. It creates a networking hub for people from various domains by involving corporations, working professionals, and students of IIT Hyderabad and across the nation at our very own institute. We aim to promote entrepreneurial spirit among students of IIT Hyderabad with this event.",
     ],
   },
   {
@@ -188,14 +188,14 @@ export default function Third() {
           </Grid>
           <Grid item xs={0.1} className={style.border}></Grid>
           <Grid item xs={5.4} justifyContent="center" className={style.content}>
-            <div className={style.box}>
+            <Box className={style.box} sx={{ textAlign: "left" }}>
               {eventsData[eventIndex].description.map((desc) => (
                 <>
                   {desc} <br />
                   <br />
                 </>
               ))}
-            </div>
+            </Box>
           </Grid>
         </Grid>
         <br />
@@ -293,14 +293,14 @@ export default function Third() {
             alignContent="center"
             className={style.content}
           >
-            <div className={style.box2}>
+            <Box className={style.box2} sx={{ textAlign: "left" }}>
               {competitionData[competitionIndex].description.map((desc) => (
                 <>
                   {desc} <br />
                   <br />
                 </>
               ))}
-            </div>
+            </Box>
           </Grid>
         </Grid>
       </div>
