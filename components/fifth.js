@@ -27,16 +27,16 @@ export default function Fifth() {
                     <Grid item xs={12} sm={12} md={3}>
                         <div className={style.final}>
                             <div className={style.image}>
-                                <img className={style.ecell} src="/static/ecell.png"></img>
+                                <Image className={style.ecell} src="/static/ecell.png"></img>
                             </div>
                             <br />
                             <div className={style.think}>THINK | BUILD | INSPIRE</div><br />
                             <div className={style.images}>
-                                <img className={style.icon} src="/static/instagram1.png"></img>
-                                <img className={style.icon} src="/static/linkedin1.png"></img>
-                                <img className={style.icon} src="/static/twitter1.png"></img>
-                                <img className={style.icon} src="/static/facebook1.png"></img>
-                                <img className={style.icon} src="/static/youtube1.png"></img>
+                                <Image className={style.icon} src="/static/instagram1.png"></img>
+                                <Image className={style.icon} src="/static/linkedin1.png"></img>
+                                <Image className={style.icon} src="/static/twitter1.png"></img>
+                                <Image className={style.icon} src="/static/facebook1.png"></img>
+                                <Image className={style.icon} src="/static/youtube1.png"></img>
                             </div>
                         </div>
                     </Grid>
@@ -44,7 +44,7 @@ export default function Fifth() {
                     <Grid item xs={6.4} sm={6.4} md={3} className={style.QL2} >
                         <ul className={style.ql} id={style.q1}>Contact us</ul>
                         <div className={style.log}>
-                            <img className={style.loc} src="/static/location.png"></img>
+                            <Image className={style.loc} src="/static/location.png"></img>
                             <div className={style.list1} id={style.list1}>
                                  E-Cell Office
                                 C-714, Academic block C,
@@ -52,13 +52,13 @@ export default function Fifth() {
                             </div>
                         </div>
                         <div className={style.log}> 
-                            <img className={style.logo} src="/static/msg.png"></img>
+                            <Image className={style.logo} src="/static/msg.png"></img>
                             <div className={style.list1} id={style.list2}>
                                 ecell@iith.ac.in
                             </div>
                         </div>
                         <div className={style.log}>
-                            <img className={style.logo} src="/static/call.png"></img>
+                            <Image className={style.logo} src="/static/call.png"></img>
                             <div className={style.list1} id={style.list3}>
                                 (+91)8979471587
                             </div>
