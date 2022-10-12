@@ -43,21 +43,15 @@ const eventsData = [
     ],
   },
   {
-    name: "POWERTALKS & PANEL",
+    name: "POWERTALKS & PANEL DISCUSSIONS",
     description: [
       "E-Summit brings a series of talks and panel discussions from the best minds in business and entrepreneurship, from the top-tier leagues, and question the most critical issues. We conduct power talk sessions by some of the most esteemed and experienced personalities of the field- ranging from entrepreneurs to influencers throughout the year. The sessions are interactive as well as entertaining.",
     ],
   },
   {
-    name: "DISCUSSION",
-    description: [
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus, a?",
-    ],
-  },
-  {
     name: "CAMPUS AMBASSADOR PROGRAM",
     description: [
-      "ECell of IIT Hyderabad hosts a Campus Ambassador program for students outside of IIT Hyderabad looking to inculcate entrepreneurial ideas within them and spread such ideas at their campus. This program usually starts around 1.5-2 months before the E-Summit. In 2022, we had around ___ Campus Ambassadors as a part of the ECell IIT Hyderabad family. Each CA has a chance to learn effective communication through engaging events and various tasks. You will be awarded points based on the events and games you complete. These points decide your position on the overall leaderboard. The toppers of the leaderboard win exciting prizes!",
+      "ECell of IIT Hyderabad hosts a Campus Ambassador program for students outside of IIT Hyderabad looking to inculcate entrepreneurial ideas within them and spread such ideas at their campus. This program usually starts around 1.5-2 months before the E-Summit. In 2022, we had around 800 Campus Ambassadors as a part of the ECell IIT Hyderabad family. Each CA has a chance to learn effective communication through engaging events and various tasks. You will be awarded points based on the events and games you complete. These points decide your position on the overall leaderboard. The toppers of the leaderboard win exciting prizes!",
     ],
   },
 ];
@@ -161,29 +155,17 @@ export default function Third() {
                       setEventIndex(3);
                     }}
                   >
-                    POWERTALKS & PANEL
+                    POWERTALKS & PANEL DISCUSSIONS
                   </TextButton>
                 )}
               </li>
+              {/* <br /> */}
               <li className="power">
                 {eventIndex !== 4 && (
                   <TextButton
                     variant="text"
                     onClick={() => {
                       setEventIndex(4);
-                    }}
-                  >
-                    DISCUSSIONS
-                  </TextButton>
-                )}
-              </li>
-              {/* <br /> */}
-              <li className="power">
-                {eventIndex !== 5 && (
-                  <TextButton
-                    variant="text"
-                    onClick={() => {
-                      setEventIndex(5);
                     }}
                   >
                     CAMPUS AMBASSADOR PROGRAM

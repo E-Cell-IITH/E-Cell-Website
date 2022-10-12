@@ -7,8 +7,8 @@ export default function Fifth() {
         <div>
             <div className={style.QC}>
                 <Grid container>
-                    <Grid item xs={1}></Grid>
-                    <Grid item xs={3} justifyContent="center" className={style.QL}>
+                    <Grid item sm={1}></Grid>
+                    <Grid item sm={3} justifyContent="center" className={style.QL}>
                         <ul className={style.ql}>Quick Links</ul>
                         <ul>
                             <li className={style.list}>Notable Start-Ups</li>
@@ -17,8 +17,8 @@ export default function Fifth() {
                             <li className={style.list}>Our Partners</li>
                         </ul>
                     </Grid>
-                    <Grid item xs={0.4}></Grid>
-                    <Grid item xs={3}>
+                    <Grid item md={0.4}></Grid>
+                    <Grid item xs={12} sm={12} md={3}>
                         <div className={style.final}>
                             <div className={style.image}>
                                 <img className={style.ecell} src="/static/ecell.png"></img>
@@ -34,21 +34,28 @@ export default function Fifth() {
                             </div>
                         </div>
                     </Grid>
-                    <Grid item xs={1}></Grid>
-                    <Grid item xs={3} className={style.QL2} >
-                        <ul className={style.ql}>Contact us</ul>
-                        <div className={style.log}><img className={style.loc} src="/static/location.png"></img>
-                            <div className={style.list1}>
-                                <h3> </h3> E-Cell Office
+                    <Grid item xs={3} sm={3} md={1}></Grid>
+                    <Grid item xs={6.4} sm={6.4} md={3} className={style.QL2} >
+                        <ul className={style.ql} id={style.q1}>Contact us</ul>
+                        <div className={style.log}>
+                            <img className={style.loc} src="/static/location.png"></img>
+                            <div className={style.list1} id={style.list1}>
+                                 E-Cell Office
                                 C-714, Academic block C,
-                                IIT Hyderabad</div></div>
-                        <div className={style.log}> <img className={style.logo} src="/static/msg.png"></img>
-                            <div className={style.list1}>
-                                ecell@iith.ac.in</div></div>
+                                IIT Hyderabad
+                            </div>
+                        </div>
+                        <div className={style.log}> 
+                            <img className={style.logo} src="/static/msg.png"></img>
+                            <div className={style.list1} id={style.list2}>
+                                ecell@iith.ac.in
+                            </div>
+                        </div>
                         <div className={style.log}>
                             <img className={style.logo} src="/static/call.png"></img>
-                            <div className={style.list1}>
-                                (+91)8979471587</div>
+                            <div className={style.list1} id={style.list3}>
+                                (+91)8979471587
+                            </div>
                         </div>
                     </Grid>
                     <Grid item xs={0.5}></Grid>

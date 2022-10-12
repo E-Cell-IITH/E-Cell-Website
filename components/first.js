@@ -45,6 +45,7 @@ export default function Navbar() {
         </Grid>
         <br />
         <br />
+        <br />
       </div>
     </div>
   );
