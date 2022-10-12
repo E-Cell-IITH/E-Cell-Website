@@ -66,6 +66,22 @@ const Navbar = () => {
               Sponsors
             </a>
           </li>
+          <li className="navigation__item">
+            <a
+              href="https://caprogram-ecell-iith.netlify.app"
+              className="navigation__link"
+            >
+              CA Program
+            </a>
+          </li>
+          <li className="navigation__item">
+            <a
+              href="https://esummit-ecell-iith.netlify.app"
+              className="navigation__link"
+            >
+              E Summit
+            </a>
+          </li>
         </ul>
       </nav>
     </div>
