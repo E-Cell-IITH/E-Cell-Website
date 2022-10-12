@@ -25,6 +25,7 @@
     font-size: 2vw;
     font-weight: bold;
 }
+
 .log {
     display: flex;
     flex-direction: row;
@@ -46,6 +47,7 @@
     line-height: 3vw;
     font-size: 1.3vw;
 }
+
 .list1 {
     line-height: 1.6vw;
     font-size: 1.3vw;
@@ -56,194 +58,240 @@
     height: auto;
     margin: 1vw;
 }
-.final{
+
+.final {
     color: rgba(255, 255, 255, 1);
 }
-.image{
+
+.image {
     display: flex;
     justify-content: center;
 }
-.ecell{
+
+.ecell {
     margin-top: 3vw;
     width: 10vw;
     height: auto;
 }
-.think{
-    color:  rgba(255, 255, 255, 0.9);;
+
+.think {
+    color: rgba(255, 255, 255, 0.9);
+    ;
     display: flex;
     justify-content: center;
     font-size: 1.6vw;
 }
-.images{
+
+.images {
     display: flex;
     justify-content: center;
 }
-.links{
+
+.links {
     text-decoration: none;
     color: white;
     transition: all 0.3s ease-in-out;
 }
-.links:hover{
+
+.links:hover {
     padding-left: 2vw;
 }
 
-@media (max-width:1100px){
-    .ecell{
+@media (max-width:1100px) {
+    .ecell {
         margin-top: 5vw;
         width: 12vw;
         height: auto;
     }
-    .think{
+
+    .think {
         font-size: 1.4vw;
     }
+
     .icon {
         margin: 1vw;
         width: 2vw;
         height: auto;
     }
+
     .list {
         line-height: 4vw;
         font-size: 1.9vw;
     }
+
     .list1 {
         line-height: 2.6vw;
         font-size: 1.85vw;
     }
-    .q1{
+
+    .q1 {
         text-align: center;
         font-size: 4vw;
     }
 
 }
 
-@media (max-width:900px){
-    .QL{
+@media (max-width:900px) {
+    .QL {
         display: none;
     }
-    .ecell{
+
+    .ecell {
         width: 20vw;
     }
-    .think{
+
+    .think {
         font-size: 3vw;
     }
-    .icon{
+
+    .icon {
         width: 3vw;
     }
-    .final{
+
+    .final {
         margin-bottom: 10vw;
     }
-    #q1{
+
+    #q1 {
         margin-left: 7vw;
         font-size: 4vw;
     }
-    .log{
+
+    .log {
         margin-left: -1.5vw;
     }
-    .logo{
+
+    .logo {
         width: 10vw;
         height: auto;
     }
-    .loc{
+
+    .loc {
         margin-right: 4vw;
         width: 3vw;
         height: auto;
         margin-left: 3vw;
     }
-    #list1{
+
+    #list1 {
         padding-left: 0vw;
         font-size: 2.3vw;
         line-height: 3.6vw;
         margin-bottom: 3vw;
     }
-    #list2,#list3{
+
+    #list2,
+    #list3 {
         font-size: 2.3vw;
     }
 }
 
-@media (max-width:800px){
-    .QL{
+@media (max-width:800px) {
+    .QL {
         display: none;
     }
-    .ecell{
+
+    .ecell {
         width: 20vw;
     }
-    .think{
+
+    .think {
         font-size: 3vw;
     }
-    .icon{
+
+    .icon {
         width: 3vw;
     }
-    .final{
+
+    .final {
         margin-bottom: 10vw;
     }
-    #q1{
+
+    #q1 {
         margin-left: 7vw;
         font-size: 4vw;
     }
-    .log{
+
+    .log {
         margin-left: -1.5vw;
     }
-    .logo{
+
+    .logo {
         width: 10vw;
         height: auto;
     }
-    .loc{
+
+    .loc {
         margin-right: 4vw;
         width: 3vw;
         height: auto;
         margin-left: 3vw;
     }
-    #list1{
+
+    #list1 {
         padding-left: 0vw;
         font-size: 2.3vw;
         line-height: 3.6vw;
         margin-bottom: 3vw;
     }
-    #list2,#list3{
+
+    #list2,
+    #list3 {
         font-size: 2.3vw;
     }
 }
 
-@media (max-width:600px){
-    .QL{
+@media (max-width:600px) {
+    .QL {
         display: none;
     }
-    .ecell{
+
+    .ecell {
         width: 32vw;
     }
-    .think{
+
+    .think {
         font-size: 4vw;
     }
-    .icon{
+
+    .icon {
         width: 4vw;
     }
-    .final{
+
+    .final {
         margin-bottom: 10vw;
     }
-    #q1{
+
+    #q1 {
         font-size: 6vw;
         margin-left: -3.5vw;
     }
-    .log{
+
+    .log {
         margin-left: -3.5vw;
     }
-    .logo{
+
+    .logo {
         width: 14vw;
         height: auto;
     }
-    .loc{
+
+    .loc {
         margin-right: 4vw;
         width: 4vw;
         height: auto;
         margin-left: 4.6vw;
     }
-    #list1{
+
+    #list1 {
         padding-left: 1vw;
         font-size: 3vw;
         line-height: 3.6vw;
         margin-bottom: 3vw;
     }
-    #list2,#list3{
+
+    #list2,
+    #list3 {
         font-size: 3vw;
     }
 }
