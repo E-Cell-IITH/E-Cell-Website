@@ -11,10 +11,16 @@ export default function Fifth() {
                     <Grid item sm={3} justifyContent="center" className={style.QL}>
                         <ul className={style.ql}>Quick Links</ul>
                         <ul>
-                            <li className={style.list}>Notable Start-Ups</li>
-                            <li className={style.list}>CA Programme</li>
-                            <li className={style.list}>E-Summit</li>
-                            <li className={style.list}>Our Partners</li>
+                            <li className={style.list}>
+                                <a className={style.links} href='https://tanmayshah07.github.io/E-CELL-IITH-Startup/'>Notable Start-Ups</a>
+                            </li>
+                            <li className={style.list}>
+                                <a className={style.links} href='http://caprogram-ecell-iith.netlify.app/'>CA Programme</a>
+                            </li>
+                            <li className={style.list}>
+                                <a className={style.links} href='http://esummit-ecell-iith.netlify.app/'>E-Summit</a>
+                            </li>
+                            {/* <li className={style.list}>Our Partners</li> */}
                         </ul>
                     </Grid>
                     <Grid item md={0.4}></Grid>

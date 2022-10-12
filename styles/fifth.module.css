@@ -78,6 +78,14 @@
     display: flex;
     justify-content: center;
 }
+.links{
+    text-decoration: none;
+    color: white;
+    transition: all 0.3s ease-in-out;
+}
+.links:hover{
+    padding-left: 2vw;
+}
 
 @media (max-width:1100px){
     .ecell{
