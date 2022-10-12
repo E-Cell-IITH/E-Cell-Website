@@ -52,7 +52,7 @@ export default function Second() {
               alignItems: "center",
             }}
           >
-            <img className={style.img} src="/static/3.png" alt="" />
+            <image className={style.img} src="/static/3.png" alt="" />
             <br />
             <br />
             <div className={style.card}>
@@ -79,7 +79,7 @@ export default function Second() {
               alignItems: "center",
             }}
           >
-            <img className={style.img} src="/static/4.png" alt="" />
+            <image className={style.img} src="/static/4.png" alt="" />
             <br />
             <br />
             <div className={style.card}>
@@ -163,7 +163,7 @@ export default function Second() {
 
         <div className={style.div}>
           <div>
-            <img src="/static/R19.png" className={style.rect2} />
+            <image src="/static/R19.png" className={style.rect2} />
           </div>
           <Grid container className={style.whole2}>
             <Grid item xs={2}></Grid>
