@@ -1,5 +1,6 @@
 import Grid from "@mui/material/Grid";
 import style from "../styles/second.module.css";
+import Image from "next/image";
 
 export default function Second() {
   return (
