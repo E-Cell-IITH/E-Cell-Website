@@ -28,16 +28,16 @@ export default function Fifth() {
                     <Grid item xs={12} sm={12} md={3}>
                         <div className={style.final}>
                             <div className={style.image}>
-                                <Image className={style.ecell} src="/static/ecell.png"></img>
+                                <Image className={style.ecell} src="/static/ecell.png" width="140" height="50" />
                             </div>
                             <br />
                             <div className={style.think}>THINK | BUILD | INSPIRE</div><br />
                             <div className={style.images}>
-                                <Image className={style.icon} src="/static/instagram1.png"></img>
-                                <Image className={style.icon} src="/static/linkedin1.png"></img>
-                                <Image className={style.icon} src="/static/twitter1.png"></img>
-                                <Image className={style.icon} src="/static/facebook1.png"></img>
-                                <Image className={style.icon} src="/static/youtube1.png"></img>
+                                <div className={style.icon}><a href="https://www.instagram.com/ecell_iith/?hl=en" target="_blank"><Image src="/static/instagram1.png" width="20" height="20" /></a></div>
+                                <div className={style.icon}><a href="https://in.linkedin.com/company/entrepreneurship-cell-iit-hyderabad" target="_blank"><Image src="/static/linkedin1.png" width="20" height="20" /></a></div>
+                                <div className={style.icon}><a href="https://twitter.com/ecell_iith" target="_blank"><Image src="/static/twitter1.png" width="20" height="20" /></a></div>
+                                <div className={style.icon}><a href="https://www.facebook.com/ecell.iithyd/" target="_blank"><Image src="/static/facebook1.png" width="20" height="20" /></a></div>
+                                <div className={style.icon}><a href="https://www.youtube.com/user/ecelliithyderabad" target="_blank"><Image src="/static/youtube1.png" width="20" height="20" /></a></div>
                             </div>
                         </div>
                     </Grid>
@@ -45,21 +45,21 @@ export default function Fifth() {
                     <Grid item xs={6.4} sm={6.4} md={3} className={style.QL2} >
                         <ul className={style.ql} id={style.q1}>Contact us</ul>
                         <div className={style.log}>
-                            <Image className={style.loc} src="/static/location.png"></img>
+                            <div className={style.loc}><Image src="/static/location.png" width="60" height="60" /></div>
                             <div className={style.list1} id={style.list1}>
-                                 E-Cell Office
+                                E-Cell Office
                                 C-714, Academic block C,
                                 IIT Hyderabad
                             </div>
                         </div>
-                        <div className={style.log}> 
-                            <Image className={style.logo} src="/static/msg.png"></img>
+                        <div className={style.log}>
+                            <div className={style.logo}><Image src="/static/msg.png" width="60" height="60" /></div>
                             <div className={style.list1} id={style.list2}>
                                 ecell@iith.ac.in
                             </div>
                         </div>
                         <div className={style.log}>
-                            <Image className={style.logo} src="/static/call.png"></img>
+                            <div className={style.logo}><Image src="/static/call.png" width="60" height="60" /></div>
                             <div className={style.list1} id={style.list3}>
                                 (+91)8979471587
                             </div>
