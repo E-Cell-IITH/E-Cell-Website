@@ -1,6 +1,7 @@
 import React from 'react'
 import style from '../styles/fifth.module.css'
 import Grid from '@mui/material/Grid'
+import Image from "next/image";
 
 export default function Fifth() {
     return (
