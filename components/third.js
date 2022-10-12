@@ -172,28 +172,20 @@ export default function Third() {
                   </TextButton>
                 )}
               </li>
-              {/* <li className="power">
-                {eventIndex !== 6 && (
-                  <TextButton
-                    variant="text"
-                    onClick={() => {
-                      setEventIndex(6);
-                    }}
-                  >
-                    PROGRAM
-                  </TextButton>
-                )}
-              </li> */}
             </ul>
           </Grid>
           <Grid item xs={0.1} className={style.border}></Grid>
-          <Grid item xs={5.4} justifyContent="center" className={style.content}>
+          <Grid
+            item
+            container
+            xs={5.4}
+            justifyContent="center"
+            alignItems="center"
+            className={style.content}
+          >
             <Box className={style.box} sx={{ textAlign: "left" }}>
               {eventsData[eventIndex].description.map((desc) => (
-                <>
-                  {desc} <br />
-                  <br />
-                </>
+                <>{desc}</>
               ))}
             </Box>
           </Grid>
@@ -288,6 +280,7 @@ export default function Third() {
           <Grid item xs={0.1} className={style.border1}></Grid>
           <Grid
             item
+            container
             xs={5.5}
             justifyContent="center"
             alignContent="center"
@@ -295,10 +288,7 @@ export default function Third() {
           >
             <Box className={style.box2} sx={{ textAlign: "left" }}>
               {competitionData[competitionIndex].description.map((desc) => (
-                <>
-                  {desc} <br />
-                  <br />
-                </>
+                <>{desc}</>
               ))}
             </Box>
           </Grid>

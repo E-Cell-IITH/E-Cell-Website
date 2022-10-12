@@ -29,7 +29,7 @@ export default function Second() {
             <Image
               className={style.img}
               src="/static/2.png"
-              alt="IIT Hyderabad Hostel"
+              alt="Ecell IITH Think logo"
               width="100"
               height="100"
             />

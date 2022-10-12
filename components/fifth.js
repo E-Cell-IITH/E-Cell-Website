@@ -5,7 +5,7 @@ import Image from "next/image";
 
 export default function Fifth() {
   return (
-    <div>
+    <footer>
       <div className={style.QC}>
         <Grid container>
           <Grid item sm={1}></Grid>
@@ -135,6 +135,6 @@ export default function Fifth() {
       <br />
       <br />
       <br />
-    </div>
+    </footer>
   );
 }
