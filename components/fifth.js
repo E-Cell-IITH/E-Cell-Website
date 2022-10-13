@@ -59,6 +59,7 @@ export default function Fifth() {
                   <a
                     href="https://www.instagram.com/ecell_iith/?hl=en"
                     target="_blank"
+                    rel="noreferrer noopener"
                   >
                     <Image
                       src="/static/instagram1.png"
@@ -83,7 +84,11 @@ export default function Fifth() {
                   </a>
                 </div>
                 <div className={style.icon}>
-                  <a href="https://twitter.com/ecell_iith" target="_blank">
+                  <a
+                    href="https://twitter.com/ecell_iith"
+                    target="_blank"
+                    rel="noreferrer noopener"
+                  >
                     <Image
                       src="/static/twitter1.png"
                       width="20"
