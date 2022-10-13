@@ -60,6 +60,7 @@ export default function Navbar() {
             alt="Instagram Link"
             width="20"
             height="20"
+            layout="responsive"
           />
         </a>
         <a
@@ -74,6 +75,7 @@ export default function Navbar() {
             alt="Linkedin link"
             width="20"
             height="20"
+            layout="responsive"
           />
         </a>
         <a
@@ -88,6 +90,7 @@ export default function Navbar() {
             alt="Twitter Link"
             width="20"
             height="20"
+            layout="responsive"
           />
         </a>
         <a
@@ -102,6 +105,7 @@ export default function Navbar() {
             alt="Facebook Link"
             width="20"
             height="20"
+            layout="responsive"
           />
         </a>
         <a
@@ -114,8 +118,9 @@ export default function Navbar() {
             className={style.images}
             src="/static/youtube.png"
             alt="Youtube Link"
-            width="28"
-            height="20"
+            width="18"
+            height="18"
+            layout="responsive"
           />
         </a>
         <br />

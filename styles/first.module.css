@@ -92,13 +92,16 @@
 }
 
 .pic {
-    margin: 0.5vw;
+    width: 2.5vw;
+    height: 2.5vw;
+    margin: 0.8vw;
     display: inline-block;
 }
 
 
 .box {
     display: flex;
+    justify-content: center;
     position: relative;
     z-index: 3;
     padding-bottom: 15vw;
@@ -170,6 +173,12 @@
     .cont {
         font-size: 2.1vw;
     }
+    .pic {
+        width: 3vw;
+        height: 3vw;
+        margin: 1vw;
+        display: inline-block;
+    }
 }
 
 @media(max-width:500px) {
@@ -189,6 +198,19 @@
 
     .cont {
         font-size: 2.4vw;
+    }
+    .iit{
+        margin-top: 2vw;
+        font-size: 6vw;
+    }
+    .think{
+        font-size: 3.5vw;
+    }
+    .pic {
+        width: 4vw;
+        height: 4vw;
+        margin: 1vw;
+        display: inline-block;
     }
 }
 

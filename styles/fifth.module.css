@@ -37,10 +37,10 @@
 }
 
 .loc {
-    width: 1.2vw;
-    height: 1.5vw;
-    margin-right: 1.9vw;
-    margin-left: 1vw;
+    width: 2vw;
+    height: 1.6vw;
+    margin-right: 1.5vw;
+    margin-left: 1.3vw;
 }
 
 .list {
@@ -56,7 +56,7 @@
 .icon {
     width: 1.7vw;
     height: auto;
-    margin: 0.5vw;
+    margin: 0.8vw;
 }
 
 .final {
@@ -201,6 +201,7 @@
 
     .icon {
         width: 3vw;
+        margin: 1.5vw;
     }
 
     .final {
@@ -255,7 +256,8 @@
     }
 
     .icon {
-        width: 4vw;
+        width: 4.5vw;
+        margin: 2vw;
     }
 
     .final {
@@ -293,5 +295,11 @@
     #list2,
     #list3 {
         font-size: 3vw;
+    }
+    .loc {
+        width: 6vw;
+        height: 6vw;
+        margin-right: 5.5vw;
+        margin-left: 3.8vw;
     }
 }
