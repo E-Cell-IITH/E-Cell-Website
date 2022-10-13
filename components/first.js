@@ -29,6 +29,7 @@ export default function Navbar() {
       <Image
         src="/static/bg.png"
         layout="fill"
+        objectFit="cover"
         sx={{ zIndex: 0 }}
         alt="IIT Hyderabad Hostel"
       />
