@@ -49,6 +49,7 @@ export default function Home() {
         }}
       >
         <First />
+        <Navbar />
         <Second />
         <Third />
         <br />
