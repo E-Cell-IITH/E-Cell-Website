@@ -52,6 +52,7 @@ export default function Navbar() {
           className={style.pic}
           href="https://www.instagram.com/ecell_iith/?hl=en"
           target="_blank"
+          rel="noreferrer noopener"
         >
           <Image
             className={style.images}
@@ -65,6 +66,7 @@ export default function Navbar() {
           className={style.pic}
           href="https://in.linkedin.com/company/entrepreneurship-cell-iit-hyderabad"
           target="_blank"
+          rel="noreferrer noopener"
         >
           <Image
             className={style.images}
@@ -78,6 +80,7 @@ export default function Navbar() {
           className={style.pic}
           href="https://twitter.com/ecell_iith"
           target="_blank"
+          rel="noreferrer noopener"
         >
           <Image
             className={style.images}
@@ -91,6 +94,7 @@ export default function Navbar() {
           className={style.pic}
           href="https://www.facebook.com/ecell.iithyd/"
           target="_blank"
+          rel="noreferrer noopener"
         >
           <Image
             className={style.images}
@@ -104,6 +108,7 @@ export default function Navbar() {
           className={style.pic}
           href="https://www.youtube.com/user/ecelliithyderabad"
           target="_blank"
+          rel="noreferrer noopener"
         >
           <Image
             className={style.images}
