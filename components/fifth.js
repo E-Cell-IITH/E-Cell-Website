@@ -46,6 +46,7 @@ export default function Fifth() {
                 <Image
                   className={style.ecell}
                   src="/static/ecell.png"
+                  alt="Ecell IITH"
                   width={140}
                   height={50}
                 />
@@ -63,6 +64,7 @@ export default function Fifth() {
                       src="/static/instagram1.png"
                       width="20"
                       height="20"
+                      alt="Ecell IITH Instagram"
                     />
                   </a>
                 </div>
@@ -70,29 +72,52 @@ export default function Fifth() {
                   <a
                     href="https://in.linkedin.com/company/entrepreneurship-cell-iit-hyderabad"
                     target="_blank"
+                    rel="noreferrer noopener"
                   >
-                    <Image src="/static/linkedin1.png" width="20" height="20" />
+                    <Image
+                      src="/static/linkedin1.png"
+                      width="20"
+                      height="20"
+                      alt="Ecell IITH Linkedin"
+                    />
                   </a>
                 </div>
                 <div className={style.icon}>
                   <a href="https://twitter.com/ecell_iith" target="_blank">
-                    <Image src="/static/twitter1.png" width="20" height="20" />
+                    <Image
+                      src="/static/twitter1.png"
+                      width="20"
+                      height="20"
+                      alt="Ecell IITH Twitter"
+                    />
                   </a>
                 </div>
                 <div className={style.icon}>
                   <a
                     href="https://www.facebook.com/ecell.iithyd/"
                     target="_blank"
+                    rel="noreferrer noopener"
                   >
-                    <Image src="/static/facebook1.png" width="20" height="20" />
+                    <Image
+                      src="/static/facebook1.png"
+                      width="20"
+                      height="20"
+                      alt="Ecell IITH Facebook"
+                    />
                   </a>
                 </div>
                 <div className={style.icon}>
                   <a
                     href="https://www.youtube.com/user/ecelliithyderabad"
                     target="_blank"
+                    rel="noreferrer noopener"
                   >
-                    <Image src="/static/youtube1.png" width="20" height="20" />
+                    <Image
+                      src="/static/youtube1.png"
+                      width="20"
+                      height="20"
+                      alt="Ecell IITH Youtube"
+                    />
                   </a>
                 </div>
               </div>

@@ -41,7 +41,7 @@ export default function Fourth() {
             <Image
               className={style.img}
               src="/static/image 5.png"
-              alt=""
+              alt="Dare 2 Compete logo"
               layout="fill"
               objectFit="contain"
             />
@@ -55,7 +55,7 @@ export default function Fourth() {
             <Image
               className={style.img}
               src="/static/image 1.png"
-              alt=""
+              alt="Bada Bussiness logo"
               layout="fill"
               objectFit="contain"
             />
@@ -69,7 +69,7 @@ export default function Fourth() {
             <Image
               className={style.img}
               src="/static/image 4.png"
-              alt=""
+              alt="Uber logo"
               layout="fill"
               objectFit="contain"
             />
@@ -97,7 +97,7 @@ export default function Fourth() {
             <Image
               className={style.img}
               src="/static/image 6.png"
-              alt=""
+              alt="aglasem logo"
               layout="fill"
               objectFit="contain"
             />
@@ -111,7 +111,7 @@ export default function Fourth() {
             <Image
               className={style.img}
               src="/static/image 7.png"
-              alt=""
+              alt="money control logo"
               layout="fill"
               objectFit="contain"
             />
@@ -125,7 +125,7 @@ export default function Fourth() {
             <Image
               className={style.img}
               src="/static/image 5.png"
-              alt=""
+              alt="Dare 2 Compete logo"
               layout="fill"
               objectFit="contain"
             />
@@ -139,7 +139,7 @@ export default function Fourth() {
             <Image
               className={style.img}
               src="/static/image 1.png"
-              alt=""
+              alt="Bada Bussiness logo"
               layout="fill"
               objectFit="contain"
             />
@@ -153,7 +153,7 @@ export default function Fourth() {
             <Image
               className={style.img}
               src="/static/image 4.png"
-              alt=""
+              alt="Uber logo"
               layout="fill"
               objectFit="contain"
             />
@@ -167,7 +167,7 @@ export default function Fourth() {
             <Image
               className={style.img}
               src="/static/image 3.png"
-              alt=""
+              alt="Bada Bussiness logo"
               layout="fill"
               objectFit="contain"
             />
@@ -181,7 +181,7 @@ export default function Fourth() {
             <Image
               className={style.img}
               src="/static/image 6.png"
-              alt=""
+              alt="aglasem logo"
               layout="fill"
               objectFit="contain"
             />
@@ -195,7 +195,7 @@ export default function Fourth() {
             <Image
               className={style.img}
               src="/static/image 7.png"
-              alt=""
+              alt="money control logo"
               layout="fill"
               objectFit="contain"
             />
