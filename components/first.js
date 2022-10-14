@@ -119,7 +119,7 @@ export default function Navbar() {
             src="https://res.cloudinary.com/dwsverefw/image/upload/v1665696047/ecell/youtube_arknwl.png"
             alt="Youtube Link"
             width="18"
-            height="18"
+            height="22"
             layout="responsive"
           />
         </a>
