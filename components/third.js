@@ -287,9 +287,11 @@ export default function Third() {
             className={style.content}
           >
             <Box className={style.box2} sx={{ textAlign: "left" }}>
-              {competitionData[competitionIndex].description.map((desc) => (
-                <>{desc}</>
-              ))}
+              {competitionData[competitionIndex].description.map(
+                (index, desc) => (
+                  <>{desc}</>
+                )
+              )}
             </Box>
           </Grid>
         </Grid>

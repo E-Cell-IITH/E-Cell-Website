@@ -101,7 +101,7 @@ export default function Navbar() {
         >
           <Image
             className={style.images}
-            src="https://res.cloudinary.com/dwsverefw/image/upload/v1665696045/ecell/instagram_kxgpgt.png"
+            src="https://res.cloudinary.com/dwsverefw/image/upload/v1665696044/ecell/facebook_o9s1ml.png"
             alt="Facebook Link"
             width="20"
             height="20"
