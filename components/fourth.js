@@ -40,7 +40,7 @@ export default function Fourth() {
           >
             <Image
               className={style.img}
-              src="/static/image 5.png"
+              src="https://res.cloudinary.com/dwsverefw/image/upload/v1665696045/ecell/image_5_bpk4pq.png"
               alt="Dare 2 Compete logo"
               layout="fill"
               objectFit="contain"
@@ -54,7 +54,7 @@ export default function Fourth() {
           >
             <Image
               className={style.img}
-              src="/static/image 1.png"
+              src="https://res.cloudinary.com/dwsverefw/image/upload/v1665696044/ecell/image_1_hpq2eu.png"
               alt="Bada Bussiness logo"
               layout="fill"
               objectFit="contain"
@@ -68,7 +68,7 @@ export default function Fourth() {
           >
             <Image
               className={style.img}
-              src="/static/image 4.png"
+              src="https://res.cloudinary.com/dwsverefw/image/upload/v1665696044/ecell/image_4_wxnxnd.png"
               alt="Uber logo"
               layout="fill"
               objectFit="contain"
@@ -82,7 +82,7 @@ export default function Fourth() {
           >
             <Image
               className={style.img}
-              src="/static/image 3.png"
+              src="https://res.cloudinary.com/dwsverefw/image/upload/v1665696044/ecell/image_3_xmcjnj.png"
               alt=""
               layout="fill"
               objectFit="contain"
@@ -96,7 +96,7 @@ export default function Fourth() {
           >
             <Image
               className={style.img}
-              src="/static/image 6.png"
+              src="https://res.cloudinary.com/dwsverefw/image/upload/v1665696045/ecell/image_6_yv9wg1.png"
               alt="aglasem logo"
               layout="fill"
               objectFit="contain"
@@ -110,7 +110,7 @@ export default function Fourth() {
           >
             <Image
               className={style.img}
-              src="/static/image 7.png"
+              src="https://res.cloudinary.com/dwsverefw/image/upload/v1665696045/ecell/image_7_curhvo.png"
               alt="money control logo"
               layout="fill"
               objectFit="contain"
@@ -124,7 +124,7 @@ export default function Fourth() {
           >
             <Image
               className={style.img}
-              src="/static/image 5.png"
+              src="https://res.cloudinary.com/dwsverefw/image/upload/v1665696045/ecell/image_5_bpk4pq.png"
               alt="Dare 2 Compete logo"
               layout="fill"
               objectFit="contain"
@@ -138,7 +138,7 @@ export default function Fourth() {
           >
             <Image
               className={style.img}
-              src="/static/image 1.png"
+              src="https://res.cloudinary.com/dwsverefw/image/upload/v1665696044/ecell/image_1_hpq2eu.png"
               alt="Bada Bussiness logo"
               layout="fill"
               objectFit="contain"
@@ -152,7 +152,7 @@ export default function Fourth() {
           >
             <Image
               className={style.img}
-              src="/static/image 4.png"
+              src="https://res.cloudinary.com/dwsverefw/image/upload/v1665696044/ecell/image_4_wxnxnd.png"
               alt="Uber logo"
               layout="fill"
               objectFit="contain"
@@ -166,7 +166,7 @@ export default function Fourth() {
           >
             <Image
               className={style.img}
-              src="/static/image 3.png"
+              src="https://res.cloudinary.com/dwsverefw/image/upload/v1665696044/ecell/image_3_xmcjnj.png"
               alt="Bada Bussiness logo"
               layout="fill"
               objectFit="contain"
@@ -180,7 +180,7 @@ export default function Fourth() {
           >
             <Image
               className={style.img}
-              src="/static/image 6.png"
+              src="https://res.cloudinary.com/dwsverefw/image/upload/v1665696045/ecell/image_6_yv9wg1.png"
               alt="aglasem logo"
               layout="fill"
               objectFit="contain"
@@ -194,7 +194,7 @@ export default function Fourth() {
           >
             <Image
               className={style.img}
-              src="/static/image 7.png"
+              src="https://res.cloudinary.com/dwsverefw/image/upload/v1665696045/ecell/image_7_curhvo.png"
               alt="money control logo"
               layout="fill"
               objectFit="contain"

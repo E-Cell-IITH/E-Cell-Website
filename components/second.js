@@ -28,7 +28,7 @@ export default function Second() {
           >
             <Image
               className={style.img}
-              src="/static/2.png"
+              src="https://res.cloudinary.com/dwsverefw/image/upload/v1665696043/ecell/2_nvqfjz.png"
               alt="Ecell IITH Think logo"
               width="100"
               height="100"
@@ -61,7 +61,7 @@ export default function Second() {
           >
             <Image
               className={style.img}
-              src="/static/3.png"
+              src="https://res.cloudinary.com/dwsverefw/image/upload/v1665696043/ecell/3_q9axei.png"
               alt="ECell Build Logo"
               width="100"
               height="100"
@@ -94,7 +94,7 @@ export default function Second() {
           >
             <Image
               className={style.img}
-              src="/static/4.png"
+              src="https://res.cloudinary.com/dwsverefw/image/upload/v1665696043/ecell/4_jmyd8p.png"
               alt="ECell IITH Inspire logo"
               width="100"
               height="100"
@@ -119,7 +119,7 @@ export default function Second() {
         <div className={style.div2}>
           <div className={style.imgContainer}>
             <Image
-              src="/static/R13.png"
+              src="https://res.cloudinary.com/dwsverefw/image/upload/v1665696047/ecell/R13_hupwfp.png"
               layout="fill"
               className={style.rect}
               alt="stylistic triangle"
@@ -188,7 +188,7 @@ export default function Second() {
         <div className={style.div}>
           <div className={style.rect2}>
             <Image
-              src="/static/R19.png"
+              src="https://res.cloudinary.com/dwsverefw/image/upload/v1665696047/ecell/R19_ie4plr.png"
               layout="fill"
               alt="stylistic triangle"
             />

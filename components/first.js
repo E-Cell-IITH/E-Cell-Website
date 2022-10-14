@@ -20,14 +20,14 @@ export default function Navbar() {
       ></Box>
       <div className={style.image}>
         <Image
-          src="/static/logo.png"
+          src="https://res.cloudinary.com/dwsverefw/image/upload/v1665696046/ecell/logo_dshics.png"
           alt="Ecell Logo"
           layout="fill"
           objectFit="contain"
         />
       </div>
       <Image
-        src="/static/bg.png"
+        src="https://res.cloudinary.com/dwsverefw/image/upload/v1665696045/ecell/bg_qnm73o.png"
         layout="fill"
         objectFit="cover"
         sx={{ zIndex: 0 }}
@@ -56,7 +56,7 @@ export default function Navbar() {
         >
           <Image
             className={style.images}
-            src="/static/instagram.png"
+            src="https://res.cloudinary.com/dwsverefw/image/upload/v1665696045/ecell/instagram_kxgpgt.png"
             alt="Instagram Link"
             width="20"
             height="20"
@@ -70,7 +70,7 @@ export default function Navbar() {
         >
           <Image
             className={style.images}
-            src="/static/linkedin.png"
+            src="https://res.cloudinary.com/dwsverefw/image/upload/v1665696046/ecell/linkedin_yylzcz.png"
             alt="Linkedin link"
             width="20"
             height="20"
@@ -84,7 +84,7 @@ export default function Navbar() {
         >
           <Image
             className={style.images}
-            src="/static/twitter.png"
+            src="https://res.cloudinary.com/dwsverefw/image/upload/v1665696046/ecell/twitter_fmiaf4.png"
             alt="Twitter Link"
             width="20"
             height="20"
@@ -98,7 +98,7 @@ export default function Navbar() {
         >
           <Image
             className={style.images}
-            src="/static/facebook.png"
+            src="https://res.cloudinary.com/dwsverefw/image/upload/v1665696045/ecell/instagram_kxgpgt.png"
             alt="Facebook Link"
             width="20"
             height="20"
@@ -112,7 +112,7 @@ export default function Navbar() {
         >
           <Image
             className={style.images}
-            src="/static/youtube.png"
+            src="https://res.cloudinary.com/dwsverefw/image/upload/v1665696047/ecell/youtube_arknwl.png"
             alt="Youtube Link"
             width="28"
             height="20"

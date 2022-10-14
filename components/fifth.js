@@ -45,7 +45,7 @@ export default function Fifth() {
               <div className={style.image}>
                 <Image
                   className={style.ecell}
-                  src="/static/ecell.png"
+                  src="https://res.cloudinary.com/dwsverefw/image/upload/v1665696044/ecell/ecell_v6xqu3.png"
                   alt="Ecell IITH"
                   width={140}
                   height={50}
@@ -62,7 +62,7 @@ export default function Fifth() {
                     rel="noreferrer noopener"
                   >
                     <Image
-                      src="/static/instagram1.png"
+                      src="https://res.cloudinary.com/dwsverefw/image/upload/v1665696045/ecell/instagram1_zt22es.png"
                       width="20"
                       height="20"
                       alt="Ecell IITH Instagram"
@@ -76,7 +76,7 @@ export default function Fifth() {
                     rel="noreferrer noopener"
                   >
                     <Image
-                      src="/static/linkedin1.png"
+                      src="https://res.cloudinary.com/dwsverefw/image/upload/v1665696046/ecell/linkedin1_cdvqk7.png"
                       width="20"
                       height="20"
                       alt="Ecell IITH Linkedin"
@@ -85,7 +85,7 @@ export default function Fifth() {
                 </div>
                 <div className={style.icon}>
                   <a
-                    href="https://twitter.com/ecell_iith"
+                    href="https://res.cloudinary.com/dwsverefw/image/upload/v1665696046/ecell/twitter_fmiaf4.png"
                     target="_blank"
                     rel="noreferrer noopener"
                   >
@@ -104,7 +104,7 @@ export default function Fifth() {
                     rel="noreferrer noopener"
                   >
                     <Image
-                      src="/static/facebook1.png"
+                      src="https://res.cloudinary.com/dwsverefw/image/upload/v1665696044/ecell/facebook1_w5seu6.png"
                       width="20"
                       height="20"
                       alt="Ecell IITH Facebook"
@@ -118,7 +118,7 @@ export default function Fifth() {
                     rel="noreferrer noopener"
                   >
                     <Image
-                      src="/static/youtube1.png"
+                      src="https://res.cloudinary.com/dwsverefw/image/upload/v1665696047/ecell/youtube1_a7c8bc.png"
                       width="20"
                       height="20"
                       alt="Ecell IITH Youtube"
