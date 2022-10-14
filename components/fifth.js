@@ -47,8 +47,8 @@ export default function Fifth() {
                   className={style.ecell}
                   src="https://res.cloudinary.com/dwsverefw/image/upload/v1665696044/ecell/ecell_v6xqu3.png"
                   alt="Ecell IITH"
-                  width={140}
-                  height={50}
+                  width={190}
+                  height={70}
                 />
               </div>
               <br />
@@ -66,6 +66,7 @@ export default function Fifth() {
                       width="20"
                       height="20"
                       alt="Ecell IITH Instagram"
+                      layout="responsive"
                     />
                   </a>
                 </div>
@@ -80,6 +81,7 @@ export default function Fifth() {
                       width="20"
                       height="20"
                       alt="Ecell IITH Linkedin"
+                      layout="responsive"
                     />
                   </a>
                 </div>
@@ -94,6 +96,7 @@ export default function Fifth() {
                       width="20"
                       height="20"
                       alt="Ecell IITH Twitter"
+                      layout="responsive"
                     />
                   </a>
                 </div>
@@ -108,6 +111,7 @@ export default function Fifth() {
                       width="20"
                       height="20"
                       alt="Ecell IITH Facebook"
+                      layout="responsive"
                     />
                   </a>
                 </div>
@@ -122,6 +126,7 @@ export default function Fifth() {
                       width="20"
                       height="20"
                       alt="Ecell IITH Youtube"
+                      layout="responsive"
                     />
                   </a>
                 </div>
@@ -135,7 +140,7 @@ export default function Fifth() {
             </ul>
             <div className={style.log}>
               <div className={style.loc}>
-                <Image src="/static/location.png" width="60" height="60" />
+                <Image src="/static/location.png" width="50" height="50" layout="responsive" />
               </div>
               <div className={style.list1} id={style.list1}>
                 E-Cell Office C-714, Academic block C, IIT Hyderabad
