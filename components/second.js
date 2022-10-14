@@ -30,6 +30,7 @@ export default function Second() {
               className={style.img}
               src="https://res.cloudinary.com/dwsverefw/image/upload/v1665696043/ecell/2_nvqfjz.png"
               alt="Ecell IITH Think logo"
+              priority="true"
               width="100"
               height="100"
             />
@@ -63,6 +64,7 @@ export default function Second() {
               className={style.img}
               src="https://res.cloudinary.com/dwsverefw/image/upload/v1665696043/ecell/3_q9axei.png"
               alt="ECell Build Logo"
+              priority="true"
               width="100"
               height="100"
             />
@@ -96,6 +98,7 @@ export default function Second() {
               className={style.img}
               src="https://res.cloudinary.com/dwsverefw/image/upload/v1665696043/ecell/4_jmyd8p.png"
               alt="ECell IITH Inspire logo"
+              priority="true"
               width="100"
               height="100"
             />

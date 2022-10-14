@@ -28,6 +28,7 @@ export default function Navbar() {
       </div>
       <Image
         src="https://res.cloudinary.com/dwsverefw/image/upload/v1665696045/ecell/bg_qnm73o.png"
+        priority={true}
         layout="fill"
         objectFit="cover"
         sx={{ zIndex: 0 }}
@@ -119,7 +120,7 @@ export default function Navbar() {
             src="https://res.cloudinary.com/dwsverefw/image/upload/v1665696047/ecell/youtube_arknwl.png"
             alt="Youtube Link"
             width="18"
-            height="22"
+            height="18"
             layout="responsive"
           />
         </a>

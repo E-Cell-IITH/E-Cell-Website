@@ -28,7 +28,7 @@ export default function Fourth() {
             position: "relative",
             flexWrap: "nowrap",
             justifyContent: "center",
-            width: "200%",
+            width: "300%",
             marginBottom: "-12px",
           }}
         >
@@ -42,6 +42,7 @@ export default function Fourth() {
               className={style.img}
               src="https://res.cloudinary.com/dwsverefw/image/upload/v1665696045/ecell/image_5_bpk4pq.png"
               alt="Dare 2 Compete logo"
+              priority="true"
               layout="fill"
               objectFit="contain"
             />
@@ -54,6 +55,7 @@ export default function Fourth() {
           >
             <Image
               className={style.img}
+              priority="true"
               src="https://res.cloudinary.com/dwsverefw/image/upload/v1665696044/ecell/image_1_hpq2eu.png"
               alt="Bada Bussiness logo"
               layout="fill"
@@ -68,6 +70,7 @@ export default function Fourth() {
           >
             <Image
               className={style.img}
+              priority="true"
               src="https://res.cloudinary.com/dwsverefw/image/upload/v1665696044/ecell/image_4_wxnxnd.png"
               alt="Uber logo"
               layout="fill"
@@ -81,6 +84,7 @@ export default function Fourth() {
             sx={{ position: "relative", height: "8vw" }}
           >
             <Image
+              priority="true"
               className={style.img}
               src="https://res.cloudinary.com/dwsverefw/image/upload/v1665696044/ecell/image_3_xmcjnj.png"
               alt=""
@@ -95,6 +99,7 @@ export default function Fourth() {
             sx={{ position: "relative", height: "8vw" }}
           >
             <Image
+              priority="true"
               className={style.img}
               src="https://res.cloudinary.com/dwsverefw/image/upload/v1665696045/ecell/image_6_yv9wg1.png"
               alt="aglasem logo"
@@ -109,6 +114,97 @@ export default function Fourth() {
             sx={{ position: "relative", height: "8vw" }}
           >
             <Image
+              priority="true"
+              className={style.img}
+              src="https://res.cloudinary.com/dwsverefw/image/upload/v1665696045/ecell/image_7_curhvo.png"
+              alt="money control logo"
+              layout="fill"
+              objectFit="contain"
+            />
+          </Grid>
+          <Grid
+            item
+            md={1.6}
+            xs={2}
+            sx={{ position: "relative", height: "8vw" }}
+          >
+            <Image
+              priority="true"
+              className={style.img}
+              src="https://res.cloudinary.com/dwsverefw/image/upload/v1665696045/ecell/image_5_bpk4pq.png"
+              alt="Dare 2 Compete logo"
+              layout="fill"
+              objectFit="contain"
+            />
+          </Grid>
+          <Grid
+            item
+            md={1.6}
+            xs={2}
+            sx={{ position: "relative", height: "8vw" }}
+          >
+            <Image
+              priority="true"
+              className={style.img}
+              src="https://res.cloudinary.com/dwsverefw/image/upload/v1665696044/ecell/image_1_hpq2eu.png"
+              alt="Bada Bussiness logo"
+              layout="fill"
+              objectFit="contain"
+            />
+          </Grid>
+          <Grid
+            item
+            md={1.6}
+            xs={2}
+            sx={{ position: "relative", height: "8vw" }}
+          >
+            <Image
+              priority="true"
+              className={style.img}
+              src="https://res.cloudinary.com/dwsverefw/image/upload/v1665696044/ecell/image_4_wxnxnd.png"
+              alt="Uber logo"
+              layout="fill"
+              objectFit="contain"
+            />
+          </Grid>
+          <Grid
+            item
+            md={1.6}
+            xs={2}
+            sx={{ position: "relative", height: "8vw" }}
+          >
+            <Image
+              priority="true"
+              className={style.img}
+              src="https://res.cloudinary.com/dwsverefw/image/upload/v1665696044/ecell/image_3_xmcjnj.png"
+              alt="Bada Bussiness logo"
+              layout="fill"
+              objectFit="contain"
+            />
+          </Grid>
+          <Grid
+            item
+            md={1.6}
+            xs={2}
+            sx={{ position: "relative", height: "8vw" }}
+          >
+            <Image
+              priority="true"
+              className={style.img}
+              src="https://res.cloudinary.com/dwsverefw/image/upload/v1665696045/ecell/image_6_yv9wg1.png"
+              alt="aglasem logo"
+              layout="fill"
+              objectFit="contain"
+            />
+          </Grid>
+          <Grid
+            item
+            md={1.6}
+            xs={2}
+            sx={{ position: "relative", height: "8vw" }}
+          >
+            <Image
+              priority="true"
               className={style.img}
               src="https://res.cloudinary.com/dwsverefw/image/upload/v1665696045/ecell/image_7_curhvo.png"
               alt="money control logo"
@@ -124,6 +220,7 @@ export default function Fourth() {
           >
             <Image
               className={style.img}
+              priority="true"
               src="https://res.cloudinary.com/dwsverefw/image/upload/v1665696045/ecell/image_5_bpk4pq.png"
               alt="Dare 2 Compete logo"
               layout="fill"
@@ -138,6 +235,7 @@ export default function Fourth() {
           >
             <Image
               className={style.img}
+              priority="true"
               src="https://res.cloudinary.com/dwsverefw/image/upload/v1665696044/ecell/image_1_hpq2eu.png"
               alt="Bada Bussiness logo"
               layout="fill"
@@ -152,6 +250,7 @@ export default function Fourth() {
           >
             <Image
               className={style.img}
+              priority="true"
               src="https://res.cloudinary.com/dwsverefw/image/upload/v1665696044/ecell/image_4_wxnxnd.png"
               alt="Uber logo"
               layout="fill"
@@ -166,8 +265,9 @@ export default function Fourth() {
           >
             <Image
               className={style.img}
+              priority={true}
               src="https://res.cloudinary.com/dwsverefw/image/upload/v1665696044/ecell/image_3_xmcjnj.png"
-              alt="Bada Bussiness logo"
+              alt=""
               layout="fill"
               objectFit="contain"
             />
@@ -180,6 +280,7 @@ export default function Fourth() {
           >
             <Image
               className={style.img}
+              priority={true}
               src="https://res.cloudinary.com/dwsverefw/image/upload/v1665696045/ecell/image_6_yv9wg1.png"
               alt="aglasem logo"
               layout="fill"
@@ -194,6 +295,7 @@ export default function Fourth() {
           >
             <Image
               className={style.img}
+              priority={true}
               src="https://res.cloudinary.com/dwsverefw/image/upload/v1665696045/ecell/image_7_curhvo.png"
               alt="money control logo"
               layout="fill"
