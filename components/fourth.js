@@ -65,6 +65,7 @@ export default function Fourth() {
           <Grid
             item
             md={1.6}
+            sm={4}
             xs={2}
             sx={{ position: "relative", height: "8vw" }}
           >
@@ -80,6 +81,7 @@ export default function Fourth() {
           <Grid
             item
             md={1.6}
+            sm={4}
             xs={2}
             sx={{ position: "relative", height: "8vw" }}
           >
@@ -95,6 +97,7 @@ export default function Fourth() {
           <Grid
             item
             md={1.6}
+            sm={4}
             xs={2}
             sx={{ position: "relative", height: "8vw" }}
           >
@@ -110,6 +113,7 @@ export default function Fourth() {
           <Grid
             item
             md={1.6}
+            sm={4}
             xs={2}
             sx={{ position: "relative", height: "8vw" }}
           >
@@ -125,6 +129,7 @@ export default function Fourth() {
           <Grid
             item
             md={1.6}
+            sm={4}
             xs={2}
             sx={{ position: "relative", height: "8vw" }}
           >
@@ -140,6 +145,7 @@ export default function Fourth() {
           <Grid
             item
             md={1.6}
+            sm={4}
             xs={2}
             sx={{ position: "relative", height: "8vw" }}
           >
@@ -155,6 +161,7 @@ export default function Fourth() {
           <Grid
             item
             md={1.6}
+            sm={4}
             xs={2}
             sx={{ position: "relative", height: "8vw" }}
           >
@@ -170,6 +177,7 @@ export default function Fourth() {
           <Grid
             item
             md={1.6}
+            sm={4}
             xs={2}
             sx={{ position: "relative", height: "8vw" }}
           >
@@ -185,6 +193,7 @@ export default function Fourth() {
           <Grid
             item
             md={1.6}
+            sm={4}
             xs={2}
             sx={{ position: "relative", height: "8vw" }}
           >
@@ -200,6 +209,7 @@ export default function Fourth() {
           <Grid
             item
             md={1.6}
+            sm={4}
             xs={2}
             sx={{ position: "relative", height: "8vw" }}
           >
@@ -215,6 +225,7 @@ export default function Fourth() {
           <Grid
             item
             md={1.6}
+            sm={4}
             xs={2}
             sx={{ position: "relative", height: "8vw" }}
           >
@@ -230,6 +241,7 @@ export default function Fourth() {
           <Grid
             item
             md={1.6}
+            sm={4}
             xs={2}
             sx={{ position: "relative", height: "8vw" }}
           >
@@ -245,6 +257,7 @@ export default function Fourth() {
           <Grid
             item
             md={1.6}
+            sm={4}
             xs={2}
             sx={{ position: "relative", height: "8vw" }}
           >
@@ -260,6 +273,7 @@ export default function Fourth() {
           <Grid
             item
             md={1.6}
+            sm={4}
             xs={2}
             sx={{ position: "relative", height: "8vw" }}
           >
@@ -275,6 +289,7 @@ export default function Fourth() {
           <Grid
             item
             md={1.6}
+            sm={4}
             xs={2}
             sx={{ position: "relative", height: "8vw" }}
           >
@@ -289,9 +304,9 @@ export default function Fourth() {
           </Grid>
           <Grid
             item
-            md={1.6}
-            xs={2}
-            sx={{ position: "relative", height: "8vw" }}
+            sm={4}
+            xs={4}
+            sx={{ position: "relative", height: { xs: "3rem", sm: "8vw" } }}
           >
             <Image
               className={style.img}

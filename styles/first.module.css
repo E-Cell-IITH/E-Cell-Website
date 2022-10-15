@@ -29,6 +29,7 @@
     padding-bottom: 18vw;
     position: relative;
     z-index: 3;
+
 }
 
 .logo {
@@ -58,7 +59,6 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    /* font-family: 'Montserrat'; */
     font-style: normal;
     /* text-fill-color: transparent; */
 }
@@ -171,7 +171,7 @@
     }
 
     .cont {
-        font-size: 2.1vw;
+        font-size: 1rem;
     }
     .pic {
         width: 3vw;
@@ -179,25 +179,30 @@
         margin: 1vw;
         display: inline-block;
     }
+    
+    .image{
+        margin-left: 1rem;
+    }
 }
 
 @media(max-width:500px) {
-    .images {
-        width: 4vw;
-        height: 4vw;
-        margin-left: 2.5vw;
+    
+    .image{
+        margin-left: 1rem ;
     }
+    
 
     .title {
         font-size: 8.5vw;
     }
 
     .about {
-        font-size: 6vw;
+        font-size: 2rem;
     }
 
     .cont {
-        font-size: 2.4vw;
+        font-size: 1rem;
+        text-align: justify;
     }
     .iit{
         margin-top: 2vw;
@@ -216,10 +221,10 @@
 
 @media(max-width:400px) {
     .about {
-        font-size: 6vw;
+        font-size: 2rem;
     }
 
     .cont {
-        font-size: 2.7vw;
+        font-size: 1rem;
     }
 }

@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import Box from "@mui/material/Box";
 
-export default function Navbar() {
+export default function Navbar({ desc = true }) {
   return (
     <div className={style.container}>
       <br />
@@ -126,24 +126,26 @@ export default function Navbar() {
         </a>
         <br />
       </div>
-      <div className={style.container2} id="about">
-        <div className={style.about}>ABOUT US</div> <br />
-        <Grid container spacing={2} justifyContent="center">
-          <Grid item xs={10} md={9} className={style.cont}>
-            We at IIT Hyderabad&#39;s Entrepreneurship Cell believe in passion,
-            hard effort, and an unquenchable drive for achievement. It is a
-            place that is the confluence of a billion sparks of ideas, a place
-            where the fire of passion mingles with the cold calculation of the
-            brain, and a place where dreams come true. We are people who love
-            nothing more than the thrill of coming up with ideas, working them
-            out into businesses and experiencing the pleasure of watching it all
-            come to fruition.
+      {desc && (
+        <div className={style.container2} id="about">
+          <div className={style.about}>ABOUT US</div> <br />
+          <Grid container spacing={2} justifyContent="center">
+            <Grid item xs={10} md={9} className={style.cont}>
+              We at IIT Hyderabad&#39;s Entrepreneurship Cell believe in
+              passion, hard effort, and an unquenchable drive for achievement.
+              It is a place that is the confluence of a billion sparks of ideas,
+              a place where the fire of passion mingles with the cold
+              calculation of the brain, and a place where dreams come true. We
+              are people who love nothing more than the thrill of coming up with
+              ideas, working them out into businesses and experiencing the
+              pleasure of watching it all come to fruition.
+            </Grid>
           </Grid>
-        </Grid>
-        <br />
-        <br />
-        <br />
-      </div>
+          <br />
+          <br />
+          <br />
+        </div>
+      )}
     </div>
   );
 }

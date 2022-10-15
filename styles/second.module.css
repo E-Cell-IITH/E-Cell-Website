@@ -286,7 +286,7 @@
 
     .motto,
     .vision {
-        font-size: 6vw;
+        font-size: 2rem;
     }
 
     .stuff1,
@@ -312,8 +312,16 @@
     }
 
     .card {
-        font-size: 2vw;
+        font-size: 1rem;
         height: auto;
+        
+    }
+    .card .heading h1{
+        font-size: 2rem;
+    }
+    .card .content{
+        text-align: left;
+
     }
 }
 
@@ -323,28 +331,25 @@
         transform: translateY(20%);
         transform: translateX(20%);
     }
-    .motto{
-        margin-bottom: 1vw;
-    }
     .cont {
-        font-size: 2.5vw;
+        font-size: 1rem;
+        text-align: centeer;
     }
     .stuff1,
     .stuff,
     .partner{
         text-align: center;
-        font-size: 6vw;
-        margin-bottom: 2vw;
+        font-size: 2rem;
     }
     .grad{
-        font-size: 6vw;
+        font-size: 2.5rem;
     }
-    .heading{
-        font-size: 2.5vw;
+    .heading h1{
+        font-size: 2rem;
     }
     .motto,
     .vision {
-        font-size: 6vw;
+        font-size: 3rem;
     }
 }
 
@@ -354,27 +359,29 @@
         /* transform: translateY(-130vw); */
     }
     .cont {
-        font-size: 2.7vw;
+        font-size: 1rem;
+        text-align: center;
     }
     .stuff1,
     .stuff,
     .partner{
         text-align: center;
-        font-size: 6vw;
+        font-size: 1.33rem;
         margin-bottom: 2vw;
     }
     .grad{
-        font-size: 6vw;
+        font-size: 2rem;
     }
     .motto,
     .vision {
-        font-size: 6vw;
+        font-size: 2rem;
     }
-    .heading{
-        font-size: 2.8vw;
+    
+    .heading h1{
+        font-size: 1.8rem;
     }
     
     .content{
-        font-size: 2.6vw;
+        font-size: 1rem;
     }
 }

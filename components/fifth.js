@@ -87,12 +87,12 @@ export default function Fifth() {
                 </div>
                 <div className={style.icon}>
                   <a
-                    href="https://res.cloudinary.com/dwsverefw/image/upload/v1665696046/ecell/twitter_fmiaf4.png"
+                    href="https://twitter.com/ecell_iith"
                     target="_blank"
                     rel="noreferrer noopener"
                   >
                     <Image
-                      src="/static/twitter1.png"
+                      src="https://res.cloudinary.com/dwsverefw/image/upload/v1665696047/ecell/twitter1_gtx5gu.png"
                       width="20"
                       height="20"
                       alt="Ecell IITH Twitter"
@@ -140,7 +140,12 @@ export default function Fifth() {
             </ul>
             <div className={style.log}>
               <div className={style.loc}>
-                <Image src="/static/location.png" width="50" height="50" layout="responsive" />
+                <Image
+                  src="https://res.cloudinary.com/dwsverefw/image/upload/v1665696046/ecell/location_tgobmr.png"
+                  width="50"
+                  height="50"
+                  layout="responsive"
+                />
               </div>
               <div className={style.list1} id={style.list1}>
                 E-Cell Office C-714, Academic block C, IIT Hyderabad

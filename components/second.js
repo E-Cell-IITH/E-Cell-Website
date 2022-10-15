@@ -13,11 +13,10 @@ export default function Second() {
       <br />
       <br />
       <div className={style.cards}>
-        <Grid container justifyContent="center" spacing={4}>
+        <Grid container justifyContent="center" spacing={4} sx={{ px: 3 }}>
           <Grid
             item
-            xs={6.1}
-            sm={6.5}
+            sm={9}
             md={3}
             sx={{
               display: "flex",
@@ -50,8 +49,7 @@ export default function Second() {
           </Grid>
           <Grid
             item
-            xs={6.1}
-            sm={6.5}
+            sm={9}
             md={3}
             sx={{
               display: "flex",
@@ -84,8 +82,7 @@ export default function Second() {
           </Grid>
           <Grid
             item
-            xs={6.1}
-            sm={6.5}
+            sm={9}
             md={3}
             sx={{
               display: "flex",

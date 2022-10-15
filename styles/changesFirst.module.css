@@ -1,0 +1,49 @@
+.iit {
+    position: relative;
+    z-index: 3;
+    text-align: center;
+    font-size: 1.6rem;
+    font-weight: 600;
+    background: linear-gradient(92.42deg, #e981f1 23.03%, #3E15A0 88.79%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-style: normal;
+    margin-top: 1rem;
+}
+
+.title {
+    position: relative;
+    margin-top: 2vw;
+    text-align: center;
+    
+    z-index: 3;
+    font-size: 3rem;
+    font-weight: 700;
+    color: #DBDBDB;
+    /* text-fill-color: transparent; */
+}
+
+@media screen and (min-width: 900px) {
+    .iit{
+        font-size: 2.8rem;
+    }
+    .title{
+        font-size: 4rem;
+    }
+}   
+
+.gap{
+    gap: 5rem;
+}
+.pad{
+    padding-top: 5rem!important;
+}
+
+@media screen and (min-width:1400px) {
+    .gap{
+        gap: 0rem
+    }
+
+    
+}

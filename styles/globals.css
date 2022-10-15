@@ -4,15 +4,13 @@ body {
   margin: 0vw;
   overflow-x: hidden;
   background-color: rgba(0, 0, 0, 1);
-  font-family: "Poppins", sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 * {
   box-sizing: border-box;
 }
 
-@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap");
 /* $primary-color: $my-brand-color; */
 
 .navigation__checkbox {

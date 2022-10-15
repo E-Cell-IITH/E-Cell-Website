@@ -183,11 +183,11 @@ export default function Third() {
             alignItems="center"
             className={style.content}
           >
-            <Box className={style.box} sx={{ textAlign: "left" }}>
-              {eventsData[eventIndex].description.map((desc) => (
+            {eventsData[eventIndex].description.map((desc) => (
+              <Box className={style.box} sx={{ textAlign: "left" }} key={desc}>
                 <>{desc}</>
-              ))}
-            </Box>
+              </Box>
+            ))}
           </Grid>
         </Grid>
         <br />
@@ -286,11 +286,11 @@ export default function Third() {
             alignContent="center"
             className={style.content}
           >
-            <Box className={style.box2} sx={{ textAlign: "left" }}>
-              {competitionData[competitionIndex].description.map((desc) => (
+            {competitionData[competitionIndex].description.map((desc) => (
+              <Box className={style.box2} sx={{ textAlign: "left" }} key={desc}>
                 <>{desc}</>
-              ))}
-            </Box>
+              </Box>
+            ))}
           </Grid>
         </Grid>
       </div>
