@@ -6,7 +6,7 @@ import Box from "@mui/material/Box";
 
 export default function Navbar({ desc = true }) {
   return (
-    <div className={style.container}>
+    <div>
       <br />
       <Box
         sx={{
@@ -27,7 +27,7 @@ export default function Navbar({ desc = true }) {
         />
       </div>
       <Image
-        src="https://res.cloudinary.com/dwsverefw/image/upload/v1665696045/ecell/bg_qnm73o.png"
+        src="https://res.cloudinary.com/dwsverefw/image/upload/v1665878886/ecell/hostels_svd8y6.jpg"
         priority={true}
         layout="fill"
         objectFit="cover"
