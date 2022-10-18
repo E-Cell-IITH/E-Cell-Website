@@ -4,7 +4,10 @@ import Image from "next/image";
 import Link from "next/link";
 import Box from "@mui/material/Box";
 
-export default function Navbar({ desc = true }) {
+export default function Navbar({
+  desc = true,
+  heading = "Entrepreneurship Cell",
+}) {
   return (
     <div>
       <br />
@@ -41,7 +44,8 @@ export default function Navbar({ desc = true }) {
       <br />
       <br />
       <div className={style.title}>
-        ENTREPRENEURSHIP CELL <br />
+        {heading}
+        <br />
       </div>
       <div className={style.iit}>
         IIT HYDERABAD <br />

@@ -1,17 +1,30 @@
 import React from "react";
-import Navbar from "../components/first";
-import { Box } from "@mui/system";
 import style from "../styles/first.module.css";
 import Image from "next/image";
+import Navbar from "../components/first";
 import Card from "../components/Card";
-import { Grid } from "@mui/material";
+import { Grid, styled, Box, Paper } from "@mui/material";
 import { Typography } from "@mui/material";
 import style2 from "../styles/changesFirst.module.css";
 
 function Team() {
+  const operations = [
+    {
+      name: "",
+      pic: " ",
+    },
+  ];
+  const Item = () => {
+    return (
+      <Card
+        name="Viren Soni"
+        imgUrl="https://res.cloudinary.com/dwsverefw/image/upload/v1665876488/ecell/team/Viren_Design_1_vvcrml.png"
+      />
+    );
+  };
   return (
     <>
-      <div>
+      {/* <div>
         <Box
           sx={{
             position: "absolute",
@@ -131,7 +144,8 @@ function Team() {
           </a>
           <br />
         </div>
-      </div>
+      </div> */}
+      <Navbar heading="Team E-Cell" desc={false} />
       <div>
         <Card
           imgUrl={
@@ -442,6 +456,128 @@ function Team() {
           </Grid>
         </Grid>
       </Grid>
+      {/* ------------------------------------------------------ */}
+      {/* Managers section */}
+      <Box
+        sx={{
+          display: "flex",
+          flexDirection: { xs: "column", md: "column", lg: "row" },
+          allignItems: "center",
+          marginTop: "10rem",
+        }}
+      >
+        {/* operations info */}
+        <Box
+          sx={{
+            display: "flex",
+            flexDirection: "column",
+            width: { lg: "80rem" },
+            justifyContent: "center",
+            allignItems: "center",
+          }}
+        >
+          <Typography
+            variant="h4"
+            sx={{
+              color: "white",
+
+              margin: { xs: "0 auto", lg: "0 10rem" },
+              // padding: { lg: "0 10rem" },
+              paddingBottom: "1rem",
+              fontFamily: "Montserrat",
+              fontSize: {
+                sm: "2.5rem",
+                md: "3rem",
+                fontWeight: 600,
+              },
+            }}
+          >
+            Operations
+          </Typography>
+          <Typography
+            varient="p"
+            sx={{
+              color: "white",
+              width: { xs: "20rem", md: "30rem" },
+              margin: { xs: "0 auto", lg: "0 10rem" },
+              textAlign: { xs: "center", lg: "left" },
+              ontFamily: "Montserrat",
+              fontSize: {
+                xs: ".9rem",
+                sm: ".9rem",
+                md: "1rem",
+                lg: "1.2rem",
+                fontWeight: 300,
+              },
+            }}
+          >
+            The Operations domain is in charge of putting on events and
+            competitions on campus. We makes arrangements like booking places,
+            procuring and setting up equipment, media coverage, logistics and
+            transportation. We also collaborate with the PR and Networking teams
+            on the Campus Ambassador programme to expand the reach of E-Cell
+            among other colleges. We conduct workshops and bootcamps. also
+            introduce new event ideas to promote entrepreneurial spirit among
+            students.
+          </Typography>
+        </Box>
+        {/* operations team */}
+
+        <Box>
+          <Typography
+            variant="h4"
+            sx={{
+              color: "#D3D3D3",
+              fontFamily: "Montserrat",
+              textAlign: "center",
+              padding: "0 auto",
+              marginBottom: "2rem",
+              marginTop: { xs: "1rem" },
+              fontSize: {
+                sm: "2rem",
+                md: "2.5rem",
+                fontWeight: 600,
+              },
+            }}
+          >
+            Managers
+          </Typography>
+          <Grid
+            container
+            sx={{
+              position: "relative",
+              zIndex: 30,
+              justifyContent: "center",
+            }}
+            spacing={5}
+          >
+            <Grid item xs={12} md={4} lg={3}>
+              <Item>1</Item>
+            </Grid>
+            <Grid item xs={12} md={4} lg={3}>
+              <Item>2</Item>
+            </Grid>
+            <Grid item xs={12} md={4} lg={3}>
+              <Item>3</Item>
+            </Grid>
+            <Grid item xs={12} md={4} lg={3}>
+              <Item>4</Item>
+            </Grid>
+            <Grid item xs={12} md={4} lg={3}>
+              <Item>4</Item>
+            </Grid>
+            <Grid item xs={12} md={4} lg={3}>
+              <Item>4</Item>
+            </Grid>
+            <Grid item xs={12} md={4} lg={3}>
+              <Item>4</Item>
+            </Grid>
+            <Grid item xs={12} md={4} lg={3}>
+              <Item>4</Item>
+            </Grid>
+          </Grid>
+        </Box>
+      </Box>
     </>
   );
 }
