@@ -1,4 +1,5 @@
 import * as React from "react";
+import Link from "next/Link";
 
 const Navbar = () => {
   const [checked, setChecked] = React.useState(false);
@@ -18,52 +19,9 @@ const Navbar = () => {
       <nav className="navigation__nav">
         <ul className="navigation__list">
           <li className="navigation__item">
-            <a
-              href="https://ecell.iith.ac.in/#about"
-              className="navigation__link"
-            >
-              About
-            </a>
-          </li>
-          <li className="navigation__item">
-            <a
-              href="https://ecell.iith.ac.in/#motto"
-              className="navigation__link"
-            >
-              Motto
-            </a>
-          </li>
-          <li className="navigation__item">
-            <a
-              href="https://ecell.iith.ac.in/#vision"
-              className="navigation__link"
-            >
-              Vision
-            </a>
-          </li>
-          <li className="navigation__item">
-            <a
-              href="https://ecell.iith.ac.in/#events"
-              className="navigation__link"
-            >
-              Events
-            </a>
-          </li>
-          <li className="navigation__item">
-            <a
-              href="https://ecell.iith.ac.in/#competitions"
-              className="navigation__link"
-            >
-              Competitions
-            </a>
-          </li>
-          <li className="navigation__item">
-            <a
-              href="https://ecell.iith.ac.in/#sponsors"
-              className="navigation__link"
-            >
-              Sponsors
-            </a>
+            <Link href="/">
+              <a className="navigation__link">Home</a>
+            </Link>
           </li>
           <li className="navigation__item">
             <a
@@ -71,6 +29,19 @@ const Navbar = () => {
               className="navigation__link"
             >
               CA Program
+            </a>
+          </li>
+          <li className="navigation__item">
+            <Link href="/Team">
+              <a className="navigation__link">Team</a>
+            </Link>
+          </li>
+          <li className="navigation__item">
+            <a
+              href="https://tanmayshah07.github.io/E-CELL-IITH-Startup/"
+              className="navigation__link"
+            >
+              Notable Start-Ups
             </a>
           </li>
           <li className="navigation__item">

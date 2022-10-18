@@ -6,6 +6,8 @@ import Fourth from "../components/fourth";
 import Fifth from "../components/fifth";
 import Navbar from "../components/Navbar";
 import Head from "next/head";
+import useMediaQuery from "@mui/material/useMediaQuery";
+
 import { BounceLoader } from "react-spinners";
 import { Box } from "@mui/system";
 
@@ -17,6 +19,8 @@ export default function Home() {
     setTimeout(() => setload_display(1), 1000);
     window.history.scrollRestoration = "manual";
   }, []);
+
+  const matches = useMediaQuery("(max-width:500px)");
 
   const override = {
     display: "block",
@@ -48,7 +52,7 @@ export default function Home() {
           opacity: load_display,
         }}
       >
-        <First />
+        <First heading={matches ? "E-CELL" : "Entrepreneurship Cell"} />
         <Navbar />
         <Second />
         <Third />

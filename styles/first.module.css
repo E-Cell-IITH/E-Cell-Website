@@ -193,7 +193,8 @@
     
 
     .title {
-        font-size: 8.5vw;
+        font-size: 15vw;
+        padding: 0.8rem;
     }
 
     .about {
@@ -202,7 +203,7 @@
 
     .cont {
         font-size: 1rem;
-        text-align: justify;
+        text-align: center;
     }
     .iit{
         margin-top: 2vw;
