@@ -1,5 +1,4 @@
 import * as React from "react";
-// import "../styles/globals";
 
 const Navbar = () => {
   const [checked, setChecked] = React.useState(false);

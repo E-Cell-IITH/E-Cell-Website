@@ -1,7 +1,6 @@
 import style from "../styles/first.module.css";
 import Grid from "@mui/material/Grid";
 import Image from "next/image";
-import Link from "next/link";
 import Box from "@mui/material/Box";
 
 export default function Navbar({ desc = true }) {
