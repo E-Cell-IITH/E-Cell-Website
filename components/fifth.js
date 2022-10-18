@@ -21,6 +21,11 @@ export default function Fifth() {
                 </a>
               </li>
               <li className={style.list}>
+                <a className={style.links} href="https://ecell.iith.ac.in/team">
+                  Team
+                </a>
+              </li>
+              <li className={style.list}>
                 <a
                   className={style.links}
                   href="http://caprogram-ecell-iith.netlify.app/"

@@ -1,6 +1,5 @@
 import * as React from "react";
 import Link from "next/link";
-// import "../styles/globals";
 
 const Navbar = () => {
   const [checked, setChecked] = React.useState(false);
@@ -20,11 +19,24 @@ const Navbar = () => {
       <nav className="navigation__nav">
         <ul className="navigation__list">
           <li className="navigation__item">
+            <a href="/" className="navigation__link">
+              Home
+            </a>
+          </li>
+          <li className="navigation__item">
             <a
               href="https://caprogram-ecell-iith.netlify.app"
               className="navigation__link"
             >
               CA Program
+            </a>
+          </li>
+          <li className="navigation__item">
+            <a
+              href="https://ecell.iith.ac.in/Team"
+              className="navigation__link"
+            >
+              Team
             </a>
           </li>
           <li className="navigation__item">
