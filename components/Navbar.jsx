@@ -32,10 +32,7 @@ const Navbar = () => {
             </a>
           </li>
           <li className="navigation__item">
-            <a
-              href="https://ecell.iith.ac.in/Team"
-              className="navigation__link"
-            >
+            <a href="/Team" className="navigation__link">
               Team
             </a>
           </li>
