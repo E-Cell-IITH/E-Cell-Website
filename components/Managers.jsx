@@ -258,7 +258,7 @@ const Managers = () => {
             spacing={1}
           >
             {info.map((el) => (
-              <Grid item xs={12} sm={6} md={4} lg={3}>
+              <Grid item xs={12} sm={6} md={4} lg={3} key={el.name}>
                 <Card name={el.name} imgUrl={el.url} />
                 <br />
               </Grid>
