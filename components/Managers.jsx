@@ -4,16 +4,9 @@ import { Grid, Box } from "@mui/material";
 import { Typography } from "@mui/material";
 import Fifth from "../components/fifth";
 import Navbar from "../components/Navbar";
+import parallax from "../styles/team.module.css";
 
 const Managers = () => {
-  const Item = () => {
-    return (
-      <Card
-        name="Viren Soni"
-        imgUrl="https://res.cloudinary.com/dwsverefw/image/upload/v1665876488/ecell/team/Viren_Design_1_vvcrml.png"
-      />
-    );
-  };
   const operations_info = [
     {
       name: "Yash Ramteke",
@@ -138,7 +131,7 @@ const Managers = () => {
     },
     {
       name: "Maharshi",
-      url: false,
+      url: "https://res.cloudinary.com/dbmw0xoar/image/upload/v1666335918/ecell/WhatsApp_Image_2022-10-19_at_00.48.53_f7ce81.jpg",
     },
     {
       name: "Siddarth Saha",
@@ -171,101 +164,105 @@ const Managers = () => {
   ];
   const Domain = ({ discription, info, title }) => {
     return (
-      <Box
-        sx={{
-          display: "flex",
-          flexDirection: { xs: "column", md: "column", lg: "row" },
-          allignItems: "center",
-          marginTop: "10rem",
-        }}
-      >
-        {/* operations info */}
+      <div id="team">
+        {/* <div id={parallax.stars}></div>
+        <div id={parallax.stars2}></div> */}
         <Box
           sx={{
             display: "flex",
-            flexDirection: "column",
-            width: { lg: "40rem" },
-            justifyContent: "center",
+            flexDirection: { xs: "column", md: "column", lg: "row" },
             allignItems: "center",
+            marginTop: "10rem",
           }}
         >
-          <Typography
-            variant="h4"
+          {/* operations info */}
+          <Box
             sx={{
-              color: "white",
+              display: "flex",
+              flexDirection: "column",
+              width: { lg: "40rem" },
+              justifyContent: "center",
+              allignItems: "center",
+            }}
+          >
+            <Typography
+              variant="h4"
+              sx={{
+                color: "white",
 
-              margin: { xs: "0 auto", lg: "0 10rem" },
-              paddingBottom: "1rem",
-              fontFamily: "Montserrat",
-              fontSize: {
-                sm: "2.5rem",
-                md: "3rem",
-                fontWeight: 600,
-              },
-            }}
-          >
-            {title}
-          </Typography>
-          <Typography
-            varient="p"
-            sx={{
-              color: "white",
-              display: { xs: "none", sm: "none", md: "none", lg: "block" },
-              width: { xs: "20rem", md: "30rem" },
-              margin: { xs: "0 auto", lg: "0 10rem" },
-              textAlign: { xs: "center", lg: "left" },
-              ontFamily: "Montserrat",
-              fontSize: {
-                xs: ".9rem",
-                sm: ".9rem",
-                md: "1rem",
-                lg: "1.2rem",
-                fontWeight: 300,
-              },
-            }}
-          >
-            {discription}
-          </Typography>
-        </Box>
-        {/* operations team */}
+                margin: { xs: "0 auto", lg: "0 10rem" },
+                paddingBottom: "1rem",
+                fontFamily: "Montserrat",
+                fontSize: {
+                  sm: "2.5rem",
+                  md: "3rem",
+                  fontWeight: 600,
+                },
+              }}
+            >
+              {title}
+            </Typography>
+            <Typography
+              varient="p"
+              sx={{
+                color: "white",
+                display: { xs: "none", sm: "none", md: "none", lg: "block" },
+                width: { xs: "20rem", md: "30rem" },
+                margin: { xs: "0 auto", lg: "0 10rem" },
+                textAlign: { xs: "center", lg: "left" },
+                ontFamily: "Montserrat",
+                fontSize: {
+                  xs: ".9rem",
+                  sm: ".9rem",
+                  md: "1rem",
+                  lg: "1.2rem",
+                  fontWeight: 300,
+                },
+              }}
+            >
+              {discription}
+            </Typography>
+          </Box>
+          {/* operations team */}
 
-        <Box>
-          <Typography
-            variant="h4"
-            sx={{
-              color: "#D3D3D3",
-              fontFamily: "Montserrat",
-              textAlign: "center",
-              padding: "0 auto",
-              marginBottom: "2rem",
-              marginTop: { xs: "1rem" },
-              fontSize: {
-                sm: "2rem",
-                md: "2.5rem",
-                fontWeight: 600,
-              },
-            }}
-          >
-            Managers
-          </Typography>
-          <Grid
-            container
-            sx={{
-              position: "relative",
-              zIndex: 30,
-              justifyContent: "left",
-            }}
-            spacing={1}
-          >
-            {info.map((el) => (
-              <Grid item xs={12} sm={6} md={4} lg={3} key={el.name}>
-                <Card name={el.name} imgUrl={el.url} />
-                <br />
-              </Grid>
-            ))}
-          </Grid>
+          <Box>
+            <Typography
+              variant="h4"
+              sx={{
+                color: "#D3D3D3",
+                fontFamily: "Montserrat",
+                textAlign: "center",
+                padding: "0 auto",
+                marginBottom: "2rem",
+                marginTop: { xs: "1rem" },
+                fontSize: {
+                  sm: "2rem",
+                  md: "2.5rem",
+                  fontWeight: 600,
+                },
+              }}
+            >
+              Managers
+            </Typography>
+            <Grid
+              container
+              sx={{
+                position: "relative",
+                zIndex: 30,
+                justifyContent: "left",
+              }}
+              spacing={1}
+            >
+              {info.map((el) => (
+                <Grid item xs={12} sm={6} md={4} lg={3} key={el.name}>
+                  <Card name={el.name} imgUrl={el.url} />
+                  <br />
+                </Grid>
+              ))}
+            </Grid>
+          </Box>
         </Box>
-      </Box>
+      </div>
     );
   };
   const [loading, setLoading] = React.useState(true);
@@ -286,29 +283,34 @@ const Managers = () => {
   };
   return (
     <>
-      <Navbar />
-      <Domain
-        discription={discription[0]}
-        info={operations_info}
-        title={"Operations"}
-      />
-      <Domain
-        discription={discription[1]}
-        info={sponsorship_info}
-        title={"Sponsorship"}
-      />
-      <Domain
-        discription={discription[2]}
-        info={ideation_info}
-        title={"Ideation"}
-      />
-      <Domain
-        discription={discription[3]}
-        info={design_info}
-        title={"Design"}
-      />
-      <Domain discription={discription[4]} info={web_info} title={"Web"} />
-      <Fifth />
+      <div>
+        <div id={parallax.stars}></div>
+        <div id={parallax.stars2}></div>
+        <Navbar />
+        <Domain
+          discription={discription[0]}
+          info={operations_info}
+          title={"Operations"}
+        />
+        <Domain
+          discription={discription[1]}
+          info={sponsorship_info}
+          title={"Sponsorship"}
+        />
+        <Domain
+          discription={discription[2]}
+          info={ideation_info}
+          title={"Ideation"}
+        />
+        <Domain
+          discription={discription[3]}
+          info={design_info}
+          title={"Design"}
+        />
+        <Domain discription={discription[4]} info={web_info} title={"Web"} />
+
+        <Fifth />
+      </div>
     </>
   );
 };

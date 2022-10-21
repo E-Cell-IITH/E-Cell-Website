@@ -5,12 +5,15 @@ import { Grid } from "@mui/material";
 import { Typography } from "@mui/material";
 import style2 from "../styles/changesFirst.module.css";
 import Managers from "../components/Managers";
+import parallax from "../styles/team.module.css";
 
 function Team() {
   return (
     <>
       <Navbar heading="Team E-Cell" desc={false} />
-      <div>
+      <div id="team">
+        <div id={parallax.stars}></div>
+        <div id={parallax.stars2}></div>
         <Card
           imgUrl={
             "https://res.cloudinary.com/dwsverefw/image/upload/v1665868302/ecell/team/Shreyansh_Agarwal_Overall_Head_1_bi10yy.jpg"
