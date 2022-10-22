@@ -183,7 +183,7 @@ const Managers = () => {
           alignItems: "center",
           marginTop: "10rem",
           position: "relative",
-          px: "8rem",
+          px: { xs: 0, sm: "8rem" },
 
           ...sx,
         }}
