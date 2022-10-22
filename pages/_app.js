@@ -2,6 +2,8 @@ import "../styles/globals.css";
 import LoadingScreen from "../components/LoadingScreen";
 import React from "react";
 import { BounceLoader } from "react-spinners";
+import Navbar from "../components/Navbar";
+import Fifth from "../components/fifth";
 
 function MyApp({ Component, pageProps }) {
   // const [loading, setLoading] = React.useState(true);
@@ -29,7 +31,9 @@ function MyApp({ Component, pageProps }) {
         />
       ) : ( */}
       <React.Fragment>
+        <Navbar />
         <Component {...pageProps} />
+        <Fifth />
       </React.Fragment>
       {/* )} */}
     </>

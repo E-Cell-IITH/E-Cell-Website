@@ -1,16 +1,21 @@
 import * as React from "react";
 import Link from "next/link";
+import { useRef } from "react";
 
 const Navbar = () => {
   const [checked, setChecked] = React.useState(false);
+  const navRef = useRef();
   return (
     <div className="navigation">
       <input
         type="checkbox"
         className="navigation__checkbox"
         defaultChecked={checked}
-        onChange={(prev) => setChecked(!prev)}
         id="nav-toggle"
+        onChange={() => {
+          setChecked((e) => !e);
+        }}
+        ref={navRef}
       ></input>
       <label htmlFor="nav-toggle" className="navigation__button">
         <span className="navigation__icon">&nbsp;</span>
@@ -20,37 +25,63 @@ const Navbar = () => {
         <ul className="navigation__list">
           <li className="navigation__item">
             <Link href="/">
-              <a className="navigation__link">Home</a>
+              <a
+                className="navigation__link"
+                onClick={() => {
+                  navRef.current.checked = false;
+                }}
+              >
+                Home
+              </a>
             </Link>
           </li>
           <li className="navigation__item">
             <a
               href="https://caprogram-ecell-iith.netlify.app"
               className="navigation__link"
+              onClick={() => {
+                navRef.current.checked = false;
+              }}
             >
               CA Program
             </a>
           </li>
           <li className="navigation__item">
             <Link href="/Team">
-              <a className="navigation__link">Team</a>
+              <a
+                className="navigation__link"
+                onClick={() => {
+                  navRef.current.checked = false;
+                }}
+              >
+                Team
+              </a>
             </Link>
           </li>
           <li className="navigation__item">
-            <a
-              href="https://tanmayshah07.github.io/E-CELL-IITH-Startup/"
-              className="navigation__link"
-            >
-              Notable Start-Ups
-            </a>
+            <Link href="https://tanmayshah07.github.io/E-CELL-IITH-Startup/">
+              <a
+                className="navigation__link"
+                onClick={() => {
+                  navRef.current.checked = false;
+                }}
+              >
+                {" "}
+                Notable Start-Ups
+              </a>
+            </Link>
           </li>
           <li className="navigation__item">
-            <a
-              href="https://esummit-ecell-iith.netlify.app"
-              className="navigation__link"
-            >
-              E Summit
-            </a>
+            <Link href="https://esummit-ecell-iith.netlify.app">
+              <a
+                className="navigation__link"
+                onClick={() => {
+                  navRef.current.checked = false;
+                }}
+              >
+                E Summit
+              </a>
+            </Link>
           </li>
         </ul>
       </nav>

@@ -12,8 +12,6 @@ function Team() {
     <>
       <Navbar heading="Team E-Cell" desc={false} />
       <div id="team">
-        <div id={parallax.stars}></div>
-        <div id={parallax.stars2}></div>
         <Card
           imgUrl={
             "https://res.cloudinary.com/dwsverefw/image/upload/v1665868302/ecell/team/Shreyansh_Agarwal_Overall_Head_1_bi10yy.jpg"
@@ -24,15 +22,35 @@ function Team() {
           bold
         />
       </div>
-
+      <Typography
+        variant="h4"
+        sx={{
+          color: "white",
+          fontFamily: "Montserrat",
+          mt: 6,
+          fontSize: {
+            sm: "2.7rem",
+            md: "3.4rem",
+          },
+          textAlign: "center",
+          fontWeight: 400,
+          textAlignLast: "center",
+          fontWeight: 600,
+        }}
+      >
+        HEADS
+      </Typography>
       <Grid
         container
         sx={{
           position: "relative",
           zIndex: 30,
           justifyContent: "center",
-          mt: 6,
-          p: 6,
+          mt: 2,
+          p: 0,
+          px: {
+            lg: "10vw",
+          },
         }}
         spacing={6}
         className={style2.gap}
@@ -54,12 +72,12 @@ function Team() {
                 fontFamily: "Montserrat",
                 fontSize: {
                   sm: "2.5rem",
-                  md: "3rem",
-                  textAlign: "center",
-                  fontWeight: 400,
-                  textAlignLast: "center",
-                  fontWeight: 600,
+                  md: "2.2rem",
                 },
+                textAlign: "center",
+                fontWeight: 400,
+                textAlignLast: "center",
+                fontWeight: 600,
               }}
             >
               Operations

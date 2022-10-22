@@ -93,7 +93,7 @@
 }
 
 .cont {
-    /* font-size: 1.5vw; */
+    font-size: 1.5vw;
     padding-top: 1vw;
     z-index: 1;
 }

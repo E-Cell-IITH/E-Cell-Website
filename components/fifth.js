@@ -140,7 +140,11 @@ export default function Fifth() {
             </div>
             <div className={style.log}>
               <div className={style.logo}>
-                <Image src="/static/msg.png" width="60" height="60" />
+                <Image
+                  src="https://res.cloudinary.com/dwsverefw/image/upload/v1665696046/ecell/msg_mqpkbk.png"
+                  width="60"
+                  height="60"
+                />
               </div>
               <div className={style.list1} id={style.list2}>
                 ecell@iith.ac.in
@@ -148,7 +152,11 @@ export default function Fifth() {
             </div>
             <div className={style.log}>
               <div className={style.logo}>
-                <Image src="/static/call.png" width="60" height="60" />
+                <Image
+                  src="https://res.cloudinary.com/dwsverefw/image/upload/v1665696044/ecell/call_bcfebi.png"
+                  width="60"
+                  height="60"
+                />
               </div>
               <div className={style.list1} id={style.list3}>
                 (+91)8979471587

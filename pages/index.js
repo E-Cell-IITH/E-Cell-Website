@@ -60,7 +60,6 @@ export default function Home() {
         <br />
         <Fourth />
         <br />
-        <Fifth />
       </Box>
     </>
   );

@@ -26,11 +26,12 @@ export default function Navbar({
           alt="Ecell Logo"
           layout="fill"
           objectFit="contain"
+          priority
         />
       </div>
       <Image
         src="https://res.cloudinary.com/dwsverefw/image/upload/v1665878886/ecell/hostels_svd8y6.jpg"
-        priority={true}
+        priority
         layout="fill"
         objectFit="cover"
         sx={{ zIndex: 0 }}

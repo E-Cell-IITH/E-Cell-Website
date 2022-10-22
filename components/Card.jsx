@@ -28,8 +28,9 @@ function Card({
         as="div"
         sx={{
           position: "relative",
-          height: 220,
-          width: 183,
+          height: 226,
+          pointerEvents: "none",
+          width: 168,
           borderRadius: 3,
           overflow: "hidden",
         }}
