@@ -181,3 +181,12 @@ body {
     background-size: 235%;
   }
 }
+
+.gradient-text{
+    background: linear-gradient(45deg, #1b6cff, #da46ff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    font-weight: 700;
+    -webkit-text-fill-color: transparent;
+
+}

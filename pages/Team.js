@@ -36,7 +36,7 @@ function Team() {
           fontWeight: 400,
           textAlignLast: "center",
           fontWeight: 600,
-          position: relative,
+          position: "relative",
           zIndex: 20,
         }}
       >

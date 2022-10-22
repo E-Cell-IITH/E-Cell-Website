@@ -24,7 +24,8 @@
 }
 .box{
     /* border-left: 0.1vw solid white; */
-    padding-left: 3vw;
+    /* padding-left: 3vw; */
+    padding-left: 1rem;
 }
 .box2{
     padding-left: 3vw;
@@ -32,8 +33,8 @@
 .content{
     text-align: center;
     font-size: 1.3vw;
-    margin-left: 2.5vw;
-    margin-top: 3vw;
+    /* margin-left: 2.5vw;
+    margin-top: 3vw; */
 }
 .border{
     margin-top: 2vw;
@@ -51,6 +52,14 @@
     linear-gradient(213.08deg, #BD63C3 20.56%, #3E15A0 74.74%);
     background-origin: border-box;
     background-clip: content-box,border-box;
+}
+
+.container{
+    padding: 0 10rem;
+}
+
+.content{
+    padding :0;
 }
 
 @media (max-width:1100px){
@@ -74,18 +83,50 @@
     }
 }
 
+@media (max-width: 900px){
+    .list{
+        display: flex;
+        overflow: scroll;
+        gap: 0rem;
+        touch-action: pan-x;
+        box-shadow:inset 5px 0 5px -5px rgba(0, 0, 0, 0.571),inset
+-5px 0 5px -5px rgba(0, 0, 0, 0.571);
+    }
+    .list button{
+        min-width: 18ch;
+        width: max-content;
+        font-size: 1rem;
+    }
+    .container{
+        padding: 0 ;
+    }
+}
+
+
+@media(max-width: 900px){
+    .events{
+        text-align: center;
+    }
+    .content{
+        margin: 0 3.4rem;
+    }
+}
+
 @media (max-width:800px){
     .head{
         font-size: 3.5vw;
     }
     .list{
         line-height: 7.5vw;
+        
     }
     .content{
         font-size: 1.6vw;
+        margin: 0 3rem;
     }
     .events{
         font-size: 5vw;
+        text-align: center;
     }
     .head{
         font-size: 3.4vw;
@@ -99,9 +140,10 @@
     }
 }
 
+
 @media(max-width:600px){
     .box{
-        font-size: 2.1vw;
+        font-size: 1rem;
     }
     .box2{
         font-size: 2.1vw;
@@ -114,24 +156,34 @@
     }
     .events{
         font-size: 7vw;
+        text-align: center;
     }
 }
 
 @media (max-width:500px){
     .events{
-        font-size: 6vw;
+        font-size: 2rem;
+        text-align: center;
     }
     .head{
-        font-size: 4vw;
+        font-size: 4vw
     }
     .list{
         line-height: 8vw;
+        padding: 1rem 0;
     }
+
+    .list button{
+        min-width: 18ch;
+        width: max-content;
+        font-size: 1rem;
+    }
+
     .content{
-        font-size: 2.4vw;
+        font-size: 2rem;
     }
     .box{
-        margin-top: 12vw;
+        margin-top: 0;  
     }
     .box2{
         margin-top: 24vw;
@@ -143,6 +195,12 @@
     }
     .border{
         border-right: double 0.7vw transparent;
+    }
+}
+
+@media (max-width: 350px){
+    .content{
+        margin:  1rem;
     }
 }
 

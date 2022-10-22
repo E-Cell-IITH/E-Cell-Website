@@ -102,17 +102,14 @@ export default function Third() {
     <div>
       <div className={style.container} id="events">
         <Grid container className={style.grid}>
-          <Grid item xs={1.6}></Grid>
-          <Grid item xs={8}>
-            <div className={style.events}>EVENTS</div>
+          <Grid item xs={12}>
+            <h2 className={style.events}>EVENTS</h2>
           </Grid>
-          <Grid item xs={2.2}></Grid>
-          <Grid item xs={0.4}></Grid>
-          <Grid item xs={5}>
-            <ul className={style.head}>{eventsData[eventIndex].name}</ul>
-            <ul className={style.list}>
-              <li className="power">
-                {eventIndex !== 0 && (
+          <Grid item container xs={12}>
+            <Grid item xs={12} md={6}>
+              <ul className={style.head}>{eventsData[eventIndex].name}</ul>
+              <ul className={style.list}>
+                <li className="power">
                   <TextButton
                     onClick={() => {
                       setEventIndex(0);
@@ -120,10 +117,8 @@ export default function Third() {
                   >
                     E-SUMMIT
                   </TextButton>
-                )}
-              </li>
-              <li className="power">
-                {eventIndex !== 1 && (
+                </li>
+                <li className="power">
                   <TextButton
                     onClick={() => {
                       setEventIndex(1);
@@ -131,11 +126,9 @@ export default function Third() {
                   >
                     START-UP FAIR
                   </TextButton>
-                )}
-              </li>
-              {/* <br /> */}
-              <li className="power">
-                {eventIndex !== 2 && (
+                </li>
+                {/* <br /> */}
+                <li className="power">
                   <TextButton
                     variant="text"
                     onClick={() => {
@@ -144,11 +137,9 @@ export default function Third() {
                   >
                     E-NETWORKING
                   </TextButton>
-                )}
-              </li>
-              {/* <br /> */}
-              <li className="power">
-                {eventIndex !== 3 && (
+                </li>
+                {/* <br /> */}
+                <li className="power">
                   <TextButton
                     variant="text"
                     onClick={() => {
@@ -157,11 +148,9 @@ export default function Third() {
                   >
                     POWERTALKS & PANEL DISCUSSIONS
                   </TextButton>
-                )}
-              </li>
-              {/* <br /> */}
-              <li className="power">
-                {eventIndex !== 4 && (
+                </li>
+                {/* <br /> */}
+                <li className="power">
                   <TextButton
                     variant="text"
                     onClick={() => {
@@ -170,24 +159,34 @@ export default function Third() {
                   >
                     CAMPUS AMBASSADOR PROGRAM
                   </TextButton>
-                )}
-              </li>
-            </ul>
-          </Grid>
-          <Grid item xs={0.1} className={style.border}></Grid>
-          <Grid
-            item
-            container
-            xs={5.4}
-            justifyContent="center"
-            alignItems="center"
-            className={style.content}
-          >
-            {eventsData[eventIndex].description.map((desc) => (
-              <Box className={style.box} sx={{ textAlign: "left" }} key={desc}>
-                <>{desc}</>
-              </Box>
-            ))}
+                </li>
+              </ul>
+            </Grid>
+            <Grid
+              item
+              container
+              xs={12}
+              md={6}
+              justifyContent="center"
+              alignItems="center"
+              className={style.content}
+            >
+              {eventsData[eventIndex].description.map((desc) => (
+                <Box
+                  className={style.box}
+                  sx={{
+                    textAlign: { lg: "left", xs: "left" },
+                    display: "flex",
+                    flexDirection: "column",
+                    justifyContent: "center",
+                    alignItems: "center",
+                  }}
+                  key={desc}
+                >
+                  <>{desc}</>
+                </Box>
+              ))}
+            </Grid>
           </Grid>
         </Grid>
         <br />
@@ -198,30 +197,26 @@ export default function Third() {
         <br />
         <br />
         <Grid container className={style.grid} id="competitions">
-          <Grid item xs={1.6}></Grid>
-          <Grid item xs={8}>
-            <div className={style.events}>COMPETITIONS</div>
+          <Grid item xs={12}>
+            <h2 className={style.events}>COMPETITIONS</h2>
           </Grid>
-          <Grid item xs={2.2}></Grid>
-          <Grid item xs={0.4}></Grid>
-          <Grid item xs={5}>
-            <ul className={style.head}>
-              {competitionData[competitionIndex].name}
-            </ul>
-            <ul className={style.list}>
-              <li>
-                {competitionIndex !== 0 && (
+          <Grid item container xs={12}>
+            <Grid item xs={12} md={6}>
+              <ul className={style.head}>
+                {competitionData[competitionIndex].name}
+              </ul>
+              <ul className={style.list}>
+                <li>
                   <TextButton
                     onClick={() => {
                       setCompetitionIndex(0);
                     }}
+                    className="gradient-text"
                   >
                     IDEA VALIDATION CAMP
                   </TextButton>
-                )}
-              </li>
-              <li>
-                {competitionIndex !== 1 && (
+                </li>
+                <li>
                   <TextButton
                     onClick={() => {
                       setCompetitionIndex(1);
@@ -229,10 +224,8 @@ export default function Third() {
                   >
                     BIZ-QUIZ
                   </TextButton>
-                )}
-              </li>
-              <li>
-                {competitionIndex !== 2 && (
+                </li>
+                <li>
                   <TextButton
                     onClick={() => {
                       setCompetitionIndex(2);
@@ -240,10 +233,8 @@ export default function Third() {
                   >
                     E-PIC
                   </TextButton>
-                )}
-              </li>
-              <li>
-                {competitionIndex !== 3 && (
+                </li>
+                <li>
                   <TextButton
                     onClick={() => {
                       setCompetitionIndex(3);
@@ -251,10 +242,8 @@ export default function Third() {
                   >
                     TRADEPOINT
                   </TextButton>
-                )}
-              </li>
-              <li>
-                {competitionIndex !== 4 && (
+                </li>
+                <li>
                   <TextButton
                     onClick={() => {
                       setCompetitionIndex(4);
@@ -262,10 +251,8 @@ export default function Third() {
                   >
                     THE PITCH SHOWDOWN
                   </TextButton>
-                )}
-              </li>
-              <li>
-                {competitionIndex !== 5 && (
+                </li>
+                <li>
                   <TextButton
                     onClick={() => {
                       setCompetitionIndex(5);
@@ -273,24 +260,28 @@ export default function Third() {
                   >
                     CASE STUDY CHALLENGE
                   </TextButton>
-                )}
-              </li>
-            </ul>
-          </Grid>
-          <Grid item xs={0.1} className={style.border1}></Grid>
-          <Grid
-            item
-            container
-            xs={5.5}
-            justifyContent="center"
-            alignContent="center"
-            className={style.content}
-          >
-            {competitionData[competitionIndex].description.map((desc) => (
-              <Box className={style.box2} sx={{ textAlign: "left" }} key={desc}>
-                <>{desc}</>
-              </Box>
-            ))}
+                </li>
+              </ul>
+            </Grid>
+            <Grid
+              item
+              container
+              xs={12}
+              md={6}
+              justifyContent="center"
+              alignContent="center"
+              className={style.content}
+            >
+              {competitionData[competitionIndex].description.map((desc) => (
+                <Box
+                  className={style.box}
+                  sx={{ textAlign: "left" }}
+                  key={desc}
+                >
+                  <>{desc}</>
+                </Box>
+              ))}
+            </Grid>
           </Grid>
         </Grid>
       </div>

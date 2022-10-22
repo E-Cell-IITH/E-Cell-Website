@@ -55,12 +55,20 @@
     z-index: 3;
     font-size: 6vw;
     font-weight: 700;
-    background: linear-gradient(92.42deg, #BD63C3 23.03%, #3E15A0 88.79%);
+    /* background: linear-gradient(92.42deg, #BD63C3 23.03%, #3E15A0 88.79%); */
+    background: linear-gradient(to right, rgb(169, 41, 255) 10%, rgb(255, 34, 181) 40%, rgb(21, 72, 255) 70%, rgb(169, 41, 255) 90%);
+    background-size: 200% auto;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
     font-style: normal;
-    /* text-fill-color: transparent; */
+    animation: gradientChange 30s infinite ease-in;
+}
+
+@keyframes gradientChange {
+    from {
+        background-position: 200%;
+    } 
 }
 
 .iit {
