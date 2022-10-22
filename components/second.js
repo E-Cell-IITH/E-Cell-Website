@@ -161,22 +161,30 @@ export default function Second() {
             <Grid item xs={2}></Grid>
             <Grid item xs={2}></Grid>
             <Grid item xs={8} className={style.cont} id={style.parvision}>
-              E-Cell IIT Hyderabad offers an oppurtunity to be associated with a
-              non-profit organization dedicated to promoting the spirit of
-              entrepreneurship among students throughout India.
+            E-Cell IIT Hyderabad offers an opportunity to be
+            associated with a non-profit organization dedicated to
+            promoting the spirit of entrepreneurship among
+            students throughout India.
+
               <br />
               <br />
               E-Cell IIT Hyderabad aims to connect with individuals and
-              organizations that share the common goal of realizing and
-              encourage college-level students throughout the nation to start
-              their own enterprise through remarkable thinking and powerful
-              ideas. Partnering in an event with a strong vision having such a
-              global presence through our Flagship Event E-Summit, quality
-              audience and given the generous media coverage garnerd by E-Cell
-              IIT Hyderabad especially through the sessions conducted by our
-              most awaited speakers, definetely ensures brand acknowedgement,
-              visibitlity and a chance to engage with the community, speakers
-              and potential customers.
+              organizations that share the goal of realizing and
+              encouraging college-level students throughout the
+              nation to start their enterprises through remarkable
+              thinking and powerful ideas.
+
+              <br />
+              <br />
+
+              Partnering in an event with a strong vision having such a
+              global presence through our Flagship Event E-Summit,
+              quality audience and given the generous media coverage
+              garnered by E-Cell IIT Hyderabad, especially through the
+              sessions conducted by our most awaited speakers,
+              definitely ensures brand acknowedgement, visibility and
+              a chance to engage with the community, speakers and
+              potential customers
             </Grid>
             <Grid item xs={2}></Grid>
           </Grid>
@@ -204,11 +212,13 @@ export default function Second() {
             <br />
             <Grid item xs={2}></Grid>
             <Grid item xs={8} className={style.cont}>
-              Investment fIrms and VCs to provide funding for the startups
-              budding in the campus. Clubs to provide strategic mentorship to
-              the student community. Various companies to provide both monetary
-              and non-monetary sponsorship. E-Cells of various colleges, and
-              acting as a Guiding Body for newer E-Cells.
+            • Investment firms and VCs to provide funding to the budding in-campus startups.
+            <br/>
+            • Training clubs to provide strategic mentorship to the student community.
+            <br/>
+            • Various companies to provide both monetary and non-monetary sponsorship.
+            <br/>
+            • E-Cells of various colleges, and acting as a Guiding Body for newer E-Cells.
             </Grid>
             <Grid item xs={1}></Grid>
             <Grid item xs={1}></Grid>
@@ -227,10 +237,17 @@ export default function Second() {
             <Grid item xs={2}></Grid>
             <Grid item xs={8} className={style.cont}>
               <br />
-              E-Cell IIT Hyderabad wants to make sponsorship more than just a
-              signage. We want our collaborations to be interactive and in the
-              process provide a platform such that you can reach the target
-              audience and connect with them.
+              E-Cell IIT Hyderabad wants to make sponsorship
+              more than just signage. We want our
+              collaborations to be interactive and, in the
+              process, provide a platform such that you can
+              reach the target audience and connect with them.
+              <br/>
+              <br/>
+              After all, at E-Cell IIT Hyderabad, we believe it is
+                very important to promote new ventures by
+                students, particularly when the local communities
+                finds its relevance.
             </Grid>
             <Grid item xs={1}></Grid>
             <Grid item xs={1}></Grid>
@@ -250,7 +267,7 @@ export default function Second() {
           <Grid item xs={2}></Grid>
           <Grid item xs={8} className={style.cont} id={style.cont}>
             <br />
-            PR &#38; Networking domain collaborates with media companies and
+            {/* PR &#38; Networking domain collaborates with media companies and
             signs deals so as to spread the word about our events. We also
             collaborate with social media partners/influencers. The deals are
             signed based on mutual agreement between both the parties. The
@@ -260,7 +277,19 @@ export default function Second() {
             foot fall of the E-cell. The companies get to have their advertising
             during our flagship event. Their commercials/logos can be aired in
             between the e-summit depending on the needs of the respective
-            company.
+            company. */}
+            For any event to be successful, we require good outreach.
+            As a result, the PR & Networking domain collaborates with
+            media companies to spread a word about our events. Our
+            collaboration also extends towards social media
+            partners/influencers. The title of &#39;Media Partner&#39; is issued
+            to the partner companies. The commercials/ logo can be
+            aired in between the e-summit talks depending on the
+            needs of the company. Additionally, we upload our
+            renowned entrepreneur talks on global platforms
+            (Instagram, LinkedIn, Twitter, Youtube) featuring our
+            partners as well.
+
           </Grid>
           <Grid item xs={1}></Grid>
           <Grid item xs={1}></Grid>
