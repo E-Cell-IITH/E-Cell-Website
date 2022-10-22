@@ -35,7 +35,13 @@ function Card({
           overflow: "hidden",
         }}
       >
-        <Image src={imgUrl} layout="fill" objectFit="cover" alt={name} />
+        <Image
+          src={imgUrl}
+          layout="fill"
+          objectFit="cover"
+          alt={name}
+          priority
+        />
       </Box>
       <Box as="div">
         <Typography

@@ -72,7 +72,7 @@ function Team() {
                 fontFamily: "Montserrat",
                 fontSize: {
                   sm: "2.5rem",
-                  md: "2.2rem",
+                  md: "3rem",
                 },
                 textAlign: "center",
                 fontWeight: 400,

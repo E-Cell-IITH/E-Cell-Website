@@ -84,6 +84,7 @@ export default function Fourth() {
             <Grid
               item
               xs={12}
+              key={sponsor}
               sx={{
                 position: "relative",
                 height: { xs: "5rem", sm: "15vw", lg: "8vw" },
@@ -103,6 +104,7 @@ export default function Fourth() {
             <Grid
               item
               xs={12}
+              key={sponsor}
               sx={{
                 position: "relative",
                 height: { xs: "5rem", sm: "15vw", lg: "8vw" },
