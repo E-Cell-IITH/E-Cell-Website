@@ -5,8 +5,8 @@ import Third from "../components/third";
 import Fourth from "../components/fourth";
 import Fifth from "../components/fifth";
 import Navbar from "../components/Navbar";
-import Head from "next/head";
 import useMediaQuery from "@mui/material/useMediaQuery";
+import Head from "next/head";
 
 import { BounceLoader } from "react-spinners";
 import { Box } from "@mui/system";
@@ -44,6 +44,9 @@ export default function Home() {
       ) : (
         <></>
       )}
+      <Head>
+        <title>Ecell IIT Hyderabad</title>
+      </Head>
       <Box
         sx={{
           opacity: load_display,

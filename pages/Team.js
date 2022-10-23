@@ -6,10 +6,14 @@ import { Typography } from "@mui/material";
 import style2 from "../styles/changesFirst.module.css";
 import Managers from "../components/Managers";
 import parallax from "../styles/team.module.css";
+import Head from "next/head";
 
 function Team() {
   return (
     <>
+      <Head>
+        <title>Team Entrepreneurship Cell IIT Hyderabad</title>
+      </Head>
       <Navbar heading="Team E-Cell" desc={false} />
       <div id="team">
         <Card

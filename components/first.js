@@ -4,6 +4,8 @@ import Image from "next/image";
 import Box from "@mui/material/Box";
 import { useLayoutEffect, useRef } from "react";
 import { gsap } from "gsap";
+// import { ScrollTrigger } from "gsap/ScrollTrigger";
+// gsap.registerPlugin(ScrollTrigger);
 
 export default function Navbar({
   desc = true,
@@ -11,25 +13,43 @@ export default function Navbar({
 }) {
   const headingRef = useRef();
   const iith = useRef();
+  const parent = useRef();
   useLayoutEffect(() => {
     let ctx = gsap.context(() => {
       gsap.fromTo(
-        headingRef.current,
-        0.8,
-        { autoAlpha: 0, delay: 2, y: 20 },
-        { autoAlpha: 1, y: 0 }
+        "#tagline",
+        {
+          x: -10,
+          autoAlpha: 0,
+        },
+        {
+          x: 0,
+          autoAlpha: 1,
+          duration: 0.6,
+          delay: 0.7,
+          ease: "power2.inOut",
+        }
       );
-    });
+    }, parent);
+
+    gsap.fromTo(
+      headingRef.current,
+      0.8,
+      { autoAlpha: 0, delay: 2, y: 20 },
+      { autoAlpha: 1, y: 0 }
+    );
     gsap.fromTo(
       iith.current,
       0.6,
       { autoAlpha: 0, y: 15 },
       { autoAlpha: 1, y: 0, delay: 0.5 }
     );
+
+    return () => {};
   }, []);
 
   return (
-    <div>
+    <div ref={parent}>
       <br />
       <Box
         sx={{
@@ -72,7 +92,9 @@ export default function Navbar({
         IIT HYDERABAD <br />
       </div>
       <br />
-      <div className={style.think}>THINK | BUILD | INSPIRE</div>
+      <div className={style.think} id="tagline">
+        THINK | BUILD | INSPIRE
+      </div>
       <div className={style.box}>
         <a
           className={style.pic}
