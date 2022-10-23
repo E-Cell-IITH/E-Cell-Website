@@ -2,11 +2,32 @@ import style from "../styles/first.module.css";
 import Grid from "@mui/material/Grid";
 import Image from "next/image";
 import Box from "@mui/material/Box";
+import { useLayoutEffect, useRef } from "react";
+import { gsap } from "gsap";
 
 export default function Navbar({
   desc = true,
   heading = "Entrepreneurship Cell",
 }) {
+  const headingRef = useRef();
+  const iith = useRef();
+  useLayoutEffect(() => {
+    let ctx = gsap.context(() => {
+      gsap.fromTo(
+        headingRef.current,
+        0.8,
+        { autoAlpha: 0, delay: 2, y: 20 },
+        { autoAlpha: 1, y: 0 }
+      );
+    });
+    gsap.fromTo(
+      iith.current,
+      0.6,
+      { autoAlpha: 0, y: 15 },
+      { autoAlpha: 1, y: 0, delay: 0.5 }
+    );
+  }, []);
+
   return (
     <div>
       <br />
@@ -43,11 +64,11 @@ export default function Navbar({
       <br />
       <br />
       <br />
-      <div className={style.title}>
+      <div className={style.title} ref={headingRef}>
         {heading}
         <br />
       </div>
-      <div className={style.iit}>
+      <div className={style.iit} ref={iith}>
         IIT HYDERABAD <br />
       </div>
       <br />

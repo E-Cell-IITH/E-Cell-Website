@@ -16,7 +16,7 @@ export default function Home() {
   const [load_display, setload_display] = React.useState(0);
   React.useEffect(() => {
     setTimeout(() => setLoading(false), 1000);
-    setTimeout(() => setload_display(1), 1000);
+    setTimeout(() => setload_display(1), 0);
     window.history.scrollRestoration = "manual";
   }, []);
 
@@ -32,9 +32,6 @@ export default function Home() {
   };
   return (
     <>
-      <Head>
-        <link rel="shortcut icon" href="/static/Ecell_logo.png" />
-      </Head>
       {loading ? (
         <BounceLoader
           color={"#7a4daf"}

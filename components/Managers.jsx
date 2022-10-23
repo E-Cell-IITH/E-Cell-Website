@@ -150,10 +150,7 @@ const pr_info = [
     name: "Rishika Devarkonda",
     url: "https://res.cloudinary.com/dwsverefw/image/upload/v1666448398/ecell/team/managers/Rishika_PRandnetworking_o7xaox.jpg",
   },
-  {
-    name: "Aishwarya",
-    url: "https://res.cloudinary.com/dwsverefw/image/upload/v1666448399/ecell/team/managers/Aishwarya_Sponsorship_i4cood.jpg",
-  },
+
   {
     name: "Manasi",
     url: "https://res.cloudinary.com/dwsverefw/image/upload/v1666448400/ecell/team/managers/Manasi__PR_Networking_gv5vix.jpg",
@@ -161,6 +158,14 @@ const pr_info = [
   {
     name: "Rani Raman",
     url: "https://res.cloudinary.com/dwsverefw/image/upload/v1666448397/ecell/team/managers/Rani_K_Raman_PR_Networking_sspgxb.jpg",
+  },
+  {
+    name: "Manas Bhargava",
+    url: "https://res.cloudinary.com/dwsverefw/image/upload/v1666448399/ecell/team/managers/Manas_Bhargava_dsqzpq.jpg",
+  },
+  {
+    name: "Sanika Karmore",
+    url: "https://res.cloudinary.com/dwsverefw/image/upload/v1666524507/ecell/team/managers/Sanika_PR_r2zodx.jpg",
   },
 ];
 
