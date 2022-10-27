@@ -22,7 +22,6 @@ function Team() {
             trigger: "#head",
             start: "top 80%",
             end: "top 50%",
-            markers: true,
             toggleActions: "play none none reverse",
           },
         })
