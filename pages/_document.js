@@ -4,8 +4,6 @@ export default function Document() {
   return (
     <Html>
       <Head>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta charset="utf-8" />
         <meta
           name="description"
           content="E-Cell, IIT Hyderabad strives to foster and support entrepreneurship and innovation both within and outside of the institution. After all, grasping the significance of emerging business ideas today and assisting students in gaining market exposure and the appropriate path for their start-up is the only way to unleash their latent innovative potential. We create a forum for students and the business sector, including start-ups from diverse fields, to collaboration, interaction, and invention. It offers any kind of help for developing emerging ideas from the ideation stage to a finished product by experienced mentors. To create a platform for different student start-ups from throughout the country to be launched into businesses."

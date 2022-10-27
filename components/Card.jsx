@@ -9,10 +9,14 @@ function Card({
   position = false,
   sx,
   bold = false,
+  id,
+  className,
 }) {
   return (
     <Box
+      id={id}
       as="div"
+      className="card"
       sx={{
         color: "white",
         fontFamily: "Montserrat",
@@ -25,6 +29,7 @@ function Card({
       }}
     >
       <Box
+        className="image"
         as="div"
         sx={{
           position: "relative",
@@ -45,6 +50,7 @@ function Card({
       </Box>
       <Box as="div">
         <Typography
+          className="name"
           variant="h5"
           component="h2"
           sx={{
@@ -59,6 +65,7 @@ function Card({
         </Typography>
         {position && (
           <Typography
+            className="position"
             variant="h6"
             component="h2"
             sx={{

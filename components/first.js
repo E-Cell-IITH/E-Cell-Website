@@ -4,8 +4,8 @@ import Image from "next/image";
 import Box from "@mui/material/Box";
 import { useLayoutEffect, useRef } from "react";
 import { gsap } from "gsap";
-// import { ScrollTrigger } from "gsap/ScrollTrigger";
-// gsap.registerPlugin(ScrollTrigger);
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
 
 export default function Navbar({
   desc = true,
@@ -17,35 +17,59 @@ export default function Navbar({
   useLayoutEffect(() => {
     let ctx = gsap.context(() => {
       gsap.fromTo(
-        "#tagline",
+        "#tagline > *, #smLinks>*",
         {
-          x: -10,
+          x: -4,
           autoAlpha: 0,
         },
         {
           x: 0,
           autoAlpha: 1,
           duration: 0.6,
-          delay: 0.7,
+          delay: 0.4,
           ease: "power2.inOut",
+          stagger: 0.05,
         }
       );
+
+      gsap.fromTo("#ecellLogo", { autoAlpha: 0 }, { autoAlpha: 1 });
+      if (desc) {
+        gsap.fromTo(
+          "#about",
+          { autoAlpha: 0.2, y: 10, scale: 1 },
+          {
+            autoAlpha: 1,
+            y: 0,
+            scale: 1.03,
+            scrollTrigger: {
+              trigger: "#about",
+              start: "top 70%",
+              duration: 0.9,
+              end: "60% 70%",
+              toggleActions: "play none none reset",
+            },
+          }
+        );
+      }
     }, parent);
 
     gsap.fromTo(
       headingRef.current,
       0.8,
-      { autoAlpha: 0, delay: 2, y: 20 },
+      { autoAlpha: 0, y: 20 },
       { autoAlpha: 1, y: 0 }
     );
     gsap.fromTo(
       iith.current,
       0.6,
       { autoAlpha: 0, y: 15 },
-      { autoAlpha: 1, y: 0, delay: 0.5 }
+      {
+        autoAlpha: 1,
+        y: 0,
+      }
     );
 
-    return () => {};
+    return () => ctx.revert();
   }, []);
 
   return (
@@ -61,7 +85,7 @@ export default function Navbar({
           zIndex: 1,
         }}
       ></Box>
-      <div className={style.image}>
+      <div className={style.image} id="ecellLogo">
         <Image
           src="https://res.cloudinary.com/dwsverefw/image/upload/v1665696046/ecell/logo_dshics.png"
           alt="Ecell Logo"
@@ -93,9 +117,9 @@ export default function Navbar({
       </div>
       <br />
       <div className={style.think} id="tagline">
-        THINK | BUILD | INSPIRE
+        <span>THINK |</span> <span>BUILD |</span> <span>INSPIRE</span>
       </div>
-      <div className={style.box}>
+      <div className={style.box} id="smLinks">
         <a
           className={style.pic}
           href="https://www.instagram.com/ecell_iith/?hl=en"
@@ -177,7 +201,7 @@ export default function Navbar({
         <div className={style.container2} id="about">
           <div className={style.about}>ABOUT US</div> <br />
           <Grid container spacing={2} justifyContent="center">
-            <Grid item xs={10} md={9} className={style.cont}>
+            <Grid item xs={10} md={9} className={style.cont} id="desc">
               We at IIT Hyderabad&#39;s Entrepreneurship Cell believe in
               passion, hard effort, and an unquenchable drive for achievement.
               It is a place that is the confluence of a billion sparks of ideas,

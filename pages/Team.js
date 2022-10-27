@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef, useEffect } from "react";
 import Navbar from "../components/first";
 import Card from "../components/Card";
 import { Grid } from "@mui/material";
@@ -7,16 +7,55 @@ import style2 from "../styles/changesFirst.module.css";
 import Managers from "../components/Managers";
 import parallax from "../styles/team.module.css";
 import Head from "next/head";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
 
 function Team() {
+  const parent = useRef();
+  const tl = useRef();
+  useEffect(() => {
+    const ctx = gsap.context(() => {
+      tl.current = gsap
+        .timeline({
+          scrollTrigger: {
+            trigger: "#head",
+            start: "top 80%",
+            end: "top 50%",
+            markers: true,
+            toggleActions: "play none none reverse",
+          },
+        })
+        .fromTo(
+          "#head > *",
+          {
+            y: 20,
+            autoAlpha: 0,
+            scale: 0.9,
+          },
+          {
+            autoAlpha: 1,
+            scale: 1,
+            y: 0,
+            duration: 0.4,
+            ease: "power2.out",
+            stagger: 0.3,
+          }
+        );
+    }, parent);
+
+    return () => ctx.revert();
+  }, []);
+
   return (
-    <>
+    <div ref={parent}>
       <Head>
         <title>Team Entrepreneurship Cell IIT Hyderabad</title>
       </Head>
       <Navbar heading="Team E-Cell" desc={false} />
-      <div id="team">
+      <div>
         <Card
+          id="head"
           imgUrl={
             "https://res.cloudinary.com/dwsverefw/image/upload/v1665868302/ecell/team/Shreyansh_Agarwal_Overall_Head_1_bi10yy.jpg"
           }
@@ -350,7 +389,7 @@ function Team() {
       {/* ------------------------------------------------------ */}
       {/* Managers section */}
       <Managers />
-    </>
+    </div>
   );
 }
 

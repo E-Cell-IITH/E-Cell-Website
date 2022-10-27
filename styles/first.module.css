@@ -56,7 +56,7 @@
     font-size: 6vw;
     font-weight: 700;
     /* background: linear-gradient(92.42deg, #BD63C3 23.03%, #3E15A0 88.79%); */
-    background: linear-gradient(to right, rgb(169, 41, 255) 10%, rgb(255, 34, 181) 40%, rgb(21, 72, 255) 80%, rgb(169, 41, 255) 100%);
+    background: linear-gradient(to right, rgb(169, 41, 255) 10%, rgb(255, 34, 181) 40%, rgb(21, 72, 255) 90%,rgb(169, 41, 255) 100%);
     background-size: 200% auto;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
