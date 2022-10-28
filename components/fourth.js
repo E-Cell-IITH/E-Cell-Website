@@ -16,9 +16,9 @@ const sponsors = [
       "https://res.cloudinary.com/dwsverefw/image/upload/v1665696045/ecell/image_6_yv9wg1.png",
   },
   {
-    name: "Dare 2 Compete",
+    name: "Unstop",
     imgUrl:
-      "https://res.cloudinary.com/dwsverefw/image/upload/v1665696045/ecell/image_5_bpk4pq.png",
+      "https://res.cloudinary.com/dwsverefw/image/upload/c_scale,w_1125/v1666905522/ecell/unstop_wlsi8w.png",
   },
   {
     name: "stumagz",

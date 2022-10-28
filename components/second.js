@@ -1,10 +1,71 @@
 import Grid from "@mui/material/Grid";
 import style from "../styles/second.module.css";
 import Image from "next/image";
+import { useMediaQuery } from "@mui/material";
+import { useLayoutEffect, useRef } from "react";
+import { gsap } from "gsap";
+
+const ids = ["#vision, #partner", "#collabs", "#bond", "#media"];
 
 export default function Second() {
+  const matchesMd = useMediaQuery("(min-width:900px)");
+  const parent = useRef();
+  useLayoutEffect(() => {
+    const ctx = gsap.context(() => {
+      if (matchesMd) {
+        gsap.fromTo(
+          "#motto-card > div",
+          { x: -20, autoAlpha: 0 },
+          {
+            x: 0,
+            autoAlpha: 1,
+            stagger: 0.2,
+            scrollTrigger: {
+              trigger: "#motto-card",
+              start: "20% 75%",
+            },
+          }
+        );
+      } else {
+        const mottoCards = gsap.utils.toArray("#motto-card > div");
+        mottoCards.forEach((card) => {
+          gsap.fromTo(
+            card,
+            { y: 20, autoAlpha: 0 },
+            {
+              y: 0,
+              autoAlpha: 1,
+              scrollTrigger: {
+                trigger: card,
+                start: "20% 75%",
+              },
+            }
+          );
+        });
+      }
+
+      console.log(gsap.utils.toArray("#vision , #partner"));
+
+      ids.forEach((id, index) => {
+        gsap.fromTo(
+          id,
+          { y: 20, autoAlpha: 0.1 },
+          {
+            y: 0,
+            autoAlpha: 1,
+            scrollTrigger: { trigger: id, start: "20% 75%" },
+          }
+        );
+      });
+    }, parent);
+
+    return () => {
+      ctx.revert();
+    };
+  });
+
   return (
-    <>
+    <div className="parent" ref={parent}>
       <div className={style.motto} id="motto">
         OUR MOTTO
       </div>{" "}
@@ -13,7 +74,13 @@ export default function Second() {
       <br />
       <br />
       <div className={style.cards}>
-        <Grid container justifyContent="center" spacing={4} sx={{ px: 3 }}>
+        <Grid
+          container
+          id="motto-card"
+          justifyContent="center"
+          spacing={4}
+          sx={{ px: 3 }}
+        >
           <Grid
             item
             sm={9}
@@ -54,7 +121,7 @@ export default function Second() {
             sx={{
               display: "flex",
               flexDirection: "column",
-              justifyContent: "center",
+              justifyContent: "flex-start",
               alignItems: "center",
             }}
           >
@@ -115,7 +182,7 @@ export default function Second() {
           </Grid>
         </Grid>
       </div>
-      <div className={style.container} id="vision">
+      <div className={style.container}>
         <div className={style.div2}>
           <div className={style.imgContainer}>
             <Image
@@ -131,8 +198,9 @@ export default function Second() {
             spacing={2}
             justifyContent="center"
             className={style.whole}
+            id="vision"
           >
-            <Grid item xs={10} md={8} className={style.cont}>
+            <Grid item xs={10} md={8} className={style.cont} id="#vision">
               E-Cell, IIT Hyderabad strives to foster and support
               entrepreneurship and innovation both within and outside of the
               institution. After all, grasping the significance of emerging
@@ -147,7 +215,7 @@ export default function Second() {
               the country to be launched into businesses.
             </Grid>
           </Grid>
-          <Grid container className={style.whole1}>
+          <Grid container className={style.whole1} id="partner">
             <Grid item xs={2}></Grid>
             <Grid item xs={8}>
               <div className={style.partner}>WHY PARTNER WITH</div>
@@ -160,31 +228,33 @@ export default function Second() {
             </Grid>
             <Grid item xs={2}></Grid>
             <Grid item xs={2}></Grid>
-            <Grid item xs={8} className={style.cont} id={style.parvision}>
-            E-Cell IIT Hyderabad offers an opportunity to be
-            associated with a non-profit organization dedicated to
-            promoting the spirit of entrepreneurship among
-            students throughout India.
-
+            <Grid item xs={8} className={style.cont} id={`${style.parvision}`}>
+              <span>
+                {" "}
+                E-Cell IIT Hyderabad offers an opportunity to be associated with
+                a non-profit organization dedicated to promoting the spirit of
+                entrepreneurship among students throughout India.
+              </span>
               <br />
               <br />
-              E-Cell IIT Hyderabad aims to connect with individuals and
-              organizations that share the goal of realizing and
-              encouraging college-level students throughout the
-              nation to start their enterprises through remarkable
-              thinking and powerful ideas.
-
+              <span>
+                {" "}
+                E-Cell IIT Hyderabad aims to connect with individuals and
+                organizations that share the goal of realizing and encouraging
+                college-level students throughout the nation to start their
+                enterprises through remarkable thinking and powerful ideas.
+              </span>
               <br />
               <br />
-
-              Partnering in an event with a strong vision having such a
-              global presence through our Flagship Event E-Summit,
-              quality audience and given the generous media coverage
-              garnered by E-Cell IIT Hyderabad, especially through the
-              sessions conducted by our most awaited speakers,
-              definitely ensures brand acknowedgement, visibility and
-              a chance to engage with the community, speakers and
-              potential customers
+              <span>
+                Partnering in an event with a strong vision having such a global
+                presence through our Flagship Event E-Summit, quality audience
+                and given the generous media coverage garnered by E-Cell IIT
+                Hyderabad, especially through the sessions conducted by our most
+                awaited speakers, definitely ensures brand acknowedgement,
+                visibility and a chance to engage with the community, speakers
+                and potential customers
+              </span>
             </Grid>
             <Grid item xs={2}></Grid>
           </Grid>
@@ -201,7 +271,7 @@ export default function Second() {
               alt="stylistic triangle"
             />
           </div>
-          <Grid container className={style.whole2}>
+          <Grid container className={style.whole2} id="collabs">
             <Grid item xs={2}></Grid>
             <Grid item xs={8} className={style.stuff}>
               OUR COLLABORATIONS
@@ -212,13 +282,16 @@ export default function Second() {
             <br />
             <Grid item xs={2}></Grid>
             <Grid item xs={8} className={style.cont}>
-            • Investment firms and VCs to provide funding to the budding in-campus startups.
-            <br/>
-            • Training clubs to provide strategic mentorship to the student community.
-            <br/>
-            • Various companies to provide both monetary and non-monetary sponsorship.
-            <br/>
-            • E-Cells of various colleges, and acting as a Guiding Body for newer E-Cells.
+              • Investment firms and VCs to provide funding to the budding
+              in-campus startups.
+              <br />
+              • Training clubs to provide strategic mentorship to the student
+              community.
+              <br />
+              • Various companies to provide both monetary and non-monetary
+              sponsorship.
+              <br />• E-Cells of various colleges, and acting as a Guiding Body
+              for newer E-Cells.
             </Grid>
             <Grid item xs={1}></Grid>
             <Grid item xs={1}></Grid>
@@ -226,7 +299,7 @@ export default function Second() {
           <br />
           <br />
 
-          <Grid container className={style.whole3}>
+          <Grid container className={style.whole3} id="bond">
             <Grid item xs={2}></Grid>
             <Grid item xs={8} className={style.stuff1}>
               BOND BETWEEN OUR SPONSORS
@@ -237,17 +310,15 @@ export default function Second() {
             <Grid item xs={2}></Grid>
             <Grid item xs={8} className={style.cont}>
               <br />
-              E-Cell IIT Hyderabad wants to make sponsorship
-              more than just signage. We want our
-              collaborations to be interactive and, in the
-              process, provide a platform such that you can
-              reach the target audience and connect with them.
-              <br/>
-              <br/>
-              After all, at E-Cell IIT Hyderabad, we believe it is
-                very important to promote new ventures by
-                students, particularly when the local communities
-                finds its relevance.
+              E-Cell IIT Hyderabad wants to make sponsorship more than just
+              signage. We want our collaborations to be interactive and, in the
+              process, provide a platform such that you can reach the target
+              audience and connect with them.
+              <br />
+              <br />
+              After all, at E-Cell IIT Hyderabad, we believe it is very
+              important to promote new ventures by students, particularly when
+              the local communities finds its relevance.
             </Grid>
             <Grid item xs={1}></Grid>
             <Grid item xs={1}></Grid>
@@ -255,7 +326,7 @@ export default function Second() {
         </div>
         <br />
         <br />
-        <Grid container className={style.whole4}>
+        <Grid container className={style.whole4} id="media">
           <Grid item xs={2}></Grid>
           <Grid item xs={8} className={style.stuff1}>
             MEDIA COLLABORATIONS
@@ -267,29 +338,15 @@ export default function Second() {
           <Grid item xs={2}></Grid>
           <Grid item xs={8} className={style.cont} id={style.cont}>
             <br />
-            {/* PR &#38; Networking domain collaborates with media companies and
-            signs deals so as to spread the word about our events. We also
-            collaborate with social media partners/influencers. The deals are
-            signed based on mutual agreement between both the parties. The
-            collaborations happen usually around 1-2 weeks before the e-cell.
-            The companies collaborating with us are introduced as our &#39;media
-            partner&#39;. The companies acquire higher reach because of the high
-            foot fall of the E-cell. The companies get to have their advertising
-            during our flagship event. Their commercials/logos can be aired in
-            between the e-summit depending on the needs of the respective
-            company. */}
-            For any event to be successful, we require good outreach.
-            As a result, the PR & Networking domain collaborates with
-            media companies to spread a word about our events. Our
-            collaboration also extends towards social media
-            partners/influencers. The title of &#39;Media Partner&#39; is issued
-            to the partner companies. The commercials/ logo can be
-            aired in between the e-summit talks depending on the
-            needs of the company. Additionally, we upload our
-            renowned entrepreneur talks on global platforms
-            (Instagram, LinkedIn, Twitter, Youtube) featuring our
-            partners as well.
-
+            For any event to be successful, we require good outreach. As a
+            result, the PR & Networking domain collaborates with media companies
+            to spread a word about our events. Our collaboration also extends
+            towards social media partners/influencers. The title of &#39;Media
+            Partner&#39; is issued to the partner companies. The commercials/
+            logo can be aired in between the e-summit talks depending on the
+            needs of the company. Additionally, we upload our renowned
+            entrepreneur talks on global platforms (Instagram, LinkedIn,
+            Twitter, Youtube) featuring our partners as well.
           </Grid>
           <Grid item xs={1}></Grid>
           <Grid item xs={1}></Grid>
@@ -302,6 +359,6 @@ export default function Second() {
         <br />
         <br />
       </div>
-    </>
+    </div>
   );
 }

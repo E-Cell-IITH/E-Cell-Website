@@ -190,3 +190,19 @@ body {
     -webkit-text-fill-color: transparent;
 
 }
+
+.desc-enter {
+  opacity: 0;
+}
+.desc-enter-active {
+  opacity: 1;
+  transition: opacity 200ms;
+}
+.desc-exit {
+  opacity: 1;
+}
+.desc-active {
+  opacity: 0;
+  transition: opacity 200ms;
+}
+

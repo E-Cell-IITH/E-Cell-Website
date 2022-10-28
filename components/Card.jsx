@@ -11,12 +11,13 @@ function Card({
   bold = false,
   id,
   className,
+  notCard = false,
 }) {
   return (
     <Box
       id={id}
       as="div"
-      className="card"
+      className={(!notCard && "card") || ""}
       sx={{
         color: "white",
         fontFamily: "Montserrat",
@@ -45,6 +46,7 @@ function Card({
           layout="fill"
           objectFit="cover"
           alt={name}
+          className="card-img"
           priority
         />
       </Box>
@@ -75,7 +77,7 @@ function Card({
                 md: "1.6rem",
                 xl: "1.3rem",
                 textAlign: "center",
-                fontWeight: 400,
+                fontWeight: 600,
               },
             }}
           >

@@ -5,15 +5,20 @@ import Box from "@mui/material/Box";
 import { useLayoutEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+import { useMediaQuery } from "@mui/material";
+
 gsap.registerPlugin(ScrollTrigger);
 
 export default function Navbar({
   desc = true,
-  heading = "Entrepreneurship Cell",
+  heading = "ENTREPRENEURSHIP CELL",
 }) {
   const headingRef = useRef();
   const iith = useRef();
   const parent = useRef();
+
+  const matchesMd = useMediaQuery("(min-width:900px)");
+
   useLayoutEffect(() => {
     let ctx = gsap.context(() => {
       gsap.fromTo(
@@ -32,7 +37,6 @@ export default function Navbar({
         }
       );
 
-      gsap.fromTo("#ecellLogo", { autoAlpha: 0 }, { autoAlpha: 1 });
       if (desc) {
         gsap.fromTo(
           "#about",
@@ -46,7 +50,7 @@ export default function Navbar({
               start: "top 70%",
               duration: 0.9,
               end: "60% 70%",
-              toggleActions: "play none none reset",
+              toggleActions: "play none none reverse",
             },
           }
         );

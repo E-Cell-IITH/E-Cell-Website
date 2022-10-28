@@ -87,6 +87,8 @@
     .list{
         display: flex;
         overflow: scroll;
+        -ms-overflow-style: none;  /* IE and Edge */
+        scrollbar-width: none;  /* Firefox */
         gap: 0rem;
         touch-action: pan-x;
         box-shadow:inset 5px 0 5px -5px rgba(0, 0, 0, 0.571),inset
@@ -99,6 +101,9 @@
     }
     .container{
         padding: 0 ;
+    }
+    .list::-webkit-scrollbar{
+        display: none;
     }
 }
 
