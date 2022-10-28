@@ -208,7 +208,7 @@ export default function Third() {
                     justifyContent: "center",
                     alignItems: "center",
                   }}
-                  key={desc}
+                  key={eventsData}
                   ref={nodeRef}
                 >
                   <>{desc}</>

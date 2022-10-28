@@ -80,11 +80,11 @@ export default function Fourth() {
             width: { xs: `500%`, sm: "400%", md: "300%", lg: "250%" },
           }}
         >
-          {sponsors.map((sponsor) => (
+          {sponsors.map((sponsor, i) => (
             <Grid
               item
               xs={12}
-              key={sponsor}
+              key={{ sponsor, i }}
               sx={{
                 position: "relative",
                 height: { xs: "5rem", sm: "15vw", lg: "8vw" },
