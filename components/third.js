@@ -4,7 +4,8 @@ import Grid from "@mui/material/Grid";
 import { Button } from "@mui/material";
 import { useState } from "react";
 import Box from "@mui/material/Box";
-import { CSSTransition, TransitionGroup } from "react-transition-group";
+import { useLayoutEffect } from "react";
+import { gsap } from "gsap";
 import { useRef, createRef } from "react";
 
 const TextButton = (props) => {
@@ -111,8 +112,19 @@ const competitionData = [
 export default function Third() {
   const [eventIndex, setEventIndex] = useState(0);
   const [competitionIndex, setCompetitionIndex] = useState(0);
+  const compRef = useRef(null);
+  const nodeRef = useRef(null);
 
-  const nodeRef = useRef();
+  useLayoutEffect(() => {
+    gsap.set(nodeRef.current, { x: -20, autoAlpha: 0.09 });
+    gsap.to(nodeRef.current, { x: 0, autoAlpha: 1 });
+    gsap.fromTo(
+      compRef.current,
+      { x: -15, autoAlpha: 0.09 },
+      { x: 0, autoAlpha: 1, duration: 0.3, ease: "power0.inOut" }
+    );
+  }, [competitionIndex, eventIndex]);
+
   return (
     <div>
       <div className={style.container} id="events">
@@ -197,6 +209,7 @@ export default function Third() {
                     alignItems: "center",
                   }}
                   key={desc}
+                  ref={nodeRef}
                 >
                   <>{desc}</>
                 </Box>
@@ -285,27 +298,18 @@ export default function Third() {
               justifyContent="center"
               alignContent="center"
               className={style.content}
+              ref={compRef}
+              id="#ref"
             >
-              <TransitionGroup>
-                {competitionData[competitionIndex].description.map(
-                  (desc, index) => (
-                    <CSSTransition
-                      nodeRef={competitionData[competitionIndex].nodeRef}
-                      timeout={300}
-                      classNames="desc"
-                    >
-                      <Box
-                        className={style.box}
-                        sx={{ textAlign: "left" }}
-                        key={desc}
-                        ref={nodeRef}
-                      >
-                        <>{desc}</>
-                      </Box>
-                    </CSSTransition>
-                  )
-                )}
-              </TransitionGroup>
+              {competitionData[competitionIndex].description.map((desc) => (
+                <Box
+                  key={competitionData}
+                  className={`${style.box} text`}
+                  sx={{ textAlign: "left" }}
+                >
+                  <>{desc}</>
+                </Box>
+              ))}
             </Grid>
           </Grid>
         </Grid>
