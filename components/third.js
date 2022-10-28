@@ -200,6 +200,7 @@ export default function Third() {
                     flexDirection: "column",
                     justifyContent: "center",
                     alignItems: "center",
+                    padding: { xs: "1rem", md: "0rem" },
                   }}
                   key={eventsData}
                 >
