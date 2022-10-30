@@ -9,10 +9,15 @@ function Card({
   position = false,
   sx,
   bold = false,
+  id,
+  className,
+  notCard = false,
 }) {
   return (
     <Box
+      id={id}
       as="div"
+      className={(!notCard && "card") || ""}
       sx={{
         color: "white",
         fontFamily: "Montserrat",
@@ -25,6 +30,7 @@ function Card({
       }}
     >
       <Box
+        className="image"
         as="div"
         sx={{
           position: "relative",
@@ -40,11 +46,13 @@ function Card({
           layout="fill"
           objectFit="cover"
           alt={name}
+          className="card-img"
           priority
         />
       </Box>
       <Box as="div">
         <Typography
+          className="name"
           variant="h5"
           component="h2"
           sx={{
@@ -59,6 +67,7 @@ function Card({
         </Typography>
         {position && (
           <Typography
+            className="position"
             variant="h6"
             component="h2"
             sx={{
@@ -68,7 +77,7 @@ function Card({
                 md: "1.6rem",
                 xl: "1.3rem",
                 textAlign: "center",
-                fontWeight: 400,
+                fontWeight: 600,
               },
             }}
           >

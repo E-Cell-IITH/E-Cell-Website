@@ -16,9 +16,9 @@ const sponsors = [
       "https://res.cloudinary.com/dwsverefw/image/upload/v1665696045/ecell/image_6_yv9wg1.png",
   },
   {
-    name: "Dare 2 Compete",
+    name: "Unstop",
     imgUrl:
-      "https://res.cloudinary.com/dwsverefw/image/upload/v1665696045/ecell/image_5_bpk4pq.png",
+      "https://res.cloudinary.com/dwsverefw/image/upload/c_scale,w_1125/v1666905522/ecell/unstop_wlsi8w.png",
   },
   {
     name: "stumagz",
@@ -80,11 +80,11 @@ export default function Fourth() {
             width: { xs: `500%`, sm: "400%", md: "300%", lg: "250%" },
           }}
         >
-          {sponsors.map((sponsor) => (
+          {sponsors.map((sponsor, i) => (
             <Grid
               item
               xs={12}
-              key={sponsor}
+              key={{ sponsor, i }}
               sx={{
                 position: "relative",
                 height: { xs: "5rem", sm: "15vw", lg: "8vw" },

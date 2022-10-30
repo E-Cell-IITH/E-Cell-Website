@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef, useEffect } from "react";
 import Navbar from "../components/first";
 import Card from "../components/Card";
 import { Grid } from "@mui/material";
@@ -6,19 +6,89 @@ import { Typography } from "@mui/material";
 import style2 from "../styles/changesFirst.module.css";
 import Managers from "../components/Managers";
 import parallax from "../styles/team.module.css";
+import Head from "next/head";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
 
 function Team() {
+  const parent = useRef();
+  const tl = useRef();
+  useEffect(() => {
+    const ctx = gsap.context(() => {
+      tl.current = gsap
+        .timeline({
+          scrollTrigger: {
+            trigger: "#head",
+            start: "top 80%",
+            end: "top 50%",
+            toggleActions: "play none none reverse",
+          },
+        })
+        .fromTo(
+          "#head > *",
+          {
+            y: 20,
+            autoAlpha: 0.2,
+            scale: 0.9,
+          },
+          {
+            autoAlpha: 1,
+            scale: 1,
+            y: 0,
+            duration: 0.4,
+            ease: "power2.out",
+            stagger: 0.3,
+          }
+        );
+
+      const cards = gsap.utils.toArray(".card");
+      console.log(cards);
+      cards.forEach((card) => {
+        gsap
+          .timeline({
+            scrollTrigger: {
+              trigger: card,
+              start: "top 80%",
+              end: "top 50%",
+            },
+          })
+          .fromTo(
+            card.children,
+            {
+              y: 20,
+              autoAlpha: 0,
+            },
+            {
+              autoAlpha: 1,
+              y: 0,
+              duration: 0.4,
+              ease: "power2.out",
+              stagger: 0.3,
+            }
+          );
+      });
+    }, parent);
+
+    return () => ctx.revert();
+  }, []);
+
   return (
-    <>
+    <div ref={parent}>
+      <Head>
+        <title>Team Entrepreneurship Cell IIT Hyderabad</title>
+      </Head>
       <Navbar heading="Team E-Cell" desc={false} />
-      <div id="team">
+      <div>
         <Card
+          id="head"
+          notCard={true}
           imgUrl={
             "https://res.cloudinary.com/dwsverefw/image/upload/v1665868302/ecell/team/Shreyansh_Agarwal_Overall_Head_1_bi10yy.jpg"
           }
           name="Shreyansh Agarwal"
-          position="Overall Coordinator"
-          sx={{ pb: 5 }}
+          position="Overall Head"
+          sx={{ py: 5 }}
           bold
         />
       </div>
@@ -44,6 +114,7 @@ function Team() {
       </Typography>
       <Grid
         container
+        id="heads"
         sx={{
           position: "relative",
           zIndex: 30,
@@ -95,12 +166,14 @@ function Team() {
           >
             <Grid item xs={12} sm={6}>
               <Card
+                className="card"
                 name="Anish Ambavat"
                 imgUrl="https://res.cloudinary.com/dwsverefw/image/upload/v1665876113/ecell/team/Anish_Ambavat_Operations_Head_1_dioism.jpg"
               />
             </Grid>
             <Grid item xs={12} sm={6}>
               <Card
+                className="card"
                 name="Yash Sharma"
                 imgUrl="https://res.cloudinary.com/dwsverefw/image/upload/v1665876113/ecell/team/Yash_Sharma_Operations_Head_1_pr9bwl.jpg"
               />
@@ -145,6 +218,7 @@ function Team() {
           >
             <Grid item xs={12}>
               <Card
+                className="card"
                 name="Anuj Pandey"
                 imgUrl="https://res.cloudinary.com/dwsverefw/image/upload/v1665876114/ecell/team/Anuj_Pandey_WebHead_1_mrhxks.jpg"
               />
@@ -189,12 +263,14 @@ function Team() {
           >
             <Grid item xs={12} sm={6}>
               <Card
+                className="card"
                 name="Yashas Yajur"
                 imgUrl="https://res.cloudinary.com/dwsverefw/image/upload/v1665876113/ecell/team/Yashas_Ideation_1_k4xjd1.jpg"
               />
             </Grid>
             <Grid item xs={12} sm={6}>
               <Card
+                className="card"
                 name="Nandita Lakshmi"
                 imgUrl="https://res.cloudinary.com/dwsverefw/image/upload/v1665876114/ecell/team/Nandita_Ideation_1_qdovck.jpg"
               />
@@ -241,11 +317,13 @@ function Team() {
             <Grid item xs={12} sm={6}>
               <Card
                 name="Tanay Yadav"
+                className="card"
                 imgUrl="https://res.cloudinary.com/dwsverefw/image/upload/v1665876488/ecell/team/IMG_20220815_141142_Bokeh__01_1_it1j2m.jpg"
               />
             </Grid>
             <Grid item xs={12} sm={6}>
               <Card
+                className="card"
                 name="Satya Aditi Dhaaipule"
                 imgUrl="https://res.cloudinary.com/dwsverefw/image/upload/v1665876488/ecell/team/Satya_Aditi_PR_Head_1_nfksee.png"
               />
@@ -291,6 +369,7 @@ function Team() {
           >
             <Grid item xs={12}>
               <Card
+                className="card"
                 name="Tanmay Shah"
                 imgUrl="https://res.cloudinary.com/dwsverefw/image/upload/v1665876488/ecell/team/TanmayShah_SponHead_1_apyqpk.png"
               />
@@ -336,6 +415,7 @@ function Team() {
           >
             <Grid item xs={12}>
               <Card
+                className="card"
                 name="Viren Soni"
                 imgUrl="https://res.cloudinary.com/dwsverefw/image/upload/v1665876488/ecell/team/Viren_Design_1_vvcrml.png"
               />
@@ -346,7 +426,7 @@ function Team() {
       {/* ------------------------------------------------------ */}
       {/* Managers section */}
       <Managers />
-    </>
+    </div>
   );
 }
 

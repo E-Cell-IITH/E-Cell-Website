@@ -4,6 +4,9 @@ import Grid from "@mui/material/Grid";
 import { Button } from "@mui/material";
 import { useState } from "react";
 import Box from "@mui/material/Box";
+import { useLayoutEffect } from "react";
+import { gsap } from "gsap";
+import { useRef, createRef } from "react";
 
 const TextButton = (props) => {
   return (
@@ -98,6 +101,22 @@ const competitionData = [
 export default function Third() {
   const [eventIndex, setEventIndex] = useState(0);
   const [competitionIndex, setCompetitionIndex] = useState(0);
+  const compRef = useRef(null);
+  const nodeRef = useRef(null);
+
+  useLayoutEffect(() => {
+    gsap.fromTo(
+      nodeRef.current,
+      { x: -15, autoAlpha: 0.09 },
+      { x: 0, autoAlpha: 1, duration: 0.3 }
+    );
+    gsap.fromTo(
+      compRef.current,
+      { x: -15, autoAlpha: 0.09 },
+      { x: 0, autoAlpha: 1, duration: 0.3, ease: "power0.inOut" }
+    );
+  }, [competitionIndex, eventIndex]);
+
   return (
     <div>
       <div className={style.container} id="events">
@@ -105,9 +124,9 @@ export default function Third() {
           <Grid item xs={12}>
             <h2 className={style.events}>EVENTS</h2>
           </Grid>
+          <ul className={style.head}>{eventsData[eventIndex].name}</ul>
           <Grid item container xs={12}>
             <Grid item xs={12} md={6}>
-              <ul className={style.head}>{eventsData[eventIndex].name}</ul>
               <ul className={style.list}>
                 <li className="power">
                   <TextButton
@@ -170,6 +189,7 @@ export default function Third() {
               justifyContent="center"
               alignItems="center"
               className={style.content}
+              ref={nodeRef}
             >
               {eventsData[eventIndex].description.map((desc) => (
                 <Box
@@ -180,8 +200,9 @@ export default function Third() {
                     flexDirection: "column",
                     justifyContent: "center",
                     alignItems: "center",
+                    padding: { xs: "1rem", md: "0rem" },
                   }}
-                  key={desc}
+                  key={eventsData}
                 >
                   <>{desc}</>
                 </Box>
@@ -196,22 +217,21 @@ export default function Third() {
         <br />
         <br />
         <br />
+        <Grid item xs={12}>
+          <h2 className={style.events}>COMPETITIONS</h2>
+        </Grid>
         <Grid container className={style.grid} id="competitions">
-          <Grid item xs={12}>
-            <h2 className={style.events}>COMPETITIONS</h2>
-          </Grid>
+          <ul className={style.head}>
+            {competitionData[competitionIndex].name}
+          </ul>
           <Grid item container xs={12}>
             <Grid item xs={12} md={6}>
-              <ul className={style.head}>
-                {competitionData[competitionIndex].name}
-              </ul>
               <ul className={style.list}>
                 <li>
                   <TextButton
                     onClick={() => {
                       setCompetitionIndex(0);
                     }}
-                    className="gradient-text"
                   >
                     IDEA VALIDATION CAMP
                   </TextButton>
@@ -271,12 +291,14 @@ export default function Third() {
               justifyContent="center"
               alignContent="center"
               className={style.content}
+              ref={compRef}
+              id="#ref"
             >
               {competitionData[competitionIndex].description.map((desc) => (
                 <Box
-                  className={style.box}
+                  key={competitionData}
+                  className={`${style.box} text`}
                   sx={{ textAlign: "left" }}
-                  key={desc}
                 >
                   <>{desc}</>
                 </Box>

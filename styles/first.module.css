@@ -11,12 +11,13 @@
     font-size: 1.3vw;
     font-style: normal;
     position: relative;
+    z-index: 1;
 }
 
 .about {
     position: relative;
     
-    z-index: 3;
+    z-index: 100;
     text-align: center;
     color: rgba(211, 211, 211, 1);
     font-weight: 700;
@@ -56,13 +57,13 @@
     font-size: 6vw;
     font-weight: 700;
     /* background: linear-gradient(92.42deg, #BD63C3 23.03%, #3E15A0 88.79%); */
-    background: linear-gradient(to right, rgb(169, 41, 255) 10%, rgb(255, 34, 181) 40%, rgb(21, 72, 255) 70%, rgb(169, 41, 255) 90%);
+    background: linear-gradient(to right, rgb(169, 41, 255) 10%, rgb(255, 34, 181) 40%, rgb(21, 72, 255) 90%,rgb(169, 41, 255) 100%);
     background-size: 200% auto;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
     font-style: normal;
-    animation: gradientChange 30s infinite ease-in;
+    animation: gradientChange 7s infinite ease-in;
 }
 
 @keyframes gradientChange {
