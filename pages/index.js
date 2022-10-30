@@ -52,7 +52,7 @@ export default function Home() {
           opacity: load_display,
         }}
       >
-        <First heading={matches ? "E-CELL" : "Entrepreneurship Cell"} />
+        <First heading={matches ? "E-CELL" : "ENTREPRENEURSHIP CELL"} />
         <Navbar />
         <Second />
         <Third />
