@@ -37,7 +37,7 @@ const Navbar = () => {
           </li>
           <li className="navigation__item">
             <a
-              href="https://caprogram-ecell-iith.netlify.app"
+              href="caportal"
               className="navigation__link"
               onClick={() => {
                 navRef.current.checked = false;
