@@ -37,7 +37,7 @@ const Navbar = () => {
           </li>
           <li className="navigation__item">
             <a
-              href="caportal"
+              href="caprg/index.html"
               className="navigation__link"
               onClick={() => {
                 navRef.current.checked = false;
