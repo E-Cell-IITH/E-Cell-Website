@@ -132,6 +132,7 @@ export default function Fifth() {
                   width="50"
                   height="50"
                   layout="responsive"
+                  alt="location"
                 />
               </div>
               <div className={style.list1} id={style.list1}>
@@ -144,6 +145,7 @@ export default function Fifth() {
                   src="https://res.cloudinary.com/dwsverefw/image/upload/v1665696046/ecell/msg_mqpkbk.png"
                   width="60"
                   height="60"
+                  alt="dot"
                 />
               </div>
               <div className={style.list1} id={style.list2}>
@@ -156,6 +158,7 @@ export default function Fifth() {
                   src="https://res.cloudinary.com/dwsverefw/image/upload/v1665696044/ecell/call_bcfebi.png"
                   width="60"
                   height="60"
+                  alt="dial"
                 />
               </div>
               <div className={style.list1} id={style.list3}>

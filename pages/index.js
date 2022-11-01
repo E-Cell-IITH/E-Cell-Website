@@ -3,7 +3,6 @@ import First from "../components/first.js";
 import Second from "../components/second";
 import Third from "../components/third";
 import Fourth from "../components/fourth";
-import Fifth from "../components/fifth";
 import Navbar from "../components/Navbar";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import Head from "next/head";
