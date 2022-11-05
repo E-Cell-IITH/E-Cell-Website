@@ -136,7 +136,7 @@ const web_info = [
     url: "https://res.cloudinary.com/dbmw0xoar/image/upload/v1666109714/ecell/Siddarth_WebDev_jax5sq.jpg",
   },
   {
-    name: "Siddanth",
+    name: "Siddhant",
     url: "https://res.cloudinary.com/dbmw0xoar/image/upload/v1666115485/ecell/WhatsApp_Image_2022-10-18_at_23.20.57_ks3mce.jpg",
   },
 ];
