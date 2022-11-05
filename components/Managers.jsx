@@ -167,6 +167,10 @@ const pr_info = [
     name: "Sanika Karmore",
     url: "https://res.cloudinary.com/dwsverefw/image/upload/v1666524507/ecell/team/managers/Sanika_PR_r2zodx.jpg",
   },
+  {
+    name: "Areeb",
+    url: "https://res.cloudinary.com/dwsverefw/image/upload/v1667654155/ecell/team/managers/areeb_zsneux.jpg",
+  },
 ];
 
 const description = [
