@@ -76,12 +76,12 @@ const ideation_info = [
     url: "https://res.cloudinary.com/dbmw0xoar/image/upload/v1666109710/ecell/Ananya_Ideation_uhlpfc.jpg",
   },
   {
-    name: "Owise Ahmed",
-    url: "https://res.cloudinary.com/dbmw0xoar/image/upload/v1666109712/ecell/Owaise_ideation_r5azmd.jpg",
-  },
-  {
     name: "Harshit Thakur",
     url: "https://res.cloudinary.com/dbmw0xoar/image/upload/v1666109711/ecell/Harshit_Ideation_p1m5me.jpg",
+  },
+  {
+    name: "Owaise Ahmed",
+    url: "https://res.cloudinary.com/dbmw0xoar/image/upload/v1666109712/ecell/Owaise_ideation_r5azmd.jpg",
   },
   {
     name: "Tanvisree",
@@ -168,7 +168,7 @@ const pr_info = [
     url: "https://res.cloudinary.com/dwsverefw/image/upload/v1666524507/ecell/team/managers/Sanika_PR_r2zodx.jpg",
   },
   {
-    name: "Areeb",
+    name: "Areeb Hussain",
     url: "https://res.cloudinary.com/dwsverefw/image/upload/v1667654155/ecell/team/managers/areeb_zsneux.jpg",
   },
 ];

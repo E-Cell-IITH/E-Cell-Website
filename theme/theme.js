@@ -5,9 +5,10 @@ const theme = createTheme({
     values: {
       xs: 0,
       sm: 650,
-      md: 900,
-      lg: 1400,
-      xl: 1650,
+      md: 768,
+      lg: 1300,
+      xl: 1400,
+      xxl: 1700,
     },
   },
 });
