@@ -58,7 +58,7 @@ function Card({
           sx={{
             fontFamily: "Montserrat",
             mt: "1rem",
-            fontSize: { sm: "2rem", md: "2rem", xl: "1.5rem" },
+            fontSize: { xs: "1rem", md: "1.5rem", xl: "1.5rem" },
             textAlign: "center",
             fontWeight: bold ? 500 : 400,
           }}
