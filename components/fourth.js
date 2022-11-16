@@ -6,6 +6,21 @@ import { Box } from "@mui/system";
 
 const sponsors = [
   {
+    name: "Yhills",
+    imgUrl:
+      "https://res.cloudinary.com/dwsverefw/image/upload/v1668614499/ecell/Yhills_logo_ypyyhy.png",
+  },
+  {
+    name: "Henry Harvin",
+    imgUrl:
+      "https://res.cloudinary.com/dwsverefw/image/upload/v1668613949/ecell/henry_harwin_logo_ohdeqs.jpg",
+  },
+  {
+    name: "Amazon",
+    imgUrl:
+      "https://res.cloudinary.com/dwsverefw/image/upload/v1668613820/ecell/amazon_logo_abauyt.webp",
+  },
+  {
     name: "Uber",
     imgUrl:
       "https://res.cloudinary.com/dwsverefw/image/upload/v1665696044/ecell/image_4_wxnxnd.png",
@@ -26,16 +41,6 @@ const sponsors = [
       "https://res.cloudinary.com/dwsverefw/image/upload/v1665696044/ecell/image_3_xmcjnj.png",
   },
   {
-    name: "Bada Business",
-    imgUrl:
-      "https://res.cloudinary.com/dwsverefw/image/upload/v1665696044/ecell/image_1_hpq2eu.png",
-  },
-  {
-    name: "Money Control",
-    imgUrl:
-      "https://res.cloudinary.com/dwsverefw/image/upload/v1665696045/ecell/image_7_curhvo.png",
-  },
-  {
     name: "TE Hyderabad",
     imgUrl:
       "https://res.cloudinary.com/dwsverefw/image/upload/v1666454047/ecell/avatar20191017110114_fhusr5.png",
@@ -51,9 +56,9 @@ export default function Fourth() {
   return (
     <div>
       <Grid container id="sponsors">
-        <Grid item xs={1.6}></Grid>
-        <Grid item xs={12} md={4}>
-          <div className={style.sponsor}>OUR SPONSORS</div>
+        <Grid item xs={0} md={0}></Grid>
+        <Grid item xs={12} md={6}>
+          <div className={style.sponsor}>OUR COLLABORATORS</div>
         </Grid>
       </Grid>
       <br />
