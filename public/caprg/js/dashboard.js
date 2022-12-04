@@ -19,9 +19,11 @@ firebase.auth().onAuthStateChanged(function (user) {
       .get()
       .then(function (doc) {
         if (doc.exists) {
-          if (doc.data().isCA == false) {
+          // console.log(typeof doc.data().isCA);
+          if (doc.data().isCA == "false") {
+            // console.log(doc.data().isCA);
             window.location = "notaCAyet.html";
-          } else if (doc.data().isCA == true) {
+          } else if (doc.data().isCA == "true") {
             $("body").show();
             /* console.log(user); */
             var name = document.getElementById("name");
@@ -61,7 +63,7 @@ firebase.auth().onAuthStateChanged(function (user) {
 
                 querySnapshot.forEach(function (doc) {
                   // doc.data() is never undefined for query doc snapshots
-
+                  console.log(doc.data().isCA);
                   if (doc.data().isCA == true) {
                     position = position + 1;
                     user_pos = doc.data();
@@ -128,10 +130,12 @@ firebase.auth().onAuthStateChanged(function (user) {
                   $("#completed").append(current_html);
                 });
               });
-          } else {
+          } 
+          else {
             window.location = "notaCA.html";
           }
         } else {
+          console.log
           // doc.data() will be undefined in this case
           $("body").hide();
           firebase
@@ -150,7 +154,8 @@ firebase.auth().onAuthStateChanged(function (user) {
         console.log("Error getting document:", error);
       });
   } else {
-    window.location = "index.html";
+    console.log("invalid user");
+    // window.location = "index.html";
   }
 });
 
