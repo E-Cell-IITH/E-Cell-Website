@@ -21,7 +21,7 @@ const operations_info = [
   },
   {
     name: "Pradeep",
-    url: "https://res.cloudinary.com/dbmw0xoar/image/upload/v1666109712/ecell/Pradeep_Operations_ze5n04.jpg",
+    url: "https://res.cloudinary.com/dwsverefw/image/upload/v1670167596/ecell/team/managers/smth_j1uwns.jpg",
   },
   {
     name: "Amulya",
