@@ -47,7 +47,7 @@ firebase.auth().onAuthStateChanged(function (user) {
                 manager.innerHTML = doc.data().manager;
                 manager_no.innerHTML = doc.data().manager_no;
                 photo.src = doc.data().picture;
-                referral.innerHTML = doc.data().referral_code;
+                referral.innerHTML = doc.data().Referal_code;
               });
 
             db.orderBy("points", "desc")
