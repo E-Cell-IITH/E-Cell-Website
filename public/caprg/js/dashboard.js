@@ -46,7 +46,7 @@ firebase.auth().onAuthStateChanged(function (user) {
                 phone.innerHTML = doc.data().contact;
                 manager.innerHTML = doc.data().manager;
                 manager_no.innerHTML = doc.data().manager_no;
-                photo.src = doc.data().picture;
+                // photo.src = doc.data().picture;
                 referral.innerHTML = doc.data().Referal_code;
               });
 
@@ -65,8 +65,8 @@ firebase.auth().onAuthStateChanged(function (user) {
 
                 querySnapshot.forEach(function (doc) {
                   // doc.data() is never undefined for query doc snapshots
-                  console.log(doc.data().isCA);
-                  console.log("ranking wala");
+                  // console.log(doc.data().isCA);
+                  // console.log("ranking wala");
                   if (doc.data().isCA == "true") {
                     position = position + 1;
                     user_pos = doc.data();
