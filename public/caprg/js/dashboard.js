@@ -57,6 +57,8 @@ firebase.auth().onAuthStateChanged(function (user) {
                   "list-table-body"
                 );
 
+                // console.log(que)
+
                 // clear all the table rows first
                 listTableBody.textContent = "";
                 var position = 0;
@@ -64,7 +66,8 @@ firebase.auth().onAuthStateChanged(function (user) {
                 querySnapshot.forEach(function (doc) {
                   // doc.data() is never undefined for query doc snapshots
                   console.log(doc.data().isCA);
-                  if (doc.data().isCA == true) {
+                  console.log("ranking wala");
+                  if (doc.data().isCA == "true") {
                     position = position + 1;
                     user_pos = doc.data();
                     /*  console.log(user_pos.name); */
