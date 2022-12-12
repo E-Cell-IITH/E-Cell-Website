@@ -9,6 +9,10 @@ body{
     
     
 }
+#photo{
+    height: auto;
+    width: 250px;
+}
 img{
     width: 220px ;
     height: 220px;

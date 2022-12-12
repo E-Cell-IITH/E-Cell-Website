@@ -46,8 +46,8 @@ firebase.auth().onAuthStateChanged(function (user) {
                 phone.innerHTML = doc.data().contact;
                 manager.innerHTML = doc.data().manager;
                 manager_no.innerHTML = doc.data().manager_no;
-                photo.src = doc.data().picture;
-                referral.innerHTML = doc.data().referral_code;
+                // photo.src = doc.data().picture;
+                referral.innerHTML = doc.data().Referal_code;
               });
 
             db.orderBy("points", "desc")
@@ -57,14 +57,17 @@ firebase.auth().onAuthStateChanged(function (user) {
                   "list-table-body"
                 );
 
+                // console.log(que)
+
                 // clear all the table rows first
                 listTableBody.textContent = "";
                 var position = 0;
 
                 querySnapshot.forEach(function (doc) {
                   // doc.data() is never undefined for query doc snapshots
-                  console.log(doc.data().isCA);
-                  if (doc.data().isCA == true) {
+                  // console.log(doc.data().isCA);
+                  // console.log("ranking wala");
+                  if (doc.data().isCA == "true") {
                     position = position + 1;
                     user_pos = doc.data();
                     /*  console.log(user_pos.name); */
