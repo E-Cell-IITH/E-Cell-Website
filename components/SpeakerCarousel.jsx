@@ -2,7 +2,7 @@ import React from "react";
 import { Grid } from "@mui/material";
 import Carousel from "react-material-ui-carousel";
 import styled from "@emotion/styled";
-import Box from "@mui/material/box";
+import Box from "@mui/material/Box";
 import Image from "next/image";
 
 const speakers = [
