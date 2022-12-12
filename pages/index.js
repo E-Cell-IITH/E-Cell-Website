@@ -8,7 +8,7 @@ import Head from "next/head";
 
 import { BounceLoader } from "react-spinners";
 import { Box } from "@mui/system";
-import SpeakerCarousel from "../components/SpeakerCarousel.tsx";
+import SpeakerCarousel from "../components/SpeakerCarousel.jsx";
 
 export default function Home() {
   const [loading, setLoading] = React.useState(true);
