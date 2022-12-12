@@ -85,7 +85,7 @@ function SpeakerCarousel() {
                     <Grid container item xs={12}>
                         <Grid item container xs={12} lg={4} justifyContent='center'>
                             <Box component='div' sx={{ height:{xs:'15rem', lg:'25rem'}, width: {xs:'11.25rem', lg:'18.75rem'}, overflow:'hidden',position:'relative', borderRadius: {xs:'0.8rem',lg:'1rem'}, background: '#0b0b0b'}}>
-                                <Image objectFit='contain' layout='fill' priority src={item.imgUrl} alt="" style={{height:'100%'}}/>
+                                <Image objectFit='contain' layout='fill' priority src={item.imgUrl} alt={item.name} style={{height:'100%'}}/>
                             </Box>
                         </Grid>
                         <Grid item xs={12} lg={8}>
