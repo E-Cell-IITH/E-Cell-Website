@@ -145,7 +145,7 @@ function SpeakerCarousel() {
           animation="slide"
           duration={900}
           navButtonsAlwaysVisible={true}
-          autoPlay={false}
+          autoPlay={true}
         >
           {speakers.map((item, i) => (
             <Div key={item.name}>
