@@ -55,7 +55,7 @@ export default function Navbar({
           }
         );
       }
-    }, parent);
+    }, [parent]);
 
     gsap.fromTo(
       headingRef.current,
