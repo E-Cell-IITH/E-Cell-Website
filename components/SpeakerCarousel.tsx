@@ -81,8 +81,8 @@ function SpeakerCarousel() {
         </Grid>
         <Grid item xs={12} justifyContent='center' alignItems='center' sx={{px:{lg:'10rem'}}}>
             <Carousel animation='slide' duration={900} navButtonsAlwaysVisible={true} autoPlay={false}>
-                {speakers.map((item,i)=><Div> 
-                    <Grid container item xs={12} key={item.name}>
+                {speakers.map((item,i)=><Div key={item.name}> 
+                    <Grid container item xs={12} >
                         <Grid item container xs={12} lg={4} justifyContent='center'>
                             <Box component='div' sx={{ height:{xs:'15rem', lg:'25rem'}, width: {xs:'11.25rem', lg:'18.75rem'}, overflow:'hidden',position:'relative', borderRadius: {xs:'0.8rem',lg:'1rem'}, background: '#0b0b0b'}}>
                                 <Image objectFit='contain' layout='fill' priority src={item.imgUrl} alt={item.name} style={{height:'100%'}}/>
