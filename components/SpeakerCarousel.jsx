@@ -132,7 +132,7 @@ function SpeakerCarousel() {
           textAlign: "center",
         }}
       >
-        <h2>PAST SPEAKERS</h2>
+        <h2>PREVIOUS SPEAKERS</h2>
       </Grid>
       <Grid
         item
