@@ -57,8 +57,8 @@ export default function Home() {
         <Third />
         <br />
         <br />
-        {/* <Fourth /> */}
         <SpeakerCarousel />
+        <Fourth />
         <br />
       </Box>
     </>
