@@ -2,7 +2,9 @@ import React from "react";
 import First from "../components/first.js";
 import Second from "../components/second";
 import Third from "../components/third";
+import Fourth from "../components/fourth.js";
 import Navbar from "../components/Navbar";
+
 import useMediaQuery from "@mui/material/useMediaQuery";
 import Head from "next/head";
 
@@ -57,7 +59,7 @@ export default function Home() {
         <Third />
         <br />
         <br />
-        {/* <Fourth /> */}
+        <Fourth />
         <SpeakerCarousel />
         <br />
       </Box>
