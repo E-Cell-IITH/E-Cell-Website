@@ -55,7 +55,7 @@ const sponsors = [
 export default function Fourth() {
   return (
     <div>
-      <Grid container id="sponsors">
+      <Grid container id="sponsors" sx={{ mt: "1.7rem" }}>
         <Grid item xs={0} md={0}></Grid>
         <Grid item xs={12} md={6}>
           <div className={style.sponsor}>OUR COLLABORATORS</div>
