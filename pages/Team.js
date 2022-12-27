@@ -70,11 +70,6 @@ const heads = [
         imgUrl:
           "https://res.cloudinary.com/dwsverefw/image/upload/v1665876488/ecell/team/IMG_20220815_141142_Bokeh__01_1_it1j2m.jpg",
       },
-      {
-        name: "Satya Aditi Dhaaipule",
-        imgUrl:
-          "https://res.cloudinary.com/dwsverefw/image/upload/v1665876488/ecell/team/Satya_Aditi_PR_Head_1_nfksee.png",
-      },
     ],
   },
   {
