@@ -2,7 +2,7 @@ import React from "react";
 import { Grid } from "@mui/material";
 import Carousel from "react-material-ui-carousel";
 import styled from "@emotion/styled";
-import Box from "@mui/material/box";
+import Box from "@mui/material/Box";
 import Image from "next/image";
 
 const speakers = [
@@ -132,7 +132,7 @@ function SpeakerCarousel() {
           textAlign: "center",
         }}
       >
-        <h2>PAST SPEAKERS</h2>
+        <h2>PREVIOUS SPEAKERS</h2>
       </Grid>
       <Grid
         item
@@ -145,7 +145,7 @@ function SpeakerCarousel() {
           animation="slide"
           duration={900}
           navButtonsAlwaysVisible={true}
-          autoPlay={false}
+          autoPlay={true}
         >
           {speakers.map((item, i) => (
             <Div key={item.name}>
