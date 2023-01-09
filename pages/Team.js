@@ -56,7 +56,7 @@ const heads = [
     domain: "Sponsorship",
     heads: [
       {
-        name: "Tanay Shah",
+        name: "Tanmay Shah",
         imgUrl:
           "https://res.cloudinary.com/dwsverefw/image/upload/v1665876488/ecell/team/TanmayShah_SponHead_1_apyqpk.png",
       },
