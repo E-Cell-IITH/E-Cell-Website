@@ -72,7 +72,7 @@ const Navbar = () => {
             </Link>
           </li>
           <li className="navigation__item">
-            <Link href="https://esummit-ecell-iith.netlify.app">
+            <Link href="/esummit">
               <a
                 className="navigation__link"
                 onClick={() => {

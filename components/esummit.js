@@ -5,59 +5,69 @@ const First = () => {
   return (
     <div>
       <section className="flex flex-col w-full h-[100vh] py-5 px-5">
-        <div className="flex justify-between">
-          {/* logo */}
-          <div>
-            <div className=" h-[3rem] w-[6.5rem] relative">
-              <Image src="/ecellLogo.png" layout="fill" objectFit="contain" />
-            </div>
-          </div>
-          {/* menu icon */}
-          <div className=""></div>
+        <div className="absolute inset-0 blur-sm">
+          <video className="w-full h-full object-cover" autoPlay="true" loop='true'>
+            {/* <source src="http://techslides.com/demos/sample-videos/small.webm" type="video/webm"/> 
+            <source src="http://techslides.com/demos/sample-videos/small.ogv" type="video/ogg"/>  */}
+            <source src="/ecell_landing_page.mp4" type="video/mp4"/>
+            {/* <source src="http://techslides.com/demos/sample-videos/small.3gp" type="video/3gp"/> */}
+          </video>
+          <div className="inset-0 absolute bg-dark bg-opacity-70"></div>
         </div>
-        <div className="flex-grow flex justify-center items-center flex-col">
-          <div className="text-center relative">
+
+          <div className="flex justify-between">
+            {/* logo */}
             <div>
-              <h2 className="text-white font-bold text-[3rem] lg:text-[4.25rem] 2xl:text-[6.25rem]">
-                E-SUMMIT 2023
-              </h2>
+              <div className=" h-[3rem] w-[6.5rem] relative">
+                <Image src="/ecellLogo.png" layout="fill" objectFit="contain" alt=""/>
+              </div>
+            </div>
+            {/* menu icon */}
+            <div className=""></div>
+          </div>
+          <div className="flex-grow flex justify-center items-center flex-col">
+            <div className="text-center relative">
+              <div>
+                <h2 className="text-white font-bold text-[3rem] lg:text-[4.25rem] 2xl:text-[6.25rem]">
+                  E-SUMMIT 2023
+                </h2>
+              </div>
+              <div>
+                <h2 className="text-lightBlue font-semibold text-[1.75rem] md:font-bold  md:text-[2.75rem] lg:text-[3.75rem] 2xl:text-[5rem]">
+                  THE ARDUOUS CARREFOUR
+                </h2>
+              </div>
             </div>
             <div>
-              <h2 className="text-lightBlue font-semibold text-[1.75rem] md:font-bold  md:text-[2.75rem] lg:text-[3.75rem] 2xl:text-[5rem]">
-                THE ARDUOUS CARREFOUR
-              </h2>
+              <button className="text-white border-blue border-2 px-8 py-3 relative top-5 rounded-lg leading-5">
+                REGISTER <br></br>
+                NOW
+              </button>
             </div>
           </div>
-          <div>
-            <button className="text-white border-blue border-2 px-8 py-3 relative top-5 rounded-lg leading-5">
-              REGISTER <br></br>
-              NOW
-            </button>
+          {/* sm section */}
+          <div className="flex flex-row justify-between">
+            {/* icons */}
+            <div className="flex flex-row gap-4 justify-center items-center">
+              <div>
+                <Image src="/instagram0icon.svg" alt="instagram" width={31} height={31}></Image>
+              </div>
+              <div>
+                <Image src="/linkedin-icon.svg" alt="linkedin" width={27} height={27}></Image>
+              </div>
+              <div>
+                <Image src="/twitter-icon.svg" alt="twitter" width={27} height={23}></Image>
+              </div>
+              <div>
+                <Image src="/facebook-icon.svg" alt="facebook" width={28} height={28}></Image>
+              </div>
+              <div>
+                <Image src="/youtube-icon.svg" alt="youtube" width={35} height={35}></Image>
+              </div>
+            </div>
+            {/* go down button */}
+            <div></div>
           </div>
-        </div>
-        {/* sm section */}
-        <div className="flex flex-row justify-between">
-          {/* icons */}
-          <div className="flex flex-row gap-4 justify-center items-center">
-            <div>
-              <Image src="/instagram0icon.svg" width={31} height={31}></Image>
-            </div>
-            <div>
-              <Image src="/linkedin-icon.svg" width={27} height={27}></Image>
-            </div>
-            <div>
-              <Image src="/twitter-icon.svg" width={27} height={23}></Image>
-            </div>
-            <div>
-              <Image src="/facebook-icon.svg" width={28} height={28}></Image>
-            </div>
-            <div>
-              <Image src="/youtube-icon.svg" width={35} height={35}></Image>
-            </div>
-          </div>
-          {/* go down button */}
-          <div></div>
-        </div>
       </section>
       <section className="text-white flex flex-col justify-center items-center px-[3rem] lg:px-0 lg:pb-[4rem]">
         <div className="max-w-[48.75rem] py-[7rem] lg:py-[5rem]">

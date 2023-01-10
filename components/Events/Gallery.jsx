@@ -1,10 +1,14 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { EffectCoverflow, Pagination } from "swiper";
+
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import { CardActionArea } from "@mui/material";
+
+import Image from "next/image";
+import { useEffect } from "react";
 
 import "swiper/css";
 import "swiper/css/pagination";
@@ -14,7 +18,13 @@ function Card({ bgColor, slide, img }) {
     <div
       className={`relative font-semibold ${bgColor} rounded-xl overflow-hidden h-full w-full flex justify-center items-center`}
     >
-      <img className="object-cover w-full h-full" src={img} alt="" />
+      <Image
+        className=" w-full h-full"
+        layout="fill"
+        objectFit="cover"
+        src={img}
+        alt=""
+      />
     </div>
   );
 }
