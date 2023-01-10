@@ -14,7 +14,7 @@ export default function Home() {
     <div className="bg-dark">
       <First />
       <Events />
-      <Speakers></Speakers>
+      <Speakers />
     </div>
   );
 }
