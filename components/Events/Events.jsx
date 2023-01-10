@@ -8,7 +8,7 @@ function Events() {
         <h2 className="text-center font-medium text-5xl text-blue">EVENTS</h2>
       </div>
       <div className="py-[3rem] lg:pt-0 lg:pb-[4rem]">
-        <Gallery></Gallery>
+        {/* <Gallery></Gallery> */}
       </div>
     </section>
   );

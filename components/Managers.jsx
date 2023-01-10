@@ -232,7 +232,7 @@ const Managers = () => {
             variant="p"
             sx={{
               color: 'white',
-              display: { xs: 'none', sm: 'none', md: 'none', lg: 'block' },
+              display: { xs: 'none', sm: 'none', md: 'none', lg:'none' , xl: 'block' },
               width: { xs: '20rem', md: '30rem' },
               // margin: { xs: "0 auto", lg: "0 10rem" },
               textAlign: { xs: 'center', lg: 'left' },

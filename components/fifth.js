@@ -4,10 +4,10 @@ import Grid from "@mui/material/Grid";
 import Image from "next/image";
 import Link from "next/link";
 
-export default function Fifth() {
+export default function Fifth({esummit = false}) {
   return (
     <footer>
-      <div className={style.QC}>
+      <div className={`text-white py-9 ${esummit ? 'bg-dark' : 'bg-gradient-to-b from-[#281332] to-transparent' } `}>
         <Grid container>
           <Grid item sm={1}></Grid>
           <Grid item sm={3} justifyContent="center" className={style.QL}>
@@ -121,10 +121,10 @@ export default function Fifth() {
             </div>
           </Grid>
           <Grid item xs={3} sm={3} md={1}></Grid>
-          <Grid item xs={6.4} sm={6.4} md={3} className={style.QL2}>
-            <ul className={style.ql} id={style.q1}>
+          <Grid item xs={6.4} sm={6.4} md={3} className={'text-left'}>
+            <h2 className={'text-[2vw] font-bold text-center md:text-left md:pl-8 pb-5 !ml-0 sm:pb-1'} id={style.q1}>
               Contact us
-            </ul>
+            </h2>
             <div className={style.log}>
               <div className={style.loc}>
                 <Image
@@ -169,10 +169,6 @@ export default function Fifth() {
           <Grid item xs={0.5}></Grid>
         </Grid>
       </div>
-      <br />
-      <br />
-      <br />
-      <br />
     </footer>
   );
 }

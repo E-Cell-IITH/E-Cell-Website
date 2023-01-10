@@ -4,9 +4,12 @@ import Navbar from "../components/Navbar";
 import Fifth from "../components/fifth";
 import Head from "next/head";
 import { ThemeProvider } from "@mui/material";
+import { useRouter } from "next/router";
 import theme from "../theme/theme";
 
 function MyApp({ Component, pageProps }) {
+  const router = useRouter();
+  console.log(router.pathname);
   return (
     <>
       <React.Fragment>
@@ -20,7 +23,7 @@ function MyApp({ Component, pageProps }) {
           </Head>
           <Navbar />
           <Component {...pageProps} />
-          <Fifth />
+          <Fifth esummit={router.pathname === '/esummit'}/>
         </ThemeProvider>
       </React.Fragment>
     </>
