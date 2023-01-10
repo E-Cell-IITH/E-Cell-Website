@@ -9,7 +9,7 @@ function Events() {
       </div>
       <br />
       <div className="py-[3rem] lg:pt-0 lg:pb-[4rem]">
-        {/* <Gallery></Gallery> */}
+        <Gallery></Gallery>
       </div>
     </section>
   );
