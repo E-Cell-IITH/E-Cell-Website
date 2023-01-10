@@ -1,20 +1,13 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { EffectCoverflow, Pagination } from "swiper";
-import { useEffect } from "react";
+import CardContent from "@mui/material/CardContent";
+import CardMedia from "@mui/material/CardMedia";
+import Typography from "@mui/material/Typography";
+import { CardActionArea } from "@mui/material";
 
 import "swiper/css";
 import "swiper/css/pagination";
-
-const img = [
-  "https://media.istockphoto.com/id/1322277517/photo/wild-grass-in-the-mountains-at-sunset.jpg?s=612x612&w=0&k=20&c=6mItwwFFGqKNKEAzv0mv6TaxhLN3zSE43bWmFN--J5w=",
-];
-const img2 =
-  "https://images.pexels.com/photos/268533/pexels-photo-268533.jpeg?cs=srgb&dl=pexels-pixabay-268533.jpg&fm=jpg";
-const img3 =
-  "https://images.ctfassets.net/hrltx12pl8hq/a2hkMAaruSQ8haQZ4rBL9/8ff4a6f289b9ca3f4e6474f29793a74a/nature-image-for-website.jpg?fit=fill&w=480&h=320";
-const img4 =
-  "https://media.istockphoto.com/id/505239248/photo/humayun-tomb-new-delhi-india.jpg?s=612x612&w=0&k=20&c=UQTU6YOnVsSklzHi34cOhNW5AhsACDxKLiD9--T-3Kg=";
 
 function Card({ bgColor, slide, img }) {
   return (
@@ -53,17 +46,25 @@ function Gallery() {
       className="py-[3rem]"
     >
       <SwiperSlide className="swiperSlide h-[17rem] w-[23rem] overflow-hidden">
-        <Card img={img[0]} bgColor="bg-slate-300" slide="SLIDE 1" />
+        <Card sx={{ maxWidth: 345 }}>
+          <CardMedia
+            component="img"
+            alt="case study"
+            height="140"
+            image="/casestudy.png"
+          />
+          <CardContent>
+            <Typography gutterBottom variant="h5" component="div">
+              Lizard
+            </Typography>
+            <Typography variant="body2" color="white">
+              Lizards are a widespread group of squamate reptiles, with over
+              6,000 species, ranging across all continents except Antarctica
+            </Typography>
+          </CardContent>
+        </Card>
       </SwiperSlide>
-      <SwiperSlide className="swiperSlide h-[17rem] w-[23rem] overflow-hidden">
-        <Card img={img2} bgColor="bg-slate-400" slide="SLIDE 2" />
-      </SwiperSlide>
-      <SwiperSlide className="swiperSlide h-[17rem] w-[23rem] overflow-hidden">
-        <Card img={img3} bgColor="bg-slate-500" slide="SLIDE 3" />
-      </SwiperSlide>
-      <SwiperSlide className="swiperSlide h-[17rem] w-[23rem] overflow-hidden">
-        <Card img={img4} bgColor="bg-slate-600" slide="SLIDE 4" />
-      </SwiperSlide>
+      <SwiperSlide className="swiperSlide h-[17rem] w-[23rem] overflow-hidden"></SwiperSlide>
     </Swiper>
   );
 }
