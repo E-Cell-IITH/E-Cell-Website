@@ -5,7 +5,7 @@ function Events() {
   return (
     <section>
       <div>
-        <h2 className="text-center font-medium text-5xl text-blue">EVENTS</h2>
+        <h2 className="text-center font-medium text-5xl text-blue">Competitions</h2>
       </div>
       <br />
       <div className="py-[3rem] lg:pt-0 lg:pb-[4rem]">
