@@ -34,15 +34,15 @@ const First = () => {
               </div>
               <div>
                 <h2 className="text-lightBlue font-semibold text-[1.75rem] md:font-bold  md:text-[2.75rem] lg:text-[3.75rem] 2xl:text-[5rem]">
-                  THE ARDUOUS CARREFOUR
+                  AN ARDUOUS CARREFOUR
                 </h2>
               </div>
             </div>
             <div>
-              <button className="text-white border-blue border-2 px-8 py-3 relative top-5 rounded-lg leading-5">
+              {/* <button className="text-white border-blue border-2 px-8 py-3 relative top-5 rounded-lg leading-5">
                 REGISTER <br></br>
                 NOW
-              </button>
+              </button> */}
             </div>
           </div>
           {/* sm section */}
