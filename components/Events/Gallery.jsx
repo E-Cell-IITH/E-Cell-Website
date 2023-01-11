@@ -119,7 +119,7 @@ data.forEach((item, index) => {
               <br />
             </div>
           </div>
-          <div className="flex items-center" style={{fontSize : "1vw",textDecoration:"underline",fontWeight:"500"}}>
+          <div className="flex items-center" style={{fontSize : "1vw",textDecoration:"underline",fontWeight:"500",color:"#0000EE"}}>
              <a href={item.link}>Registration Link</a>
           </div>
         </div>
