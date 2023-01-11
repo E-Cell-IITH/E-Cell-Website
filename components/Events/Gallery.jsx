@@ -37,7 +37,7 @@ const data = [
     contact: "Sneha Chilukuri",
     number: "+91 79936 59092",
     email: "me21mtech14002@iith.ac.in",
-    link: "None",
+    link: "https://unstop.com/competition/e-pic-the-elevator-pitch-indian-institute-of-technology-iit-hyderabad-573648",
     imgUrl:
       "https://res.cloudinary.com/dboy04n6m/image/upload/v1673381792/epic_yux10a.png",
   },
