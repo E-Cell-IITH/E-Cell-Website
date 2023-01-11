@@ -1,6 +1,13 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { EffectCoverflow, Pagination } from "swiper";
+// import Swiper core and required modules
+import SwiperCore, {
+  Autoplay,Navigation
+} from 'swiper/core';
+
+// install Swiper modules
+SwiperCore.use([Autoplay,Pagination,Navigation]);
 
 import Image from "next/image";
 
@@ -153,6 +160,10 @@ data.forEach((item, index) => {
 function Gallery() {
   return (
     <Swiper
+    autoplay={{
+      "delay": 1500,
+      "disableOnInteraction": false
+    }}
       spaceBetween={500}
       effect={"coverflow"}
       slidesPerView={"auto"}
