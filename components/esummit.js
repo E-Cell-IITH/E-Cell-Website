@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 const First = () => {
   return (
@@ -50,20 +51,46 @@ const First = () => {
             {/* icons */}
             <div className="flex flex-row gap-4 justify-center items-center">
               <div>
-                <Image src="/instagram0icon.svg" alt="instagram" width={31} height={31}></Image>
+                <Link href="https://www.instagram.com/ecell_iith/?hl=en">
+                <a target="_blank" rel="noreferrer noopener">
+                  <Image src="/instagram0icon.svg" alt="instagram" width= {31} height={31}>
+                  </Image>
+                </a>
+                </Link>
               </div>
               <div>
-                <Image src="/linkedin-icon.svg" alt="linkedin" width={27} height={27}></Image>
+                <Link href="https://in.linkedin.com/company/entrepreneurship-cell-iit-hyderabad">
+                <a target="_blank" rel="noreferrer noopener">
+                <Image src="/linkedin-icon.svg" alt="linkedin" width={27} height={27}>
+                </Image>
+                </a>
+                </Link>
               </div>
               <div>
-                <Image src="/twitter-icon.svg" alt="twitter" width={27} height={23}></Image>
+                <Link href="https://twitter.com/ecell_iith">
+                <a target="_blank" rel="noreferrer noopener">
+                <Image src="/twitter-icon.svg" alt="twitter" width={27} height={23}>
+                </Image>
+                </a>
+                </Link>
               </div>
               <div>
-                <Image src="/facebook-icon.svg" alt="facebook" width={28} height={28}></Image>
+                <Link href="https://www.facebook.com/ecell.iithyd/">
+                <a target="_blank" rel="noreferrer noopener">
+                <Image src="/facebook-icon.svg" alt="facebook" width={28} height={28}>
+                </Image>
+                </a> 
+                </Link>
               </div>
               <div>
-                <Image src="/youtube-icon.svg" alt="youtube" width={35} height={35}></Image>
+                <Link href="https://www.youtube.com/user/ecelliithyderabad">
+                <a target="_blank" rel="noreferrer noopener">
+                <Image src="/youtube-icon.svg" alt="youtube" width={35} height={35}>
+                </Image>
+                </a>
+                </Link>
               </div>
+              
             </div>
             {/* go down button */}
             <div></div>

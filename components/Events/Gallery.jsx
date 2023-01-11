@@ -153,7 +153,7 @@ data.forEach((item, index) => {
 function Gallery() {
   return (
     <Swiper
-      spaceBetween={70}
+      spaceBetween={500}
       effect={"coverflow"}
       slidesPerView={"auto"}
       grabCursor={true}
