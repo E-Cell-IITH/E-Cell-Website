@@ -6,7 +6,7 @@ const First = () => {
     <div>
       <section className="flex flex-col w-full h-[100vh] py-5 px-5">
         <div className="absolute inset-0 blur-sm">
-          <video className="w-full h-full object-cover" autoplay="true" loop="true" muted="true" >
+          <video className="w-full h-full object-cover" autoPlay="true" loop="true" muted="true" >
             {/* <source src="http://techslides.com/demos/sample-videos/small.webm" type="video/webm"/> 
             <source src="http://techslides.com/demos/sample-videos/small.ogv" type="video/ogg"/>  */}
             <source src="/ecell_landing_page.mp4" type="video/mp4"/>
