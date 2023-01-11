@@ -13,9 +13,9 @@
 //             </h2>
 //         </div>
 //         <div className='flex flex-row gap-6 py-8 justify-evenly'>
-//             <Card/> 
-//             <Card/> 
-//             <Card/> 
+//             <Card/>
+//             <Card/>
+//             <Card/>
 //         </div>
 //     </section>
 //   )
@@ -118,18 +118,18 @@ function SpeakerCarousel() {
           autoPlay={true}
         >
           {speakers.map((item, i) => (
-            <Div key={item.name}>
+            <Div key={item.name} className="bg-dark">
               <Grid container item xs={12}>
                 <Grid item container xs={12} lg={4} justifyContent="center">
                   <Box
                     component="div"
+                    className="bg-dark"
                     sx={{
                       height: { xs: "15rem", lg: "25rem" },
                       width: { xs: "11.25rem", lg: "18.75rem" },
                       overflow: "hidden",
                       position: "relative",
                       borderRadius: { xs: "0.8rem", lg: "1rem" },
-                      background: "#0b0b0b",
                     }}
                   >
                     <Image
