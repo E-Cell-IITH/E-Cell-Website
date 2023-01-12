@@ -77,7 +77,7 @@ const data = [
     contact: "Amulya Mallavarapu",
     number: "+91 94056 20011",
     email: "bd21bdes11003@iith.ac.in",
-    link: "https://unstop.com/pitch-showdown-competition-e-summit-23-e-cell-iit-hyderabad-indian-institute-of-technology-iit-hyderabad-585437",
+    link: "https://unstop.com/competition/pitch-showdown-competition-e-summit-23-e-cell-iit-hyderabad-indian-institute-of-technology-iit-hyderabad-585437?lb=JBg5vMG",
     imgUrl:
       "https://res.cloudinary.com/dboy04n6m/image/upload/v1673382114/ps_htew5j.jpg",
   },
