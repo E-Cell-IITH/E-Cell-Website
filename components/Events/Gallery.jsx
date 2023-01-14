@@ -55,7 +55,7 @@ const data = [
     email: 'ch21btech11036@iith.ac.in',
     link: 'https://unstop.com/o/PnycSDH?utm_campaign=site-emails&utm_medium=d2c-automated&utm_source=woah-public-mode-activated-for-biz-quiz ',
     imgUrl:
-      'https://res.cloudinary.com/dboy04n6m/image/upload/v1673381950/bq_op9y9k.jpg',
+      'https://res.cloudinary.com/dbmw0xoar/image/upload/v1673675371/ecell/download_2_cv9wv6.png',
   },
   {
     name: 'Investire',
