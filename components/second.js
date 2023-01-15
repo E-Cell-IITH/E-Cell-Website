@@ -282,13 +282,13 @@ export default function Second() {
             <br />
             <Grid item xs={2}></Grid>
             <Grid item xs={8} className={style.cont}>
-              • Investment firms and VCs to provide funding to the budding
+              Investment firms and VCs to provide funding to the budding
               in-campus startups.
               <br />
-              • Training clubs to provide strategic mentorship to the student
+              Training clubs to provide strategic mentorship to the student
               community.
               <br />
-              • Various companies to provide both monetary and non-monetary
+              Various companies to provide both monetary and non-monetary
               sponsorship.
               <br />• E-Cells of various colleges, and acting as a Guiding Body
               for newer E-Cells.

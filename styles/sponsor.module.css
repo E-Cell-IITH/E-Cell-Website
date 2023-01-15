@@ -1,0 +1,41 @@
+.heading{
+    color: white;
+    text-align: center;
+    font-size: 4vw;
+    font-weight: 700;
+    margin-top: 5vw;
+    margin-bottom: 5vw;
+}
+.card{
+    height: fit-content;
+    font-size: 1.1vw;
+    flex-grow: 1;
+    margin-top: 1vw;
+    border-top: 0.1vw solid grey;
+    padding: 1vw;
+}
+.content{
+    text-align: center;
+    color: white;
+}
+
+@media (max-width: 1100px){
+    .card{
+        font-size: 1.3vw;
+    }
+}
+
+@media (max-width: 800px){
+    .heading{
+        font-size: 10vw;
+        margin-bottom: 20vw;
+    }
+    .card{
+        font-size: 3.2vw;
+    }
+    .content{
+        padding: 1.2vw;
+    }
+}
+
+

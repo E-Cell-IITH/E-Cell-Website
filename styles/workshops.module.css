@@ -1,0 +1,76 @@
+.workshop{
+    padding: 0.2vw;
+    color: white;
+    margin-bottom: 8vw;
+    font-size: 1.2vw;
+    background-image: linear-gradient(black, black),
+    linear-gradient(316.31deg, rgba(56, 128, 231, 1) 40%, rgba(98, 215, 216, 1) 80%);
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+}
+.sub{
+    font-size: 1.5vw;
+    font-weight: 700;
+    color: white;
+}
+.sub2{
+    font-weight: 500;
+}
+.heading{
+    color: rgb(69,162,158);
+    text-align: center;
+    font-weight:450;
+    font-size: 3.5vw;
+    margin-bottom: 2vw;
+}
+.try{
+    margin: 1vw;
+}
+
+@media (max-width:1100px){
+    .try{
+        margin: 2vw;
+    }
+    .workshop{
+        /* margin-top: -5vw; */
+        padding: 0.4vw;
+        font-size: 1.3vw;
+        margin-bottom: 5vw;
+    }
+    .heading{
+        font-size: 5vw
+    }
+    .sub{
+        font-size: 1.8vw;
+    }
+}
+
+@media (max-width: 800px){
+    .heading{
+        font-size: 8vw;
+        margin-bottom: 6vw;
+        margin-top: -15vw;
+    }
+    .sub{
+        font-size: 2.3vw;
+    }
+    .workshop{
+        font-size: 2vw;
+        margin-bottom: 6vw;
+    }
+}
+
+@media (max-width : 500px){
+    .heading{
+        font-size: 10vw;
+        margin-top: -30vw;
+        margin-bottom: 10vw;
+        font-weight: 600;
+    }
+    .sub{
+        font-size: 3.3vw;
+    }
+    .workshop{
+        font-size: 3vw;
+    }
+}
