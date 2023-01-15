@@ -28,8 +28,11 @@ const KeySpeakers = () => {
     <section className="text-white flex flex-col justify-center items-center px-[3rem] lg:px-0 lg:pb-[3rem] mb-[4rem]">
       <div className={style.heading}>KEYNOTE SPEAKERS</div>
       <div className="w-[80%] sm:max-w-[49.75rem] py-[4rem] lg:py-[3rem] grid lg:grid-cols-3 mx-auto gap-10 md:grid-cols-2 grid-cols-1">
-        {speakers.map((item) => (
-          <div className="flex flex-col gap-5 text-center rounded-md p-1 hover:scale-105 transition-all  items-center">
+        {speakers.map((item, i) => (
+          <div
+            className="flex flex-col gap-5 text-center rounded-md p-1 hover:scale-105 transition-all  items-center"
+            key={`${item} ${i}`}
+          >
             <img
               src={item.imgUrl}
               alt={item.name}
