@@ -57,25 +57,6 @@ const speakers = [
     imgUrl:
       'https://res.cloudinary.com/dbmw0xoar/image/upload/v1673640996/ecell/Yugandhar_Penubolu_-_Founder_of_Winzard.io_-_HR_Tech_m7oeyp.jpg',
   },
-  {
-    name: 'Dr Ravishankar Polisetty',
-    designation: 'MD, CEO, Director R&D - Sai Ganga Panakeia Pvt. Ltd',
-    imgUrl:
-      'https://res.cloudinary.com/dbmw0xoar/image/upload/v1673641231/ecell/Dr_Ravishankar_Polisetty_MD_CEO_Director_R_D_-_Sai_Ganga_Panakeia_Pvt._Ltd_fai7su.jpg',
-  },
-  {
-    name: 'Sandip Poddar',
-    designation: 'Co-Founder and Director Navikarna Ventures',
-    imgUrl:
-      'https://res.cloudinary.com/dbmw0xoar/image/upload/v1673641283/ecell/Sandip_Poddar_-_Co-Founder_and_Director_Navikarna_Ventures_cqkeev.jpg',
-  },
-  {
-    name: 'Udaya Kumar Dintyala',
-    designation:
-      'Ex. Exec. Director - ITO at AT&T Global Business Services India',
-    imgUrl:
-      'https://res.cloudinary.com/dbmw0xoar/image/upload/v1673641349/ecell/Udaya_Kumar_Dintyala_Ex._Exec._Director_-_ITO_at_AT_T_Global_Business_Services_India_pyjzwt.jpg',
-  },
 ];
 
 const Div = styled.div`
