@@ -8,7 +8,7 @@ export default function Home() {
   return (
     <div className="bg-dark">
       <First />
-      <Keynote/>
+      {/* <Keynote/> */}
       <Events />
       <Speakers />
     </div>
