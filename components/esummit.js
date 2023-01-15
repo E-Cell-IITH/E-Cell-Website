@@ -160,19 +160,17 @@ const First = () => {
               </h2>
             </div>
             <div>
+              <h1 className="text-center text-4xl py-5">An Arduous Carrefour</h1>
               <p className="text-offwhite font-medium text-center text-lg lg:text-[1.25rem] leading-8">
-                It has been over a year since the pandemic hit the world. Amidst
-                countless challenges and uncertainties, many individuals and
-                companies were quite phenomenal, as they succeeded in sustaining
-                and reviving their businesses. India has witnessed 28 new
-                unicorns just this year, making the total unicorn count go up to
-                66! This marks a veritable triumph over the COVID-19 outbreak.
-                <br />
-                <br />
-                With “Exordium of Resurgence” as the theme, our objective is to
-                explore the steps and strategies that have helped businesses
-                pick up prospects and opportunities for entrepreneurial roles in
-                the post COVID era.
+              With the looming recession and the funding winter, the last year has been a rough one for
+              startups. There has been a significant fall in funding compared to the previous year. Few
+              startups which went public have suffered huge losses. After a triumphant revival in 2021, the
+              Indian startup ecosystem faces multiple challenges again in today's market. Despite all the
+              challenges and slowdowns, the Indian startup ecosystem is continuing to grow at a remarkable
+              rate and is currently the third largest in the world.
+              With “An Arduous Carrefour” as the theme, our objective is to explore the difficulties, setbacks,
+              challenges and opportunities that lie at this crossroads for entrepreneurs and entrepreneurship
+              and how more effort is required to excel and succeed.
               </p>
             </div>
           </div>
