@@ -153,6 +153,16 @@ const First = () => {
               </p>
             </div>
           </div>
+          <div className="flex justify-center mt-32">
+            <button className="text-white border-blue border-2 px-8 py-3 relative top-5 rounded-lg leading-5">
+            <Link href="/schedule">
+              <a
+              >
+                For Schedule-click here
+              </a>
+            </Link>
+            </button>
+          </div>
           <div className="flex flex-col gap-10 py-[7rem] lg:py-[10rem] lg:pb-0">
             <div>
               <h2 className="text-center font-medium text-5xl text-blue">
@@ -165,10 +175,10 @@ const First = () => {
               With the looming recession and the funding winter, the last year has been a rough one for
               startups. There has been a significant fall in funding compared to the previous year. Few
               startups which went public have suffered huge losses. After a triumphant revival in 2021, the
-              Indian startup ecosystem faces multiple challenges again in today's market. Despite all the
+              Indian startup ecosystem faces multiple challenges again in today&#39;s market. Despite all the
               challenges and slowdowns, the Indian startup ecosystem is continuing to grow at a remarkable
               rate and is currently the third largest in the world.
-              With “An Arduous Carrefour” as the theme, our objective is to explore the difficulties, setbacks,
+              With &ldquo;An Arduous Carrefour&rdquo; as the theme, our objective is to explore the difficulties, setbacks,
               challenges and opportunities that lie at this crossroads for entrepreneurs and entrepreneurship
               and how more effort is required to excel and succeed.
               </p>

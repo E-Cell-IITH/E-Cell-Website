@@ -16,7 +16,7 @@ export default function Home() {
       <Panel />
       <Workshops />
       <Events />
-      <Speakers />
+      {/* <Speakers /> */}
     </div>
   );
 }

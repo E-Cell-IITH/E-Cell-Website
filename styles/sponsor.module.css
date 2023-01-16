@@ -1,4 +1,4 @@
-.heading{
+/* .heading{
     color: white;
     text-align: center;
     font-size: 4vw;
@@ -36,6 +36,12 @@
     .content{
         padding: 1.2vw;
     }
+} */
+.card{
+    height: 20vw;
+    width: 25vw;
+    background-color: white;
+    align-items: center;
 }
 
 

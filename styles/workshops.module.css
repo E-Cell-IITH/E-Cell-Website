@@ -12,6 +12,13 @@
     font-size: 1.5vw;
     font-weight: 700;
     color: white;
+    /* text-align: center; */
+}
+.sub3{
+    font-weight: 700;
+    text-align: center;
+    font-size: 2vw;
+    color: white;
 }
 .sub2{
     font-weight: 500;
@@ -21,7 +28,7 @@
     text-align: center;
     font-weight:450;
     font-size: 3.5vw;
-    margin-bottom: 2vw;
+    margin-bottom: 10vw
 }
 .try{
     margin: 1vw;

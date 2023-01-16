@@ -9,7 +9,7 @@ export default function Workshops() {
         <Grid container justifyContent="center" columnGap={7} rowGap={4}>
             <Grid md={5} sm={9} xs={9} item className={style.workshop}>
                 <div className={style.try}>
-                <div className={style.sub}>Topic </div>  Art of Capital Raising <br /><br />
+                <div className={style.sub3}>Art of Capital Raising </div> <br />
                 <div className={style.sub}>Date</div>22 January 2023, 10 AM to 12 <br /><br />
                 <div className={style.sub}>Agenda Points</div> <br />
                 <div className={style.sub2}>Steps in Capital Raising :</div> <br />
@@ -28,7 +28,7 @@ export default function Workshops() {
             </Grid>
             <Grid md={5} sm={9} xs={9} item className={style.workshop}>
             <div className={style.try}>
-                <div className={style.sub}>Topic </div>  Design Thinking: An overview <br /><br />
+                <div className={style.sub3}>Design Thinking: An overview </div><br />
                 <div className={style.sub}>Date</div>21 January 2023, 12 pm to 2 pm <br /><br />
                 <div className={style.sub}>Agenda Points</div> <br />
                 The workshops offer training on a design thinking process, which prioritizes creative collaboration to find solutions in action. This is a non-linear approach that considers all sides of a problem. It seeks to understand the customer better and rethink and redefine assumptions and issues to constructively identify innovative solutions. Those solutions are then tested, and reworked if needed, to reach an optimal outcome 
