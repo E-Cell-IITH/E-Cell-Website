@@ -4,6 +4,7 @@ import Keynote from '../components/Events/Keynote';
 import KeySpeakers from '../components/Events/KeySpeakers';
 import Speakers from '../components/Events/Speakers';
 import Workshops from '../components/workshops';
+import Panel from '../components/Panel';
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       {/* <Keynote /> */}
 
       <KeySpeakers />
+      <Panel />
       <Workshops />
       <Events />
       <Speakers />
