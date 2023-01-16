@@ -59,7 +59,7 @@ const Navbar = () => {
             </Link>
           </li>
           <li className="navigation__item">
-            <Link href="https://tanmayshah07.github.io/E-CELL-IITH-Startup/">
+            <Link href="/sponsor">
               <a
                 className="navigation__link"
                 onClick={() => {
@@ -67,7 +67,7 @@ const Navbar = () => {
                 }}
               >
                 {" "}
-                Notable Start-Ups
+                Collaborations
               </a>
             </Link>
           </li>

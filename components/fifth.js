@@ -14,8 +14,8 @@ export default function Fifth({esummit = false}) {
             <ul className={style.ql}>Quick Links</ul>
             <ul>
               <li className={style.list}>
-                <Link href="https://tanmayshah07.github.io/E-CELL-IITH-Startup/">
-                  <a className={style.links}>Notable Start-Ups</a>
+                <Link href="/sponsor">
+                  <a className={style.links}>Collaborations</a>
                 </Link>
               </li>
               <li className={style.list}>

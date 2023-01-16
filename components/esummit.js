@@ -153,6 +153,16 @@ const First = () => {
               </p>
             </div>
           </div>
+          <div className="flex justify-center mt-32">
+            <button className="text-white border-blue border-2 px-8 py-3 relative top-5 rounded-lg leading-5">
+            <Link href="/schedule">
+              <a
+              >
+                For Schedule-click here
+              </a>
+            </Link>
+            </button>
+          </div>
           <div className="flex flex-col gap-10 py-[7rem] lg:py-[10rem] lg:pb-0">
             <div>
               <h2 className="text-center font-medium text-5xl text-blue">

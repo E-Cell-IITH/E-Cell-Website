@@ -14,7 +14,7 @@ export default function Home() {
       <KeySpeakers />
       <Workshops />
       <Events />
-      <Speakers />
+      {/* <Speakers /> */}
     </div>
   );
 }
