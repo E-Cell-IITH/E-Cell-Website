@@ -13,11 +13,11 @@ const Schedule = () => {
 
 
                 <div className=' text-white px-20 py-20 text-3xl  border-white border-2 flex justify-center'>DAY 2<br></br>21st January</div>
-                <div className='  border-white border-2 flex justify-center px-5 py-5'><Image src="/tt-1.jpg" width="600" height="200"></Image></div>
+                <div className='  border-white border-2 flex justify-center px-5 py-5'><Image src="/tt-1.jpg" alt="tt2" width="600" height="200"></Image></div>
 
 
                 <div className=' text-white px-20 py-20 text-3xl border-white border-2 flex justify-center'>DAY 3<br></br>22nd January</div>
-                <div className='  border-white flex justify-center border-2 px-5 py-5'><Image src="/tt-2.jpg" width="650" height="400"></Image></div>
+                <div className='  border-white flex justify-center border-2 px-5 py-5'><Image src="/tt-2.jpg" alt="tt2" width="650" height="400"></Image></div>
 
 
             </div>
