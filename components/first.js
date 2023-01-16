@@ -12,6 +12,7 @@ gsap.registerPlugin(ScrollTrigger);
 export default function Navbar({
   desc = true,
   heading = "ENTREPRENEURSHIP CELL",
+  sponsors = false,
 }) {
   const headingRef = useRef();
   const iith = useRef();
@@ -116,9 +117,9 @@ export default function Navbar({
         {heading}
         <br />
       </div>
-      <div className={style.iit} ref={iith}>
-        IIT HYDERABAD <br />
-      </div>
+      {!sponsors ? <div className={style.iit} ref={iith}>
+        IIT HYDERABAD <br /> 
+      </div>:  ""}
       <br />
       <div className={style.think} id="tagline">
         <span>THINK |</span> <span>BUILD |</span> <span>INSPIRE</span>
