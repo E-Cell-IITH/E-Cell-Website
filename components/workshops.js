@@ -29,8 +29,7 @@ export default function Workshops() {
             <br />
             <div className={style.sub}>Instructor details</div>
             Mr. Yaseen Shareef Shaik, Director @FundEnable <br />
-            <br />
-            <div className="flex justify-center mt-10 mb-5] pb-4">
+            <div className="flex justify-center mt-10 mb-5 pb-4">
               <button
                 className="text-white border-blue border-2 px-7
              py-4 relative rounded-lg leading-5"
@@ -58,11 +57,11 @@ export default function Workshops() {
             </ul>
             <br />
             <div className={style.sub}>Instructor details</div>
-            Prashant Sinha, Senior Program Manager at Amazon <br /> <br />
-            <div className="flex justify-center mt-3 mb-8] pb-4">
+            Prashant Sinha, Senior Program Manager at Amazon <br />
+            <div className="flex justify-center mt-10 mb-5 pb-4">
               <button
-                className="text-white border-blue border-2 px-9
-             py-4 relative rounded-lg leading-5"
+                className="text-white border-blue border-2 px-7
+                py-4 relative rounded-lg leading-5"
               >
                 <Link href="https://forms.gle/STyPWDZHSnxVcP8t8">
                   <a className="text-2xl">Registration link</a>

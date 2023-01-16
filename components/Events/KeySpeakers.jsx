@@ -28,7 +28,7 @@ const speakers = [
 const KeySpeakers = () => {
   return (
     <section className="text-white flex flex-col justify-center items-center px-[3rem] lg:px-0 lg:pb-[3rem] mb-[4rem]">
-      <div className={style.heading}>KEYNOTE SPEAKERS</div>
+      <div className="text-5xl text-center text-blue mb-16">KEYNOTE SPEAKERS</div>
       <div className="w-[80%] sm:max-w-[49.75rem] py-[2rem] lg:py-[0rem] grid lg:grid-cols-3 mx-auto gap-10 md:grid-cols-2 grid-cols-1">
         {speakers.map((item, i) => (
           <div
