@@ -1,4 +1,3 @@
-
 import First from '../components/esummit';
 import Events from '../components/Events/Events';
 import Keynote from '../components/Events/Keynote';
@@ -14,7 +13,7 @@ export default function Home() {
       {/* <Keynote /> */}
 
       <KeySpeakers />
-      <Panel />
+      {/* <Panel /> */}
       <Workshops />
       <Events />
       {/* <Speakers /> */}
