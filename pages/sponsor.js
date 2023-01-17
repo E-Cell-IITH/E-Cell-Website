@@ -1,20 +1,20 @@
-import Image from "next/image";
-import Grid from "@mui/material/Grid";
-import { style } from "@mui/system";
-import styles from "../styles/sponsor.module.css";
-import Card from "@mui/material/Card";
-import CardActions from "@mui/material/CardActions";
-import CardContent from "@mui/material/CardContent";
-import CardMedia from "@mui/material/CardMedia";
-import React, { useRef, useEffect } from "react";
-import Navbar from "../components/first";
-import { Box, Typography } from "@mui/material";
-import style2 from "../styles/changesFirst.module.css";
-import Managers from "../components/Managers";
-import parallax from "../styles/team.module.css";
-import Head from "next/head";
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+import Image from 'next/image';
+import Grid from '@mui/material/Grid';
+import { style } from '@mui/system';
+import styles from '../styles/sponsor.module.css';
+import Card from '@mui/material/Card';
+import CardActions from '@mui/material/CardActions';
+import CardContent from '@mui/material/CardContent';
+import CardMedia from '@mui/material/CardMedia';
+import React, { useRef, useEffect } from 'react';
+import Navbar from '../components/first';
+import { Box, Typography } from '@mui/material';
+import style2 from '../styles/changesFirst.module.css';
+import Managers from '../components/Managers';
+import parallax from '../styles/team.module.css';
+import Head from 'next/head';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger);
 
 const Sponsor = () => {
@@ -25,14 +25,14 @@ const Sponsor = () => {
       tl.current = gsap
         .timeline({
           scrollTrigger: {
-            trigger: "#head",
-            start: "top 80%",
-            end: "top 50%",
-            toggleActions: "play none none reverse",
+            trigger: '#head',
+            start: 'top 80%',
+            end: 'top 50%',
+            toggleActions: 'play none none reverse',
           },
         })
         .fromTo(
-          "#head > *",
+          '#head > *',
           {
             y: 20,
             autoAlpha: 0.2,
@@ -43,20 +43,20 @@ const Sponsor = () => {
             scale: 1,
             y: 0,
             duration: 0.4,
-            ease: "power2.out",
+            ease: 'power2.out',
             stagger: 0.3,
           }
         );
 
-      const cards = gsap.utils.toArray(".card");
+      const cards = gsap.utils.toArray('.card');
       console.log(cards);
       cards.forEach((card) => {
         gsap
           .timeline({
             scrollTrigger: {
               trigger: card,
-              start: "top 80%",
-              end: "top 50%",
+              start: 'top 80%',
+              end: 'top 50%',
             },
           })
           .fromTo(
@@ -69,7 +69,7 @@ const Sponsor = () => {
               autoAlpha: 1,
               y: 0,
               duration: 0.4,
-              ease: "power2.out",
+              ease: 'power2.out',
               stagger: 0.3,
             }
           );
@@ -81,10 +81,10 @@ const Sponsor = () => {
   return (
     <div ref={parent}>
       <Head>
-        <title>Team Entrepreneurship Cell IIT Hyderabad</title>
+        <title>Sponsors Entrepreneurship Cell IIT Hyderabad</title>
       </Head>
       <Navbar heading="COLLABORATIONS" desc={false} sponsors={true} />
-      <div className="text-center text-white text-3xl w-[20rem] mx-auto -mt-[5rem] my-10 p-2 uppercase  border-b-2 border-white ">
+      <div className="text-center text-white text-2xl md:text-3xl md:w-[20rem] mx-auto mt-[20rem] w-[15rem] sm:mt-[15rem] lg:-mt-[5rem] my-10 p-2 uppercase  border-b-2 border-white ">
         Event Partners
       </div>
 
@@ -104,10 +104,10 @@ const Sponsor = () => {
           lg={3}
           sx={{
             spacing: 2,
-            display: "flex",
-            flexDirection: "column",
-            justifyContent: "center",
-            alignItems: "center",
+            display: 'flex',
+            flexDirection: 'column',
+            justifyContent: 'center',
+            alignItems: 'center',
           }}
         >
           <Card
@@ -116,9 +116,9 @@ const Sponsor = () => {
               maxWidth: 250,
               minHeight: 250,
               maxHeight: 250,
-              transition: "transform .2s ease-in",
-              "&:hover": {
-                transform: "scale(1.1)",
+              transition: 'transform .2s ease-in',
+              '&:hover': {
+                transform: 'scale(1.1)',
               },
             }}
           >
@@ -141,10 +141,10 @@ const Sponsor = () => {
           lg={3}
           sx={{
             spacing: 2,
-            display: "flex",
-            flexDirection: "column",
-            justifyContent: "center",
-            alignItems: "center",
+            display: 'flex',
+            flexDirection: 'column',
+            justifyContent: 'center',
+            alignItems: 'center',
           }}
         >
           <Card
@@ -153,9 +153,9 @@ const Sponsor = () => {
               maxWidth: 250,
               minHeight: 250,
               maxHeight: 250,
-              transition: "transform .2s ease-in",
-              "&:hover": {
-                transform: "scale(1.1)",
+              transition: 'transform .2s ease-in',
+              '&:hover': {
+                transform: 'scale(1.1)',
               },
             }}
           >
@@ -173,10 +173,10 @@ const Sponsor = () => {
           lg={3}
           sx={{
             spacing: 2,
-            display: "flex",
-            flexDirection: "column",
-            justifyContent: "center",
-            alignItems: "center",
+            display: 'flex',
+            flexDirection: 'column',
+            justifyContent: 'center',
+            alignItems: 'center',
           }}
         >
           <Card
@@ -185,9 +185,9 @@ const Sponsor = () => {
               maxWidth: 250,
               minHeight: 250,
               maxHeight: 250,
-              transition: "transform .2s ease-in",
-              "&:hover": {
-                transform: "scale(1.1)",
+              transition: 'transform .2s ease-in',
+              '&:hover': {
+                transform: 'scale(1.1)',
               },
             }}
           >
@@ -216,15 +216,15 @@ const Sponsor = () => {
           lg={3}
           sx={{
             spacing: 2,
-            display: "flex",
-            flexDirection: "column",
-            justifyContent: "center",
-            alignItems: "center",
+            display: 'flex',
+            flexDirection: 'column',
+            justifyContent: 'center',
+            alignItems: 'center',
           }}
         >
           <div className="flex flex-col mx-auto mt-20 justify-center items-center">
             <p
-              className="text-white text-[1.5rem] uppercase py-2 border-b-2 border-white mb-6
+              className="text-white text-xl md:text-[1.5rem] uppercase py-2 border-b-2 border-white mb-6
           "
             >
               Learning partner
@@ -235,9 +235,9 @@ const Sponsor = () => {
                 maxWidth: 250,
                 minHeight: 250,
                 maxHeight: 250,
-                transition: "transform .2s ease-in",
-                "&:hover": {
-                  transform: "scale(1.1)",
+                transition: 'transform .2s ease-in',
+                '&:hover': {
+                  transform: 'scale(1.1)',
                 },
               }}
             >
@@ -262,15 +262,15 @@ const Sponsor = () => {
           lg={3}
           sx={{
             spacing: 2,
-            display: "flex",
-            flexDirection: "column",
-            justifyContent: "center",
-            alignItems: "center",
+            display: 'flex',
+            flexDirection: 'column',
+            justifyContent: 'center',
+            alignItems: 'center',
           }}
         >
           <div className="flex flex-col mx-auto mt-20 justify-center items-center">
             <p
-              className="text-white  text-[1.5rem] uppercase py-2 border-b-2 border-white mb-6
+              className="text-white text-xl md:text-[1.5rem] uppercase py-2 border-b-2 border-white mb-6
         "
             >
               education partner
@@ -281,9 +281,9 @@ const Sponsor = () => {
                 maxWidth: 250,
                 minHeight: 250,
                 maxHeight: 250,
-                transition: "transform .2s ease-in",
-                "&:hover": {
-                  transform: "scale(1.1)",
+                transition: 'transform .2s ease-in',
+                '&:hover': {
+                  transform: 'scale(1.1)',
                 },
               }}
             >
@@ -302,15 +302,15 @@ const Sponsor = () => {
           lg={3}
           sx={{
             spacing: 2,
-            display: "flex",
-            flexDirection: "column",
-            justifyContent: "center",
-            alignItems: "center",
+            display: 'flex',
+            flexDirection: 'column',
+            justifyContent: 'center',
+            alignItems: 'center',
           }}
         >
           <div className="flex flex-col mx-auto mt-20 justify-center items-center">
             <p
-              className="text-white  text-[1.5rem]  uppercase py-2 border-b-2 border-white mb-6
+              className="text-white  text-xl md:text-[1.5rem]  uppercase py-2 border-b-2 border-white mb-6
         "
             >
               Internship partner
@@ -321,9 +321,9 @@ const Sponsor = () => {
                 maxWidth: 250,
                 minHeight: 250,
                 maxHeight: 250,
-                transition: "transform .2s ease-in",
-                "&:hover": {
-                  transform: "scale(1.1)",
+                transition: 'transform .2s ease-in',
+                '&:hover': {
+                  transform: 'scale(1.1)',
                 },
               }}
             >
@@ -352,15 +352,15 @@ const Sponsor = () => {
           lg={5}
           sx={{
             spacing: 2,
-            display: "flex",
-            flexDirection: "column",
-            justifyContent: "center",
-            alignItems: "center",
+            display: 'flex',
+            flexDirection: 'column',
+            justifyContent: 'center',
+            alignItems: 'center',
           }}
         >
           <div className="flex flex-col mx-auto mt-20 justify-center items-center">
             <p
-              className="text-white  text-[1.5rem] uppercase py-2 border-b-2 mt-10 border-white mb-6
+              className="text-white text-[1rem] md:text-[1.5rem] uppercase text-xl md:text-[1.5rem] py-2 border-b-2 mt-10 border-white mb-6
         "
             >
               powered by platform partner
@@ -371,9 +371,9 @@ const Sponsor = () => {
                 maxWidth: 250,
                 minHeight: 250,
                 maxHeight: 250,
-                transition: "transform .2s ease-in",
-                "&:hover": {
-                  transform: "scale(1.1)",
+                transition: 'transform .2s ease-in',
+                '&:hover': {
+                  transform: 'scale(1.1)',
                 },
               }}
             >
@@ -397,15 +397,15 @@ const Sponsor = () => {
           lg={5}
           sx={{
             spacing: 2,
-            display: "flex",
-            flexDirection: "column",
-            justifyContent: "center",
-            alignItems: "center",
+            display: 'flex',
+            flexDirection: 'column',
+            justifyContent: 'center',
+            alignItems: 'center',
           }}
         >
           <div className="flex flex-col mx-auto mt-20 justify-center items-center">
             <p
-              className="text-white  text-[1.5rem] uppercase py-2 border-b-2 mt-10 border-white mb-6
+              className="text-white text-xl md:text-[1.5rem] uppercase py-2 border-b-2 mt-10 border-white mb-6
         "
             >
               Outreach Partner
@@ -416,9 +416,9 @@ const Sponsor = () => {
                 maxWidth: 250,
                 minHeight: 250,
                 maxHeight: 250,
-                transition: "transform .2s ease-in",
-                "&:hover": {
-                  transform: "scale(1.1)",
+                transition: 'transform .2s ease-in',
+                '&:hover': {
+                  transform: 'scale(1.1)',
                 },
               }}
             >
@@ -447,15 +447,15 @@ const Sponsor = () => {
           lg={5}
           sx={{
             spacing: 2,
-            display: "flex",
-            flexDirection: "column",
-            justifyContent: "center",
-            alignItems: "center",
+            display: 'flex',
+            flexDirection: 'column',
+            justifyContent: 'center',
+            alignItems: 'center',
           }}
         >
           <div className="flex flex-col mt-20 mx-auto justify-center items-center">
             <p
-              className="text-white  text-[1.5rem] uppercase py-2 border-b-2 mt-10 border-white mb-6
+              className="text-white  text-[.9rem] md:text-[1.5rem] uppercase py-2 border-b-2 mt-10 border-white mb-6
     "
             >
               startUp Ecosystem Partner
@@ -466,9 +466,9 @@ const Sponsor = () => {
                 maxWidth: 250,
                 minHeight: 250,
                 maxHeight: 250,
-                transition: "transform .2s ease-in",
-                "&:hover": {
-                  transform: "scale(1.1)",
+                transition: 'transform .2s ease-in',
+                '&:hover': {
+                  transform: 'scale(1.1)',
                 },
               }}
             >
@@ -487,15 +487,15 @@ const Sponsor = () => {
           lg={5}
           sx={{
             spacing: 2,
-            display: "flex",
-            flexDirection: "column",
-            justifyContent: "center",
-            alignItems: "center",
+            display: 'flex',
+            flexDirection: 'column',
+            justifyContent: 'center',
+            alignItems: 'center',
           }}
         >
           <div className="flex flex-col mx-auto mt-20 justify-center items-center">
             <p
-              className="text-white  text-[1.5rem] uppercase py-2 border-b-2 mt-10 border-white mb-6
+              className="text-white  uppercase text-xl md:text-[1.5rem] py-2 border-b-2 mt-10 border-white mb-6
     "
             >
               Travel Partner
@@ -507,9 +507,9 @@ const Sponsor = () => {
                 maxWidth: 250,
                 minHeight: 250,
                 maxHeight: 250,
-                transition: "transform .2s ease-in",
-                "&:hover": {
-                  transform: "scale(1.1)",
+                transition: 'transform .2s ease-in',
+                '&:hover': {
+                  transform: 'scale(1.1)',
                 },
               }}
             >
@@ -522,7 +522,7 @@ const Sponsor = () => {
           </div>
         </Grid>
       </Grid>
-      <div className="text-center uppercase border-b-2 mt-20 border-white w-[25rem] mx-auto text-white text-3xl pb-2 mb-10  pt-12">
+      <div className="text-center uppercase border-b-2 mt-20 border-white md:w-[25rem] w-[15rem] mx-auto text-white text-xl md:text-3xl pb-2 mb-10  pt-12">
         workshop Partner
       </div>
       <Grid
@@ -541,10 +541,10 @@ const Sponsor = () => {
           lg={5}
           sx={{
             spacing: 2,
-            display: "flex",
-            flexDirection: "column",
-            justifyContent: "center",
-            alignItems: "center",
+            display: 'flex',
+            flexDirection: 'column',
+            justifyContent: 'center',
+            alignItems: 'center',
           }}
         >
           <Card
@@ -553,9 +553,9 @@ const Sponsor = () => {
               maxWidth: 250,
               minHeight: 250,
               maxHeight: 250,
-              transition: "transform .2s ease-in",
-              "&:hover": {
-                transform: "scale(1.1)",
+              transition: 'transform .2s ease-in',
+              '&:hover': {
+                transform: 'scale(1.1)',
               },
             }}
           >
@@ -573,10 +573,10 @@ const Sponsor = () => {
           lg={5}
           sx={{
             spacing: 2,
-            display: "flex",
-            flexDirection: "column",
-            justifyContent: "center",
-            alignItems: "center",
+            display: 'flex',
+            flexDirection: 'column',
+            justifyContent: 'center',
+            alignItems: 'center',
           }}
         >
           <Card
@@ -585,9 +585,9 @@ const Sponsor = () => {
               maxWidth: 250,
               minHeight: 250,
               maxHeight: 250,
-              transition: "transform .2s ease-in",
-              "&:hover": {
-                transform: "scale(1.1)",
+              transition: 'transform .2s ease-in',
+              '&:hover': {
+                transform: 'scale(1.1)',
               },
             }}
           >
@@ -615,14 +615,14 @@ const Sponsor = () => {
           lg={5}
           sx={{
             spacing: 2,
-            display: "flex",
-            flexDirection: "column",
-            justifyContent: "center",
-            alignItems: "center",
+            display: 'flex',
+            flexDirection: 'column',
+            justifyContent: 'center',
+            alignItems: 'center',
             marginBottom: 10,
           }}
         >
-          <div className="text-center uppercase border-b-2 mt-20 border-white w-[25rem] mx-auto text-white text-3xl pb-2 mb-10  pt-12">
+          <div className="text-center uppercase border-b-2 mt-20 border-white md:w-[25rem] w-[15rem] mx-auto text-white text-xl md:text-3xl pb-2 mb-10  pt-12">
             Certificate Partner
           </div>
 
@@ -632,9 +632,9 @@ const Sponsor = () => {
               maxWidth: 250,
               minHeight: 250,
               maxHeight: 250,
-              transition: "transform .2s ease-in",
-              "&:hover": {
-                transform: "scale(1.1)",
+              transition: 'transform .2s ease-in',
+              '&:hover': {
+                transform: 'scale(1.1)',
               },
             }}
           >
@@ -651,7 +651,7 @@ const Sponsor = () => {
           </Card>
         </Grid>
       </Grid>
-      <div className="text-center text-white text-3xl w-[20rem] mx-auto  my-10 p-2 uppercase  border-b-2 border-white ">
+      <div className="text-center text-white md:text-3xl md:w-[20rem] mx-auto w-[15rem] text-xl  my-10 p-2 uppercase  border-b-2 border-white ">
         media Partners
       </div>
 
@@ -671,10 +671,10 @@ const Sponsor = () => {
           lg={3}
           sx={{
             spacing: 2,
-            display: "flex",
-            flexDirection: "column",
-            justifyContent: "center",
-            alignItems: "center",
+            display: 'flex',
+            flexDirection: 'column',
+            justifyContent: 'center',
+            alignItems: 'center',
           }}
         >
           <Card
@@ -683,9 +683,9 @@ const Sponsor = () => {
               maxWidth: 250,
               minHeight: 250,
               maxHeight: 250,
-              transition: "transform .2s ease-in",
-              "&:hover": {
-                transform: "scale(1.1)",
+              transition: 'transform .2s ease-in',
+              '&:hover': {
+                transform: 'scale(1.1)',
               },
             }}
           >
@@ -708,10 +708,10 @@ const Sponsor = () => {
           lg={3}
           sx={{
             spacing: 2,
-            display: "flex",
-            flexDirection: "column",
-            justifyContent: "center",
-            alignItems: "center",
+            display: 'flex',
+            flexDirection: 'column',
+            justifyContent: 'center',
+            alignItems: 'center',
           }}
         >
           <Card
@@ -720,9 +720,9 @@ const Sponsor = () => {
               maxWidth: 250,
               minHeight: 250,
               maxHeight: 250,
-              transition: "transform .2s ease-in",
-              "&:hover": {
-                transform: "scale(1.1)",
+              transition: 'transform .2s ease-in',
+              '&:hover': {
+                transform: 'scale(1.1)',
               },
             }}
           >
@@ -740,10 +740,10 @@ const Sponsor = () => {
           lg={3}
           sx={{
             spacing: 2,
-            display: "flex",
-            flexDirection: "column",
-            justifyContent: "center",
-            alignItems: "center",
+            display: 'flex',
+            flexDirection: 'column',
+            justifyContent: 'center',
+            alignItems: 'center',
           }}
         >
           <Card
@@ -752,9 +752,9 @@ const Sponsor = () => {
               maxWidth: 250,
               minHeight: 250,
               maxHeight: 250,
-              transition: "transform .2s ease-in",
-              "&:hover": {
-                transform: "scale(1.1)",
+              transition: 'transform .2s ease-in',
+              '&:hover': {
+                transform: 'scale(1.1)',
               },
             }}
           >
@@ -782,12 +782,12 @@ const Sponsor = () => {
           lg={3}
           sx={{
             spacing: 2,
-            display: "flex",
-            flexDirection: "column",
-            justifyContent: "center",
-            alignItems: "center",
-            marginTop: 10,
-            marginBottom: 10,
+            display: 'flex',
+            flexDirection: 'column',
+            justifyContent: 'center',
+            alignItems: 'center',
+            marginTop: { md: 10, xs: 2 },
+            marginBottom: { md: 10 },
           }}
         >
           <Card
@@ -796,9 +796,9 @@ const Sponsor = () => {
               maxWidth: 250,
               minHeight: 250,
               maxHeight: 250,
-              transition: "transform .2s ease-in",
-              "&:hover": {
-                transform: "scale(1.1)",
+              transition: 'transform .2s ease-in',
+              '&:hover': {
+                transform: 'scale(1.1)',
               },
             }}
           >
@@ -816,11 +816,11 @@ const Sponsor = () => {
           lg={3}
           sx={{
             spacing: 2,
-            display: "flex",
-            flexDirection: "column",
-            justifyContent: "center",
-            alignItems: "center",
-            marginTop: 10,
+            display: 'flex',
+            flexDirection: 'column',
+            justifyContent: 'center',
+            alignItems: 'center',
+            marginTop: { md: 10 },
           }}
         >
           <Card
@@ -829,9 +829,9 @@ const Sponsor = () => {
               maxWidth: 250,
               minHeight: 250,
               maxHeight: 250,
-              transition: "transform .2s ease-in",
-              "&:hover": {
-                transform: "scale(1.1)",
+              transition: 'transform .2s ease-in',
+              '&:hover': {
+                transform: 'scale(1.1)',
               },
               marginBottom: 10,
             }}
