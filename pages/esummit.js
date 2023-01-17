@@ -13,7 +13,7 @@ export default function Home() {
       {/* <Keynote /> */}
 
       <KeySpeakers />
-      {/* <Panel /> */}
+      <Panel />
       <Workshops />
       <Events />
       {/* <Speakers /> */}
