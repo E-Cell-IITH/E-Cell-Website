@@ -24,12 +24,12 @@ export default function Fifth({esummit = false}) {
                 </Link>
               </li>
               <li className={style.list}>
-                <Link href="http://caprogram-ecell-iith.netlify.app/">
+                <Link href="caprg/index.html">
                   <a className={style.links}>CA Programme</a>
                 </Link>
               </li>
               <li className={style.list}>
-                <Link href="http://esummit-ecell-iith.netlify.app/">
+                <Link href="/esummit">
                   <a className={style.links}>E-Summit</a>
                 </Link>
               </li>
