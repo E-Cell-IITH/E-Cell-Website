@@ -365,24 +365,30 @@ const Sponsor = () => {
             >
               powered by platform partner
             </p>
-          <Card
-            sx={{
-              minWidth: 250,
-              maxWidth: 250,
-              minHeight: 250,
-              maxHeight: 250,
-              transition: "transform .2s ease-in",
-              "&:hover": {
-                transform: "scale(1.1)",
-              },
-            }}
-          >
-            <CardMedia
-              sx={{ width: 215, height: 85, marginTop: 9.25, marginLeft: 1.8 }}
-              image="/Unstop.jpg"
-              title="green iguana"
-            />
-          </Card></div>
+            <Card
+              sx={{
+                minWidth: 250,
+                maxWidth: 250,
+                minHeight: 250,
+                maxHeight: 250,
+                transition: "transform .2s ease-in",
+                "&:hover": {
+                  transform: "scale(1.1)",
+                },
+              }}
+            >
+              <CardMedia
+                sx={{
+                  width: 215,
+                  height: 85,
+                  marginTop: 9.25,
+                  marginLeft: 1.8,
+                }}
+                image="/Unstop.jpg"
+                title="green iguana"
+              />
+            </Card>
+          </div>
         </Grid>
         <Grid
           item
@@ -404,24 +410,25 @@ const Sponsor = () => {
             >
               Outreach Partner
             </p>
-          <Card
-            sx={{
-              minWidth: 250,
-              maxWidth: 250,
-              minHeight: 250,
-              maxHeight: 250,
-              transition: "transform .2s ease-in",
-              "&:hover": {
-                transform: "scale(1.1)",
-              },
-            }}
-          >
-            <CardMedia
-              sx={{ width: 200, height: 65, marginTop: 11, marginLeft: 2.95 }}
-              image="/talerang.jpg"
-              title="green iguana"
-            />
-          </Card></div>
+            <Card
+              sx={{
+                minWidth: 250,
+                maxWidth: 250,
+                minHeight: 250,
+                maxHeight: 250,
+                transition: "transform .2s ease-in",
+                "&:hover": {
+                  transform: "scale(1.1)",
+                },
+              }}
+            >
+              <CardMedia
+                sx={{ width: 200, height: 65, marginTop: 11, marginLeft: 2.95 }}
+                image="/talerang.jpg"
+                title="green iguana"
+              />
+            </Card>
+          </div>
         </Grid>
       </Grid>
       <Grid
@@ -445,31 +452,33 @@ const Sponsor = () => {
             justifyContent: "center",
             alignItems: "center",
           }}
-        ><div className="flex flex-col mt-20 mx-auto justify-center items-center">
-        <p
-          className="text-white  text-[1.5rem] uppercase py-2 border-b-2 mt-10 border-white mb-6
-    "
         >
-          startUp Ecosystem Partner
-        </p>
-          <Card
-            sx={{
-              minWidth: 250,
-              maxWidth: 250,
-              minHeight: 250,
-              maxHeight: 250,
-              transition: "transform .2s ease-in",
-              "&:hover": {
-                transform: "scale(1.1)",
-              },
-            }}
-          >
-            <CardMedia
-              sx={{ width: 220, height: 85, marginTop: 9.25, marginLeft: 2 }}
-              image="/Ivycamplogo.png"
-              title="green iguana"
-            />
-          </Card></div>
+          <div className="flex flex-col mt-20 mx-auto justify-center items-center">
+            <p
+              className="text-white  text-[1.5rem] uppercase py-2 border-b-2 mt-10 border-white mb-6
+    "
+            >
+              startUp Ecosystem Partner
+            </p>
+            <Card
+              sx={{
+                minWidth: 250,
+                maxWidth: 250,
+                minHeight: 250,
+                maxHeight: 250,
+                transition: "transform .2s ease-in",
+                "&:hover": {
+                  transform: "scale(1.1)",
+                },
+              }}
+            >
+              <CardMedia
+                sx={{ width: 220, height: 85, marginTop: 9.25, marginLeft: 2 }}
+                image="/Ivycamplogo.png"
+                title="green iguana"
+              />
+            </Card>
+          </div>
         </Grid>
         <Grid
           item
@@ -485,31 +494,32 @@ const Sponsor = () => {
           }}
         >
           <div className="flex flex-col mx-auto mt-20 justify-center items-center">
-        <p
-          className="text-white  text-[1.5rem] uppercase py-2 border-b-2 mt-10 border-white mb-6
+            <p
+              className="text-white  text-[1.5rem] uppercase py-2 border-b-2 mt-10 border-white mb-6
     "
-        >
-          Travel Partner
-        </p>
+            >
+              Travel Partner
+            </p>
 
-          <Card
-            sx={{
-              minWidth: 250,
-              maxWidth: 250,
-              minHeight: 250,
-              maxHeight: 250,
-              transition: "transform .2s ease-in",
-              "&:hover": {
-                transform: "scale(1.1)",
-              },
-            }}
-          >
-            <CardMedia
-              sx={{ width: 190, height: 80, marginTop: 11, marginLeft: 2.95 }}
-              image="/ease_my_trip.png"
-              title="green iguana"
-            />
-          </Card></div>
+            <Card
+              sx={{
+                minWidth: 250,
+                maxWidth: 250,
+                minHeight: 250,
+                maxHeight: 250,
+                transition: "transform .2s ease-in",
+                "&:hover": {
+                  transform: "scale(1.1)",
+                },
+              }}
+            >
+              <CardMedia
+                sx={{ width: 190, height: 80, marginTop: 11, marginLeft: 2.95 }}
+                image="/ease_my_trip.png"
+                title="green iguana"
+              />
+            </Card>
+          </div>
         </Grid>
       </Grid>
       <div className="text-center uppercase border-b-2 mt-20 border-white w-[25rem] mx-auto text-white text-3xl pb-2 mb-10  pt-12">
@@ -611,9 +621,10 @@ const Sponsor = () => {
             alignItems: "center",
             marginBottom: 10,
           }}
-        ><div className="text-center uppercase border-b-2 mt-20 border-white w-[25rem] mx-auto text-white text-3xl pb-2 mb-10  pt-12">
-        Certificate Partner
-      </div>
+        >
+          <div className="text-center uppercase border-b-2 mt-20 border-white w-[25rem] mx-auto text-white text-3xl pb-2 mb-10  pt-12">
+            Certificate Partner
+          </div>
 
           <Card
             sx={{
@@ -748,7 +759,7 @@ const Sponsor = () => {
             }}
           >
             <CardMedia
-              sx={{ width:180,height:80,marginTop: 10.6,marginLeft:4 }}
+              sx={{ width: 180, height: 80, marginTop: 10.6, marginLeft: 4 }}
               image="/Yi_New_Logo.png"
               title="green iguana"
             />
@@ -797,7 +808,6 @@ const Sponsor = () => {
               title="globacl hues"
             />
           </Card>
-          
         </Grid>
         <Grid
           item
@@ -832,10 +842,8 @@ const Sponsor = () => {
               title="globacl hues"
             />
           </Card>
-          
         </Grid>
       </Grid>
-      
     </div>
   );
 };
