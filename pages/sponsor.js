@@ -360,7 +360,7 @@ const Sponsor = () => {
         >
           <div className="flex flex-col mx-auto mt-20 justify-center items-center">
             <p
-              className="text-white text-[1rem] md:text-[1.5rem] uppercase text-xl md:text-[1.5rem] py-2 border-b-2 mt-10 border-white mb-6
+              className="text-white text-[1rem] md:text-[1.5rem] uppercase text-xl py-2 border-b-2 mt-10 border-white mb-6
         "
             >
               powered by platform partner

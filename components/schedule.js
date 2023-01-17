@@ -9,7 +9,7 @@ const Schedule = () => {
             <div className=''>
 
                 <div className=' text-blue px-15 py-20 text-3xl flex justify-left ml-20'>DAY 1 - 20th January</div>
-                <div className=' flex justify-center text-white text-5xl sm: text-[2rem] pb-16 border-b-2 border-blue'>Inaugaration Day</div>
+                <div className=' flex justify-center text-white text-5xl sm: text-[2rem] pb-16 border-b-2 border-blue'>Inauguration Day</div>
 
 
                 <div className=' text-blue px-20 py-20 text-3xl flex justify-left'>DAY 2 - 21st January</div>
