@@ -50,11 +50,10 @@ const First = () => {
             </div>
           </div>
           <div>
-            <button className="text-white border-blue border-2 px-8 py-3 relative top-5 rounded-lg leading-5">
-              <Link href={'https://forms.gle/MGNMfmgaavRUpHxr8'}>
-                <a target="_blank">
-                  REGISTER <br></br>
-                  NOW
+            <button className="text-white border-blue border-2 px-10 py-4 relative top-10 rounded-lg leading-5">
+              <Link href="/schedule">
+                <a target="_blank" className="text-2xl">
+                  Schedule
                 </a>
               </Link>
             </button>
