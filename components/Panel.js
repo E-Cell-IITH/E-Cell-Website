@@ -85,10 +85,34 @@ const Panel = () => {
           </AccordionSummary>
           <AccordionDetails className="">
             <div>
-              <div className="flex flex-col sm:flex-row mx-auto justify-center items-center gap-5 md:gap-10 lg:gap-[3.5rem]">
-                <div className="flex flex-col-reverse gap-3">
-                  <p className="text-white text-center text-[1rem]">
-                    Hussaini S F<br></br>
+              <div className="flex flex-col sm:flex-row mx-auto justify-center items-center gap-5 md:gap-10 lg:gap-[3.5rem mb-10">
+                <div className="flex flex-col-reverse justify-center items-center gap-3 hover:scale-105 transition-all">
+                  <p className="text-white text-center sm:text-sm text-[.7rem]">
+                    <span className="font-bold uppercase tracking-wide">
+                      Dhruv Gupta
+                    </span>
+                    <br></br>
+                    COO - iTIC
+                  </p>
+                  <Image
+                    height={220}
+                    width={200}
+                    alt="testing"
+                    src="/dhruv_gupta.jpg"
+                    className="hover:bg-red-400"
+                  />
+                  <p className="text-white font-bold uppercase p-1 border-2 rounded-md border-white">
+                    Moderator
+                  </p>
+                </div>
+              </div>
+              <div className="flex flex-col sm:flex-row  mx-auto justify-center items-center gap-5 md:gap-10 lg:gap-[3.5rem]">
+                <div className="flex flex-col-reverse justify-center items-center gap-3">
+                  <p className="text-white text-center sm:text-sm text-[.7rem]">
+                    <span className="font-bold uppercase tracking-wide">
+                      Hussaini S F
+                    </span>
+                    <br></br>
                     Technology and Innovation Leader
                     <br></br>
                     Executive Director, JP Morgan & Chase
@@ -99,10 +123,15 @@ const Panel = () => {
                     alt="testing"
                     src="/hussainisf.jpeg"
                   />
+                  <p className="text-white font-bold uppercase p-1 border-2 rounded-md border-white">
+                    Speaker
+                  </p>
                 </div>
                 <div className="flex flex-col-reverse justify-center items-center gap-3">
-                  <p className="text-white text-center text-[1rem]">
-                    N Srinivasan
+                  <p className="text-white text-center sm:text-sm text-[.7rem]">
+                    <span className="font-bold uppercase tracking-wide">
+                      N Srinivasan
+                    </span>
                     <br></br>
                     Sr. Executive Vice President
                     <br></br>
@@ -114,25 +143,16 @@ const Panel = () => {
                     alt="testing"
                     src="/srinivasan.jpg"
                   />
-                </div>
-                <div className="flex flex-col-reverse justify-center items-center gap-3">
-                  <p className="text-white text-center text-[1rem]">
-                    Dhruv Gupta
-                    <br></br>
-                    COO - iTIC
+                  <p className="text-white font-bold uppercase p-1 border-2 rounded-md border-white">
+                    Speaker
                   </p>
-                  <Image
-                    height={200}
-                    width={200}
-                    alt="testing"
-                    src="/dhruv_gupta.jpg"
-                  />
                 </div>
-              </div>
-              <div className="flex flex-col sm:flex-row mx-auto justify-center items-center gap-5 md:gap-10 lg:gap-[3.5rem mt-10">
+
                 <div className="flex flex-col-reverse justify-center items-center gap-3">
-                  <p className="text-white text-center text-[1rem]">
-                    Neeraj Bansal
+                  <p className="text-white text-center sm:text-sm text-[.7rem]">
+                    <span className="font-bold uppercase tracking-wide">
+                      Neeraj Bansal
+                    </span>
                     <br></br>
                     Co-Founder & CEO
                     <br></br>
@@ -144,18 +164,10 @@ const Panel = () => {
                     alt="testing"
                     src="/neeraj_bansal.jpg"
                   />
-                </div>
-                {/* <div className="flex flex-col-reverse justify-center items-center gap-3">
-                  <p className="text-white uppercase text-center text-[1rem]">
-                    N Srinivasan
+                  <p className="text-white font-bold uppercase p-1 border-2 rounded-md border-white">
+                    Speaker
                   </p>
-                  <Image
-                    height={200}
-                    width={200}
-                    alt="testing"
-                    src="/srinivasan.jpg"
-                  />
-                </div> */}
+                </div>
               </div>
             </div>
           </AccordionDetails>
@@ -177,10 +189,36 @@ const Panel = () => {
           </AccordionSummary>
           <AccordionDetails>
             <div>
+              <div className="flex flex-col sm:flex-row mx-auto justify-center items-center gap-5 md:gap-10 lg:gap-[3.5rem] mb-10">
+                <div className="flex flex-col-reverse justify-center items-center gap-3">
+                  <p className="text-white text-center text-[1rem]">
+                    <span className="font-bold uppercase tracking-wide">
+                      Nakul Parameswar
+                    </span>
+                    <br></br>
+                    Assistant Professor
+                    <br></br>
+                    Department of Entrepreneurship
+                    <br></br>
+                    and Management, IIT Hyderabad
+                  </p>
+                  <Image
+                    height={200}
+                    width={200}
+                    alt="testing"
+                    src="/nakul.jpg"
+                  />
+                  <p className="text-white font-bold uppercase p-1 border-2 rounded-md border-white">
+                    Moderator
+                  </p>
+                </div>
+              </div>
               <div className="flex flex-col sm:flex-row  mx-auto justify-center items-center gap-5 md:gap-10 lg:gap-[3.5rem]">
                 <div className="flex flex-col-reverse justify-center items-center gap-3">
                   <p className="text-white text-center text-[1rem]">
-                    Rajesh Shenoy
+                    <span className="font-bold uppercase tracking-wide">
+                      Rajesh Shenoy
+                    </span>
                     <br></br>
                     Sr. Director, Research
                     <br></br>
@@ -192,10 +230,16 @@ const Panel = () => {
                     alt="testing"
                     src="/rajesh.jpg"
                   />
+                  <p className="text-white font-bold uppercase p-1 border-2 rounded-md border-white">
+                    Speaker
+                  </p>
                 </div>
+
                 <div className="flex flex-col-reverse justify-center items-center gap-3">
                   <p className="text-white text-center text-[1rem]">
-                    Saumy Rajan Pradhan
+                    <span className="font-bold uppercase tracking-wide">
+                      Saumy Rajan Pradhan
+                    </span>
                     <br></br>
                     Head of Applied Innovation Exchange
                     <br></br>
@@ -207,29 +251,15 @@ const Panel = () => {
                     alt="testing"
                     src="/Saumy.jpg"
                   />
-                </div>
-                <div className="flex flex-col-reverse justify-center items-center gap-3">
-                  <p className="text-white text-center text-[1rem]">
-                    Nakul Parameswar
-                    <br></br>
-                    Assistant Professor
-                    <br></br>
-                    Department of Entrepreneurship and Management
-                    <br></br>
-                    IIT Hyderabad
+                  <p className="text-white font-bold uppercase p-1 border-2 rounded-md border-white">
+                    Speaker
                   </p>
-                  <Image
-                    height={200}
-                    width={200}
-                    alt="testing"
-                    src="/nakul.jpg"
-                  />
                 </div>
-              </div>
-              <div className="flex flex-col sm:flex-row mx-auto justify-center items-center gap-5 md:gap-10 lg:gap-[3.5rem mt-10">
                 <div className="flex flex-col-reverse justify-center items-center gap-3">
                   <p className="text-white text-center text-[1rem]">
-                    Raghu Mangaraju
+                    <span className="font-bold uppercase tracking-wide">
+                      Raghu Mangaraju
+                    </span>
                     <br></br>
                     Vice President
                     <br></br>
@@ -241,18 +271,10 @@ const Panel = () => {
                     alt="testing"
                     src="/raghu.jpg"
                   />
-                </div>
-                {/* <div className="flex flex-col-reverse justify-center items-center gap-3">
-                  <p className="text-white uppercase text-center text-[1rem]">
-                    N Srinivasan
+                  <p className="text-white font-bold uppercase p-1 border-2 rounded-md border-white">
+                    Speaker
                   </p>
-                  <Image
-                    height={200}
-                    width={200}
-                    alt="testing"
-                    src="/srinivasan.jpg"
-                  />
-                </div> */}
+                </div>
               </div>
             </div>
           </AccordionDetails>
@@ -276,8 +298,10 @@ const Panel = () => {
             <div>
               <div className="flex flex-col sm:flex-row  mx-auto justify-center items-center gap-5 md:gap-10 lg:gap-[3.5rem]">
                 <div className="flex flex-col-reverse justify-center items-center gap-3">
-                  <p className="text-white text-center text-[1rem]">
-                    Yugandhar Penubolu
+                  <p className="text-white  text-center text-[1rem]">
+                    <span className="font-bold uppercase tracking-wide">
+                      Yugandhar Penubolu
+                    </span>
                     <br></br>
                     Founder of winzard.io
                     <br></br>
@@ -289,16 +313,21 @@ const Panel = () => {
                     alt="testing"
                     src="/Yugandhar.jpg"
                   />
+                  <p className="text-white font-bold uppercase p-1 border-2 rounded-md border-white">
+                    Speaker
+                  </p>
                 </div>
                 <div className="flex flex-col-reverse justify-center items-center gap-3">
-                  <p className="text-white text-center text-[1rem]">
-                    MP Ganesh
+                  <p className="text-white  text-center text-[1rem]">
+                    <span className="font-bold uppercase tracking-wide">
+                      MP Ganesh
+                    </span>
                     <br></br>
                     Head and Associate Professor
                     <br></br>
-                    Department of Entrepreneurship and Management
+                    Department of Entrepreneurship
                     <br></br>
-                    IIT Hyderabad
+                    and Management, IIT Hyderabad
                   </p>
                   <Image
                     height={200}
@@ -306,10 +335,16 @@ const Panel = () => {
                     alt="testing"
                     src="/mp_ganesh.jpg"
                   />
+                  <p className="text-white font-bold uppercase p-1 border-2 rounded-md border-white">
+                    Moderator
+                  </p>
                 </div>
+
                 <div className="flex flex-col-reverse justify-center items-center gap-3">
                   <p className="text-white text-center text-[1rem]">
-                    Dr. Murali Padmanabhan
+                    <span className="font-bold uppercase tracking-wide">
+                      Dr. Murali Padmanabhan
+                    </span>
                     <br></br>
                     Sr. VP, Global Talent & OD
                     <br></br>
@@ -321,32 +356,11 @@ const Panel = () => {
                     alt="testing"
                     src="/murali.jpg"
                   />
+                  <p className="text-white font-bold uppercase p-1 border-2 rounded-md border-white">
+                    Speaker
+                  </p>
                 </div>
               </div>
-              {/* <div className="flex flex-col sm:flex-row mx-auto justify-center items-center gap-5 md:gap-10 lg:gap-[3.5rem mt-10">
-                <div className="flex flex-col-reverse justify-center items-center gap-3">
-                  <p className="text-white uppercase text-center text-[1rem]">
-                    N Srinivasan
-                  </p>
-                  <Image
-                    height={200}
-                    width={200}
-                    alt="testing"
-                    src="/srinivasan.jpg"
-                  />
-                </div>
-                <div className="flex flex-col-reverse justify-center items-center gap-3">
-                  <p className="text-white uppercase text-center text-[1rem]">
-                    N Srinivasan
-                  </p>
-                  <Image
-                    height={200}
-                    width={200}
-                    alt="testing"
-                    src="/srinivasan.jpg"
-                  />
-                </div>
-              </div> */}
             </div>
           </AccordionDetails>
         </Accordion>
