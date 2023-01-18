@@ -1,6 +1,6 @@
-import React from 'react';
-import Image from 'next/image';
-import Link from 'next/link';
+import React from "react";
+import Image from "next/image";
+import Link from "next/link";
 
 const First = () => {
   return (
@@ -9,9 +9,9 @@ const First = () => {
         <div className="absolute inset-0 blur-sm">
           <video
             className="w-full h-full object-cover"
-            autoPlay="true"
-            loop="true"
-            muted="true"
+            autoPlay={true}
+            loop={true}
+            muted={true}
           >
             {/* <source src="http://techslides.com/demos/sample-videos/small.webm" type="video/webm"/> 
             <source src="http://techslides.com/demos/sample-videos/small.ogv" type="video/ogg"/>  */}
@@ -138,12 +138,12 @@ const First = () => {
             </div>
             <div>
               <p className="text-offwhite font-medium text-center text-lg lg:text-[1.25rem] leading-8">
-                E-Summit aims to
-                bring early entrepreneurs, students, corporates, venture
-                capitalists and start-ups with burgeoning ideas from all over
-                the country to one platform <br /> <br />
-                This summit is a medium for healthy discussions and
-                inculcates an entrepreneurial mindset through a set of diverse competitions, Keynote talks and Panel Discussions.
+                E-Summit aims to bring early entrepreneurs, students,
+                corporates, venture capitalists and start-ups with burgeoning
+                ideas from all over the country to one platform <br /> <br />
+                This summit is a medium for healthy discussions and inculcates
+                an entrepreneurial mindset through a set of diverse
+                competitions, Keynote talks and Panel Discussions.
               </p>
             </div>
           </div>
@@ -154,14 +154,20 @@ const First = () => {
               </h2>
             </div>
             <div>
-              <h1 className="text-center text-4xl py-5">&ldquo;An Arduous Carrefour&rdquo;</h1>
+              <h1 className="text-center text-4xl py-5">
+                &ldquo;An Arduous Carrefour&rdquo;
+              </h1>
               <p className="text-offwhite font-medium text-center text-lg lg:text-[1.25rem] leading-8">
-              With the looming recession and the funding winter, the last year has been a rough one for
-              startups. There has been a significant fall in funding compared to the previous year. After a triumphant revival in 2021, the
-              Indian startup ecosystem faces multiple challenges again in today&#39;s market.
-              With <b>&ldquo;An Arduous Carrefour&rdquo;</b> as the theme, our objective is to explore the difficulties, setbacks,
-              challenges and opportunities that lie at this crossroads for entrepreneurs and entrepreneurship
-              and how more effort is required to excel and succeed.
+                With the looming recession and the funding winter, the last year
+                has been a rough one for startups. There has been a significant
+                fall in funding compared to the previous year. After a
+                triumphant revival in 2021, the Indian startup ecosystem faces
+                multiple challenges again in today&#39;s market. With{" "}
+                <b>&ldquo;An Arduous Carrefour&rdquo;</b> as the theme, our
+                objective is to explore the difficulties, setbacks, challenges
+                and opportunities that lie at this crossroads for entrepreneurs
+                and entrepreneurship and how more effort is required to excel
+                and succeed.
               </p>
             </div>
           </div>

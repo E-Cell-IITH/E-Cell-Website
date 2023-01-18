@@ -65,28 +65,30 @@ const Panel = () => {
       <div className="text-5xl mb-20 text-blue text-center font-medium">
         PANEL DISCUSSIONS
       </div>
-      <div className="mx-auto flex flex-col justify-center items-center">
+      <div className="flex flex-col justify-center items-center">
         <Accordion
+          sx={{ width: "100%" }}
           expanded={expanded === "panel1"}
           onChange={handleChange("panel1")}
+          className="justify-center"
         >
           <AccordionSummary aria-controls="panel1d-content" id="panel1d-header">
             <Typography
               sx={{
                 color: "white",
                 fontSize: { xs: "1rem", sm: "1.35rem" },
+                textAlign: "center",
               }}
             >
               Transformation of India&apos;s Digital Payment Landscape
             </Typography>
           </AccordionSummary>
-          <AccordionDetails>
+          <AccordionDetails className="">
             <div>
               <div className="flex flex-col sm:flex-row  mx-auto justify-center items-center gap-5 md:gap-10 lg:gap-[3.5rem]">
-                <div className="flex flex-col-reverse justify-center items-center gap-3">
+                <div className="flex flex-col-reverse gap-3">
                   <p className="text-white text-center text-[1rem]">
-                    Hussaini S F
-                    <br></br>
+                    Hussaini S F<br></br>
                     Technology and Innovation Leader
                     <br></br>
                     Executive Director, JP Morgan & Chase
@@ -159,6 +161,7 @@ const Panel = () => {
           </AccordionDetails>
         </Accordion>
         <Accordion
+          sx={{ width: "100%" }}
           expanded={expanded === "panel2"}
           onChange={handleChange("panel2")}
         >
@@ -192,7 +195,7 @@ const Panel = () => {
                 </div>
                 <div className="flex flex-col-reverse justify-center items-center gap-3">
                   <p className="text-white text-center text-[1rem]">
-                    Saumy Rajan Pradhan 
+                    Saumy Rajan Pradhan
                     <br></br>
                     Head of Applied Innovation Exchange
                     <br></br>
@@ -255,6 +258,7 @@ const Panel = () => {
           </AccordionDetails>
         </Accordion>
         <Accordion
+          sx={{ width: "100%" }}
           expanded={expanded === "panel3"}
           onChange={handleChange("panel3")}
         >
