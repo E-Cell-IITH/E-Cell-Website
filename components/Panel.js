@@ -124,7 +124,7 @@ const Panel = () => {
                     src="/hussainisf.jpeg"
                   />
                   <p className="text-white font-bold uppercase p-1 border-2 rounded-md border-white">
-                    Speaker
+                    Panelist
                   </p>
                 </div>
                 <div className="flex flex-col-reverse justify-center items-center gap-3">
@@ -144,7 +144,7 @@ const Panel = () => {
                     src="/srinivasan.jpg"
                   />
                   <p className="text-white font-bold uppercase p-1 border-2 rounded-md border-white">
-                    Speaker
+                  Panelist
                   </p>
                 </div>
 
@@ -165,7 +165,7 @@ const Panel = () => {
                     src="/neeraj_bansal.jpg"
                   />
                   <p className="text-white font-bold uppercase p-1 border-2 rounded-md border-white">
-                    Speaker
+                  Panelist
                   </p>
                 </div>
               </div>
@@ -231,14 +231,14 @@ const Panel = () => {
                     src="/rajesh.jpg"
                   />
                   <p className="text-white font-bold uppercase p-1 border-2 rounded-md border-white">
-                    Speaker
+                  Panelist
                   </p>
                 </div>
 
                 <div className="flex flex-col-reverse justify-center items-center gap-3">
                   <p className="text-white text-center text-[1rem]">
                     <span className="font-bold uppercase tracking-wide">
-                      Saumy Rajan Pradhan
+                      Saumya Rajan Pradhan
                     </span>
                     <br></br>
                     Head of Applied Innovation Exchange
@@ -252,7 +252,7 @@ const Panel = () => {
                     src="/Saumy.jpg"
                   />
                   <p className="text-white font-bold uppercase p-1 border-2 rounded-md border-white">
-                    Speaker
+                  Panelist
                   </p>
                 </div>
                 <div className="flex flex-col-reverse justify-center items-center gap-3">
@@ -272,7 +272,7 @@ const Panel = () => {
                     src="/raghu.jpg"
                   />
                   <p className="text-white font-bold uppercase p-1 border-2 rounded-md border-white">
-                    Speaker
+                  Panelist
                   </p>
                 </div>
               </div>
@@ -314,7 +314,7 @@ const Panel = () => {
                     src="/Yugandhar.jpg"
                   />
                   <p className="text-white font-bold uppercase p-1 border-2 rounded-md border-white">
-                    Speaker
+                  Panelist
                   </p>
                 </div>
                 <div className="flex flex-col-reverse justify-center items-center gap-3">
@@ -357,7 +357,7 @@ const Panel = () => {
                     src="/murali.jpg"
                   />
                   <p className="text-white font-bold uppercase p-1 border-2 rounded-md border-white">
-                    Speaker
+                  Panelist
                   </p>
                 </div>
               </div>
