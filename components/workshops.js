@@ -34,7 +34,7 @@ export default function Workshops() {
                 className="text-white border-blue border-2 px-7
              py-4 relative rounded-lg leading-5"
               >
-                <Link href="https://forms.gle/vznMJqiB9JDn8vip7">
+                <Link href="https://unstop.com/workshop/art-of-capital-raising-e-summit-23-e-cell-indian-institute-of-technology-iit-hyderabad-589554">
                   <a className="text-2xl">Registration link</a>
                 </Link>
               </button>
@@ -63,7 +63,7 @@ export default function Workshops() {
                 className="text-white border-blue border-2 px-7
                 py-4 relative rounded-lg leading-5"
               >
-                <Link href="https://forms.gle/STyPWDZHSnxVcP8t8">
+                <Link href="https://unstop.com/workshop/design-thinking-an-overview-e-summit-23-e-cell-indian-institute-of-technology-iit-hyderabad-589700">
                   <a className="text-2xl">Registration link</a>
                 </Link>
               </button>

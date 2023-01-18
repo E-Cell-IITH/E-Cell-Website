@@ -105,6 +105,30 @@ const Panel = () => {
                     src="/srinivasan.jpg"
                   />
                 </div>
+                <div className="flex flex-col-reverse justify-center items-center gap-3">
+                  <p className="text-white uppercase text-center text-[1rem]">
+                    Dhruv Gupta
+                  </p>
+                  <Image
+                    height={200}
+                    width={200}
+                    alt="testing"
+                    src="/dhruv_gupta.jpg"
+                  />
+                </div>
+              </div>
+              <div className="flex flex-col sm:flex-row mx-auto justify-center items-center gap-5 md:gap-10 lg:gap-[3.5rem mt-10">
+                <div className="flex flex-col-reverse justify-center items-center gap-3">
+                  <p className="text-white uppercase text-center text-[1rem]">
+                    Neeraj Bansal
+                  </p>
+                  <Image
+                    height={200}
+                    width={200}
+                    alt="testing"
+                    src="/neeraj_bansal.jpg"
+                  />
+                </div>
                 {/* <div className="flex flex-col-reverse justify-center items-center gap-3">
                   <p className="text-white uppercase text-center text-[1rem]">
                     N Srinivasan
@@ -117,30 +141,6 @@ const Panel = () => {
                   />
                 </div> */}
               </div>
-              {/* <div className="flex flex-col sm:flex-row mx-auto justify-center items-center gap-5 md:gap-10 lg:gap-[3.5rem mt-10">
-                <div className="flex flex-col-reverse justify-center items-center gap-3">
-                  <p className="text-white uppercase text-center text-[1rem]">
-                    N Srinivasan
-                  </p>
-                  <Image
-                    height={200}
-                    width={200}
-                    alt="testing"
-                    src="/srinivasan.jpg"
-                  />
-                </div>
-                <div className="flex flex-col-reverse justify-center items-center gap-3">
-                  <p className="text-white uppercase text-center text-[1rem]">
-                    N Srinivasan
-                  </p>
-                  <Image
-                    height={200}
-                    width={200}
-                    alt="testing"
-                    src="/srinivasan.jpg"
-                  />
-                </div>
-              </div> */}
             </div>
           </AccordionDetails>
         </Accordion>
@@ -183,6 +183,30 @@ const Panel = () => {
                     src="/Saumy.jpg"
                   />
                 </div>
+                <div className="flex flex-col-reverse justify-center items-center gap-3">
+                  <p className="text-white uppercase text-center text-[1rem]">
+                    Nakul Parameswar
+                  </p>
+                  <Image
+                    height={200}
+                    width={200}
+                    alt="testing"
+                    src="/nakul.jpg"
+                  />
+                </div>
+              </div>
+              <div className="flex flex-col sm:flex-row mx-auto justify-center items-center gap-5 md:gap-10 lg:gap-[3.5rem mt-10">
+                <div className="flex flex-col-reverse justify-center items-center gap-3">
+                  <p className="text-white uppercase text-center text-[1rem]">
+                    Raghu Mangaraju
+                  </p>
+                  <Image
+                    height={200}
+                    width={200}
+                    alt="testing"
+                    src="/raghu.jpg"
+                  />
+                </div>
                 {/* <div className="flex flex-col-reverse justify-center items-center gap-3">
                   <p className="text-white uppercase text-center text-[1rem]">
                     N Srinivasan
@@ -195,30 +219,6 @@ const Panel = () => {
                   />
                 </div> */}
               </div>
-              {/* <div className="flex flex-col sm:flex-row mx-auto justify-center items-center gap-5 md:gap-10 lg:gap-[3.5rem mt-10">
-                <div className="flex flex-col-reverse justify-center items-center gap-3">
-                  <p className="text-white uppercase text-center text-[1rem]">
-                    N Srinivasan
-                  </p>
-                  <Image
-                    height={200}
-                    width={200}
-                    alt="testing"
-                    src="/srinivasan.jpg"
-                  />
-                </div>
-                <div className="flex flex-col-reverse justify-center items-center gap-3">
-                  <p className="text-white uppercase text-center text-[1rem]">
-                    N Srinivasan
-                  </p>
-                  <Image
-                    height={200}
-                    width={200}
-                    alt="testing"
-                    src="/srinivasan.jpg"
-                  />
-                </div>
-              </div> */}
             </div>
           </AccordionDetails>
         </Accordion>
@@ -250,28 +250,28 @@ const Panel = () => {
                     src="/Yugandhar.jpg"
                   />
                 </div>
-                {/* <div className="flex flex-col-reverse justify-center items-center gap-3">
+                <div className="flex flex-col-reverse justify-center items-center gap-3">
                   <p className="text-white uppercase text-center text-[1rem]">
-                    N Srinivasan
+                    MP Ganesh
                   </p>
                   <Image
                     height={200}
                     width={200}
                     alt="testing"
-                    src="/srinivasan.jpg"
+                    src="/mp_ganesh.jpg"
                   />
-                </div> */}
-                {/* <div className="flex flex-col-reverse justify-center items-center gap-3">
+                </div>
+                <div className="flex flex-col-reverse justify-center items-center gap-3">
                   <p className="text-white uppercase text-center text-[1rem]">
-                    N Srinivasan
+                    Dr. Murali Padmanabhan
                   </p>
                   <Image
                     height={200}
                     width={200}
                     alt="testing"
-                    src="/srinivasan.jpg"
+                    src="/murali.jpg"
                   />
-                </div> */}
+                </div>
               </div>
               {/* <div className="flex flex-col sm:flex-row mx-auto justify-center items-center gap-5 md:gap-10 lg:gap-[3.5rem mt-10">
                 <div className="flex flex-col-reverse justify-center items-center gap-3">
