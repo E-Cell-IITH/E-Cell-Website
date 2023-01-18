@@ -85,7 +85,7 @@ const Panel = () => {
           </AccordionSummary>
           <AccordionDetails className="">
             <div>
-              <div className="flex flex-col sm:flex-row  mx-auto justify-center items-center gap-5 md:gap-10 lg:gap-[3.5rem]">
+              <div className="flex flex-col sm:flex-row mx-auto justify-center items-center gap-5 md:gap-10 lg:gap-[3.5rem mb-10">
                 <div className="flex flex-col-reverse justify-center items-center gap-3 hover:scale-105 transition-all">
                   <p className="text-white text-center sm:text-sm text-[.7rem]">
                     <span className="font-bold uppercase tracking-wide">
@@ -103,6 +103,28 @@ const Panel = () => {
                   />
                   <p className="text-white font-bold uppercase p-1 border-2 rounded-md border-white">
                     Moderator
+                  </p>
+                </div>
+              </div>
+              <div className="flex flex-col sm:flex-row  mx-auto justify-center items-center gap-5 md:gap-10 lg:gap-[3.5rem]">
+                <div className="flex flex-col-reverse justify-center items-center gap-3">
+                  <p className="text-white text-center sm:text-sm text-[.7rem]">
+                    <span className="font-bold uppercase tracking-wide">
+                      Hussaini S F
+                    </span>
+                    <br></br>
+                    Technology and Innovation Leader
+                    <br></br>
+                    Executive Director, JP Morgan & Chase
+                  </p>
+                  <Image
+                    height={200}
+                    width={200}
+                    alt="testing"
+                    src="/hussainisf.jpeg"
+                  />
+                  <p className="text-white font-bold uppercase p-1 border-2 rounded-md border-white">
+                    Speaker
                   </p>
                 </div>
                 <div className="flex flex-col-reverse justify-center items-center gap-3">
@@ -147,28 +169,6 @@ const Panel = () => {
                   </p>
                 </div>
               </div>
-              <div className="flex flex-col sm:flex-row mx-auto justify-center items-center gap-5 md:gap-10 lg:gap-[3.5rem mt-10">
-                <div className="flex flex-col-reverse justify-center items-center gap-3">
-                  <p className="text-white text-center sm:text-sm text-[.7rem]">
-                    <span className="font-bold uppercase tracking-wide">
-                      Hussaini S F
-                    </span>
-                    <br></br>
-                    Technology and Innovation Leader
-                    <br></br>
-                    Executive Director, JP Morgan & Chase
-                  </p>
-                  <Image
-                    height={200}
-                    width={200}
-                    alt="testing"
-                    src="/hussainisf.jpeg"
-                  />
-                  <p className="text-white font-bold uppercase p-1 border-2 rounded-md border-white">
-                    Speaker
-                  </p>
-                </div>
-              </div>
             </div>
           </AccordionDetails>
         </Accordion>
@@ -189,7 +189,7 @@ const Panel = () => {
           </AccordionSummary>
           <AccordionDetails>
             <div>
-              <div className="flex flex-col sm:flex-row  mx-auto justify-center items-center gap-5 md:gap-10 lg:gap-[3.5rem]">
+              <div className="flex flex-col sm:flex-row mx-auto justify-center items-center gap-5 md:gap-10 lg:gap-[3.5rem] mb-10">
                 <div className="flex flex-col-reverse justify-center items-center gap-3">
                   <p className="text-white text-center text-[1rem]">
                     <span className="font-bold uppercase tracking-wide">
@@ -210,6 +210,28 @@ const Panel = () => {
                   />
                   <p className="text-white font-bold uppercase p-1 border-2 rounded-md border-white">
                     Moderator
+                  </p>
+                </div>
+              </div>
+              <div className="flex flex-col sm:flex-row  mx-auto justify-center items-center gap-5 md:gap-10 lg:gap-[3.5rem]">
+                <div className="flex flex-col-reverse justify-center items-center gap-3">
+                  <p className="text-white text-center text-[1rem]">
+                    <span className="font-bold uppercase tracking-wide">
+                      Rajesh Shenoy
+                    </span>
+                    <br></br>
+                    Sr. Director, Research
+                    <br></br>
+                    Cetas Healthcare
+                  </p>
+                  <Image
+                    height={200}
+                    width={200}
+                    alt="testing"
+                    src="/rajesh.jpg"
+                  />
+                  <p className="text-white font-bold uppercase p-1 border-2 rounded-md border-white">
+                    Speaker
                   </p>
                 </div>
 
@@ -254,40 +276,6 @@ const Panel = () => {
                   </p>
                 </div>
               </div>
-              <div className="flex flex-col sm:flex-row mx-auto justify-center items-center gap-5 md:gap-10 lg:gap-[3.5rem mt-10">
-                <div className="flex flex-col-reverse justify-center items-center gap-3">
-                  <p className="text-white text-center text-[1rem]">
-                    <span className="font-bold uppercase tracking-wide">
-                      Rajesh Shenoy
-                    </span>
-                    <br></br>
-                    Sr. Director, Research
-                    <br></br>
-                    Cetas Healthcare
-                  </p>
-                  <Image
-                    height={200}
-                    width={200}
-                    alt="testing"
-                    src="/rajesh.jpg"
-                  />
-                  <p className="text-white font-bold uppercase p-1 border-2 rounded-md border-white">
-                    Speaker
-                  </p>
-                </div>
-
-                {/* <div className="flex flex-col-reverse justify-center items-center gap-3">
-                  <p className="text-white uppercase text-center text-[1rem]">
-                    N Srinivasan
-                  </p>
-                  <Image
-                    height={200}
-                    width={200}
-                    alt="testing"
-                    src="/srinivasan.jpg"
-                  />
-                </div> */}
-              </div>
             </div>
           </AccordionDetails>
         </Accordion>
@@ -312,6 +300,26 @@ const Panel = () => {
                 <div className="flex flex-col-reverse justify-center items-center gap-3">
                   <p className="text-white  text-center text-[1rem]">
                     <span className="font-bold uppercase tracking-wide">
+                      Yugandhar Penubolu
+                    </span>
+                    <br></br>
+                    Founder of winzard.io
+                    <br></br>
+                    HR Tech
+                  </p>
+                  <Image
+                    height={200}
+                    width={200}
+                    alt="testing"
+                    src="/Yugandhar.jpg"
+                  />
+                  <p className="text-white font-bold uppercase p-1 border-2 rounded-md border-white">
+                    Speaker
+                  </p>
+                </div>
+                <div className="flex flex-col-reverse justify-center items-center gap-3">
+                  <p className="text-white  text-center text-[1rem]">
+                    <span className="font-bold uppercase tracking-wide">
                       MP Ganesh
                     </span>
                     <br></br>
@@ -329,26 +337,6 @@ const Panel = () => {
                   />
                   <p className="text-white font-bold uppercase p-1 border-2 rounded-md border-white">
                     Moderator
-                  </p>
-                </div>
-                <div className="flex flex-col-reverse justify-center items-center gap-3">
-                  <p className="text-white  text-center text-[1rem]">
-                    <span className="font-bold uppercase tracking-wide">
-                      Yugandhar Penubolu
-                    </span>
-                    <br></br>
-                    Founder of winzard.io
-                    <br></br>
-                    HR Tech
-                  </p>
-                  <Image
-                    height={200}
-                    width={200}
-                    alt="testing"
-                    src="/Yugandhar.jpg"
-                  />
-                  <p className="text-white font-bold uppercase p-1 border-2 rounded-md border-white">
-                    Speaker
                   </p>
                 </div>
 
@@ -373,30 +361,6 @@ const Panel = () => {
                   </p>
                 </div>
               </div>
-              {/* <div className="flex flex-col sm:flex-row mx-auto justify-center items-center gap-5 md:gap-10 lg:gap-[3.5rem mt-10">
-                <div className="flex flex-col-reverse justify-center items-center gap-3">
-                  <p className="text-white uppercase text-center text-center text-[1rem]">
-                    N Srinivasan
-                  </p>
-                  <Image
-                    height={200}
-                    width={200}
-                    alt="testing"
-                    src="/srinivasan.jpg"
-                  />
-                </div>
-                <div className="flex flex-col-reverse justify-center items-center gap-3">
-                  <p className="text-white uppercase text-center text-center text-[1rem]">
-                    N Srinivasan
-                  </p>
-                  <Image
-                    height={200}
-                    width={200}
-                    alt="testing"
-                    src="/srinivasan.jpg"
-                  />
-                </div>
-              </div> */}
             </div>
           </AccordionDetails>
         </Accordion>
