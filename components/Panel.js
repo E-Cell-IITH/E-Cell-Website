@@ -84,8 +84,12 @@ const Panel = () => {
             <div>
               <div className="flex flex-col sm:flex-row  mx-auto justify-center items-center gap-5 md:gap-10 lg:gap-[3.5rem]">
                 <div className="flex flex-col-reverse justify-center items-center gap-3">
-                  <p className="text-white uppercase text-center text-[1rem]">
+                  <p className="text-white text-center text-[1rem]">
                     Hussaini S F
+                    <br></br>
+                    Technology and Innovation Leader
+                    <br></br>
+                    Executive Director, JP Morgan & Chase
                   </p>
                   <Image
                     height={200}
@@ -95,8 +99,12 @@ const Panel = () => {
                   />
                 </div>
                 <div className="flex flex-col-reverse justify-center items-center gap-3">
-                  <p className="text-white uppercase text-center text-[1rem]">
+                  <p className="text-white text-center text-[1rem]">
                     N Srinivasan
+                    <br></br>
+                    Sr. Executive Vice President
+                    <br></br>
+                    HDFC Bank
                   </p>
                   <Image
                     height={200}
@@ -106,8 +114,10 @@ const Panel = () => {
                   />
                 </div>
                 <div className="flex flex-col-reverse justify-center items-center gap-3">
-                  <p className="text-white uppercase text-center text-[1rem]">
+                  <p className="text-white text-center text-[1rem]">
                     Dhruv Gupta
+                    <br></br>
+                    COO - iTIC
                   </p>
                   <Image
                     height={200}
@@ -119,8 +129,12 @@ const Panel = () => {
               </div>
               <div className="flex flex-col sm:flex-row mx-auto justify-center items-center gap-5 md:gap-10 lg:gap-[3.5rem mt-10">
                 <div className="flex flex-col-reverse justify-center items-center gap-3">
-                  <p className="text-white uppercase text-center text-[1rem]">
+                  <p className="text-white text-center text-[1rem]">
                     Neeraj Bansal
+                    <br></br>
+                    Co-Founder & CEO
+                    <br></br>
+                    CredRight
                   </p>
                   <Image
                     height={200}
@@ -162,8 +176,12 @@ const Panel = () => {
             <div>
               <div className="flex flex-col sm:flex-row  mx-auto justify-center items-center gap-5 md:gap-10 lg:gap-[3.5rem]">
                 <div className="flex flex-col-reverse justify-center items-center gap-3">
-                  <p className="text-white uppercase text-center text-[1rem]">
+                  <p className="text-white text-center text-[1rem]">
                     Rajesh Shenoy
+                    <br></br>
+                    Sr. Director, Research
+                    <br></br>
+                    Cetas Healthcare
                   </p>
                   <Image
                     height={200}
@@ -173,8 +191,12 @@ const Panel = () => {
                   />
                 </div>
                 <div className="flex flex-col-reverse justify-center items-center gap-3">
-                  <p className="text-white uppercase text-center text-[1rem]">
+                  <p className="text-white text-center text-[1rem]">
                     Saumy Rajan Pradhan 
+                    <br></br>
+                    Head of Applied Innovation Exchange
+                    <br></br>
+                    Capgemini
                   </p>
                   <Image
                     height={200}
@@ -184,8 +206,14 @@ const Panel = () => {
                   />
                 </div>
                 <div className="flex flex-col-reverse justify-center items-center gap-3">
-                  <p className="text-white uppercase text-center text-[1rem]">
+                  <p className="text-white text-center text-[1rem]">
                     Nakul Parameswar
+                    <br></br>
+                    Assistant Professor
+                    <br></br>
+                    Department of Entrepreneurship and Management
+                    <br></br>
+                    IIT Hyderabad
                   </p>
                   <Image
                     height={200}
@@ -197,8 +225,12 @@ const Panel = () => {
               </div>
               <div className="flex flex-col sm:flex-row mx-auto justify-center items-center gap-5 md:gap-10 lg:gap-[3.5rem mt-10">
                 <div className="flex flex-col-reverse justify-center items-center gap-3">
-                  <p className="text-white uppercase text-center text-[1rem]">
+                  <p className="text-white text-center text-[1rem]">
                     Raghu Mangaraju
+                    <br></br>
+                    Vice President
+                    <br></br>
+                    Blend360 India
                   </p>
                   <Image
                     height={200}
@@ -240,8 +272,12 @@ const Panel = () => {
             <div>
               <div className="flex flex-col sm:flex-row  mx-auto justify-center items-center gap-5 md:gap-10 lg:gap-[3.5rem]">
                 <div className="flex flex-col-reverse justify-center items-center gap-3">
-                  <p className="text-white uppercase text-center text-[1rem]">
+                  <p className="text-white text-center text-[1rem]">
                     Yugandhar Penubolu
+                    <br></br>
+                    Founder of winzard.io
+                    <br></br>
+                    HR Tech
                   </p>
                   <Image
                     height={200}
@@ -251,8 +287,14 @@ const Panel = () => {
                   />
                 </div>
                 <div className="flex flex-col-reverse justify-center items-center gap-3">
-                  <p className="text-white uppercase text-center text-[1rem]">
+                  <p className="text-white text-center text-[1rem]">
                     MP Ganesh
+                    <br></br>
+                    Head and Associate Professor
+                    <br></br>
+                    Department of Entrepreneurship and Management
+                    <br></br>
+                    IIT Hyderabad
                   </p>
                   <Image
                     height={200}
@@ -262,8 +304,12 @@ const Panel = () => {
                   />
                 </div>
                 <div className="flex flex-col-reverse justify-center items-center gap-3">
-                  <p className="text-white uppercase text-center text-[1rem]">
+                  <p className="text-white text-center text-[1rem]">
                     Dr. Murali Padmanabhan
+                    <br></br>
+                    Sr. VP, Global Talent & OD
+                    <br></br>
+                    Virtusa
                   </p>
                   <Image
                     height={200}
