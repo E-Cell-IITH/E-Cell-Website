@@ -85,7 +85,7 @@ const Panel = () => {
           </AccordionSummary>
           <AccordionDetails className="">
             <div>
-              <div className="flex flex-col sm:flex-row  mx-auto justify-center items-center gap-5 md:gap-10 lg:gap-[3.5rem]">
+              <div className="flex flex-col sm:flex-row mx-auto justify-center items-center gap-5 md:gap-10 lg:gap-[3.5rem]">
                 <div className="flex flex-col-reverse gap-3">
                   <p className="text-white text-center text-[1rem]">
                     Hussaini S F<br></br>
