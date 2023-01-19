@@ -296,6 +296,30 @@ const Panel = () => {
           </AccordionSummary>
           <AccordionDetails>
             <div>
+              <div className="flex flex-col sm:flex-row mx-auto justify-center items-center gap-5 md:gap-10 lg:gap-[3.5rem] mb-10">
+                <div className="flex flex-col-reverse justify-center items-center gap-3">
+                  <p className="text-white  text-center text-[1rem]">
+                    <span className="font-bold uppercase tracking-wide">
+                      MP Ganesh
+                    </span>
+                    <br></br>
+                    Head and Associate Professor
+                    <br></br>
+                    Department of Entrepreneurship
+                    <br></br>
+                    and Management, IIT Hyderabad
+                  </p>
+                  <Image
+                    height={200}
+                    width={200}
+                    alt="testing"
+                    src="/mp_ganesh.jpg"
+                  />
+                  <p className="text-white font-bold uppercase p-1 border-2 rounded-md border-white">
+                    Moderator
+                  </p>
+                </div>
+              </div>
               <div className="flex flex-col sm:flex-row  mx-auto justify-center items-center gap-5 md:gap-10 lg:gap-[3.5rem]">
                 <div className="flex flex-col-reverse justify-center items-center gap-3">
                   <p className="text-white  text-center text-[1rem]">
@@ -320,23 +344,21 @@ const Panel = () => {
                 <div className="flex flex-col-reverse justify-center items-center gap-3">
                   <p className="text-white  text-center text-[1rem]">
                     <span className="font-bold uppercase tracking-wide">
-                      MP Ganesh
+                      Nanda Kishore
                     </span>
                     <br></br>
-                    Head and Associate Professor
+                    President at V.L.S.
                     <br></br>
-                    Department of Entrepreneurship
-                    <br></br>
-                    and Management, IIT Hyderabad
+                    Systems Inc.
                   </p>
                   <Image
                     height={200}
                     width={200}
                     alt="testing"
-                    src="/mp_ganesh.jpg"
+                    src="/nanda_kishore.jpg"
                   />
                   <p className="text-white font-bold uppercase p-1 border-2 rounded-md border-white">
-                    Moderator
+                    Speaker
                   </p>
                 </div>
 
