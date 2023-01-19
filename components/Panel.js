@@ -239,7 +239,7 @@ const Panel = () => {
                 <div className="flex flex-col-reverse justify-center items-center gap-3">
                   <p className="text-white text-center text-[1rem]">
                     <span className="font-bold uppercase tracking-wide">
-                      Saumya Rajan Pradhan
+                      Saumya Ranjan Pradhan
                     </span>
                     <br></br>
                     Head of Applied Innovation Exchange
@@ -359,7 +359,7 @@ const Panel = () => {
                     src="/nanda_kishore.jpg"
                   />
                   <p className="text-white font-bold uppercase p-1 border-2 rounded-md border-white">
-                    Speaker
+                    Panelist
                   </p>
                 </div>
 
