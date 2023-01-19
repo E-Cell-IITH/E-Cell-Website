@@ -1,6 +1,6 @@
-import * as React from "react";
-import Link from "next/link";
-import { useRef } from "react";
+import * as React from 'react';
+import Link from 'next/link';
+import { useRef } from 'react';
 
 const Navbar = () => {
   const [checked, setChecked] = React.useState(false);
@@ -66,8 +66,8 @@ const Navbar = () => {
                   navRef.current.checked = false;
                 }}
               >
-                {" "}
-                Collaborations
+                {' '}
+                Patners
               </a>
             </Link>
           </li>
