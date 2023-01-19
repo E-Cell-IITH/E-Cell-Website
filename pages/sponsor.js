@@ -84,7 +84,73 @@ const Sponsor = () => {
         <title>Sponsors Entrepreneurship Cell IIT Hyderabad</title>
       </Head>
       <Navbar heading="COLLABORATIONS" desc={false} sponsors={true} />
-      <div className="text-center text-white text-2xl md:text-3xl md:w-[20rem] mx-auto mt-[20rem] w-[15rem] sm:mt-[15rem] lg:-mt-[5rem] my-10 p-2 uppercase  border-b-2 border-white ">
+      <Grid
+        container
+        display="flex"
+        flexDirection="row"
+        alignItems="center"
+        justifyContent="center"
+        rowSpacing={2}
+        gap={0}
+      >
+        <Grid
+          item
+          xs={7}
+          sm={9}
+          lg={5}
+          sx={{
+            spacing: 2,
+            display: 'flex',
+            flexDirection: 'column',
+            justifyContent: 'center',
+            alignItems: 'center',
+            marginBottom: 20,
+            '@media (max-width: 780px)':{
+              marginBottom: 0,
+              marginTop: 15,
+            }
+          }}
+        >
+          <div className="text-center uppercase border-b-2 mt-20 border-white md:w-[25rem] w-[15rem] mx-auto text-white text-xl md:text-3xl pb-2 mb-10  pt-40">
+            Platinum Sponsor
+          </div>
+
+          <Card
+            sx={{
+              minWidth: 500,
+              maxWidth: 500,
+              minHeight: 250,
+              maxHeight: 250,
+              transition: 'transform .2s ease-in',
+              '&:hover': {
+                transform: 'scale(1.1)',
+              },
+              '@media (max-width: 780px)':{
+                minWidth: 250,
+                maxWidth: 250,
+              }
+            }}
+          >
+            <CardMedia
+              sx={{
+                width: 400,
+                height: 170,
+                marginTop: 6.25,
+                marginLeft: 6.5,
+                '@media (max-width: 780px)':{
+                  width: 200,
+                  height: 90,
+                  marginLeft: 3,
+                  marginTop: 9,
+                }
+              }}
+              image="/servo.png"
+              title="green iguana"
+            />
+          </Card>
+        </Grid>
+      </Grid>
+      <div className="text-center text-white text-2xl md:text-3xl md:w-[20rem] mx-auto mt-[15rem] w-[15rem] sm:mt-[15rem] lg:-mt-[5rem] my-10 p-2 uppercase  border-b-2 border-white ">
         Event Partners
       </div>
 

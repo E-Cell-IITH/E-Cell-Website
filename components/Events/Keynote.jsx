@@ -3,100 +3,104 @@ import { Box } from "@mui/system";
 import Image from "next/image";
 import style from "../../styles/fourth.module.css";
 
-const sponsors = [
-    {
-      name: "Yhills",
-      imgUrl:
-        "https://res.cloudinary.com/dwsverefw/image/upload/v1668614499/ecell/Yhills_logo_ypyyhy.png",
-    },
-    {
-      name: "Henry Harvin",
-      imgUrl:
-        "https://res.cloudinary.com/dwsverefw/image/upload/v1668613949/ecell/henry_harwin_logo_ohdeqs.jpg",
-    },
-    {
-      name: "Amazon",
-      imgUrl:
-        "https://res.cloudinary.com/dwsverefw/image/upload/v1668613820/ecell/amazon_logo_abauyt.webp",
-    },
-    {
-      name: "Uber",
-      imgUrl:
-        "https://res.cloudinary.com/dwsverefw/image/upload/v1665696044/ecell/image_4_wxnxnd.png",
-    },
-    {
-      name: "Aglasem",
-      imgUrl:
-        "https://res.cloudinary.com/dwsverefw/image/upload/v1665696045/ecell/image_6_yv9wg1.png",
-    },
-    {
-      name: "Unstop",
-      imgUrl:
-        "https://res.cloudinary.com/dwsverefw/image/upload/c_scale,w_1125/v1666905522/ecell/unstop_wlsi8w.png",
-    },
-    {
-      name: "stumagz",
-      imgUrl:
-        "https://res.cloudinary.com/dwsverefw/image/upload/v1665696044/ecell/image_3_xmcjnj.png",
-    },
-    {
-      name: "TE Hyderabad",
-      imgUrl:
-        "https://res.cloudinary.com/dwsverefw/image/upload/v1666454047/ecell/avatar20191017110114_fhusr5.png",
-    },
-    {
-      name: "Exfinity",
-      imgUrl:
-        "https://res.cloudinary.com/dwsverefw/image/upload/v1666454115/ecell/fmh4aaygvimxajzcs3i7_rilt0x.webp",
-    },
-  ];
+const speakers = [
+  {
+    name: "Rama Iyer",
+    designation: "Head of Innovation",
+    company: "GMR Group",
+    imgUrl: "/keynote speakers/Rama Iyer.jpeg",
+  },
+  {
+    name: "Udaya Kumar Dintyala",
+    designation: "Ex Exec. Director",
+    company: "AT&T Global Business Services India",
+    imgUrl: "/keynote speakers/Udaya Kumar.jpg",
+  },
+  {
+    name: "Dr. Ravishankar Polisetty",
+    designation: "MD, CEO, Director R&D",
+    company: "Sai Ganga Panakeia Pvt. Ltd",
+    imgUrl: "/keynote speakers/Dr. Ravishankar Polisetty.jpeg",
+  },
+  {
+    name: "Sandip Poddar",
+    designation: "Co-Founder and Director",
+    company: "Navikarna Ventures",
+    imgUrl: "/keynote speakers/Sandip Poddar.jpg",
+  },
+  {
+    name: "Avishek Gupta",
+    designation: "Managing Director & CEO",
+    company: "Caspian Debt",
+    imgUrl: "/keynote speakers/Avishek Gupta.jpg",
+  },
+  {
+    name: "Dr. Shanta Thoutam",
+    designation: "Chief Innovation Officer",
+    company: "Government of Telangana",
+    imgUrl: "/keynote speakers/Dr. Shanta Thoutam.jpg",
+  },
+  {
+    name: "GV Krishnagopal",
+    designation: "Group CEO",
+    company: "Access Livelihoods Group",
+    imgUrl: "/keynote speakers/GV Krishnagopal.jpg",
+  },
+  // {
+  //   name: "Sri Charan Lakkaraju",
+  //   designation: "",
+  //   company: "",
+  //   imgUrl:
+  //     "/keynote speakers/",
+  // },
+];
 
-  function Card({name, imgUrl}){
-    return <div className="p-2 flex flex-col items-center">
-        <div className="h-[13.75rem] w-[8rem] relative bg-white rounded-xl overflow-hidden">
-            <Image src={imgUrl} layout="fill" objectFit="cover" alt={name}/>
-        </div>
-        <div className="mt-4">
-            <h3 className="text-white">{name}</h3>
-        </div>
+function Card({ name, imgUrl, designation = "", company = "" }) {
+  return (
+    <div className="p-2 flex flex-col items-center">
+      <div className="h-[13.75rem] w-[13rem] relative bg-white rounded-xl overflow-hidden">
+        <Image src={imgUrl} layout="fill" objectFit="cover" alt={name} />
+      </div>
+      <div className="mt-4">
+        <h3 className="text-white text-2xl text-center">{name}</h3>
+        <h3 className="text-offwhite text-lg text-center pt-2 leading-6">
+          {designation}
+        </h3>
+        <h3 className="text-md text-center pt-1 text-offwhite">{company}</h3>
+      </div>
     </div>
-  }
+  );
+}
 
-export default function Keynote(){
-    return <div>
-        <h2 className="text-center font-medium text-5xl text-blue">KEYNOTE SPEAKERS</h2>
-        <Box
-        sx={{
-          mt: { xs: "4rem", sm: "3rem", lg: "4rem" },
-          pb: "5rem",
-          overscroll: "hidden",
-        }}
-      >
-        <Grid
-          container
-          className={style.slider}
-          direction="row"
-          alignItems="center"
-          spacing={4}
-          sx={{
-            py: "1rem",
-            overflowX: "hidden",
-            position: "relative",
-            flexWrap: "nowrap",
-            justifyContent: "center",
-            marginBottom: "-12px",
-            width: { xs: `500%`, sm: "400%", md: "300%", lg: "400%" },
-          }}
-        >
-          
-          {sponsors.map((sponsor) => (
-            <Card key={sponsor} name={sponsor.name} imgUrl={sponsor.imgUrl}/>
+export default function Keynote() {
+  return (
+    <div>
+      <h2 className="text-center font-medium text-5xl text-blue">
+        KEYNOTE SPEAKERS
+      </h2>
+      <div className="my-7 ">
+        <div className="infinite flex gap-5 w-fit">
+          {" "}
+          {speakers.map((speaker, index) => (
+            <Card
+              key={speaker.name}
+              name={speaker.name}
+              imgUrl={speaker.imgUrl}
+              designation={speaker?.designation}
+              company={speaker?.company}
+            />
           ))}
-          {sponsors.map((sponsor) => (
-            <Card key={sponsor} name={sponsor.name} imgUrl={sponsor.imgUrl}/>
+          {speakers.map((speaker, index) => (
+            <Card
+              key={speaker.name + index}
+              name={speaker.name}
+              imgUrl={speaker.imgUrl}
+              designation={speaker?.designation}
+              company={speaker?.company}
+            />
           ))}
-        </Grid>
-      </Box>
-
+        </div>
+      </div>
     </div>
+  );
 }
