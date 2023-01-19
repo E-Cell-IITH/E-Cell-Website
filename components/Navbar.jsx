@@ -67,7 +67,7 @@ const Navbar = () => {
                 }}
               >
                 {' '}
-                Patners
+                Partners
               </a>
             </Link>
           </li>
