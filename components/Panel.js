@@ -6,6 +6,7 @@ import MuiAccordionSummary from "@mui/material/AccordionSummary";
 import MuiAccordionDetails from "@mui/material/AccordionDetails";
 import Typography from "@mui/material/Typography";
 import Image from "next/image";
+import Link from "next/link";
 
 const Accordion = styled((props) => (
   <MuiAccordion disableGutters elevation={0} square {...props} />
@@ -364,6 +365,16 @@ const Panel = () => {
             </div>
           </AccordionDetails>
         </Accordion>
+      </div>
+      <div className="flex justify-center mt-20">
+        <button
+          className="text-white border-blue border-2 px-10
+             py-5 relative rounded-lg leading-5"
+        >
+          <Link href={'https://forms.gle/MGNMfmgaavRUpHxr8'}>
+            <a className="text-2xl">Register Now</a>
+          </Link>
+        </button>
       </div>
     </section>
   );
