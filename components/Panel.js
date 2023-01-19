@@ -359,7 +359,7 @@ const Panel = () => {
                     src="/nanda_kishore.jpg"
                   />
                   <p className="text-white font-bold uppercase p-1 border-2 rounded-md border-white">
-                    Speaker
+                    Panelist
                   </p>
                 </div>
 
