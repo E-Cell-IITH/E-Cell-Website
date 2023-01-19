@@ -1,62 +1,62 @@
-import * as React from "react";
-import { styled } from "@mui/material/styles";
-import ArrowForwardIosSharpIcon from "@mui/icons-material/ArrowForwardIosSharp";
-import MuiAccordion from "@mui/material/Accordion";
-import MuiAccordionSummary from "@mui/material/AccordionSummary";
-import MuiAccordionDetails from "@mui/material/AccordionDetails";
-import Typography from "@mui/material/Typography";
-import Image from "next/image";
-import Link from "next/link";
+import * as React from 'react';
+import { styled } from '@mui/material/styles';
+import ArrowForwardIosSharpIcon from '@mui/icons-material/ArrowForwardIosSharp';
+import MuiAccordion from '@mui/material/Accordion';
+import MuiAccordionSummary from '@mui/material/AccordionSummary';
+import MuiAccordionDetails from '@mui/material/AccordionDetails';
+import Typography from '@mui/material/Typography';
+import Image from 'next/image';
+import Link from 'next/link';
 
 const Accordion = styled((props) => (
   <MuiAccordion disableGutters elevation={0} square {...props} />
 ))(({ theme }) => ({
   border: `0px solid rgb(11 12 16)`,
-  "&:not(:last-child)": {
+  '&:not(:last-child)': {
     borderBottom: 0,
   },
-  "&:before": {
-    display: "none",
+  '&:before': {
+    display: 'none',
   },
 }));
 const AccordionSummary = styled((props) => (
   <MuiAccordionSummary
     expandIcon={
       <ArrowForwardIosSharpIcon
-        sx={{ fontSize: "0.9rem", color: "rgb(69 162 158)" }}
+        sx={{ fontSize: '0.9rem', color: 'rgb(69 162 158)' }}
       />
     }
     {...props}
   />
 ))(({ theme }) => ({
-  backgroundColor: "rgb(11 12 16)",
-  flexDirection: "row-reverse",
-  "& .MuiAccordionSummary-expandIconWrapper.Mui-expanded": {
-    transform: "rotate(90deg)",
+  backgroundColor: 'rgb(11 12 16)',
+  flexDirection: 'row-reverse',
+  '& .MuiAccordionSummary-expandIconWrapper.Mui-expanded': {
+    transform: 'rotate(90deg)',
   },
-  "& .MuiAccordionSummary-content": {
+  '& .MuiAccordionSummary-content': {
     marginLeft: theme.spacing(1),
   },
 }));
 const AccordionDetails = styled(MuiAccordionDetails)(({ theme }) => ({
-  backgroundColor: "rgb(11 12 16)",
+  backgroundColor: 'rgb(11 12 16)',
   padding: theme.spacing(2),
-  borderTop: "1px solid rgba(0, 0, 0, .125)",
+  borderTop: '1px solid rgba(0, 0, 0, .125)',
 }));
 
 const title_data = [
   "Transformation of India's Digital Payment Landscape",
-  "Technological Innovations - The driving factors and Impact",
-  "The Employer-Employee Paradox: Concurrency of Layoffs and Hiring",
+  'Technological Innovations - The driving factors and Impact',
+  'The Employer-Employee Paradox: Concurrency of Layoffs and Hiring',
 ];
 const img_data = {
   "Transformation of India's Digital Payment Landscape": [],
-  "Technological Innovations - The driving factors and Impact": [],
-  "The Employer-Employee Paradox: Concurrency of Layoffs and Hiring": [],
+  'Technological Innovations - The driving factors and Impact': [],
+  'The Employer-Employee Paradox: Concurrency of Layoffs and Hiring': [],
 };
 
 const Panel = () => {
-  const [expanded, setExpanded] = React.useState("panel1");
+  const [expanded, setExpanded] = React.useState('panel1');
 
   const handleChange = (panel) => (event, newExpanded) => {
     setExpanded(newExpanded ? panel : false);
@@ -68,17 +68,17 @@ const Panel = () => {
       </div>
       <div className="flex flex-col justify-center items-center">
         <Accordion
-          sx={{ width: "100%" }}
-          expanded={expanded === "panel1"}
-          onChange={handleChange("panel1")}
+          sx={{ width: '100%' }}
+          expanded={expanded === 'panel1'}
+          onChange={handleChange('panel1')}
           className="justify-center"
         >
           <AccordionSummary aria-controls="panel1d-content" id="panel1d-header">
             <Typography
               sx={{
-                color: "white",
-                fontSize: { xs: "1rem", sm: "1.35rem" },
-                textAlign: "center",
+                color: 'white',
+                fontSize: { xs: '1rem', sm: '1.35rem' },
+                textAlign: 'center',
               }}
             >
               Transformation of India&apos;s Digital Payment Landscape
@@ -145,7 +145,7 @@ const Panel = () => {
                     src="/srinivasan.jpg"
                   />
                   <p className="text-white font-bold uppercase p-1 border-2 rounded-md border-white">
-                  Panelist
+                    Panelist
                   </p>
                 </div>
 
@@ -166,7 +166,7 @@ const Panel = () => {
                     src="/neeraj_bansal.jpg"
                   />
                   <p className="text-white font-bold uppercase p-1 border-2 rounded-md border-white">
-                  Panelist
+                    Panelist
                   </p>
                 </div>
               </div>
@@ -174,15 +174,15 @@ const Panel = () => {
           </AccordionDetails>
         </Accordion>
         <Accordion
-          sx={{ width: "100%" }}
-          expanded={expanded === "panel2"}
-          onChange={handleChange("panel2")}
+          sx={{ width: '100%' }}
+          expanded={expanded === 'panel2'}
+          onChange={handleChange('panel2')}
         >
           <AccordionSummary aria-controls="panel2d-content" id="panel2d-header">
             <Typography
               sx={{
-                color: "white",
-                fontSize: { xs: "1rem", sm: "1.35rem" },
+                color: 'white',
+                fontSize: { xs: '1rem', sm: '1.35rem' },
               }}
             >
               Technological Innovations - The driving factors and Impact
@@ -232,7 +232,7 @@ const Panel = () => {
                     src="/rajesh.jpg"
                   />
                   <p className="text-white font-bold uppercase p-1 border-2 rounded-md border-white">
-                  Panelist
+                    Panelist
                   </p>
                 </div>
 
@@ -253,7 +253,7 @@ const Panel = () => {
                     src="/Saumy.jpg"
                   />
                   <p className="text-white font-bold uppercase p-1 border-2 rounded-md border-white">
-                  Panelist
+                    Panelist
                   </p>
                 </div>
                 <div className="flex flex-col-reverse justify-center items-center gap-3">
@@ -273,7 +273,7 @@ const Panel = () => {
                     src="/raghu.jpg"
                   />
                   <p className="text-white font-bold uppercase p-1 border-2 rounded-md border-white">
-                  Panelist
+                    Panelist
                   </p>
                 </div>
               </div>
@@ -281,15 +281,15 @@ const Panel = () => {
           </AccordionDetails>
         </Accordion>
         <Accordion
-          sx={{ width: "100%" }}
-          expanded={expanded === "panel3"}
-          onChange={handleChange("panel3")}
+          sx={{ width: '100%' }}
+          expanded={expanded === 'panel3'}
+          onChange={handleChange('panel3')}
         >
           <AccordionSummary aria-controls="panel3d-content" id="panel3d-header">
             <Typography
               sx={{
-                color: "white",
-                fontSize: { xs: "1rem", sm: "1.35rem" },
+                color: 'white',
+                fontSize: { xs: '1rem', sm: '1.35rem' },
               }}
             >
               The Employer-Employee Paradox: Concurrency of Layoffs and Hiring
@@ -321,7 +321,7 @@ const Panel = () => {
                   </p>
                 </div>
               </div>
-              <div className="flex flex-col sm:flex-row  mx-auto justify-center items-center gap-5 md:gap-10 lg:gap-[3.5rem]">
+              <div className="flex flex-col sm:flex-row  mx-auto justify-center items-center gap-5 md:gap-10 lg:gap-[3.5rem] mb-10">
                 <div className="flex flex-col-reverse justify-center items-center gap-3">
                   <p className="text-white  text-center text-[1rem]">
                     <span className="font-bold uppercase tracking-wide">
@@ -339,7 +339,7 @@ const Panel = () => {
                     src="/Yugandhar.jpg"
                   />
                   <p className="text-white font-bold uppercase p-1 border-2 rounded-md border-white">
-                  Panelist
+                    Panelist
                   </p>
                 </div>
                 <div className="flex flex-col-reverse justify-center items-center gap-3">
@@ -380,7 +380,29 @@ const Panel = () => {
                     src="/murali.jpg"
                   />
                   <p className="text-white font-bold uppercase p-1 border-2 rounded-md border-white">
-                  Panelist
+                    Panelist
+                  </p>
+                </div>
+              </div>
+              <div className="flex flex-col sm:flex-row  mx-auto justify-center items-center gap-5 md:gap-10 lg:gap-[3.5rem]">
+                <div className="flex flex-col-reverse justify-center items-center gap-3">
+                  <p className="text-white  text-center text-[1rem]">
+                    <span className="font-bold uppercase tracking-wide">
+                      I V S Ranganath
+                    </span>
+                    <br></br>
+                    Head HR
+                    <br />
+                    Shriram Bioseed Genetics
+                  </p>
+                  <Image
+                    height={200}
+                    width={200}
+                    alt="testing"
+                    src="/ranganath.jpeg"
+                  />
+                  <p className="text-white font-bold uppercase p-1 border-2 rounded-md border-white">
+                    Panelist
                   </p>
                 </div>
               </div>
