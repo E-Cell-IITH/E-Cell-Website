@@ -106,6 +106,27 @@ const Panel = () => {
                     Moderator
                   </p>
                 </div>
+                <div className="flex flex-col-reverse justify-center items-center gap-3 hover:scale-105 transition-all">
+                  <p className="text-white text-center sm:text-sm text-[.7rem]">
+                    <span className="font-bold uppercase tracking-wide">
+                      Shiva Kumar R V
+                    </span>
+                    <br></br>
+                    Deputy Chief of Technology
+                    <br />
+                    at NPCI
+                  </p>
+                  <Image
+                    height={220}
+                    width={200}
+                    alt="testing"
+                    src="/shiva.jpeg"
+                    className="hover:bg-red-400"
+                  />
+                  <p className="text-white font-bold uppercase p-1 border-2 rounded-md border-white">
+                    Panelist
+                  </p>
+                </div>
               </div>
               <div className="flex flex-col sm:flex-row  mx-auto justify-center items-center gap-5 md:gap-10 lg:gap-[3.5rem]">
                 <div className="flex flex-col-reverse justify-center items-center gap-3">
@@ -320,6 +341,26 @@ const Panel = () => {
                     Moderator
                   </p>
                 </div>
+                <div className="flex flex-col-reverse justify-center items-center gap-3">
+                  <p className="text-white  text-center text-[1rem]">
+                    <span className="font-bold uppercase tracking-wide">
+                      I V S Ranganath
+                    </span>
+                    <br></br>
+                    Head HR
+                    <br />
+                    Shriram Bioseed Genetics
+                  </p>
+                  <Image
+                    height={200}
+                    width={200}
+                    alt="testing"
+                    src="/ranganath.jpeg"
+                  />
+                  <p className="text-white font-bold uppercase p-1 border-2 rounded-md border-white">
+                    Panelist
+                  </p>
+                </div>
               </div>
               <div className="flex flex-col sm:flex-row  mx-auto justify-center items-center gap-5 md:gap-10 lg:gap-[3.5rem] mb-10">
                 <div className="flex flex-col-reverse justify-center items-center gap-3">
@@ -384,28 +425,7 @@ const Panel = () => {
                   </p>
                 </div>
               </div>
-              <div className="flex flex-col sm:flex-row  mx-auto justify-center items-center gap-5 md:gap-10 lg:gap-[3.5rem]">
-                <div className="flex flex-col-reverse justify-center items-center gap-3">
-                  <p className="text-white  text-center text-[1rem]">
-                    <span className="font-bold uppercase tracking-wide">
-                      I V S Ranganath
-                    </span>
-                    <br></br>
-                    Head HR
-                    <br />
-                    Shriram Bioseed Genetics
-                  </p>
-                  <Image
-                    height={200}
-                    width={200}
-                    alt="testing"
-                    src="/ranganath.jpeg"
-                  />
-                  <p className="text-white font-bold uppercase p-1 border-2 rounded-md border-white">
-                    Panelist
-                  </p>
-                </div>
-              </div>
+              <div className="flex flex-col sm:flex-row  mx-auto justify-center items-center gap-5 md:gap-10 lg:gap-[3.5rem]"></div>
             </div>
           </AccordionDetails>
         </Accordion>
