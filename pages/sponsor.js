@@ -8,16 +8,19 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import React, { useRef, useEffect } from 'react';
 import Navbar from '../components/first';
-import { Box, Typography } from '@mui/material';
+import { Box, CardActionArea, Typography } from '@mui/material';
 import style2 from '../styles/changesFirst.module.css';
 import Managers from '../components/Managers';
 import parallax from '../styles/team.module.css';
 import Head from 'next/head';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
+import { useRouter } from 'next/router';
+import Link from 'next/link';
 gsap.registerPlugin(ScrollTrigger);
 
 const Sponsor = () => {
+  const router = useRouter();
   const parent = useRef();
   const tl = useRef();
   useEffect(() => {
@@ -83,8 +86,79 @@ const Sponsor = () => {
       <Head>
         <title>Sponsors Entrepreneurship Cell IIT Hyderabad</title>
       </Head>
-      <Navbar heading="COLLABORATIONS" desc={false} sponsors={true} />
-      <div className="text-center text-white text-2xl md:text-3xl md:w-[20rem] mx-auto mt-[20rem] w-[15rem] sm:mt-[15rem] lg:-mt-[5rem] my-10 p-2 uppercase  border-b-2 border-white ">
+      <Navbar heading={'COLLABORATIONS'} desc={false} sponsors={true} />
+      <Grid
+        container
+        display="flex"
+        flexDirection="row"
+        alignItems="center"
+        justifyContent="center"
+        rowSpacing={2}
+        gap={0}
+      >
+        <Grid
+          item
+          xs={7}
+          sm={9}
+          lg={5}
+          sx={{
+            spacing: 2,
+            display: 'flex',
+            flexDirection: 'column',
+            justifyContent: 'center',
+            alignItems: 'center',
+            marginBottom: 20,
+            '@media (max-width: 780px)': {
+              marginBottom: 0,
+              marginTop: 15,
+            },
+          }}
+        >
+          <div className="text-center uppercase border-b-2 mt-20 border-white md:w-[25rem] w-[15rem] mx-auto text-white text-xl md:text-3xl pb-2 mb-10  pt-40">
+            Platinum Sponsor
+          </div>
+
+          <Card
+            sx={{
+              minWidth: 500,
+              maxWidth: 500,
+              minHeight: 250,
+              maxHeight: 250,
+              transition: 'transform .2s ease-in',
+              '&:hover': {
+                transform: 'scale(1.1)',
+              },
+              '@media (max-width: 780px)': {
+                minWidth: 250,
+                maxWidth: 250,
+              },
+            }}
+          >
+            <CardActionArea
+              href="https://iocl.com/pages/servo-lubes-and-greases-overview"
+              target="_blank"
+            >
+              <CardMedia
+                sx={{
+                  width: 400,
+                  height: 170,
+                  marginTop: 6.25,
+                  marginLeft: 6.5,
+                  '@media (max-width: 780px)': {
+                    width: 200,
+                    height: 90,
+                    marginLeft: 3,
+                    marginTop: 9,
+                  },
+                }}
+                image="/servo.png"
+                title="servo"
+              />
+            </CardActionArea>
+          </Card>
+        </Grid>
+      </Grid>
+      <div className="text-center text-white text-2xl md:text-3xl md:w-[20rem] mx-auto mt-[15rem] w-[15rem] sm:mt-[15rem] lg:-mt-[5rem] my-10 p-2 uppercase  border-b-2 border-white ">
         Event Partners
       </div>
 
@@ -122,16 +196,18 @@ const Sponsor = () => {
               },
             }}
           >
-            <CardMedia
-              sx={{
-                width: 200,
-                height: 60,
-                marginTop: 12.25,
-                marginLeft: 2.57,
-              }}
-              image="/Amazon.png"
-              title="green iguana"
-            />
+            <CardActionArea href="https://www.amazon.in/" target="_blank">
+              <CardMedia
+                sx={{
+                  width: 200,
+                  height: 60,
+                  marginTop: 12.25,
+                  marginLeft: 2.57,
+                }}
+                image="/Amazon.png"
+                title="amazon"
+              />
+            </CardActionArea>
           </Card>
         </Grid>
         <Grid
@@ -159,11 +235,13 @@ const Sponsor = () => {
               },
             }}
           >
-            <CardMedia
-              sx={{ width: 220, height: 60, marginTop: 12, marginLeft: 2.5 }}
-              image="/groww.png"
-              title="green iguana"
-            />
+            <CardActionArea href="https://groww.in/" target="_blank">
+              <CardMedia
+                sx={{ width: 220, height: 60, marginTop: 12, marginLeft: 2.5 }}
+                image="/groww.png"
+                title="groww"
+              />
+            </CardActionArea>
           </Card>
         </Grid>
         <Grid
@@ -191,11 +269,13 @@ const Sponsor = () => {
               },
             }}
           >
-            <CardMedia
-              sx={{ height: 225, marginTop: 3.6 }}
-              image="/sttock_gro.png"
-              title="green iguana"
-            />
+            <CardActionArea href="https://www.stockgro.club/" target="_blank">
+              <CardMedia
+                sx={{ height: 225, marginTop: 3.6 }}
+                image="/sttock_gro.png"
+                title="sttock gro"
+              />
+            </CardActionArea>
           </Card>
         </Grid>
       </Grid>
@@ -241,16 +321,21 @@ const Sponsor = () => {
                 },
               }}
             >
-              <CardMedia
-                sx={{
-                  width: 210,
-                  height: 20,
-                  marginTop: 14.75,
-                  marginLeft: 2.5,
-                }}
-                image="/i_school_connect.png"
-                title="green iguana"
-              />
+              <CardActionArea
+                href="https://ischoolconnect.com/en/"
+                target="_blank"
+              >
+                <CardMedia
+                  sx={{
+                    width: 210,
+                    height: 20,
+                    marginTop: 14.75,
+                    marginLeft: 2.5,
+                  }}
+                  image="/i_school_connect.png"
+                  title="i school connect"
+                />
+              </CardActionArea>
             </Card>
           </div>
         </Grid>
@@ -287,11 +372,16 @@ const Sponsor = () => {
                 },
               }}
             >
-              <CardMedia
-                sx={{ width: 255, height: 150, marginTop: 6.2 }}
-                image="/henry_harvin.png"
-                title="green iguana"
-              />
+              <CardActionArea
+                href="https://www.henryharvin.com/"
+                target="_blank"
+              >
+                <CardMedia
+                  sx={{ width: 255, height: 150, marginTop: 6.2 }}
+                  image="/henry_harvin.png"
+                  title="henry harvin"
+                />
+              </CardActionArea>
             </Card>
           </div>
         </Grid>
@@ -327,11 +417,13 @@ const Sponsor = () => {
                 },
               }}
             >
-              <CardMedia
-                sx={{ height: 150, marginTop: 5.7, marginRight: 1.5 }}
-                image="/YHills.png"
-                title="green iguana"
-              />
+              <CardActionArea href="https://yhills.com/" target="_blank">
+                <CardMedia
+                  sx={{ height: 150, marginTop: 5.7, marginRight: 1.5 }}
+                  image="/YHills.png"
+                  title="y hills"
+                />
+              </CardActionArea>
             </Card>
           </div>
         </Grid>
@@ -377,16 +469,18 @@ const Sponsor = () => {
                 },
               }}
             >
-              <CardMedia
-                sx={{
-                  width: 215,
-                  height: 85,
-                  marginTop: 9.25,
-                  marginLeft: 1.8,
-                }}
-                image="/Unstop.jpg"
-                title="green iguana"
-              />
+              <CardActionArea href="https://unstop.com/" target="_blank">
+                <CardMedia
+                  sx={{
+                    width: 215,
+                    height: 85,
+                    marginTop: 9.25,
+                    marginLeft: 1.8,
+                  }}
+                  image="/Unstop.jpg"
+                  title="unstop"
+                />
+              </CardActionArea>
             </Card>
           </div>
         </Grid>
@@ -422,11 +516,18 @@ const Sponsor = () => {
                 },
               }}
             >
-              <CardMedia
-                sx={{ width: 200, height: 65, marginTop: 11, marginLeft: 2.95 }}
-                image="/talerang.jpg"
-                title="green iguana"
-              />
+              <CardActionArea href="https://talerang.com/" target="_blank">
+                <CardMedia
+                  sx={{
+                    width: 200,
+                    height: 65,
+                    marginTop: 11,
+                    marginLeft: 2.95,
+                  }}
+                  image="/talerang.jpg"
+                  title="talerang"
+                />
+              </CardActionArea>
             </Card>
           </div>
         </Grid>
@@ -472,11 +573,18 @@ const Sponsor = () => {
                 },
               }}
             >
-              <CardMedia
-                sx={{ width: 220, height: 85, marginTop: 9.25, marginLeft: 2 }}
-                image="/Ivycamplogo.png"
-                title="green iguana"
-              />
+              <CardActionArea href="https://ivycamp.in/" target="_blank">
+                <CardMedia
+                  sx={{
+                    width: 220,
+                    height: 85,
+                    marginTop: 9.25,
+                    marginLeft: 2,
+                  }}
+                  image="/Ivycamplogo.png"
+                  title="ivy camp"
+                />
+              </CardActionArea>
             </Card>
           </div>
         </Grid>
@@ -513,11 +621,21 @@ const Sponsor = () => {
                 },
               }}
             >
-              <CardMedia
-                sx={{ width: 190, height: 80, marginTop: 11, marginLeft: 2.95 }}
-                image="/ease_my_trip.png"
-                title="green iguana"
-              />
+              <CardActionArea
+                href="https://www.easemytrip.com/"
+                target="_blank"
+              >
+                <CardMedia
+                  sx={{
+                    width: 190,
+                    height: 80,
+                    marginTop: 11,
+                    marginLeft: 2.95,
+                  }}
+                  image="/ease_my_trip.png"
+                  title="ease my trip"
+                />
+              </CardActionArea>
             </Card>
           </div>
         </Grid>
@@ -559,11 +677,13 @@ const Sponsor = () => {
               },
             }}
           >
-            <CardMedia
-              sx={{ width: 190, height: 80, marginTop: 11, marginLeft: 3.3 }}
-              image="/Techobyte.jpg"
-              title="green iguana"
-            />
+            <CardActionArea href="https://techobytes.com/" target="_blank">
+              <CardMedia
+                sx={{ width: 190, height: 80, marginTop: 11, marginLeft: 3.3 }}
+                image="/Techobyte.jpg"
+                title="Techobyte"
+              />
+            </CardActionArea>
           </Card>
         </Grid>
         <Grid
@@ -591,11 +711,13 @@ const Sponsor = () => {
               },
             }}
           >
-            <CardMedia
-              sx={{ width: 190, height: 130, marginTop: 8, marginLeft: 3.7 }}
-              image="/edufabrica.png"
-              title="green iguana"
-            />
+            <CardActionArea href="https://www.edufabrica.net/" target="_blank">
+              <CardMedia
+                sx={{ width: 190, height: 130, marginTop: 8, marginLeft: 3.7 }}
+                image="/edufabrica.png"
+                title="edufabrica"
+              />
+            </CardActionArea>
           </Card>
         </Grid>
       </Grid>
@@ -638,16 +760,21 @@ const Sponsor = () => {
               },
             }}
           >
-            <CardMedia
-              sx={{
-                width: 150,
-                height: 170,
-                marginTop: 6.25,
-                marginLeft: 5.75,
-              }}
-              image="/give_my_certificate.png"
-              title="green iguana"
-            />
+            <CardActionArea
+              href="https://givemycertificate.com/"
+              target="_blank"
+            >
+              <CardMedia
+                sx={{
+                  width: 150,
+                  height: 170,
+                  marginTop: 6.25,
+                  marginLeft: 5.75,
+                }}
+                image="/give_my_certificate.png"
+                title="give my certificate"
+              />
+            </CardActionArea>
           </Card>
         </Grid>
       </Grid>
@@ -689,16 +816,18 @@ const Sponsor = () => {
               },
             }}
           >
-            <CardMedia
-              sx={{
-                width: 190,
-                height: 145,
-                marginTop: 7,
-                marginLeft: 2.57,
-              }}
-              image="/ed_times.png"
-              title="ed_times"
-            />
+            <CardActionArea href="https://edtimes.in/?amp" target="_blank">
+              <CardMedia
+                sx={{
+                  width: 190,
+                  height: 145,
+                  marginTop: 7,
+                  marginLeft: 2.57,
+                }}
+                image="/ed_times.png"
+                title="ed_times"
+              />
+            </CardActionArea>
           </Card>
         </Grid>
         <Grid
@@ -726,11 +855,13 @@ const Sponsor = () => {
               },
             }}
           >
-            <CardMedia
-              sx={{ width: 220, height: 30, marginTop: 13, marginLeft: 2.5 }}
-              image="/global_hues_black.png"
-              title="globacl hues"
-            />
+            <CardActionArea href="https://theglobalhues.com/" target="_blank">
+              <CardMedia
+                sx={{ width: 220, height: 30, marginTop: 13, marginLeft: 2.5 }}
+                image="/global_hues_black.png"
+                title="globacl hues"
+              />
+            </CardActionArea>
           </Card>
         </Grid>
         <Grid
@@ -758,11 +889,13 @@ const Sponsor = () => {
               },
             }}
           >
-            <CardMedia
-              sx={{ width: 180, height: 80, marginTop: 10.6, marginLeft: 4 }}
-              image="/Yi_New_Logo.png"
-              title="green iguana"
-            />
+            <CardActionArea href="https://youthincmag.com/" target="_blank">
+              <CardMedia
+                sx={{ width: 180, height: 80, marginTop: 10.6, marginLeft: 4 }}
+                image="/Yi_New_Logo.png"
+                title="yi new logo"
+              />
+            </CardActionArea>
           </Card>
         </Grid>
       </Grid>
@@ -802,11 +935,13 @@ const Sponsor = () => {
               },
             }}
           >
-            <CardMedia
-              sx={{ width: 230, height: 40, marginTop: 13, marginLeft: 2.5 }}
-              image="/BA_Logo.png"
-              title="globacl hues"
-            />
+            <CardActionArea href="https://www.blogadda.com/" target="_blank">
+              <CardMedia
+                sx={{ width: 230, height: 40, marginTop: 13, marginLeft: 2.5 }}
+                image="/BA_Logo.png"
+                title="ba logo"
+              />
+            </CardActionArea>
           </Card>
         </Grid>
         <Grid
@@ -836,10 +971,14 @@ const Sponsor = () => {
               marginBottom: 10,
             }}
           >
+            <CardActionArea
+              href="https://www.asiancommunitynews.com/"
+              target="_blank"
+            ></CardActionArea>
             <CardMedia
               sx={{ width: 230, height: 120, marginTop: 9, marginLeft: 2.5 }}
               image="/ACN_Logo.jpg"
-              title="globacl hues"
+              title="acn-logo"
             />
           </Card>
         </Grid>

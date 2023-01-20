@@ -47,16 +47,6 @@ const KeySpeakers = () => {
           </div>
         ))}
       </div>
-      <div className="flex justify-center mt-20">
-        <button
-          className="text-white border-blue border-2 px-10
-             py-5 relative rounded-lg leading-5"
-        >
-          <Link href={'https://forms.gle/MGNMfmgaavRUpHxr8'}>
-            <a className="text-2xl">Register Now</a>
-          </Link>
-        </button>
-      </div>
     </section>
   );
 };
