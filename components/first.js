@@ -117,9 +117,13 @@ export default function Navbar({
         {heading}
         <br />
       </div>
-      {!sponsors ? <div className={style.iit} ref={iith}>
-        IIT HYDERABAD <br /> 
-      </div>:  ""}
+      {!sponsors ? (
+        <div className={style.iit} ref={iith}>
+          IIT HYDERABAD <br />
+        </div>
+      ) : (
+        ""
+      )}
       <br />
       <div className={style.think} id="tagline">
         <span>THINK |</span> <span>BUILD |</span> <span>INSPIRE</span>

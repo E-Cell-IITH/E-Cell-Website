@@ -1,246 +1,248 @@
 .container {
-    margin-top: 0vw;
-    padding-top: 0vw;
-    background-size: cover;
-    position: relative;
+  margin-top: 0vw;
+  padding-top: 0vw;
+  background-size: cover;
+  position: relative;
 }
 
 .container2 {
-    text-align: center;
-    color: rgba(211, 211, 211, 1);
-    font-size: 1.3vw;
-    font-style: normal;
-    position: relative;
-    z-index: 1;
+  text-align: center;
+  color: rgba(211, 211, 211, 1);
+  font-size: 1.3vw;
+  font-style: normal;
+  position: relative;
+  z-index: 1;
 }
 
 .about {
-    position: relative;
-    
-    z-index: 100;
-    text-align: center;
-    color: rgba(211, 211, 211, 1);
-    font-weight: 700;
-    font-size: 2.6vw;
-    font-style: normal;
+  position: relative;
+
+  z-index: 100;
+  text-align: center;
+  color: rgba(211, 211, 211, 1);
+  font-weight: 700;
+  font-size: 2.6vw;
+  font-style: normal;
 }
 
 .cont {
-    padding-top: 1vw;
-    padding-bottom: 18vw;
-    position: relative;
-    z-index: 3;
-
+  padding-top: 1vw;
+  padding-bottom: 18vw;
+  position: relative;
+  z-index: 3;
 }
 
 .logo {
-    margin-top: 1.5vw;
-    /* width: 10vw;
+  margin-top: 1.5vw;
+  /* width: 10vw;
     height: auto; */
 }
 
 .image {
-    width: 8rem;
-    height: 3rem;
-    /* height: auto; */
-    z-index: 3;
-    margin-left: 1.5vw;
-    position: relative;
+  width: 8rem;
+  height: 3rem;
+  /* height: auto; */
+  z-index: 3;
+  margin-left: 1.5vw;
+  position: relative;
 }
 
 .title {
-    position: relative;
-    margin-top: 2vw;
-    text-align: center;
-    
-    z-index: 3;
-    font-size: 6vw;
-    font-weight: 700;
-    /* background: linear-gradient(92.42deg, #BD63C3 23.03%, #3E15A0 88.79%); */
-    background: linear-gradient(to right, rgb(169, 41, 255) 10%, rgb(255, 34, 181) 40%, rgb(21, 72, 255) 90%,rgb(169, 41, 255) 100%);
-    background-size: 200% auto;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    font-style: normal;
-    text-transform: capitalize;
-    animation: gradientChange 7s infinite ease-in;
+  position: relative;
+  margin-top: 2vw;
+  text-align: center;
+
+  z-index: 3;
+  font-size: 6vw;
+  font-weight: 700;
+  /* background: linear-gradient(92.42deg, #BD63C3 23.03%, #3E15A0 88.79%); */
+  background: linear-gradient(
+    to right,
+    rgb(169, 41, 255) 10%,
+    rgb(255, 34, 181) 40%,
+    rgb(21, 72, 255) 90%,
+    rgb(169, 41, 255) 100%
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-style: normal;
+  text-transform: capitalize;
+  animation: gradientChange 7s infinite ease-in;
 }
 
 @keyframes gradientChange {
-    from {
-        background-position: 200%;
-    } 
+  from {
+    background-position: 200%;
+  }
 }
 
 .iit {
-    position: relative;
-    z-index: 3;
-    text-align: center;
-    font-size: 5vw;
-    font-weight: 700;
-    color: white;
+  position: relative;
+  z-index: 3;
+  text-align: center;
+  font-size: 5vw;
+  font-weight: 700;
+  color: white;
 }
 
 .think {
-    text-align: center;
-    position: relative;
-    z-index: 3;
-    font-size: 2.5vw;
-    color: #D3D3D3E5;
-    margin-bottom: 8vw;
+  text-align: center;
+  position: relative;
+  z-index: 3;
+  font-size: 2.5vw;
+  color: #d3d3d3e5;
+  margin-bottom: 8vw;
 }
 
 .images {
-    /* display: inline-block; */
-    /* width: 2vw;
+  /* display: inline-block; */
+  /* width: 2vw;
     height: auto; */
-    margin-left: 5vw;
-    align-self: flex-start;
-    margin: 2vw;
-    padding: 2vw;
+  margin-left: 5vw;
+  align-self: flex-start;
+  margin: 2vw;
+  padding: 2vw;
 }
 
 .pic {
-    width: 2.5vw;
-    height: 2.5vw;
-    margin: 0.8vw;
-    display: inline-block;
-    transition: all 0.3s ease-in;
+  width: 2.5vw;
+  height: 2.5vw;
+  margin: 0.8vw;
+  display: inline-block;
+  transition: all 0.3s ease-in;
 }
 
 .pic:hover {
-    transform: scale(1.25);
+  transform: scale(1.25);
 }
 
-
 .box {
-    display: flex;
-    justify-content: center;
-    position: relative;
-    z-index: 3;
-    padding-bottom: 15vw;
-    margin-left: 3vw;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  z-index: 3;
+  padding-bottom: 15vw;
+  margin-left: 3vw;
 }
 
 @media (max-width: 1100px) {
-    .about {
-        font-size: 3.5vw;
-    }
+  .about {
+    font-size: 3.5vw;
+  }
 
-    .cont {
-        font-size: 1.6vw;
-    }
+  .cont {
+    font-size: 1.6vw;
+  }
 
-    .logo {
-        width: 12vw;
-        height: auto;
-    }
+  .logo {
+    width: 12vw;
+    height: auto;
+  }
 
-    .title {
-        font-size: 6vw;
-    }
+  .title {
+    font-size: 6vw;
+  }
 
-    .iit {
-        font-size: 5vw;
-    }
+  .iit {
+    font-size: 5vw;
+  }
 
-    .think {
-        font-size: 2.6vw;
-    }
+  .think {
+    font-size: 2.6vw;
+  }
 
-    .images {
-        width: 2.6vw;
-        height: auto;
-        margin-left: 2vw;
-    }
+  .images {
+    width: 2.6vw;
+    height: auto;
+    margin-left: 2vw;
+  }
 }
 
 @media (max-width: 800px) {
-    .about {
-        font-size: 4vw;
-        margin-bottom: 5vw;
-    }
+  .about {
+    font-size: 4vw;
+    margin-bottom: 5vw;
+  }
 
-    .logo {
-        width: 20vw;
-        height: auto;
-    }
+  .logo {
+    width: 20vw;
+    height: auto;
+  }
 
-    .title {
-        font-size: 6vw;
-    }
+  .title {
+    font-size: 6vw;
+  }
 
-    .iit {
-        font-size: 5vw;
-    }
+  .iit {
+    font-size: 5vw;
+  }
 
-    .think {
-        font-size: 3vw;
-    }
+  .think {
+    font-size: 3vw;
+  }
 
-    .images {
-        width: 3.5vw;
-        height: auto;
-        margin-left: 2vw;
-    }
+  .images {
+    width: 3.5vw;
+    height: auto;
+    margin-left: 2vw;
+  }
 
-    .cont {
-        font-size: 1rem;
-    }
-    .pic {
-        width: 3vw;
-        height: 3vw;
-        margin: 1vw;
-        display: inline-block;
-    }
-    
-    .image{
-        margin-left: 1rem;
-    }
+  .cont {
+    font-size: 1rem;
+  }
+  .pic {
+    width: 3vw;
+    height: 3vw;
+    margin: 1vw;
+    display: inline-block;
+  }
+
+  .image {
+    margin-left: 1rem;
+  }
 }
 
-@media(max-width:500px) {
-    
-    .image{
-        margin-left: 1rem ;
-    }
-    
+@media (max-width: 500px) {
+  .image {
+    margin-left: 1rem;
+  }
 
-    .title {
-        font-size: 15vw;
-        padding: 0.8rem;
-    }
+  .title {
+    font-size: 8vw;
+    padding: 0.8rem;
+  }
 
-    .about {
-        font-size: 2rem;
-    }
+  .about {
+    font-size: 2rem;
+  }
 
-    .cont {
-        font-size: 1rem;
-        text-align: center;
-    }
-    .iit{
-        margin-top: 2vw;
-        font-size: 6vw;
-    }
-    .think{
-        font-size: 3.5vw;
-    }
-    .pic {
-        width: 4vw;
-        height: 4vw;
-        margin: 1vw;
-        display: inline-block;
-    }
+  .cont {
+    font-size: 1rem;
+    text-align: center;
+  }
+  .iit {
+    margin-top: 2vw;
+    font-size: 6vw;
+  }
+  .think {
+    font-size: 3.5vw;
+  }
+  .pic {
+    width: 4vw;
+    height: 4vw;
+    margin: 1vw;
+    display: inline-block;
+  }
 }
 
-@media(max-width:400px) {
-    .about {
-        font-size: 2rem;
-    }
+@media (max-width: 400px) {
+  .about {
+    font-size: 2rem;
+  }
 
-    .cont {
-        font-size: 1rem;
-    }
+  .cont {
+    font-size: 1rem;
+  }
 }
