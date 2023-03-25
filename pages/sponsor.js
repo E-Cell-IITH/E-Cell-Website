@@ -820,9 +820,10 @@ const Sponsor = () => {
           >
             <CardActionArea href="https://skilldunia.co.in/" target="_blank">
               <CardMedia
-                sx={{ width: 190, height: 80, marginTop: 11, marginLeft: 3.3 }}
+                sx={{ width: 190, height: 180, marginTop: 5, marginLeft: 3.3 }}
                 image="/skilldunia - comp.png"
                 title="skilldunia"
+                className="bg-white"
               />
             </CardActionArea>
           </Card>
