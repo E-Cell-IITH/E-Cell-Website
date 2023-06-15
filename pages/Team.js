@@ -31,9 +31,9 @@ const heads = [
     domain: "Web",
     heads: [
       {
-        name: "Anuj Pandey",
+        name: "Maharshi Kadeval",
         imgUrl:
-          "https://res.cloudinary.com/dwsverefw/image/upload/v1665876114/ecell/team/Anuj_Pandey_WebHead_1_mrhxks.jpg",
+          "https://raw.githubusercontent.com/abhinavydv/Ecell-Test/master/Web/MaharshiKadeval/Maharshi.jpg",
       },
     ],
   },
@@ -66,9 +66,9 @@ const heads = [
     domain: " PR & Networking",
     heads: [
       {
-        name: "Tanay Yadav",
+        name: "Shubham Mohanty",
         imgUrl:
-          "https://res.cloudinary.com/dwsverefw/image/upload/v1665876488/ecell/team/IMG_20220815_141142_Bokeh__01_1_it1j2m.jpg",
+          "https://raw.githubusercontent.com/abhinavydv/Ecell-Test/master/PR-Networking/SubhamMohanty/Subham.jpg",
       },
     ],
   },

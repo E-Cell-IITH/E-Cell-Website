@@ -11,7 +11,15 @@ const nextConfig = {
     ]
   },
   images: {
-    domains: ["res.cloudinary.com",'images.pexels.com'],
+    domains: ["res.cloudinary.com",'images.pexels.com', "raw.githubusercontent.com"],
+    // remotePatterns: [
+    //   {
+    //     protocol: 'https',
+    //     hostname: 'raw.githubusercontent.com',
+    //     port: '',
+    //     pathname: '/**',
+    //   },
+    // ],
   },
 };
 
