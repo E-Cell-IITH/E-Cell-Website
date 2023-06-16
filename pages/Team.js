@@ -16,15 +16,11 @@ const heads = [
     domain: "Operations",
     heads: [
       {
-        name: "Anish Ambavat",
+        name: "Asit Desai",
         imgUrl:
-          "https://res.cloudinary.com/dwsverefw/image/upload/v1665876113/ecell/team/Anish_Ambavat_Operations_Head_1_dioism.jpg",
+          "https://raw.githubusercontent.com/abhinavydv/E-cell-IITH-Public-Data/master/Operations/Asit%20Desai/e-cell%20photo.jpg",
       },
-      {
-        name: "Yash Sharma",
-        imgUrl:
-          "https://res.cloudinary.com/dwsverefw/image/upload/v1665876113/ecell/team/Yash_Sharma_Operations_Head_1_pr9bwl.jpg",
-      },
+      
     ],
   },
   {
@@ -63,17 +59,7 @@ const heads = [
     ],
   },
   {
-    domain: "Sponsorship",
-    heads: [
-      {
-        name: "Tanmay Shah",
-        imgUrl:
-          "https://res.cloudinary.com/dwsverefw/image/upload/v1665876488/ecell/team/TanmayShah_SponHead_1_apyqpk.png",
-      },
-    ],
-  },
-  {
-    domain: " PR & Networking",
+    domain: "PR & Networking",
     heads: [
       {
         name: "Shubham Mohanty",
@@ -83,12 +69,32 @@ const heads = [
     ],
   },
   {
-    domain: "Design",
+    domain: "Design and Multimedia",
     heads: [
       {
-        name: "Viren Soni",
+        name: "Samyak Jain",
         imgUrl:
-          "https://res.cloudinary.com/dwsverefw/image/upload/v1665876488/ecell/team/Viren_Design_1_vvcrml.png",
+          "https://raw.githubusercontent.com/abhinavydv/E-cell-IITH-Public-Data/master/Design%20%26%20Multimedia/Samyak%20Jain/Samyak%20Jain%20E.jpg",
+      },
+    ],
+  },
+  {
+    domain: "Corporate Relations & Marketing",
+    heads: [
+      {
+        name: "Aman Jagtap",
+        imgUrl:
+          "https://raw.githubusercontent.com/abhinavydv/E-cell-IITH-Public-Data/master/Corporate%20Relations%20%26%20Marketing/Aman%20Jagtap/Aman_Jagtap.JPG",
+      },
+    ],
+  },
+  {
+    domain: "Media and Publicity",
+    heads: [
+      {
+        name: "Manasi Pasekar",
+        imgUrl:
+          "https://raw.githubusercontent.com/abhinavydv/E-cell-IITH-Public-Data/master/Media%20%26%20Publicity/Manasi/IMG20230219023159.jpg",
       },
     ],
   },
@@ -169,7 +175,7 @@ function Team() {
           imgUrl={
             "https://res.cloudinary.com/dwsverefw/image/upload/v1665868302/ecell/team/Shreyansh_Agarwal_Overall_Head_1_bi10yy.jpg"
           }
-          name="Shreyansh Agarwal"
+          name="Srijan Shahi"
           position="Overall Head"
           sx={{ py: 5 }}
           bold
