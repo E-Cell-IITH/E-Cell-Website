@@ -67,36 +67,37 @@ const events_competitions_info = [
   }
 ]
 
-const sponsorship_info = [
-  {
-    name: 'Anirudh Dash',
-    url: 'https://res.cloudinary.com/dwsverefw/image/upload/v1666447571/ecell/team/managers/anirudh_e0wo7y.jpg',
-  },
-  {
-    name: 'Gaurang',
-    url: 'https://res.cloudinary.com/dbmw0xoar/image/upload/v1671784704/ecell/WhatsApp_Image_2022-12-23_at_14.05.43_1_ruicwu.jpg',
-  },
-  {
-    name: 'Vedant',
-    url: 'https://res.cloudinary.com/dbmw0xoar/image/upload/v1666109699/ecell/Vedant_Sponsorship_akpelr.jpg',
-  },
-  {
-    name: 'Srijan',
-    url: 'https://res.cloudinary.com/dbmw0xoar/image/upload/v1671785699/ecell/Srijan_sponsorship_s9ousy_1_ebgjrd.jpg',
-  },
-  {
-    name: 'Harini',
-    url: 'https://res.cloudinary.com/dbmw0xoar/image/upload/v1666109711/ecell/Harini_naik_sponsorship_z2f58v.jpg',
-  },
-  {
-    name: 'Avishkar',
-    url: 'https://res.cloudinary.com/dbmw0xoar/image/upload/v1666112009/ecell/Avishkar_Sponsorship_pxsz7k.jpg',
-  },
-  {
-    name: 'Aishwarya',
-    url: 'https://res.cloudinary.com/dbmw0xoar/image/upload/v1666109706/ecell/Aishwarya_Sponsorship_xmocfh.jpg',
-  },
-];
+// const sponsorship_info = [
+//   {
+//     name: "Anirudh Dash",
+//     url: "https://res.cloudinary.com/dwsverefw/image/upload/v1666447571/ecell/team/managers/anirudh_e0wo7y.jpg",
+//   },
+//   {
+//     name: "Gaurang",
+//     url: "https://res.cloudinary.com/dbmw0xoar/image/upload/v1671784704/ecell/WhatsApp_Image_2022-12-23_at_14.05.43_1_ruicwu.jpg",
+//   },
+//   {
+//     name: "Vedant",
+//     url: "https://res.cloudinary.com/dbmw0xoar/image/upload/v1666109699/ecell/Vedant_Sponsorship_akpelr.jpg",
+//   },
+//   {
+//     name: "Srijan",
+//     url: "https://raw.githubusercontent.com/abhinavydv/E-cell-IITH-Public-Data/master/ECellHEAD/Srijan_sponsorship_s9ousy_1_ebgjrd.jpeg",
+//   },
+//   {
+//     name: "Harini",
+//     url: "https://res.cloudinary.com/dbmw0xoar/image/upload/v1666109711/ecell/Harini_naik_sponsorship_z2f58v.jpg",
+//   },
+//   {
+//     name: "Avishkar",
+//     url: "https://res.cloudinary.com/dbmw0xoar/image/upload/v1666112009/ecell/Avishkar_Sponsorship_pxsz7k.jpg",
+//   },
+//   {
+//     name: "Aishwarya",
+//     url: "https://res.cloudinary.com/dbmw0xoar/image/upload/v1666109706/ecell/Aishwarya_Sponsorship_xmocfh.jpg",
+//   },
+// ];
+
 const ideation_info = [
   {
     name: "Arsh Arora",

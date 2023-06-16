@@ -173,7 +173,7 @@ function Team() {
           id="head"
           notCard={true}
           imgUrl={
-            "https://res.cloudinary.com/dwsverefw/image/upload/v1665868302/ecell/team/Shreyansh_Agarwal_Overall_Head_1_bi10yy.jpg"
+            "https://raw.githubusercontent.com/abhinavydv/E-cell-IITH-Public-Data/master/ECellHEAD/Srijan_sponsorship_s9ousy_1_ebgjrd.jpeg"
           }
           name="Srijan Shahi"
           position="Overall Head"
