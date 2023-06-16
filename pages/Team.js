@@ -36,19 +36,29 @@ const heads = [
           "https://res.cloudinary.com/dwsverefw/image/upload/v1665876114/ecell/team/Anuj_Pandey_WebHead_1_mrhxks.jpg",
       },
     ],
+  }, 
+  {
+    domain: "Events & Competitions",
+    heads: [
+      {
+        name: "Manas Bhargava",
+        imgUrl:
+          "https://res.cloudinary.com/ds5dhpt5o/image/upload/v1686591641/E%20Cell/Manas_Bhargava_krmwwr.jpg",
+      },
+    ],
   },
   {
     domain: "Ideation",
     heads: [
       {
-        name: "Yashas Yajur",
+        name: "Pranadipan Sahoo",
         imgUrl:
-          "https://res.cloudinary.com/dwsverefw/image/upload/v1665876113/ecell/team/Yashas_Ideation_1_k4xjd1.jpg",
+          "https://res.cloudinary.com/ds5dhpt5o/image/upload/v1686591931/E%20Cell/Pranadipan_Sahoo_z8dore.jpg",
       },
       {
-        name: "Nandita Lakshmi",
+        name: "Sanika Karmore",
         imgUrl:
-          "https://res.cloudinary.com/dwsverefw/image/upload/v1665876114/ecell/team/Nandita_Ideation_1_qdovck.jpg",
+          "https://res.cloudinary.com/ds5dhpt5o/image/upload/v1686592075/E%20Cell/Sanika_Karmore_yuvw9b.jpg",
       },
     ],
   },

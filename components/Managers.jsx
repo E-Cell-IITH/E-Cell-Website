@@ -40,6 +40,37 @@ const operations_info = [
     url: false,
   },
 ];
+const events_competitions_info = [
+  {
+    name: "Dhruvin",
+    url: "http://res.cloudinary.com/ds5dhpt5o/image/upload/v1686594832/E%20Cell/Dhruvin.jpg"
+  },
+  {
+    name: "Yaswanth Balaji",
+    url: "http://res.cloudinary.com/ds5dhpt5o/image/upload/v1686594839/E%20Cell/Yaswanth%20Balaji.jpg"
+  },
+  {
+    name: "Devansh Jain",
+    url: "http://res.cloudinary.com/ds5dhpt5o/image/upload/v1686594844/E%20Cell/Devansh%20Jain.jpg"
+  },
+  {
+    name: "Pranay Jain",
+    url: "http://res.cloudinary.com/ds5dhpt5o/image/upload/v1686594845/E%20Cell/Pranay%20Jain.jpg"
+  },
+  {
+    name: "Rishi",
+    url: "http://res.cloudinary.com/ds5dhpt5o/image/upload/v1686594847/E%20Cell/Rishi.jpg"
+  },
+  {
+    name: "Divyansh Bansal",
+    url: "http://res.cloudinary.com/ds5dhpt5o/image/upload/v1686594850/E%20Cell/Divyansh%20Bansal.jpg"
+  },
+  {
+    name: "Karthik Kunchala",
+    url: "http://res.cloudinary.com/ds5dhpt5o/image/upload/v1686594851/E%20Cell/Karthik%20Kunchala.jpg"
+  }
+]
+
 const sponsorship_info = [
   {
     name: 'Anirudh Dash',
@@ -72,30 +103,39 @@ const sponsorship_info = [
 ];
 const ideation_info = [
   {
-    name: 'Ananya',
-    url: 'https://res.cloudinary.com/dbmw0xoar/image/upload/v1671784960/ecell/Ananya_Ideation_uhlpfc_1_khbzri.jpg',
+    name: "P Sanjana",
+    url: "http://res.cloudinary.com/ds5dhpt5o/image/upload/v1686595593/E%20Cell/P%20Sanjana.jpg"
   },
   {
-    name: 'Harshit Thakur',
-    url: 'https://res.cloudinary.com/dbmw0xoar/image/upload/v1666109711/ecell/Harshit_Ideation_p1m5me.jpg',
+    name: "Vedant",
+    url: "http://res.cloudinary.com/ds5dhpt5o/image/upload/v1686595596/E%20Cell/Vedant.jpg"
   },
   {
-    name: 'Owaise Ahmed',
-    url: 'https://res.cloudinary.com/dbmw0xoar/image/upload/v1671785728/ecell/Owaise_ideation_r5azmd_1_jq81lu.jpg',
+    name: "Tanmay Vishawarao",
+    url: "http://res.cloudinary.com/ds5dhpt5o/image/upload/v1686595603/E%20Cell/Tanmay%20Vishawarao.jpg"
   },
   {
-    name: 'Tanvisree',
-    url: 'https://res.cloudinary.com/dbmw0xoar/image/upload/v1666114309/ecell/WhatsApp_Image_2022-10-18_at_22.54.28_lwhpa1.jpg',
+    name: "Divya",
+    url: "http://res.cloudinary.com/ds5dhpt5o/image/upload/v1686595605/E%20Cell/Divya.jpg"
   },
   {
-    name: 'Shreyas',
-    url: 'https://res.cloudinary.com/dbmw0xoar/image/upload/v1666109713/ecell/ShreyasWankhede_ideation_zmxijk.jpg',
+    name: "Jayna",
+    url: "http://res.cloudinary.com/ds5dhpt5o/image/upload/v1686595606/E%20Cell/Jayna.jpg"
   },
   {
-    name: 'Pavan',
-    url: 'https://res.cloudinary.com/dbmw0xoar/image/upload/v1671785052/ecell/Pavan_Ideation_lm4ctf_1_kxbxb0.png',
+    name: "Abhishek Raje",
+    url: "http://res.cloudinary.com/ds5dhpt5o/image/upload/v1686595607/E%20Cell/Abhishek%20Raje.jpg"
   },
-];
+  {
+    name: "Aditya Gupta",
+    url: "http://res.cloudinary.com/ds5dhpt5o/image/upload/v1686595608/E%20Cell/Aditya%20Gupta.jpg"
+  },
+  {
+    name: "Arsh",
+    url: "http://res.cloudinary.com/ds5dhpt5o/image/upload/v1686595609/E%20Cell/Arsh.jpg"
+  }
+]
+
 const design_info = [
   {
     name: 'Samyak',
@@ -180,6 +220,7 @@ const description = [
   'Design domain creates design for the website , social media templates , events posters, promo videos and are also responsible for planning the overall logistics of designing the campus on the day of E summit.',
   "The Web domain is in charge of designing and managing the E-Cell website, as well as the CA-Portal and keeping information for our yearly flagship events. We are responsible for displaying the content in a very readable manner as well as handling other website-related technicalities. Apart from development, it is also responsible for maintaining the database of several startups and VC's with whom we have contact as well as  students from various universities.",
   "The Public Relations and Networking domain deals with building a network and increasing the reach of the E-Cell of IIT Hyderabad. We strive to connect the 'Entrepreneurship community. For this, we have taken the initiative of ENetworking. We work closely with the Operations domain for the Campus Ambassador program hosted approximately two months before the E-Summit We sign media collaboration deals and maintain a healthy relationship with media companies. We manage the social media accounts for our E-Cell and keep the engagement healthy by offering quality content to our viewers.",
+  "The Events and Competitions domain is responsible for planning, organizing, and managing events and competitions on and off campus. This includes brainstorming new ideas for events, coming up with creative ways to engage students, and working with other departments to ensure that events are successful. The Events and Competitions domain also plays a critical role in developing a strong entrepreneurial drive in the student community by providing opportunities for students to network with entrepreneurs, learn new skills, and compete for prizes."
 ];
 const Managers = () => {
   const Domain = ({ discription, info, title, sx }) => {
@@ -232,7 +273,7 @@ const Managers = () => {
             variant="p"
             sx={{
               color: 'white',
-              display: { xs: 'none', sm: 'none', md: 'none', lg:'none' , xl: 'block' },
+              display: { xs: 'none', sm: 'none', md: 'none', lg: 'none', xl: 'block' },
               width: { xs: '20rem', md: '30rem' },
               // margin: { xs: "0 auto", lg: "0 10rem" },
               textAlign: { xs: 'center', lg: 'left' },
@@ -334,7 +375,15 @@ const Managers = () => {
         info={design_info}
         title={'Design'}
       />
-      <Domain discription={description[4]} info={web_info} title={'Web'} />
+      <Domain
+        discription={description[6]}
+        info={events_competitions_info}
+        title={'Events and Competitions'}
+      />
+      <Domain
+        discription={description[4]}
+        info={web_info}
+        title={'Web'} />
       <Domain
         discription={description[5]}
         info={pr_info}
