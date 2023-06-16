@@ -259,6 +259,7 @@ const Managers = () => {
               // margin: { xs: "0 auto", xl: "0 8rem" },
               paddingBottom: '1rem',
               fontFamily: 'Montserrat',
+              textAlign: 'center',
               fontSize: {
                 sm: '1.8rem',
                 md: '2.5rem',
@@ -377,7 +378,7 @@ const Managers = () => {
       <Domain
         discription={description[6]}
         info={events_competitions_info}
-        title={'Events and Competitions'}
+        title={'Events & Competitions'}
       />
       <Domain
         discription={description[4]}
