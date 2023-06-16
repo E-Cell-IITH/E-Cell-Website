@@ -164,53 +164,52 @@ const design_info = [
 ];
 const web_info = [
   {
-    name: 'Jaswanth',
-    url: 'https://res.cloudinary.com/dbmw0xoar/image/upload/v1671786020/ecell/WhatsApp_Image_2022-12-23_at_14.29.49_1_h8ofke.jpg',
+    name: 'Abhinav Yadav',
+    url: 'https://raw.githubusercontent.com/abhinavydv/Ecell-Test/master/Web/AbhinavYadav/Abhinav.jpg',
   },
   {
-    name: 'Maharshi',
-    url: 'https://res.cloudinary.com/dbmw0xoar/image/upload/v1666335918/ecell/WhatsApp_Image_2022-10-19_at_00.48.53_f7ce81.jpg',
+    name: "Armaan Shaik",
+    url: "https://raw.githubusercontent.com/abhinavydv/Ecell-Test/master/Web/ShaikArmaan/ShaikArmaan_webbnw.jpg"
   },
   {
-    name: 'Siddarth Saha',
-    url: 'https://res.cloudinary.com/dbmw0xoar/image/upload/v1666109714/ecell/Siddarth_WebDev_jax5sq.jpg',
+    name: "Jash Jhatakia",
+    url: "https://raw.githubusercontent.com/abhinavydv/Ecell-Test/master/Web/JashJ/JashJ.jpg"
   },
   {
-    name: 'Siddhant',
-    url: 'https://res.cloudinary.com/dbmw0xoar/image/upload/v1666115485/ecell/WhatsApp_Image_2022-10-18_at_23.20.57_ks3mce.jpg',
-  },
+    name: "Adhith T",
+    url: "https://raw.githubusercontent.com/abhinavydv/Ecell-Test/master/Web/AdhithT/adhitht.jpg"
+  }
 ];
 
 const pr_info = [
   {
-    name: 'Aman Jagtap',
-    url: 'https://res.cloudinary.com/dwsverefw/image/upload/v1666448392/ecell/team/managers/AmanJagtap_PRandNetworking_fstzoo.jpg',
+    name: 'Arthi G J',
+    url: 'https://raw.githubusercontent.com/abhinavydv/Ecell-Test/master/PR-Networking/ArthiGJ/ArthiGJ.jpg',
   },
   {
-    name: 'Rishika Devarkonda',
-    url: 'https://res.cloudinary.com/dwsverefw/image/upload/v1666448398/ecell/team/managers/Rishika_PRandnetworking_o7xaox.jpg',
-  },
-
-  {
-    name: 'Manasi',
-    url: 'https://res.cloudinary.com/dbmw0xoar/image/upload/v1671785645/ecell/Manasi__PR___Networking__kchwl4_1_yedxzw.jpg',
+    name: "Kannan N S",
+    url: "https://raw.githubusercontent.com/abhinavydv/Ecell-Test/master/PR-Networking/KannanNS/KannanNS.jpg"
   },
   {
-    name: 'Rani Raman',
-    url: 'https://res.cloudinary.com/dbmw0xoar/image/upload/v1671784817/ecell/WhatsApp_Image_2022-12-23_at_14.05.43_2_1_dxa8if.jpg',
+    name: "Omkar Nilkanth",
+    url: "https://raw.githubusercontent.com/abhinavydv/Ecell-Test/master/PR-Networking/OmkarNilkanth/Omkar.jpeg"
   },
   {
-    name: 'Manas Bhargava',
-    url: 'https://res.cloudinary.com/dwsverefw/image/upload/v1666448399/ecell/team/managers/Manas_Bhargava_dsqzpq.jpg',
+    name: "Priyanshu Verma",
+    url: "https://raw.githubusercontent.com/abhinavydv/Ecell-Test/master/PR-Networking/PriyanshuVerma/Priyanshu.jpg"
   },
   {
-    name: 'Sanika Karmore',
-    url: 'https://res.cloudinary.com/dbmw0xoar/image/upload/v1671785907/ecell/Sanika_PR_njgayq_3_mwc893.jpg',
+    name: "Shubham Meher",
+    url: "https://raw.githubusercontent.com/abhinavydv/Ecell-Test/master/PR-Networking/ShubhamMeher/Shubham.jpg"
   },
   {
-    name: 'Areeb Hussain',
-    url: 'https://res.cloudinary.com/dwsverefw/image/upload/v1667654155/ecell/team/managers/areeb_zsneux.jpg',
+    name: "Swapnil Rawal",
+    url: "https://raw.githubusercontent.com/abhinavydv/Ecell-Test/master/PR-Networking/SwapnilRawal/swapnil.jpg"
   },
+  {
+    name: "Tejasri Relangi",
+    url: "https://raw.githubusercontent.com/abhinavydv/Ecell-Test/master/PR-Networking/TejasriRelangi/Tejasri.jpg"
+  }
 ];
 
 const description = [
