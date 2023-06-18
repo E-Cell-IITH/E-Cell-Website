@@ -326,7 +326,8 @@ const Managers = () => {
               // margin: { xs: "0 auto", xl: "0 8rem" },
               paddingBottom: '1rem',
               fontFamily: 'Montserrat',
-              textAlign: 'left',
+              textAlign: { xs: 'center', lg: 'left' },
+
               fontSize: {
                 sm: '1.8rem',
                 md: '2.5rem',
