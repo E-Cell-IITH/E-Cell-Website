@@ -8,11 +8,11 @@ import parallax from '../styles/team.module.css';
 
 const operations_info = [
   {
-    name: 'Kansihka P',
+    name: 'Kanishka P',
     url: 'https://raw.githubusercontent.com/abhinavydv/E-cell-IITH-Public-Data/master/Operations/JP%20Kanishka%20Prasad/IMG-20230601-WA0003.jpg',
   },
   {
-    name: 'Shreyansh B',
+    name: 'Shreyash B',
     url: 'https://raw.githubusercontent.com/abhinavydv/E-cell-IITH-Public-Data/master/Operations/Shreyash%20Bhanage/IMG_20221113_190759197.jpg',
   },
   {
@@ -112,7 +112,7 @@ const ideation_info = [
     url: "http://res.cloudinary.com/ds5dhpt5o/image/upload/v1686595593/E%20Cell/P%20Sanjana.jpg"
   },
   {
-    name: "Tanmay Vishawarao",
+    name: "Tanmay Vishwasrao",
     url: "http://res.cloudinary.com/ds5dhpt5o/image/upload/v1686595603/E%20Cell/Tanmay%20Vishawarao.jpg"
   },
   {
@@ -173,7 +173,7 @@ const media_pub_info = [
     url: 'https://raw.githubusercontent.com/abhinavydv/E-cell-IITH-Public-Data/master/Media%20%26%20Publicity/Grishmasri/image.jpg',
   },
   {
-    name: 'Swetanshu K',
+    name: 'Shwetanshu K',
     url: 'https://raw.githubusercontent.com/abhinavydv/E-cell-IITH-Public-Data/master/Media%20%26%20Publicity/Shwetanshu%20Kumar/IMG_7418~3.jpg',
   },
   {
@@ -248,11 +248,11 @@ const web_info = [
 
 const pr_info = [
   {
-    name: 'Arthi G J',
+    name: 'Arthi GJ',
     url: 'https://raw.githubusercontent.com/abhinavydv/Ecell-Test/master/PR-Networking/ArthiGJ/ArthiGJ.jpg',
   },
   {
-    name: "Kannan N S",
+    name: "Kannan NS",
     url: "https://raw.githubusercontent.com/abhinavydv/Ecell-Test/master/PR-Networking/KannanNS/KannanNS.jpg"
   },
   {
