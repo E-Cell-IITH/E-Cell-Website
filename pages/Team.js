@@ -193,6 +193,7 @@ function Team() {
           imgUrl={
             "https://raw.githubusercontent.com/abhinavydv/E-cell-IITH-Public-Data/master/ECellHEAD/Srijan_sponsorship_s9ousy_1_ebgjrd.jpeg"
           }
+          isFlip={true}
           email="head.ecell@campus.iith.ac.in"
           linkedIN="https://www.linkedin.com/in/srijan-shahi-1b6009278"
           name="Srijan Shahi"
@@ -279,6 +280,7 @@ function Team() {
                     >
                       <Card
                         className="card"
+                        isFlip = {true}
                         linkedIN={head.linkedIN}
                         email={head.email}
                         name={head.name}

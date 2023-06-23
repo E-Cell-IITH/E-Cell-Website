@@ -6,6 +6,7 @@ import style from '../styles/card.module.css';
 
 
 function Card({
+  isFlip = false,
   email = "maharshikadeval@gmail.com",
   linkedIN = "",
   imgUrl = "https://res.cloudinary.com/dwsverefw/image/upload/v1665687247/samples/people/smiling-man.jpg",
@@ -41,7 +42,7 @@ function Card({
           borderRadius: 3,
         }}
       >
-        <div className={style.container}>
+        {isFlip && <div className={style.container}>
           <div className={style.card}>
             <div className={style.front}>
               <Image
@@ -76,7 +77,17 @@ function Card({
               </a>
             </div>
           </div>
-        </div>
+        </div>}
+        {!isFlip &&
+        <Image
+        src={imgUrl}
+        layout="fill"
+        objectFit="cover"
+        alt={name}
+        className="card-img" 
+        priority
+      />
+        }
       </Box>
       <Box as="div">
         <Typography
