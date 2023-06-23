@@ -34,7 +34,7 @@ function Card({
         ...sx,
       }}
     >
-      <Box
+      {isFlip && <Box
         className="image"
         sx={{
           height: 170,
@@ -42,7 +42,7 @@ function Card({
           borderRadius: 3,
         }}
       >
-        {isFlip && <div className={style.container}>
+        <div className={style.container}>
           <div className={style.card}>
             <div className={style.front}>
               <Image
@@ -50,12 +50,12 @@ function Card({
                 layout="fill"
                 objectFit="cover"
                 alt={name}
-                className="card-img" 
+                className="card-img"
                 priority
               />
             </div>
             <div className={style.back}>
-              <a href={"mailto:"+email}>
+              <a href={"mailto:" + email}>
                 <Image
                   src="https://res.cloudinary.com/dkqekbvpg/image/upload/v1687506112/mail_rjdpni.png"
                   height="30"
@@ -77,18 +77,57 @@ function Card({
               </a>
             </div>
           </div>
-        </div>}
-        {!isFlip &&
-        <Image
-        src={imgUrl}
-        layout="fill"
-        objectFit="cover"
-        alt={name}
-        className="card-img" 
-        priority
-      />
-        }
-      </Box>
+        </div>
+      </Box>}
+      {!isFlip && <Box
+        className="image"
+        as="div"
+        sx={{
+          position:"relative",
+          height: 170,
+          width: 126,
+          pointerEvents:"none",
+          borderRadius: 3,
+          overflow:"hidden"
+        }}
+      >
+        <div className={style.container}>
+          <div className={style.card}>
+            <div className={style.front}>
+              <Image
+                src={imgUrl}
+                layout="fill"
+                objectFit="cover"
+                alt={name}
+                className="card-img"
+                priority
+              />
+            </div>
+            <div className={style.back}>
+              <a href={"mailto:" + email}>
+                <Image
+                  src="https://res.cloudinary.com/dkqekbvpg/image/upload/v1687506112/mail_rjdpni.png"
+                  height="30"
+                  width="30"
+                  alt={name}
+                  className="card-img"
+                  priority
+                />
+              </a>
+              <a href={linkedIN}>
+                <Image
+                  src="https://res.cloudinary.com/dwsverefw/image/upload/v1665696046/ecell/linkedin_yylzcz.png"
+                  height="30"
+                  width="30"
+                  alt={name}
+                  className="card-img"
+                  priority
+                />
+              </a>
+            </div>
+          </div>
+        </div>
+      </Box>}
       <Box as="div">
         <Typography
           className="name"
