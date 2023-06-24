@@ -16,24 +16,36 @@ const heads = [
     domain: "Operations",
     heads: [
       {
-        name: "Anish Ambavat",
+        name: "Asit Desai",
         imgUrl:
-          "https://res.cloudinary.com/dwsverefw/image/upload/v1665876113/ecell/team/Anish_Ambavat_Operations_Head_1_dioism.jpg",
+          "https://raw.githubusercontent.com/abhinavydv/E-cell-IITH-Public-Data/master/Operations/Asit%20Desai/e-cell%20photo.jpg",
+        email:"ch21btech11012@iith.ac.in",
+        linkedIN:"https://www.linkedin.com/in/asit-desai-02493a248/"
       },
-      {
-        name: "Yash Sharma",
-        imgUrl:
-          "https://res.cloudinary.com/dwsverefw/image/upload/v1665876113/ecell/team/Yash_Sharma_Operations_Head_1_pr9bwl.jpg",
-      },
+      
     ],
   },
   {
     domain: "Web",
     heads: [
       {
-        name: "Anuj Pandey",
+        name: "Maharshi Kadeval",
         imgUrl:
-          "https://res.cloudinary.com/dwsverefw/image/upload/v1665876114/ecell/team/Anuj_Pandey_WebHead_1_mrhxks.jpg",
+          "https://raw.githubusercontent.com/abhinavydv/Ecell-Test/master/Web/MaharshiKadeval/Maharshi.jpg",
+        email:"cs21btech11027@iith.ac.in",
+        linkedIN:""
+      },
+    ],
+  }, 
+  {
+    domain: "Events & Competitions",
+    heads: [
+      {
+        name: "Manas Bhargava",
+        imgUrl:
+          "https://res.cloudinary.com/ds5dhpt5o/image/upload/v1686591641/E%20Cell/Manas_Bhargava_krmwwr.jpg",
+        email:"ch21btech11019@iith.ac.in",
+        linkedIN:"https://www.linkedin.com/in/manas-bhargava-44b156243"
       },
     ],
   },
@@ -41,44 +53,66 @@ const heads = [
     domain: "Ideation",
     heads: [
       {
-        name: "Yashas Yajur",
+        name: "Pranadipan Sahoo",
         imgUrl:
-          "https://res.cloudinary.com/dwsverefw/image/upload/v1665876113/ecell/team/Yashas_Ideation_1_k4xjd1.jpg",
+          "https://res.cloudinary.com/ds5dhpt5o/image/upload/v1686591931/E%20Cell/Pranadipan_Sahoo_z8dore.jpg",
+        email:"ms21btech11021@iith.ac.in",
+        linkedIN:"https://www.linkedin.com/in/pranadipan-sahoo-361946246/"
       },
       {
-        name: "Nandita Lakshmi",
+        name: "Sanika Karmore",
         imgUrl:
-          "https://res.cloudinary.com/dwsverefw/image/upload/v1665876114/ecell/team/Nandita_Ideation_1_qdovck.jpg",
-      },
-    ],
-  },
-  {
-    domain: "Sponsorship",
-    heads: [
-      {
-        name: "Tanmay Shah",
-        imgUrl:
-          "https://res.cloudinary.com/dwsverefw/image/upload/v1665876488/ecell/team/TanmayShah_SponHead_1_apyqpk.png",
+          "https://res.cloudinary.com/ds5dhpt5o/image/upload/v1686592075/E%20Cell/Sanika_Karmore_yuvw9b.jpg",
+        email:"ideation.ecell@campus.iith.ac.in",
+        linkedIN:"https://www.linkedin.com/in/sanika-karmore-22aab6228"
       },
     ],
   },
   {
-    domain: " PR & Networking",
+    domain: "PR & Networking",
     heads: [
       {
-        name: "Tanay Yadav",
+        name: "Shubham Mohanty",
         imgUrl:
-          "https://res.cloudinary.com/dwsverefw/image/upload/v1665876488/ecell/team/IMG_20220815_141142_Bokeh__01_1_it1j2m.jpg",
+          "https://raw.githubusercontent.com/abhinavydv/Ecell-Test/master/PR-Networking/SubhamMohanty/Subham.jpg",
+        email:"pr.ecell@campus.iith.ac.in",
+        linkedIN:"https://www.linkedin.com/in/subham-mohanty-a0589a229/"
       },
     ],
   },
   {
-    domain: "Design",
+    domain: "Design and Multimedia",
     heads: [
       {
-        name: "Viren Soni",
+        name: "Samyak Jain",
         imgUrl:
-          "https://res.cloudinary.com/dwsverefw/image/upload/v1665876488/ecell/team/Viren_Design_1_vvcrml.png",
+          "https://raw.githubusercontent.com/abhinavydv/E-cell-IITH-Public-Data/master/Design%20%26%20Multimedia/Samyak%20Jain/Samyak%20Jain%20E.jpg",
+        email:"bd21bdes11016@iith.ac.in",
+        linkedIN:"https://www.linkedin.com/in/-samyakjain"
+      },
+    ],
+  },
+  {
+    domain: "Corporate Relations & Marketing",
+    heads: [
+      {
+        name: "Aman Jagtap",
+        imgUrl:
+          "https://raw.githubusercontent.com/abhinavydv/E-cell-IITH-Public-Data/master/Corporate%20Relations%20%26%20Marketing/Aman%20Jagtap/Aman_Jagtap.JPG",
+        email:"sponsorship.ecell@campus.iith.ac.in",
+        linkedIN:"https://www.linkedin.com/in/aman-jagtap-a29773194"
+      },
+    ],
+  },
+  {
+    domain: "Media and Publicity",
+    heads: [
+      {
+        name: "Manasi Pasekar",
+        imgUrl:
+          "https://raw.githubusercontent.com/abhinavydv/E-cell-IITH-Public-Data/master/Media%20%26%20Publicity/Manasi/IMG20230219023159.jpg",
+        email:"bd21bdes11013@iith.ac.in",
+        linkedIN:"https://www.linkedin.com/in/manasi-pasekar-4a67a9241"
       },
     ],
   },
@@ -157,9 +191,12 @@ function Team() {
           id="head"
           notCard={true}
           imgUrl={
-            "https://res.cloudinary.com/dwsverefw/image/upload/v1665868302/ecell/team/Shreyansh_Agarwal_Overall_Head_1_bi10yy.jpg"
+            "https://raw.githubusercontent.com/abhinavydv/E-cell-IITH-Public-Data/master/ECellHEAD/Srijan_sponsorship_s9ousy_1_ebgjrd.jpeg"
           }
-          name="Shreyansh Agarwal"
+          isFlip={true}
+          email="head.ecell@campus.iith.ac.in"
+          linkedIN="https://www.linkedin.com/in/srijan-shahi-1b6009278"
+          name="Srijan Shahi"
           position="Overall Head"
           sx={{ py: 5 }}
           bold
@@ -243,6 +280,9 @@ function Team() {
                     >
                       <Card
                         className="card"
+                        isFlip = {true}
+                        linkedIN={head.linkedIN}
+                        email={head.email}
                         name={head.name}
                         imgUrl={head.imgUrl}
                       />
