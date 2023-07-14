@@ -19,6 +19,7 @@ export default function Home() {
 
   const workshopslist = [
     {
+      key:1,
       title: 'REMARKSKILL WORKSHOP SERIES<br/> VENUE: IIT HYDERABAD', //HTML code works here
       description: '', //can even give description
       image: '/remarkskill.png',
@@ -73,7 +74,7 @@ export default function Home() {
 
         <Grid container justifyContent="center" columnGap={7} rowGap={4}>
           {workshopslist.map(workshop => {
-            return <Grid md={9} sm={12} xs={12} item className={styles.workshop}>
+            return <Grid md={9} sm={12} xs={12} item className={styles.workshop} key={workshop.key}>
               <div className={styles.try} style={{ color: 'white' }}>
                 <Grid container justifyContent='center'>
                   <Image src={workshop.image} height={workshop.height} width={workshop.width} />
