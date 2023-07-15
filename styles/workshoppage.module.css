@@ -1,0 +1,19 @@
+.workshop{
+    padding: 0.2vw;
+    color: white;
+    margin: 40px;
+    font-size: 25px;
+    background-image: linear-gradient(black, black),
+    linear-gradient(316.31deg, rgba(56, 128, 231, 1) 40%, rgba(98, 215, 216, 1) 80%);
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+    border-radius: 30px;
+}
+
+
+.try{
+    margin-left: 2vw;
+    margin-right: 2vw;
+    margin-top: 2vw;
+    /* margin-bottom: 0.5vw; */
+}

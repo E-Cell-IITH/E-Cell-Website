@@ -1,0 +1,58 @@
+import Grid from "@mui/material/Grid";
+import Head from "next/head";
+import Image from 'next/image';
+import Link from 'next/link';
+import React from "react";
+import Navbar from "../components/first";
+import styles from '../styles/workshoppage.module.css';
+
+export default function Home() {
+  const workshopslist = [
+    {
+      title: 'REMARKSKILL WORKSHOP SERIES<br/> VENUE: IIT HYDERABAD', //HTML code works here
+      description: '', //can even give description
+      image: 'https://res.cloudinary.com/dkqekbvpg/image/upload/v1689402956/remarkskill_uq6xie.png',
+      link: 'https://remarkskill.com/iithyderabad/', // registration link
+      height: 400, //height and width of image
+      width: 536
+    },
+  ]
+
+  return (
+    <>
+      <Head>
+        <title>Workshops</title>
+      </Head>
+
+      <Navbar heading={'WORKSHOPS'} desc={false}/>
+
+      <div>
+        <Grid container display="flex" alignItems="center" justifyContent="center" columnGap={7} rowGap={4}>
+          {workshopslist.map((workshop,key) => {
+            return (<Grid item lg={3} md={4} sm={6.3} xs={7} className={styles.workshop} key={key} style={{zIndex:"1"}}>
+              <div className={styles.try} style={{ color: 'white' }}>
+                <Image src={workshop.image} height={workshop.height} width={workshop.width} />
+                <div style={{ position: 'relative', bottom: 0, display: 'flex', justifyContent: 'center' }}>
+                  <button
+                    className="text-white border-blue border-2 px-3 md:px-5
+                      py-5 relative rounded-lg leading-5"
+                  >
+                    <Link href={workshop.link} >
+                      <a className="text-md md:text-xl " target="_blank">Register Now</a>
+                    </Link>
+                  </button>
+                </div>
+                <br />
+              </div>
+            </Grid>)
+          })}
+        </Grid>
+      </div>
+
+      <br />
+      <br />
+      <br />
+      <br />
+    </>
+  );
+}
