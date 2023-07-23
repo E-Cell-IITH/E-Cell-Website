@@ -186,6 +186,26 @@ function Team() {
         <title>Team Entrepreneurship Cell IIT Hyderabad</title>
       </Head>
       <Navbar heading="Team E-Cell" desc={false} />
+      <Typography
+        variant="h4"
+        sx={{
+          color: "white",
+          fontFamily: "Montserrat",
+          mt: 6,
+          fontSize: {
+            xs: "2rem",
+            md: "3rem",
+          },
+          textAlign: "center",
+          fontWeight: 400,
+          textAlignLast: "center",
+          fontWeight: 600,
+          position: "relative",
+          zIndex: 20,
+        }}
+      >
+        OVERALL HEAD
+      </Typography>
       <div>
         <Card
           id="head"
@@ -208,6 +228,7 @@ function Team() {
           color: "white",
           fontFamily: "Montserrat",
           mt: 6,
+          mb:5,
           fontSize: {
             xs: "2rem",
             md: "3rem",
@@ -237,6 +258,7 @@ function Team() {
           },
         }}
         spacing={0}
+        rowSpacing={{xs:1, sm:3, md:7}}
         className={style2.gap}
       >
         {heads.map((domainInfo) => (
@@ -269,7 +291,7 @@ function Team() {
                 {domainInfo.domain}
               </Typography>
               {/* Cards of heads */}
-              <Grid container item spacing={5} justifyContent="center">
+              <Grid container item spacing={5} justifyContent="center"  >
                 {domainInfo.heads.map((head, index) => (
                   <React.Fragment key={head}>
                     <Grid

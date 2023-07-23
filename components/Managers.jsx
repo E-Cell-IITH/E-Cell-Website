@@ -385,7 +385,7 @@ const Managers = () => {
               zIndex: 30,
               justifyContent: 'left',
             }}
-            spacing={1}
+            spacing={{sm:12, md:5, xl:1}}
           >
             {info.map(({ name, url }) => (
               <Grid item xs={12} sm={6} md={4} xl={3} key={name}>
