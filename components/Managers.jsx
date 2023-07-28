@@ -237,7 +237,7 @@ const web_info = [
     url: 'https://raw.githubusercontent.com/abhinavydv/Ecell-Test/master/Web/AbhinavYadav/Abhinav.jpg',
   },
   {
-    name: "Armaan Shaik",
+    name: "Armaan",
     url: "https://raw.githubusercontent.com/abhinavydv/E-cell-IITH-Public-Data/master/Web/ShaikArmaan/ShaikArmaan.jpeg"
   },
   {
