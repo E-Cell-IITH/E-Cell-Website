@@ -9,13 +9,6 @@ import styles from '../styles/workshoppage.module.css';
 export default function Home() {
   const workshopslist = [
     {
-      title: 'REMARKSKILL WORKSHOP SERIES<br/> VENUE: IIT HYDERABAD', //HTML code works here
-      description: '', //can even give description
-      image: 'https://res.cloudinary.com/dkqekbvpg/image/upload/v1689402956/remarkskill_uq6xie.png',
-      link: 'https://remarkskill.com/iithyderabad/', // registration link
-      height: 400, //height and width of image
-      width: 536
-    },
     {
       title: 'REMARKSKILL WORKSHOP SERIES<br/> VENUE: IIT HYDERABAD', //HTML code works here
       description: '', //can even give description
