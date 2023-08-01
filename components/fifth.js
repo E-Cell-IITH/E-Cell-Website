@@ -7,7 +7,11 @@ import Link from "next/link";
 export default function Fifth({esummit = false}) {
   return (
     <footer>
-      <div className={`text-white py-9 ${esummit ? 'bg-dark' : 'bg-gradient-to-b from-[#281332] to-transparent' } `}>
+      <div
+        className={`text-white py-9 ${
+          esummit ? "bg-dark" : "bg-gradient-to-b from-[#281332] to-transparent"
+        } `}
+      >
         <Grid container>
           <Grid item sm={1}></Grid>
           <Grid item sm={3} justifyContent="center" className={style.QL}>
@@ -121,8 +125,13 @@ export default function Fifth({esummit = false}) {
             </div>
           </Grid>
           <Grid item xs={3} sm={3} md={1}></Grid>
-          <Grid item xs={6.4} sm={6.4} md={3} className={'text-left'}>
-            <h2 className={'text-[2vw] font-bold text-center md:text-left md:pl-8 pb-5 !ml-0 sm:pb-1'} id={style.q1}>
+          <Grid item xs={6.4} sm={6.4} md={3} className={"text-left"}>
+            <h2
+              className={
+                "text-[2vw] font-bold text-center md:text-left md:pl-8 pb-5 !ml-0 sm:pb-1"
+              }
+              id={style.q1}
+            >
               Contact us
             </h2>
             <div className={style.log}>
@@ -162,6 +171,8 @@ export default function Fifth({esummit = false}) {
                 />
               </div>
               <div className={style.list1} id={style.list3}>
+                (+91)90900 72712
+                <br />
                 (+91)8979471587
               </div>
             </div>
