@@ -40,6 +40,10 @@
     padding-top: 5rem!important;
 }
 
+/* .MuiTypography-h4{
+    text-align: left !important;
+} */
+
 @media screen and (min-width:1400px) {
     .gap{
         gap: 0rem
