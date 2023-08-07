@@ -173,7 +173,7 @@ export default function Fifth({esummit = false}) {
               <div className={style.list1} id={style.list3}>
                 (+91)90900 72712
                 <br />
-                (+91)8979471587
+                (+91)93265 04807
               </div>
             </div>
           </Grid>
