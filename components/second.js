@@ -2,7 +2,7 @@ import Grid from "@mui/material/Grid";
 import style from "../styles/second.module.css";
 import Image from "next/image";
 import { useMediaQuery } from "@mui/material";
-import { useLayoutEffect, useRef } from "react";
+import { useLayoutEffect, useEffect, useRef } from "react";
 import { gsap } from "gsap";
 
 const ids = ["#vision, #partner", "#collabs", "#bond", "#media"];
@@ -10,7 +10,7 @@ const ids = ["#vision, #partner", "#collabs", "#bond", "#media"];
 export default function Second() {
   const matchesMd = useMediaQuery("(min-width:900px)");
   const parent = useRef();
-  useLayoutEffect(() => {
+  useEffect(() => {
     const ctx = gsap.context(() => {
       if (matchesMd) {
         gsap.fromTo(

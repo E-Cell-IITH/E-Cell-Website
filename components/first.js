@@ -2,7 +2,7 @@ import style from "../styles/first.module.css";
 import Grid from "@mui/material/Grid";
 import Image from "next/image";
 import Box from "@mui/material/Box";
-import { useLayoutEffect, useRef } from "react";
+import { useLayoutEffect, useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import { useMediaQuery } from "@mui/material";
@@ -20,7 +20,7 @@ export default function Navbar({
 
   const matchesMd = useMediaQuery("(min-width:900px)");
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     let ctx = gsap.context(() => {
       gsap.fromTo(
         "#tagline > *, #smLinks>*",
