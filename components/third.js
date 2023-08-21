@@ -4,7 +4,7 @@ import Grid from "@mui/material/Grid";
 import { Button } from "@mui/material";
 import { useState } from "react";
 import Box from "@mui/material/Box";
-import { useLayoutEffect } from "react";
+import { useLayoutEffect, useEffect } from "react";
 import { gsap } from "gsap";
 import { useRef, createRef } from "react";
 
@@ -104,7 +104,7 @@ export default function Third() {
   const compRef = useRef(null);
   const nodeRef = useRef(null);
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     gsap.fromTo(
       nodeRef.current,
       { x: -15, autoAlpha: 0.09 },
