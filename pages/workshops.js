@@ -21,7 +21,7 @@ export default function Home() {
       title: "REMARKSKILL WORKSHOP SERIES<br/> VENUE: IIT HYDERABAD", //HTML code works here
       description: "", //can even give description
       image:
-        "https://res.cloudinary.com/dn8obuhkt/image/upload/v1691174242/LOGO3dTRANSP-removebg-preview_gu26ma.png",
+        "https://res.cloudinary.com/dn8obuhkt/image/upload/v1692969301/c85c2004-38d7-4e3e-aa2e-a4b98038f7b2_ncligb.jpg",
       link: "https://remarkskill.com/iithyderabad/", // registration link
       height: 400, //height and width of image
       width: 536,
