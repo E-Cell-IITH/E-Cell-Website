@@ -192,6 +192,11 @@ const media_pub_info = [
     name: 'Agrim Singh',
     url: 'https://raw.githubusercontent.com/abhinavydv/E-cell-IITH-Public-Data/master/Media%20%26%20Publicity/Agrim%20Singh/IMG_20230311_151733.jpg',
   },
+  {
+    name: 'Nisarg Dodia',
+    url: "https://raw.githubusercontent.com/abhinavydv/E-cell-IITH-Public-Data/master/Media%20%26%20Publicity/Nisarg%20Dodia/NIsarg%20Dodia.jpeg",
+  },
+  
 ];
 const corp_mark_info = [
   {
