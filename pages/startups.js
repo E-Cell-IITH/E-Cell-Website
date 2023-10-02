@@ -160,9 +160,10 @@ const Sponsor = () => {
                 <Card>
                   <CardMedia
                     component="img"
-                    style={{ width: '350px', height: 'auto', minHeight:'350px' }}
+                    style={{ minWidth: '100%', height: 'auto', minHeight:'350px', borderBottom:"solid 2px black", maxWidth:"350px" }}
                     image={card.imageUrl}
                     alt={card.title}
+
                   />
                   <CardContent>
                     <Typography variant="h5">{card.title}</Typography>
