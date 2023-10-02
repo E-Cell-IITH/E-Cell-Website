@@ -9,14 +9,15 @@ import styles from '../styles/workshoppage.module.css';
 export default function Home() {
   const workshopslist = [
     {
-      title: 'REMARKSKILL WORKSHOP SERIES<br/> VENUE: IIT HYDERABAD', //HTML code works here
-      description: '', //can even give description
-      image: 'https://res.cloudinary.com/dkqekbvpg/image/upload/v1689402956/remarkskill_uq6xie.png',
-      link: 'https://remarkskill.com/iithyderabad/', // registration link
+      title: "REMARKSKILL WORKSHOP SERIES<br/> VENUE: IIT HYDERABAD", //HTML code works here
+      description: "", //can even give description
+      image:
+        "https://res.cloudinary.com/dn8obuhkt/image/upload/v1692615883/ECell/IIT_HYDERABAD_TECHNICAL_kudx9f.jpg",
+      link: "https://rzp.io/l/pEHK4OK2M", // registration link
       height: 400, //height and width of image
-      width: 536
+      width: 536,
     },
-  ]
+  ];
 
   return (
     <>

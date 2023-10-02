@@ -143,7 +143,7 @@ function Card({
         >
           {name}
         </Typography>
-        {/* {position && (
+         {position && (
           <Typography
             className="position"
             variant="h6"
@@ -161,7 +161,7 @@ function Card({
           >
             {position}
           </Typography>
-        )} */}
+        )}
       </Box>
     </Box>
   );

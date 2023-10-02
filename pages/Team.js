@@ -49,9 +49,9 @@ const heads = [
       {
         name: "Sanika Karmore",
         imgUrl:
-          "https://res.cloudinary.com/ds5dhpt5o/image/upload/v1686592075/E%20Cell/Sanika_Karmore_yuvw9b.jpg",
-        email: "ideation.ecell@campus.iith.ac.in",
-        linkedIN: "https://www.linkedin.com/in/sanika-karmore-22aab6228",
+        "https://raw.githubusercontent.com/abhinavydv/Ecell-Test/master/Ideation/Sanika/Sanika.jpg",
+        email:"ideation.ecell@campus.iith.ac.in",
+        linkedIN:"https://www.linkedin.com/in/sanika-karmore-22aab6228"
       },
     ],
   },
