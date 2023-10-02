@@ -139,8 +139,8 @@ const design_info = [
     url: 'https://raw.githubusercontent.com/abhinavydv/E-cell-IITH-Public-Data/master/Design%20%26%20Multimedia/Yasir/Snapchat-70778184.jpg',
   },
   {
-    name: 'Surabhi M',
-    url: 'https://raw.githubusercontent.com/abhinavydv/E-cell-IITH-Public-Data/master/Design%20%26%20Multimedia/Surabhi/IMG-20220727-WA0085.jpg'
+    name: 'Aditya H',
+    url: 'https://raw.githubusercontent.com/abhinavydv/E-cell-IITH-Public-Data/master/Design%20%26%20Multimedia/Aditya/Aditya%20Heshi.jpg'
   },
   {
     name: 'Parth B',
@@ -155,10 +155,6 @@ const design_info = [
     url: 'https://raw.githubusercontent.com/abhinavydv/E-cell-IITH-Public-Data/master/Design%20%26%20Multimedia/Aryan/IMG_1370-01.jpeg',
   },
   {
-    name: 'Ansh A',
-    url: 'https://raw.githubusercontent.com/abhinavydv/E-cell-IITH-Public-Data/master/Design%20%26%20Multimedia/Ansh/837F2FB1-E9C5-4C79-A793-0EBA1DE7A008.jpeg',
-  },
-  {
     name: 'Akshat P',
     url: 'https://raw.githubusercontent.com/abhinavydv/E-cell-IITH-Public-Data/master/Design%20%26%20Multimedia/Akshat/IMG_20221204_210542.jpg',
   },
@@ -167,6 +163,10 @@ const media_pub_info = [
   {
     name: 'Monish A',
     url: 'https://raw.githubusercontent.com/abhinavydv/E-cell-IITH-Public-Data/master/Media%20%26%20Publicity/Monish%20Asawa/IMG_20230531_213429.jpg',
+  },
+  {
+    name: 'Ansh A',
+    url: 'https://raw.githubusercontent.com/abhinavydv/E-cell-IITH-Public-Data/master/Design%20%26%20Multimedia/Ansh/837F2FB1-E9C5-4C79-A793-0EBA1DE7A008.jpeg',
   },
   {
     name: 'Grishmasri D',
@@ -192,10 +192,15 @@ const media_pub_info = [
     name: 'Agrim Singh',
     url: 'https://raw.githubusercontent.com/abhinavydv/E-cell-IITH-Public-Data/master/Media%20%26%20Publicity/Agrim%20Singh/IMG_20230311_151733.jpg',
   },
+  {
+    name: 'Nisarg Dodia',
+    url: "https://raw.githubusercontent.com/abhinavydv/E-cell-IITH-Public-Data/master/Media%20%26%20Publicity/Nisarg%20Dodia/NIsarg%20Dodia.jpeg",
+  },
+  
 ];
 const corp_mark_info = [
   {
-    name: 'Vaiavi G',
+    name: 'Vainavi G',
     url: 'https://raw.githubusercontent.com/abhinavydv/E-cell-IITH-Public-Data/master/Corporate%20Relations%20%26%20Marketing/Vainavi%20Gawde/WhatsApp%20Image%202023-05-31%20at%2023.39.08.jpeg',
   },
   {
@@ -237,7 +242,7 @@ const web_info = [
     url: 'https://raw.githubusercontent.com/abhinavydv/Ecell-Test/master/Web/AbhinavYadav/Abhinav.jpg',
   },
   {
-    name: "Armaan Shaik",
+    name: "Armaan",
     url: "https://raw.githubusercontent.com/abhinavydv/E-cell-IITH-Public-Data/master/Web/ShaikArmaan/ShaikArmaan.jpeg"
   },
   {
@@ -385,7 +390,7 @@ const Managers = () => {
               zIndex: 30,
               justifyContent: 'left',
             }}
-            spacing={1}
+            spacing={{sm:12, md:5, xl:1}}
           >
             {info.map(({ name, url }) => (
               <Grid item xs={12} sm={6} md={4} xl={3} key={name}>

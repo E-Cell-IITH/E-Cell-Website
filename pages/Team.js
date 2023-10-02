@@ -19,10 +19,9 @@ const heads = [
         name: "Asit Desai",
         imgUrl:
           "https://raw.githubusercontent.com/abhinavydv/E-cell-IITH-Public-Data/master/Operations/Asit%20Desai/e-cell%20photo.jpg",
-        email:"ch21btech11012@iith.ac.in",
-        linkedIN:"https://www.linkedin.com/in/asit-desai-02493a248/"
+        email: "ch21btech11012@iith.ac.in",
+        linkedIN: "https://www.linkedin.com/in/asit-desai-02493a248/",
       },
-      
     ],
   },
   {
@@ -32,20 +31,8 @@ const heads = [
         name: "Maharshi Kadeval",
         imgUrl:
           "https://raw.githubusercontent.com/abhinavydv/Ecell-Test/master/Web/MaharshiKadeval/Maharshi.jpg",
-        email:"cs21btech11027@iith.ac.in",
-        linkedIN:""
-      },
-    ],
-  }, 
-  {
-    domain: "Events & Competitions",
-    heads: [
-      {
-        name: "Manas Bhargava",
-        imgUrl:
-          "https://res.cloudinary.com/ds5dhpt5o/image/upload/v1686591641/E%20Cell/Manas_Bhargava_krmwwr.jpg",
-        email:"ch21btech11019@iith.ac.in",
-        linkedIN:"https://www.linkedin.com/in/manas-bhargava-44b156243"
+        email: "cs21btech11027@iith.ac.in",
+        linkedIN: "",
       },
     ],
   },
@@ -56,8 +43,8 @@ const heads = [
         name: "Pranadipan Sahoo",
         imgUrl:
           "https://res.cloudinary.com/ds5dhpt5o/image/upload/v1686591931/E%20Cell/Pranadipan_Sahoo_z8dore.jpg",
-        email:"ms21btech11021@iith.ac.in",
-        linkedIN:"https://www.linkedin.com/in/pranadipan-sahoo-361946246/"
+        email: "ms21btech11021@iith.ac.in",
+        linkedIN: "https://www.linkedin.com/in/pranadipan-sahoo-361946246/",
       },
       {
         name: "Sanika Karmore",
@@ -69,26 +56,14 @@ const heads = [
     ],
   },
   {
-    domain: "PR & Networking",
+    domain: "Events & Competitions",
     heads: [
       {
-        name: "Shubham Mohanty",
+        name: "Manas Bhargava",
         imgUrl:
-          "https://raw.githubusercontent.com/abhinavydv/Ecell-Test/master/PR-Networking/SubhamMohanty/Subham.jpg",
-        email:"pr.ecell@campus.iith.ac.in",
-        linkedIN:"https://www.linkedin.com/in/subham-mohanty-a0589a229/"
-      },
-    ],
-  },
-  {
-    domain: "Design and Multimedia",
-    heads: [
-      {
-        name: "Samyak Jain",
-        imgUrl:
-          "https://raw.githubusercontent.com/abhinavydv/E-cell-IITH-Public-Data/master/Design%20%26%20Multimedia/Samyak%20Jain/Samyak%20Jain%20E.jpg",
-        email:"bd21bdes11016@iith.ac.in",
-        linkedIN:"https://www.linkedin.com/in/-samyakjain"
+          "https://res.cloudinary.com/ds5dhpt5o/image/upload/v1686591641/E%20Cell/Manas_Bhargava_krmwwr.jpg",
+        email: "ch21btech11019@iith.ac.in",
+        linkedIN: "https://www.linkedin.com/in/manas-bhargava-44b156243",
       },
     ],
   },
@@ -99,8 +74,32 @@ const heads = [
         name: "Aman Jagtap",
         imgUrl:
           "https://raw.githubusercontent.com/abhinavydv/E-cell-IITH-Public-Data/master/Corporate%20Relations%20%26%20Marketing/Aman%20Jagtap/Aman_Jagtap.JPG",
-        email:"sponsorship.ecell@campus.iith.ac.in",
-        linkedIN:"https://www.linkedin.com/in/aman-jagtap-a29773194"
+        email: "sponsorship.ecell@campus.iith.ac.in",
+        linkedIN: "https://www.linkedin.com/in/aman-jagtap-a29773194",
+      },
+    ],
+  },
+  {
+    domain: "Design and Multimedia",
+    heads: [
+      {
+        name: "Samyak Jain",
+        imgUrl:
+          "https://raw.githubusercontent.com/abhinavydv/E-cell-IITH-Public-Data/master/Design%20%26%20Multimedia/Samyak%20Jain/Samyak%20Jain%20E.jpg",
+        email: "bd21bdes11016@iith.ac.in",
+        linkedIN: "https://www.linkedin.com/in/-samyakjain",
+      },
+    ],
+  },
+  {
+    domain: "PR & Networking",
+    heads: [
+      {
+        name: "Shubham Mohanty",
+        imgUrl:
+          "https://raw.githubusercontent.com/abhinavydv/Ecell-Test/master/PR-Networking/SubhamMohanty/Subham.jpg",
+        email: "pr.ecell@campus.iith.ac.in",
+        linkedIN: "https://www.linkedin.com/in/subham-mohanty-a0589a229/",
       },
     ],
   },
@@ -111,8 +110,8 @@ const heads = [
         name: "Manasi Pasekar",
         imgUrl:
           "https://raw.githubusercontent.com/abhinavydv/E-cell-IITH-Public-Data/master/Media%20%26%20Publicity/Manasi/IMG20230219023159.jpg",
-        email:"bd21bdes11013@iith.ac.in",
-        linkedIN:"https://www.linkedin.com/in/manasi-pasekar-4a67a9241"
+        email: "bd21bdes11013@iith.ac.in",
+        linkedIN: "https://www.linkedin.com/in/manasi-pasekar-4a67a9241",
       },
     ],
   },
@@ -186,6 +185,26 @@ function Team() {
         <title>Team Entrepreneurship Cell IIT Hyderabad</title>
       </Head>
       <Navbar heading="Team E-Cell" desc={false} />
+      <Typography
+        variant="h4"
+        sx={{
+          color: "white",
+          fontFamily: "Montserrat",
+          mt: 6,
+          fontSize: {
+            xs: "2rem",
+            md: "3rem",
+          },
+          textAlign: "center",
+          fontWeight: 400,
+          textAlignLast: "center",
+          fontWeight: 600,
+          position: "relative",
+          zIndex: 20,
+        }}
+      >
+        OVERALL HEAD
+      </Typography>
       <div>
         <Card
           id="head"
@@ -208,6 +227,7 @@ function Team() {
           color: "white",
           fontFamily: "Montserrat",
           mt: 6,
+          mb:5,
           fontSize: {
             xs: "2rem",
             md: "3rem",
@@ -237,59 +257,67 @@ function Team() {
           },
         }}
         spacing={0}
+        rowSpacing={{xs:1, sm:3, md:7}}
         className={style2.gap}
-      >
+        >
         {heads.map((domainInfo) => (
           <Grid
-            container
-            item
-            key={domainInfo}
-            lg={4}
-            sm={12}
-            sx={{ mt: "1rem" }}
+          container
+          item
+          key={domainInfo}
+          lg={4}
+          sm={12}
+          sx={{ 
+            mt: "1rem" ,
+            
+          }}
           >
-            {/* Domain Title */}
-            <Grid item xs={12} justifyContent="center">
-              <Typography
-                variant="h4"
-                sx={{
-                  color: "white",
-                  fontFamily: "Montserrat",
-                  fontSize: {
-                    sm: "2.5rem",
-                    md: "2rem",
-                    xxl: "2.5rem",
-                  },
-                  textAlign: "center",
-                  fontWeight: 400,
-                  textAlignLast: "center",
-                  fontWeight: 600,
-                }}
-              >
-                {domainInfo.domain}
-              </Typography>
+            <Grid item xs={12} justifyContent="space-between">
+              {/* Domain Title */}
+              <div>
+                <Typography
+                  variant="h4"
+                  sx={{
+                    color: "white",
+                    fontFamily: "Montserrat",
+                    fontSize: {
+                      sm: "2.5rem",
+                      md: "2rem",
+                      xxl: "2.5rem",
+                    },
+                    textAlign: "center",
+                    fontWeight: 400,
+                    textAlignLast: "center",
+                    fontWeight: 600,
+                  }}
+                >
+                  {domainInfo.domain}
+                </Typography>
+              </div>
               {/* Cards of heads */}
-              <Grid container item spacing={5} justifyContent="center">
-                {domainInfo.heads.map((head, index) => (
-                  <React.Fragment key={head}>
-                    <Grid
-                      item
-                      xs={12}
-                      md={6}
-                      sx={{ marginTop: { md: "2rem", xs: "1.325rem" } }}
-                    >
-                      <Card
-                        className="card"
-                        isFlip = {true}
-                        linkedIN={head.linkedIN}
-                        email={head.email}
-                        name={head.name}
-                        imgUrl={head.imgUrl}
-                      />
-                    </Grid>
-                  </React.Fragment>
-                ))}
-              </Grid>
+              <div>
+                <Grid container item spacing={5} justifyContent="center"  >
+                  {domainInfo.heads.map((head, index) => (
+                    <React.Fragment key={head}>
+                      <Grid
+                        item
+                        xs={12}
+                        md={6}
+                        sx={{ marginTop: { md: "2rem", xs: "1.325rem", } }}
+                      >
+                        <Card
+                          className="card"
+                          isFlip = {true}
+                          linkedIN={head.linkedIN}
+                          email={head.email}
+                          name={head.name}
+                          imgUrl={head.imgUrl}
+                        />
+                      </Grid>
+                    </React.Fragment>
+                  ))}
+                </Grid>
+              </div>
             </Grid>
           </Grid>
         ))}
