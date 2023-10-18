@@ -45,7 +45,9 @@ const Register = () => {
     ifocus: "",
     ayears: "",
   });
-
+  const isDataFilled = () => {
+    return Object.values(data).every(value => value !== "");
+};
   function onChange(e) {
     console.log(data);
     const { name, value } = e.target;
@@ -66,13 +68,26 @@ const Register = () => {
       ifocus,
       ayears,
     } = data;
-    const fetchData = await fetch(`http://localhost:3001/users/signup`, {
+    const fetchData = await fetch(`http://localhost:3001/input/signup`, {
       method: "POST",
       headers: {
         "content-type": "application/json",
       },
       body: JSON.stringify(data),
     });
+    setData({
+      sname: "",
+      fname: "",
+      pocname: "",
+      contact: "",
+      startup: "",
+      service: "",
+      email: "",
+      semail: "",
+      ifocus: "",
+      ayears: "",
+    })
+    alert("Succesfully Registered")
   }
 
   useEffect(() => {
@@ -664,33 +679,37 @@ const Register = () => {
                     lineHeight: "normal",
                     opacity: "100%",
                   },
+                  marginBottom:4
                 }}
               />
             </div>
           </div>
-          <Button
-            sx={{
-              borderRadius: "0.5rem",
-              backgroundImage:
-                "linear-gradient(90deg, #3880E7 0.58%, #62D7D8 99.89%) !important",
-              textTransform: "capitalize",
-              width: "fit-content",
-              marginTop: 4,
-            }}
-          >
-            <Typography
-              color="white"
-              textAlign="center"
-              fontFamily={"Montserrat"}
-              fontSize={"1rem"}
-              fontStyle={"normal"}
-              fontWeight={500}
-              lineHeight={"normal"}
-              padding={1}
+          <span style={{ cursor: isDataFilled() ? 'pointer' : 'not-allowed', padding:0, margin:0, height:"fit-content" }}>
+            <Button
+            disabled={!isDataFilled()}
+              sx={{
+                borderRadius: "0.5rem",
+                backgroundImage: isDataFilled()?
+                  "linear-gradient(90deg, #3880E7 0.58%, #62D7D8 99.89%) !important":"linear-gradient(90deg, #637897 0.58%, #668D8E 99.89%) !important",
+                textTransform: "capitalize",
+                width: "fit-content",
+              }}
+              onClick={handleSubmit}
             >
-              REGISTER NOW
-            </Typography>
-          </Button>
+              <Typography
+                color="white"
+                textAlign="center"
+                fontFamily={"Montserrat"}
+                fontSize={"1rem"}
+                fontStyle={"normal"}
+                fontWeight={500}
+                lineHeight={"normal"}
+                padding={1}
+              >
+                REGISTER NOW
+              </Typography>
+            </Button>
+          </span>
         </div>
       </div>
     </div>
