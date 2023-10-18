@@ -19,12 +19,12 @@ router.post(`/signup`, async (req, res) => {
     fName: req.body.fname,
     pocName: req.body.pocname,
     pocNum: req.body.contact,
+    stage: req.body.startup,
+    sector: req.body.service,
     pocEmail: req.body.email,
     oEmail: req.body.semail,
-    stage: req.body.startup,
-    fIndustry: req.body.fIndustry,
-    sector: req.body.sector,
-    location: req.body.location,
+    fIndustry: req.body.ifocus,
+    location: "",
     aYears: req.body.ayears,
   });
 
