@@ -15,17 +15,17 @@ router.post(`/signup`, async (req, res) => {
   });
 
   let startup = new Startup({
-    name: req.body.name,
-    fName: req.body.fName,
-    pocName: req.body.pocName,
-    pocNum: req.body.pocNum,
-    pocEmail: req.body.pocEmail,
-    oEmail: req.body.oEmail,
-    stage: req.body.stage,
+    name: req.body.sname,
+    fName: req.body.fname,
+    pocName: req.body.pocname,
+    pocNum: req.body.contact,
+    pocEmail: req.body.email,
+    oEmail: req.body.semail,
+    stage: req.body.startup,
     fIndustry: req.body.fIndustry,
     sector: req.body.sector,
     location: req.body.location,
-    aYears: req.body.aYears,
+    aYears: req.body.ayears,
   });
 
   startup = await startup.save();

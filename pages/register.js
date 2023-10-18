@@ -6,7 +6,7 @@ import Card from "@mui/material/Card";
 import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
-import React, { useRef, useEffect } from "react";
+import React, { useRef, useEffect, useState } from "react";
 import Navbar from "../components/first";
 import { Box, Button, CardActionArea, Typography } from "@mui/material";
 import style2 from "../styles/changesFirst.module.css";
@@ -25,6 +25,7 @@ import {
   InputLabel,
   FormControl,
 } from "@mui/material";
+import { set } from "mongoose";
 gsap.registerPlugin(ScrollTrigger);
 
 const Register = () => {
@@ -32,10 +33,48 @@ const Register = () => {
   const parent = useRef();
   const tl = useRef();
   const [startupStage, setStartupStage] = React.useState("");
+  const [data, setData] = useState({
+    sname: "",
+    fname: "",
+    pocname: "",
+    contact: "",
+    startup: "",
+    service: "",
+    email: "",
+    semail: "",
+    ifocus: "",
+    ayears: "",
+  });
 
-  const handleStartupStageChange = (event) => {
-    setStartupStage(event.target.value);
-  };
+  function onChange(e) {
+    console.log(data);
+    const { name, value } = e.target;
+    setData((previous) => ({ ...previous, [name]: value }));
+  }
+
+  async function handleSubmit(e) {
+    e.preventDefault();
+    const {
+      sname,
+      fname,
+      pocname,
+      contact,
+      startup,
+      service,
+      email,
+      semail,
+      ifocus,
+      ayears,
+    } = data;
+    const fetchData = await fetch(`http://localhost:3001/users/signup`, {
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(data),
+    });
+  }
+
   useEffect(() => {
     const ctx = gsap.context(() => {
       tl.current = gsap
@@ -178,6 +217,9 @@ const Register = () => {
             placeholder="Type Startup Name"
             size="normal"
             fullWidth="true"
+            name="sname"
+            value={data.sname}
+            onChange={onChange}
             sx={{
               "& .MuiInputBase-input": {
                 color: "#7E94F8",
@@ -221,6 +263,9 @@ const Register = () => {
             placeholder="Type Founder / CEO Name"
             size="normal"
             fullWidth="true"
+            name="fname"
+            value={data.fname}
+            onChange={onChange}
             sx={{
               "& .MuiInputBase-input": {
                 color: "#7E94F8",
@@ -281,6 +326,9 @@ const Register = () => {
                 placeholder="Type Point of Contact Name"
                 variant="standard"
                 size="normal"
+                name="pocname"
+                value={data.pocname}
+                onChange={onChange}
                 sx={{
                   "& .MuiInputBase-input": {
                     color: "#7E94F8",
@@ -322,6 +370,9 @@ const Register = () => {
                 placeholder="Type Contact No."
                 variant="standard"
                 size="normal"
+                name="contact"
+                value={data.contact}
+                onChange={onChange}
                 sx={{
                   "& .MuiInputBase-input": {
                     color: "#7E94F8",
@@ -362,8 +413,9 @@ const Register = () => {
                 <Select
                   id="demo-simple-select"
                   placeholder="Hello"
-                  value={startupStage}
-                  onChange={handleStartupStageChange}
+                  name="startup"
+                  value={data.startup}
+                  onChange={onChange}
                   sx={{
                     "& .MuiInputBase-input": {
                       color: "#7E94F8",
@@ -409,6 +461,9 @@ const Register = () => {
                 fullWidth
                 placeholder="Mention Startup Service Areas"
                 variant="standard"
+                name="service"
+                value={data.service}
+                onChange={onChange}
                 sx={{
                   "& .MuiInputBase-input": {
                     color: "#7E94F8",
@@ -430,7 +485,6 @@ const Register = () => {
                   },
                 }}
               />
-              
             </div>
             <div
               style={{
@@ -459,6 +513,9 @@ const Register = () => {
                 fullWidth
                 placeholder="Type POC Email ID"
                 variant="standard"
+                name="email"
+                value={data.email}
+                onChange={onChange}
                 sx={{
                   "& .MuiInputBase-input": {
                     color: "#7E94F8",
@@ -499,6 +556,9 @@ const Register = () => {
                 fullWidth
                 placeholder="Type Startup Mail ID"
                 variant="standard"
+                name="semail"
+                value={data.semail}
+                onChange={onChange}
                 sx={{
                   "& .MuiInputBase-input": {
                     color: "#7E94F8",
@@ -539,6 +599,9 @@ const Register = () => {
                 fullWidth
                 placeholder="Mention Startup Industry Focus"
                 variant="standard"
+                name="ifocus"
+                value={data.ifocus}
+                onChange={onChange}
                 sx={{
                   "& .MuiInputBase-input": {
                     color: "#7E94F8",
@@ -579,6 +642,9 @@ const Register = () => {
                 fullWidth
                 placeholder="Type The Number Active of Years"
                 variant="standard"
+                name="ayears"
+                value={data.ayears}
+                onChange={onChange}
                 sx={{
                   "& .MuiInputBase-input": {
                     color: "#7E94F8",
@@ -605,10 +671,11 @@ const Register = () => {
           <Button
             sx={{
               borderRadius: "0.5rem",
-              backgroundImage: "linear-gradient(90deg, #3880E7 0.58%, #62D7D8 99.89%) !important",
+              backgroundImage:
+                "linear-gradient(90deg, #3880E7 0.58%, #62D7D8 99.89%) !important",
               textTransform: "capitalize",
               width: "fit-content",
-              marginTop:4
+              marginTop: 4,
             }}
           >
             <Typography
@@ -621,11 +688,10 @@ const Register = () => {
               lineHeight={"normal"}
               padding={1}
             >
-              Register Now
+              REGISTER NOW
             </Typography>
           </Button>
         </div>
-                  
       </div>
     </div>
   );
