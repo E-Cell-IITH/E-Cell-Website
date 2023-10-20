@@ -16,14 +16,10 @@ import {
   InputLabel,
   FormControl,
 } from "@mui/material";
-import { set } from "mongoose";
 gsap.registerPlugin(ScrollTrigger);
 
 const Register = () => {
-  const router = useRouter();
-  const parent = useRef();
-  const tl = useRef();
-  const [startupStage, setStartupStage] = React.useState("");
+
   const [data, setData] = useState({
     sname: "",
     fname: "",

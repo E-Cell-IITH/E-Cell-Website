@@ -15,6 +15,7 @@
     "@mui/material": "^5.10.1",
     "@mui/x-date-pickers": "^5.0.0-alpha.7",
     "animate.css": "^4.1.1",
+    "axios": "^1.5.1",
     "cloudinary-build-url": "^0.2.4",
     "gsap": "^3.11.3",
     "loaders.css": "^0.1.2",
@@ -30,7 +31,8 @@
     "sass": "^1.55.0",
     "sharp": "^0.31.1",
     "styled-components": "^5.3.6",
-    "swiper": "^8.4.5"
+    "swiper": "^8.4.5",
+    "validator": "^13.11.0"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.13",
