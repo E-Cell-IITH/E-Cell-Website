@@ -151,32 +151,34 @@ const StartupFair = () => {
               "-webkit-text-fill-color": "transparent",
             }}
           >
-            startup fair ’24
+            startup fair &#39;24
           </Typography>
-          <Button
-            sx={{
-              borderRadius: "12.195px",
-              border: "solid 2.439px #5FD2D8",
-              background: "rgba(217, 217, 217, 0.00)",
-              boxShadow: "0px 0px 27.97853px 3.49732px #61E0FD",
-              textTransform: "capitalize",
-              width: "fit-content",
-            }}
-          >
-            <Typography
-              color="white"
-              textAlign="center"
-              fontFamily={"Montserrat"}
-              fontSize={"32px"}
-              fontStyle={"normal"}
-              fontWeight={500}
-              lineHeight={"normal"}
-              padding={2}
-              paddingX={6}
+          <Link href="/register">
+            <Button
+              sx={{
+                borderRadius: "12.195px",
+                border: "solid 2.439px #5FD2D8",
+                background: "rgba(217, 217, 217, 0.00)",
+                boxShadow: "0px 0px 27.97853px 3.49732px #61E0FD",
+                textTransform: "capitalize",
+                width: "fit-content",
+              }}
             >
-              Register Here
-            </Typography>
-          </Button>
+              <Typography
+                color="white"
+                textAlign="center"
+                fontFamily={"Montserrat"}
+                fontSize={"32px"}
+                fontStyle={"normal"}
+                fontWeight={500}
+                lineHeight={"normal"}
+                padding={2}
+                paddingX={6}
+              >
+                Register Here
+              </Typography>
+            </Button>
+          </Link>
         </div>
         <div
           style={{

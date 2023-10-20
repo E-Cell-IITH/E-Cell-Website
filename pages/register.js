@@ -1,13 +1,7 @@
-import Image from "next/image";
-import Grid from "@mui/material/Grid";
-import { style } from "@mui/system";
-import styles from "../styles/sponsor.module.css";
-import Card from "@mui/material/Card";
-import CardActions from "@mui/material/CardActions";
-import CardContent from "@mui/material/CardContent";
+
 import CardMedia from "@mui/material/CardMedia";
+import isEmail from 'validator/lib/isEmail'
 import React, { useRef, useEffect, useState } from "react";
-import Navbar from "../components/first";
 import { Box, Button, CardActionArea, Typography } from "@mui/material";
 import style2 from "../styles/changesFirst.module.css";
 import Managers from "../components/Managers";
@@ -16,6 +10,7 @@ import Head from "next/head";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import { useRouter } from "next/router";
+import axios from 'axios'
 import Link from "next/link";
 import img from "../public/vector.png";
 import {
@@ -47,34 +42,50 @@ const Register = () => {
   });
   const isDataFilled = () => {
     return Object.values(data).every(value => value !== "");
-};
+  };
+
   function onChange(e) {
-    console.log(data);
     const { name, value } = e.target;
     setData((previous) => ({ ...previous, [name]: value }));
   }
 
+  function check(){
+    if(data.contact.length !== 10) {
+      alert("Enter a valid phone number!")
+      return false;
+    }
+
+    const x = data.contact
+    for(var i=0;i<x.length;i++){
+      if(!(x[i] >= '0' && x[i] <= '9')){
+        alert("Enter valid phone number!")
+        return false;
+      }
+    }
+
+    const y = data.ayears
+    for(var i=0;i<y.length;i++){
+      if(!(y[i] >= '0' && y[i] <= '9')){
+        alert("Enter valid active years!")
+        return false;
+      }
+    }
+
+    if(!isEmail(data.semail) && !isEmail(data.email)){
+      alert("Enter valid email!")
+      return false;
+    }
+
+    return true;
+  }
+
   async function handleSubmit(e) {
     e.preventDefault();
-    const {
-      sname,
-      fname,
-      pocname,
-      contact,
-      startup,
-      service,
-      email,
-      semail,
-      ifocus,
-      ayears,
-    } = data;
-    const fetchData = await fetch(`http://localhost:3001/input/signup`, {
-      method: "POST",
-      headers: {
-        "content-type": "application/json",
-      },
-      body: JSON.stringify(data),
-    });
+
+    if(!check()) {return;}
+
+    const fetchData = await axios.post(`http://localhost:3001/input/signup`, data);
+
     setData({
       sname: "",
       fname: "",
@@ -87,7 +98,11 @@ const Register = () => {
       ifocus: "",
       ayears: "",
     })
-    alert("Succesfully Registered")
+
+    const data2 = fetchData.data
+    if(data2.alert === true){
+      alert(data2.message)
+    }
   }
 
   useEffect(() => {
@@ -191,8 +206,8 @@ const Register = () => {
               background:
                 "linear-gradient(91deg, #3880E7 0.4%, #62D7D8 99.34%)",
               backgroundClip: "text",
-              "-webkit-background-clip": "text",
-              "-webkit-text-fill-color": "transparent",
+              "WebkitBackgroundClip": "text",
+              "WebkitTextFillColor": "transparent",
             }}
           >
             Tell us about your StartuP...
@@ -231,7 +246,7 @@ const Register = () => {
             id="standard-basic"
             placeholder="Type Startup Name"
             size="normal"
-            fullWidth="true"
+            fullWidth={true}
             name="sname"
             value={data.sname}
             onChange={onChange}
@@ -277,7 +292,7 @@ const Register = () => {
             id="standard-basic"
             placeholder="Type Founder / CEO Name"
             size="normal"
-            fullWidth="true"
+            fullWidth={true}
             name="fname"
             value={data.fname}
             onChange={onChange}
@@ -572,6 +587,7 @@ const Register = () => {
                 placeholder="Type Startup Mail ID"
                 variant="standard"
                 name="semail"
+                type="email"
                 value={data.semail}
                 onChange={onChange}
                 sx={{

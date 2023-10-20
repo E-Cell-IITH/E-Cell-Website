@@ -1,18 +1,26 @@
 const { Startup } = require("../models/startup");
 const express = require("express");
 const router = express.Router();
-const mongoose = require("mongoose");
 
 router.post(`/signup`, async (req, res) => {
-  const { oEmail } = req.body;
-  Startup.findOne({ oEmail: oEmail }, (err, result) => {
+  console.log(req.body)
+  const { semail } = req.body;
+
+  let found = false
+
+  await Startup.findOne({ oEmail: semail }, (err, result) => {
     if (result) {
+      found = true;
       res.send({
         message: "Official Email already exists.",
-        alert: false,
+        alert: true,
       });
     }
   });
+
+  if (found){
+    return;
+  }
 
   let startup = new Startup({
     name: req.body.sname,
@@ -35,7 +43,7 @@ router.post(`/signup`, async (req, res) => {
       alert: false,
     });
   }
-  res.send({
+  return res.send({
     message: "Registeration Successful",
     alert: true,
   });

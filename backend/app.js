@@ -12,16 +12,13 @@ app.use(express.json());
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(morgan('tiny'));
 
-const uri=process.env.MONGO_URI
+// const uri=process.env.MONGO_URI
+const uri=process.env.URL
 
 const startupRoutes = require('./routes/input');
 app.use(`/input`, startupRoutes);
 
-mongoose.connect(uri, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-    dbName: 'ecell-db'
-})
+mongoose.connect(uri)
 .then(()=>{
     console.log('Database Connection is ready...')
 })
