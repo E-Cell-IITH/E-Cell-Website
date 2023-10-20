@@ -97,6 +97,18 @@ const Navbar = () => {
             </Link>
           </li>
           <li className="navigation__item">
+            <Link href="/startupfair">
+              <a
+                className="navigation__link"
+                onClick={() => {
+                  navRef.current.checked = false;
+                }}
+              >
+                Startup Fair
+              </a>
+            </Link>
+          </li>
+          <li className="navigation__item">
             <Link href="/esummit">
               <a
                 className="navigation__link"
