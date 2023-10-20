@@ -89,7 +89,7 @@ const Register = () => {
 
     console.log(data)
 
-    const fetchData = await axios.post(`http://localhost:3001/input/signup`, data);
+    const fetchData = await axios.post(`https://ecell.kludge.in:3001/input/signup`, data);
 
     setData({
       sname: "",
