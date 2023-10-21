@@ -24,10 +24,17 @@ const Field = ({ label, placeholder, name, value, onChange, isOption, options })
   if (isOption)
     input = <>
       <FormControl fullWidth variant="standard">
+        {/* <InputLabel sx={{color:"white",border:"1px solid white",marginTop:"-0.8vw",padding:"0.2vw",fontSize:"0.7vw",borderRadius:"0.3vw",backgroundColor:"#36366D"}}>{placeholder}</InputLabel> */}
         <Select
           required
-          id="demo-simple-select"
-          placeholder={placeholder}
+          displayEmpty
+          renderValue={(selected) => {
+            if (selected.length === 0) {
+              return <em>{placeholder}</em>;
+            }
+            return selected
+          }}
+          inputProps={{ 'aria-label': 'Without label' }}
           name={name}
           value={value}
           onChange={onChange}
@@ -51,13 +58,19 @@ const Field = ({ label, placeholder, name, value, onChange, isOption, options })
               opacity: "100%",
             },
           }}
+          MenuProps={{
+            PaperProps: {
+              sx: {
+                "& .MuiMenuItem-root:hover": {
+                  color:"black"
+                }
+              }
+            }
+          }}
         >
           {options.map((el, key) => (
-            <MenuItem key={key} value={el}>{el}</MenuItem>
+            <MenuItem sx={{borderBottom:"2px solid white",backgroundColor:"#32329B",color:"white"}} key={key} value={el}>{el}</MenuItem>
           ))}
-          {/* <MenuItem value="Idea">Idea</MenuItem>
-          <MenuItem value="Prototype">Prototype</MenuItem>
-          <MenuItem value="Launch">Launch</MenuItem> */}
         </Select>
       </FormControl>
     </>
@@ -137,6 +150,7 @@ const Register = () => {
   function onChange(e) {
     const { name, value } = e.target;
     setData((previous) => ({ ...previous, [name]: value }));
+    console.log(data)
   }
 
   function check() {
@@ -321,7 +335,7 @@ const Register = () => {
     },
     {
       label: "Startup Stage",
-      placeholder: "Hello",
+      placeholder: "Select startup Stage",
       name: "startup",
       value: data.startup,
       onChange: onChange,
@@ -351,7 +365,7 @@ const Register = () => {
     },
     {
       label: "Location",
-      placeholder: "Hello",
+      placeholder: "Select State",
       name: "location",
       value: data.location,
       onChange: onChange,
@@ -375,7 +389,7 @@ const Register = () => {
       <Head>
         <title>E-Cell Register</title>
       </Head>
-      <div
+      {/* <div
         style={{
           textAlign: "center",
           display: "flex",
@@ -384,7 +398,7 @@ const Register = () => {
           height: "fit-content",
           padding: "0 5%",
         }}
-      >
+      > */}
         {/* <div
           style={{
             display: "flex",
@@ -421,7 +435,7 @@ const Register = () => {
             title="groww"
           />
         </div> */}
-        <div
+        {/* <div
           style={{
             display: "flex",
             flexDirection: "column",
@@ -429,7 +443,7 @@ const Register = () => {
             justifyContent: "center",
             width: "100%",
           }}
-        >
+        > */}
           {/* <Typography
             sx={{
               color: "#D3D3D3",
@@ -522,15 +536,15 @@ const Register = () => {
             }}
             variant="standard"
           /> */}
-          <Grid container columnSpacing={2}>
+          <Grid container spacing={8}>
             {/* Code for line 397 to 422 will come here. Make a container inside this item it give it half width on large screen and full width on small screen. Keep both parts inside separate grid items so that alignment is easier */}
-            <Grid item xl={6} lg={6} md={12} sm={12} xs={12} marginBottom={{xl: 0, lg: 0, md: "2rem", sm: "2rem", xs: "2rem"}} alignItems="center">
+            <Grid item xl={6} lg={6} md={12} sm={12} xs={12} marginBottom={{ xl: 0, lg: 0, md: "2rem", sm: "2rem", xs: "2rem" }} alignItems="center">
               <Grid container direction={"row-reverse"} height="100%">
                 <Grid item xl={12} lg={12} md={9} sm={9} xs={9}>
                   <Typography
                     textAlign="left"
                     fontFamily={"Montserrat"}
-                    fontSize={{xl: "3.52256rem", lg: "3.52256rem", md: "2.8rem", sm: "2.52256rem", xs: "1.9rem"}}
+                    fontSize={{ xl: "3.52256rem", lg: "3.52256rem", md: "2.8rem", sm: "2.52256rem", xs: "1.9rem" }}
                     fontStyle={"normal"}
                     fontWeight={700}
                     lineHeight={"normal"}
@@ -549,15 +563,18 @@ const Register = () => {
                     Tell us about your StartuP...
                   </Typography>
                 </Grid>
-                <Grid item xl={12} lg={12} md={3} sm={3} xs={3} justifyContent="center">
-                  <Box display="flex" flexDirection="column" justifyContent="center" height="100%">
-                    <Box display="flex" flexDirection="row" justifyContent="center" width="100%">
-                      <CardMedia
-                        sx={{ width: {xl: "20rem", lg: "18.24944rem", md: "4rem", sm: "4rem", xs: "2.5rem"}, height: {xl: 28.67769/18.24944*20 + "rem", lg: "28.67769rem", md: 28.67769/18.24944*4 + "rem", sm: 28.67769/18.24944*4 + "rem", xs: 28.67769/18.24944*2.5 + "rem"} }}
-                        image="/vector.png"
+                <Grid item xl={12} lg={12} md={3} sm={3} xs={3}>
+                  {/* <Box display="flex" flexDirection="column" justifyContent="center" height="100%">
+                    <Box display="flex" flexDirection="row" justifyContent="center" width="100%"> */}
+                  <div style={{display:"flex",justifyContent:"center",alignItems:"center"}}>
+                    <CardMedia
+                      sx={{ width: { xl: "20rem", lg: "18.24944rem", md: "4rem", sm: "4rem", xs: "2.5rem" }, height: { xl: 28.67769 / 18.24944 * 20 + "rem", lg: "28.67769rem", md: 28.67769 / 18.24944 * 4 + "rem", sm: 28.67769 / 18.24944 * 4 + "rem", xs: 28.67769 / 18.24944 * 2.5 + "rem" } }}
+                      image="/vector.png"
                     />
-                    </Box>
-                  </Box>
+                  </div>
+
+                  {/* </Box>
+                  </Box> */}
                 </Grid>
               </Grid>
             </Grid>
@@ -1152,8 +1169,8 @@ const Register = () => {
             </Button>
           </span> */}
         </div>
-      </div>
-    </div>
+      // </div>
+    // </div>
   );
 };
 
