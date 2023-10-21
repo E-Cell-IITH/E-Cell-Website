@@ -2,7 +2,7 @@
 import CardMedia from "@mui/material/CardMedia";
 import isEmail from 'validator/lib/isEmail'
 import React, { useRef, useState } from "react";
-import { Box, Button, Typography } from "@mui/material";
+import { Button, Typography } from "@mui/material";
 import Head from "next/head";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
@@ -522,85 +522,56 @@ const Register = () => {
             }}
             variant="standard"
           /> */}
-          <Grid container columnSpacing={2}>
+          <Grid container>
             {/* Code for line 397 to 422 will come here. Make a container inside this item it give it half width on large screen and full width on small screen. Keep both parts inside separate grid items so that alignment is easier */}
-            <Grid item xl={6} lg={6} md={12} sm={12} xs={12} sx={{marginBottom: {md: 10, lg: 0}}}>
-              <Grid container columnSpacing={2} direction={"row-reverse"}>
-                <Grid item xl={12} lg={12} md={10} sm={10} xs={10}>
-                  <Typography
-                    textAlign="left"
-                    fontFamily={"Montserrat"}
-                    fontSize={{xl: "3.52256rem", lg: "3.52256rem", md: "3rem", sm: "2.52256rem", xs: "1.5rem"}}
-                    fontStyle={"normal"}
-                    fontWeight={700}
-                    lineHeight={"normal"}
-                    textTransform={"uppercase"}
-                    marginBottom={"5rem"}
-                    // marginTop={-25}
-                    // width={"34.62881rem"}
-                    sx={{
-                      background:
-                        "linear-gradient(91deg, #3880E7 0.4%, #62D7D8 99.34%)",
-                      backgroundClip: "text",
-                      "WebkitBackgroundClip": "text",
-                      "WebkitTextFillColor": "transparent",
-                    }}
-                  >
-                    Tell us about your StartuP...
-                  </Typography>
-                </Grid>
-                <Grid item xl={12} lg={12} md={2} sm={2} xs={2}>
-                  <CardMedia
-                    sx={{ width: {lg: "18.24944rem", md: "5rem", sm: "4rem", xs: "2.5rem"}, height: {lg: "28.67769rem", md: 28.67769/18.24944*5 + "rem", sm: 28.67769/18.24944*4 + "rem", xs: 28.67769/18.24944*2.5 + "rem"} }}
-                    image="/vector.png"
-                  />
-                </Grid>
+            <Grid container lg={6} md={12}>
+              <Grid item lg={12} md={6}>
+                <Typography
+                  textAlign="left"
+                  fontFamily={"Montserrat"}
+                  fontSize={"3.52256rem"}
+                  fontStyle={"normal"}
+                  fontWeight={700}
+                  lineHeight={"normal"}
+                  textTransform={"uppercase"}
+                  marginBottom={"5rem"}
+                  // marginTop={-25}
+                  width={"34.62881rem"}
+                  sx={{
+                    background:
+                      "linear-gradient(91deg, #3880E7 0.4%, #62D7D8 99.34%)",
+                    backgroundClip: "text",
+                    "WebkitBackgroundClip": "text",
+                    "WebkitTextFillColor": "transparent",
+                  }}
+                >
+                  Tell us about your StartuP...
+                </Typography>
+              </Grid>
+              <Grid item lg={12} md={6}>
+                <CardMedia
+                  sx={{ width: "18.24944rem", height: "28.67769rem" }}
+                  image="/vector.png"
+                />
               </Grid>
             </Grid>
-            <Grid item xl={6} lg={6} md={12} sm={12} xs={12}>
-              <Grid container textAlign="left">
-                <Grid item xs={12}>
-                  <Field label="startup name" placeholder="Type startup name" value={data.sname} onChange={onChange} />
-                </Grid>
-                <Grid item xs={12}>
-                  <Field label="Founder/CEO name" placeholder="Type founder/CEO name" value={data.fname} onChange={onChange} />
-                </Grid>
-                <Grid container columnSpacing={4}>
-                  {fieldData.map((el, key) => (
-                    <Grid item xl={6} lg={6} md={12} sm={12} xs={12} alignContent="flex-start" key={key}>
-                      <Field {...el} />
-                    </Grid>
-                  ))}
-                </Grid>
-                <Grid item xs={12}>
-                  <Field label="About" placeholder="Tell us about yourself" value={data.about} onChange={onChange} />
-                </Grid>
-                <span style={{ cursor: isDataFilled() ? 'pointer' : 'not-allowed', paddingTop: "2.5vw", margin: 0, height: "fit-content" }}>
-                  <Button
-                    disabled={!isDataFilled()}
-                    sx={{
-                      borderRadius: "0.5rem",
-                      backgroundImage: isDataFilled() ?
-                        "linear-gradient(90deg, #3880E7 0.58%, #62D7D8 99.89%) !important" : "linear-gradient(90deg, #637897 0.58%, #668D8E 99.89%) !important",
-                      textTransform: "capitalize",
-                      width: "fit-content",
-                    }}
-                    onClick={handleSubmit}
-                  >
-                    <Typography
-                      color="white"
-                      textAlign="center"
-                      fontFamily={"Montserrat"}
-                      fontSize={"1rem"}
-                      fontStyle={"normal"}
-                      fontWeight={500}
-                      lineHeight={"normal"}
-                      padding={1}
-                    >
-                      REGISTER NOW
-                    </Typography>
-                  </Button>
-                </span>
+            <Grid container lg={6} md={12} textAlign="left">
+              <Grid item xs={12}>
+                <Field label="startup name" placeholder="Type startup name" value={data.sname} onChange={onChange} />
+              </Grid>
+              <Grid item xs={12}>
+                <Field label="Founder/CEO name" placeholder="Type founder/CEO name" value={data.fname} onChange={onChange} />
+              </Grid>
+              <Grid container columnSpacing={4}>
+                {fieldData.map((el, key) => (
+                  <Grid item md={12} lg={6} alignContent="flex-start" key={key}>
+                    <Field {...el} />
+                  </Grid>
+                ))
+                }
+              </Grid>
+              <Grid item xs={12}>
+                <Field label="About" placeholder="Tell us about yourself" value={data.about} onChange={onChange} />
               </Grid>
             </Grid>
           </Grid>
@@ -1121,7 +1092,7 @@ const Register = () => {
             }}
             variant="standard"
           /> */}
-          {/* <span style={{ cursor: isDataFilled() ? 'pointer' : 'not-allowed', paddingTop: "2.5vw", margin: 0, height: "fit-content" }}>
+          <span style={{ cursor: isDataFilled() ? 'pointer' : 'not-allowed', paddingTop: "2.5vw", margin: 0, height: "fit-content" }}>
             <Button
               disabled={!isDataFilled()}
               sx={{
@@ -1146,7 +1117,7 @@ const Register = () => {
                 REGISTER NOW
               </Typography>
             </Button>
-          </span> */}
+          </span>
         </div>
       </div>
     </div>
