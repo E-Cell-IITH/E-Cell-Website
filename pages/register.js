@@ -16,7 +16,102 @@ import {
   InputLabel,
   FormControl,
 } from "@mui/material";
+import { Grid } from "@mui/material";
 gsap.registerPlugin(ScrollTrigger);
+
+const Field = ({label, placeholder, name, value, onChange, isOption, options}) => {
+  let input = <></>
+  if (isOption)
+    input = <>
+      <FormControl fullWidth variant="standard">
+        <Select
+          required
+          id="demo-simple-select"
+          placeholder={placeholder}
+          name={name}
+          value={value}
+          onChange={onChange}
+          sx={{
+            "& .MuiInputBase-input": {
+              color: "#7E94F8",
+              fontFamily: "Montserrat",
+              fontSize: "1.16706rem",
+              fontStyle: "normal",
+              fontWeight: 500,
+              lineHeight: "normal",
+              borderBottom: "2px solid rgba(201, 201, 201, 0.50)",
+            },
+            "& .MuiInputBase-input::placeholder": {
+              color: "#44447A",
+              fontFamily: "Montserrat",
+              fontSize: "0.86881rem",
+              fontStyle: "normal",
+              fontWeight: 500,
+              lineHeight: "normal",
+              opacity: "100%",
+            },
+          }}
+        >
+          {options.map((el,key) => (
+            <MenuItem key={key} value={el}>{el}</MenuItem>
+          ))}
+          {/* <MenuItem value="Idea">Idea</MenuItem>
+          <MenuItem value="Prototype">Prototype</MenuItem>
+          <MenuItem value="Launch">Launch</MenuItem> */}
+        </Select>
+      </FormControl>
+    </>
+  else
+    input = <>
+      <TextField
+        fullWidth
+        placeholder={placeholder}
+        variant="standard"
+        name={name}
+        value={value}
+        onChange={onChange}
+        sx={{
+          "& .MuiInputBase-input": {
+            color: "#7E94F8",
+            fontFamily: "Montserrat",
+            fontSize: "1.16706rem",
+            fontStyle: "normal",
+            fontWeight: 500,
+            lineHeight: "normal",
+            borderBottom: "2px solid rgba(201, 201, 201, 0.50)",
+          },
+          "& .MuiInputBase-input::placeholder": {
+            color: "#44447A",
+            fontFamily: "Montserrat",
+            fontSize: "0.86881rem",
+            fontStyle: "normal",
+            fontWeight: 500,
+            lineHeight: "normal",
+            opacity: "100%",
+          },
+        }}
+      />
+    </>
+
+  return <>
+    <Typography
+      sx={{
+        color: "#D3D3D3",
+        fontFamily: "Montserrat",
+        fontSize: "1.29563rem",
+        fontStyle: "normal",
+        fontWeight: 500,
+        lineHeight: "normal",
+        textTransform: "uppercase",
+        marginBottom: 1,
+        marginTop: 3,
+      }}
+    >
+      {label}
+    </Typography>
+    {input}
+  </>
+}
 
 const Register = () => {
 
@@ -194,6 +289,83 @@ const Register = () => {
     "Uttarakhand",
     "West Bengal"
   ];
+
+  const fieldData = [
+    {
+      label: "POC Name",
+      placeholder: "Type Point of Contact Name",
+      name: "pocname",
+      value: data.pocname,
+      onChange: onChange
+    },
+    {
+      label: "Email ID",
+      placeholder: "Type POC Email ID",
+      name: "email",
+      value: data.email,
+      onChange: onChange
+    },
+    {
+      label: "Contact No.",
+      placeholder: "Type Contact No.",
+      name: "contact",
+      value: data.contact,
+      onChange: onChange
+    },
+    {
+      label: "Startup Email ID",
+      placeholder: "Type Startup Mail ID",
+      name: "semail",
+      value: data.semail,
+      onChange: onChange
+    },
+    {
+      label: "Startup Stage",
+      placeholder: "Hello",
+      name: "startup",
+      value: data.startup,
+      onChange: onChange,
+      isOption: true,
+      options: ["Idea", "Prototype", "Launch"]
+    },
+    {
+      label: "Industry Focus",
+      placeholder: "Mention Startup Industry Focus",
+      name: "ifocus",
+      value: data.ifocus,
+      onChange: onChange
+    },
+    {
+      label: "Service Areas",
+      placeholder: "Mention Startup Service Areas",
+      name: "service",
+      value: data.service,
+      onChange: onChange
+    },
+    {
+      label: "Active Years",
+      placeholder: "Type The Number Active of Years",
+      name: "ayears",
+      value: data.ayears,
+      onChange: onChange
+    },
+    {
+      label: "Location",
+      placeholder: "Hello",
+      name: "location",
+      value: data.location,
+      onChange: onChange,
+      isOption: true,
+      options: states
+    },
+    {
+      label: "City",
+      placeholder: "Mention the city of your startup",
+      name: "city",
+      value: data.city,
+      onChange: onChange
+    }
+  ]
   
   return (
     <div style={{background:
@@ -348,7 +520,15 @@ const Register = () => {
             }}
             variant="standard"
           />
-          <div
+          <Grid container columnSpacing={4}>
+            {fieldData.map((el,key) => (
+              <Grid item xs={6} alignContent="flex-start" key={key}>
+                <Field {...el}/>
+              </Grid>
+            ))
+            }
+          </Grid>
+          {/* <div
             style={{
               display: "flex",
               flexDirection: "row",
@@ -818,7 +998,7 @@ const Register = () => {
                 }}
               />
             </div>
-          </div>
+          </div> */}
           <Typography
             sx={{
               color: "#D3D3D3",
