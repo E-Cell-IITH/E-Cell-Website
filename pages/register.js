@@ -19,7 +19,7 @@ import {
 import { Grid } from "@mui/material";
 gsap.registerPlugin(ScrollTrigger);
 
-const Field = ({label, placeholder, name, value, onChange, isOption, options}) => {
+const Field = ({ label, placeholder, name, value, onChange, isOption, options }) => {
   let input = <></>
   if (isOption)
     input = <>
@@ -52,7 +52,7 @@ const Field = ({label, placeholder, name, value, onChange, isOption, options}) =
             },
           }}
         >
-          {options.map((el,key) => (
+          {options.map((el, key) => (
             <MenuItem key={key} value={el}>{el}</MenuItem>
           ))}
           {/* <MenuItem value="Idea">Idea</MenuItem>
@@ -126,9 +126,9 @@ const Register = () => {
     semail: "",
     ifocus: "",
     ayears: "",
-    location:"",
-    city:"",
-    about:""
+    location: "",
+    city: "",
+    about: ""
   });
   const isDataFilled = () => {
     return Object.values(data).every(value => value !== "");
@@ -139,29 +139,29 @@ const Register = () => {
     setData((previous) => ({ ...previous, [name]: value }));
   }
 
-  function check(){
-    if(data.contact.length !== 10) {
+  function check() {
+    if (data.contact.length !== 10) {
       alert("Enter a valid phone number!")
       return false;
     }
 
     const x = data.contact
-    for(var i=0;i<x.length;i++){
-      if(!(x[i] >= '0' && x[i] <= '9')){
+    for (var i = 0; i < x.length; i++) {
+      if (!(x[i] >= '0' && x[i] <= '9')) {
         alert("Enter valid phone number!")
         return false;
       }
     }
 
     const y = data.ayears
-    for(var i=0;i<y.length;i++){
-      if(!(y[i] >= '0' && y[i] <= '9')){
+    for (var i = 0; i < y.length; i++) {
+      if (!(y[i] >= '0' && y[i] <= '9')) {
         alert("Enter valid active years!")
         return false;
       }
     }
 
-    if(!isEmail(data.semail) && !isEmail(data.email)){
+    if (!isEmail(data.semail) && !isEmail(data.email)) {
       alert("Enter valid email!")
       return false;
     }
@@ -172,7 +172,7 @@ const Register = () => {
   async function handleSubmit(e) {
     e.preventDefault();
 
-    if(!check()) {return;}
+    if (!check()) { return; }
 
     console.log(data)
 
@@ -189,13 +189,13 @@ const Register = () => {
       semail: "",
       ifocus: "",
       ayears: "",
-      location:"",
-      city:"",
-      about:""
+      location: "",
+      city: "",
+      about: ""
     })
 
     const data2 = fetchData.data
-    if(data2.alert === true){
+    if (data2.alert === true) {
       alert(data2.message)
     }
   }
@@ -366,10 +366,12 @@ const Register = () => {
       onChange: onChange
     }
   ]
-  
+
   return (
-    <div style={{background:
-      "linear-gradient(0deg, rgba(10, 10, 12, 0.70) 1.78%, rgba(2, 2, 68, 0.70) 100%), #000",padding:"10vw"}}>
+    <div style={{
+      background:
+        "linear-gradient(0deg, rgba(10, 10, 12, 0.70) 1.78%, rgba(2, 2, 68, 0.70) 100%), #000", padding: "10vw"
+    }}>
       <Head>
         <title>E-Cell Register</title>
       </Head>
@@ -383,7 +385,7 @@ const Register = () => {
           padding: "0 5%",
         }}
       >
-        <div
+        {/* <div
           style={{
             display: "flex",
             flexDirection: "column",
@@ -418,17 +420,17 @@ const Register = () => {
             image="/vector.png"
             title="groww"
           />
-        </div>
+        </div> */}
         <div
           style={{
             display: "flex",
             flexDirection: "column",
             alignItems: "flex-start",
             justifyContent: "center",
-            width: "50%",
+            width: "100%",
           }}
         >
-          <Typography
+          {/* <Typography
             sx={{
               color: "#D3D3D3",
               fontFamily: "Montserrat",
@@ -471,9 +473,9 @@ const Register = () => {
               },
             }}
             variant="standard"
-          />
+          /> */}
 
-          <Typography
+          {/* <Typography
             sx={{
               color: "#D3D3D3",
               fontFamily: "Montserrat",
@@ -519,15 +521,61 @@ const Register = () => {
               },
             }}
             variant="standard"
-          />
-          <Grid container columnSpacing={4}>
-            {fieldData.map((el,key) => (
-              <Grid item xs={6} alignContent="flex-start" key={key}>
-                <Field {...el}/>
+          /> */}
+          <Grid container>
+            {/* Code for line 397 to 422 will come here. Make a container inside this item it give it half width on large screen and full width on small screen. Keep both parts inside separate grid items so that alignment is easier */}
+            <Grid container lg={6} md={12}>
+              <Grid item lg={12} md={6}>
+                <Typography
+                  textAlign="left"
+                  fontFamily={"Montserrat"}
+                  fontSize={"3.52256rem"}
+                  fontStyle={"normal"}
+                  fontWeight={700}
+                  lineHeight={"normal"}
+                  textTransform={"uppercase"}
+                  marginBottom={"5rem"}
+                  // marginTop={-25}
+                  width={"34.62881rem"}
+                  sx={{
+                    background:
+                      "linear-gradient(91deg, #3880E7 0.4%, #62D7D8 99.34%)",
+                    backgroundClip: "text",
+                    "WebkitBackgroundClip": "text",
+                    "WebkitTextFillColor": "transparent",
+                  }}
+                >
+                  Tell us about your StartuP...
+                </Typography>
               </Grid>
-            ))
-            }
+              <Grid item lg={12} md={6}>
+                <CardMedia
+                  sx={{ width: "18.24944rem", height: "28.67769rem" }}
+                  image="/vector.png"
+                />
+              </Grid>
+            </Grid>
+            <Grid container lg={6} md={12} textAlign="left">
+              <Grid item xs={12}>
+                <Field label="startup name" placeholder="Type startup name" value={data.sname} onChange={onChange} />
+              </Grid>
+              <Grid item xs={12}>
+                <Field label="Founder/CEO name" placeholder="Type founder/CEO name" value={data.fname} onChange={onChange} />
+              </Grid>
+              <Grid container columnSpacing={4}>
+                {fieldData.map((el, key) => (
+                  <Grid item md={12} lg={6} alignContent="flex-start" key={key}>
+                    <Field {...el} />
+                  </Grid>
+                ))
+                }
+              </Grid>
+              <Grid item xs={12}>
+                <Field label="About" placeholder="Tell us about yourself" value={data.about} onChange={onChange} />
+              </Grid>
+            </Grid>
           </Grid>
+
           {/* <div
             style={{
               display: "flex",
@@ -999,7 +1047,7 @@ const Register = () => {
               />
             </div>
           </div> */}
-          <Typography
+          {/* <Typography
             sx={{
               color: "#D3D3D3",
               fontFamily: "Montserrat",
@@ -1043,14 +1091,14 @@ const Register = () => {
               },
             }}
             variant="standard"
-          />
-          <span style={{ cursor: isDataFilled() ? 'pointer' : 'not-allowed', paddingTop:"2.5vw",margin:0, height:"fit-content" }}>
+          /> */}
+          <span style={{ cursor: isDataFilled() ? 'pointer' : 'not-allowed', paddingTop: "2.5vw", margin: 0, height: "fit-content" }}>
             <Button
-            disabled={!isDataFilled()}
+              disabled={!isDataFilled()}
               sx={{
                 borderRadius: "0.5rem",
-                backgroundImage: isDataFilled()?
-                  "linear-gradient(90deg, #3880E7 0.58%, #62D7D8 99.89%) !important":"linear-gradient(90deg, #637897 0.58%, #668D8E 99.89%) !important",
+                backgroundImage: isDataFilled() ?
+                  "linear-gradient(90deg, #3880E7 0.58%, #62D7D8 99.89%) !important" : "linear-gradient(90deg, #637897 0.58%, #668D8E 99.89%) !important",
                 textTransform: "capitalize",
                 width: "fit-content",
               }}
