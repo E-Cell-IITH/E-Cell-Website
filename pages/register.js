@@ -525,12 +525,12 @@ const Register = () => {
           <Grid container columnSpacing={2}>
             {/* Code for line 397 to 422 will come here. Make a container inside this item it give it half width on large screen and full width on small screen. Keep both parts inside separate grid items so that alignment is easier */}
             <Grid item xl={6} lg={6} md={12} sm={12} xs={12} sx={{marginBottom: {md: 10, lg: 0}}}>
-              <Grid container columnSpacing={2} direction={"row-reverse"}>
-                <Grid item xl={12} lg={12} md={10} sm={10} xs={10}>
+              <Grid container direction={"row-reverse"}>
+                <Grid item xl={12} lg={12} md={9} sm={9} xs={9}>
                   <Typography
                     textAlign="left"
                     fontFamily={"Montserrat"}
-                    fontSize={{xl: "3.52256rem", lg: "3.52256rem", md: "3rem", sm: "2.52256rem", xs: "1.5rem"}}
+                    fontSize={{xl: "3.52256rem", lg: "3.52256rem", md: "2.8rem", sm: "2.52256rem", xs: "1.4rem"}}
                     fontStyle={"normal"}
                     fontWeight={700}
                     lineHeight={"normal"}
@@ -549,10 +549,10 @@ const Register = () => {
                     Tell us about your StartuP...
                   </Typography>
                 </Grid>
-                <Grid item xl={12} lg={12} md={2} sm={2} xs={2} justifyItems="center" alignItems="center">
+                <Grid item xl={12} lg={12} md={3} sm={3} xs={3} justifyItems="center" alignItems="center">
                   <Box display="flex" justifyContent="center">
                     <CardMedia
-                      sx={{ width: {lg: "18.24944rem", md: "5rem", sm: "4rem", xs: "2.5rem"}, height: {lg: "28.67769rem", md: 28.67769/18.24944*5 + "rem", sm: 28.67769/18.24944*4 + "rem", xs: 28.67769/18.24944*2.5 + "rem"} }}
+                      sx={{ width: {lg: "18.24944rem", md: "4rem", sm: "4rem", xs: "2rem"}, height: {lg: "28.67769rem", md: 28.67769/18.24944*4 + "rem", sm: 28.67769/18.24944*4 + "rem", xs: 28.67769/18.24944*2 + "rem"} }}
                       image="/vector.png"
                   />
                   </Box>
