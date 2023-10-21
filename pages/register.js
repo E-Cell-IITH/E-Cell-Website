@@ -549,21 +549,23 @@ const Register = () => {
                     Tell us about your StartuP...
                   </Typography>
                 </Grid>
-                <Grid item xl={12} lg={12} md={2} sm={2} xs={2}>
-                  <CardMedia
-                    sx={{ width: {lg: "18.24944rem", md: "5rem", sm: "4rem", xs: "2.5rem"}, height: {lg: "28.67769rem", md: 28.67769/18.24944*5 + "rem", sm: 28.67769/18.24944*4 + "rem", xs: 28.67769/18.24944*2.5 + "rem"} }}
-                    image="/vector.png"
+                <Grid item xl={12} lg={12} md={2} sm={2} xs={2} justifyItems="center" alignItems="center">
+                  <Box display="flex" justifyContent="center">
+                    <CardMedia
+                      sx={{ width: {lg: "18.24944rem", md: "5rem", sm: "4rem", xs: "2.5rem"}, height: {lg: "28.67769rem", md: 28.67769/18.24944*5 + "rem", sm: 28.67769/18.24944*4 + "rem", xs: 28.67769/18.24944*2.5 + "rem"} }}
+                      image="/vector.png"
                   />
+                  </Box>
                 </Grid>
               </Grid>
             </Grid>
             <Grid item xl={6} lg={6} md={12} sm={12} xs={12}>
               <Grid container textAlign="left">
                 <Grid item xs={12}>
-                  <Field label="startup name" placeholder="Type startup name" value={data.sname} onChange={onChange} />
+                  <Field label="startup name" placeholder="Type startup name" name="sname" value={data.sname} onChange={onChange} />
                 </Grid>
                 <Grid item xs={12}>
-                  <Field label="Founder/CEO name" placeholder="Type founder/CEO name" value={data.fname} onChange={onChange} />
+                  <Field label="Founder/CEO name" placeholder="Type founder/CEO name" name="fname" value={data.fname} onChange={onChange} />
                 </Grid>
                 <Grid container columnSpacing={4}>
                   {fieldData.map((el, key) => (
@@ -573,7 +575,7 @@ const Register = () => {
                   ))}
                 </Grid>
                 <Grid item xs={12}>
-                  <Field label="About" placeholder="Tell us about yourself" value={data.about} onChange={onChange} />
+                  <Field label="About" name="about" placeholder="Tell us about yourself" value={data.about} onChange={onChange} />
                 </Grid>
                 <span style={{ cursor: isDataFilled() ? 'pointer' : 'not-allowed', paddingTop: "2.5vw", margin: 0, height: "fit-content" }}>
                   <Button
