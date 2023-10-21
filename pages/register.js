@@ -524,9 +524,9 @@ const Register = () => {
           /> */}
           <Grid container columnSpacing={2}>
             {/* Code for line 397 to 422 will come here. Make a container inside this item it give it half width on large screen and full width on small screen. Keep both parts inside separate grid items so that alignment is easier */}
-            <Grid item xl={6} lg={6} md={12} sm={12} xs={12} marginBottom={{xl: 0, lg: 0, md: "2rem", sm: "2rem", xs: "2rem"}} backgroundColor="white" alignItems="center">
+            <Grid item xl={6} lg={6} md={12} sm={12} xs={12} marginBottom={{xl: 0, lg: 0, md: "2rem", sm: "2rem", xs: "2rem"}} alignItems="center">
               <Grid container direction={"row-reverse"} height="100%">
-                <Grid item xl={12} lg={12} md={9} sm={9} xs={9} backgroundColor="red">
+                <Grid item xl={12} lg={12} md={9} sm={9} xs={9}>
                   <Typography
                     textAlign="left"
                     fontFamily={"Montserrat"}
@@ -550,8 +550,8 @@ const Register = () => {
                   </Typography>
                 </Grid>
                 <Grid item xl={12} lg={12} md={3} sm={3} xs={3} justifyContent="center">
-                  <Box display="flex" flexDirection="column" justifyContent="center" backgroundColor="green" height="100%">
-                    <Box display="flex" flexDirection="row" justifyContent="center" backgroundColor="yellow" width="100%">
+                  <Box display="flex" flexDirection="column" justifyContent="center" height="100%">
+                    <Box display="flex" flexDirection="row" justifyContent="center" width="100%">
                       <CardMedia
                         sx={{ width: {xl: "20rem", lg: "18.24944rem", md: "4rem", sm: "4rem", xs: "2.5rem"}, height: {xl: 28.67769/18.24944*20 + "rem", lg: "28.67769rem", md: 28.67769/18.24944*4 + "rem", sm: 28.67769/18.24944*4 + "rem", xs: 28.67769/18.24944*2.5 + "rem"} }}
                         image="/vector.png"
