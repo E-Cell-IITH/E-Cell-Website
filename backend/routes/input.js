@@ -1,6 +1,15 @@
+const { system } = require("nodemon/lib/config");
+const {exec} = require("child_process")
 const { Startup } = require("../models/startup");
 const express = require("express");
 const router = express.Router();
+
+function export_csv(db, collection, fields){
+  const file_name = `data_files/${db + "_" + collection}.csv`
+  const cmd = `mongoexport --host localhost --db ${db} --collection ${collection} --csv --out ${file_name} --fields ${fields}`
+  exec(cmd)
+  exec(`ssconvert ${file_name} data_files/${db + "_" + collection}.xlsx`)
+}
 
 router.post(`/signup`, async (req, res) => {
   console.log(req.body)
@@ -22,7 +31,7 @@ router.post(`/signup`, async (req, res) => {
     return;
   }
 
-  let startup = new Startup({
+  const data = {
     name: req.body.sname,
     fName: req.body.fname,
     pocName: req.body.pocname,
@@ -32,9 +41,13 @@ router.post(`/signup`, async (req, res) => {
     pocEmail: req.body.email,
     oEmail: req.body.semail,
     fIndustry: req.body.ifocus,
-    location: "",
+    location: req.body.location,
     aYears: req.body.ayears,
-  });
+    city: req.body.city,
+    about: req.body.about
+  }
+
+  let startup = new Startup(data);
 
   startup = await startup.save();
   if (!startup) {
@@ -43,6 +56,8 @@ router.post(`/signup`, async (req, res) => {
       alert: false,
     });
   }
+
+  export_csv("ecell", "startups", Object.keys(data).join(","));
   return res.send({
     message: "Registeration Successful",
     alert: true,

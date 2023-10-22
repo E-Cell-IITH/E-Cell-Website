@@ -45,6 +45,14 @@ const startupSchema = mongoose.Schema({
         type: Number,
         default:0
     },
+    city : {
+        type: String,
+        default: ''
+    },
+    about : {
+        type: String,
+        default: ''
+    },
     dateCreated: {
         type: Date,
         default: Date.now,

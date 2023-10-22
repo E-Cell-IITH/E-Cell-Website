@@ -4,6 +4,9 @@ const bodyParser = require('body-parser');
 const morgan = require('morgan');
 const mongoose = require('mongoose');
 const cors = require('cors');
+const fs = require("fs")
+const https = require('node:https');
+
 require('dotenv/config');
 
 app.use(cors());
@@ -26,7 +29,21 @@ mongoose.connect(uri)
     console.log(err);
 })
 
-app.listen(3001, ()=>{
+// app.listen(3001, ()=>{
+//
+//     console.log('server is running at 3001');
+// })
 
-    console.log('server is running at 3001');
-})
+const options = {
+  key: fs.readFileSync('./certs/ecell.kludge.in/privkey1.pem'),
+  cert: fs.readFileSync('./certs/ecell.kludge.in/cert1.pem')
+};
+
+const server = https.createServer(
+  options,
+  app
+)
+
+const port = 3001
+server.listen(port, () => console.info("Server listening on port " + port + "..."));
+
