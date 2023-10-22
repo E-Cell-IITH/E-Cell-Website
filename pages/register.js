@@ -39,6 +39,9 @@ const Register = () => {
     semail: "",
     ifocus: "",
     ayears: "",
+    location:"",
+    city:"",
+    about:""
   });
   const isDataFilled = () => {
     return Object.values(data).every(value => value !== "");
@@ -84,7 +87,9 @@ const Register = () => {
 
     if(!check()) {return;}
 
-    const fetchData = await axios.post(`http://localhost:3001/input/signup`, data);
+    console.log(data)
+
+    const fetchData = await axios.post(`https://ecell.kludge.in:3001/input/signup`, data);
 
     setData({
       sname: "",
@@ -97,6 +102,9 @@ const Register = () => {
       semail: "",
       ifocus: "",
       ayears: "",
+      location:"",
+      city:"",
+      about:""
     })
 
     const data2 = fetchData.data
@@ -105,85 +113,114 @@ const Register = () => {
     }
   }
 
-  useEffect(() => {
-    const ctx = gsap.context(() => {
-      tl.current = gsap
-        .timeline({
-          scrollTrigger: {
-            trigger: "#head",
-            start: "top 80%",
-            end: "top 50%",
-            toggleActions: "play none none reverse",
-          },
-        })
-        .fromTo(
-          "#head > *",
-          {
-            y: 20,
-            autoAlpha: 0.2,
-            scale: 0.9,
-          },
-          {
-            autoAlpha: 1,
-            scale: 1,
-            y: 0,
-            duration: 0.4,
-            ease: "power2.out",
-            stagger: 0.3,
-          }
-        );
+  // useEffect(() => {
+  //   const ctx = gsap.context(() => {
+  //     tl.current = gsap
+  //       .timeline({
+  //         scrollTrigger: {
+  //           trigger: "#head",
+  //           start: "top 80%",
+  //           end: "top 50%",
+  //           toggleActions: "play none none reverse",
+  //         },
+  //       })
+  //       .fromTo(
+  //         "#head > *",
+  //         {
+  //           y: 20,
+  //           autoAlpha: 0.2,
+  //           scale: 0.9,
+  //         },
+  //         {
+  //           autoAlpha: 1,
+  //           scale: 1,
+  //           y: 0,
+  //           duration: 0.4,
+  //           ease: "power2.out",
+  //           stagger: 0.3,
+  //         }
+  //       );
 
-      const cards = gsap.utils.toArray(".card");
-      console.log(cards);
-      cards.forEach((card) => {
-        gsap
-          .timeline({
-            scrollTrigger: {
-              trigger: card,
-              start: "top 80%",
-              end: "top 50%",
-            },
-          })
-          .fromTo(
-            card.children,
-            {
-              y: 20,
-              autoAlpha: 0,
-            },
-            {
-              autoAlpha: 1,
-              y: 0,
-              duration: 0.4,
-              ease: "power2.out",
-              stagger: 0.3,
-            }
-          );
-      });
-    }, parent);
-    return () => ctx.revert();
-  }, []);
+  //     const cards = gsap.utils.toArray(".card");
+  //     console.log(cards);
+  //     cards.forEach((card) => {
+  //       gsap
+  //         .timeline({
+  //           scrollTrigger: {
+  //             trigger: card,
+  //             start: "top 80%",
+  //             end: "top 50%",
+  //           },
+  //         })
+  //         .fromTo(
+  //           card.children,
+  //           {
+  //             y: 20,
+  //             autoAlpha: 0,
+  //           },
+  //           {
+  //             autoAlpha: 1,
+  //             y: 0,
+  //             duration: 0.4,
+  //             ease: "power2.out",
+  //             stagger: 0.3,
+  //           }
+  //         );
+  //     });
+  //   }, parent);
+  //   return () => ctx.revert();
+  // }, []);
+  const states = [
+    "Andhra Pradesh",
+    "Arunachal Pradesh",
+    "Assam",
+    "Bihar",
+    "Chhattisgarh",
+    "Delhi",
+    "Goa",
+    "Gujarat",
+    "Haryana",
+    "Himachal Pradesh",
+    "Jammu & Kashmir",
+    "Jharkhand",
+    "Karnataka",
+    "Kerala",
+    "Madhya Pradesh",
+    "Maharashtra",
+    "Manipur",
+    "Meghalaya",
+    "Mizoram",
+    "Nagaland",
+    "Odisha",
+    "Punjab",
+    "Rajasthan",
+    "Sikkim",
+    "Tamil Nadu",
+    "Telangana",
+    "Tripura",
+    "Uttar Pradesh",
+    "Uttarakhand",
+    "West Bengal"
+  ];
+  
   return (
-    <div>
+    <div style={{background:
+      "linear-gradient(0deg, rgba(10, 10, 12, 0.70) 1.78%, rgba(2, 2, 68, 0.70) 100%), #000",padding:"10vw"}}>
       <Head>
         <title>E-Cell Register</title>
       </Head>
-
       <div
         style={{
-          background:
-            "linear-gradient(0deg, rgba(10, 10, 12, 0.70) 1.78%, rgba(2, 2, 68, 0.70) 100%), #000",
-          backgroundAttachment: "fixed",
           textAlign: "center",
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
-          height: "100vh",
+          height: "fit-content",
           padding: "0 5%",
         }}
       >
         <div
           style={{
-            height: "100vh",
             display: "flex",
             flexDirection: "column",
             flex: "1",
@@ -200,7 +237,7 @@ const Register = () => {
             lineHeight={"normal"}
             textTransform={"uppercase"}
             marginBottom={"5rem"}
-            marginTop={1.5}
+            marginTop={-25}
             width={"34.62881rem"}
             sx={{
               background:
@@ -220,7 +257,6 @@ const Register = () => {
         </div>
         <div
           style={{
-            height: "100vh",
             display: "flex",
             flexDirection: "column",
             alignItems: "flex-start",
@@ -515,6 +551,54 @@ const Register = () => {
                   },
                 }}
               />
+              <Typography
+                sx={{
+                  color: "#D3D3D3",
+                  fontFamily: "Montserrat",
+                  fontSize: "1.29563rem",
+                  fontStyle: "normal",
+                  fontWeight: 500,
+                  lineHeight: "normal",
+                  textTransform: "uppercase",
+                  marginBottom: 1,
+                  marginTop: 3,
+                }}
+              >
+                Location
+              </Typography>
+              <FormControl fullWidth variant="standard">
+                <Select
+                  id="demo-simple-select"
+                  placeholder="Hello"
+                  name="location"
+                  value={data.location}
+                  onChange={onChange}
+                  sx={{
+                    "& .MuiInputBase-input": {
+                      color: "#7E94F8",
+                      fontFamily: "Montserrat",
+                      fontSize: "1.16706rem",
+                      fontStyle: "normal",
+                      fontWeight: 500,
+                      lineHeight: "normal",
+                      borderBottom: "2px solid rgba(201, 201, 201, 0.50)",
+                    },
+                    "& .MuiInputBase-input::placeholder": {
+                      color: "#44447A",
+                      fontFamily: "Montserrat",
+                      fontSize: "0.86881rem",
+                      fontStyle: "normal",
+                      fontWeight: 500,
+                      lineHeight: "normal",
+                      opacity: "100%",
+                    },
+                  }}
+                >
+                  {states.map((el,key) => (
+                    <MenuItem key={key} value={el}>{el}</MenuItem>
+                  ))}
+                </Select>
+              </FormControl>
             </div>
             <div
               style={{
@@ -698,9 +782,97 @@ const Register = () => {
                   marginBottom:4
                 }}
               />
+              <Typography
+                sx={{
+                  color: "#D3D3D3",
+                  fontFamily: "Montserrat",
+                  fontSize: "1.29563rem",
+                  fontStyle: "normal",
+                  fontWeight: 500,
+                  lineHeight: "normal",
+                  textTransform: "uppercase",
+                  marginBottom: 1,
+                  marginTop: -1,
+                }}
+              >
+                City
+              </Typography>
+              <TextField
+                fullWidth
+                placeholder="Mention the city of your startup"
+                variant="standard"
+                name="city"
+                value={data.city}
+                onChange={onChange}
+                sx={{
+                  "& .MuiInputBase-input": {
+                    color: "#7E94F8",
+                    fontFamily: "Montserrat",
+                    fontSize: "1.16706rem",
+                    fontStyle: "normal",
+                    fontWeight: 500,
+                    lineHeight: "normal",
+                    borderBottom: "2px solid rgba(201, 201, 201, 0.50)",
+                  },
+                  "& .MuiInputBase-input::placeholder": {
+                    color: "#44447A",
+                    fontFamily: "Montserrat",
+                    fontSize: "0.86881rem",
+                    fontStyle: "normal",
+                    fontWeight: 500,
+                    lineHeight: "normal",
+                    opacity: "100%",
+                  },
+                }}
+              />
             </div>
           </div>
-          <span style={{ cursor: isDataFilled() ? 'pointer' : 'not-allowed', padding:0, margin:0, height:"fit-content" }}>
+          <Typography
+            sx={{
+              color: "#D3D3D3",
+              fontFamily: "Montserrat",
+              fontSize: "1.29563rem",
+              fontStyle: "normal",
+              fontWeight: 500,
+              lineHeight: "normal",
+              textTransform: "uppercase",
+              marginTop:2.5,
+              marginBottom: 2,
+            }}
+          >
+            About
+          </Typography>
+          <TextField
+            id="standard-basic"
+            placeholder="Tell us about your startup..."
+            size="normal"
+            fullWidth={true}
+            name="about"
+            value={data.about}
+            onChange={onChange}
+            sx={{
+              "& .MuiInputBase-input": {
+                color: "#7E94F8",
+                fontFamily: "Montserrat",
+                fontSize: "1.16706rem",
+                fontStyle: "normal",
+                fontWeight: 500,
+                lineHeight: "normal",
+                borderBottom: "2px solid rgba(201, 201, 201, 0.50)",
+              },
+              "& .MuiInputBase-input::placeholder": {
+                color: "#44447A",
+                fontFamily: "Montserrat",
+                fontSize: "0.86881rem",
+                fontStyle: "normal",
+                fontWeight: 500,
+                lineHeight: "normal",
+                opacity: "100%",
+              },
+            }}
+            variant="standard"
+          />
+          <span style={{ cursor: isDataFilled() ? 'pointer' : 'not-allowed', paddingTop:"2.5vw",margin:0, height:"fit-content" }}>
             <Button
             disabled={!isDataFilled()}
               sx={{

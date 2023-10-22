@@ -212,7 +212,7 @@ const StartupFair = () => {
             width={"70%"}
             marginTop={5}
           >
-            The highlight of E-Cell's calendar! This event bridges academia, venture capitalists, and inventive entrepreneurs, bringing together early-stage thinkers, students, corporate leaders, and startups from every corner of the country. Experience a vibrant mix of competitions, workshops, a delectable food festival, enlightening talks, engaging panel discussions, and alumni networking. The standout feature? A three-month pitching competition, offering winners the chance to showcase their innovative ideas before respected industry experts and notable speakers. Join us in shaping the future of entrepreneurship!
+            The highlight of E-Cells&#39; calendar! This event bridges academia, venture capitalists, and inventive entrepreneurs, bringing together early-stage thinkers, students, corporate leaders, and startups from every corner of the country. Experience a vibrant mix of competitions, workshops, a delectable food festival, enlightening talks, engaging panel discussions, and alumni networking. The standout feature? A three-month pitching competition, offering winners the chance to showcase their innovative ideas before respected industry experts and notable speakers. Join us in shaping the future of entrepreneurship!
           </Typography>
         </div>
         <div
@@ -253,7 +253,7 @@ const StartupFair = () => {
             width={"70%"}
             marginTop={5}
           >
-            StartupFair is a startup exhibition event, welcoming all the top-notch Startups, Investors, Speakers, Organizations, and attendees from all over India. What sets it apart is the inclusion of 14 specialized tracks, each dedicated to a unique sphere of innovation. Whether it's tech, sustainability, healthcare, or any other niche, there's a track tailored precisely to your interests. This event offers startups an unparalleled opportunity to showcase pioneering products and cultivate essential connections within a dynamic community.
+            StartupFair is a startup exhibition event, welcoming all the top-notch Startups, Investors, Speakers, Organizations, and attendees from all over India. What sets it apart is the inclusion of 14 specialized tracks, each dedicated to a unique sphere of innovation. Whether it&#39;s tech, sustainability, healthcare, or any other niche, there&#39;s a track tailored precisely to your interests. This event offers startups an unparalleled opportunity to showcase pioneering products and cultivate essential connections within a dynamic community.
           </Typography>
         </div>
       </div>
