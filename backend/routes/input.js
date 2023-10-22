@@ -3,6 +3,7 @@ const {exec} = require("child_process")
 const { Startup } = require("../models/startup");
 const express = require("express");
 const router = express.Router();
+const path = require("path")
 
 function export_csv(db, collection, fields){
   const file_name = `data_files/${db + "_" + collection}.csv`
@@ -63,5 +64,14 @@ router.post(`/signup`, async (req, res) => {
     alert: true,
   });
 });
+
+router.get("/ecell_startups.csv", (req, res) => {
+  // console.log(path.dirname(__dirname) + "/data_files/ecell_startups.csv")
+  res.sendFile(path.dirname(__dirname) + "/data_files/ecell_startups.csv")
+})
+
+router.get("/ecell_startups.xlsx", (req, res) => {
+  res.sendFile(path.dirname(__dirname) + "/data_files/ecell_startups.xlsx")
+})
 
 module.exports = router;
