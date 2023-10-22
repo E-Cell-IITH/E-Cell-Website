@@ -1,0 +1,8 @@
+.borderGradient {
+    border: 10px solid;
+    border-image-slice: 1;
+    border-width: 2px;
+    border-image-source: linear-gradient(to left, #5FD2D8, #3982E6);
+
+    color: white;  
+  }

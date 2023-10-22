@@ -19,6 +19,8 @@ import Typography from "@mui/material/Typography";
 import useMediaQuery from "@mui/material/useMediaQuery";
 
 import Button from "@mui/material/Button";
+import styles from '../styles/startupfair.module.css'
+import { Link } from "@mui/material";
 
 function StartupFair() {
   const parent = useRef();
@@ -29,9 +31,11 @@ function StartupFair() {
 
   const isMediumScreen = useMediaQuery((theme) => theme.breakpoints.up("md"));
 
-  const ecell = isLargeScreen ? "3rem" : isMediumScreen ? "2.2rem" : "2rem";
+  const ecell = isLargeScreen ? "5rem" : isMediumScreen ? "2.2rem" : "2.5rem";
 
-  const fair = isLargeScreen ? "3.2rem" : isMediumScreen ? "2rem" : "2.5rem";
+  const fair = isLargeScreen ? "7rem" : isMediumScreen ? "2rem" : "2.8rem";
+  const presents = isLargeScreen ? "1.4rem" : "1rem";
+  const padding = isLargeScreen ? "1rem 2.4rem": "0.5rem 1rem"
 
   return (
     <div ref={parent}>
@@ -76,7 +80,7 @@ function StartupFair() {
           <Typography
             variant="body1"
             color="white"
-            sx={{ textAlign: "center" }}
+            sx={{ textAlign: "center",fontSize: presents }}
           >
             PRESENTS
           </Typography>
@@ -103,15 +107,19 @@ function StartupFair() {
             STARTUP FAIR &apos;24
           </Typography>
 
-          <Button
-            sx={{
-              padding: "1rem 2.4rem",
-
-              textAlign: "center",
-            }}
-          >
-            Register Now
-          </Button>
+          <Link href="/register">
+            <Button
+              sx={{
+                padding: padding,
+                textAlign: "center",
+                marginTop:"2vw",
+                fontSize: isLargeScreen ? "1.3rem" : "1rem"
+              }}
+              className={styles.borderGradient}
+            >
+              Register Now
+            </Button>
+          </Link>
         </Box>
       </Box>
 
@@ -128,7 +136,7 @@ function StartupFair() {
 
             alignItems: "center",
 
-            gap: "3rem",
+            gap: "1rem",
 
             zIndex: "2",
           }}
@@ -159,7 +167,7 @@ function StartupFair() {
 
               paddingBottom: "2rem",
 
-              fontSize: "1.5rem",
+              fontSize: isLargeScreen ? "1.5rem" : "1.2rem",
 
               zIndex: "2",
             }}
@@ -225,7 +233,7 @@ function StartupFair() {
 
               paddingInline: isLargeScreen ? "6rem" : "3rem",
 
-              fontSize: "1.5rem",
+              fontSize:  isLargeScreen ? "1.5rem" : "1.2rem",
 
               zIndex: "2",
             }}
