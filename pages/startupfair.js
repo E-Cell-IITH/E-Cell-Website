@@ -143,32 +143,33 @@ function StartupFair() {
         >
           <Box sx={{ display: "flex", gap: ".5rem" }}>
             <Link
-              href="https://mui.com/material-ui/react-link/"
+              href="https://www.instagram.com/ecell_iith/?hl=en"
               sx={{ color: "white" }}
+              target="_blank"
             >
               <InstagramIcon />
             </Link>
             <Link
-              href="https://mui.com/material-ui/react-link/"
+              href="https://www.linkedin.com/company/entrepreneurship-cell-iit-hyderabad"
               sx={{ color: "white" }}
+              target="_blank"
             >
               <LinkedInIcon />
             </Link>
-            <Link
-              href="https://mui.com/material-ui/react-link/"
-              sx={{ color: "white" }}
-            >
+            <Link href="https://twitter.com/ecell_iith" sx={{ color: "white" }}>
               <TwitterIcon />
             </Link>
             <Link
-              href="https://mui.com/material-ui/react-link/"
+              href="https://www.facebook.com/ecell.iithyd/"
               sx={{ color: "white" }}
+              target="_blank"
             >
               <FacebookIcon />
             </Link>
             <Link
-              href="https://mui.com/material-ui/react-link/"
+              href="https://www.youtube.com/user/ecelliithyderabad"
               sx={{ color: "white" }}
+              target="_blank"
             >
               <YouTubeIcon />
             </Link>
