@@ -19,8 +19,13 @@ import Typography from "@mui/material/Typography";
 import useMediaQuery from "@mui/material/useMediaQuery";
 
 import Button from "@mui/material/Button";
-import styles from '../styles/startupfair.module.css'
+import styles from "../styles/startupfair.module.css";
 import { Link } from "@mui/material";
+import InstagramIcon from "@mui/icons-material/Instagram";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import TwitterIcon from "@mui/icons-material/Twitter";
+import FacebookIcon from "@mui/icons-material/Facebook";
+import YouTubeIcon from "@mui/icons-material/YouTube";
 
 function StartupFair() {
   const parent = useRef();
@@ -35,7 +40,7 @@ function StartupFair() {
 
   const fair = isLargeScreen ? "7rem" : isMediumScreen ? "2rem" : "2.8rem";
   const presents = isLargeScreen ? "1.4rem" : "1rem";
-  const padding = isLargeScreen ? "1rem 2.4rem": "0.5rem 1rem"
+  const padding = isLargeScreen ? "1rem 2.4rem" : "0.5rem 1rem";
 
   return (
     <div ref={parent}>
@@ -50,6 +55,8 @@ function StartupFair() {
           backgroundImage: "linear-gradient(#02023c 5vh, black)",
 
           display: "flex",
+
+          flexDirection: "column",
 
           justifyContent: "center",
 
@@ -80,7 +87,7 @@ function StartupFair() {
           <Typography
             variant="body1"
             color="white"
-            sx={{ textAlign: "center",fontSize: presents }}
+            sx={{ textAlign: "center", fontSize: presents }}
           >
             PRESENTS
           </Typography>
@@ -112,14 +119,60 @@ function StartupFair() {
               sx={{
                 padding: padding,
                 textAlign: "center",
-                marginTop:"2vw",
-                fontSize: isLargeScreen ? "1.3rem" : "1rem"
+                marginTop: "2vw",
+                fontSize: isLargeScreen ? "1.3rem" : "1rem",
+                textTransform: "capitalize",
+                fontWeight: "lighter",
+                borderRadius: "3px",
+                boxShadow:
+                  "rgba(57,130,230, .5) -2px -2px 3px , rgba(95,210,216, .5) 2px 2px 3px, rgba(95,210,216, .5) 2px -2px 3px, rgba(57,130,230, .5) -2px 2px 5px",
               }}
               className={styles.borderGradient}
             >
               Register Now
             </Button>
           </Link>
+        </Box>
+        <Box
+          sx={{
+            color: "white",
+            position: "absolute",
+            bottom: "10px",
+            left: "10px",
+          }}
+        >
+          <Box sx={{ display: "flex", gap: ".5rem" }}>
+            <Link
+              href="https://mui.com/material-ui/react-link/"
+              sx={{ color: "white" }}
+            >
+              <InstagramIcon />
+            </Link>
+            <Link
+              href="https://mui.com/material-ui/react-link/"
+              sx={{ color: "white" }}
+            >
+              <LinkedInIcon />
+            </Link>
+            <Link
+              href="https://mui.com/material-ui/react-link/"
+              sx={{ color: "white" }}
+            >
+              <TwitterIcon />
+            </Link>
+            <Link
+              href="https://mui.com/material-ui/react-link/"
+              sx={{ color: "white" }}
+            >
+              <FacebookIcon />
+            </Link>
+            <Link
+              href="https://mui.com/material-ui/react-link/"
+              sx={{ color: "white" }}
+            >
+              <YouTubeIcon />
+            </Link>
+          </Box>
         </Box>
       </Box>
 
@@ -233,7 +286,7 @@ function StartupFair() {
 
               paddingInline: isLargeScreen ? "6rem" : "3rem",
 
-              fontSize:  isLargeScreen ? "1.5rem" : "1.2rem",
+              fontSize: isLargeScreen ? "1.5rem" : "1.2rem",
 
               zIndex: "2",
             }}
