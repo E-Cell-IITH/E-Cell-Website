@@ -12,9 +12,9 @@ export default function Home() {
       title: "REMARKSKILL WORKSHOP SERIES<br/> VENUE: IIT HYDERABAD", //HTML code works here
       description: "", //can even give description
       image:
-        "https://res.cloudinary.com/dn8obuhkt/image/upload/v1692615883/ECell/IIT_HYDERABAD_TECHNICAL_kudx9f.jpg",
-      link: "https://rzp.io/l/pEHK4OK2M", // registration link
-      height: 400, //height and width of image
+        "https://res.cloudinary.com/dn8obuhkt/image/upload/v1701162533/PHOTO-2023-11-28-12-53-29_nb7rel.jpg",
+      link: "https://tbytes.mojo.page/iith40", // registration link
+      height: 450, //height and width of image
       width: 536,
     },
   ];
