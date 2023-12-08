@@ -77,27 +77,44 @@ function StartupFair() {
           }}
         >
           <Typography
-            variant="h2"
-            color="white"
-            sx={{ fontWeight: "600", textAlign: "center", fontSize: ecell }}
+            // variant="h2"
+            // color="white"
+            // sx={{ fontWeight: "600", textAlign: "center", fontSize: ecell }}
+            color= "#FFF"
+            textAlign= "center"
+            fontFamily= "Montserrat"
+            fontSize= {ecell}
+            fontStyle= "normal"
+            fontWeight= "700"
+            lineHeight= "normal"
           >
             E-CELL IIT HYDERABAD
           </Typography>
 
           <Typography
-            variant="body1"
-            color="white"
-            sx={{ textAlign: "center", fontSize: presents }}
+            // variant="body1"
+            // color="white"
+            // sx={{ textAlign: "center", fontSize: presents }}
+            color= "#FFF"
+            textSlign= "center"
+            fontFamily= "Montserrat"
+            fontSize= {presents}
+            fontStyle= "normal"
+            fontWeight= "700"
+            lineHeight= "41.968px"
+            textTransform= "uppercase"
           >
             PRESENTS
           </Typography>
 
           <Typography
-            variant="h1"
             sx={{
-              fontWeight: "900",
+              fontWeight: "700",
 
               color: "white",
+              fontFamily: "Montserrat",
+              fontStyle: "normal",
+              lineSpacing: "-1.14px",
 
               background:
                 "-webkit-linear-gradient(180deg, #5FD2D8 30%, #3982E6 90%)",
@@ -123,13 +140,25 @@ function StartupFair() {
                 fontSize: isLargeScreen ? "1.3rem" : "1rem",
                 textTransform: "capitalize",
                 fontWeight: "lighter",
-                borderRadius: "3px",
-                boxShadow:
-                  "rgba(57,130,230, .5) -2px -2px 3px , rgba(95,210,216, .5) 2px 2px 3px, rgba(95,210,216, .5) 2px -2px 3px, rgba(57,130,230, .5) -2px 2px 5px",
+                border: "2.439px solid #5FD2D8",
+                borderRadius: "10px",
+                boxShadow: "0px 0px 27.979px 3.497px #61E0FD;",
+                color: "white",
               }}
-              className={styles.borderGradient}
+              // className={styles.borderGradient}
             >
-              Register Now
+              <Typography
+                color= "#FFF"
+                textAlign= "center"
+                fontFamily= "Montserrat"
+                fontSize= "32px"
+                fontStyle= "normal"
+                fontWeight= "500"
+                lineHeight= "normal"
+                textTransform= "capitalize"
+              >
+                Register Here
+              </Typography>
             </Button>
           </Link>
         </Box>
@@ -196,16 +225,20 @@ function StartupFair() {
           }}
         >
           <Typography
-            variant="h1"
             color="white"
+            textAlign="center"
+            fontFamily="Montserrat"
+            fontStyle="normal"
+            lineHeight="normal"
+            textTransform="uppercase"
             sx={{
               textAlign: "center",
 
               zIndex: "2",
 
-              fontWeight: 900,
+              fontWeight: 700,
 
-              fontSize: isLargeScreen ? "3.5rem" : "3rem",
+              fontSize: isLargeScreen ? "4rem" : "3rem",
             }}
           >
             E-SUMMIT 2024
@@ -214,6 +247,7 @@ function StartupFair() {
           <Typography
             variant="body1"
             color="white"
+            fontFamily="Montserrat"
             sx={{
               textAlign: "center",
 
@@ -221,7 +255,8 @@ function StartupFair() {
 
               paddingBottom: "2rem",
 
-              fontSize: isLargeScreen ? "1.5rem" : "1.2rem",
+              fontSize: isLargeScreen ? "2rem" : "1.2rem",
+              // fontSize: "32px",
 
               zIndex: "2",
             }}
@@ -257,16 +292,16 @@ function StartupFair() {
           }}
         >
           <Typography
-            variant="h1"
             color="white"
             sx={{
               textAlign: "center",
 
               zIndex: "2",
+              fontFamily: "Montserrat",
 
               fontWeight: "900",
 
-              fontSize: isLargeScreen ? "3.5rem" : "3rem",
+              fontSize: isLargeScreen ? "4rem" : "3rem",
 
               background:
                 "-webkit-linear-gradient(180deg, #5FD2D8 30%, #3982E6 90%)",
@@ -276,32 +311,30 @@ function StartupFair() {
               WebkitTextFillColor: "transparent",
             }}
           >
-            E-SUMMIT 2024
+            STARTUP FAIR
           </Typography>
 
           <Typography
             variant="body1"
             color="white"
             sx={{
+              fontFamily: "Montserrat",
               textAlign: "center",
 
               paddingInline: isLargeScreen ? "6rem" : "3rem",
 
-              fontSize: isLargeScreen ? "1.5rem" : "1.2rem",
+              fontSize: isLargeScreen ? "2rem" : "1.2rem",
 
               zIndex: "2",
             }}
           >
-            The highlight of E-Cell&apos;s calendar! This event bridges
-            academia, venture capitalists, and inventive entrepreneurs, bringing
-            together early-stage thinkers, students, corporate leaders, and
-            startups from every corner of the country. Experience a vibrant mix
-            of competitions, workshops, a delectable food festival, enlightening
-            talks, engaging panel discussions, and alumni networking. The
-            standout feature? A three-month pitching competition, offering
-            winners the chance to showcase their innovative ideas before
-            respected industry experts and notable speakers. Join us in shaping
-            the future of entrepreneurship!
+            StartupFair is a startup exhibition event, welcoming all the top-notch Startups,
+            Investors, Speakers, Organizations, and attendees from all over India. What sets
+            it apart is the inclusion of 14 specialized tracks, each dedicated to a unique
+            sphere of innovation. Whether it&apos;s tech, sustainability, healthcare, or any other
+            niche, there&apos;s a track tailored precisely to your interests. This event offers
+            startups an unparalleled opportunity to showcase pioneering products and cultivate
+            essential connections within a dynamic community.
           </Typography>
         </Box>
 

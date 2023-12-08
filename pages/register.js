@@ -21,10 +21,15 @@ gsap.registerPlugin(ScrollTrigger);
 
 const Field = ({ label, placeholder, name, value, onChange, isOption, options }) => {
   let input = <></>
+  const [selectOpen, setSelectOpen] = useState(false);
+
+  const closeMenu = () => {
+    setSelectOpen(false);
+  }
+
   if (isOption)
     input = <>
       <FormControl fullWidth variant="standard">
-        {/* <InputLabel sx={{color:"white",border:"1px solid white",marginTop:"-0.8vw",padding:"0.2vw",fontSize:"0.7vw",borderRadius:"0.3vw",backgroundColor:"#36366D"}}>{placeholder}</InputLabel> */}
         <Select
           required
           displayEmpty
@@ -37,7 +42,16 @@ const Field = ({ label, placeholder, name, value, onChange, isOption, options })
           inputProps={{ 'aria-label': 'Without label' }}
           name={name}
           value={value}
-          onChange={onChange}
+          onChange={(e) => {
+            setSelectOpen(false)
+            onChange(e)
+          }}
+          open={selectOpen}
+          onOpen={() => {
+            window.addEventListener('scroll', closeMenu);
+            setSelectOpen(true);
+          }}
+          onClose={() => setSelectOpen(false)}
           sx={{
             "& .MuiInputBase-input": {
               color: "#7E94F8",
@@ -63,13 +77,17 @@ const Field = ({ label, placeholder, name, value, onChange, isOption, options })
               sx: {
                 "& .MuiMenuItem-root:hover": {
                   color:"black"
-                }
+                },
+                "& .Mui-selected": {
+                  color: "black",
+                },
               }
-            }
+            },
+            disableScrollLock: true,
           }}
         >
           {options.map((el, key) => (
-            <MenuItem sx={{borderBottom:"2px solid white",backgroundColor:"#32329B",color:"white"}} key={key} value={el}>{el}</MenuItem>
+            <MenuItem sx={{borderBottom:"1px solid white",backgroundColor:"#32329B",color:"white"}} key={key} value={el}>{el}</MenuItem>
           ))}
         </Select>
       </FormControl>
@@ -150,7 +168,6 @@ const Register = () => {
   function onChange(e) {
     const { name, value } = e.target;
     setData((previous) => ({ ...previous, [name]: value }));
-    console.log(data)
   }
 
   function check() {
@@ -188,7 +205,6 @@ const Register = () => {
 
     if (!check()) { return; }
 
-    console.log(data)
 
     const fetchData = await axios.post(`https://ecell.kludge.in:3001/input/signup`, data);
 
@@ -214,63 +230,6 @@ const Register = () => {
     }
   }
 
-  // useEffect(() => {
-  //   const ctx = gsap.context(() => {
-  //     tl.current = gsap
-  //       .timeline({
-  //         scrollTrigger: {
-  //           trigger: "#head",
-  //           start: "top 80%",
-  //           end: "top 50%",
-  //           toggleActions: "play none none reverse",
-  //         },
-  //       })
-  //       .fromTo(
-  //         "#head > *",
-  //         {
-  //           y: 20,
-  //           autoAlpha: 0.2,
-  //           scale: 0.9,
-  //         },
-  //         {
-  //           autoAlpha: 1,
-  //           scale: 1,
-  //           y: 0,
-  //           duration: 0.4,
-  //           ease: "power2.out",
-  //           stagger: 0.3,
-  //         }
-  //       );
-
-  //     const cards = gsap.utils.toArray(".card");
-  //     console.log(cards);
-  //     cards.forEach((card) => {
-  //       gsap
-  //         .timeline({
-  //           scrollTrigger: {
-  //             trigger: card,
-  //             start: "top 80%",
-  //             end: "top 50%",
-  //           },
-  //         })
-  //         .fromTo(
-  //           card.children,
-  //           {
-  //             y: 20,
-  //             autoAlpha: 0,
-  //           },
-  //           {
-  //             autoAlpha: 1,
-  //             y: 0,
-  //             duration: 0.4,
-  //             ease: "power2.out",
-  //             stagger: 0.3,
-  //           }
-  //         );
-  //     });
-  //   }, parent);
-  //   return () => ctx.revert();
-  // }, []);
   const states = [
     "Andhra Pradesh",
     "Arunachal Pradesh",
@@ -303,6 +262,24 @@ const Register = () => {
     "Uttarakhand",
     "West Bengal"
   ];
+
+  const serviceAreas = [
+    "Personal Care",
+    "IOT",
+    "Design",
+    "Agro/Food",
+    "Space Tech",
+    "SAAS",
+    "EV",
+    "Fintech",
+    "Supply Chain",
+    "Bio Med",
+    "Robotics",
+    "Cyber Security",
+    "Energy Engg",
+    "EdTech",
+    "Others"
+  ]
 
   const fieldData = [
     {
@@ -351,10 +328,12 @@ const Register = () => {
     },
     {
       label: "Service Areas",
-      placeholder: "Mention Startup Service Areas",
+      placeholder: "Select Startup Service Areas",
       name: "service",
       value: data.service,
-      onChange: onChange
+      onChange: onChange,
+      isOption: true,
+      options: serviceAreas
     },
     {
       label: "Active Years",
@@ -389,155 +368,7 @@ const Register = () => {
       <Head>
         <title>E-Cell Register</title>
       </Head>
-      {/* <div
-        style={{
-          textAlign: "center",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-          height: "fit-content",
-          padding: "0 5%",
-        }}
-      > */}
-        {/* <div
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            flex: "1",
-            alignItems: "center",
-            justifyContent: "center",
-          }}
-        >
-          <Typography
-            textAlign="left"
-            fontFamily={"Montserrat"}
-            fontSize={"3.52256rem"}
-            fontStyle={"normal"}
-            fontWeight={700}
-            lineHeight={"normal"}
-            textTransform={"uppercase"}
-            marginBottom={"5rem"}
-            marginTop={-25}
-            width={"34.62881rem"}
-            sx={{
-              background:
-                "linear-gradient(91deg, #3880E7 0.4%, #62D7D8 99.34%)",
-              backgroundClip: "text",
-              "WebkitBackgroundClip": "text",
-              "WebkitTextFillColor": "transparent",
-            }}
-          >
-            Tell us about your StartuP...
-          </Typography>
-          <CardMedia
-            sx={{ width: "18.24944rem", height: "28.67769rem" }}
-            image="/vector.png"
-            title="groww"
-          />
-        </div> */}
-        {/* <div
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "flex-start",
-            justifyContent: "center",
-            width: "100%",
-          }}
-        > */}
-          {/* <Typography
-            sx={{
-              color: "#D3D3D3",
-              fontFamily: "Montserrat",
-              fontSize: "1.29563rem",
-              fontStyle: "normal",
-              fontWeight: 500,
-              lineHeight: "normal",
-              textTransform: "uppercase",
-              marginBottom: 2,
-            }}
-          >
-            Startup Name
-          </Typography>
-          <TextField
-            id="standard-basic"
-            placeholder="Type Startup Name"
-            size="normal"
-            fullWidth={true}
-            name="sname"
-            value={data.sname}
-            onChange={onChange}
-            sx={{
-              "& .MuiInputBase-input": {
-                color: "#7E94F8",
-                fontFamily: "Montserrat",
-                fontSize: "1.16706rem",
-                fontStyle: "normal",
-                fontWeight: 500,
-                lineHeight: "normal",
-                borderBottom: "2px solid rgba(201, 201, 201, 0.50)",
-              },
-              "& .MuiInputBase-input::placeholder": {
-                color: "#44447A",
-                fontFamily: "Montserrat",
-                fontSize: "0.86881rem",
-                fontStyle: "normal",
-                fontWeight: 500,
-                lineHeight: "normal",
-                opacity: "100%",
-              },
-            }}
-            variant="standard"
-          /> */}
-
-          {/* <Typography
-            sx={{
-              color: "#D3D3D3",
-              fontFamily: "Montserrat",
-              fontSize: "1.29563rem",
-              fontStyle: "normal",
-              fontWeight: 500,
-              lineHeight: "normal",
-              textTransform: "uppercase",
-              marginBottom: 2,
-              marginTop: 4,
-            }}
-          >
-            Founder/CEO NAME
-          </Typography>
-          <TextField
-            id="standard-basic"
-            placeholder="Type Founder / CEO Name"
-            size="normal"
-            fullWidth={true}
-            name="fname"
-            value={data.fname}
-            onChange={onChange}
-            sx={{
-              "& .MuiInputBase-input": {
-                color: "#7E94F8",
-                fontFamily: "Montserrat",
-                fontSize: "1.16706rem",
-                fontStyle: "normal",
-                fontWeight: 500,
-                lineHeight: "normal",
-                width: "100%",
-                width: "100%", // Make the TextField take up all available width
-                borderBottom: "2px solid rgba(201, 201, 201, 0.50)",
-              },
-              "& .MuiInputBase-input::placeholder": {
-                color: "#44447A",
-                fontFamily: "Montserrat",
-                fontSize: "0.86881rem",
-                fontStyle: "normal",
-                fontWeight: 500,
-                lineHeight: "normal",
-                opacity: "100%",
-              },
-            }}
-            variant="standard"
-          /> */}
           <Grid container spacing={8}>
-            {/* Code for line 397 to 422 will come here. Make a container inside this item it give it half width on large screen and full width on small screen. Keep both parts inside separate grid items so that alignment is easier */}
             <Grid item xl={6} lg={6} md={12} sm={12} xs={12} marginBottom={{ xl: 0, lg: 0, md: "2rem", sm: "2rem", xs: "2rem" }} alignItems="center">
               <Grid container direction={"row-reverse"} height="100%">
                 <Grid item xl={12} lg={12} md={9} sm={9} xs={9}>
@@ -549,9 +380,6 @@ const Register = () => {
                     fontWeight={700}
                     lineHeight={"normal"}
                     textTransform={"uppercase"}
-                    // marginBottom={"5rem"}
-                    // marginTop={-25}
-                    // width={"34.62881rem"}
                     sx={{
                       background:
                         "linear-gradient(91deg, #3880E7 0.4%, #62D7D8 99.34%)",
@@ -564,17 +392,14 @@ const Register = () => {
                   </Typography>
                 </Grid>
                 <Grid item xl={12} lg={12} md={3} sm={3} xs={3}>
-                  {/* <Box display="flex" flexDirection="column" justifyContent="center" height="100%">
-                    <Box display="flex" flexDirection="row" justifyContent="center" width="100%"> */}
-                  <div style={{display:"flex",justifyContent:"center",alignItems:"center"}}>
+                  <Box
+                    style={{display:"flex", justifyContent:"center", alignItems:"center", height:"100%"}}
+                  >
                     <CardMedia
                       sx={{ width: { xl: "20rem", lg: "18.24944rem", md: "4rem", sm: "4rem", xs: "2.5rem" }, height: { xl: 28.67769 / 18.24944 * 20 + "rem", lg: "28.67769rem", md: 28.67769 / 18.24944 * 4 + "rem", sm: 28.67769 / 18.24944 * 4 + "rem", xs: 28.67769 / 18.24944 * 2.5 + "rem" } }}
                       image="/vector.png"
                     />
-                  </div>
-
-                  {/* </Box>
-                  </Box> */}
+                  </Box>
                 </Grid>
               </Grid>
             </Grid>
@@ -625,549 +450,6 @@ const Register = () => {
               </Grid>
             </Grid>
           </Grid>
-
-          {/* <div
-            style={{
-              display: "flex",
-              flexDirection: "row",
-              justifyContent: "space-between",
-              width: "100%",
-            }}
-          >
-            <div
-              style={{
-                flex: 1,
-                marginRight: "1rem",
-                marginTop: "4%",
-                gap: "4%",
-                textAlign: "left",
-              }}
-            >
-              <Typography
-                sx={{
-                  color: "#D3D3D3",
-                  fontFamily: "Montserrat",
-                  fontSize: "1.29563rem",
-                  fontStyle: "normal",
-                  fontWeight: 500,
-                  lineHeight: "normal",
-                  textTransform: "uppercase",
-                  marginBottom: 1,
-                }}
-              >
-                POC Name
-              </Typography>
-              <TextField
-                fullWidth
-                placeholder="Type Point of Contact Name"
-                variant="standard"
-                size="normal"
-                name="pocname"
-                value={data.pocname}
-                onChange={onChange}
-                sx={{
-                  "& .MuiInputBase-input": {
-                    color: "#7E94F8",
-                    fontFamily: "Montserrat",
-                    fontSize: "1.16706rem",
-                    fontStyle: "normal",
-                    fontWeight: 500,
-                    lineHeight: "normal",
-                    borderBottom: "2px solid rgba(201, 201, 201, 0.50)",
-                  },
-                  "& .MuiInputBase-input::placeholder": {
-                    color: "#44447A",
-                    fontFamily: "Montserrat",
-                    fontSize: "0.86881rem",
-                    fontStyle: "normal",
-                    fontWeight: 500,
-                    lineHeight: "normal",
-                    opacity: "100%",
-                  },
-                }}
-              />
-              <Typography
-                sx={{
-                  color: "#D3D3D3",
-                  fontFamily: "Montserrat",
-                  fontSize: "1.29563rem",
-                  fontStyle: "normal",
-                  fontWeight: 500,
-                  lineHeight: "normal",
-                  textTransform: "uppercase",
-                  marginBottom: 1,
-                  marginTop: 3,
-                }}
-              >
-                Contact No.
-              </Typography>
-              <TextField
-                fullWidth
-                placeholder="Type Contact No."
-                variant="standard"
-                size="normal"
-                name="contact"
-                value={data.contact}
-                onChange={onChange}
-                sx={{
-                  "& .MuiInputBase-input": {
-                    color: "#7E94F8",
-                    fontFamily: "Montserrat",
-                    fontSize: "1.16706rem",
-                    fontStyle: "normal",
-                    fontWeight: 500,
-                    lineHeight: "normal",
-                    borderBottom: "2px solid rgba(201, 201, 201, 0.50)",
-                  },
-                  "& .MuiInputBase-input::placeholder": {
-                    color: "#44447A",
-                    fontFamily: "Montserrat",
-                    fontSize: "0.86881rem",
-                    fontStyle: "normal",
-                    fontWeight: 500,
-                    lineHeight: "normal",
-                    opacity: "100%",
-                  },
-                }}
-              />
-              <Typography
-                sx={{
-                  color: "#D3D3D3",
-                  fontFamily: "Montserrat",
-                  fontSize: "1.29563rem",
-                  fontStyle: "normal",
-                  fontWeight: 500,
-                  lineHeight: "normal",
-                  textTransform: "uppercase",
-                  marginBottom: 1,
-                  marginTop: 3,
-                }}
-              >
-                Startup Stage
-              </Typography>
-              <FormControl fullWidth variant="standard">
-                <Select
-                  id="demo-simple-select"
-                  placeholder="Hello"
-                  name="startup"
-                  value={data.startup}
-                  onChange={onChange}
-                  sx={{
-                    "& .MuiInputBase-input": {
-                      color: "#7E94F8",
-                      fontFamily: "Montserrat",
-                      fontSize: "1.16706rem",
-                      fontStyle: "normal",
-                      fontWeight: 500,
-                      lineHeight: "normal",
-                      borderBottom: "2px solid rgba(201, 201, 201, 0.50)",
-                    },
-                    "& .MuiInputBase-input::placeholder": {
-                      color: "#44447A",
-                      fontFamily: "Montserrat",
-                      fontSize: "0.86881rem",
-                      fontStyle: "normal",
-                      fontWeight: 500,
-                      lineHeight: "normal",
-                      opacity: "100%",
-                    },
-                  }}
-                >
-                  <MenuItem value="Idea">Idea</MenuItem>
-                  <MenuItem value="Prototype">Prototype</MenuItem>
-                  <MenuItem value="Launch">Launch</MenuItem>
-                </Select>
-              </FormControl>
-              <Typography
-                sx={{
-                  color: "#D3D3D3",
-                  fontFamily: "Montserrat",
-                  fontSize: "1.29563rem",
-                  fontStyle: "normal",
-                  fontWeight: 500,
-                  lineHeight: "normal",
-                  textTransform: "uppercase",
-                  marginBottom: 1,
-                  marginTop: 3,
-                }}
-              >
-                Service Areas
-              </Typography>
-              <TextField
-                fullWidth
-                placeholder="Mention Startup Service Areas"
-                variant="standard"
-                name="service"
-                value={data.service}
-                onChange={onChange}
-                sx={{
-                  "& .MuiInputBase-input": {
-                    color: "#7E94F8",
-                    fontFamily: "Montserrat",
-                    fontSize: "1.16706rem",
-                    fontStyle: "normal",
-                    fontWeight: 500,
-                    lineHeight: "normal",
-                    borderBottom: "2px solid rgba(201, 201, 201, 0.50)",
-                  },
-                  "& .MuiInputBase-input::placeholder": {
-                    color: "#44447A",
-                    fontFamily: "Montserrat",
-                    fontSize: "0.86881rem",
-                    fontStyle: "normal",
-                    fontWeight: 500,
-                    lineHeight: "normal",
-                    opacity: "100%",
-                  },
-                }}
-              />
-              <Typography
-                sx={{
-                  color: "#D3D3D3",
-                  fontFamily: "Montserrat",
-                  fontSize: "1.29563rem",
-                  fontStyle: "normal",
-                  fontWeight: 500,
-                  lineHeight: "normal",
-                  textTransform: "uppercase",
-                  marginBottom: 1,
-                  marginTop: 3,
-                }}
-              >
-                Location
-              </Typography>
-              <FormControl fullWidth variant="standard">
-                <Select
-                  id="demo-simple-select"
-                  placeholder="Hello"
-                  name="location"
-                  value={data.location}
-                  onChange={onChange}
-                  sx={{
-                    "& .MuiInputBase-input": {
-                      color: "#7E94F8",
-                      fontFamily: "Montserrat",
-                      fontSize: "1.16706rem",
-                      fontStyle: "normal",
-                      fontWeight: 500,
-                      lineHeight: "normal",
-                      borderBottom: "2px solid rgba(201, 201, 201, 0.50)",
-                    },
-                    "& .MuiInputBase-input::placeholder": {
-                      color: "#44447A",
-                      fontFamily: "Montserrat",
-                      fontSize: "0.86881rem",
-                      fontStyle: "normal",
-                      fontWeight: 500,
-                      lineHeight: "normal",
-                      opacity: "100%",
-                    },
-                  }}
-                >
-                  {states.map((el,key) => (
-                    <MenuItem key={key} value={el}>{el}</MenuItem>
-                  ))}
-                </Select>
-              </FormControl>
-            </div>
-            <div
-              style={{
-                flex: 1,
-                marginLeft: "1rem",
-                marginTop: "4%",
-                gap: "4%",
-                textAlign: "left",
-              }}
-            >
-              <Typography
-                sx={{
-                  color: "#D3D3D3",
-                  fontFamily: "Montserrat",
-                  fontSize: "1.29563rem",
-                  fontStyle: "normal",
-                  fontWeight: 500,
-                  lineHeight: "normal",
-                  textTransform: "uppercase",
-                  marginBottom: 1,
-                }}
-              >
-                Email ID
-              </Typography>
-              <TextField
-                fullWidth
-                placeholder="Type POC Email ID"
-                variant="standard"
-                name="email"
-                value={data.email}
-                onChange={onChange}
-                sx={{
-                  "& .MuiInputBase-input": {
-                    color: "#7E94F8",
-                    fontFamily: "Montserrat",
-                    fontSize: "1.16706rem",
-                    fontStyle: "normal",
-                    fontWeight: 500,
-                    lineHeight: "normal",
-                    borderBottom: "2px solid rgba(201, 201, 201, 0.50)",
-                  },
-                  "& .MuiInputBase-input::placeholder": {
-                    color: "#44447A",
-                    fontFamily: "Montserrat",
-                    fontSize: "0.86881rem",
-                    fontStyle: "normal",
-                    fontWeight: 500,
-                    lineHeight: "normal",
-                    opacity: "100%",
-                  },
-                }}
-              />
-              <Typography
-                sx={{
-                  color: "#D3D3D3",
-                  fontFamily: "Montserrat",
-                  fontSize: "1.29563rem",
-                  fontStyle: "normal",
-                  fontWeight: 500,
-                  lineHeight: "normal",
-                  textTransform: "uppercase",
-                  marginBottom: 1,
-                  marginTop: 3,
-                }}
-              >
-                Startup Email ID
-              </Typography>
-              <TextField
-                fullWidth
-                placeholder="Type Startup Mail ID"
-                variant="standard"
-                name="semail"
-                type="email"
-                value={data.semail}
-                onChange={onChange}
-                sx={{
-                  "& .MuiInputBase-input": {
-                    color: "#7E94F8",
-                    fontFamily: "Montserrat",
-                    fontSize: "1.16706rem",
-                    fontStyle: "normal",
-                    fontWeight: 500,
-                    lineHeight: "normal",
-                    borderBottom: "2px solid rgba(201, 201, 201, 0.50)",
-                  },
-                  "& .MuiInputBase-input::placeholder": {
-                    color: "#44447A",
-                    fontFamily: "Montserrat",
-                    fontSize: "0.86881rem",
-                    fontStyle: "normal",
-                    fontWeight: 500,
-                    lineHeight: "normal",
-                    opacity: "100%",
-                  },
-                }}
-              />
-              <Typography
-                sx={{
-                  color: "#D3D3D3",
-                  fontFamily: "Montserrat",
-                  fontSize: "1.29563rem",
-                  fontStyle: "normal",
-                  fontWeight: 500,
-                  lineHeight: "normal",
-                  textTransform: "uppercase",
-                  marginBottom: 1,
-                  marginTop: 3,
-                }}
-              >
-                Industry Focus
-              </Typography>
-              <TextField
-                fullWidth
-                placeholder="Mention Startup Industry Focus"
-                variant="standard"
-                name="ifocus"
-                value={data.ifocus}
-                onChange={onChange}
-                sx={{
-                  "& .MuiInputBase-input": {
-                    color: "#7E94F8",
-                    fontFamily: "Montserrat",
-                    fontSize: "1.16706rem",
-                    fontStyle: "normal",
-                    fontWeight: 500,
-                    lineHeight: "normal",
-                    borderBottom: "2px solid rgba(201, 201, 201, 0.50)",
-                  },
-                  "& .MuiInputBase-input::placeholder": {
-                    color: "#44447A",
-                    fontFamily: "Montserrat",
-                    fontSize: "0.86881rem",
-                    fontStyle: "normal",
-                    fontWeight: 500,
-                    lineHeight: "normal",
-                    opacity: "100%",
-                  },
-                }}
-              />
-              <Typography
-                sx={{
-                  color: "#D3D3D3",
-                  fontFamily: "Montserrat",
-                  fontSize: "1.29563rem",
-                  fontStyle: "normal",
-                  fontWeight: 500,
-                  lineHeight: "normal",
-                  textTransform: "uppercase",
-                  marginBottom: 1,
-                  marginTop: 3,
-                }}
-              >
-                Active Years
-              </Typography>
-              <TextField
-                fullWidth
-                placeholder="Type The Number Active of Years"
-                variant="standard"
-                name="ayears"
-                value={data.ayears}
-                onChange={onChange}
-                sx={{
-                  "& .MuiInputBase-input": {
-                    color: "#7E94F8",
-                    fontFamily: "Montserrat",
-                    fontSize: "1.16706rem",
-                    fontStyle: "normal",
-                    fontWeight: 500,
-                    lineHeight: "normal",
-                    borderBottom: "2px solid rgba(201, 201, 201, 0.50)",
-                  },
-                  "& .MuiInputBase-input::placeholder": {
-                    color: "#44447A",
-                    fontFamily: "Montserrat",
-                    fontSize: "0.86881rem",
-                    fontStyle: "normal",
-                    fontWeight: 500,
-                    lineHeight: "normal",
-                    opacity: "100%",
-                  },
-                  marginBottom:4
-                }}
-              />
-              <Typography
-                sx={{
-                  color: "#D3D3D3",
-                  fontFamily: "Montserrat",
-                  fontSize: "1.29563rem",
-                  fontStyle: "normal",
-                  fontWeight: 500,
-                  lineHeight: "normal",
-                  textTransform: "uppercase",
-                  marginBottom: 1,
-                  marginTop: -1,
-                }}
-              >
-                City
-              </Typography>
-              <TextField
-                fullWidth
-                placeholder="Mention the city of your startup"
-                variant="standard"
-                name="city"
-                value={data.city}
-                onChange={onChange}
-                sx={{
-                  "& .MuiInputBase-input": {
-                    color: "#7E94F8",
-                    fontFamily: "Montserrat",
-                    fontSize: "1.16706rem",
-                    fontStyle: "normal",
-                    fontWeight: 500,
-                    lineHeight: "normal",
-                    borderBottom: "2px solid rgba(201, 201, 201, 0.50)",
-                  },
-                  "& .MuiInputBase-input::placeholder": {
-                    color: "#44447A",
-                    fontFamily: "Montserrat",
-                    fontSize: "0.86881rem",
-                    fontStyle: "normal",
-                    fontWeight: 500,
-                    lineHeight: "normal",
-                    opacity: "100%",
-                  },
-                }}
-              />
-            </div>
-          </div> */}
-          {/* <Typography
-            sx={{
-              color: "#D3D3D3",
-              fontFamily: "Montserrat",
-              fontSize: "1.29563rem",
-              fontStyle: "normal",
-              fontWeight: 500,
-              lineHeight: "normal",
-              textTransform: "uppercase",
-              marginTop:2.5,
-              marginBottom: 2,
-            }}
-          >
-            About
-          </Typography>
-          <TextField
-            id="standard-basic"
-            placeholder="Tell us about your startup..."
-            size="normal"
-            fullWidth={true}
-            name="about"
-            value={data.about}
-            onChange={onChange}
-            sx={{
-              "& .MuiInputBase-input": {
-                color: "#7E94F8",
-                fontFamily: "Montserrat",
-                fontSize: "1.16706rem",
-                fontStyle: "normal",
-                fontWeight: 500,
-                lineHeight: "normal",
-                borderBottom: "2px solid rgba(201, 201, 201, 0.50)",
-              },
-              "& .MuiInputBase-input::placeholder": {
-                color: "#44447A",
-                fontFamily: "Montserrat",
-                fontSize: "0.86881rem",
-                fontStyle: "normal",
-                fontWeight: 500,
-                lineHeight: "normal",
-                opacity: "100%",
-              },
-            }}
-            variant="standard"
-          /> */}
-          {/* <span style={{ cursor: isDataFilled() ? 'pointer' : 'not-allowed', paddingTop: "2.5vw", margin: 0, height: "fit-content" }}>
-            <Button
-              disabled={!isDataFilled()}
-              sx={{
-                borderRadius: "0.5rem",
-                backgroundImage: isDataFilled() ?
-                  "linear-gradient(90deg, #3880E7 0.58%, #62D7D8 99.89%) !important" : "linear-gradient(90deg, #637897 0.58%, #668D8E 99.89%) !important",
-                textTransform: "capitalize",
-                width: "fit-content",
-              }}
-              onClick={handleSubmit}
-            >
-              <Typography
-                color="white"
-                textAlign="center"
-                fontFamily={"Montserrat"}
-                fontSize={"1rem"}
-                fontStyle={"normal"}
-                fontWeight={500}
-                lineHeight={"normal"}
-                padding={1}
-              >
-                REGISTER NOW
-              </Typography>
-            </Button>
-          </span> */}
         </div>
       // </div>
     // </div>
