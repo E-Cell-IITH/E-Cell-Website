@@ -24,18 +24,18 @@ export default function Document() {
         <meta
           property="og:description"
           content="We at Entrepreneurship Cell, IIT Hyderabad, believe in passion,
-hard effort, and an unquenched drive for achievements. E-Cell
-IIT Hyderabad provides you with the chance to think, let your
-intellect sync with your heart, and come up with ideas that can
-transform the world. It is a place that is a confluence of a
-billion sparks of ideas, a place where the fire of passion
-mingles with the cold calculation of the brain, and a place
-where dreams come true. Join us, to find yourself in a
-brotherhood of ideation and innovation, with people who love
-nothing more than the thrill of coming up with ideas, working
-them out into businesses and experiencing the pleasure of
-watching it all come to fruition. Join us now, to unsheathe the
-brilliance of your mind and to bring out the boss in you."
+                   hard effort, and an unquenched drive for achievements. E-Cell
+                   IIT Hyderabad provides you with the chance to think, let your
+                   intellect sync with your heart, and come up with ideas that can
+                   transform the world. It is a place that is a confluence of a
+                   billion sparks of ideas, a place where the fire of passion
+                   mingles with the cold calculation of the brain, and a place
+                   where dreams come true. Join us, to find yourself in a
+                   brotherhood of ideation and innovation, with people who love
+                   nothing more than the thrill of coming up with ideas, working
+                   them out into businesses and experiencing the pleasure of
+                   watching it all come to fruition. Join us now, to unsheathe the
+                   brilliance of your mind and to bring out the boss in you."
         />
         <link rel="shortcut icon" href="/favicon.ico" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
