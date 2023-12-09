@@ -24,15 +24,15 @@ const Navbar = () => {
       <nav className="navigation__nav">
         <ul className="navigation__list">
           <li className="navigation__item">
-            <Link href="/">
-              <a
-                className="navigation__link"
-                onClick={() => {
-                  navRef.current.checked = false;
-                }}
-              >
+            <Link
+              href="/"
+              className="navigation__link"
+              onClick={() => {
+                navRef.current.checked = false;
+              }}>
+              
                 Home
-              </a>
+              
             </Link>
           </li>
           <li className="navigation__item">
@@ -47,77 +47,73 @@ const Navbar = () => {
             </a>
           </li>
           <li className="navigation__item">
-            <Link href="/Team">
-              <a
-                className="navigation__link"
-                onClick={() => {
-                  navRef.current.checked = false;
-                }}
-              >
+            <Link
+              href="/Team"
+              className="navigation__link"
+              onClick={() => {
+                navRef.current.checked = false;
+              }}>
+              
                 Team
-              </a>
+              
             </Link>
           </li>
           <li className="navigation__item">
-            <Link href="/sponsor">
-              <a
-                className="navigation__link"
-                onClick={() => {
-                  navRef.current.checked = false;
-                }}
-              >
-                {' '}
-                Partners
-              </a>
+            <Link
+              href="/sponsor"
+              className="navigation__link"
+              onClick={() => {
+                navRef.current.checked = false;
+              }}>
+
+              {' '}Partners
             </Link>
           </li>
           <li className="navigation__item">
-            <Link href="/workshops">
-              <a
-                className="navigation__link"
-                onClick={() => {
-                  navRef.current.checked = false;
-                }}
-              >
-                {' '}
-                Workshops
-              </a>
+            <Link
+              href="/workshops"
+              className="navigation__link"
+              onClick={() => {
+                navRef.current.checked = false;
+              }}>
+
+              {' '}Workshops
             </Link>
           </li>
           <li className="navigation__item">
-            <Link href="/startups">
-              <a
-                className="navigation__link"
-                onClick={() => {
-                  navRef.current.checked = false;
-                }}
-              >
+            <Link
+              href="/startups"
+              className="navigation__link"
+              onClick={() => {
+                navRef.current.checked = false;
+              }}>
+              
                 IITH Startups
-              </a>
+              
             </Link>
           </li>
           <li className="navigation__item">
-            <Link href="/startupfair">
-              <a
-                className="navigation__link"
-                onClick={() => {
-                  navRef.current.checked = false;
-                }}
-              >
+            <Link
+              href="/startupfair"
+              className="navigation__link"
+              onClick={() => {
+                navRef.current.checked = false;
+              }}>
+              
                 Startup Fair
-              </a>
+              
             </Link>
           </li>
           <li className="navigation__item">
-            <Link href="/esummit">
-              <a
-                className="navigation__link"
-                onClick={() => {
-                  navRef.current.checked = false;
-                }}
-              >
+            <Link
+              href="/esummit"
+              className="navigation__link"
+              onClick={() => {
+                navRef.current.checked = false;
+              }}>
+              
                 E Summit
-              </a>
+              
             </Link>
           </li>
         </ul>

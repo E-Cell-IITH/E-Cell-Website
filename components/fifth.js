@@ -18,23 +18,23 @@ export default function Fifth({esummit = false}) {
             <ul className={style.ql}>Quick Links</ul>
             <ul>
               <li className={style.list}>
-                <Link href="/sponsor">
-                  <a className={style.links}>Collaborations</a>
+                <Link href="/sponsor" className={style.links}>
+                  Collaborations
                 </Link>
               </li>
               <li className={style.list}>
-                <Link href="/Team">
-                  <a className={style.links}>Team</a>
+                <Link href="/Team" className={style.links}>
+                  Team
                 </Link>
               </li>
               <li className={style.list}>
-                <Link href="caprg/index.html">
-                  <a className={style.links}>CA Programme</a>
+                <Link href="caprg/index.html" className={style.links}>
+                  CA Programme
                 </Link>
               </li>
               <li className={style.list}>
-                <Link href="/esummit">
-                  <a className={style.links}>E-Summit</a>
+                <Link href="/esummit" className={style.links}>
+                  E-Summit
                 </Link>
               </li>
               {/* <li className={style.list}>Our Partners</li> */}
@@ -57,68 +57,83 @@ export default function Fifth({esummit = false}) {
               <br />
               <div className={style.images}>
                 <div className={style.icon}>
-                  <Link href="https://www.instagram.com/ecell_iith/?hl=en">
-                    <a target="_blank" rel="noreferrer noopener">
-                      <Image
-                        src="https://res.cloudinary.com/dwsverefw/image/upload/v1665696045/ecell/instagram1_zt22es.png"
-                        width="20"
-                        height="20"
-                        alt="Ecell IITH Instagram"
-                        layout="responsive"
-                      />
-                    </a>
+                  <Link
+                    href="https://www.instagram.com/ecell_iith/?hl=en"
+                    target="_blank"
+                    rel="noreferrer noopener">
+
+                    <Image
+                      src="https://res.cloudinary.com/dwsverefw/image/upload/v1665696045/ecell/instagram1_zt22es.png"
+                      width="20"
+                      height="20"
+                      alt="Ecell IITH Instagram"
+                      layout="responsive"
+                    />
+
                   </Link>
                 </div>
                 <div className={style.icon}>
-                  <Link href="https://in.linkedin.com/company/entrepreneurship-cell-iit-hyderabad">
-                    <a target="_blank" rel="noreferrer noopener">
-                      <Image
-                        src="https://res.cloudinary.com/dwsverefw/image/upload/v1665696046/ecell/linkedin1_cdvqk7.png"
-                        width="20"
-                        height="20"
-                        alt="Ecell IITH Linkedin"
-                        layout="responsive"
-                      />
-                    </a>
+                  <Link
+                    href="https://in.linkedin.com/company/entrepreneurship-cell-iit-hyderabad"
+                    target="_blank"
+                    rel="noreferrer noopener">
+
+                    <Image
+                      src="https://res.cloudinary.com/dwsverefw/image/upload/v1665696046/ecell/linkedin1_cdvqk7.png"
+                      width="20"
+                      height="20"
+                      alt="Ecell IITH Linkedin"
+                      layout="responsive"
+                    />
+
                   </Link>
                 </div>
                 <div className={style.icon}>
-                  <Link href="https://twitter.com/ecell_iith">
-                    <a target="_blank" rel="noreferrer noopener">
-                      <Image
-                        src="https://res.cloudinary.com/dwsverefw/image/upload/v1665696047/ecell/twitter1_gtx5gu.png"
-                        width="20"
-                        height="20"
-                        alt="Ecell IITH Twitter"
-                        layout="responsive"
-                      />
-                    </a>
+                  <Link
+                    href="https://twitter.com/ecell_iith"
+                    target="_blank"
+                    rel="noreferrer noopener">
+
+                    <Image
+                      src="https://res.cloudinary.com/dwsverefw/image/upload/v1665696047/ecell/twitter1_gtx5gu.png"
+                      width="20"
+                      height="20"
+                      alt="Ecell IITH Twitter"
+                      layout="responsive"
+                    />
+
                   </Link>
                 </div>
                 <div className={style.icon}>
-                  <Link href="https://www.facebook.com/ecell.iithyd/">
-                    <a target="_blank" rel="noreferrer noopener">
-                      <Image
-                        src="https://res.cloudinary.com/dwsverefw/image/upload/v1665696044/ecell/facebook1_w5seu6.png"
-                        width="20"
-                        height="20"
-                        alt="Ecell IITH Facebook"
-                        layout="responsive"
-                      />
-                    </a>
+                  <Link
+                    href="https://www.facebook.com/ecell.iithyd/"
+                    target="_blank"
+                    rel="noreferrer noopener">
+
+                    <Image
+                      src="https://res.cloudinary.com/dwsverefw/image/upload/v1665696044/ecell/facebook1_w5seu6.png"
+                      width="20"
+                      height="20"
+                      alt="Ecell IITH Facebook"
+                      layout="responsive"
+                    />
+
                   </Link>
                 </div>
                 <div className={style.icon}>
-                  <Link href="https://www.youtube.com/user/ecelliithyderabad">
-                    <a target="_blank" rel="noreferrer noopener">
-                      <Image
-                        src="https://res.cloudinary.com/dwsverefw/image/upload/v1665696047/ecell/youtube1_a7c8bc.png"
-                        width="20"
-                        height="20"
-                        alt="Ecell IITH Youtube"
-                        layout="responsive"
-                      />
-                    </a>
+                  <Link
+                    href="https://www.youtube.com/user/ecelliithyderabad"
+                    target="_blank"
+                    rel="noreferrer noopener">
+
+                    <Image
+                      src="https://res.cloudinary.com/dwsverefw/image/upload/v1665696047/ecell/youtube1_a7c8bc.png"
+                      width="20"
+                      height="20"
+                      alt="Ecell IITH Youtube"
+                      layout="responsive"
+                    />
+
                   </Link>
                 </div>
               </div>

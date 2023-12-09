@@ -51,10 +51,10 @@ const First = () => {
           </div>
           <div>
             <button className="text-white border-blue border-2 px-10 py-4 relative top-10 rounded-lg leading-5">
-              <Link href="/schedule">
-                <a target="_blank" className="text-2xl">
+              <Link href="/schedule" target="_blank" className="text-2xl">
+                
                   Schedule
-                </a>
+                
               </Link>
             </button>
           </div>
@@ -64,63 +64,78 @@ const First = () => {
           {/* icons */}
           <div className="flex flex-row gap-4 justify-center items-center">
             <div>
-              <Link href="https://www.instagram.com/ecell_iith/?hl=en">
-                <a target="_blank" rel="noreferrer noopener">
-                  <Image
-                    src="/instagram0icon.svg"
-                    alt="instagram"
-                    width={31}
-                    height={31}
-                  ></Image>
-                </a>
+              <Link
+                href="https://www.instagram.com/ecell_iith/?hl=en"
+                target="_blank"
+                rel="noreferrer noopener">
+
+                <Image
+                  src="/instagram0icon.svg"
+                  alt="instagram"
+                  width={31}
+                  height={31}
+                ></Image>
+
               </Link>
             </div>
             <div>
-              <Link href="https://in.linkedin.com/company/entrepreneurship-cell-iit-hyderabad">
-                <a target="_blank" rel="noreferrer noopener">
-                  <Image
-                    src="/linkedin-icon.svg"
-                    alt="linkedin"
-                    width={27}
-                    height={27}
-                  ></Image>
-                </a>
+              <Link
+                href="https://in.linkedin.com/company/entrepreneurship-cell-iit-hyderabad"
+                target="_blank"
+                rel="noreferrer noopener">
+
+                <Image
+                  src="/linkedin-icon.svg"
+                  alt="linkedin"
+                  width={27}
+                  height={27}
+                ></Image>
+
               </Link>
             </div>
             <div>
-              <Link href="https://twitter.com/ecell_iith">
-                <a target="_blank" rel="noreferrer noopener">
-                  <Image
-                    src="/twitter-icon.svg"
-                    alt="twitter"
-                    width={27}
-                    height={23}
-                  ></Image>
-                </a>
+              <Link
+                href="https://twitter.com/ecell_iith"
+                target="_blank"
+                rel="noreferrer noopener">
+
+                <Image
+                  src="/twitter-icon.svg"
+                  alt="twitter"
+                  width={27}
+                  height={23}
+                ></Image>
+
               </Link>
             </div>
             <div>
-              <Link href="https://www.facebook.com/ecell.iithyd/">
-                <a target="_blank" rel="noreferrer noopener">
-                  <Image
-                    src="/facebook-icon.svg"
-                    alt="facebook"
-                    width={28}
-                    height={28}
-                  ></Image>
-                </a>
+              <Link
+                href="https://www.facebook.com/ecell.iithyd/"
+                target="_blank"
+                rel="noreferrer noopener">
+
+                <Image
+                  src="/facebook-icon.svg"
+                  alt="facebook"
+                  width={28}
+                  height={28}
+                ></Image>
+
               </Link>
             </div>
             <div>
-              <Link href="https://www.youtube.com/user/ecelliithyderabad">
-                <a target="_blank" rel="noreferrer noopener">
-                  <Image
-                    src="/youtube-icon.svg"
-                    alt="youtube"
-                    width={35}
-                    height={35}
-                  ></Image>
-                </a>
+              <Link
+                href="https://www.youtube.com/user/ecelliithyderabad"
+                target="_blank"
+                rel="noreferrer noopener">
+
+                <Image
+                  src="/youtube-icon.svg"
+                  alt="youtube"
+                  width={35}
+                  height={35}
+                ></Image>
+
               </Link>
             </div>
           </div>

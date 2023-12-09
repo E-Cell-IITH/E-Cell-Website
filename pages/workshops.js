@@ -19,18 +19,18 @@ export default function Home() {
     },
   ];
 
-  return (
-    <>
-      <Head>
-        <title>Workshops</title>
-      </Head>
+  return <>
+    <Head>
+      <title>Workshops</title>
+    </Head>
 
-      <Navbar heading={'WORKSHOPS'} desc={false}/>
+    <Navbar heading={'WORKSHOPS'} desc={false}/>
 
-      <div>
-        <Grid container display="flex" alignItems="center" justifyContent="center" columnGap={7} rowGap={4}>
-          {workshopslist.map((workshop,key) => {
-            return (<Grid item lg={3} md={4} sm={6.3} xs={7} className={styles.workshop} key={key} style={{zIndex:"1"}}>
+    <div>
+      <Grid container display="flex" alignItems="center" justifyContent="center" columnGap={7} rowGap={4}>
+        {workshopslist.map((workshop,key) => {
+          return (
+            <Grid item lg={3} md={4} sm={6.3} xs={7} className={styles.workshop} key={key} style={{zIndex:"1"}}>
               <div className={styles.try} style={{ color: 'white' }}>
                 <Image src={workshop.image} height={workshop.height} width={workshop.width} />
                 <div style={{ position: 'relative', bottom: 0, display: 'flex', justifyContent: 'center' }}>
@@ -38,22 +38,22 @@ export default function Home() {
                     className="text-white border-blue border-2 px-3 md:px-5
                       py-5 relative rounded-lg leading-5"
                   >
-                    <Link href={workshop.link} >
-                      <a className="text-md md:text-xl " target="_blank">Register Now</a>
+                    <Link href={workshop.link} className="text-md md:text-xl " target="_blank">
+                      Register Now
                     </Link>
                   </button>
                 </div>
                 <br />
               </div>
-            </Grid>)
-          })}
-        </Grid>
-      </div>
+            </Grid>
+          );
+        })}
+      </Grid>
+    </div>
 
-      <br />
-      <br />
-      <br />
-      <br />
-    </>
-  );
+    <br />
+    <br />
+    <br />
+    <br />
+  </>;
 }
