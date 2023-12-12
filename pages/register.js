@@ -268,7 +268,7 @@ const Register = () => {
     "IOT",
     "Design",
     "Agro/Food",
-    "Space Tech",
+    "Spacetech/Aerospace",
     "SAAS",
     "EV",
     "Fintech",
