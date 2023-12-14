@@ -13,9 +13,9 @@ export default function Home() {
       <Keynote />
 
       {/* <KeySpeakers /> */}
-      <Panel />
-      <Workshops />
-      <Events />
+      {/* <Panel /> */}
+      {/* <Workshops /> */}
+      {/* <Events /> */}
       {/* <Speakers /> */}
     </div>
   );

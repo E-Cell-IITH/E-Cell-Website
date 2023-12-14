@@ -1,32 +1,29 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import localFont from "next/font/local";
+import { Gentium_Plus } from "next/font/google";
+
+const ananda = localFont({
+  src: "../public/fonts/ananda-neptouch-2.regular.ttf",
+});
+
+const gentium = Gentium_Plus({ subsets: ["latin"], weight: "700" });
 
 const First = () => {
   return (
     <div>
       <section className="flex flex-col w-full h-[100vh] py-5 px-5">
-        <div className="absolute inset-0 blur-sm">
-          <video
-            className="w-full h-full object-cover"
-            autoPlay={true}
-            loop={true}
-            muted={true}
-          >
-            {/* <source src="http://techslides.com/demos/sample-videos/small.webm" type="video/webm"/> 
-            <source src="http://techslides.com/demos/sample-videos/small.ogv" type="video/ogg"/>  */}
-            <source src="/ecell_landing_page.mp4" type="video/mp4" />
-            {/* <source src="http://techslides.com/demos/sample-videos/small.3gp" type="video/3gp"/> */}
-          </video>
-          <div className="inset-0 absolute bg-dark bg-opacity-70"></div>
+        <div className="absolute inset-0">
+          <img src="/esummit-bg.jpeg" className="w-full h-full object-cover" />
         </div>
-
         <div className="flex justify-between">
           {/* logo */}
           <div>
             <div className=" h-[3rem] w-[6.5rem] relative">
               <Image
                 src="/ecellLogo.png"
+                style={{ filter: "brightness(0%)" }}
                 layout="fill"
                 objectFit="contain"
                 alt=""
@@ -37,105 +34,104 @@ const First = () => {
           <div className=""></div>
         </div>
         <div className="flex-grow flex justify-center items-center flex-col">
+          <img src="/esummitLogo.png" className="relative max-[300px]:h-[5rem] h-[9rem] lg:h-[11rem]" />
           <div className="text-center relative">
+            <h2 className="text-black font-bold text-[2rem] max-[300px]:text-[1.5rem] lg:text-[3rem] 2xl:text-[3.25rem]">
+              <div className={gentium.className}>E-Cell, IIT Hyderabad’s</div>
+            </h2>{" "}
             <div>
-              <h2 className="text-white font-bold text-[3rem] lg:text-[4.25rem] 2xl:text-[6.25rem]">
-                E-SUMMIT 2023
+              <h2 className="text-black text-[5rem] leading-none max-[300px]:text-[3rem] lg:text-[7.25rem] 2xl:text-[10rem]">
+                <div className={ananda.className}>E-SUMMIT 2024</div>
               </h2>
             </div>
             <div>
-              <h2 className="text-lightBlue font-semibold text-[1.75rem] md:font-bold  md:text-[2.75rem] lg:text-[3.75rem] 2xl:text-[5rem]">
-                AN ARDUOUS CARREFOUR
-              </h2>
+              <h3
+                className={`text-[#FFE4C3] font-semibold text-[2.4rem] max-[300px]:text-[1.75rem] md:font-bold md:text-[3.75rem] lg:text-[4rem] 2xl:text-[6rem] ${gentium.className}`}
+              >
+                February 1st to 4th{" "}
+              </h3>
+              <h3
+                className={`text-white font-semibold text-[1.5rem] max-[300px]:text-[1rem] md:font-bold md:text-[2.25rem] lg:text-[2.5rem] 2xl:text-[3rem] ${gentium.className}`}
+              >
+                <span className="text-[#FFE4C3]">THINK</span> .{" "}
+                <span className="text-[#FCBA51]">BUILD</span> .{" "}
+                <span className="text-[#F77B4E]">INSPIRE</span>
+              </h3>
             </div>
-          </div>
-          <div>
-            <button className="text-white border-blue border-2 px-10 py-4 relative top-10 rounded-lg leading-5">
-              <Link href="/schedule" target="_blank" className="text-2xl">
-                
-                  Schedule
-                
-              </Link>
-            </button>
           </div>
         </div>
         {/* sm section */}
-        <div className="flex flex-row justify-between">
+        <div className="flex flex-row justify-end align-end z-10">
           {/* icons */}
-          <div className="flex flex-row gap-4 justify-center items-center">
+          <div className="flex flex-row gap-4 justify-center  items-center">
             <div>
               <Link
-                href="https://www.instagram.com/ecell_iith/?hl=en"
+                href="https://www.instagram.com/ecell_iith"
                 target="_blank"
-                rel="noreferrer noopener">
-
+                rel="noreferrer noopener"
+              >
                 <Image
                   src="/instagram0icon.svg"
                   alt="instagram"
                   width={31}
                   height={31}
                 ></Image>
-
               </Link>
             </div>
             <div>
               <Link
-                href="https://in.linkedin.com/company/entrepreneurship-cell-iit-hyderabad"
+                href="https://www.linkedin.com/company/ecell-iith/"
                 target="_blank"
-                rel="noreferrer noopener">
-
+                rel="noreferrer noopener"
+              >
                 <Image
                   src="/linkedin-icon.svg"
                   alt="linkedin"
                   width={27}
                   height={27}
                 ></Image>
-
               </Link>
             </div>
             <div>
               <Link
                 href="https://twitter.com/ecell_iith"
                 target="_blank"
-                rel="noreferrer noopener">
-
+                rel="noreferrer noopener"
+              >
                 <Image
                   src="/twitter-icon.svg"
                   alt="twitter"
                   width={27}
                   height={23}
                 ></Image>
-
               </Link>
             </div>
             <div>
               <Link
                 href="https://www.facebook.com/ecell.iithyd/"
                 target="_blank"
-                rel="noreferrer noopener">
-
+                rel="noreferrer noopener"
+              >
                 <Image
                   src="/facebook-icon.svg"
                   alt="facebook"
                   width={28}
                   height={28}
                 ></Image>
-
               </Link>
             </div>
             <div>
               <Link
-                href="https://www.youtube.com/user/ecelliithyderabad"
+                href="https://www.youtube.com/@ecelliith"
                 target="_blank"
-                rel="noreferrer noopener">
-
+                rel="noreferrer noopener"
+              >
                 <Image
                   src="/youtube-icon.svg"
                   alt="youtube"
                   width={35}
                   height={35}
                 ></Image>
-
               </Link>
             </div>
           </div>
@@ -143,7 +139,7 @@ const First = () => {
           <div></div>
         </div>
       </section>
-      <section className="text-white flex flex-col justify-center items-center px-[3rem] lg:px-0 lg:pb-[4rem]">
+      {/* <section className="text-white flex flex-col justify-center items-center px-[3rem] lg:px-0 lg:pb-[4rem]">
         <div className="max-w-[48.75rem] py-[7rem] lg:py-[5rem]">
           <div className="flex flex-col gap-10">
             <div>
@@ -187,7 +183,7 @@ const First = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
     </div>
   );
 };
