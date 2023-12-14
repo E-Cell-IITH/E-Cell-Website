@@ -26,7 +26,7 @@ const First = () => {
                 style={{ filter: "brightness(0%)" }}
                 layout="fill"
                 objectFit="contain"
-                alt=""
+                alt="E-cell IIT Hyderabad Logo"
               />
             </div>
           </div>
