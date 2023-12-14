@@ -273,7 +273,7 @@ const Register = () => {
     "EV",
     "Fintech",
     "Supply Chain",
-    "Bio Med",
+    "Biotech",
     "Robotics",
     "Cyber Security",
     "Energy Engg",
