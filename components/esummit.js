@@ -37,7 +37,7 @@ const First = () => {
           <img src="/esummitLogo.png" className="relative max-[300px]:h-[5rem] h-[9rem] lg:h-[11rem]" />
           <div className="text-center relative">
             <h2 className="text-black font-bold text-[2rem] max-[300px]:text-[1.5rem] lg:text-[3rem] 2xl:text-[3.25rem]">
-              <div className={gentium.className}>E-Cell, IIT Hyderabad’s</div>
+              <div className={gentium.className}>E-Cell, IIT Hyderabad&#39;s</div>
             </h2>{" "}
             <div>
               <h2 className="text-black text-[5rem] leading-none max-[300px]:text-[3rem] lg:text-[7.25rem] 2xl:text-[10rem]">

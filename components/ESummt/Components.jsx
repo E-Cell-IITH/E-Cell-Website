@@ -76,7 +76,7 @@ const AboutandTheme = () => {
             className={`flex flex-row text-[#FDE1BF] text-[1.5rem] tracking-wide ${gentium.className}`}
           >
             <p>
-            &quot;Unlocking the secrets of innovation – stay tuned as the theme for
+            &quot;Unlocking the secrets of innovation - stay tuned as the theme for
               E-Summit will soon be unveiled!&quot;
             </p>
           </div>
