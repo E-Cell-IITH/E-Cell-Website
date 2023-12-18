@@ -264,6 +264,7 @@ const Register = () => {
   ];
 
   const serviceAreas = [
+    "AI",
     "Personal Care",
     "IOT",
     "Design",
@@ -272,7 +273,7 @@ const Register = () => {
     "SAAS",
     "EV",
     "Fintech",
-    "Supply Chain",
+    "Supply Chain/Logistics",
     "Biotech/Biomed/healthcare",
     "Robotics",
     "Cyber Security",
