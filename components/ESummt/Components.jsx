@@ -177,7 +177,7 @@ const StartupfairandGallery = () => {
         </div>
         <div className="flex justify-center m-7">
           <Button
-            className={`bg-[#C39F3F] text-[1.2rem] text-white font-bold border-[0.5rem] w-[fit-content] px-[1rem] py-[0.5rem] rounded-[0.5rem] ${gentium.className}}`}
+            className={`bg-[#C39F3F] text-[1.2rem] text-white font-bold border-[0.5rem] w-[fit-content] px-[1rem] py-[0.5rem] rounded-[0.5rem] ${gentiumnormal.className}}`}
             onClick={() => {
               window.open("/startupfair", "_blank");
             }}
@@ -190,11 +190,16 @@ const StartupfairandGallery = () => {
         <h3
           className={`py-[2rem] tracking-widest text-[#FCBF5F] text-center font-semibold text-[2.4rem] max-[300px]:text-[2.75rem] md:font-bold md:text-[4.75rem] lg:text-[5rem] 2xl:text-[6rem] ${ananda.className}`}
         >
-          GALLERY{" "}
+          GALLERY
         </h3>
-        <div className="flex-1">
+        <div className="flex-1 h-[50rem]">
           <center>
-            <BorderContainer height="30rem" width="50rem" />
+            <BorderContainer
+              heightcss="h-[30rem]"
+              widthcss="w-[45rem]"
+              marginleftcss="ml-[45rem]"
+              margintopcss="mt-[30rem]"
+            />
           </center>
         </div>
       </section>

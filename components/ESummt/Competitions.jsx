@@ -2,7 +2,7 @@ import { Gentium_Plus } from "next/font/google";
 import localFont from "next/font/local";
 import React from "react";
 import Carousel from "react-material-ui-carousel";
-import BorderContainer from './BorderContainer';
+import BorderContainer from "./BorderContainer";
 
 const gentiumnormal = Gentium_Plus({ subsets: ["latin"], weight: "400" });
 
@@ -77,38 +77,43 @@ const Competitions = () => {
         >
           Competitions{" "}
         </h3>
-        <div className="mb-[5%] w-[80%]">
+        <div className="mb-[5%] w-[80%] sm:w-[95%]">
           <Carousel animation="slide" duration={1000} autoPlay={false}>
-            {
-              competitions.map((comp, index) => {
-                return (<center key={index}>
-                  <BorderContainer height="40rem" width="60rem">
+            {competitions.map((competition, index) => {
+              return (
+                <center key={index}>
+                  <BorderContainer
+                    heightcss="h-[24rem] sm:h-[30rem] lg:h-[36rem]"
+                    widthcss="w-[36rem] sm:w-[45rem] lg:w-[54rem]"
+                    marginleftcss="ml-[36rem] sm:ml-[30rem] lg:ml-[54rem]"
+                    margintopcss="mt-[24rem] sm:mt-[45rem] lg:mt-[36rem]"
+                  >
                     <div className="flex flex-row gap-[2rem] align-center justify-center my-[auto] mx-[10%] relative w-full">
-                      <div className="flex-1">
-                        <img src={comp.image} />
+                      <div className="flex flex-[2] items-center">
+                        <img src={competition.image} />
                       </div>
-                      <div className="flex gap-[2rem] flex-col flex-1">
+                      <div className="flex gap-[2rem] flex-col flex-[3]">
                         <h4
-                          className={`text-[3rem] leading-[2.5rem] color-[white] text-[#FFE4C3] ${ananda.className}`}
+                          className={`text-[3rem] leading-[2.5rem] sm:text-[2.4rem] sm:leading-[1.8rem] lg:text-[2.5rem] lg:leading-[2rem] color-[white] text-[#FFE4C3] ${ananda.className}`}
                         >
-                          {comp.title}
+                          {competition.title}
                         </h4>
                         <p
-                          className={`text-[1.7rem] leading-[1.8rem] color-[white] text-[#FDE1BF] ${gentiumnormal.className}`}
+                          className={`tracking-wide text-[1.7rem] leading-[1.8rem] sm:text-[1.4rem] sm:leading-[1.2rem] lg:text-[1.5rem] lg:leading-[1.4rem] color-[white] text-[#FDE1BF] ${gentiumnormal.className}`}
                         >
-                          {comp.content}
+                          {competition.content}
                         </p>
                       </div>
                     </div>
                   </BorderContainer>
-                </center>);
-              })}
+                </center>
+              );
+            })}
           </Carousel>
         </div>
       </div>
     </section>
   );
 };
-
 
 export default Competitions;
