@@ -5,7 +5,8 @@ import KeySpeakers from "../components/Events/KeySpeakers";
 import Speakers from "../components/Events/Speakers";
 import Workshops from "../components/workshops";
 import Panel from "../components/Panel";
-import { Competitions, StartupfairandGallery, AboutandTheme } from "../components/ESummt/Components";
+import {StartupfairandGallery, AboutandTheme } from "../components/ESummt/Components";
+import Competitions from "../components/ESummt/Competitions";
 import Head from "next/head";
 
 export default function Home() {

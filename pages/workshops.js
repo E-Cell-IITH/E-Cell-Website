@@ -41,7 +41,7 @@ export default function Home() {
           return (
             <Grid item lg={3} md={4} sm={6.3} xs={7} className={styles.workshop} key={key} style={{zIndex:"1"}}>
               <div className={styles.try} style={{ color: 'white' }}>
-                <Image src={workshop.image} height={workshop.height} width={workshop.width} />
+                <Image alt={workshop.title.replace("<br/>", "")} src={workshop.image} height={workshop.height} width={workshop.width} />
                 <div style={{ position: 'relative', bottom: 0, display: 'flex', justifyContent: 'center' }}>
                   <button
                     className="text-white border-blue border-2 px-3 md:px-5
