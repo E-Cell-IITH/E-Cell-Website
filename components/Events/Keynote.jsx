@@ -89,7 +89,7 @@ export default function Keynote() {
           {' '}
           {speakers.map((speaker, index) => (
             <Card
-              key={speaker.name}
+              key={index}
               name={speaker.name}
               imgUrl={speaker.imgUrl}
               designation={speaker?.designation}

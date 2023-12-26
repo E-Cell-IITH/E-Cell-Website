@@ -96,7 +96,7 @@ function StartupFair() {
             // color="white"
             // sx={{ textAlign: "center", fontSize: presents }}
             color= "#FFF"
-            textSlign= "center"
+            textAlign= "center"
             fontFamily= "Montserrat"
             fontSize= {presents}
             fontStyle= "normal"

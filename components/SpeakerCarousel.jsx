@@ -148,7 +148,7 @@ function SpeakerCarousel() {
           autoPlay={true}
         >
           {speakers.map((item, i) => (
-            <Div key={item.name}>
+            <Div key={i}>
               <Grid container item xs={12}>
                 <Grid item container xs={12} lg={4} justifyContent="center">
                   <Box

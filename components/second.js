@@ -44,8 +44,6 @@ export default function Second() {
         });
       }
 
-      console.log(gsap.utils.toArray("#vision , #partner"));
-
       ids.forEach((id, index) => {
         gsap.fromTo(
           id,

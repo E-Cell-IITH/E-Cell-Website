@@ -191,7 +191,7 @@ export default function Third() {
               className={style.content}
               ref={nodeRef}
             >
-              {eventsData[eventIndex].description.map((desc) => (
+              {eventsData[eventIndex].description.map((desc, idx) => (
                 <Box
                   className={style.box}
                   sx={{
@@ -202,7 +202,7 @@ export default function Third() {
                     alignItems: "center",
                     padding: { xs: "1rem", md: "0rem" },
                   }}
-                  key={eventsData}
+                  key={idx}
                 >
                   <>{desc}</>
                 </Box>
@@ -294,9 +294,9 @@ export default function Third() {
               ref={compRef}
               id="#ref"
             >
-              {competitionData[competitionIndex].description.map((desc) => (
+              {competitionData[competitionIndex].description.map((desc, idx) => (
                 <Box
-                  key={competitionData}
+                  key={idx}
                   className={`${style.box} text`}
                   sx={{ textAlign: "left" }}
                 >

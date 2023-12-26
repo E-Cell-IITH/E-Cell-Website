@@ -149,7 +149,6 @@ function Team() {
         );
 
       const cards = gsap.utils.toArray(".card");
-      console.log(cards);
       cards.forEach((card) => {
         gsap
           .timeline({
@@ -246,7 +245,7 @@ function Team() {
         container
         alignSelf={"center"}
         id="heads"
-        xs={12}
+        // xs={12}
         sx={{
           position: "relative",
           zIndex: 30,

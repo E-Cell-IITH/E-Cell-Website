@@ -10,7 +10,6 @@ import Script from 'next/script'
 
 function MyApp({ Component, pageProps }) {
   const router = useRouter();
-  console.log(router.pathname);
   return (
     <>
       <React.Fragment>
@@ -20,7 +19,7 @@ function MyApp({ Component, pageProps }) {
               name="viewport"
               content="width=device-width, initial-scale=1"
             />
-            <meta charset="utf-8" />
+            <meta charSet="utf-8" />
             {/* <script async src="https://www.googletagmanager.com/gtag/js?id=G-6VNW4WYT0W"></script>
             <script>
               window.dataLayer = window.dataLayer || [];

@@ -52,7 +52,6 @@ const Sponsor = () => {
         );
 
       const cards = gsap.utils.toArray('.card');
-      console.log(cards);
       cards.forEach((card) => {
         gsap
           .timeline({
