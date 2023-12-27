@@ -14,6 +14,21 @@ const gentium = Gentium_Plus({ subsets: ["latin"], weight: "700" });
 const gentiumnormal = Gentium_Plus({ subsets: ["latin"], weight: "400" });
 
 const gallery = [
+  "esummit/gallery/20231105_113737.jpg",
+  "esummit/gallery/20231105_114219.jpg",
+  "esummit/gallery/20231105_130848.jpg",
+  "esummit/gallery/Copy of 20220929_122820.jpg",
+  "esummit/gallery/DJI_20231105_162001_538.jpg",
+  "esummit/gallery/DSC02192.jpg",
+  "esummit/gallery/DSC02197.jpg",
+  "esummit/gallery/DSC02199.jpg",
+  "esummit/gallery/DSC02200.jpg",
+  "esummit/gallery/DSC02202.jpg",
+  "esummit/gallery/DSC02211.jpg",
+  "esummit/gallery/DSC02219.jpg",
+  "esummit/gallery/IMG_2679.jpg",
+  "esummit/gallery/IMG_2696.jpg",
+  "esummit/gallery/IMG_2802.jpg",
 ];
 
 const ananda = localFont({
@@ -182,14 +197,17 @@ const StartupfairandGallery = () => {
           <Button
             className={`bg-[#C39F3F] text-[1.2rem] text-white font-bold border-[0.5rem] w-[fit-content] px-[1rem] py-[0.5rem] rounded-[0.5rem] ${gentiumnormal.className}}`}
             onClick={() => {
-              window.open("https://unstop.com/competitions/fetching-fortunes-iit-hyderabad-814341", "_blank");
+              window.open(
+                "https://unstop.com/competitions/fetching-fortunes-iit-hyderabad-814341",
+                "_blank"
+              );
             }}
           >
             REGISTER NOW
           </Button>
         </div>
       </section>
-      {/* <section className="flex flex-col p-7 px-[2rem] md:px-[18rem] lg:px-[18rem]">
+      <section className="flex flex-col p-7 px-[2rem] md:px-[18rem] lg:px-[18rem]">
         <h3
           className={`py-[2rem] tracking-widest text-[#FCBF5F] text-center font-semibold text-[2.4rem] max-[300px]:text-[2.75rem] md:font-bold md:text-[4.75rem] lg:text-[5rem] 2xl:text-[6rem] ${ananda.className}`}
         >
@@ -212,7 +230,7 @@ const StartupfairandGallery = () => {
                       marginleftcss="ml-[36rem] sm:ml-[30rem] lg:ml-[54rem]"
                       margintopcss="mt-[24rem] sm:mt-[45rem] lg:mt-[36rem]"
                     >
-                      <div className="flex flex-row gap-[2rem] align-center justify-center my-[auto] mx-[10%] relative w-full">
+                      <div className="flex flex-row gap-[2rem] align-center justify-center my-[auto] mx-[8%] relative w-full z-[-12]">
                         <div className="flex flex-[2] items-center">
                           <img src={i} />
                         </div>
@@ -224,7 +242,7 @@ const StartupfairandGallery = () => {
             </Carousel>
           </center>
         </div>
-      </section> */}
+      </section>
     </div>
   );
 };
