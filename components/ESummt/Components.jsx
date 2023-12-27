@@ -225,10 +225,10 @@ const StartupfairandGallery = () => {
                 return (
                   <center key={index}>
                     <BorderContainer
-                      heightcss="h-[24rem] sm:h-[30rem] lg:h-[36rem]"
-                      widthcss="w-[36rem] sm:w-[45rem] lg:w-[54rem]"
-                      marginleftcss="ml-[36rem] sm:ml-[30rem] lg:ml-[54rem]"
-                      margintopcss="mt-[24rem] sm:mt-[45rem] lg:mt-[36rem]"
+                      heightcss="h-[18rem] sm:h-[30rem] lg:h-[32rem] 2xl:h-[36rem]"
+                      widthcss="w-[27rem] sm:w-[45rem] lg:w-[48rem] 2xl:w-[54rem]"
+                      marginleftcss="ml-[18rem] sm:ml-[45rem] lg:ml-[48rem] 2xl:ml-[54rem]"
+                      margintopcss="mt-[27rem] sm:mt-[30rem] lg:mt-[32rem] 2xl:mt-[36rem] "
                     >
                       <div className="flex flex-row gap-[2rem] align-center justify-center my-[auto] mx-[8%] relative w-full z-[-12]">
                         <div className="flex flex-[2] items-center">
