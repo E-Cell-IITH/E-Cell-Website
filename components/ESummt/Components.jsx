@@ -13,6 +13,12 @@ import BorderContainer from "./BorderContainer";
 const gentium = Gentium_Plus({ subsets: ["latin"], weight: "700" });
 const gentiumnormal = Gentium_Plus({ subsets: ["latin"], weight: "400" });
 
+const gallery = [
+  "groww.png",
+  "henry_harvin.png",
+  "nakul.jpg"
+];
+
 const ananda = localFont({
   src: "../../public/fonts/ananda-neptouch-2.regular.ttf",
 });
@@ -179,7 +185,7 @@ const StartupfairandGallery = () => {
           <Button
             className={`bg-[#C39F3F] text-[1.2rem] text-white font-bold border-[0.5rem] w-[fit-content] px-[1rem] py-[0.5rem] rounded-[0.5rem] ${gentiumnormal.className}}`}
             onClick={() => {
-              window.open("/startupfair", "_blank");
+              window.open("https://unstop.com/competitions/fetching-fortunes-iit-hyderabad-814341", "_blank");
             }}
           >
             REGISTER NOW
@@ -194,12 +200,31 @@ const StartupfairandGallery = () => {
         </h3>
         <div className="flex-1 h-[50rem]">
           <center>
-            <BorderContainer
-              heightcss="h-[30rem]"
-              widthcss="w-[45rem]"
-              marginleftcss="ml-[45rem]"
-              margintopcss="mt-[30rem]"
-            />
+            <Carousel
+              animation="fade"
+              duration={100}
+              autoPlay={true}
+              navButtonsAlwaysInvisible={true}
+            >
+              {gallery.map((i, index) => {
+                return (
+                  <center key={index}>
+                    <BorderContainer
+                      heightcss="h-[24rem] sm:h-[30rem] lg:h-[36rem]"
+                      widthcss="w-[36rem] sm:w-[45rem] lg:w-[54rem]"
+                      marginleftcss="ml-[36rem] sm:ml-[30rem] lg:ml-[54rem]"
+                      margintopcss="mt-[24rem] sm:mt-[45rem] lg:mt-[36rem]"
+                    >
+                      <div className="flex flex-row gap-[2rem] align-center justify-center my-[auto] mx-[10%] relative w-full">
+                        <div className="flex flex-[2] items-center">
+                          <img src={i} />
+                        </div>
+                      </div>
+                    </BorderContainer>
+                  </center>
+                );
+              })}
+            </Carousel>
           </center>
         </div>
       </section>
