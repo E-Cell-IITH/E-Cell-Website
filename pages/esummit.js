@@ -5,18 +5,22 @@ import KeySpeakers from "../components/Events/KeySpeakers";
 import Speakers from "../components/Events/Speakers";
 import Workshops from "../components/workshops";
 import Panel from "../components/Panel";
+import {StartupfairandGallery, AboutandTheme } from "../components/ESummt/Components";
+import Competitions from "../components/ESummt/Competitions";
+import Head from "next/head";
 
 export default function Home() {
   return (
+    <>
+    <Head>
+      <title>E-Summit 2024</title>
+    </Head>
     <div className="bg-dark">
       <First />
-      <Keynote />
-
-      {/* <KeySpeakers /> */}
-      <Panel />
-      <Workshops />
-      <Events />
-      {/* <Speakers /> */}
+      <AboutandTheme />
+      <Competitions />  
+      <StartupfairandGallery />
     </div>
+    </>
   );
 }

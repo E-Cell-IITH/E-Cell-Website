@@ -9,7 +9,7 @@ export default function Fifth({esummit = false}) {
     <footer>
       <div
         className={`text-white py-9 ${
-          esummit ? "bg-dark" : "bg-gradient-to-b from-[#281332] to-transparent"
+          esummit ? "bg-[#042630]" : "bg-gradient-to-b from-[#281332] to-transparent"
         } `}
       >
         <Grid container>
