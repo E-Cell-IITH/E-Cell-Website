@@ -1,13 +1,7 @@
-import First from "../components/esummit";
-import Events from "../components/Events/Events";
-import Keynote from "../components/Events/Keynote";
-import KeySpeakers from "../components/Events/KeySpeakers";
-import Speakers from "../components/Events/Speakers";
-import Workshops from "../components/workshops";
-import Panel from "../components/Panel";
-import {StartupfairandGallery, AboutandTheme } from "../components/ESummt/Components";
-import Competitions from "../components/ESummt/Competitions";
 import Head from "next/head";
+import Competitions from "../components/ESummt/Competitions";
+import { AboutandTheme, StartupfairandGallery } from "../components/ESummt/Components";
+import First from "../components/esummit";
 
 export default function Home() {
   return (
