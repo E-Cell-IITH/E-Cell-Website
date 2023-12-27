@@ -1,21 +1,10 @@
 import { Gentium_Plus } from "next/font/google";
 import localFont from "next/font/local";
-import React from "react";
-import Carousel from "react-material-ui-carousel";
+import React, { useEffect, useState } from "react";
 import BorderContainer from "./BorderContainer";
 
-import { Swiper, SwiperSlide } from "swiper/react";
-import { EffectCoverflow, Pagination } from "swiper";
-// import Swiper core and required modules
-import SwiperCore, { Autoplay, Navigation } from "swiper/core";
-
-// install Swiper modules
-SwiperCore.use([Autoplay, Pagination, Navigation]);
-
-import Image from "next/image";
-
-import "swiper/css";
-import "swiper/css/pagination";
+import { Carousel } from "react-responsive-carousel";
+import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 
 const gentiumnormal = Gentium_Plus({ subsets: ["latin"], weight: "400" });
 
@@ -72,6 +61,42 @@ const competitions = [
 ];
 
 const Competitions = () => {
+  const [screenWidth, setScreenWidth] = useState(0);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setScreenWidth(window.innerWidth);
+    };
+    window.addEventListener("resize", handleResize);
+    setScreenWidth(window.innerWidth);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
+  const getCenterSlidePercentage = () => {
+    const [centerSlidePercentage, centerMode, swipeable] = (() => {
+      switch (true) {
+        case screenWidth < 768:
+          return [100, false, false];
+        case screenWidth < 1024:
+          return [90, true, false];
+        case screenWidth < 1400:
+          return [80, true, true];
+        default:
+          return [65, true, true];
+      }
+    })();
+
+    return { centerSlidePercentage, centerMode, swipeable };
+  };
+
+  const { centerSlidePercentage, centerMode, swipeable } =
+    getCenterSlidePercentage();
+  useEffect(() => {
+    console.log("Swipe", swipeable);
+  }, [swipeable]);
+
   return (
     <section className="relative w-full flex flex-row bg-[#042630]">
       <div
@@ -115,72 +140,56 @@ const Competitions = () => {
         >
           Competitions{" "}
         </h3>
-        <div className="mb-[5%] w-[80%] sm:w-[95%]">
-          <Swiper
-            // autoplay={{
-            //   delay: 1500,
-            //   disableOnInteraction: false,
-            // }}
-            spaceBetween={500}
-            effect={"coverflow"}
-            slidesPerView={"auto"}
-            grabCursor={true}
-            centeredSlides={true}
-            loop={true}
-            height={"auto"}
-            breakpoints={{
-              600: {
-                slidesPerView: "2",
-                centeredSlides: true,
-              },
-            }}
-            coverflowEffect={{
-              slideShadows: false,
-              rotate: 20,
-              stretch: 0,
-              depth: 100,
-              modifier: 1,
-            }}
-            pagination={{ clickable: true }}
-            modules={[EffectCoverflow, Pagination]}
+        <div className="w-[100%] mb-[5%] w-[80%] sm:w-[95%]">
+          <Carousel
+            showArrows={true}
+            centerSlidePercentage={centerSlidePercentage}
+            autoPlay={false}
+            centerMode={centerMode}
+            swipeable={swipeable}
+            emulateTouch={true}
+            // stopOnHover={true}
+            showThumbs={false}
+            interval={3000}
+            showStatus={false}
+            infiniteLoop={true}
           >
             {competitions.map((competition, index) => {
               return (
-                // <center key={index}>
-                <SwiperSlide
+                <center key={index} className="my-[3rem]">
+                  {/* <SwiperSlide
                   key={index}
                   // style={{ width: 'auto', marginRight: 'auto'}}
                   className="w-[54rem] m-0 flex items-center justify-center"
-                >
+                > */}
                   <BorderContainer
-                    heightcss="h-[24rem] sm:h-[30rem] lg:h-[45rem]"
-                    widthcss="w-[36rem] sm:w-[45rem] lg:w-[40rem]"
-                    marginleftcss="ml-[36rem] sm:ml-[30rem] lg:ml-[54rem]"
-                    margintopcss="mt-[24rem] sm:mt-[45rem] lg:mt-[36rem]"
+                    heightcss="h-[50rem] sm:h-[50rem] lg:h-[36rem]"
+                    widthcss="w-[22rem] sm:w-[40rem] lg:w-[54rem]"
+                    marginleftcss="ml-[50rem] sm:ml-[50rem] lg:ml-[54rem]"
+                    margintopcss="mt-[22rem] sm:mt-[40rem] lg:mt-[36rem]"
                   >
-                    <div className="flex flex-row gap-[2rem] align-center justify-center my-[auto] mx-[10%] relative w-full">
+                    <div className="flex flex-row gap-[2rem] align-center justify-center my-[auto] mx-[10%] relative w-full select-none	">
                       {/* <div className="flex flex-[2] items-center">
                         <img src={competition.image} />
                       </div> */}
                       <div className="flex gap-[2rem] flex-col flex-[3]">
                         <h4
-                          className={`text-[3rem] leading-[2.5rem] sm:text-[2.4rem] sm:leading-[1.8rem] lg:text-[2.5rem] lg:leading-[2rem] color-[white] text-[#FFE4C3] ${ananda.className}`}
+                          className={`text-[2.4rem] leading-[2.5rem]  sm:text-[2.4rem] sm:leading-[1.8rem] lg:text-[2.5rem] lg:leading-[2rem] color-[white] text-[#FFE4C3] ${ananda.className}`}
                         >
                           {competition.title}
                         </h4>
                         <p
-                          className={`tracking-wide text-[1.7rem] leading-[1.8rem] sm:text-[1.4rem] sm:leading-[1.2rem] lg:text-[1.5rem] lg:leading-[1.4rem] color-[white] text-[#FDE1BF] ${gentiumnormal.className}`}
+                          className={`tracking-wide text-[1.3rem] leading-[1.2rem] sm:text-[1.4rem] sm:leading-[1.2rem] lg:text-[1.5rem] lg:leading-[1.4rem] color-[white] text-[#FDE1BF] ${gentiumnormal.className}`}
                         >
                           {competition.content}
                         </p>
                       </div>
                     </div>
                   </BorderContainer>
-                  {/* </center> */}
-                </SwiperSlide>
+                </center>
               );
             })}
-          </Swiper>
+          </Carousel>
         </div>
       </div>
     </section>
