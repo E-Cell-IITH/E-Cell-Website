@@ -140,7 +140,7 @@ const Competitions = () => {
         >
           Competitions{" "}
         </h3>
-        <div className="w-[100%] mb-[5%] w-[80%] sm:w-[95%]">
+        <div className="w-full mb-[5%] sm:w-[95%]">
           <Carousel
             showArrows={true}
             centerSlidePercentage={centerSlidePercentage}

@@ -207,7 +207,7 @@ const StartupfairandGallery = () => {
           </Button>
         </div>
       </section>
-      <section className="flex flex-col p-7 px-[2rem] md:px-[18rem] lg:px-[18rem]">
+      <section className="flex flex-col md:p-7 sm:px-[2rem] md:px-[18rem] lg:px-[18rem]">
         <h3
           className={`py-[2rem] tracking-widest text-[#FCBF5F] text-center font-semibold text-[2.4rem] max-[300px]:text-[2.75rem] md:font-bold md:text-[4.75rem] lg:text-[5rem] 2xl:text-[6rem] ${ananda.className}`}
         >
@@ -225,10 +225,10 @@ const StartupfairandGallery = () => {
                 return (
                   <center key={index}>
                     <BorderContainer
-                      heightcss="h-[18rem] sm:h-[30rem] lg:h-[32rem] 2xl:h-[36rem]"
-                      widthcss="w-[27rem] sm:w-[45rem] lg:w-[48rem] 2xl:w-[54rem]"
-                      marginleftcss="ml-[18rem] sm:ml-[45rem] lg:ml-[48rem] 2xl:ml-[54rem]"
-                      margintopcss="mt-[27rem] sm:mt-[30rem] lg:mt-[32rem] 2xl:mt-[36rem] "
+                      heightcss="h-[14rem] sm:h-[30rem] lg:h-[32rem] 2xl:h-[36rem]"
+                      widthcss="w-[21rem] sm:w-[45rem] lg:w-[48rem] 2xl:w-[54rem]"
+                      marginleftcss="ml-[14rem] sm:ml-[45rem] lg:ml-[48rem] 2xl:ml-[54rem]"
+                      margintopcss="mt-[21rem] sm:mt-[30rem] lg:mt-[32rem] 2xl:mt-[36rem] "
                     >
                       <div className="flex flex-row gap-[2rem] align-center justify-center my-[auto] mx-[8%] relative w-full z-[-12]">
                         <div className="flex flex-[2] items-center">
