@@ -14,9 +14,6 @@ const gentium = Gentium_Plus({ subsets: ["latin"], weight: "700" });
 const gentiumnormal = Gentium_Plus({ subsets: ["latin"], weight: "400" });
 
 const gallery = [
-  "groww.png",
-  "henry_harvin.png",
-  "nakul.jpg"
 ];
 
 const ananda = localFont({
@@ -192,7 +189,7 @@ const StartupfairandGallery = () => {
           </Button>
         </div>
       </section>
-      <section className="flex flex-col p-7 px-[2rem] md:px-[18rem] lg:px-[18rem]">
+      {/* <section className="flex flex-col p-7 px-[2rem] md:px-[18rem] lg:px-[18rem]">
         <h3
           className={`py-[2rem] tracking-widest text-[#FCBF5F] text-center font-semibold text-[2.4rem] max-[300px]:text-[2.75rem] md:font-bold md:text-[4.75rem] lg:text-[5rem] 2xl:text-[6rem] ${ananda.className}`}
         >
@@ -227,7 +224,7 @@ const StartupfairandGallery = () => {
             </Carousel>
           </center>
         </div>
-      </section>
+      </section> */}
     </div>
   );
 };
