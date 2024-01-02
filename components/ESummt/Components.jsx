@@ -65,7 +65,7 @@ const AboutandTheme = () => {
         </h3>
 
         <div
-          className={`text-[#FDE1BF] text-[1.5rem] tracking-wide ${gentium.className}`}
+          className={`text-[#FDE1BF] text-[1.5rem] tracking-wide ${gentiumnormal.className}`}
         >
           <p>
             We&apos;re the Entrepreneurship Cell at IIT Hyderabad, driven by
@@ -100,7 +100,7 @@ const AboutandTheme = () => {
             Theme{" "}
           </h3>
           <div
-            className={`flex flex-row text-[#FDE1BF] text-[1.5rem] tracking-wide ${gentium.className}`}
+            className={`flex flex-row text-[#FDE1BF] text-[1.5rem] tracking-wide ${gentiumnormal.className}`}
           >
             <p>
               &quot;Unlocking the secrets of innovation - stay tuned as the
@@ -108,10 +108,16 @@ const AboutandTheme = () => {
             </p>
           </div>
         </div>
-        <img
-          src="/theme.jpeg"
-          className="w-[100%] md:w-[60%] lg:w-[60%] pt-[2rem]"
-        />
+
+          {/* <img
+            src="/theme.jpeg"
+            className="w-[100%] md:w-[60%] lg:w-[60%] pt-[2rem] "
+          /> */}
+
+          <img
+            src="/theme.jpeg"
+            className="w-[100%] md:w-[60%] lg:w-[60%] pt-[2rem]"
+          />
       </section>
     </div>
   );

@@ -164,7 +164,7 @@ const Competitions = () => {
                 > */}
                   <BorderContainer
                     heightcss="h-[50rem] sm:h-[50rem] lg:h-[36rem]"
-                    widthcss="w-[22rem] sm:w-[40rem] lg:w-[54rem]"
+                    widthcss="w-[30rem] sm:w-[40rem] lg:w-[54rem]"
                     marginleftcss="ml-[50rem] sm:ml-[50rem] lg:ml-[54rem]"
                     margintopcss="mt-[22rem] sm:mt-[40rem] lg:mt-[36rem]"
                   >
@@ -174,12 +174,12 @@ const Competitions = () => {
                       </div> */}
                       <div className="flex gap-[2rem] flex-col flex-[3]">
                         <h4
-                          className={`text-[2.4rem] leading-[2.5rem]  sm:text-[2.4rem] sm:leading-[1.8rem] lg:text-[2.5rem] lg:leading-[2rem] color-[white] text-[#FFE4C3] ${ananda.className}`}
+                          className={`text-[2.4rem] leading-[2.5rem]  sm:text-[2.4rem] sm:leading-[1.8rem] lg:text-[2.5rem] lg:leading-[2.5rem] color-[white] text-[#FFE4C3] ${ananda.className}`}
                         >
                           {competition.title}
                         </h4>
                         <p
-                          className={`tracking-wide text-[1.3rem] leading-[1.2rem] sm:text-[1.4rem] sm:leading-[1.2rem] lg:text-[1.5rem] lg:leading-[1.4rem] color-[white] text-[#FDE1BF] ${gentiumnormal.className}`}
+                          className={`tracking-wide text-[1.3rem] leading-[1.2rem] sm:text-[1.4rem] sm:leading-[1.2rem] lg:text-[1.3rem] lg:leading-[2rem] color-[white] text-[#FDE1BF] ${gentiumnormal.className}`}
                         >
                           {competition.content}
                         </p>

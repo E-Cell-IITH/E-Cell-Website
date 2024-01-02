@@ -12,6 +12,12 @@ module.exports = {
       mono: [...defaultTheme.fontFamily.mono],
     },
     extend: {
+      translate: {
+        "-10": "-10rem",
+      },
+      boxShadow: {
+        custom: "-42px 0px 58px 0px rgba(224, 218, 159, 1)",
+      },
       colors: {
         lightBlue: "#66FCF1",
         blue: "#45A29E",
