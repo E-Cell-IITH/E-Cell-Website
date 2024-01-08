@@ -158,6 +158,10 @@ const design_info = [
     name: 'Akshat P',
     url: 'https://raw.githubusercontent.com/abhinavydv/E-cell-IITH-Public-Data/master/Design%20%26%20Multimedia/Akshat/IMG_20221204_210542.jpg',
   },
+  {
+    name: 'Vyom L',
+    url: 'https://raw.githubusercontent.com/abhinavydv/E-cell-IITH-Public-Data/master/Design%20%26%20Multimedia/Vyom%20Lathan/Vyom%20Lathan.jpeg',
+  },
 ];
 const media_pub_info = [
   {

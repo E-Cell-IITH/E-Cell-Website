@@ -13,9 +13,13 @@ const gentium = Gentium_Plus({ subsets: ["latin"], weight: "700" });
 const First = () => {
   return (
     <div>
-      <section className="flex flex-col w-full h-[100vh] py-5 px-5" >
+      <section className="flex flex-col w-full h-[100vh] py-5 px-5">
         <div className="absolute inset-0">
-          <img draggable={false} src="/esummit-bg.jpeg" className="w-full h-full object-cover" />
+          <img
+            draggable={false}
+            src="/esummit-bg.jpeg"
+            className="w-full h-full object-cover"
+          />
         </div>
         <div className="flex justify-between">
           {/* logo */}
@@ -24,7 +28,7 @@ const First = () => {
               <Image
                 src="/ecellLogo.png"
                 style={{ filter: "brightness(0%)" }}
-                layout="fill"
+                fill
                 objectFit="contain"
                 alt="E-cell IIT Hyderabad Logo"
               />
@@ -34,10 +38,15 @@ const First = () => {
           <div className=""></div>
         </div>
         <div className="flex-grow flex justify-center items-center flex-col">
-          <img src="/esummitLogo.png" className="relative max-[300px]:h-[5rem] h-[9rem] lg:h-[11rem]" />
+          <img
+            src="/esummitLogo.png"
+            className="relative max-[300px]:h-[5rem] h-[9rem] lg:h-[11rem]"
+          />
           <div className="text-center relative">
             <h2 className="text-black font-bold text-[2rem] max-[300px]:text-[1.5rem] lg:text-[3rem] 2xl:text-[3.25rem]">
-              <div className={gentium.className}>E-Cell, IIT Hyderabad&#39;s</div>
+              <div className={gentium.className}>
+                E-Cell, IIT Hyderabad&#39;s
+              </div>
             </h2>{" "}
             <div>
               <h2 className="text-black text-[5rem] leading-none max-[300px]:text-[3rem] lg:text-[7.25rem] 2xl:text-[10rem]">

@@ -187,7 +187,7 @@ export default function Second() {
           <div className={style.imgContainer}>
             <Image
               src="https://res.cloudinary.com/dwsverefw/image/upload/v1665696047/ecell/R13_hupwfp.png"
-              layout="fill"
+              fill
               className={style.rect}
               alt="stylistic triangle"
             />
@@ -267,7 +267,7 @@ export default function Second() {
           <div className={style.rect2}>
             <Image
               src="https://res.cloudinary.com/dwsverefw/image/upload/v1665696047/ecell/R19_ie4plr.png"
-              layout="fill"
+              fill
               alt="stylistic triangle"
             />
           </div>

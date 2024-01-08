@@ -23,39 +23,39 @@
 
 // export default Speakers
 
-import React from 'react';
-import { Grid } from '@mui/material';
-import Carousel from 'react-material-ui-carousel';
-import styled from '@emotion/styled';
-import Box from '@mui/material/Box';
-import Image from 'next/image';
+import React from "react";
+import { Grid } from "@mui/material";
+import Carousel from "react-material-ui-carousel";
+import styled from "@emotion/styled";
+import Box from "@mui/material/Box";
+import Image from "next/image";
 
 const speakers = [
   // {name:'Ashish Chauhan', designation:'MD and CEO Bombay Stock Exchange'},
   {
-    name: 'Saumya Ranjan Pradhan',
-    designation: 'Sr. Director, Industry and Innovation - Capgemini',
+    name: "Saumya Ranjan Pradhan",
+    designation: "Sr. Director, Industry and Innovation - Capgemini",
     imgUrl:
-      'https://res.cloudinary.com/dboy04n6m/image/upload/v1673372035/Saumya_Ranjan_Pradhan_pmyqhx.jpg',
+      "https://res.cloudinary.com/dboy04n6m/image/upload/v1673372035/Saumya_Ranjan_Pradhan_pmyqhx.jpg",
   },
   // {name:'Dr. Anurag Batra', designation:'Chairman & Editor-In-Chief, BW Businessworld'},
   {
-    name: 'Hussaini S F',
-    designation: 'Executive Director - JPMorgan & Chase',
+    name: "Hussaini S F",
+    designation: "Executive Director - JPMorgan & Chase",
     imgUrl:
-      'https://res.cloudinary.com/dboy04n6m/image/upload/v1673372191/Hussaini_S_F_vsqlzz.jpg',
+      "https://res.cloudinary.com/dboy04n6m/image/upload/v1673372191/Hussaini_S_F_vsqlzz.jpg",
   },
   {
-    name: 'N. Srinivasan',
-    designation: 'Sr. Executive Vice President at HDFC Bank.',
+    name: "N. Srinivasan",
+    designation: "Sr. Executive Vice President at HDFC Bank.",
     imgUrl:
-      'https://res.cloudinary.com/dboy04n6m/image/upload/v1673372237/N._Srinivasan_rrkr1w.jpg',
+      "https://res.cloudinary.com/dboy04n6m/image/upload/v1673372237/N._Srinivasan_rrkr1w.jpg",
   },
   {
-    name: 'Yugandhar Penubolu',
-    designation: 'Founder of Winzard.io - HR Tech',
+    name: "Yugandhar Penubolu",
+    designation: "Founder of Winzard.io - HR Tech",
     imgUrl:
-      'https://res.cloudinary.com/dbmw0xoar/image/upload/v1673640996/ecell/Yugandhar_Penubolu_-_Founder_of_Winzard.io_-_HR_Tech_m7oeyp.jpg',
+      "https://res.cloudinary.com/dbmw0xoar/image/upload/v1673640996/ecell/Yugandhar_Penubolu_-_Founder_of_Winzard.io_-_HR_Tech_m7oeyp.jpg",
   },
 ];
 
@@ -68,7 +68,7 @@ const Div = styled.div`
 `;
 
 const Name = styled.h2`
-  color: 'white';
+  color: "white";
   font-size: 1.5rem;
   text-transform: uppercase;
   font-weight: 700;
@@ -100,12 +100,12 @@ function SpeakerCarousel() {
         item
         xs={12}
         sx={{
-          fontSize: { xs: '1.2rem', lg: '2.5rem' },
-          color: 'transparent',
+          fontSize: { xs: "1.2rem", lg: "2.5rem" },
+          color: "transparent",
           background:
-            'linear-gradient(93.82deg, rgba(56, 128, 231, 1) 0.01%, rgba(98, 215, 216, 1) 38.13%)',
-          backgroundClip: 'text',
-          textAlign: 'center',
+            "linear-gradient(93.82deg, rgba(56, 128, 231, 1) 0.01%, rgba(98, 215, 216, 1) 38.13%)",
+          backgroundClip: "text",
+          textAlign: "center",
         }}
       >
         <h2>SPEAKERS</h2>
@@ -115,7 +115,7 @@ function SpeakerCarousel() {
         xs={12}
         justifyContent="center"
         alignItems="center"
-        sx={{ px: { lg: '10rem' } }}
+        sx={{ px: { lg: "10rem" } }}
       >
         <Carousel
           animation="slide"
@@ -131,20 +131,20 @@ function SpeakerCarousel() {
                     component="div"
                     className="bg-dark"
                     sx={{
-                      height: { xs: '15rem', lg: '25rem' },
-                      width: { xs: '11.25rem', lg: '18.75rem' },
-                      overflow: 'hidden',
-                      position: 'relative',
-                      borderRadius: { xs: '0.8rem', lg: '1rem' },
+                      height: { xs: "15rem", lg: "25rem" },
+                      width: { xs: "11.25rem", lg: "18.75rem" },
+                      overflow: "hidden",
+                      position: "relative",
+                      borderRadius: { xs: "0.8rem", lg: "1rem" },
                     }}
                   >
                     <Image
                       objectFit="contain"
-                      layout="fill"
+                      fill
                       priority
                       src={item.imgUrl}
                       alt={item.name}
-                      style={{ height: '100%' }}
+                      style={{ height: "100%" }}
                     />
                   </Box>
                 </Grid>

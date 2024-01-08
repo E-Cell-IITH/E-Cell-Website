@@ -94,7 +94,7 @@ export default function Navbar({
         <Image
           src="https://res.cloudinary.com/dwsverefw/image/upload/v1665696046/ecell/logo_dshics.png"
           alt="Ecell Logo"
-          layout="fill"
+          fill
           objectFit="contain"
           priority
         />
@@ -102,7 +102,7 @@ export default function Navbar({
       <Image
         src="https://res.cloudinary.com/dwsverefw/image/upload/v1665878886/ecell/hostels_svd8y6.jpg"
         priority
-        layout="fill"
+        fill
         objectFit="cover"
         sx={{ zIndex: 0 }}
         alt="IIT Hyderabad Hostel"

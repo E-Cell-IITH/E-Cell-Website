@@ -100,7 +100,7 @@ export default function Fourth() {
                 src={sponsor.imgUrl}
                 alt={sponsor.name}
                 priority="true"
-                layout="fill"
+                fill
                 objectFit="contain"
               />
             </Grid>
@@ -120,7 +120,7 @@ export default function Fourth() {
                 src={sponsor.imgUrl}
                 alt={sponsor.name}
                 priority="true"
-                layout="fill"
+                fill
                 objectFit="contain"
               />
             </Grid>

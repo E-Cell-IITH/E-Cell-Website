@@ -164,7 +164,7 @@ function SpeakerCarousel() {
                   >
                     <Image
                       objectFit="contain"
-                      layout="fill"
+                      fill
                       priority
                       src={item.imgUrl}
                       alt={item.name}
