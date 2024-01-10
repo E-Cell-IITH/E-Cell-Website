@@ -31,6 +31,13 @@ const gallery = [
   "esummit/gallery/IMG_2802.jpg",
 ];
 
+const merchandise = [
+  "esummit/merch/s4.png",
+  "esummit/merch/s5.png",
+  "esummit/merch/s3.png",
+  "esummit/merch/s6.png",
+]
+
 const ananda = localFont({
   src: "../../public/fonts/ananda-neptouch-2.regular.ttf",
 });
@@ -210,6 +217,55 @@ const StartupfairandGallery = () => {
             }}
           >
             REGISTER NOW
+          </Button>
+        </div>
+      </section>
+      <section className="flex flex-col p-7 px-[2rem] md:px-[18rem] lg:px-[18rem]">
+        <h3
+          className={`py-[2rem] text-center tracking-widest text-[#FCBF5F] font-semibold text-[2.4rem] max-[300px]:text-[2.75rem] md:font-bold md:text-[4.75rem] lg:text-[5rem] 2xl:text-[6rem] ${ananda.className}`}
+        >
+          E-summit '24 official merchandise{" "}
+        </h3>
+        <div className="flex-1 h-[50rem]">
+          <center>
+            <Carousel
+              animation="slide"
+              duration={100}
+              autoPlay={true}
+              navButtonsAlwaysInvisible={true}
+            >
+              {merchandise.map((i, index) => {
+                return (
+                  <center key={index}>
+                    <BorderContainer
+                      heightcss="h-[14rem] sm:h-[30rem] lg:h-[32rem] 2xl:h-[36rem]"
+                      widthcss="w-[21rem] sm:w-[45rem] lg:w-[48rem] 2xl:w-[54rem]"
+                      marginleftcss="ml-[14rem] sm:ml-[45rem] lg:ml-[48rem] 2xl:ml-[54rem]"
+                      margintopcss="mt-[21rem] sm:mt-[30rem] lg:mt-[32rem] 2xl:mt-[36rem] "
+                    >
+                      <div className="flex flex-row gap-[2rem] align-center justify-center my-[auto] mx-[22%] relative w-full z-[-12]">
+                        <div className="flex flex-[2] items-center">
+                          <img src={i} />
+                        </div>
+                      </div>
+                    </BorderContainer>
+                  </center>
+                );
+              })}
+            </Carousel>
+          </center>
+        </div>
+        <div className="flex justify-center m-7">
+          <Button
+            className={`bg-[#C39F3F] text-[1.2rem] text-white font-bold border-[0.5rem] w-[fit-content] px-[1rem] py-[0.5rem] rounded-[0.5rem] ${gentiumnormal.className}}`}
+            onClick={() => {
+              window.open(
+                "https://forms.gle/gm95mxXZyWe7kV2y9",
+                "_blank"
+              );
+            }}
+          >
+            BUY NOW
           </Button>
         </div>
       </section>
