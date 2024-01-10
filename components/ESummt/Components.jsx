@@ -13,11 +13,7 @@ import BorderContainer from "./BorderContainer";
 const gentium = Gentium_Plus({ subsets: ["latin"], weight: "700" });
 const gentiumnormal = Gentium_Plus({ subsets: ["latin"], weight: "400" });
 
-const gallery = [
-  "groww.png",
-  "henry_harvin.png",
-  "nakul.jpg"
-];
+const gallery = ["groww.png", "henry_harvin.png", "nakul.jpg"];
 
 const ananda = localFont({
   src: "../../public/fonts/ananda-neptouch-2.regular.ttf",
@@ -185,10 +181,71 @@ const StartupfairandGallery = () => {
           <Button
             className={`bg-[#C39F3F] text-[1.2rem] text-white font-bold border-[0.5rem] w-[fit-content] px-[1rem] py-[0.5rem] rounded-[0.5rem] ${gentiumnormal.className}}`}
             onClick={() => {
-              window.open("https://unstop.com/competitions/fetching-fortunes-iit-hyderabad-814341", "_blank");
+              window.open(
+                "https://unstop.com/competitions/fetching-fortunes-iit-hyderabad-814341",
+                "_blank"
+              );
             }}
           >
             REGISTER NOW
+          </Button>
+        </div>
+      </section>
+      <section className="flex flex-col p-7 px-[2rem] md:px-[18rem] lg:px-[18rem]">
+        <h3
+          className={`py-[2rem] text-center tracking-widest text-[#FCBF5F] font-semibold text-[2.4rem] max-[300px]:text-[2.75rem] md:font-bold md:text-[4.75rem] lg:text-[5rem] 2xl:text-[6rem] ${ananda.className}`}
+        >
+          E-summit '24 official merchandise{" "}
+        </h3>
+
+        <center>
+          <Carousel
+            animation="slide"
+            duration={1000}
+            autoPlay={true}
+            navButtonsAlwaysVisible={true}
+            navButtonsProps={{
+              style: {
+                backgroundColor: "black",
+              },
+            }}
+            navButtonsWrapperProps={{
+              style: {
+                marginLeft: "7vw",
+                marginRight: "7vw",
+                zIndex: "20"
+              },
+            }}
+          >
+            {gallery.map((i, index) => {
+              return (
+                <center key={index}>
+                  <BorderContainer
+                    heightcss="h-[24rem] sm:h-[30rem] lg:h-[36rem]"
+                    widthcss="w-[36rem] sm:w-[45rem] lg:w-[54rem]"
+                    marginleftcss="ml-[36rem] sm:ml-[30rem] lg:ml-[54rem]"
+                    margintopcss="mt-[24rem] sm:mt-[45rem] lg:mt-[36rem]"
+                  >
+                    <div className="flex flex-row gap-[2rem] align-center justify-center my-[auto] mx-[10%] relative w-full">
+                      <div className="flex flex-[2] items-center">
+                        <img src={i} />
+                      </div>
+                    </div>
+                  </BorderContainer>
+                </center>
+              );
+            })}
+          </Carousel>
+        </center>
+
+        <div className="flex justify-center m-7">
+          <Button
+            className={`bg-[#C39F3F] text-[1.2rem] text-white font-bold border-[0.5rem] w-[fit-content] px-[1rem] py-[0.5rem] rounded-[0.5rem] ${gentiumnormal.className}}`}
+            onClick={() => {
+              window.open("https://forms.gle/gm95mxXZyWe7kV2y9", "_blank");
+            }}
+          >
+            BUY NOW
           </Button>
         </div>
       </section>
