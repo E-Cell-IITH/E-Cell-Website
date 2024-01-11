@@ -18,7 +18,7 @@ const heads = [
       {
         name: "Asit Desai",
         imgUrl:
-          "https://raw.githubusercontent.com/abhinavydv/E-cell-IITH-Public-Data/master/Operations/Asit%20Desai/e-cell%20photo.jpg",
+          "https://raw.githubusercontent.com/abhinavydv/Ecell-Test/master/Operations/Asit%20Desai/asit.jpeg",
         email: "ch21btech11012@iith.ac.in",
         linkedIN: "https://www.linkedin.com/in/asit-desai-02493a248/",
       },
