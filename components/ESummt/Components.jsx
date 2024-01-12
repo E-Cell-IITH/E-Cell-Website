@@ -229,10 +229,12 @@ const StartupfairandGallery = () => {
         <div className="flex-1 h-[50rem]">
           <center>
             <Carousel
-              animation="slide"
-              duration={100}
+              animation="fade"
+              duration={10}
               autoPlay={true}
               navButtonsAlwaysInvisible={true}
+              infiniteLoop={true}
+              autoPlayInterval={1000}
             >
               {merchandise.map((i, index) => {
                 return (
@@ -279,9 +281,10 @@ const StartupfairandGallery = () => {
           <center>
             <Carousel
               animation="fade"
-              duration={100}
+              duration={10}
               autoPlay={true}
               navButtonsAlwaysInvisible={true}
+              infiniteLoop={true}
             >
               {gallery.map((i, index) => {
                 return (
