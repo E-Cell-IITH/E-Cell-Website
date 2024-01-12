@@ -224,7 +224,7 @@ const StartupfairandGallery = () => {
         <h3
           className={`py-[2rem] text-center tracking-widest text-[#FCBF5F] font-semibold text-[2.4rem] max-[300px]:text-[2.75rem] md:font-bold md:text-[4.75rem] lg:text-[5rem] 2xl:text-[6rem] ${ananda.className}`}
         >
-          E-summit '24 official merchandise{" "}
+          E-summit &#39;24 official merchandise{" "}
         </h3>
         <div className="flex-1 h-[50rem]">
           <center>
