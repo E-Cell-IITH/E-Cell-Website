@@ -63,6 +63,9 @@ const AboutandTheme = () => {
           aspectRatio: 496 / 430,
         }}
       ></div>
+      <div className="md:hidden">
+        {<img src="/edge_design.png" alt="Small Screen Image" />}
+      </div>
       <section className="flex flex-col h-full relative w-full py-7 px-[2rem] md:px-[14rem] lg:px-[18rem]">
         <div className="bg-[url('/about-bg.png')] h-full aspect-[783/1800] absolute bg-cover right-0"></div>
         <h3
@@ -98,7 +101,32 @@ const AboutandTheme = () => {
           </p>
         </div>
       </section>
-      <section className="flex flex-col-reverse md:flex-row lg:flex-row">
+      <section className="flex flex-col md:flex-row lg:flex-row">
+        <div className="flex flex-col p-7 pl-[2rem] md:pl-[14rem] lg:pl-[18rem]">
+          <div className="bg-[url('/about-bg.png')] aspect-[783/1800] absolute bg-cover right-0 z-[-1]"></div>
+          <h3
+            className={`py-[2rem] tracking-widest text-[#FCBF5F] font-semibold text-[2.4rem] max-[300px]:text-[2.75rem] md:font-bold md:text-[4.75rem] lg:text-[5rem] 2xl:text-[6rem] ${ananda.className}`}
+          >
+            Theme{" "}
+          </h3>
+          <div
+            className={` flex flex-row text-[#FDE1BF] text-[1.5rem] tracking-wide ${gentiumnormal.className}`}
+          >
+            <p>
+              &quot;Unlocking the secrets of innovation - stay tuned as the
+              theme for E-Summit will soon be unveiled!&quot;
+            </p>
+          </div>
+        </div>
+
+        <div className="w-full md:w-[60%] lg:w-[60%] pt-2">
+          <img src="/theme.jpeg" className="sm:mx-4" alt="Theme" />
+        </div>
+        <div className="md:hidden">
+          {<img src="/edge_design2.png" alt="Small Screen Image" />}
+        </div>
+      </section>
+      {/* <section className="flex flex-col md:flex-row lg:flex-row">
         <div className="flex flex-col justify-center p-7 pl-[2rem] md:pl-[14rem] lg:pl-[18rem]">
           <div className="bg-[url('/about-bg.png')] aspect-[783/1800] absolute bg-cover right-0 z-[-1]"></div>
           <h3
@@ -116,16 +144,11 @@ const AboutandTheme = () => {
           </div>
         </div>
 
-          {/* <img
-            src="/theme.jpeg"
-            className="w-[100%] md:w-[60%] lg:w-[60%] pt-[2rem] "
-          /> */}
-
           <img
             src="/theme.jpeg"
-            className="w-[100%] md:w-[60%] lg:w-[60%] pt-[2rem]"
+            className="w-[100%] md:w-[60%] lg:w-[60%] pt-[2rem] sm:mx-4"
           />
-      </section>
+      </section> */}
     </div>
   );
 };

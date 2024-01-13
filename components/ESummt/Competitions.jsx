@@ -179,7 +179,7 @@ const Competitions = () => {
                           {competition.title}
                         </h4>
                         <p
-                          className={`tracking-wide text-[1.3rem] leading-[1.2rem] sm:text-[1.4rem] sm:leading-[1.2rem] lg:text-[1.3rem] lg:leading-[2rem] color-[white] text-[#FDE1BF] ${gentiumnormal.className}`}
+                          className={`tracking-wide text-[1rem] leading-[1.2rem] sm:text-[1rem] sm:leading-[1.2rem] lg:text-[1.3rem] lg:leading-[2rem] color-[white] text-[#FDE1BF] ${gentiumnormal.className} mx-11 sm:mx-0`}
                         >
                           {competition.content}
                         </p>
@@ -190,6 +190,9 @@ const Competitions = () => {
               );
             })}
           </Carousel>
+          <div className="md:hidden my-10 md:my-0 ">
+            {<img src="/edge_design3.png" alt="Small Screen Image" />}
+          </div>
         </div>
       </div>
     </section>

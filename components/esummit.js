@@ -15,7 +15,7 @@ const First = () => {
     <div>
       <section className="flex flex-col w-full h-[100vh] py-5 px-5" >
         <div className="absolute inset-0">
-          <img draggable={false} src="/esummit-bg.jpeg" className="w-full h-full object-cover" />
+          <img draggable={false} src="/esummit/esummit-bg.png" className="w-full h-full object-cover" />
         </div>
         <div className="flex justify-between">
           {/* logo */}
