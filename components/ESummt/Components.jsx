@@ -185,7 +185,7 @@ const StartupfairandGallery = () => {
           Startup fair
         </h3>
         <div
-          className={`flex flex-row text-[#FDE1BF] text-[1.5rem] tracking-wide ${gentium.className} text-center`}
+          className={`flex flex-row text-[#FDE1BF] text-[1.5rem] tracking-wide ${gentiumnormal.className} text-center`}
         >
           <p>
             StartupFair is a startup exhibition event, welcoming all the
@@ -217,7 +217,7 @@ const StartupfairandGallery = () => {
           fetching fortunes{" "}
         </h3>
         <div
-          className={`flex flex-row text-[#FDE1BF] text-[1.5rem] tracking-wide ${gentium.className} text-center`}
+          className={`flex flex-row text-[#FDE1BF] text-[1.5rem] tracking-wide ${gentiumnormal.className} text-center`}
         >
           <p>
             E-cell IITH is excited to announce &quot;Fetching Fortunes,&quot; an

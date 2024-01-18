@@ -164,11 +164,15 @@ const Competitions = () => {
                 > */}
                   <BorderContainer
                     heightcss="h-[50rem] sm:h-[50rem] lg:h-[36rem]"
-                    widthcss="w-[30rem] sm:w-[40rem] lg:w-[54rem]"
-                    marginleftcss="ml-[50rem] sm:ml-[50rem] lg:ml-[54rem]"
-                    margintopcss="mt-[22rem] sm:mt-[40rem] lg:mt-[36rem]"
+                    widthcss="w-[25rem] sm:w-[40rem] lg:w-[54rem]"
+                    marginleftcss="ml-[10rem] sm:ml-[50rem] lg:ml-[54rem]"
+                    margintopcss="mt-[20rem] sm:mt-[40rem] lg:mt-[36rem]"
+                    // heightcss="h-[50rem] sm:h-[50rem] lg:h-[36rem]"
+                    // widthcss="w-[30rem] sm:w-[40rem] lg:w-[54rem]"
+                    // marginleftcss="ml-[50rem] sm:ml-[50rem] lg:ml-[54rem]"
+                    // margintopcss="mt-[22rem] sm:mt-[40rem] lg:mt-[36rem]"
                   >
-                    <div className="flex flex-row gap-[2rem] align-center justify-center my-[auto] mx-[10%] relative w-full select-none	">
+                    <div className="flex flex-row gap-[2rem] align-center justify-center my-[auto] mx-[1%] sm:mx-[10%] relative w-full select-none	">
                       {/* <div className="flex flex-[2] items-center">
                         <img src={competition.image} />
                       </div> */}
