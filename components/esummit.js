@@ -12,10 +12,14 @@ const gentium = Gentium_Plus({ subsets: ["latin"], weight: "700" });
 
 const First = () => {
   return (
-    <div>
+    <div style={{ backgroundColor: "#FFE2BF" }}>
       <section
         className="flex flex-col w-full h-[100vh] py-5 px-5"
-        style={{ backgroundImage: "url('/esummit/esummit-bg.png')",backgroundSize: "cover", backgroundPosition: "center" }}
+        style={{
+          backgroundImage: "url('/esummit/esummit-bg2.png')",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
       >
         {/* <div className="absolute inset-0 bg-pink-300">
           <img draggable={false} src="/esummit/esummit-bg.png" className="w-full  object-cover" />
@@ -37,31 +41,32 @@ const First = () => {
         <div className="flex-grow flex justify-center items-center flex-col">
           <img
             src="/esummitLogo.png"
-            className="relative max-[300px]:h-[5rem] h-[9rem] lg:h-[11rem]"
+            className="relative max-[300px]:h-[5rem] h-[rem] lg:h-[7rem]"
           />
           <div className="text-center relative">
-            <h2 className="text-black font-bold text-[2rem] max-[300px]:text-[1.5rem] lg:text-[3rem] 2xl:text-[3.25rem]">
+            <h2 className="text-black text-[2rem] max-[300px]:text-[1.5rem] lg:text-[3rem] 2xl:text-[3.25rem]">
               <div className={gentium.className}>
                 E-Cell, IIT Hyderabad&#39;s
               </div>
             </h2>{" "}
-            <div>
+            <div className="">
               <h2 className="text-black text-[5rem] leading-none max-[300px]:text-[3rem] lg:text-[7.25rem] 2xl:text-[10rem]">
                 <div className={ananda.className}>E-SUMMIT 2024</div>
               </h2>
             </div>
-            <div>
-              <h3
-                className={`text-[#FFE4C3] font-semibold text-[2.4rem] max-[300px]:text-[1.75rem] md:font-bold md:text-[3.75rem] lg:text-[4rem] 2xl:text-[6rem] ${gentium.className}`}
+            <div className="mt-20">
+              <h2
+                className="text-[#FCBF5F] text-[5rem] leading-none max-[300px]:text-[3rem] lg:text-[7.25rem] 2xl:text-[10rem]"
+                style={{
+                  textShadow: "2px 2px 0px #0e0e0e, -2px -2px 0px #0e0e0e",
+                }}
               >
-                February 1st to 4th{" "}
-              </h3>
+                <div className={ananda.className}>aarohati</div>
+              </h2>
               <h3
-                className={`text-white font-semibold text-[1.5rem] max-[300px]:text-[1rem] md:font-bold md:text-[2.25rem] lg:text-[2.5rem] 2xl:text-[3rem] ${gentium.className}`}
+                className={`text-white font-extralight text-[1.5rem] max-[300px]:text-[1rem] md:font-bold md:text-[2.25rem] lg:text-[2.5rem] 2xl:text-[3rem] ${gentium.className}`}
               >
-                <span className="text-[#FFE4C3]">THINK</span> .{" "}
-                <span className="text-[#FCBA51]">BUILD</span> .{" "}
-                <span className="text-[#F77B4E]">INSPIRE</span>
+                <span className="text-[#D9C7AD]">ASCENT TO THE SUMMIT</span> .{" "}
               </h3>
             </div>
           </div>
