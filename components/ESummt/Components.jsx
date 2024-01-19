@@ -4,6 +4,10 @@ import localFont from "next/font/local";
 import { Button } from "@mui/material";
 import Carousel from "react-material-ui-carousel";
 import BorderContainer from "./BorderContainer";
+import style from "../../styles/fifth.module.css";
+import Grid from "@mui/material/Grid";
+import Image from "next/image";
+import Link from "next/link";
 // import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 // import { Carousel } from "react-responsive-carousel";
 // import "slick-carousel/slick/slick.css";
@@ -36,7 +40,7 @@ const merchandise = [
   "esummit/merch/s5.png",
   "esummit/merch/s3.png",
   "esummit/merch/s6.png",
-]
+];
 
 const ananda = localFont({
   src: "../../public/fonts/ananda-neptouch-2.regular.ttf",
@@ -284,10 +288,7 @@ const StartupfairandGallery = () => {
           <Button
             className={`bg-[#C39F3F] text-[1.2rem] text-white font-bold border-[0.5rem] w-[fit-content] px-[1rem] py-[0.5rem] rounded-[0.5rem] ${gentiumnormal.className}}`}
             onClick={() => {
-              window.open(
-                "https://forms.gle/gm95mxXZyWe7kV2y9",
-                "_blank"
-              );
+              window.open("https://forms.gle/gm95mxXZyWe7kV2y9", "_blank");
             }}
           >
             BUY NOW
@@ -331,6 +332,53 @@ const StartupfairandGallery = () => {
           </center>
         </div>
       </section>
+      {/* <section className="flex flex-col md:p-7 sm:px-[2rem] md:px-[18rem] lg:px-[18rem]">
+        <div className="flex">
+          <div className="flex flex-col">
+            <div
+              className={`py-[2rem] text-center text-[#FCBF5F] text-[2.4rem] max-[400px]:text-[1rem] md:text-[2rem] lg:text-[2rem] 2xl:text-[3rem] ${ananda.className}`}
+            >
+              <span className="py-[2rem] text-center text-[#FCBF5F] text-[2.4rem] max-[400px]:text-[1rem] md:text-[2rem] lg:text-[2rem] 2xl:text-[4.3rem] ${ananda.className}">
+                C
+              </span>
+              ontact us
+            </div>
+            <div>
+              <div className="my-[1rem] flex gap-[1rem] items-center">
+                <img
+                  src="esummit/gallery/location.png"
+                  alt="location"
+                  width={"20px"}
+                />
+                <div className={`${gentium.className} text-[#FCBF5F]`}>
+                  E-Cell Office
+                  <br />
+                  C-714, Academic block C,
+                  <br />
+                  IIT Hyderabad
+                </div>
+              </div>
+              <div className="my-[1rem] flex gap-[1rem] items-center">
+                <img src="esummit/gallery/email.png" alt="location" />
+                <div className={`${gentium.className} text-[#FCBF5F]`}>
+                  ecell@iith.ac.in
+                </div>
+              </div>
+              <div className="my-[1rem] flex gap-[1rem] items-center">
+                <img
+                  src="esummit/gallery/location.png"
+                  alt="location"
+                  width={"20px"}
+                />
+                <div className={`${gentium.className} text-[#FCBF5F]`}>
+                  +91 7023425801
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section> */}
+      
     </div>
   );
 };
