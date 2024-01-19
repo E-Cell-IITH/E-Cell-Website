@@ -73,7 +73,7 @@ const AboutandTheme = () => {
       <section className="flex flex-col h-full relative w-full py-7 px-[2rem] md:px-[14rem] lg:px-[18rem]">
         <div className="bg-[url('/about-bg.png')] h-full aspect-[783/1800] absolute bg-cover right-0"></div>
         <h3
-          className={`py-[2rem] tracking-widest text-[#FCBF5F] font-semibold text-[3rem] max-[300px]:text-[3rem] md:font-bold md:text-[4.75rem] lg:text-[5rem] 2xl:text-[6rem] ${ananda.className}`}
+          className={`py-[2rem] tracking-widest text-[#FCBF5F] font-semibold text-[3rem] max-[300px]:text-[3rem] md:font-bold md:text-[4.75rem] lg:text-[5rem] 2xl:text-[6rem] text-center ${ananda.className}`}
         >
           aBOUT US{" "}
         </h3>
@@ -105,31 +105,43 @@ const AboutandTheme = () => {
           </p>
         </div>
       </section>
-      <section className="flex flex-col md:flex-row lg:flex-row">
-        <div className="flex flex-col p-7 pl-[2rem] md:pl-[14rem] lg:pl-[18rem]">
-          <div className="bg-[url('/about-bg.png')] aspect-[783/1800] absolute bg-cover right-0 z-[-1]"></div>
-          <h3
-            className={`py-[2rem] tracking-widest text-[#FCBF5F] font-semibold text-[2.4rem] max-[300px]:text-[2.75rem] md:font-bold md:text-[4.75rem] lg:text-[5rem] 2xl:text-[6rem] ${ananda.className}`}
-          >
-            Theme{" "}
-          </h3>
-          <div
-            className={` flex flex-row text-[#FDE1BF] text-[1.5rem] tracking-wide ${gentiumnormal.className}`}
-          >
-            <p>
-              &quot;Unlocking the secrets of innovation - stay tuned as the
-              theme for E-Summit will soon be unveiled!&quot;
-            </p>
-          </div>
-        </div>
+      <section className="flex flex-col h-full relative w-full py-7 px-[2rem] md:px-[14rem] lg:px-[18rem]">
+        <div className="bg-[url('/about-bg.png')] h-full aspect-[783/1800] absolute bg-cover right-0"></div>
+        <h3
+          className={`py-[2rem] tracking-widest text-[#FCBF5F] font-semibold text-[3rem] max-[300px]:text-[3rem] md:font-bold md:text-[4.75rem] lg:text-[5rem] 2xl:text-[6rem] text-center ${ananda.className}`}
+        >
+          Theme{" "}
+        </h3>
 
-        <div className="w-full md:w-[60%] lg:w-[60%] pt-2">
-          <img src="/theme.jpeg" className="sm:mx-4" alt="Theme" />
+        <div
+          className={`text-[#FDE1BF] text-[1.5rem] tracking-wide ${gentiumnormal.className}`}
+        >
+            <p>
+              Aarohati is a sanskrit word that signifies <b>&quot;The Ascent&quot;</b> or the verb <b>&quot;Climbing Up&quot;</b>.Aarohati signifies the act of rising, often in a spiritual sense.
+            </p>
+            <br/>
+            <p>
+              Start-ups are like rockets. Aarohati symbolizes the metaphorical climb, emphasizing the growth and progress that startups aim for. This theme encourages startups to embrace their journey and find inspiration in their ascent. The ascent signifies determination, resilience and the ability to overcome obstacles. Thes qualities are crucial for the startups to navigate the competitive business landscape.
+            </p>
+        </div>
+        <div className="flex justify-center m-7">
+          <Button
+            className={`bg-[#C39F3F] text-[1.2rem] text-white font-bold border-[0.5rem] w-[fit-content] px-[1rem] py-[0.5rem] rounded-[0.5rem] ${gentiumnormal.className}}`}
+            onClick={() => {
+              window.open(
+                "https://unstop.com/competitions/fetching-fortunes-iit-hyderabad-814341",
+                "_blank"
+              );
+            }}
+          >
+            REGISTER NOW
+          </Button>
         </div>
         <div className="md:hidden">
           {<img src="/edge_design2.png" alt="Small Screen Image" />}
         </div>
       </section>
+      
       {/* <section className="flex flex-col md:flex-row lg:flex-row">
         <div className="flex flex-col justify-center p-7 pl-[2rem] md:pl-[14rem] lg:pl-[18rem]">
           <div className="bg-[url('/about-bg.png')] aspect-[783/1800] absolute bg-cover right-0 z-[-1]"></div>
@@ -174,15 +186,22 @@ const StartupfairandGallery = () => {
           aspectRatio: 496 / 430,
         }}
       ></div>{" "}
-      <div
+      {/* <div
         className="absolute h-[80%] right-0 bg-cover z-[10]"
         style={{
           backgroundImage: "url('/remaining-bg.png')",
           aspectRatio: 750 / 3307,
         }}
-      ></div>
+      ></div> */}
       <div className="bg-[url('/about-bg.png')] width-[10rem] aspect-[783/1800] absolute bg-cover right-0"></div>
       <section className="flex flex-col p-7 px-[2rem] md:px-[15rem] lg:px-[15rem]">
+      <div
+        className="absolute h-[50%] right-0 bg-cover z-[10]"
+        style={{
+          backgroundImage: "url('/remaining-bg.png')",
+          aspectRatio: 750 / 3307,
+        }}
+      ></div>
         <h3
           className={`py-[2rem] tracking-widest text-center text-[#FCBF5F] font-semibold text-[2.4rem] max-[300px]:text-[2.75rem] md:font-bold md:text-[4.75rem] lg:text-[5rem] 2xl:text-[6rem] ${ananda.className}`}
         >
@@ -245,6 +264,18 @@ const StartupfairandGallery = () => {
           >
             REGISTER NOW
           </Button>
+        </div>
+      </section>
+      <section className="flex flex-col p-7 px-[2rem] md:px-[18rem] lg:px-[18rem]">
+        <h3
+          className={`py-[2rem] text-center tracking-widest text-[#FCBF5F] font-semibold text-[2.4rem] max-[300px]:text-[2.75rem] md:font-bold md:text-[4.75rem] lg:text-[5rem] 2xl:text-[6rem] ${ananda.className}`}
+        >
+          Hotel Accomodation{" "}
+        </h3>
+        <div className="flex justify-center m-7 cursor-pointer" >
+          <img className="w-[200px] h-[200px]" onClick={()=>{
+          window.open("https://forms.office.com/r/Ts56sycZPU", "_blank")
+        }} src="qr.png"></img>
         </div>
       </section>
       <section className="flex flex-col p-7 px-[2rem] md:px-[18rem] lg:px-[18rem]">

@@ -66,7 +66,7 @@ const First = () => {
               <h3
                 className={`text-white font-extralight text-[1.5rem] max-[300px]:text-[1rem] md:font-bold md:text-[2.25rem] lg:text-[2.5rem] 2xl:text-[3rem] ${gentium.className}`}
               >
-                <span className="text-[#D9C7AD]">ASCENT TO THE SUMMIT</span> .{" "}
+                <span className="text-[#D9C7AD]">ASCENT TO THE SUMMIT</span>{" "}
               </h3>
             </div>
           </div>

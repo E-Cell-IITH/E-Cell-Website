@@ -26,7 +26,7 @@ export default function Fifth({ esummit = false }) {
               >
                 Quick Links
               </ul>
-              <ul style={{ color: "#FCBF5F" }}>
+              <ul style={{ color: "#FCBF5F",listStyleType:"disc" }}>
                 <li className={style.list}>
                   <Link
                     href="/sponsor"
@@ -38,29 +38,29 @@ export default function Fifth({ esummit = false }) {
                 </li>
                 <li className={style.list}>
                   <Link
-                    href="/Team"
-                    className={style.links}
-                    style={{ color: "#FCBF5F" }}
-                  >
-                    Team
-                  </Link>
-                </li>
-                <li className={style.list}>
-                  <Link
-                    href="caprg/index.html"
-                    className={style.links}
-                    style={{ color: "#FCBF5F" }}
-                  >
-                    CA Programme
-                  </Link>
-                </li>
-                <li className={style.list}>
-                  <Link
                     href="/esummit"
                     className={style.links}
                     style={{ color: "#FCBF5F" }}
                   >
                     E-Summit
+                  </Link>
+                </li>
+                <li className={style.list}>
+                  <Link
+                    href="/startupfair"
+                    className={style.links}
+                    style={{ color: "#FCBF5F" }}
+                  >
+                    Startup Fair
+                  </Link>
+                </li>
+                <li className={style.list}>
+                  <Link
+                    href="/Team"
+                    className={style.links}
+                    style={{ color: "#FCBF5F" }}
+                  >
+                    Team
                   </Link>
                 </li>
                 {/* <li className={style.list}>Our Partners</li> */}
