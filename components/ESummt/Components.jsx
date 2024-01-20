@@ -129,7 +129,7 @@ const AboutandTheme = () => {
             className={`bg-[#C39F3F] text-[1.2rem] text-white font-bold border-[0.5rem] w-[fit-content] px-[1rem] py-[0.5rem] rounded-[0.5rem] ${gentiumnormal.className}}`}
             onClick={() => {
               window.open(
-                "https://unstop.com/competitions/fetching-fortunes-iit-hyderabad-814341",
+                "https://unstop.com/p/e-summit-2024-iit-hyderabad-875539",
                 "_blank"
               );
             }}
