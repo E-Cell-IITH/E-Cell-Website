@@ -35,6 +35,12 @@ const gallery = [
   "esummit/gallery/IMG_2802.jpg",
 ];
 
+const hotel = [
+  "h1.jpeg",
+  "h2.jpeg",
+  "h3.jpeg"
+]
+
 const merchandise = [
   "esummit/merch/s4.png",
   "esummit/merch/s5.png",
@@ -272,6 +278,36 @@ const StartupfairandGallery = () => {
         >
           Hotel Accomodation{" "}
         </h3>
+        <div className="flex-1 h-[50rem]">
+          <center>
+            <Carousel
+              animation="fade"
+              duration={10}
+              autoPlay={true}
+              navButtonsAlwaysInvisible={true}
+              infiniteLoop={true}
+            >
+              {hotel.map((i, index) => {
+                return (
+                  <center key={index}>
+                    <BorderContainer
+                      heightcss="h-[14rem] sm:h-[30rem] lg:h-[32rem] 2xl:h-[36rem]"
+                      widthcss="w-[21rem] sm:w-[45rem] lg:w-[48rem] 2xl:w-[54rem]"
+                      marginleftcss="ml-[14rem] sm:ml-[45rem] lg:ml-[48rem] 2xl:ml-[54rem]"
+                      margintopcss="mt-[21rem] sm:mt-[30rem] lg:mt-[32rem] 2xl:mt-[36rem] "
+                    >
+                      <div className="flex flex-row gap-[2rem] align-center justify-center my-[auto] mx-[30%] relative w-full z-[-12]">
+                        <div className="flex flex-[2] items-center">
+                          <img width={350} src={i} />
+                        </div>
+                      </div>
+                    </BorderContainer>
+                  </center>
+                );
+              })}
+            </Carousel>
+          </center>
+        </div>
         <div className="flex justify-center m-7 cursor-pointer" >
           <img className="w-[200px] h-[200px]" onClick={()=>{
           window.open("https://forms.office.com/r/Ts56sycZPU", "_blank")

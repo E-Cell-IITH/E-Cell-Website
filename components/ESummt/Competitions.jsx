@@ -3,10 +3,10 @@ import localFont from "next/font/local";
 import React from "react";
 import { useEffect, useState } from "react";
 import BorderContainer from "./BorderContainer";
-import { Button } from "@mui/material";
-
+import { Button,Grid } from "@mui/material";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+
 const gentium = Gentium_Plus({ subsets: ["latin"], weight: "700" });
 const gentiumnormal = Gentium_Plus({ subsets: ["latin"], weight: "400" });
 const ananda = localFont({
@@ -234,6 +234,11 @@ const competitions = [
         >
           Competitions{" "}
         </h3>
+        {/* <Grid container direction="column" alignContent="center">
+          <Grid item>
+              <img src="/esummit/bordercontainer/top.svg" />
+          </Grid>
+        </Grid> */}
         <div className="w-full mb-[5%] sm:w-[95%]">
           <Carousel
             showArrows={true}
@@ -293,6 +298,7 @@ const competitions = [
           </div>
         </div>
       </div>
+      <h1 style={{color:"white"}}>hell</h1>
     </section>
   );
 };
