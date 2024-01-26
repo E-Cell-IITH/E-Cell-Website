@@ -104,7 +104,7 @@ export default function Second() {
               <div className={style.heading}>
                 <h1>THINK</h1>
               </div>
-              <div className={style.content}>
+              <div className={style.content} style={{ textAlign: "justify" }}>
                 Successful Entrepreneurs are the ones who are great at thinking
                 out solutions. Through various hackathons and workshop events,
                 we promote the culture of thinking to prepare students for
@@ -134,7 +134,7 @@ export default function Second() {
             <br />
             <br />
             <div className={style.card}>
-              <div className={style.heading}>
+              <div className={style.heading} style={{ textAlign: "justify" }}>
                 <h1>BUILD</h1>
               </div>
               <div className={style.content}>
@@ -170,7 +170,7 @@ export default function Second() {
               <div className={style.heading}>
                 <h1>INSPIRE</h1>
               </div>
-              <div className={style.content}>
+              <div className={style.content} style={{ textAlign: "justify" }}>
                 The key to stick through tough times and not giving up is to be
                 relentlessly inspired to take on challenges. By organizing
                 various talks by successful entrepreneurs, E-Cell IITH aims to
@@ -198,7 +198,14 @@ export default function Second() {
             className={style.whole}
             id="vision"
           >
-            <Grid item xs={10} md={8} className={style.cont} id="#vision">
+            <Grid
+              item
+              xs={10}
+              md={8}
+              className={style.cont}
+              id="#vision"
+              style={{ textAlign: "justify" }}
+            >
               E-Cell, IIT Hyderabad strives to foster and support
               entrepreneurship and innovation both within and outside of the
               institution. After all, grasping the significance of emerging
@@ -226,7 +233,13 @@ export default function Second() {
             </Grid>
             <Grid item xs={2}></Grid>
             <Grid item xs={2}></Grid>
-            <Grid item xs={8} className={style.cont} id={`${style.parvision}`}>
+            <Grid
+              item
+              xs={8}
+              className={style.cont}
+              id={`${style.parvision}`}
+              style={{ textAlign: "justify" }}
+            >
               <span>
                 {" "}
                 E-Cell IIT Hyderabad offers an opportunity to be associated with
@@ -279,7 +292,12 @@ export default function Second() {
             <br />
             <br />
             <Grid item xs={2}></Grid>
-            <Grid item xs={8} className={style.cont}>
+            <Grid
+              item
+              xs={8}
+              className={style.cont}
+              style={{ textAlign: "justify" }}
+            >
               Investment firms and VCs to provide funding to the budding
               in-campus startups.
               <br />
@@ -306,7 +324,12 @@ export default function Second() {
             <br />
             <br />
             <Grid item xs={2}></Grid>
-            <Grid item xs={8} className={style.cont}>
+            <Grid
+              item
+              xs={8}
+              className={style.cont}
+              style={{ textAlign: "justify" }}
+            >
               <br />
               E-Cell IIT Hyderabad wants to make sponsorship more than just
               signage. We want our collaborations to be interactive and, in the
@@ -334,7 +357,13 @@ export default function Second() {
           <br />
           <br />
           <Grid item xs={2}></Grid>
-          <Grid item xs={8} className={style.cont} id={style.cont}>
+          <Grid
+            item
+            xs={8}
+            className={style.cont}
+            id={style.cont}
+            style={{ textAlign: "justify" }}
+          >
             <br />
             For any event to be successful, we require good outreach. As a
             result, the PR & Networking domain collaborates with media companies
