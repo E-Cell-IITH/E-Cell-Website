@@ -10,7 +10,7 @@ import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a lo
 const gentium = Gentium_Plus({ subsets: ["latin"], weight: "700" });
 const gentiumnormal = Gentium_Plus({ subsets: ["latin"], weight: "400" });
 const ananda = localFont({
-  src: "../../public/fonts/ananda-neptouch-2.regular.ttf",
+  src: "../../public/fonts/ananda-neptouch-4.ttf",
 });
 
 const Competitions = () => {

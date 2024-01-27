@@ -5,7 +5,7 @@ import localFont from "next/font/local";
 import { Gentium_Plus } from "next/font/google";
 
 const ananda = localFont({
-  src: "../public/fonts/ananda-neptouch-2.regular.ttf",
+  src: "../public/fonts/ananda-neptouch-4.ttf",
 });
 
 const gentium = Gentium_Plus({ subsets: ["latin"], weight: "700" });
@@ -51,7 +51,7 @@ const First = () => {
             </h2>{" "}
             <div className="">
               <h2 className="text-black text-[5rem] leading-none max-[300px]:text-[3rem] lg:text-[7.25rem] 2xl:text-[10rem]">
-                <div className={ananda.className}>E-SUMMIT 2024</div>
+                <div className={ananda.className}>E-Summit 2024</div>
               </h2>
             </div>
             <div className="mt-20">

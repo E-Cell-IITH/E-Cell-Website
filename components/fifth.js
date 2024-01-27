@@ -7,7 +7,7 @@ import localFont from "next/font/local";
 
 
 const ananda = localFont({
-  src: "../public/fonts/ananda-neptouch-2.regular.ttf",
+  src: "../public/fonts/ananda-neptouch-4.ttf",
 });
 export default function Fifth({ esummit = false }) {
   if (esummit) {

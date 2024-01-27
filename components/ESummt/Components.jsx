@@ -49,7 +49,7 @@ const merchandise = [
 ];
 
 const ananda = localFont({
-  src: "../../public/fonts/ananda-neptouch-2.regular.ttf",
+  src: "../../public/fonts/ananda-neptouch-4.ttf",
 });
 
 //TODO: Change most of the image into svg to improve performace idk if it will work
@@ -81,7 +81,7 @@ const AboutandTheme = () => {
         <h3
           className={`py-[2rem] tracking-widest text-[#FCBF5F] font-semibold text-[3rem] max-[300px]:text-[3rem] md:font-bold md:text-[4.75rem] lg:text-[5rem] 2xl:text-[6rem] text-center ${ananda.className}`}
         >
-          aBOUT US{" "}
+          About Us{" "}
         </h3>
 
         <div
@@ -243,7 +243,7 @@ const StartupfairandGallery = () => {
         <h3
           className={`py-[2rem] text-center tracking-widest text-[#FCBF5F] font-semibold text-[2.4rem] max-[300px]:text-[2.75rem] md:font-bold md:text-[4.75rem] lg:text-[5rem] 2xl:text-[6rem] ${ananda.className}`}
         >
-          fetching fortunes{" "}
+          Fetching fortunes{" "}
         </h3>
         <div
           className={`flex flex-row text-[#FDE1BF] text-[1.5rem] tracking-wide ${gentiumnormal.className} text-center`}
@@ -366,7 +366,7 @@ const StartupfairandGallery = () => {
         <h3
           className={`py-[2rem] tracking-widest text-[#FCBF5F] text-center font-semibold text-[2.4rem] max-[300px]:text-[2.75rem] md:font-bold md:text-[4.75rem] lg:text-[5rem] 2xl:text-[6rem] ${ananda.className}`}
         >
-          GALLERY
+          Gallery
         </h3>
         <div className="flex-1 h-[50rem]">
           <center>
