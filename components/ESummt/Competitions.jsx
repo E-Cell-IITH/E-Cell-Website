@@ -298,7 +298,7 @@ const competitions = [
           </div>
         </div>
       </div>
-      <h1 style={{color:"white"}}>hell</h1>
+      {/* <h1 style={{color:"white"}}>hell</h1> */}
     </section>
   );
 };

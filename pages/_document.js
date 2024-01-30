@@ -2,7 +2,7 @@ import { Html, Head, Main, NextScript } from "next/document";
 
 export default function Document() {
   return (
-    <Html>
+    <Html lang="en">
       <Head>
         <meta
           name="description"
@@ -10,7 +10,7 @@ export default function Document() {
         />
         <meta
           name="keywords"
-          content="Entrepreneurship,startups,startups hyderabad,hyderabad startups,hyderabad startups,startups in hyderabad,ecell iit"
+          content="Entrepreneurship, esummit iith, iith, esummit, e-summit, e-summit, e-summit iit, startups,startups hyderabad,hyderabad startups,hyderabad startups,startups in hyderabad,ecell iit"
         ></meta>
         <meta property="og:url" content="https://www.ecell.iith.ac.in" />
         <meta

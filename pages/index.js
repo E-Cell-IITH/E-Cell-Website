@@ -45,7 +45,7 @@ export default function Home() {
         <></>
       )}
       <Head>
-        <title>Ecell IIT Hyderabad</title>
+        <title>Ecell IIT Hyderabad | THINK BUILD INSPIRE</title>
       </Head>
       <Box
         sx={{

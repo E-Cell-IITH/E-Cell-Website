@@ -27,13 +27,16 @@ const First = () => {
         <div className="flex justify-between">
           <div>
             <div className=" h-[3rem] w-[6.5rem] relative">
+              
+              <Link href="https://ecell.iith.ac.in">
               <Image
                 src="/ecellLogo.png"
                 style={{ filter: "brightness(0%)" }}
                 layout="fill"
                 objectFit="contain"
                 alt="E-cell IIT Hyderabad Logo"
-              />
+                />
+                </Link>
             </div>
           </div>
           <div className=""></div>
@@ -44,15 +47,15 @@ const First = () => {
             className="relative max-[300px]:h-[5rem] h-[rem] lg:h-[7rem]"
           />
           <div className="text-center relative">
-            <h2 className="text-black text-[2rem] max-[300px]:text-[1.5rem] lg:text-[3rem] 2xl:text-[3.25rem]">
+            <h1 className="text-black text-[2rem] max-[300px]:text-[1.5rem] lg:text-[3rem] 2xl:text-[3.25rem]">
               <div className={gentium.className}>
                 E-Cell, IIT Hyderabad&#39;s
               </div>
-            </h2>{" "}
+            </h1>{" "}
             <div className="">
-              <h2 className="text-black text-[5rem] leading-none max-[300px]:text-[3rem] lg:text-[7.25rem] 2xl:text-[10rem]">
+              <h1 className="text-black text-[5rem] leading-none max-[300px]:text-[3rem] lg:text-[7.25rem] 2xl:text-[10rem]">
                 <div className={ananda.className}>E-Summit 2024</div>
-              </h2>
+              </h1>
             </div>
             <div className="mt-20">
               <h2

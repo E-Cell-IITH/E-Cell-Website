@@ -108,7 +108,7 @@ const Sponsor = () => {
   return (
     <div ref={parent}>
       <Head>
-        <title>Sponsors Entrepreneurship Cell IIT Hyderabad</title>
+        <title>Sponsors | Entrepreneurship Cell IIT Hyderabad</title>
       </Head>
       <Navbar heading={"IITH STARTUPS"} desc={false} sponsors={true} />
       <Grid
