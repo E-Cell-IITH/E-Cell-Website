@@ -1,13 +1,12 @@
-
 import CardMedia from "@mui/material/CardMedia";
-import isEmail from 'validator/lib/isEmail'
+import isEmail from "validator/lib/isEmail";
 import React, { useRef, useState } from "react";
 import { Box, Button, Typography } from "@mui/material";
 import Head from "next/head";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import { useRouter } from "next/router";
-import axios from 'axios'
+import axios from "axios";
 import img from "../public/vector.png";
 import {
   TextField,
@@ -19,39 +18,109 @@ import {
 import { Grid } from "@mui/material";
 gsap.registerPlugin(ScrollTrigger);
 
-const Field = ({ label, placeholder, name, value, onChange, isOption, options }) => {
-  let input = <></>
+const Field = ({
+  label,
+  placeholder,
+  name,
+  value,
+  onChange,
+  isOption,
+  options,
+}) => {
+  let input = <></>;
   const [selectOpen, setSelectOpen] = useState(false);
 
   const closeMenu = () => {
     setSelectOpen(false);
-  }
+  };
 
   if (isOption)
-    input = <>
-      <FormControl fullWidth variant="standard">
-        <Select
-          required
-          displayEmpty
-          renderValue={(selected) => {
-            if (selected.length === 0) {
-              return <em>{placeholder}</em>;
-            }
-            return selected
-          }}
-          inputProps={{ 'aria-label': 'Without label' }}
+    input = (
+      <>
+        <FormControl fullWidth variant="standard">
+          <Select
+            required
+            displayEmpty
+            renderValue={(selected) => {
+              if (selected.length === 0) {
+                return <em>{placeholder}</em>;
+              }
+              return selected;
+            }}
+            inputProps={{ "aria-label": "Without label" }}
+            name={name}
+            value={value}
+            onChange={(e) => {
+              setSelectOpen(false);
+              onChange(e);
+            }}
+            open={selectOpen}
+            onOpen={() => {
+              window.addEventListener("scroll", closeMenu);
+              setSelectOpen(true);
+            }}
+            onClose={() => setSelectOpen(false)}
+            sx={{
+              "& .MuiInputBase-input": {
+                color: "#7E94F8",
+                fontFamily: "Montserrat",
+                fontSize: "1.16706rem",
+                fontStyle: "normal",
+                fontWeight: 500,
+                lineHeight: "normal",
+                borderBottom: "2px solid rgba(201, 201, 201, 0.50)",
+              },
+              "& .MuiInputBase-input::placeholder": {
+                color: "#44447A",
+                fontFamily: "Montserrat",
+                fontSize: "0.86881rem",
+                fontStyle: "normal",
+                fontWeight: 500,
+                lineHeight: "normal",
+                opacity: "100%",
+              },
+            }}
+            MenuProps={{
+              PaperProps: {
+                sx: {
+                  "& .MuiMenuItem-root:hover": {
+                    color: "black",
+                  },
+                  "& .Mui-selected": {
+                    color: "black",
+                  },
+                },
+              },
+              disableScrollLock: true,
+            }}
+          >
+            {options.map((el, key) => (
+              <MenuItem
+                sx={{
+                  borderBottom: "1px solid white",
+                  backgroundColor: "#32329B",
+                  color: "white",
+                }}
+                key={key}
+                value={el}
+              >
+                {el}
+              </MenuItem>
+            ))}
+          </Select>
+        </FormControl>
+      </>
+    );
+  else
+    input = (
+      <>
+        <TextField
+          fullWidth
+          placeholder={placeholder}
+          variant="standard"
           name={name}
           value={value}
-          onChange={(e) => {
-            setSelectOpen(false)
-            onChange(e)
-          }}
-          open={selectOpen}
-          onOpen={() => {
-            window.addEventListener('scroll', closeMenu);
-            setSelectOpen(true);
-          }}
-          onClose={() => setSelectOpen(false)}
+          onChange={onChange}
           sx={{
             "& .MuiInputBase-input": {
               color: "#7E94F8",
@@ -72,80 +141,33 @@ const Field = ({ label, placeholder, name, value, onChange, isOption, options })
               opacity: "100%",
             },
           }}
-          MenuProps={{
-            PaperProps: {
-              sx: {
-                "& .MuiMenuItem-root:hover": {
-                  color:"black"
-                },
-                "& .Mui-selected": {
-                  color: "black",
-                },
-              }
-            },
-            disableScrollLock: true,
-          }}
-        >
-          {options.map((el, key) => (
-            <MenuItem sx={{borderBottom:"1px solid white",backgroundColor:"#32329B",color:"white"}} key={key} value={el}>{el}</MenuItem>
-          ))}
-        </Select>
-      </FormControl>
-    </>
-  else
-    input = <>
-      <TextField
-        fullWidth
-        placeholder={placeholder}
-        variant="standard"
-        name={name}
-        value={value}
-        onChange={onChange}
-        sx={{
-          "& .MuiInputBase-input": {
-            color: "#7E94F8",
-            fontFamily: "Montserrat",
-            fontSize: "1.16706rem",
-            fontStyle: "normal",
-            fontWeight: 500,
-            lineHeight: "normal",
-            borderBottom: "2px solid rgba(201, 201, 201, 0.50)",
-          },
-          "& .MuiInputBase-input::placeholder": {
-            color: "#44447A",
-            fontFamily: "Montserrat",
-            fontSize: "0.86881rem",
-            fontStyle: "normal",
-            fontWeight: 500,
-            lineHeight: "normal",
-            opacity: "100%",
-          },
-        }}
-      />
-    </>
+        />
+      </>
+    );
 
-  return <>
-    <Typography
-      sx={{
-        color: "#D3D3D3",
-        fontFamily: "Montserrat",
-        fontSize: "1.29563rem",
-        fontStyle: "normal",
-        fontWeight: 500,
-        lineHeight: "normal",
-        textTransform: "uppercase",
-        marginBottom: 1,
-        marginTop: 3,
-      }}
-    >
-      {label}
-    </Typography>
-    {input}
-  </>
-}
+  return (
+    <>
+      <Typography
+        sx={{
+          color: "#D3D3D3",
+          fontFamily: "Montserrat",
+          fontSize: "1.29563rem",
+          fontStyle: "normal",
+          fontWeight: 500,
+          lineHeight: "normal",
+          textTransform: "uppercase",
+          marginBottom: 1,
+          marginTop: 3,
+        }}
+      >
+        {label}
+      </Typography>
+      {input}
+    </>
+  );
+};
 
 const Register = () => {
-
   const [data, setData] = useState({
     sname: "",
     fname: "",
@@ -159,10 +181,10 @@ const Register = () => {
     ayears: "",
     location: "",
     city: "",
-    about: ""
+    about: "",
   });
   const isDataFilled = () => {
-    return Object.values(data).every(value => value !== "");
+    return Object.values(data).every((value) => value !== "");
   };
 
   function onChange(e) {
@@ -172,28 +194,28 @@ const Register = () => {
 
   function check() {
     if (data.contact.length !== 10) {
-      alert("Enter a valid phone number!")
+      alert("Enter a valid phone number!");
       return false;
     }
 
-    const x = data.contact
+    const x = data.contact;
     for (var i = 0; i < x.length; i++) {
-      if (!(x[i] >= '0' && x[i] <= '9')) {
-        alert("Enter valid phone number!")
+      if (!(x[i] >= "0" && x[i] <= "9")) {
+        alert("Enter valid phone number!");
         return false;
       }
     }
 
-    const y = data.ayears
+    const y = data.ayears;
     for (var i = 0; i < y.length; i++) {
-      if (!(y[i] >= '0' && y[i] <= '9')) {
-        alert("Enter valid active years!")
+      if (!(y[i] >= "0" && y[i] <= "9")) {
+        alert("Enter valid active years!");
         return false;
       }
     }
 
     if (!isEmail(data.semail) && !isEmail(data.email)) {
-      alert("Enter valid email!")
+      alert("Enter valid email!");
       return false;
     }
 
@@ -203,10 +225,14 @@ const Register = () => {
   async function handleSubmit(e) {
     e.preventDefault();
 
-    if (!check()) { return; }
+    if (!check()) {
+      return;
+    }
 
-
-    const fetchData = await axios.post(`https://ecell.kludge.in:3001/input/signup`, data);
+    const fetchData = await axios.post(
+      `https://ecell.kludge.in:3001/input/signup`,
+      data
+    );
 
     setData({
       sname: "",
@@ -221,12 +247,12 @@ const Register = () => {
       ayears: "",
       location: "",
       city: "",
-      about: ""
-    })
+      about: "",
+    });
 
-    const data2 = fetchData.data
+    const data2 = fetchData.data;
     if (data2.alert === true) {
-      alert(data2.message)
+      alert(data2.message);
     }
   }
 
@@ -260,7 +286,7 @@ const Register = () => {
     "Tripura",
     "Uttar Pradesh",
     "Uttarakhand",
-    "West Bengal"
+    "West Bengal",
   ];
 
   const serviceAreas = [
@@ -279,8 +305,8 @@ const Register = () => {
     "Cyber Security",
     "Energy Engg",
     "EdTech",
-    "Others"
-  ]
+    "Others",
+  ];
 
   const fieldData = [
     {
@@ -288,28 +314,28 @@ const Register = () => {
       placeholder: "Type Point of Contact Name",
       name: "pocname",
       value: data.pocname,
-      onChange: onChange
+      onChange: onChange,
     },
     {
       label: "Email ID",
       placeholder: "Type POC Email ID",
       name: "email",
       value: data.email,
-      onChange: onChange
+      onChange: onChange,
     },
     {
       label: "Contact No.",
       placeholder: "Type Contact No.",
       name: "contact",
       value: data.contact,
-      onChange: onChange
+      onChange: onChange,
     },
     {
       label: "Startup Email ID",
       placeholder: "Type Startup Mail ID",
       name: "semail",
       value: data.semail,
-      onChange: onChange
+      onChange: onChange,
     },
     {
       label: "Startup Stage",
@@ -318,14 +344,14 @@ const Register = () => {
       value: data.startup,
       onChange: onChange,
       isOption: true,
-      options: ["Idea", "Prototype", "Launch"]
+      options: ["Idea", "Prototype", "Launch"],
     },
     {
       label: "Industry Focus",
       placeholder: "Mention Startup Industry Focus",
       name: "ifocus",
       value: data.ifocus,
-      onChange: onChange
+      onChange: onChange,
     },
     {
       label: "Service Areas",
@@ -334,14 +360,14 @@ const Register = () => {
       value: data.service,
       onChange: onChange,
       isOption: true,
-      options: serviceAreas
+      options: serviceAreas,
     },
     {
       label: "Active Years",
       placeholder: "Type The Number Active of Years",
       name: "ayears",
       value: data.ayears,
-      onChange: onChange
+      onChange: onChange,
     },
     {
       label: "Location",
@@ -350,16 +376,16 @@ const Register = () => {
       value: data.location,
       onChange: onChange,
       isOption: true,
-      options: states
+      options: states,
     },
     {
       label: "City",
       placeholder: "Mention the city of your startup",
       name: "city",
       value: data.city,
-      onChange: onChange
-    }
-  ]
+      onChange: onChange,
+    },
+  ];
 
   return (
     <div
@@ -375,6 +401,7 @@ const Register = () => {
           name="google-site-verification"
           content="agHaKoDcApHadKU7BhRCOJK0w5SRZtQCG9YxNKZBGvc"
         />
+        <link rel="canonical" href="https://ecell.iith.ac.in/register" />
       </Head>
       <Grid container spacing={8}>
         <Grid

@@ -31,6 +31,7 @@ export default function Home() {
   return <>
     <Head>
       <title>Workshops</title>
+      <link rel="canonical" href="https://ecell.iith.ac.in/workshops" />
     </Head>
 
     <Navbar heading={'WORKSHOPS'} desc={false}/>

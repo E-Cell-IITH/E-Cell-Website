@@ -84,7 +84,7 @@ const Sponsor = () => {
   const cardData = [
     { imageUrl: "https://media.licdn.com/dms/image/D560BAQHuo_U6IWofsA/company-logo_200_200/0/1666986119244?e=2147483647&v=beta&t=u6rZ3WaySVgw3Jghf7Eaz7GHodCUdf_9kVDAbi1NECA", title: "Adiabatic", link:"https://www.adiabatic.co.in/", found:"Darshan Meher, Co-founder" },
 
-    { imageUrl: "https://s3.ap-south-1.amazonaws.com/assets.ynos.in/startup-logos/YNOS419626.jpg", title: "Badhaan", link:"https://www.badhaan.com/index.html", found:"Vishnu Vikyath Gowravajhala, Co-Founder" },
+    { imageUrl: "https://s3.ap-south-1.amazonaws.com/assets.ynos.in/startup-logos/YNOS419626.jpg", title: "Badhaan", link:"https://www.badhaan.com", found:"Vishnu Vikyath Gowravajhala, Co-Founder" },
 
     { imageUrl: "https://naukrirecruiter.naukri.com/profilePic/getpic?pid=1634642681rp5124202_medium4", title: "Frinks AI", found:"Aditya Agrawal, Co-founder", link:"https://www.frinks.ai/" },
 

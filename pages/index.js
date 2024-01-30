@@ -50,6 +50,7 @@ export default function Home() {
           name="google-site-verification"
           content="agHaKoDcApHadKU7BhRCOJK0w5SRZtQCG9YxNKZBGvc"
         />
+        <link rel="canonical" href="https://ecell.iith.ac.in" />
       </Head>
       <Box
         sx={{

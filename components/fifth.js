@@ -56,7 +56,7 @@ export default function Fifth({ esummit = false }) {
                 </li>
                 <li className={style.list}>
                   <Link
-                    href="/Team"
+                    href="/team"
                     className={style.links}
                     style={{ color: "#FCBF5F" }}
                   >
@@ -86,7 +86,7 @@ export default function Fifth({ esummit = false }) {
                 <div className={style.images}>
                   <div className={style.icon}>
                     <Link
-                      href="https://www.instagram.com/ecell_iith/?hl=en"
+                      href="https://www.instagram.com/ecell_iith"
                       target="_blank"
                       rel="noreferrer noopener"
                     >
@@ -237,12 +237,12 @@ export default function Fifth({ esummit = false }) {
                   </Link>
                 </li>
                 <li className={style.list}>
-                  <Link href="/Team" className={style.links}>
+                  <Link href="/team" className={style.links}>
                     Team
                   </Link>
                 </li>
                 <li className={style.list}>
-                  <Link href="caprg/index.html" className={style.links}>
+                  <Link href="/caprg" className={style.links}>
                     CA Programme
                   </Link>
                 </li>
@@ -272,7 +272,7 @@ export default function Fifth({ esummit = false }) {
                 <div className={style.images}>
                   <div className={style.icon}>
                     <Link
-                      href="https://www.instagram.com/ecell_iith/?hl=en"
+                      href="https://www.instagram.com/ecell_iith"
                       target="_blank"
                       rel="noreferrer noopener"
                     >

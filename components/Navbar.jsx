@@ -1,6 +1,6 @@
-import * as React from 'react';
-import Link from 'next/link';
-import { useRef } from 'react';
+import * as React from "react";
+import Link from "next/link";
+import { useRef } from "react";
 
 const Navbar = () => {
   const [checked, setChecked] = React.useState(false);
@@ -29,15 +29,14 @@ const Navbar = () => {
               className="navigation__link"
               onClick={() => {
                 navRef.current.checked = false;
-              }}>
-              
-                Home
-              
+              }}
+            >
+              Home
             </Link>
           </li>
           <li className="navigation__item">
             <a
-              href="caprg/index.html"
+              href="caprg"
               className="navigation__link"
               onClick={() => {
                 navRef.current.checked = false;
@@ -48,14 +47,13 @@ const Navbar = () => {
           </li>
           <li className="navigation__item">
             <Link
-              href="/Team"
+              href="/team"
               className="navigation__link"
               onClick={() => {
                 navRef.current.checked = false;
-              }}>
-              
-                Team
-              
+              }}
+            >
+              Team
             </Link>
           </li>
           <li className="navigation__item">
@@ -64,9 +62,10 @@ const Navbar = () => {
               className="navigation__link"
               onClick={() => {
                 navRef.current.checked = false;
-              }}>
-
-              {' '}Partners
+              }}
+            >
+              {" "}
+              Partners
             </Link>
           </li>
           <li className="navigation__item">
@@ -75,9 +74,10 @@ const Navbar = () => {
               className="navigation__link"
               onClick={() => {
                 navRef.current.checked = false;
-              }}>
-
-              {' '}Workshops
+              }}
+            >
+              {" "}
+              Workshops
             </Link>
           </li>
           <li className="navigation__item">
@@ -86,10 +86,9 @@ const Navbar = () => {
               className="navigation__link"
               onClick={() => {
                 navRef.current.checked = false;
-              }}>
-              
-                IITH Startups
-              
+              }}
+            >
+              IITH Startups
             </Link>
           </li>
           <li className="navigation__item">
@@ -98,10 +97,9 @@ const Navbar = () => {
               className="navigation__link"
               onClick={() => {
                 navRef.current.checked = false;
-              }}>
-              
-                Startup Fair
-              
+              }}
+            >
+              Startup Fair
             </Link>
           </li>
           <li className="navigation__item">
@@ -110,10 +108,9 @@ const Navbar = () => {
               className="navigation__link"
               onClick={() => {
                 navRef.current.checked = false;
-              }}>
-              
-                E Summit
-              
+              }}
+            >
+              E Summit
             </Link>
           </li>
         </ul>
