@@ -1,77 +1,77 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  
-  <!-- Homepage -->
-  <url>
-    <loc>https://ecell.iith.ac.in/</loc>
-    <lastmod>2024-01-30</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>1.0</priority>
-  </url>
-  
-<!-- CA Program Page -->
-  <url>
-    <loc>https://ecell.iith.ac.in/caprg</loc>
-    <lastmod>2024-01-30</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
 
-  <!-- About Us Page -->
-  <url>
-    <loc>https://ecell.iith.ac.in/about</loc>
-    <lastmod>2024-01-30</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  
-  <!-- Team Page -->
-  <url>
-    <loc>https://ecell.iith.ac.in/team</loc>
-    <lastmod>2024-01-30</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
+    <!-- Homepage -->
+    <url>
+        <loc>https://ecell.iith.ac.in/</loc>
+        <lastmod>2024-01-30</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <!-- CA Program Page -->
+    <url>
+        <loc>https://ecell.iith.ac.in/caprg</loc>
+        <lastmod>2024-01-30</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <!-- About Us Page -->
+    <url>
+        <loc>https://ecell.iith.ac.in/about</loc>
+        <lastmod>2024-01-30</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <!-- Team Page -->
+    <url>
+        <loc>https://ecell.iith.ac.in/team</loc>
+        <lastmod>2024-01-30</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
 
     <!-- Partner Page -->
-  <url>
-    <loc>https://ecell.iith.ac.in/sponsor</loc>
-    <lastmod>2024-01-30</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.8</priority>
-  </url>
+    <url>
+        <loc>https://ecell.iith.ac.in/sponsor</loc>
+        <lastmod>2024-01-30</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+    </url>
 
 
     <!-- Startups Page -->
-  <url>
-    <loc>https://ecell.iith.ac.in/startups</loc>
-    <lastmod>2024-01-30</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
+    <url>
+        <loc>https://ecell.iith.ac.in/startups</loc>
+        <lastmod>2024-01-30</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
 
     <!-- Registration Page -->
-  <url>
-    <loc>https://ecell.iith.ac.in/register</loc>
-    <lastmod>2024-01-30</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
+    <url>
+        <loc>https://ecell.iith.ac.in/register</loc>
+        <lastmod>2024-01-30</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
 
     <!-- Startup Fair Page -->
-  <url>
-    <loc>https://ecell.iith.ac.in/startupfair</loc>
-    <lastmod>2024-01-30</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  
+    <url>
+        <loc>https://ecell.iith.ac.in/startupfair</loc>
+        <lastmod>2024-01-30</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
     <!-- ESummit Page -->
-  <url>
-    <loc>https://ecell.iith.ac.in/esummit</loc>
-    <lastmod>2024-01-30</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>1.0</priority>
-  </url>
-  
+    <url>
+        <loc>https://ecell.iith.ac.in/esummit</loc>
+        <lastmod>2024-01-30</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>1.0</priority>
+    </url>
+
 </urlset>

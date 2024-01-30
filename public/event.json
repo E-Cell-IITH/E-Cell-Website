@@ -1,0 +1,20 @@
+{
+    "@context": "http://schema.org",
+    "@type": "Event",
+    "name": "E-Summit 2024",
+    "startDate": "2024-02-01",
+    "endDate": "2024-02-04",
+    "location": {
+        "@type": "Place",
+        "name": "IIT Hyderabad",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "E-Cell Office C-714, Academic block C, IIT Hyderabad",
+            "addressLocality": "Hyderabad",
+            "postalCode": "502285",
+            "addressRegion": "Telangana",
+            "addressCountry": "India"
+        }
+    },
+    "description": "Join E-Summit 2024 at Entrepreneurship Cell, IIT Hyderabad. From February 1st to February 4th, experience an exhilarating journey featuring a Food Fair, inspiring talks by prominent speakers, the exciting Golden Bird event, and much more. E-Summit is not just an event; it's a convergence of innovation, entrepreneurship, and the spirit of achievement. Be part of this transformative experience, where ideas come to life, and aspirations take flight. Unleash your creativity, engage with thought leaders, and make your mark at E-Summit 2024!"
+}

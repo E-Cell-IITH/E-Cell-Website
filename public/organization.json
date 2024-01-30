@@ -1,0 +1,16 @@
+{
+    "@context": "http://schema.org",
+    "@type": "Organization",
+    "name": "Entrepreneurship Cell IIT Hyderabad",
+    "url": "https://ecell.iith.ac.in",
+    "logo": "https://res.cloudinary.com/dwsverefw/image/upload/v1665696044/ecell/Ecell_logo_ddhvme.png",
+    "description": "Join Entrepreneurship Cell, IIT Hyderabad, a hub for innovation, passion, and achievement. Located at E-Cell Office C-714, Academic block C, IIT Hyderabad, 502285, Telangana, India.",
+    "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "E-Cell Office C-714, Academic block C, IIT Hyderabad",
+        "addressLocality": "Hyderabad",
+        "postalCode": "502285",
+        "addressRegion": "Telangana",
+        "addressCountry": "India"
+    }
+}
