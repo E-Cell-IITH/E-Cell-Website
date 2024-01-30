@@ -46,6 +46,10 @@ export default function Home() {
       )}
       <Head>
         <title>Ecell IIT Hyderabad | THINK BUILD INSPIRE</title>
+        <meta
+          name="google-site-verification"
+          content="agHaKoDcApHadKU7BhRCOJK0w5SRZtQCG9YxNKZBGvc"
+        />
       </Head>
       <Box
         sx={{

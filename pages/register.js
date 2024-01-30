@@ -362,97 +362,174 @@ const Register = () => {
   ]
 
   return (
-    <div style={{
-      background:
-        "linear-gradient(0deg, rgba(10, 10, 12, 0.70) 1.78%, rgba(2, 2, 68, 0.70) 100%), #000", padding: "10vw"
-    }}>
+    <div
+      style={{
+        background:
+          "linear-gradient(0deg, rgba(10, 10, 12, 0.70) 1.78%, rgba(2, 2, 68, 0.70) 100%), #000",
+        padding: "10vw",
+      }}
+    >
       <Head>
         <title>E-Cell Register</title>
+        <meta
+          name="google-site-verification"
+          content="agHaKoDcApHadKU7BhRCOJK0w5SRZtQCG9YxNKZBGvc"
+        />
       </Head>
-          <Grid container spacing={8}>
-            <Grid item xl={6} lg={6} md={12} sm={12} xs={12} marginBottom={{ xl: 0, lg: 0, md: "2rem", sm: "2rem", xs: "2rem" }} alignItems="center">
-              <Grid container direction={"row-reverse"} height="100%">
-                <Grid item xl={12} lg={12} md={9} sm={9} xs={9}>
-                  <Typography
-                    textAlign="left"
-                    fontFamily={"Montserrat"}
-                    fontSize={{ xl: "3.52256rem", lg: "3.52256rem", md: "2.8rem", sm: "2.52256rem", xs: "1.9rem" }}
-                    fontStyle={"normal"}
-                    fontWeight={700}
-                    lineHeight={"normal"}
-                    textTransform={"uppercase"}
-                    sx={{
-                      background:
-                        "linear-gradient(91deg, #3880E7 0.4%, #62D7D8 99.34%)",
-                      backgroundClip: "text",
-                      "WebkitBackgroundClip": "text",
-                      "WebkitTextFillColor": "transparent",
-                    }}
-                  >
-                    Tell us about your StartuP...
-                  </Typography>
-                </Grid>
-                <Grid item xl={12} lg={12} md={3} sm={3} xs={3}>
-                  <Box
-                    style={{display:"flex", justifyContent:"center", alignItems:"center", height:"100%"}}
-                  >
-                    <CardMedia
-                      sx={{ width: { xl: "20rem", lg: "18.24944rem", md: "4rem", sm: "4rem", xs: "2.5rem" }, height: { xl: 28.67769 / 18.24944 * 20 + "rem", lg: "28.67769rem", md: 28.67769 / 18.24944 * 4 + "rem", sm: 28.67769 / 18.24944 * 4 + "rem", xs: 28.67769 / 18.24944 * 2.5 + "rem" } }}
-                      image="/vector.png"
-                    />
-                  </Box>
-                </Grid>
-              </Grid>
+      <Grid container spacing={8}>
+        <Grid
+          item
+          xl={6}
+          lg={6}
+          md={12}
+          sm={12}
+          xs={12}
+          marginBottom={{ xl: 0, lg: 0, md: "2rem", sm: "2rem", xs: "2rem" }}
+          alignItems="center"
+        >
+          <Grid container direction={"row-reverse"} height="100%">
+            <Grid item xl={12} lg={12} md={9} sm={9} xs={9}>
+              <Typography
+                textAlign="left"
+                fontFamily={"Montserrat"}
+                fontSize={{
+                  xl: "3.52256rem",
+                  lg: "3.52256rem",
+                  md: "2.8rem",
+                  sm: "2.52256rem",
+                  xs: "1.9rem",
+                }}
+                fontStyle={"normal"}
+                fontWeight={700}
+                lineHeight={"normal"}
+                textTransform={"uppercase"}
+                sx={{
+                  background:
+                    "linear-gradient(91deg, #3880E7 0.4%, #62D7D8 99.34%)",
+                  backgroundClip: "text",
+                  WebkitBackgroundClip: "text",
+                  WebkitTextFillColor: "transparent",
+                }}
+              >
+                Tell us about your StartuP...
+              </Typography>
             </Grid>
-            <Grid item xl={6} lg={6} md={12} sm={12} xs={12}>
-              <Grid container textAlign="left">
-                <Grid item xs={12}>
-                  <Field label="startup name" placeholder="Type startup name" name="sname" value={data.sname} onChange={onChange} />
-                </Grid>
-                <Grid item xs={12}>
-                  <Field label="Founder/CEO name" placeholder="Type founder/CEO name" name="fname" value={data.fname} onChange={onChange} />
-                </Grid>
-                <Grid container columnSpacing={4}>
-                  {fieldData.map((el, key) => (
-                    <Grid item xl={6} lg={6} md={12} sm={12} xs={12} alignContent="flex-start" key={key}>
-                      <Field {...el} />
-                    </Grid>
-                  ))}
-                </Grid>
-                <Grid item xs={12}>
-                  <Field label="About" name="about" placeholder="Tell us about yourself" value={data.about} onChange={onChange} />
-                </Grid>
-                <span style={{ cursor: isDataFilled() ? 'pointer' : 'not-allowed', paddingTop: "2.5vw", margin: 0, height: "fit-content" }}>
-                  <Button
-                    disabled={!isDataFilled()}
-                    sx={{
-                      borderRadius: "0.5rem",
-                      backgroundImage: isDataFilled() ?
-                        "linear-gradient(90deg, #3880E7 0.58%, #62D7D8 99.89%) !important" : "linear-gradient(90deg, #637897 0.58%, #668D8E 99.89%) !important",
-                      textTransform: "capitalize",
-                      width: "fit-content",
-                    }}
-                    onClick={handleSubmit}
-                  >
-                    <Typography
-                      color="white"
-                      textAlign="center"
-                      fontFamily={"Montserrat"}
-                      fontSize={"1rem"}
-                      fontStyle={"normal"}
-                      fontWeight={500}
-                      lineHeight={"normal"}
-                      padding={1}
-                    >
-                      REGISTER NOW
-                    </Typography>
-                  </Button>
-                </span>
-              </Grid>
+            <Grid item xl={12} lg={12} md={3} sm={3} xs={3}>
+              <Box
+                style={{
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  height: "100%",
+                }}
+              >
+                <CardMedia
+                  sx={{
+                    width: {
+                      xl: "20rem",
+                      lg: "18.24944rem",
+                      md: "4rem",
+                      sm: "4rem",
+                      xs: "2.5rem",
+                    },
+                    height: {
+                      xl: (28.67769 / 18.24944) * 20 + "rem",
+                      lg: "28.67769rem",
+                      md: (28.67769 / 18.24944) * 4 + "rem",
+                      sm: (28.67769 / 18.24944) * 4 + "rem",
+                      xs: (28.67769 / 18.24944) * 2.5 + "rem",
+                    },
+                  }}
+                  image="/vector.png"
+                />
+              </Box>
             </Grid>
           </Grid>
-        </div>
-      // </div>
+        </Grid>
+        <Grid item xl={6} lg={6} md={12} sm={12} xs={12}>
+          <Grid container textAlign="left">
+            <Grid item xs={12}>
+              <Field
+                label="startup name"
+                placeholder="Type startup name"
+                name="sname"
+                value={data.sname}
+                onChange={onChange}
+              />
+            </Grid>
+            <Grid item xs={12}>
+              <Field
+                label="Founder/CEO name"
+                placeholder="Type founder/CEO name"
+                name="fname"
+                value={data.fname}
+                onChange={onChange}
+              />
+            </Grid>
+            <Grid container columnSpacing={4}>
+              {fieldData.map((el, key) => (
+                <Grid
+                  item
+                  xl={6}
+                  lg={6}
+                  md={12}
+                  sm={12}
+                  xs={12}
+                  alignContent="flex-start"
+                  key={key}
+                >
+                  <Field {...el} />
+                </Grid>
+              ))}
+            </Grid>
+            <Grid item xs={12}>
+              <Field
+                label="About"
+                name="about"
+                placeholder="Tell us about yourself"
+                value={data.about}
+                onChange={onChange}
+              />
+            </Grid>
+            <span
+              style={{
+                cursor: isDataFilled() ? "pointer" : "not-allowed",
+                paddingTop: "2.5vw",
+                margin: 0,
+                height: "fit-content",
+              }}
+            >
+              <Button
+                disabled={!isDataFilled()}
+                sx={{
+                  borderRadius: "0.5rem",
+                  backgroundImage: isDataFilled()
+                    ? "linear-gradient(90deg, #3880E7 0.58%, #62D7D8 99.89%) !important"
+                    : "linear-gradient(90deg, #637897 0.58%, #668D8E 99.89%) !important",
+                  textTransform: "capitalize",
+                  width: "fit-content",
+                }}
+                onClick={handleSubmit}
+              >
+                <Typography
+                  color="white"
+                  textAlign="center"
+                  fontFamily={"Montserrat"}
+                  fontSize={"1rem"}
+                  fontStyle={"normal"}
+                  fontWeight={500}
+                  lineHeight={"normal"}
+                  padding={1}
+                >
+                  REGISTER NOW
+                </Typography>
+              </Button>
+            </span>
+          </Grid>
+        </Grid>
+      </Grid>
+    </div>
+    // </div>
     // </div>
   );
 };

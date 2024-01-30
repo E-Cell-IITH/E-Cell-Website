@@ -109,6 +109,10 @@ const Sponsor = () => {
     <div ref={parent}>
       <Head>
         <title>Sponsors | Entrepreneurship Cell IIT Hyderabad</title>
+        <meta
+          name="google-site-verification"
+          content="agHaKoDcApHadKU7BhRCOJK0w5SRZtQCG9YxNKZBGvc"
+        />
       </Head>
       <Navbar heading={"IITH STARTUPS"} desc={false} sponsors={true} />
       <Grid
@@ -116,29 +120,29 @@ const Sponsor = () => {
         columnSpacing={5}
         rowSpacing={10}
         sx={{
-            display: 'flex',
-            justifyContent: 'center',
-            alignItems: 'center',
-            marginBottom: 10,
-            padding: 3,
-            '@media (max-width: 780px)': {
-                marginBottom: 0,
-                marginTop: 80,
-                paddingTop:10
-              },
-              '@media (max-width: 1260px)': {
-                marginBottom: 0,
-                marginTop: 5,
-              },
-              '@media (max-width: 1060px)': {
-                marginBottom: 0,
-                marginTop: 10,
-              },
-              '@media (max-width: 960px)': {
-                marginBottom: 0,
-                marginTop: 15,
-              },
-          }}
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          marginBottom: 10,
+          padding: 3,
+          "@media (max-width: 780px)": {
+            marginBottom: 0,
+            marginTop: 80,
+            paddingTop: 10,
+          },
+          "@media (max-width: 1260px)": {
+            marginBottom: 0,
+            marginTop: 5,
+          },
+          "@media (max-width: 1060px)": {
+            marginBottom: 0,
+            marginTop: 10,
+          },
+          "@media (max-width: 960px)": {
+            marginBottom: 0,
+            marginTop: 15,
+          },
+        }}
       >
         {cardData.map((card, index) => (
           <Grid
@@ -148,27 +152,32 @@ const Sponsor = () => {
             sm={6}
             md={4}
             sx={{
-                display: 'flex',
-                flexDirection: 'column',
-                justifyContent: 'center',
-                alignItems: 'center',
-                minWidth:4,
-              }}
+              display: "flex",
+              flexDirection: "column",
+              justifyContent: "center",
+              alignItems: "center",
+              minWidth: 4,
+            }}
           >
             <a href={card.link}>
-                <Card>
-                  <CardMedia
-                    component="img"
-                    style={{ minWidth: '100%', height: 'auto', minHeight:'350px', borderBottom:"solid 2px black", maxWidth:"350px" }}
-                    image={card.imageUrl}
-                    alt={card.title}
-
-                  />
-                  <CardContent>
-                    <Typography variant="h5">{card.title}</Typography>
-                    <Typography variant="h10">{card.found}</Typography>
-                  </CardContent>
-                </Card>
+              <Card>
+                <CardMedia
+                  component="img"
+                  style={{
+                    minWidth: "100%",
+                    height: "auto",
+                    minHeight: "350px",
+                    borderBottom: "solid 2px black",
+                    maxWidth: "350px",
+                  }}
+                  image={card.imageUrl}
+                  alt={card.title}
+                />
+                <CardContent>
+                  <Typography variant="h5">{card.title}</Typography>
+                  <Typography variant="h10">{card.found}</Typography>
+                </CardContent>
+              </Card>
             </a>
           </Grid>
         ))}

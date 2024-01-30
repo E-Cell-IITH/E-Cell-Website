@@ -28,10 +28,17 @@ function MyApp({ Component, pageProps }) {
 
               gtag('config', 'G-6VNW4WYT0W');
             </script> */}
+            <meta
+              name="google-site-verification"
+              content="agHaKoDcApHadKU7BhRCOJK0w5SRZtQCG9YxNKZBGvc"
+            />
           </Head>
-          <Script strategy="afterInteractive" src="https://www.googletagmanager.com/gtag/js?id=G-6VNW4WYT0W"/>
           <Script
-            id='google-analytics'
+            strategy="afterInteractive"
+            src="https://www.googletagmanager.com/gtag/js?id=G-6VNW4WYT0W"
+          />
+          <Script
+            id="google-analytics"
             strategy="afterInteractive"
             dangerouslySetInnerHTML={{
               __html: `
@@ -41,11 +48,11 @@ function MyApp({ Component, pageProps }) {
 
                 gtag('config', 'G-6VNW4WYT0W');
               `,
-              }}
+            }}
           />
           <Navbar />
           <Component {...pageProps} />
-          <Fifth esummit={router.pathname === '/esummit'}/>
+          <Fifth esummit={router.pathname === "/esummit"} />
         </ThemeProvider>
       </React.Fragment>
     </>

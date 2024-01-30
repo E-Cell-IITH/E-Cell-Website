@@ -182,6 +182,10 @@ function Team() {
     <div ref={parent}>
       <Head>
         <title>Team Entrepreneurship Cell IIT Hyderabad</title>
+        <meta
+          name="google-site-verification"
+          content="agHaKoDcApHadKU7BhRCOJK0w5SRZtQCG9YxNKZBGvc"
+        />
       </Head>
       <Navbar heading="Team E-Cell" desc={false} />
       <Typography
@@ -226,7 +230,7 @@ function Team() {
           color: "white",
           fontFamily: "Montserrat",
           mt: 6,
-          mb:5,
+          mb: 5,
           fontSize: {
             xs: "2rem",
             md: "3rem",
@@ -256,20 +260,19 @@ function Team() {
           },
         }}
         spacing={0}
-        rowSpacing={{xs:1, sm:3, md:7}}
+        rowSpacing={{ xs: 1, sm: 3, md: 7 }}
         className={style2.gap}
-        >
+      >
         {heads.map((domainInfo) => (
           <Grid
-          container
-          item
-          key={domainInfo}
-          lg={4}
-          sm={12}
-          sx={{ 
-            mt: "1rem" ,
-            
-          }}
+            container
+            item
+            key={domainInfo}
+            lg={4}
+            sm={12}
+            sx={{
+              mt: "1rem",
+            }}
           >
             <Grid item xs={12} justifyContent="space-between">
               {/* Domain Title */}
@@ -295,18 +298,18 @@ function Team() {
               </div>
               {/* Cards of heads */}
               <div>
-                <Grid container item spacing={5} justifyContent="center"  >
+                <Grid container item spacing={5} justifyContent="center">
                   {domainInfo.heads.map((head, index) => (
                     <React.Fragment key={head}>
                       <Grid
                         item
                         xs={12}
                         md={6}
-                        sx={{ marginTop: { md: "2rem", xs: "1.325rem", } }}
+                        sx={{ marginTop: { md: "2rem", xs: "1.325rem" } }}
                       >
                         <Card
                           className="card"
-                          isFlip = {true}
+                          isFlip={true}
                           linkedIN={head.linkedIN}
                           email={head.email}
                           name={head.name}

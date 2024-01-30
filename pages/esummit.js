@@ -10,11 +10,17 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>E-Summit 2024 | Innovation, Entrepreneurship, and Inspiration</title>
+        <title>
+          E-Summit 2024 | Innovation, Entrepreneurship, and Inspiration
+        </title>
         <meta
           property="og:description"
           name="description"
           content="E-Summit 2024: Feb 1-4 at IIT Hyderabad by Entrepreneurship Cell. Innovation, talks, Golden Bird event & more. Unleash creativity!"
+        />
+        <meta
+          name="google-site-verification"
+          content="agHaKoDcApHadKU7BhRCOJK0w5SRZtQCG9YxNKZBGvc"
         />
       </Head>
       <div className="bg-dark">

@@ -48,8 +48,16 @@ export default function Document() {
           href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap"
           rel="stylesheet"
         />
-        <script type="application/ld+json" src="/organization.json" async></script>
+        <script
+          type="application/ld+json"
+          src="/organization.json"
+          async
+        ></script>
         <script type="application/ld+json" src="/event.json" async></script>
+        <meta
+          name="google-site-verification"
+          content="agHaKoDcApHadKU7BhRCOJK0w5SRZtQCG9YxNKZBGvc"
+        />
       </Head>
       <body>
         <Main />
