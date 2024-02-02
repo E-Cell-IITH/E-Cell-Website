@@ -58,7 +58,7 @@ const Navbar = () => {
           </li>
           <li className="navigation__item">
             <Link
-              href="/sponsor23-24"
+              href="/sponsor22-23"
               className="navigation__link"
               onClick={() => {
                 navRef.current.checked = false;

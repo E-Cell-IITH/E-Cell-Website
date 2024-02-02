@@ -89,7 +89,7 @@ const Sponsor = () => {
           content="agHaKoDcApHadKU7BhRCOJK0w5SRZtQCG9YxNKZBGvc"
         />
       </Head>
-      <Navbar heading={"COLLABORATIONS"} desc={false} sponsors={true} />
+      <Navbar heading={"COLLABORATIONS"} subheading={"2022-2023"} desc={false} sponsors={true} />
       <Grid
         container
         display="flex"

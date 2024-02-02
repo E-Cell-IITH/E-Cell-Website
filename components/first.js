@@ -12,6 +12,7 @@ gsap.registerPlugin(ScrollTrigger);
 export default function Navbar({
   desc = true,
   heading = "ENTREPRENEURSHIP CELL",
+  subheading = "",
   sponsors = false,
 }) {
   const headingRef = useRef();
@@ -114,7 +115,10 @@ export default function Navbar({
       <br />
       <br />
       <div className={style.title} ref={headingRef}>
-        {heading}
+        <>
+          {heading} <br />
+          {subheading}
+        </>
         <br />
       </div>
       {!sponsors ? (
