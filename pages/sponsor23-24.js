@@ -89,7 +89,12 @@ const Sponsor = () => {
           content="agHaKoDcApHadKU7BhRCOJK0w5SRZtQCG9YxNKZBGvc"
         />
       </Head>
-      <Navbar heading={`COLLABORATIONS`} subheading={"2023-2024"} desc={false} sponsors={true} />
+      <Navbar
+        heading={`COLLABORATIONS`}
+        subheading={"2023-2024"}
+        desc={false}
+        sponsors={true}
+      />
       <Grid
         container
         display="flex"
@@ -423,7 +428,7 @@ const Sponsor = () => {
         }}
       >
         <div className="text-center uppercase border-b-2  border-white md:w-[25rem] w-[15rem] mx-auto text-white text-xl md:text-3xl pb-2 mb-10  pt-10">
-        Consulting Parnter
+          Consulting Parnter
         </div>
 
         <Card
@@ -442,7 +447,10 @@ const Sponsor = () => {
             },
           }}
         >
-          <CardActionArea href="https://www.capgemini.com/in-en/" target="_blank">
+          <CardActionArea
+            href="https://www.capgemini.com/in-en/"
+            target="_blank"
+          >
             <CardMedia
               sx={{
                 width: 450,
@@ -481,7 +489,7 @@ const Sponsor = () => {
         }}
       >
         <div className="text-center uppercase border-b-2  border-white md:w-[25rem] w-[15rem] mx-auto text-white text-xl md:text-3xl pb-2 mb-10  pt-10">
-        Sporting Partner
+          Sporting Partner
         </div>
 
         <Card
@@ -539,7 +547,7 @@ const Sponsor = () => {
         }}
       >
         <div className="text-center uppercase border-b-2  border-white md:w-[25rem] w-[15rem] mx-auto text-white text-xl md:text-3xl pb-2 mb-10  pt-10">
-        Lodging Partner
+          Lodging Partner
         </div>
 
         <Card
@@ -597,7 +605,7 @@ const Sponsor = () => {
         }}
       >
         <div className="text-center uppercase border-b-2  border-white md:w-[25rem] w-[15rem] mx-auto text-white text-xl md:text-3xl pb-2 mb-10  pt-10">
-        Moving Partner
+          Moving Partner
         </div>
 
         <Card
@@ -636,7 +644,6 @@ const Sponsor = () => {
           </CardActionArea>
         </Card>
       </Grid>
-    
       <div className="text-center text-white text-2xl md:text-3xl md:w-[20rem] mx-auto mt-[15rem] w-[15rem] sm:mt-[15rem] lg:-mt-[5rem] my-10 p-2 uppercase  border-b-2 border-white ">
         Event Partners
       </div>
@@ -713,51 +720,18 @@ const Sponsor = () => {
               },
             }}
           >
-            <CardActionArea href="https://groww.in/" target="_blank">
+            <CardActionArea href="https://funzippy.com/" target="_blank">
               <CardMedia
-                sx={{ width: 220, height: 60, marginTop: 12, marginLeft: 2.5 }}
-                image="/groww.png"
-                title="groww"
-              />
-            </CardActionArea>
-          </Card>
-        </Grid>
-        <Grid
-          item
-          xs={7}
-          sm={9}
-          lg={3}
-          sx={{
-            spacing: 2,
-            display: "flex",
-            flexDirection: "column",
-            justifyContent: "center",
-            alignItems: "center",
-          }}
-        >
-          <Card
-            sx={{
-              minWidth: 250,
-              maxWidth: 250,
-              minHeight: 250,
-              maxHeight: 250,
-              transition: "transform .2s ease-in",
-              "&:hover": {
-                transform: "scale(1.1)",
-              },
-            }}
-          >
-            <CardActionArea href="https://www.stockgro.club/" target="_blank">
-              <CardMedia
-                sx={{ height: 225, marginTop: 3.6 }}
-                image="/sttock_gro.png"
-                title="sttock gro"
+                sx={{ width: 220, height: 100, marginTop: 8, marginLeft: 2.5 }}
+                image="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTkCZesRXWT73G-RogzO8DltRS9WHMvqI9QcCFiTZNNA&s"
+                title="Funzippy"
               />
             </CardActionArea>
           </Card>
         </Grid>
       </Grid>
-      <div className="text-center text-white text-3xl py-16"></div>
+      <div className="text-center text-white text-3xl py-16"></div>\{" "}
+
       <Grid
         container
         display="flex"
