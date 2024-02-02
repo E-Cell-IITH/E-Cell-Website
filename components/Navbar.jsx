@@ -58,14 +58,26 @@ const Navbar = () => {
           </li>
           <li className="navigation__item">
             <Link
-              href="/sponsor"
+              href="/sponsor23-24"
               className="navigation__link"
               onClick={() => {
                 navRef.current.checked = false;
               }}
             >
               {" "}
-              Partners
+              Partners 22-23
+            </Link>
+          </li>
+          <li className="navigation__item">
+            <Link
+              href="/sponsor23-24"
+              className="navigation__link"
+              onClick={() => {
+                navRef.current.checked = false;
+              }}
+            >
+              {" "}
+              Partners 23-24
             </Link>
           </li>
           <li className="navigation__item">
