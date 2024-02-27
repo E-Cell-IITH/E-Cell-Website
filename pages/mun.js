@@ -228,7 +228,7 @@ const Register = () => {
         return true;
     }
 
-    async function handleSubmit(e) {
+    async function handleSubmit_after_payment(e) {
         e.preventDefault();
 
         if (!check()) {
@@ -255,6 +255,118 @@ const Register = () => {
         if (data2.alert === true) {
             alert(data2.message);
         }
+    }
+
+    async function test(){
+        try{
+            const response = await axios.get("http://localhost:8000/payment/orders");
+            console.log(response.data.id)
+        }
+        catch(e){
+            console.log(e)
+        }
+    }
+
+    function loadScript(src) {
+        return new Promise((resolve) => {
+            const script = document.createElement("script");
+            script.src = src;
+            script.onload = () => {
+                resolve(true);
+            };
+            script.onerror = () => {
+                resolve(false);
+            };
+            document.body.appendChild(script);
+        });
+    }
+
+    async function displayRazorpay() {
+        const res = await loadScript(
+            "https://checkout.razorpay.com/v1/checkout.js"
+        );
+
+        if (!res) {
+            alert("Razorpay SDK failed to load. Are you online?");
+            return;
+        }
+
+        // creating a new order
+        const result = await axios.get("http://localhost:8000/payment/orders");
+
+        if (!result) {
+            alert("Server error. Are you online?");
+            return;
+        }
+
+        // Getting the order details back
+        const { amount, id, currency } = result.data;
+
+        const options = {
+            key: "rzp_test_IKGepOXI2JN3Ro", // Enter the Key ID generated from the Dashboard
+            amount: amount.toString(),
+            currency: currency,
+            name: "Maharshi",
+            description: "Test Transaction",
+            order_id: id,
+            logo : "https://res.cloudinary.com/dn8obuhkt/image/upload/v1701162533/PHOTO-2023-11-28-12-53-29_nb7rel.jpg",
+            handler: async function (response) {
+                const data = {
+                    order_id : id,
+                    razorpayOrderId: response.razorpay_order_id,
+                    razorpayPaymentId: response.razorpay_payment_id,
+                    razorpaySignature: response.razorpay_signature,
+                };
+
+                const result = await axios.post("http://localhost:8000/payment/success", data);
+
+                alert(result.data.msg);
+            },
+            prefill: {
+                name: "Maharshi Kadeval",
+                email: "maharshikadeval@gmail.com",
+                contact: "8980977822",
+            },
+            notes: {
+                address: "Maharshi Kadeval's Corporate Office",
+            },
+            theme: {
+                color: "#61dafb",
+            },
+            config: { // change this to change the display of the payment window
+                display: {
+                  blocks: {
+                    banks: {
+                      name: 'Pay via UPI',
+                      instruments: [
+                        {
+                          method: 'upi'
+                        },
+                        {
+                            method: 'netbanking'
+                        }
+                      ],
+                    },
+                  },
+                  sequence: ['block.banks'],
+                  preferences: {
+                    show_default_blocks: true,
+                  },
+                },
+              },
+        };
+
+        const paymentObject = new window.Razorpay(options);
+        paymentObject.open();
+    }   
+
+    async function handleRazorPay(){
+        displayRazorpay();
+    }
+
+    async function handleSubmit(){
+        handleRazorPay();
+        handleSubmit_after_payment();
     }
 
     const fieldData = [
@@ -398,7 +510,7 @@ const Register = () => {
                                 textTransform: "capitalize",
                                 width: "fit-content",
                             }}
-                            onClick={handleSubmit}
+                            onClick={handleRazorPay}
                         >
                             <Typography
                                 color="white"

@@ -21,6 +21,7 @@
     "loaders.css": "^0.1.2",
     "mui": "0.0.1",
     "next": "^14.0.4",
+    "razorpay": "^2.9.2",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-loader-spinner": "^5.3.4",

@@ -9,3 +9,9 @@ class data(BaseModel):
     experience: int
     committee: str
     country: str
+
+class razorPay_success(BaseModel):
+    order_id:str
+    razorpayPaymentId : str
+    razorpayOrderId : str
+    razorpaySignature : str
