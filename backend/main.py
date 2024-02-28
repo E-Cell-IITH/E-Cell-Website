@@ -2,13 +2,13 @@ from dotenv import load_dotenv
 import os
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from model.model import data,razorPay_success
+from model.model import Data, RazorPaySuccess
 import razorpay
 
 app = FastAPI()
 load_dotenv()
 
-origins = ["http://localhost:3000"]
+origins = ["http://localhost:3000", "http://127.0.0.1:3000"]
 
 app.add_middleware(
     CORSMiddleware,
@@ -23,7 +23,7 @@ def get():
     return {"hello":"world"}
 
 @app.post("/mun")
-def handleFormSubmit(d: data):
+def handleFormSubmit(d: Data):
     print(d)
     return {"Done"}
 
@@ -35,17 +35,22 @@ def create_order():
     return payment
 
 @app.post('/payment/success')
-def handle_success(res: razorPay_success):
+def handle_success(res: RazorPaySuccess):
     order_id = res.order_id
     razor_payment_id = res.razorpayPaymentId
     razor_payment_signature = res.razorpaySignature
 
     client = razorpay.Client(auth=(os.getenv('KEY_ID'), os.getenv('KEY_SECRET')))
 
-    client.utility.verify_payment_signature({
+    isVerified = client.utility.verify_payment_signature({
         'razorpay_order_id': order_id,
         'razorpay_payment_id': razor_payment_id,
         'razorpay_signature': razor_payment_signature
     })
 
-    return {"msg":"success"}
+    print(res.data)
+    if isVerified:
+        
+        return {"msg":"success"}
+    
+    return {"msg":"failed"}

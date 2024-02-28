@@ -311,14 +311,15 @@ const Register = () => {
             order_id: id,
             logo : "https://res.cloudinary.com/dn8obuhkt/image/upload/v1701162533/PHOTO-2023-11-28-12-53-29_nb7rel.jpg",
             handler: async function (response) {
-                const data = {
+                const razor_data = {
                     order_id : id,
                     razorpayOrderId: response.razorpay_order_id,
                     razorpayPaymentId: response.razorpay_payment_id,
                     razorpaySignature: response.razorpay_signature,
+                    data: data
                 };
 
-                const result = await axios.post("http://localhost:8000/payment/success", data);
+                const result = await axios.post("http://localhost:8000/payment/success", razor_data);
 
                 alert(result.data.msg);
             },
@@ -340,7 +341,7 @@ const Register = () => {
                       name: 'Pay via UPI',
                       instruments: [
                         {
-                          method: 'upi'
+                            method: 'upi'
                         },
                         {
                             method: 'netbanking'
@@ -350,10 +351,10 @@ const Register = () => {
                   },
                   sequence: ['block.banks'],
                   preferences: {
-                    show_default_blocks: true,
+                    show_default_blocks: false,
                   },
                 },
-              },
+            },
         };
 
         const paymentObject = new window.Razorpay(options);
