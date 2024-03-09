@@ -58,14 +58,14 @@ const Navbar = () => {
           </li>
           <li className="navigation__item">
             <Link
-              href="/sponsor22-23"
+              href="/mun"
               className="navigation__link"
               onClick={() => {
                 navRef.current.checked = false;
               }}
             >
               {" "}
-              Partners 22-23
+              MUN
             </Link>
           </li>
           <li className="navigation__item">
@@ -77,7 +77,7 @@ const Navbar = () => {
               }}
             >
               {" "}
-              Partners 23-24
+              Partners
             </Link>
           </li>
           <li className="navigation__item">
