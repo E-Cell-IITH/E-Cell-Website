@@ -98,7 +98,7 @@ function StartupFair() {
             IITH MUN
           </Typography>
 
-          <Link href="https://forms.gle/Mz8VKPHqezLJmkfA7" target="_blank">
+          <Link href="https://forms.gle/49yWPPLd2YVa5L6U9" target="_blank">
             <Button
               sx={{
                 padding: padding,
