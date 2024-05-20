@@ -12,7 +12,7 @@ const ananda = localFont({
 export default function Fifth({ esummit = false }) {
   if (esummit) {
     return (
-      <footer style={{ "background": "#042630"}}>
+      <footer style={{ "background": "#042630" }}>
         <div
           className={`text-[#FCBF5F] py-9 
           "bg-[#042630]"
@@ -26,7 +26,7 @@ export default function Fifth({ esummit = false }) {
               >
                 Quick Links
               </ul>
-              <ul style={{ color: "#FCBF5F",listStyleType:"disc" }}>
+              <ul style={{ color: "#FCBF5F", listStyleType: "disc" }}>
                 <li className={style.list}>
                   <Link
                     href="/sponsor"
@@ -70,13 +70,15 @@ export default function Fifth({ esummit = false }) {
             <Grid item xs={12} sm={12} md={3} sx={{ pt: 5 }}>
               <div className={style.final}>
                 <div className={style.image}>
-                  <Image
-                    className={style.ecell}
-                    src="/esummit/gallery/ecell-logo.png"
-                    alt="Ecell IITH"
-                    width={190}
-                    height={70}
-                  />
+                  <Link href="/">
+                    <Image
+                      className={style.ecell}
+                      src="/esummit/gallery/ecell-logo.png"
+                      alt="Ecell IITH"
+                      width={190}
+                      height={70}
+                    />
+                  </Link>
                 </div>
                 <br />
                 <div className={style.think} style={{ color: "#FCBF5F" }}>
@@ -180,9 +182,15 @@ export default function Fifth({ esummit = false }) {
                     alt="location"
                   />
                 </div>
-                <div className={style.list1} id={style.list1}>
-                  E-Cell Office C-714, Academic block C, IIT Hyderabad
-                </div>
+                <Link
+                  href="https://maps.google.com?q=IIT+Hyderabad+Academic+Block+C"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                >
+                  <div className={style.list1} id={style.list1}>
+                    E-Cell Office C-714, Academic block C, IIT Hyderabad
+                  </div>
+                </Link>
               </div>
               <div className={style.log}>
                 <div className={style.logo}>
@@ -193,9 +201,15 @@ export default function Fifth({ esummit = false }) {
                     alt="dot"
                   />
                 </div>
-                <div className={style.list1} id={style.list2}>
-                  ecell@iith.ac.in
-                </div>
+                <Link
+                  href="mailto:ecell@iith.ac.in"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                >
+                  <div className={style.list1} id={style.list2}>
+                    ecell@iith.ac.in
+                  </div>
+                </Link>
               </div>
               <div className={style.log}>
                 <div className={style.logo}>
@@ -207,7 +221,27 @@ export default function Fifth({ esummit = false }) {
                   />
                 </div>
                 <div className={style.list1} id={style.list3}>
-                  (+91)90900 72712 <br/> (+91)72359 15379
+                  <Link
+                    href="tel:+918530896541"
+                    target="_blank"
+                    rel="noreferrer noopener"
+                  >
+                    <span> (+91)85308 96541 </span><br />
+                  </Link>
+                  <Link
+                    href="tel:+919653847128"
+                    target="_blank"
+                    rel="noreferrer noopener"
+                  >
+                    <span> (+91)96538 47128 </span><br />
+                  </Link>
+                  <Link
+                    href="tel:+918074020784"
+                    target="_blank"
+                    rel="noreferrer noopener"
+                  >
+                    <span> (+91)80740 20784 </span>
+                  </Link>
                 </div>
               </div>
             </Grid>
@@ -220,11 +254,10 @@ export default function Fifth({ esummit = false }) {
     return (
       <footer>
         <div
-          className={`text-white py-9 ${
-            esummit
-              ? "bg-[#042630]"
-              : "bg-gradient-to-b from-[#281332] to-transparent"
-          } `}
+          className={`text-white py-9 ${esummit
+            ? "bg-[#042630]"
+            : "bg-gradient-to-b from-[#281332] to-transparent"
+            } `}
         >
           <Grid container>
             <Grid item sm={1}></Grid>
@@ -258,13 +291,15 @@ export default function Fifth({ esummit = false }) {
             <Grid item xs={12} sm={12} md={3} sx={{ pt: 5 }}>
               <div className={style.final}>
                 <div className={style.image}>
-                  <Image
-                    className={style.ecell}
-                    src="https://res.cloudinary.com/dwsverefw/image/upload/v1665696044/ecell/ecell_v6xqu3.png"
-                    alt="Ecell IITH"
-                    width={190}
-                    height={70}
-                  />
+                  <Link href="/">
+                    <Image
+                      className={style.ecell}
+                      src="https://res.cloudinary.com/dwsverefw/image/upload/v1665696044/ecell/ecell_v6xqu3.png"
+                      alt="Ecell IITH"
+                      width={190}
+                      height={70}
+                    />
+                  </Link>
                 </div>
                 <br />
                 <div className={style.think}>THINK | BUILD | INSPIRE</div>
@@ -368,9 +403,15 @@ export default function Fifth({ esummit = false }) {
                     alt="location"
                   />
                 </div>
-                <div className={style.list1} id={style.list1}>
-                  E-Cell Office C-714, Academic block C, IIT Hyderabad
-                </div>
+                <Link
+                  href="https://maps.google.com?q=IIT+Hyderabad+Academic+Block+C"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                >
+                  <div className={style.list1} id={style.list1}>
+                    E-Cell Office C-714, Academic block C, IIT Hyderabad
+                  </div>
+                </Link>
               </div>
               <div className={style.log}>
                 <div className={style.logo}>
@@ -381,9 +422,15 @@ export default function Fifth({ esummit = false }) {
                     alt="dot"
                   />
                 </div>
-                <div className={style.list1} id={style.list2}>
-                  ecell@iith.ac.in
-                </div>
+                <Link
+                  href="mailto:ecell@iith.ac.in"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                >
+                  <div className={style.list1} id={style.list2}>
+                    ecell@iith.ac.in
+                  </div>
+                </Link>
               </div>
               <div className={style.log}>
                 <div className={style.logo}>
@@ -395,7 +442,27 @@ export default function Fifth({ esummit = false }) {
                   />
                 </div>
                 <div className={style.list1} id={style.list3}>
-                  (+91)90900 72712 (+91)72359 15379
+                  <Link
+                    href="tel:+918530896541"
+                    target="_blank"
+                    rel="noreferrer noopener"
+                  >
+                    <span> (+91)85308 96541 </span><br />
+                  </Link>
+                  <Link
+                    href="tel:+919653847128"
+                    target="_blank"
+                    rel="noreferrer noopener"
+                  >
+                    <span> (+91)96538 47128 </span><br />
+                  </Link>
+                  <Link
+                    href="tel:+918074020784"
+                    target="_blank"
+                    rel="noreferrer noopener"
+                  >
+                    <span> (+91)80740 20784 </span>
+                  </Link>
                 </div>
               </div>
             </Grid>

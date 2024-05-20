@@ -134,7 +134,7 @@ export default function Second() {
             <br />
             <br />
             <div className={style.card}>
-              <div className={style.heading} style={{ textAlign: "justify" }}>
+              <div className={style.heading} >
                 <h1>BUILD</h1>
               </div>
               <div className={style.content}>
