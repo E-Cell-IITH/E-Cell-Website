@@ -961,61 +961,12 @@ const Sponsor = () => {
             alignItems: "center",
           }}
         >
-          <div className="flex flex-col mt-20 mx-auto justify-center items-center">
-            <p
-              className="text-white  text-[.9rem] md:text-[1.5rem] uppercase py-2 border-b-2 mt-10 border-white mb-6
-    "
-            >
-              Internship Parnter{" "}
-            </p>
-            <Card
-              sx={{
-                minWidth: 250,
-                maxWidth: 250,
-                minHeight: 250,
-                maxHeight: 250,
-                transition: "transform .2s ease-in",
-                "&:hover": {
-                  transform: "scale(1.1)",
-                },
-              }}
-            >
-              <CardActionArea href="https://makeintern.com/" target="_blank">
-                <CardMedia
-                  sx={{
-                    width: 220,
-                    height: 130,
-                    marginTop: 7,
-                    marginLeft: 2,
-                  }}
-                  image="https://www.makeintern.com/images/makeintern_l_logo.png"
-                  title="Make Intern"
-                />
-              </CardActionArea>
-            </Card>
-          </div>
-        </Grid>
-        <Grid
-          item
-          xs={7}
-          sm={9}
-          lg={5}
-          sx={{
-            spacing: 2,
-            display: "flex",
-            flexDirection: "column",
-            justifyContent: "center",
-            alignItems: "center",
-          }}
-        >
           <div className="flex flex-col mx-auto mt-20 justify-center items-center">
             <p
-              className="text-white  uppercase text-xl md:text-[1.5rem] py-2 border-b-2 mt-10 border-white mb-6
-    "
+              className="text-white  uppercase text-xl md:text-[1.5rem] py-2 border-b-2 mt-10 border-white mb-6"
             >
               Training Partner{" "}
             </p>
-
             <Card
               sx={{
                 minWidth: 250,
@@ -1047,6 +998,99 @@ const Sponsor = () => {
           </div>
         </Grid>
       </Grid>
+      <div className="text-center uppercase border-b-2 mt-20 border-white md:w-[25rem] w-[15rem] mx-auto text-white text-xl md:text-3xl pb-2 mb-10  pt-12">
+        Internship Partner{" "}
+      </div>
+      <Grid
+        container
+        display="flex"
+        flexDirection="row"
+        alignItems="center"
+        justifyContent="center"
+        rowSpacing={2}
+        gap={0}
+      >
+        <Grid
+          item
+          xs={7}
+          sm={9}
+          lg={5}
+          sx={{
+            spacing: 2,
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
+          <Card
+            sx={{
+              minWidth: 250,
+              maxWidth: 250,
+              minHeight: 250,
+              maxHeight: 250,
+              transition: "transform .2s ease-in",
+              "&:hover": {
+                transform: "scale(1.1)",
+              },
+            }}
+          >
+            <CardActionArea href="https://makeintern.com/" target="_blank">
+              <CardMedia
+                sx={{
+                  width: 220,
+                  height: 130,
+                  marginTop: 7,
+                  marginLeft: 2,
+                }}
+                image="https://www.makeintern.com/images/makeintern_l_logo.png"
+                title="Make Intern"
+              />
+            </CardActionArea>
+          </Card>
+        </Grid>
+        <Grid
+          item
+          xs={7}
+          sm={9}
+          lg={5}
+          sx={{
+            spacing: 2,
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
+          <Card
+            sx={{
+              minWidth: 250,
+              maxWidth: 250,
+              minHeight: 250,
+              maxHeight: 250,
+              transition: "transform .2s ease-in",
+              "&:hover": {
+                transform: "scale(1.1)",
+              },
+            }}
+          >
+            <CardActionArea href="https://skilldunia.co.in/" target="_blank">
+              <CardMedia
+                sx={{
+                  width: 180,
+                  height: 180,
+                  marginTop: 3,
+                  marginLeft: 4,
+                  borderRadius: 3,
+                }}
+                image="https://res.cloudinary.com/dqyxqfvnv/image/upload/v1717323500/sponsers/c4acp4og8brjymynuu1i.png"
+                title="skilldunia"
+              />
+            </CardActionArea>
+          </Card>
+        </Grid>
+      </Grid>
+
       <div className="text-center uppercase border-b-2 mt-20 border-white md:w-[25rem] w-[15rem] mx-auto text-white text-xl md:text-3xl pb-2 mb-10  pt-12">
         Workshop Partner{" "}
       </div>
@@ -1219,7 +1263,7 @@ const Sponsor = () => {
             </CardActionArea>
           </Card>
         </Grid>
-        
+
       </Grid>
       <Grid
         container
