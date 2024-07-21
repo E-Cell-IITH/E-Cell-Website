@@ -14,7 +14,7 @@ const GuideCard = ({ title, description, image, latitude, longitude, width }) =>
             display: 'flex',
             alignItems: 'center',
             height: { xs: 68, md: 136 },
-            width: { xs: width ? width : 200, md: width? 440 : 380 },
+            width: { xs: width ? width : 200, md: width ? 440 : 380 },
             borderRadius: '7px',
             overflow: 'hidden',
             backgroundColor: '#3A3C43',
@@ -34,7 +34,7 @@ const GuideCard = ({ title, description, image, latitude, longitude, width }) =>
                 marginRight: '12px',
                 marginTop: { xs: '8px', md: '16px' },
                 marginBottom: { xs: '8px', md: '16px' },
-                height: { xs: 'calc(100% - 16px)', md: 'calc(100% - 32px)' } ,
+                height: { xs: 'calc(100% - 16px)', md: 'calc(100% - 32px)' },
                 ml: "12px",
                 display: 'flex',
                 flexDirection: 'column',
@@ -48,7 +48,7 @@ const GuideCard = ({ title, description, image, latitude, longitude, width }) =>
                         {description}
                     </Typography>
                 </Box>
-                <button onClick={openGoogleMap} class="bg-[#45474D] text-white font-montserrat button-googleMap font-normal py-0.5 px-2 rounded outline-none focus:outline-none hover:bg-[#56585D] transition-colors">
+                <button onClick={openGoogleMap} className="bg-[#45474D] text-white font-montserrat button-googleMap font-normal py-0.5 px-2 rounded outline-none focus:outline-none hover:bg-[#56585D] transition-colors">
                     Show in Google Maps
                 </button>
             </Box>
