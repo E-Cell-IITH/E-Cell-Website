@@ -75,7 +75,7 @@ const guide = () => {
       case 'foodCourt':
         return new LocationInfo("Food Court", "Domino’s, Roll Zone and Barrista Cafe.", '/guide/foodCourt.png', 17.5967638, 78.1260432);
       case 'academyBlocks':
-        return new LocationInfo("Academic Blocks", "Department Buildings.", '/guide/acads.png', 17.5952962, 78.1234951, 200 );
+        return new LocationInfo("Academic Blocks", "Department Buildings.", '/guide/acads.png', 17.5952962, 78.1234951, 200);
       case 'hospital':
         return new LocationInfo("Hospital", "Hospital and Medical.", '/guide/hospital.png', 17.5883809, 78.1233478);
       case 'tip':
@@ -2092,10 +2092,9 @@ const guide = () => {
       <Box
         sx={{
           background: 'linear-gradient(0deg, #281332 0%, #1F2C5B 100%)',
-          height: 80,
+          height: 100,
         }}
       >
-
       </Box>
     </>
   );
