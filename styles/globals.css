@@ -228,3 +228,7 @@ body {
   -o-animation-play-state: paused;
   animation-play-state: paused;
 }
+
+.full-width-svg {
+    width: 100vw;
+}

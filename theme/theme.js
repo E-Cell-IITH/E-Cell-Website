@@ -11,6 +11,13 @@ const theme = createTheme({
       xxl: 1700,
     },
   },
+  MuiDivider: {
+    styleOverrides: {
+      root: {
+        borderColor: 'white !important', 
+      },
+    },
+  },
 });
 
 export default theme;
