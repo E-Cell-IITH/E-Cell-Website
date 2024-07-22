@@ -25,7 +25,7 @@ function useOutsideAlerter(ref, setIsVisible) {
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
-  }, [ref, setIsVisible]); 
+  }, [ref, setIsVisible]);
 }
 
 
@@ -107,7 +107,10 @@ const Guide = () => {
     console.log(data)
     if (data) {
       setLocationInfo(data);
-      setDialogPosition({ x: event.clientX, y: event.clientY });
+      setDialogPosition({
+        x: event.clientX + window.scrollX, 
+        y: event.clientY + window.scrollY
+      });
       setIsVisible(true);
     }
   };
@@ -125,7 +128,7 @@ const Guide = () => {
           <div ref={wrapperRef} style={{
             position: 'absolute',
             left: `${dialogPosition.x - 190 / 2}px`,
-            top: `${dialogPosition.y - 20}px`,
+            top: `${dialogPosition.y - 10}px`,
             transform: 'translateY(-100%)',
             zIndex: 1000
           }}>
