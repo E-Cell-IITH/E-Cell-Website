@@ -20,6 +20,7 @@ body {
 .navigation__checkbox {
   display: none;
 }
+
 .navigation__button {
   background-color: #000;
   height: 5rem;
@@ -33,6 +34,7 @@ body {
   text-align: center;
   cursor: pointer;
 }
+
 .navigation__background {
   height: 4rem;
   width: 4rem;
@@ -45,6 +47,7 @@ body {
   z-index: 1000;
   transition: transform 0.8s cubic-bezier(0.83, 0, 0.17, 1);
 }
+
 .navigation__nav {
   height: 100vh;
   width: 0%;
@@ -56,6 +59,7 @@ body {
   opacity: 0;
   transition: all 0.8s cubic-bezier(0.83, 0, 0.17, 1);
 }
+
 .navigation__list {
   width: 100%;
   position: absolute;
@@ -65,9 +69,11 @@ body {
   list-style: none;
   text-align: center;
 }
+
 .navigation__item {
   padding: 1rem;
 }
+
 .navigation__link:link,
 .navigation__link:visited {
   display: inline-block;
@@ -90,6 +96,7 @@ body {
 
   transition: all 0.4s;
 }
+
 .navigation__link:hover,
 .navigation__link:active {
   background-position: 100%;
@@ -100,22 +107,27 @@ body {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
 .navigation__link span {
   display: inline-block;
   margin-right: 1.5rem;
 }
-.navigation__checkbox:checked ~ .navigation__background {
+
+.navigation__checkbox:checked~.navigation__background {
   transform: scale(80);
 }
-.navigation__checkbox:checked ~ .navigation__nav {
+
+.navigation__checkbox:checked~.navigation__nav {
   opacity: 1;
   width: 100%;
   left: 0;
 }
+
 .navigation__icon {
   position: relative;
   margin-top: 2.6rem;
 }
+
 .navigation__icon,
 .navigation__icon::after,
 .navigation__icon::before {
@@ -124,6 +136,7 @@ body {
   background-color: white;
   display: inline-block;
 }
+
 .navigation__icon::after,
 .navigation__icon::before {
   content: "";
@@ -131,23 +144,30 @@ body {
   left: 0;
   transition: all 0.2s;
 }
+
 .navigation__icon::before {
   top: -0.6rem;
 }
+
 .navigation__icon::after {
   top: 0.6rem;
 }
-.navigation__checkbox:checked + .navigation__button .navigation__icon {
+
+.navigation__checkbox:checked+.navigation__button .navigation__icon {
   background-color: transparent;
 }
-.navigation__checkbox:checked + .navigation__button .navigation__icon::after {
+
+.navigation__checkbox:checked+.navigation__button .navigation__icon::after {
   top: 0;
   transform: rotate(135deg);
 }
-.navigation__checkbox:checked + .navigation__button .navigation__icon::before {
+
+.navigation__checkbox:checked+.navigation__button .navigation__icon::before {
   top: 0;
   transform: rotate(-135deg);
-} /*# sourceMappingURL=main.css.map */
+}
+
+/*# sourceMappingURL=main.css.map */
 
 @media screen and (max-width: 600px) {
   .navigation__button {
@@ -156,6 +176,7 @@ body {
     top: 2rem;
     right: 2rem;
   }
+
   .navigation__background {
     height: 2rem;
     width: 2rem;
@@ -163,21 +184,26 @@ body {
     right: 2.5rem;
     position: fixed;
   }
+
   .navigation__icon,
   .navigation__icon::after,
   .navigation__icon::before {
     width: 1.8rem;
   }
+
   .navigation__icon {
     position: relative;
     margin-top: 1.5rem;
   }
+
   .navigation__icon::before {
     top: -0.4rem;
   }
+
   .navigation__icon::after {
     top: 0.4rem;
   }
+
   .navigation__link:link,
   .navigation__link:visited {
     font-size: 1.5rem;
@@ -198,13 +224,16 @@ body {
 .desc-enter {
   opacity: 0;
 }
+
 .desc-enter-active {
   opacity: 1;
   transition: opacity 200ms;
 }
+
 .desc-exit {
   opacity: 1;
 }
+
 .desc-active {
   opacity: 0;
   transition: opacity 200ms;
@@ -214,6 +243,7 @@ body {
   from {
     transform: translateX(0%);
   }
+
   to {
     transform: translateX(-50%);
   }
@@ -222,9 +252,65 @@ body {
 .infinite {
   animation: infiniteScroll 20s infinite linear;
 }
+
 .infinite:hover {
   -webkit-animation-play-state: paused;
   -moz-animation-play-state: paused;
   -o-animation-play-state: paused;
   animation-play-state: paused;
+}
+
+.full-width-svg {
+  width: 100vw;
+}
+
+
+
+.button-googleMap {
+  align-items: end;
+  border: #757577 solid 0.48px;
+  width: 100%;
+  font-size: 12px;
+}
+
+.svg-button {
+  position: relative;
+  display: inline-block;
+  border: none;  
+  background: none; 
+  padding: 0;
+  cursor: pointer;
+  outline: none; 
+}
+
+.svg-button .svg-default {
+  display: block; 
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.svg-button .svg-hover {
+  display: none; 
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.svg-button:hover .svg-default {
+  display: none;
+}
+
+.svg-button:hover .svg-hover {
+  display: block;
+}
+
+
+
+
+@media screen and (max-width: 1024px) {
+  .button-googleMap {
+    border: #757577 solid 0.48px;
+    font-size: 6px;
+  }
 }
