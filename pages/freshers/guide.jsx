@@ -76,7 +76,7 @@ const PreOrientation = () => {
             </Box>}
 
 
-            {isLoaded2 && <Box mt={{ xs: '400px', md: '160px' }}>
+            {isLoaded2 && <Box mt={{ xs: '220px', md: '160px' }}>
                 <div className='min-h-screen flex flex-col items-center'>
                     {/* <object type="image/svg+xml" data={imageSrc} className="full-width-svg" aria-label="Campus Guide">
 
