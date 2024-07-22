@@ -47,7 +47,7 @@ const PreOrientation = () => {
             />
 
             <div className={style.preDescr} ref={preDescr}>
-                Hi guys, Welcome to IITH Family! To help you settle we've prepared a comprehensive guide with all the essential information you'll need! <br />
+                {"Hi guys, Welcome to IITH Family! To help you settle we've prepared a comprehensive guide with all the essential information you'll need!"} <br />
             </div>
 
             <Box
