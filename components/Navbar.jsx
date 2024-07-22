@@ -58,6 +58,17 @@ const Navbar = () => {
           </li>
           <li className="navigation__item">
             <Link
+              href="/freshers/guide"
+              className="navigation__link"
+              onClick={() => {
+                navRef.current.checked = false;
+              }}
+            >
+              Freshers Guide
+            </Link>
+          </li>
+          <li className="navigation__item">
+            <Link
               href="/mun"
               className="navigation__link"
               onClick={() => {
