@@ -1,6 +1,7 @@
 import { Box, Divider, Stack, Typography } from '@mui/material';
 import React, { useState, useEffect, useRef } from 'react';
 import GuideCard from '../components/guideCard';
+import Head from "next/head";
 
 class LocationInfo {
   constructor(title, description, image, latitude, longitude, width) {
@@ -108,7 +109,7 @@ const Guide = () => {
     if (data) {
       setLocationInfo(data);
       setDialogPosition({
-        x: event.clientX + window.scrollX, 
+        x: event.clientX + window.scrollX,
         y: event.clientY + window.scrollY
       });
       setIsVisible(true);
@@ -117,6 +118,14 @@ const Guide = () => {
 
   return (
     <>
+      <Head>
+        <title>Freshers Guide | Entrepreneurship Cell IIT Hyderabad</title>
+        <meta
+          name="google-site-verification"
+          content="agHaKoDcApHadKU7BhRCOJK0w5SRZtQCG9YxNKZBGvc"
+        />
+      </Head>
+
       <Box sx={{
         minHeight: '100vh',
         display: 'flex',

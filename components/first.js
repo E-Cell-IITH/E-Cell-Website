@@ -14,6 +14,7 @@ export default function Navbar({
   heading = "ENTREPRENEURSHIP CELL",
   subheading = "",
   sponsors = false,
+  preOrientation = false,
 }) {
   const headingRef = useRef();
   const iith = useRef();
@@ -114,24 +115,32 @@ export default function Navbar({
       <br />
       <br />
       <br />
-      <div className={style.title} ref={headingRef}>
-        <>
+      {preOrientation ?
+        (<div className={`${style.title} ${style.titlePreOr}`} ref={headingRef}>
           {heading} <br />
-          {subheading}
-        </>
-        <br />
-      </div>
-      {!sponsors ? (
+          <div className={style.title} ref={headingRef} >
+            {subheading}
+          </div>
+          <br />
+        </div>)
+        : (!preOrientation && <div className={style.title} ref={headingRef}>
+          <>
+            {heading} <br />
+            {subheading}
+          </>
+          <br />
+        </div>)}
+      {!sponsors ? !preOrientation ? (
         <div className={style.iit} ref={iith}>
           IIT HYDERABAD <br />
         </div>
-      ) : (
+      ) : ("") : (
         ""
       )}
       <br />
-      <div className={style.think} id="tagline">
+      {!preOrientation && <div className={style.think} id="tagline">
         <span>THINK |</span> <span>BUILD |</span> <span>INSPIRE</span>
-      </div>
+      </div>}
       <div className={style.box} id="smLinks">
         <a
           className={style.pic}
