@@ -5,7 +5,7 @@ import Box from "@mui/material/Box";
 import { useLayoutEffect, useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
-import { useMediaQuery } from "@mui/material";
+import { Typography, useMediaQuery } from "@mui/material";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -18,6 +18,7 @@ export default function Navbar({
 }) {
   const headingRef = useRef();
   const iith = useRef();
+  const preDescr = useRef();
   const parent = useRef();
 
   const matchesMd = useMediaQuery("(min-width:900px)");
@@ -40,7 +41,7 @@ export default function Navbar({
         }
       );
 
-      if (desc) {
+      if (preOrientation) {
         gsap.fromTo(
           "#about",
           { autoAlpha: 0.2, y: 10, scale: 1 },
@@ -137,11 +138,13 @@ export default function Navbar({
       ) : ("") : (
         ""
       )}
+
       <br />
       {!preOrientation && <div className={style.think} id="tagline">
         <span>THINK |</span> <span>BUILD |</span> <span>INSPIRE</span>
       </div>}
-      <div className={style.box} id="smLinks">
+
+      {/* <div className={style.box} id="smLinks">
         <a
           className={style.pic}
           href="https://www.instagram.com/ecell_iith/?hl=en"
@@ -218,7 +221,7 @@ export default function Navbar({
           />
         </a>
         <br />
-      </div>
+      </div> */}
       {desc && (
         <div className={style.container2} id="about">
           <div className={style.about}>ABOUT US</div> <br />
