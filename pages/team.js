@@ -9,6 +9,7 @@ import parallax from "../styles/team.module.css";
 import Head from "next/head";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+import Image from 'next/image';
 gsap.registerPlugin(ScrollTrigger);
 
 const heads = [
@@ -16,11 +17,11 @@ const heads = [
     domain: "Operations",
     heads: [
       {
-        name: "Asit Desai",
+        name: "Dasari Ram Vasanth",
         imgUrl:
-          "https://raw.githubusercontent.com/abhinavydv/Ecell-Test/master/Operations/Asit%20Desai/asit.jpeg",
-        email: "ch21btech11012@iith.ac.in",
-        linkedIN: "https://www.linkedin.com/in/asit-desai-02493a248/",
+          "/team24/dasari_ram.png",
+        email: "ms22btech11011@iith.ac.in",
+        linkedIN: "http://www.linkedin.com/in/ram-vasanth-dasari-2852b4265",
       },
     ],
   },
@@ -28,11 +29,10 @@ const heads = [
     domain: "Web",
     heads: [
       {
-        name: "Maharshi Kadeval",
-        imgUrl:
-          "https://raw.githubusercontent.com/abhinavydv/Ecell-Test/master/Web/MaharshiKadeval/Maharshi.jpg",
-        email: "cs21btech11027@iith.ac.in",
-        linkedIN: "",
+        name: "Bhaskar Mandal",
+        imgUrl:"/team24/Bhaskar_Mandal.png",
+        email: "ms22btech11010@iith.ac.in",
+        linkedIN: "http://linkedin.com/in/bhaskaraa45",
       },
     ],
   },
@@ -40,18 +40,18 @@ const heads = [
     domain: "Ideation",
     heads: [
       {
-        name: "Pranadipan Sahoo",
+        name: "Divya Rajparia",
         imgUrl:
-          "https://res.cloudinary.com/ds5dhpt5o/image/upload/v1686591931/E%20Cell/Pranadipan_Sahoo_z8dore.jpg",
-        email: "ms21btech11021@iith.ac.in",
-        linkedIN: "https://www.linkedin.com/in/pranadipan-sahoo-361946246/",
+          "/team24/divya_rajparya.png",
+        email: "es22btech11013@iith.ac.in",
+        linkedIN: "https://www.linkedin.com/in/divya-rajparia-237786205?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
       },
       {
-        name: "Sanika Karmore",
+        name: "Jyothir Vishnu Bharadwaja Perugu",
         imgUrl:
-        "https://raw.githubusercontent.com/abhinavydv/Ecell-Test/master/Ideation/Sanika/Sanika.jpg",
-        email:"ideation.ecell@campus.iith.ac.in",
-        linkedIN:"https://www.linkedin.com/in/sanika-karmore-22aab6228"
+        "/team24/jyothir_idea.png",
+        email:"mi23mtech14003@iith.ac.in",
+        linkedIN:"https://www.linkedin.com/in/jyothir-vishnu-bharadwaja-perugu-8401091a6?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
       },
     ],
   },
@@ -59,35 +59,35 @@ const heads = [
     domain: "Events & Competitions",
     heads: [
       {
-        name: "Manas Bhargava",
+        name: "Devansh Jain",
         imgUrl:
-          "https://res.cloudinary.com/ds5dhpt5o/image/upload/v1686591641/E%20Cell/Manas_Bhargava_krmwwr.jpg",
-        email: "ch21btech11019@iith.ac.in",
-        linkedIN: "https://www.linkedin.com/in/manas-bhargava-44b156243",
+          "/team24/devansh_jain.png",
+        email: "ee22btech11018@iith.ac.in",
+        linkedIN: "https://www.linkedin.com/in/devansh-jain-072a5428a",
       },
     ],
   },
   {
-    domain: "Corporate Relations & Marketing",
+    domain: "Corporate Relations & Finance",
     heads: [
       {
-        name: "Aman Jagtap",
+        name: "Avantika Nair",
         imgUrl:
-          "https://raw.githubusercontent.com/abhinavydv/E-cell-IITH-Public-Data/master/Corporate%20Relations%20%26%20Marketing/Aman%20Jagtap/Aman_Jagtap.JPG",
-        email: "sponsorship.ecell@campus.iith.ac.in",
-        linkedIN: "https://www.linkedin.com/in/aman-jagtap-a29773194",
+          "/team24/avantika_nair.png",
+        email: "ms22btech11008@iith.ac.in",
+        linkedIN: "https://www.linkedin.com/in/avantika-nair-523a94254?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
       },
     ],
   },
   {
-    domain: "Design and Multimedia",
+    domain: "Design and Creatives",
     heads: [
       {
-        name: "Samyak Jain",
+        name: "Vyom Chauhan",
         imgUrl:
-          "https://raw.githubusercontent.com/abhinavydv/E-cell-IITH-Public-Data/master/Design%20%26%20Multimedia/Samyak%20Jain/Samyak%20Jain%20E.jpg",
-        email: "bd21bdes11016@iith.ac.in",
-        linkedIN: "https://www.linkedin.com/in/-samyakjain",
+          "/team24/vyom.png",
+        email: "bd22bdes11019@iith.ac.in",
+        linkedIN: "https://www.linkedin.com/in/vyom-chauhan-11b7892b5?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
       },
     ],
   },
@@ -95,23 +95,42 @@ const heads = [
     domain: "PR & Networking",
     heads: [
       {
-        name: "Shubham Mohanty",
+        name: "Swapnil Rawal ",
         imgUrl:
-          "https://raw.githubusercontent.com/abhinavydv/Ecell-Test/master/PR-Networking/SubhamMohanty/Subham.jpg",
-        email: "pr.ecell@campus.iith.ac.in",
-        linkedIN: "https://www.linkedin.com/in/subham-mohanty-a0589a229/",
+          "/team24/swapnil_rawal.png",
+        email: "ce22btech11047@iith.ac.in",
+        linkedIN: "https://www.linkedin.com/in/swapnil-rawal-b91460252?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+      },
+      {
+        name: "Tejasri Relangi ",
+        imgUrl:
+          "/team24/relangi.png",
+        email: "ms22btech11020@iith.ac.in",
+        linkedIN: "http://linkedin.com/in/rtejasri",
       },
     ],
   },
   {
-    domain: "Media and Publicity",
+    domain: "Media and Outreach",
     heads: [
       {
-        name: "Manasi Pasekar",
+        name: "Aditya Heshi",
         imgUrl:
-          "https://raw.githubusercontent.com/abhinavydv/E-cell-IITH-Public-Data/master/Media%20%26%20Publicity/Manasi/IMG20230219023159.jpg",
-        email: "bd21bdes11013@iith.ac.in",
-        linkedIN: "https://www.linkedin.com/in/manasi-pasekar-4a67a9241",
+          "/team24/aditya_heishi.png",
+        email: "bd22bdes11020@iith.ac.in",
+        linkedIN: "https://www.linkedin.com/in/adityaheshi/",
+      },
+    ],
+  },
+  {
+    domain: "Marketing",
+    heads: [
+      {
+        name: "Sripadmanabha S",
+        imgUrl:
+          "/team24/sripa.png",
+        email: "bd22bdes11016@iith.ac in",
+        linkedIN: "https://www.linkedin.com/in/sripadmanabha-s-30a609273/",
       },
     ],
   },
@@ -213,12 +232,12 @@ function Team() {
           id="head"
           notCard={true}
           imgUrl={
-            "https://raw.githubusercontent.com/abhinavydv/E-cell-IITH-Public-Data/master/ECellHEAD/Srijan_sponsorship_s9ousy_1_ebgjrd.jpeg"
+            "/team24/AdityaGupta.jpg"
           }
           isFlip={true}
-          email="head.ecell@campus.iith.ac.in"
-          linkedIN="https://www.linkedin.com/in/srijan-shahi-1b6009278"
-          name="Srijan Shahi"
+          email="bt22btech11001@iith.ac.in"
+          linkedIN="https://www.linkedin.com/in/guptaaditya2004/"
+          name="Aditya Gupta"
           position="Overall Head"
           sx={{ py: 5 }}
           bold

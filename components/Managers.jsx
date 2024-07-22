@@ -8,63 +8,71 @@ import parallax from '../styles/team.module.css';
 
 const operations_info = [
   {
-    name: 'Kanishka P',
-    url: 'https://raw.githubusercontent.com/abhinavydv/E-cell-IITH-Public-Data/master/Operations/JP%20Kanishka%20Prasad/IMG-20230601-WA0003.jpg',
+    name: 'Harshit Daheriya',
+    url: '/team24/harshit_daheriya.png',
   },
   {
-    name: 'Shreyash B',
-    url: 'https://raw.githubusercontent.com/abhinavydv/E-cell-IITH-Public-Data/master/Operations/Shreyash%20Bhanage/IMG_20221113_190759197.jpg',
+    name: 'Rohin Rajagopal',
+    url: '/team24/rohin_rajagopal.png',
   },
   {
-    name: 'Anuj A',
-    url: 'https://raw.githubusercontent.com/abhinavydv/E-cell-IITH-Public-Data/master/Operations/ANUJ%20AGARWAL(Consider%20this%20one)/photo.png',
+    name: 'Navin Joshi',
+    url: '/team24/navin.png',
   },
   {
-    name: 'Ram Vasanth',
-    url: 'https://raw.githubusercontent.com/abhinavydv/E-cell-IITH-Public-Data/master/Operations/Dasari%20Ram%20Vasanth/Dasari%20Ram%20Vasanth.jpeg',
+    name: 'Abhishek Godiyal',
+    url: '/team24/abhishek_godiyal.png',
   },
   {
-    name: 'Sameer K',
-    url: 'https://raw.githubusercontent.com/abhinavydv/E-cell-IITH-Public-Data/master/Operations/Sameer%20kendal/IMG_20221021_151045.jpg',
+    name: 'Solangi Mohanty',
+    url: '/team24/solangi.png',
   },
   {
-    name: 'Sharvil P',
-    url: 'https://raw.githubusercontent.com/abhinavydv/E-cell-IITH-Public-Data/master/Operations/Sharvil%20Pedamkar/20230531_203617.jpg',
+    name: 'Yash Chawla',
+    url: '/team24/yash_chawla.png',
   },
   {
-    name: 'Shreya S',
-    url: 'https://raw.githubusercontent.com/abhinavydv/E-cell-IITH-Public-Data/master/Operations/Shreya%20Sridhar/IMG-20220905-WA0018~2.jpg',
+    name: 'Harsh Vardhan Singh',
+    url: '/team24/harsh_vardhan.png',
+  },
+  {
+    name: 'Shiva Sai Pagilla',
+    url: '/team24/shivasai.png',
   },
 ];
 const events_competitions_info = [
   {
-    name: "Dhruvin",
-    url: "http://res.cloudinary.com/ds5dhpt5o/image/upload/v1686594832/E%20Cell/Dhruvin.jpg"
+    name: "Abhey garg",
+    url: "/team24/abheygarg.png"
   },
   {
-    name: "Yaswanth Balaji",
-    url: "http://res.cloudinary.com/ds5dhpt5o/image/upload/v1686594839/E%20Cell/Yaswanth%20Balaji.jpg"
+    name: "ShivShreeram P",
+    url: "/team24/shivp.png"
   },
   {
-    name: "Devansh Jain",
-    url: "http://res.cloudinary.com/ds5dhpt5o/image/upload/v1686594844/E%20Cell/Devansh%20Jain.jpg"
+    name: "Sunny",
+    url: "/team24/sunny.png"
   },
   {
-    name: "Pranay Jain",
-    url: "http://res.cloudinary.com/ds5dhpt5o/image/upload/v1686594845/E%20Cell/Pranay%20Jain.jpg"
+    name: "Mohammed Fawwaz Ali",
+    url: "/team24/fawwaz.png"
   },
   {
-    name: "Rishi",
-    url: "http://res.cloudinary.com/ds5dhpt5o/image/upload/v1686594847/E%20Cell/Rishi.jpg"
+    name: "Sathwik K",
+    url: "/team24/sathwikk.png"
   },
   {
-    name: "Divyansh Bansal",
-    url: "http://res.cloudinary.com/ds5dhpt5o/image/upload/v1686594850/E%20Cell/Divyansh%20Bansal.jpg"
+    name: "Sai Rishi Kasturi",
+    url: "/team24/sairishi.png"
   },
   {
-    name: "Karthik Kunchala",
-    url: "http://res.cloudinary.com/ds5dhpt5o/image/upload/v1686594851/E%20Cell/Karthik%20Kunchala.jpg"
-  }
+    name: "Kowsith G",
+    url: "/team24/kowsithg.png"
+  },
+  {
+    name: "Vedant Gupta",
+    url: "/team24/vedantg.png"
+  },
 ]
 
 // const sponsorship_info = [
@@ -100,185 +108,178 @@ const events_competitions_info = [
 
 const ideation_info = [
   {
-    name: "Arsh Arora",
-    url: "https://raw.githubusercontent.com/abhinavydv/E-cell-IITH-Public-Data/master/Ideation/Arsh/20dfbb09-1062-487b-b158-0670ed60e0d9.jpg"
+    name: "Vaishnavi",
+    url: "/team24/vaishnavi.png"
   },
   {
-    name: "Vedant S",
-    url: "http://res.cloudinary.com/ds5dhpt5o/image/upload/v1686595596/E%20Cell/Vedant.jpg"
+    name: "Anagha K",
+    url: "/team24/anaghak.png"
   },
   {
-    name: "P Sanjana",
-    url: "http://res.cloudinary.com/ds5dhpt5o/image/upload/v1686595593/E%20Cell/P%20Sanjana.jpg"
+    name: "Atharva Patil",
+    url: "/team24/atharvap.png"
   },
   {
-    name: "Tanmay Vishwasrao",
-    url: "http://res.cloudinary.com/ds5dhpt5o/image/upload/v1686595603/E%20Cell/Tanmay%20Vishawarao.jpg"
+    name: "Chavan Rushikesh",
+    url: "/team24/chavanr.png"
   },
   {
-    name: "Divya",
-    url: "http://res.cloudinary.com/ds5dhpt5o/image/upload/v1686595605/E%20Cell/Divya.jpg"
+    name: "Amogh Bindal",
+    url: "/team24/amoghb.png"
   },
   {
-    name: "Jayna",
-    url: "http://res.cloudinary.com/ds5dhpt5o/image/upload/v1686595606/E%20Cell/Jayna.jpg"
+    name: "Ujjwal Kalra",
+    url: "/team24/ujjwalk.png"
   },
   {
-    name: "Abhishek Raje",
-    url: "http://res.cloudinary.com/ds5dhpt5o/image/upload/v1686595607/E%20Cell/Abhishek%20Raje.jpg"
+    name: "Roshan Y Singh",
+    url: "/team24/roshany.png"
   },
   {
-    name: "Aditya Gupta",
-    url: "http://res.cloudinary.com/ds5dhpt5o/image/upload/v1686595608/E%20Cell/Aditya%20Gupta.jpg"
+    name: "Deekshith Patel",
+    url: "/team24/deekshithp.png"
   },
 ]
 
 const design_info = [
   {
-    name: 'Yasir U',
-    url: 'https://raw.githubusercontent.com/abhinavydv/E-cell-IITH-Public-Data/master/Design%20%26%20Multimedia/Yasir/Snapchat-70778184.jpg',
+    name: 'Pranav Kuchekar',
+    url: '/team24/pranavk.png',
   },
   {
-    name: 'Aditya H',
-    url: 'https://raw.githubusercontent.com/abhinavydv/E-cell-IITH-Public-Data/master/Design%20%26%20Multimedia/Aditya/Aditya%20Heshi.jpg'
+    name: 'Kamya Rajeshwar',
+    url: '/team24/kamyar.png'
   },
   {
-    name: 'Parth B',
-    url: 'https://raw.githubusercontent.com/abhinavydv/E-cell-IITH-Public-Data/master/Design%20%26%20Multimedia/Parth/E-Cell.jpg',
+    name: 'Vinit Shimpi',
+    url: '/team24/vinits.png',
   },
   {
-    name: 'Ishita S',
-    url: 'https://raw.githubusercontent.com/abhinavydv/E-cell-IITH-Public-Data/master/Design%20%26%20Multimedia/Ishita/ishita_samant.jpg',
+    name: 'Arman Mahayan',
+    url: '/team24/armanm.png',
   },
   {
-    name: 'Aryan N',
-    url: 'https://raw.githubusercontent.com/abhinavydv/E-cell-IITH-Public-Data/master/Design%20%26%20Multimedia/Aryan/IMG_1370-01.jpeg',
+    name: 'Smaron Boruah',
+    url: '/team24/smaron.png',
   },
   {
-    name: 'Akshat P',
-    url: 'https://raw.githubusercontent.com/abhinavydv/E-cell-IITH-Public-Data/master/Design%20%26%20Multimedia/Akshat/IMG_20221204_210542.jpg',
+    name: 'Shlloak Thombaray',
+    url: '/team24/shlloak.png',
+  },
+];
+const marketing_info = [
+  {
+    name: 'Gourav Kumar Bathwal',
+    url: '/team24/gouravkb.png',
+  },
+  {
+    name: 'Ankur Kalyan',
+    url: '/team24/ankurk.png'
+  },
+  {
+    name: 'Devisetty Ram Mayur',
+    url: '/team24/devisetty.png',
+  },
+  {
+    name: 'Dhanush Reddy Thumma',
+    url: '/team24/thummad.png',
+  },
+  {
+    name: 'Preetham Rachamalla',
+    url: '/team24/preethamr.png',
   },
 ];
 const media_pub_info = [
   {
-    name: 'Monish A',
-    url: 'https://raw.githubusercontent.com/abhinavydv/E-cell-IITH-Public-Data/master/Media%20%26%20Publicity/Monish%20Asawa/IMG_20230531_213429.jpg',
+    name: 'Girijesh Dasari',
+    url: '/team24/giri.png',
   },
   {
-    name: 'Ansh A',
-    url: 'https://raw.githubusercontent.com/abhinavydv/E-cell-IITH-Public-Data/master/Design%20%26%20Multimedia/Ansh/837F2FB1-E9C5-4C79-A793-0EBA1DE7A008.jpeg',
+    name: 'Chiranjeev Singh',
+    url: '/team24/chiranjeev.png',
   },
   {
-    name: 'Grishmasri D',
-    url: 'https://raw.githubusercontent.com/abhinavydv/E-cell-IITH-Public-Data/master/Media%20%26%20Publicity/Grishmasri/image.jpg',
+    name: 'Mishal Sharaf',
+    url: '/team24/mishal.png',
   },
   {
-    name: 'Shwetanshu K',
-    url: 'https://raw.githubusercontent.com/abhinavydv/E-cell-IITH-Public-Data/master/Media%20%26%20Publicity/Shwetanshu%20Kumar/IMG_7418~3.jpg',
-  },
-  {
-    name: 'Prabhat Kumar',
-    url: 'https://raw.githubusercontent.com/abhinavydv/E-cell-IITH-Public-Data/master/Media%20%26%20Publicity/Prabhat%20Kumar/IMG_2513.jpeg',
-  },
-  {
-    name: 'Nisha Kumari',
-    url: 'https://raw.githubusercontent.com/abhinavydv/E-cell-IITH-Public-Data/master/Media%20%26%20Publicity/Nisha%20Kumari/IMG_4365.jpeg',
-  },
-  {
-    name: 'Lakshya Soni',
-    url: 'https://raw.githubusercontent.com/abhinavydv/E-cell-IITH-Public-Data/master/Media%20%26%20Publicity/Lakshya%20Soni/Photograph.jpg',
-  },
-  {
-    name: 'Agrim Singh',
-    url: 'https://raw.githubusercontent.com/abhinavydv/E-cell-IITH-Public-Data/master/Media%20%26%20Publicity/Agrim%20Singh/IMG_20230311_151733.jpg',
-  },
-  {
-    name: 'Nisarg Dodia',
-    url: "https://raw.githubusercontent.com/abhinavydv/E-cell-IITH-Public-Data/master/Media%20%26%20Publicity/Nisarg%20Dodia/NIsarg%20Dodia.jpeg",
-  },
-  
+    name: 'Siya Shah',
+    url: '/team24/siya.png',
+  }, 
 ];
 const corp_mark_info = [
   {
-    name: 'Vainavi G',
-    url: 'https://raw.githubusercontent.com/abhinavydv/E-cell-IITH-Public-Data/master/Corporate%20Relations%20%26%20Marketing/Vainavi%20Gawde/WhatsApp%20Image%202023-05-31%20at%2023.39.08.jpeg',
+    name: 'Aryan S Raj',
+    url: '/team24/aryansraj.png',
   },
   {
-    name: 'Sarthak Singhal',
-    url: 'https://raw.githubusercontent.com/abhinavydv/E-cell-IITH-Public-Data/master/Corporate%20Relations%20%26%20Marketing/Sarthak%20singhal/F3E5453B-3DB4-4AF3-BEB4-B18D41F6CC41.jpeg',
+    name: 'Chinmayee Ramidi',
+    url: '/team24/ramidi.png',
   },
   {
-    name: 'Rakesh V',
-    url: 'https://raw.githubusercontent.com/abhinavydv/E-cell-IITH-Public-Data/master/Corporate%20Relations%20%26%20Marketing/Rakesh%20Varshith/IMG_0582.jpeg',
+    name: 'Om Godse',
+    url: '/team24/om.png',
   },
   {
-    name: 'Pritesh Singh',
-    url: 'https://raw.githubusercontent.com/abhinavydv/E-cell-IITH-Public-Data/master/Corporate%20Relations%20%26%20Marketing/Pritesh%20Singh/IMG_20210207_200801.jpg',
+    name: 'Shikhar Kansal',
+    url: '/team24/shikhark.png',
   },
   {
-    name: 'Aaryan Kumar',
-    url: 'https://raw.githubusercontent.com/abhinavydv/E-cell-IITH-Public-Data/master/Corporate%20Relations%20%26%20Marketing/Aaryan%20Kumar/WhatsApp%20Image%202023-05-31%20at%2023.13.39.jpeg',
+    name: 'Rishabh Duggal',
+    url: '/team24/duggal.png',
   },
   {
-    name: 'Laasya C',
-    url: 'https://raw.githubusercontent.com/abhinavydv/E-cell-IITH-Public-Data/master/Corporate%20Relations%20%26%20Marketing/Laasya/laasya%20.jpg',
-  },
-  {
-    name: 'Nahoosh J',
-    url: 'https://raw.githubusercontent.com/abhinavydv/E-cell-IITH-Public-Data/master/Corporate%20Relations%20%26%20Marketing/Nahoosh%20Jilhewar/IMG_1978.jpeg',
-  },
-  {
-    name: 'Avantika Nair',
-    url: 'https://raw.githubusercontent.com/abhinavydv/E-cell-IITH-Public-Data/master/Corporate%20Relations%20%26%20Marketing/Avantika%20Nair/ecell_23.jpg',
+    name: 'Raghav Mangal ',
+    url: '/team24/raghavm.png',
   },
 ];
 const web_info = [
   {
-    name: "Jash Jhatakia",
-    url: "https://raw.githubusercontent.com/abhinavydv/Ecell-Test/master/Web/JashJ/JashJ.jpg"
+    name: "Indupalli Sishir Anand",
+    url: "/team24/sishir.png"
   },
   {
-    name: 'Abhinav Yadav',
-    url: 'https://raw.githubusercontent.com/abhinavydv/Ecell-Test/master/Web/AbhinavYadav/Abhinav.jpg',
+    name: 'Sonit Patil',
+    url: '/team24/sonit.png',
   },
   {
-    name: "Armaan",
-    url: "https://raw.githubusercontent.com/abhinavydv/E-cell-IITH-Public-Data/master/Web/ShaikArmaan/ShaikArmaan.jpeg"
+    name: "Manne Rithvik",
+    url: "/team24/manne.png"
   },
   {
-    name: "Adhith T",
-    url: "https://raw.githubusercontent.com/abhinavydv/Ecell-Test/master/Web/AdhithT/adhitht.jpg"
+    name: "Aditya Srivastava",
+    url: "/team24/adityas.png"
   },
 ];
 
 const pr_info = [
   {
-    name: "Arthi GJ",
-    url: "https://raw.githubusercontent.com/abhinavydv/Ecell-Test/master/PR-Networking/ArthiGJ/ArthiGJ.jpg",
+    name: "Siva Meenakshi",
+    url: "/team24/sivamee.png",
   },
   {
-    name: "Kannan NS",
-    url: "https://raw.githubusercontent.com/abhinavydv/Ecell-Test/master/PR-Networking/KannanNS/KannanNS.jpg",
+    name: "Yashovardhan Mukerji",
+    url: "/team24/yasho.png",
   },
   {
-    name: "Omkar Nilkanth",
-    url: "https://raw.githubusercontent.com/abhinavydv/Ecell-Test/master/PR-Networking/OmkarNilkanth/Omkar.jpeg",
+    name: "Aayush Gupta",
+    url: "/team24/aayushg.png",
   },
   {
-    name: "Priyanshu Verma",
-    url: "https://raw.githubusercontent.com/abhinavydv/Ecell-Test/master/PR-Networking/PriyanshuVerma/Priyanshu.jpg",
+    name: "Akshay S Harits",
+    url: "/team24/ash.png",
   },
   {
-    name: "Shubham Meher",
-    url: "https://raw.githubusercontent.com/abhinavydv/Ecell-Test/master/PR-Networking/ShubhamMeher/Shubham.jpg",
+    name: "Nakul Patole",
+    url: "/team24/nakul.png",
   },
   {
-    name: "Swapnil Rawal",
-    url: "https://raw.githubusercontent.com/abhinavydv/Ecell-Test/master/PR-Networking/SwapnilRawal/swapnil.jpg",
+    name: "Sarvesh Goyal",
+    url: "/team24/sarveshg.png",
   },
   {
-    name: "Tejasri Relangi",
-    url: "https://raw.githubusercontent.com/abhinavydv/Ecell-Test/master/PR-Networking/TejasriRelangi/tejasri.jpeg",
+    name: "Aryan Bodhe",
+    url: "/team24/bodhe.png",
   },
 ];
 
@@ -441,12 +442,12 @@ const Managers = () => {
       <Domain
         discription={description[1]}
         info={corp_mark_info}
-        title={'Corporate Relations & Marketing'}
+        title={'Corporate Relations & Finance'}
       />
       <Domain
         discription={description[7]}
         info={media_pub_info}
-        title={'Media and Publicity'}
+        title={'Media and Outreach'}
       />
       <Domain
         discription={description[2]}
@@ -456,7 +457,7 @@ const Managers = () => {
       <Domain
         discription={description[3]}
         info={design_info}
-        title={'Design and Multimedia'}
+        title={'Design and Creatives'}
       />
       <Domain
         discription={description[6]}
@@ -467,6 +468,10 @@ const Managers = () => {
         discription={description[4]}
         info={web_info}
         title={'Web'} />
+      <Domain
+        discription={description[4]}
+        info={marketing_info}
+        title={'Marketing'} />
       <Domain
         discription={description[5]}
         info={pr_info}
