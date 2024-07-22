@@ -27,7 +27,7 @@ const GuideCard = ({ title, description, image, latitude, longitude, width }) =>
                     height: { xs: 54, md: 108 }, ml: "12px"
                 }}
                 image={image}
-                alt="Food Court"
+                alt={title}
             />
             <Box sx={{
                 justifyContent: 'space-between',

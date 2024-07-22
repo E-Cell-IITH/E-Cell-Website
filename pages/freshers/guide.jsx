@@ -1,7 +1,7 @@
 import React, { useRef, useEffect } from "react";
 import Head from "next/head";
 import { gsap } from "gsap";
-import Navbar from "../components/first";
+import Navbar from "../../components/first";
 
 
 const PreOrientation = () => {

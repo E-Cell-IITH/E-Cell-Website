@@ -273,6 +273,41 @@ body {
   font-size: 12px;
 }
 
+.svg-button {
+  position: relative;
+  display: inline-block;
+  border: none;  
+  background: none; 
+  padding: 0;
+  cursor: pointer;
+  outline: none; 
+}
+
+.svg-button .svg-default {
+  display: block; 
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.svg-button .svg-hover {
+  display: none; 
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.svg-button:hover .svg-default {
+  display: none;
+}
+
+.svg-button:hover .svg-hover {
+  display: block;
+}
+
+
+
+
 @media screen and (max-width: 1024px) {
   .button-googleMap {
     border: #757577 solid 0.48px;
