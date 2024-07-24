@@ -171,9 +171,9 @@ const PreOrientation = () => {
     useEffect(() => {
         const url = 'https://docs.google.com/document/d/16w7BxE18MUYPX69yHRuytwvvO2--7qELMC5B4W2hJEw/edit';
         if (window.location.href !== url) {
-            window.location.replace(url);
+            router.replace(url);
         }
-    }, []);
+    }, [router]);
 
     return (
         <Box height="100vh" sx={{
@@ -187,4 +187,3 @@ const PreOrientation = () => {
 };
 
 export default PreOrientation;
-
