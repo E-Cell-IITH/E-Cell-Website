@@ -226,7 +226,7 @@ export default function Fifth({ esummit = false }) {
                     target="_blank"
                     rel="noreferrer noopener"
                   >
-                    <span> (+91)85308 96541 </span><br />
+                    <span> (+91)88005 23297 </span><br />
                   </Link>
                   <Link
                     href="tel:+919653847128"
@@ -240,7 +240,7 @@ export default function Fifth({ esummit = false }) {
                     target="_blank"
                     rel="noreferrer noopener"
                   >
-                    <span> (+91)80740 20784 </span>
+                    <span> (+91)90590 59222 </span>
                   </Link>
                 </div>
               </div>
