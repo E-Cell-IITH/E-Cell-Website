@@ -443,11 +443,11 @@ export default function Fifth({ esummit = false }) {
                 </div>
                 <div className={style.list1} id={style.list3}>
                   <Link
-                    href="tel:+918530896541"
+                    href="tel:+918800523297"
                     target="_blank"
                     rel="noreferrer noopener"
                   >
-                    <span> (+91)85308 96541 </span><br />
+                    <span> (+91)88005 23297 </span><br />
                   </Link>
                   <Link
                     href="tel:+919653847128"
@@ -457,11 +457,11 @@ export default function Fifth({ esummit = false }) {
                     <span> (+91)96538 47128 </span><br />
                   </Link>
                   <Link
-                    href="tel:+918074020784"
+                    href="tel:+9189059059222"
                     target="_blank"
                     rel="noreferrer noopener"
                   >
-                    <span> (+91)80740 20784 </span>
+                    <span> (+91)90590 59222 </span>
                   </Link>
                 </div>
               </div>
