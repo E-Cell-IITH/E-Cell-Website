@@ -125,8 +125,8 @@ const Guide = () => {
   };
 
   const openDocs = () => {
-    window.location.href = '/freshers/guide';
-    // router.push('https://docs.google.com/document/d/16w7BxE18MUYPX69yHRuytwvvO2--7qELMC5B4W2hJEw/edit');
+    // window.location.href = '/freshers/guide';
+    router.push('https://docs.google.com/document/d/16w7BxE18MUYPX69yHRuytwvvO2--7qELMC5B4W2hJEw/edit');
   }
 
   return (

@@ -58,13 +58,13 @@ const Navbar = () => {
           </li>
           <li className="navigation__item">
             <Link
-              href="/freshers/guide"
+              href="/freshers/map"
               className="navigation__link"
               onClick={() => {
                 navRef.current.checked = false;
               }}
             >
-              Freshers Guide
+              Campus Map
             </Link>
           </li>
           <li className="navigation__item">
