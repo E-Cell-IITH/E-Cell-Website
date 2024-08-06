@@ -192,39 +192,44 @@ export default function Fifth({ esummit = false }) {
                   </div>
                 </Link>
               </div>
+              <br></br>
               <div className={style.log}>
                 <div className={style.logo}>
                   <Image
                     src="/esummit/gallery/email.png"
-                    width="60"
-                    height="60"
+                    width="80"
+                    height="80"
                     alt="dot"
                   />
                 </div>
-                <Link
-                  href="mailto:ecell@campus.iith.ac.in"
-                  target="_blank"
-                  rel="noreferrer noopener"
-                >
-                  <div className={style.list1} id={style.list2}>
-                    ecell@campus.iith.ac.in
-                  </div>
-                </Link>
-                <Link
-                  href="mailto:web.ecell@campus.iith.ac.in"
-                  target="_blank"
-                  rel="noreferrer noopener"
-                >
-                  <div className={style.list1} id={style.list2}>
-                    web.ecell@campus.iith.ac.in
-                  </div>
-                </Link>
+                <div className={style.list1} id={style.list3}>
+                  <Link
+                    href="mailto:ecell@campus.iith.ac.in"
+                    target="_blank"
+                    rel="noreferrer noopener"
+                  >
+                    <span>
+                      ecell@campus.iith.ac.in
+                    </span>
+                    <br></br>
+                  </Link>
+                  <Link
+                    href="mailto:web.ecell@campus.iith.ac.in"
+                    target="_blank"
+                    rel="noreferrer noopener"
+                  >
+                    <span>
+                      web.ecell@campus.iith.ac.in
+                    </span>
+                  </Link>
+                </div>
               </div>
+              <br></br>
               <div className={style.log}>
                 <div className={style.logo}>
                   <Image
                     src="/esummit/gallery/phone.png"
-                    width="60"
+                    width="80"
                     height="60"
                     alt="dial"
                   />
@@ -422,40 +427,45 @@ export default function Fifth({ esummit = false }) {
                   </div>
                 </Link>
               </div>
+              <br></br>
               <div className={style.log}>
                 <div className={style.logo}>
                   <Image
                     src="https://res.cloudinary.com/dwsverefw/image/upload/v1665696046/ecell/msg_mqpkbk.png"
-                    width="60"
-                    height="60"
+                    width="80"
+                    height="80"
                     alt="dot"
                   />
                 </div>
-                <Link
-                  href="mailto:ecell@campus.iith.ac.in"
-                  target="_blank"
-                  rel="noreferrer noopener"
-                >
-                  <div className={style.list1} id={style.list2}>
-                    ecell@campus.iith.ac.in
-                  </div>
-                </Link>
-                <Link
-                  href="mailto:web.ecell@campus.iith.ac.in"
-                  target="_blank"
-                  rel="noreferrer noopener"
-                >
-                  <div className={style.list1} id={style.list2}>
-                    web.ecell@campus.iith.ac.in
-                  </div>
-                </Link>
+                <div className={style.list1} id={style.list3}>
+                  <Link
+                    href="mailto:ecell@campus.iith.ac.in"
+                    target="_blank"
+                    rel="noreferrer noopener"
+                  >
+                    <span>
+                      ecell@campus.iith.ac.in
+                    </span>
+                    <br></br>
+                  </Link>
+                  <Link
+                    href="mailto:web.ecell@campus.iith.ac.in"
+                    target="_blank"
+                    rel="noreferrer noopener"
+                  >
+                    <span>
+                      web.ecell@campus.iith.ac.in
+                    </span>
+                  </Link>
+                </div>
               </div>
+              <br></br>
               <div className={style.log}>
                 <div className={style.logo}>
                   <Image
                     src="https://res.cloudinary.com/dwsverefw/image/upload/v1665696044/ecell/call_bcfebi.png"
-                    width="60"
-                    height="60"
+                    width="80"
+                    height="80"
                     alt="dial"
                   />
                 </div>
