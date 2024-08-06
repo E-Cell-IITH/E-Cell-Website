@@ -202,12 +202,21 @@ export default function Fifth({ esummit = false }) {
                   />
                 </div>
                 <Link
-                  href="mailto:ecell@iith.ac.in"
+                  href="mailto:ecell@campus.iith.ac.in"
                   target="_blank"
                   rel="noreferrer noopener"
                 >
                   <div className={style.list1} id={style.list2}>
-                    ecell@iith.ac.in
+                    ecell@campus.iith.ac.in
+                  </div>
+                </Link>
+                <Link
+                  href="mailto:web.ecell@campus.iith.ac.in"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                >
+                  <div className={style.list1} id={style.list2}>
+                    web.ecell@campus.iith.ac.in
                   </div>
                 </Link>
               </div>
@@ -423,12 +432,21 @@ export default function Fifth({ esummit = false }) {
                   />
                 </div>
                 <Link
-                  href="mailto:ecell@iith.ac.in"
+                  href="mailto:ecell@campus.iith.ac.in"
                   target="_blank"
                   rel="noreferrer noopener"
                 >
                   <div className={style.list1} id={style.list2}>
-                    ecell@iith.ac.in
+                    ecell@campus.iith.ac.in
+                  </div>
+                </Link>
+                <Link
+                  href="mailto:web.ecell@campus.iith.ac.in"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                >
+                  <div className={style.list1} id={style.list2}>
+                    web.ecell@campus.iith.ac.in
                   </div>
                 </Link>
               </div>
