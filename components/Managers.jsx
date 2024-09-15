@@ -254,8 +254,12 @@ const web_info = [
 
 const pr_info = [
   {
+    name: "Aryan Bodhe",
+    url: "/team24/bodhe.png",
+  },
+  {
     name: "Siva Meenakshi",
-    url: "/team24/sivamee.png",
+    url: "/team24/meenakshi1.jpeg",
   },
   {
     name: "Yashovardhan Mukerji",
@@ -278,8 +282,8 @@ const pr_info = [
     url: "/team24/sarveshg.png",
   },
   {
-    name: "Aryan Bodhe",
-    url: "/team24/bodhe.png",
+    name: "Mirza Sameer",
+    url: "/team24/mirzasameer.jpg",
   },
 ];
 
