@@ -236,25 +236,25 @@ export default function Fifth({ esummit = false }) {
                 </div>
                 <div className={style.list1} id={style.list3}>
                   <Link
+                    href="tel:+918530896541"
+                    target="_blank"
+                    rel="noreferrer noopener"
+                  >
+                    <span> (+91)8530896541 </span><br />
+                  </Link>
+                  <Link
+                    href="tel:+99653847128"
+                    target="_blank"
+                    rel="noreferrer noopener"
+                  >
+                    <span> (+91)9653847128 </span><br />
+                  </Link>
+                  <Link
                     href="tel:+918800523297"
                     target="_blank"
                     rel="noreferrer noopener"
                   >
-                    <span> (+91)88005 23297 </span><br />
-                  </Link>
-                  <Link
-                    href="tel:+919653847128"
-                    target="_blank"
-                    rel="noreferrer noopener"
-                  >
-                    <span> (+91)96538 47128 </span><br />
-                  </Link>
-                  <Link
-                    href="tel:+9189059059222"
-                    target="_blank"
-                    rel="noreferrer noopener"
-                  >
-                    <span> (+91)90590 59222 </span>
+                    <span> (+91)88005 23297 </span>
                   </Link>
                 </div>
               </div>

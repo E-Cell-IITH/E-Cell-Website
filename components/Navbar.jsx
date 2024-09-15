@@ -34,7 +34,7 @@ const Navbar = () => {
               Home
             </Link>
           </li>
-          <li className="navigation__item">
+          {/* <li className="navigation__item">
             <a
               href="caprg"
               className="navigation__link"
@@ -44,7 +44,7 @@ const Navbar = () => {
             >
               CA Program
             </a>
-          </li>
+          </li> */}
           <li className="navigation__item">
             <Link
               href="/team"
@@ -112,6 +112,17 @@ const Navbar = () => {
               }}
             >
               IITH Startups
+            </Link>
+          </li>
+          <li className="navigation__item">
+            <Link
+              href="/emerge"
+              className="navigation__link"
+              onClick={() => {
+                navRef.current.checked = false;
+              }}
+            >
+              E-Merge
             </Link>
           </li>
           <li className="navigation__item">
