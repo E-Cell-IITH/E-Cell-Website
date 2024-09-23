@@ -28,7 +28,6 @@ import IconButton from "@mui/material/IconButton";
 import CloseIcon from "@mui/icons-material/Close";
 import SchoolIcon from "@mui/icons-material/School";
 import AccountBalanceIcon from "@mui/icons-material/AccountBalance";
-
 import styles from "../styles/startupfair.module.css";
 import { Link } from "@mui/material";
 import InstagramIcon from "@mui/icons-material/Instagram";
@@ -37,6 +36,14 @@ import TwitterIcon from "@mui/icons-material/Twitter";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import YouTubeIcon from "@mui/icons-material/YouTube";
 import TestCards from "../components/ui/TestCards";
+// import Carousel from "../components/Carousel";
+
+/* 
+const slides=["https://i.ibb.co/ncrXc2V/1.png",
+  "https://i.ibb.co/B3s7v4h/2.png",
+  "https://i.ibb.co/XXR8kzF/3.png",
+  "https://i.ibb.co/yg7BSdM/4.png"]
+ */
 
 function Emegrge() {
   const parent = useRef();
@@ -47,9 +54,9 @@ function Emegrge() {
 
   const isMediumScreen = useMediaQuery((theme) => theme.breakpoints.up("md"));
 
-  const ecell = isLargeScreen ? "5rem" : isMediumScreen ? "2.2rem" : "2.5rem";
+  const ecell = isLargeScreen ? "4rem" : isMediumScreen ? "2.2rem" : "2.5rem";
 
-  const fair = isLargeScreen ? "7rem" : isMediumScreen ? "2rem" : "2.8rem";
+  const fair = isLargeScreen ? "5rem" : isMediumScreen ? "2rem" : "2.8rem";
   const presents = isLargeScreen ? "1.4rem" : "1rem";
   const padding = isLargeScreen ? "1rem 2.4rem" : "0.5rem 1rem";
 
@@ -62,7 +69,11 @@ function Emegrge() {
       <Box sx={{ position: "absolute", top: "60px", left: "80px" }}>
         <Image src={EcellLogo} alt="logo" />
       </Box>
-
+      {/* <div className="relative">
+      <div className="max-w-lg">
+        <Carousel slides={slides} />
+      </div>
+    </div> */}
       <Box
         sx={{
           minHeight: "100vh",
@@ -125,34 +136,7 @@ function Emegrge() {
             E-MERGE &apos;24
           </Typography>
 
-          <Button
-            onClick={handleOpen}
-            sx={{
-              padding: padding,
-              textAlign: "center",
-              marginTop: "2vw",
-              fontSize: isLargeScreen ? "1.3rem" : "1rem",
-              textTransform: "capitalize",
-              fontWeight: "lighter",
-              border: "2.439px solid #5FD2D8",
-              borderRadius: "10px",
-              boxShadow: "0px 0px 27.979px 3.497px #61E0FD;",
-              color: "white",
-            }}
-          >
-            <Typography
-              color="#FFF"
-              textAlign="center"
-              fontFamily="Montserrat"
-              fontSize="32px"
-              fontStyle="normal"
-              fontWeight="500"
-              lineHeight="normal"
-              textTransform="capitalize"
-            >
-              Register Here
-            </Typography>
-          </Button>
+
         </Box>
         <Box
           sx={{
@@ -162,40 +146,8 @@ function Emegrge() {
             left: "10px",
           }}
         >
-          <Box sx={{ display: "flex", gap: ".5rem" }}>
-            <Link
-              href="https://www.instagram.com/ecell_iith/?hl=en"
-              sx={{ color: "white" }}
-              target="_blank"
-            >
-              <InstagramIcon />
-            </Link>
-            <Link
-              href="https://www.linkedin.com/company/entrepreneurship-cell-iit-hyderabad"
-              sx={{ color: "white" }}
-              target="_blank"
-            >
-              <LinkedInIcon />
-            </Link>
-            <Link href="https://twitter.com/ecell_iith" sx={{ color: "white" }}>
-              <TwitterIcon />
-            </Link>
-            <Link
-              href="https://www.facebook.com/ecell.iithyd/"
-              sx={{ color: "white" }}
-              target="_blank"
-            >
-              <FacebookIcon />
-            </Link>
-            <Link
-              href="https://www.youtube.com/user/ecelliithyderabad"
-              sx={{ color: "white" }}
-              target="_blank"
-            >
-              <YouTubeIcon />
-            </Link>
-          </Box>
-        </Box>
+        
+      </Box>
       </Box>
 
       <Modal
@@ -364,9 +316,11 @@ function Emegrge() {
           </Typography>
         </Box> */}
 
+
+
         <Box
           sx={{
-            // minHeight: "100vh",
+             minHeight: "30vh",
 
             display: "flex",
 
@@ -376,33 +330,12 @@ function Emegrge() {
 
             alignItems: "center",
 
-            gap: "3rem",
+            gap: "1rem",
 
             zIndex: "2",
           }}
         >
-          <Typography
-            color="white"
-            sx={{
-              textAlign: "center",
-
-              zIndex: "2",
-              fontFamily: "Montserrat",
-
-              fontWeight: "900",
-
-              fontSize: isLargeScreen ? "4rem" : "3rem",
-
-              background:
-                "-webkit-linear-gradient(180deg, #5FD2D8 30%, #3982E6 90%)",
-
-              WebkitBackgroundClip: "text",
-
-              WebkitTextFillColor: "transparent",
-            }}
-          >
-            E-MERGE 2.0
-          </Typography>
+         
 
           <Typography
             variant="body1"
@@ -418,12 +351,8 @@ function Emegrge() {
               zIndex: "2",
             }}
           >
-            The 2nd edition of E-Merge is set to become the hub of meaningful
-            conversations and impactful connections, taking place on 19th
-            october at IIT Hyderabad. This premier event of the Entrepreneurship
-            Cell, IIT Hyderabad is a cornerstone in the evolving landscape of
-            social enterprise and sustainability, catering to passionate
-            students, emerging entrepreneurs, and established leaders alike.
+           The 2nd edition of E-Merge is set to become the hub of meaningful conversations and impactful connections, taking place on 19th october at IIT Hyderabad. This premier event of the Entrepreneurship Cell, IIT Hyderabad is a cornerstone in the evolving landscape of social enterprise and sustainability, catering to passionate students, emerging entrepreneurs, and established leaders alike.
+
           </Typography>
         </Box>
 
@@ -453,45 +382,61 @@ function Emegrge() {
       </Box>
       <TestCards />
       <Typography
-        variant="body1"
-        color="white"
-        sx={{
-          fontFamily: "Montserrat",
-          textAlign: "center",
+  variant="body1"
+  color="white"
+  sx={{
+    fontFamily: "Montserrat",
+    textAlign: "center",
+    paddingInline: isLargeScreen ? "6rem" : "3rem",
+    fontSize: isLargeScreen ? "2rem" : "1.2rem",
+    zIndex: "2",
+  }}
+>
+  
+  <Typography
+    variant="h3" 
+    color="white"
+    fontFamily="Montserrat"
+    fontWeight="bold" 
+    marginBottom="1rem" 
+    marginTop="2rem"
+  >
+   Don’t Miss Out – Join Us!
+  </Typography>
 
-          paddingInline: isLargeScreen ? "6rem" : "3rem",
+  
+  <Button
+    onClick={handleOpen}
+    sx={{
+      padding: padding,
+      textAlign: "center",
+      marginTop: "2vw",
+      marginBottom:"2rem",
+      fontSize: isLargeScreen ? "1.3rem" : "1rem",
+      textTransform: "capitalize",
+      fontWeight: "lighter",
+      border: "2.439px solid #5FD2D8",
+      borderRadius: "10px",
+      boxShadow: "0px 0px 27.979px 3.497px #61E0FD;",
+      color: "white",
+    }}
+  >
+    <Typography
+      color="#FFF"
+      textAlign="center"
+      fontFamily="Montserrat"
+      fontSize="20px"
+      fontStyle="normal"
+      fontWeight="500"
+      lineHeight="normal"
+      textTransform="capitalize"
+      
+    >
+      Register Here
+    </Typography>
+  </Button>
+</Typography>
 
-          fontSize: isLargeScreen ? "2rem" : "1.2rem",
-
-          zIndex: "2",
-        }}
-      >
-        <div>
-        <p>Don’t Miss Out – Join Us</p>
-        </div>
-        <br></br>
-        <button
-          type="button"
-          className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-        >
-          Register Now
-          <svg
-            class="rtl:rotate-180 w-3.5 h-3.5 ms-2"
-            aria-hidden="true"
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 14 10"
-          >
-            <path
-              stroke="currentColor"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              d="M1 5h12m0 0L9 1m4 4L9 9"
-            />
-          </svg>
-        </button>
-      </Typography>
     </div>
   );
 }
