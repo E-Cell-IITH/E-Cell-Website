@@ -20,16 +20,14 @@ import useMediaQuery from "@mui/material/useMediaQuery";
 
 import Button from "@mui/material/Button";
 
-import Modal from '@mui/material/Modal';
-import Card from '@mui/material/Card';
-import CardContent from '@mui/material/CardContent';
-import CardActions from '@mui/material/CardActions';
-import IconButton from '@mui/material/IconButton';
-import CloseIcon from '@mui/icons-material/Close';
-import SchoolIcon from '@mui/icons-material/School';
-import AccountBalanceIcon from '@mui/icons-material/AccountBalance';
-
-
+import Modal from "@mui/material/Modal";
+import Card from "@mui/material/Card";
+import CardContent from "@mui/material/CardContent";
+import CardActions from "@mui/material/CardActions";
+import IconButton from "@mui/material/IconButton";
+import CloseIcon from "@mui/icons-material/Close";
+import SchoolIcon from "@mui/icons-material/School";
+import AccountBalanceIcon from "@mui/icons-material/AccountBalance";
 import styles from "../styles/startupfair.module.css";
 import { Link } from "@mui/material";
 import InstagramIcon from "@mui/icons-material/Instagram";
@@ -37,269 +35,221 @@ import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import YouTubeIcon from "@mui/icons-material/YouTube";
+import TestCards from "../components/ui/TestCards";
+// import Carousel from "../components/Carousel";
 
-
+/* 
+const slides=["https://i.ibb.co/ncrXc2V/1.png",
+  "https://i.ibb.co/B3s7v4h/2.png",
+  "https://i.ibb.co/XXR8kzF/3.png",
+  "https://i.ibb.co/yg7BSdM/4.png"]
+ */
 
 function Emegrge() {
-    const parent = useRef();
+  const parent = useRef();
 
-    const tl = useRef();
+  const tl = useRef();
 
-    const isLargeScreen = useMediaQuery((theme) => theme.breakpoints.up("lg"));
+  const isLargeScreen = useMediaQuery((theme) => theme.breakpoints.up("lg"));
 
-    const isMediumScreen = useMediaQuery((theme) => theme.breakpoints.up("md"));
+  const isMediumScreen = useMediaQuery((theme) => theme.breakpoints.up("md"));
 
-    const ecell = isLargeScreen ? "5rem" : isMediumScreen ? "2.2rem" : "2.5rem";
+  const ecell = isLargeScreen ? "4rem" : isMediumScreen ? "2.2rem" : "2.5rem";
 
-    const fair = isLargeScreen ? "7rem" : isMediumScreen ? "2rem" : "2.8rem";
-    const presents = isLargeScreen ? "1.4rem" : "1rem";
-    const padding = isLargeScreen ? "1rem 2.4rem" : "0.5rem 1rem";
+  const fair = isLargeScreen ? "5rem" : isMediumScreen ? "2rem" : "2.8rem";
+  const presents = isLargeScreen ? "1.4rem" : "1rem";
+  const padding = isLargeScreen ? "1rem 2.4rem" : "0.5rem 1rem";
 
-    const [open, setOpen] = useState(false);
-    const handleOpen = () => setOpen(true);
-    const handleClose = () => setOpen(false);
+  const [open, setOpen] = useState(false);
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
 
-    return (
-        <div ref={parent}>
-            <Box sx={{ position: "absolute", top: "60px", left: "80px" }}>
-                <Image src={EcellLogo} alt="logo" />
-            </Box>
+  return (
+    <div ref={parent}>
+      <Box sx={{ position: "absolute", top: "60px", left: "80px" }}>
+        <Image src={EcellLogo} alt="logo" />
+      </Box>
+      {/* <div className="relative">
+      <div className="max-w-lg">
+        <Carousel slides={slides} />
+      </div>
+    </div> */}
+      <Box
+        sx={{
+          minHeight: "100vh",
+          backgroundImage: "linear-gradient(#02023c 5vh, black)",
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "center",
+          alignItems: "center",
+        }}
+      >
+        <Box
+          sx={{
+            height: "100%",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            flexDirection: "column",
+          }}
+        >
+          <Typography
+            color="#FFF"
+            textAlign="center"
+            fontFamily="Montserrat"
+            fontSize={ecell}
+            fontStyle="normal"
+            fontWeight="700"
+            lineHeight="normal"
+          >
+            E-CELL IIT HYDERABAD
+          </Typography>
 
-            <Box
+          <Typography
+            color="#FFF"
+            textAlign="center"
+            fontFamily="Montserrat"
+            fontSize={presents}
+            fontStyle="normal"
+            fontWeight="700"
+            lineHeight="41.968px"
+            textTransform="uppercase"
+          >
+            PRESENTS
+          </Typography>
+
+          <Typography
+            sx={{
+              fontWeight: "700",
+              color: "white",
+              fontFamily: "Montserrat",
+              fontStyle: "normal",
+              lineSpacing: "-1.14px",
+              background:
+                "-webkit-linear-gradient(180deg, #5FD2D8 30%, #3982E6 90%)",
+              WebkitBackgroundClip: "text",
+              WebkitTextFillColor: "transparent",
+              textAlign: "center",
+              fontSize: fair,
+            }}
+          >
+            E-MERGE &apos;24
+          </Typography>
+
+
+        </Box>
+        <Box
+          sx={{
+            color: "white",
+            position: "absolute",
+            bottom: "10px",
+            left: "10px",
+          }}
+        >
+        
+      </Box>
+      </Box>
+
+      <Modal
+        open={open}
+        onClose={handleClose}
+        aria-labelledby="modal-title"
+        aria-describedby="modal-description"
+        closeAfterTransition
+      >
+        <Box
+          sx={{
+            position: "absolute",
+            top: "50%",
+            left: "50%",
+            transform: "translate(-50%, -50%)",
+            width: isLargeScreen ? 500 : 350,
+            bgcolor: "#02174b", // Dark solid blue color
+            borderRadius: "10px",
+            boxShadow: "0 0 15px rgba(0, 0, 0, 0.5)",
+            color: "#FFF",
+            p: 0,
+            outline: "none",
+          }}
+        >
+          <Card
+            sx={{ borderRadius: "10px", bgcolor: "#261156", color: "#FFF" }}
+          >
+            <CardContent
+              sx={{
+                position: "relative",
+                padding: isLargeScreen ? 4 : 3,
+                textAlign: "center",
+              }}
+            >
+              <IconButton
+                onClick={handleClose}
                 sx={{
-                    minHeight: "100vh",
-                    backgroundImage: "linear-gradient(#02023c 5vh, black)",
-                    display: "flex",
-                    flexDirection: "column",
-                    justifyContent: "center",
-                    alignItems: "center",
+                  position: "absolute",
+                  top: 8,
+                  right: 8,
+                  color: "#FFF",
                 }}
-            >
-                <Box
-                    sx={{
-                        height: "100%",
-                        display: "flex",
-                        justifyContent: "center",
-                        alignItems: "center",
-                        flexDirection: "column",
-                    }}
+              >
+                <CloseIcon />
+              </IconButton>
+              <Typography id="modal-description" sx={{ marginBottom: 4 }}>
+                Please choose one of the options below to proceed with
+                registration.
+              </Typography>
+              <CardActions
+                sx={{
+                  display: "flex",
+                  flexDirection: "column",
+                  gap: 2,
+                }}
+              >
+                <Button
+                  variant="contained"
+                  startIcon={<AccountBalanceIcon />}
+                  sx={{
+                    width: "100%",
+                    height: "50px",
+                    fontSize: "16px",
+                    background: "linear-gradient(90deg, #5FD2D8, #3982E6)",
+                    color: "#FFF",
+                    "&:hover": {
+                      background: "linear-gradient(90deg, #3982E6, #5FD2D8)",
+                    },
+                  }}
+                  onClick={() => {
+                    //TODO
+                  }}
                 >
-                    <Typography
-                        color="#FFF"
-                        textAlign="center"
-                        fontFamily="Montserrat"
-                        fontSize={ecell}
-                        fontStyle="normal"
-                        fontWeight="700"
-                        lineHeight="normal"
-                    >
-                        E-CELL IIT HYDERABAD
-                    </Typography>
-
-                    <Typography
-                        color="#FFF"
-                        textAlign="center"
-                        fontFamily="Montserrat"
-                        fontSize={presents}
-                        fontStyle="normal"
-                        fontWeight="700"
-                        lineHeight="41.968px"
-                        textTransform="uppercase"
-                    >
-                        PRESENTS
-                    </Typography>
-
-                    <Typography
-                        sx={{
-                            fontWeight: "700",
-                            color: "white",
-                            fontFamily: "Montserrat",
-                            fontStyle: "normal",
-                            lineSpacing: "-1.14px",
-                            background:
-                                "-webkit-linear-gradient(180deg, #5FD2D8 30%, #3982E6 90%)",
-                            WebkitBackgroundClip: "text",
-                            WebkitTextFillColor: "transparent",
-                            textAlign: "center",
-                            fontSize: fair,
-                        }}
-                    >
-                        E-MERGE &apos;24
-                    </Typography>
-
-                    <Button
-                        onClick={handleOpen}
-                        sx={{
-                            padding: padding,
-                            textAlign: "center",
-                            marginTop: "2vw",
-                            fontSize: isLargeScreen ? "1.3rem" : "1rem",
-                            textTransform: "capitalize",
-                            fontWeight: "lighter",
-                            border: "2.439px solid #5FD2D8",
-                            borderRadius: "10px",
-                            boxShadow: "0px 0px 27.979px 3.497px #61E0FD;",
-                            color: "white",
-                        }}
-                    >
-                        <Typography
-                            color="#FFF"
-                            textAlign="center"
-                            fontFamily="Montserrat"
-                            fontSize="32px"
-                            fontStyle="normal"
-                            fontWeight="500"
-                            lineHeight="normal"
-                            textTransform="capitalize"
-                        >
-                            Register Here
-                        </Typography>
-                    </Button>
-                </Box>
-                <Box
-                    sx={{
-                        color: "white",
-                        position: "absolute",
-                        bottom: "10px",
-                        left: "10px",
-                    }}
+                  College Student
+                </Button>
+                <Button
+                  variant="contained"
+                  startIcon={<SchoolIcon />}
+                  sx={{
+                    width: "100%",
+                    height: "50px",
+                    fontSize: "16px",
+                    background: "linear-gradient(90deg, #FF8E53, #FE6B8B)",
+                    color: "#FFF",
+                    "&:hover": {
+                      background: "linear-gradient(90deg, #FE6B8B, #FF8E53)",
+                    },
+                  }}
+                  onClick={() => {
+                    //TODO
+                  }}
                 >
-                    <Box sx={{ display: "flex", gap: ".5rem" }}>
-                        <Link
-                            href="https://www.instagram.com/ecell_iith/?hl=en"
-                            sx={{ color: "white" }}
-                            target="_blank"
-                        >
-                            <InstagramIcon />
-                        </Link>
-                        <Link
-                            href="https://www.linkedin.com/company/entrepreneurship-cell-iit-hyderabad"
-                            sx={{ color: "white" }}
-                            target="_blank"
-                        >
-                            <LinkedInIcon />
-                        </Link>
-                        <Link href="https://twitter.com/ecell_iith" sx={{ color: "white" }}>
-                            <TwitterIcon />
-                        </Link>
-                        <Link
-                            href="https://www.facebook.com/ecell.iithyd/"
-                            sx={{ color: "white" }}
-                            target="_blank"
-                        >
-                            <FacebookIcon />
-                        </Link>
-                        <Link
-                            href="https://www.youtube.com/user/ecelliithyderabad"
-                            sx={{ color: "white" }}
-                            target="_blank"
-                        >
-                            <YouTubeIcon />
-                        </Link>
-                    </Box>
-                </Box>
-            </Box>
+                  School Student
+                </Button>
+              </CardActions>
+            </CardContent>
+          </Card>
+        </Box>
+      </Modal>
 
-            <Modal
-                open={open}
-                onClose={handleClose}
-                aria-labelledby="modal-title"
-                aria-describedby="modal-description"
-                closeAfterTransition
-            >
-                <Box
-                    sx={{
-                        position: 'absolute',
-                        top: '50%',
-                        left: '50%',
-                        transform: 'translate(-50%, -50%)',
-                        width: isLargeScreen ? 500 : 350,
-                        bgcolor: '#02174b', // Dark solid blue color
-                        borderRadius: '10px',
-                        boxShadow: '0 0 15px rgba(0, 0, 0, 0.5)',
-                        color: '#FFF',
-                        p: 0,
-                        outline: 'none',
-                    }}
-                >
-                    <Card sx={{ borderRadius: '10px', bgcolor: '#261156', color: '#FFF' }}>
-                        <CardContent
-                            sx={{
-                                position: 'relative',
-                                padding: isLargeScreen ? 4 : 3,
-                                textAlign: 'center',
-                            }}
-                        >
-                            <IconButton
-                                onClick={handleClose}
-                                sx={{
-                                    position: 'absolute',
-                                    top: 8,
-                                    right: 8,
-                                    color: '#FFF',
-                                }}
-                            >
-                                <CloseIcon />
-                            </IconButton>
-                            <Typography
-                                id="modal-description"
-                                sx={{ marginBottom: 4 }}
-                            >
-                                Please choose one of the options below to proceed with registration.
-                            </Typography>
-                            <CardActions
-                                sx={{
-                                    display: 'flex',
-                                    flexDirection: 'column',
-                                    gap: 2,
-                                }}
-                            >
-                                <Button
-                                    variant="contained"
-                                    startIcon={<AccountBalanceIcon />}
-                                    sx={{
-                                        width: '100%',
-                                        height: '50px',
-                                        fontSize: '16px',
-                                        background: 'linear-gradient(90deg, #5FD2D8, #3982E6)',
-                                        color: '#FFF',
-                                        '&:hover': {
-                                            background: 'linear-gradient(90deg, #3982E6, #5FD2D8)',
-                                        },
-                                    }}
-                                    onClick={() => {
-                                        //TODO
-                                    }}
-                                >
-                                    College Student
-                                </Button>
-                                <Button
-                                    variant="contained"
-                                    startIcon={<SchoolIcon />}
-                                    sx={{
-                                        width: '100%',
-                                        height: '50px',
-                                        fontSize: '16px',
-                                        background: 'linear-gradient(90deg, #FF8E53, #FE6B8B)',
-                                        color: '#FFF',
-                                        '&:hover': {
-                                            background: 'linear-gradient(90deg, #FE6B8B, #FF8E53)',
-                                        },
-                                    }}
-                                    onClick={() => {
-                                        //TODO
-                                    }}
-                                >
-                                    School Student
-                                </Button>
-                            </CardActions>
-                        </CardContent>
-                    </Card>
-                </Box>
-            </Modal>
-
-            <Box sx={{ position: "relative" }}>
-                {/* <Box
+      <Box sx={{ position: "relative" }}>
+        {/* <Box
           sx={{
             minHeight: "100vh",
 
@@ -366,100 +316,129 @@ function Emegrge() {
           </Typography>
         </Box> */}
 
-                <Box
-                    sx={{
-                        // minHeight: "100vh",
 
-                        display: "flex",
 
-                        flexDirection: "column",
+        <Box
+          sx={{
+             minHeight: "30vh",
 
-                        justifyContent: "center",
+            display: "flex",
 
-                        alignItems: "center",
+            flexDirection: "column",
 
-                        gap: "3rem",
+            justifyContent: "center",
 
-                        zIndex: "2",
-                    }}
-                >
-                    <Typography
-                        color="white"
-                        sx={{
-                            textAlign: "center",
+            alignItems: "center",
 
-                            zIndex: "2",
-                            fontFamily: "Montserrat",
+            gap: "1rem",
 
-                            fontWeight: "900",
+            zIndex: "2",
+          }}
+        >
+         
 
-                            fontSize: isLargeScreen ? "4rem" : "3rem",
+          <Typography
+            variant="body1"
+            color="white"
+            sx={{
+              fontFamily: "Montserrat",
+              textAlign: "center",
 
-                            background:
-                                "-webkit-linear-gradient(180deg, #5FD2D8 30%, #3982E6 90%)",
+              paddingInline: isLargeScreen ? "6rem" : "3rem",
 
-                            WebkitBackgroundClip: "text",
+              fontSize: isLargeScreen ? "2rem" : "1.2rem",
 
-                            WebkitTextFillColor: "transparent",
-                        }}
-                    >
-                        E-MERGE
-                    </Typography>
+              zIndex: "2",
+            }}
+          >
+           The 2nd edition of E-Merge is set to become the hub of meaningful conversations and impactful connections, taking place on 19th october at IIT Hyderabad. This premier event of the Entrepreneurship Cell, IIT Hyderabad is a cornerstone in the evolving landscape of social enterprise and sustainability, catering to passionate students, emerging entrepreneurs, and established leaders alike.
 
-                    <Typography
-                        variant="body1"
-                        color="white"
-                        sx={{
-                            fontFamily: "Montserrat",
-                            textAlign: "center",
+          </Typography>
+        </Box>
 
-                            paddingInline: isLargeScreen ? "6rem" : "3rem",
+        <Box
+          sx={{
+            backgroundImage:
+              "linear-gradient(#BD63C3 10%, #3E15A0 40%, #0e0e0e 100%)",
 
-                            fontSize: isLargeScreen ? "2rem" : "1.2rem",
+            clipPath: "polygon(0 25%, 0% 100%, 42% 100%);",
 
-                            zIndex: "2",
-                        }}
-                    >
-                        StartupFair is a startup exhibition event, welcoming all the top-notch Startups,
-                        Investors, Speakers, Organizations, and attendees from all over India. What sets
-                        it apart is the inclusion of 14 specialized tracks, each dedicated to a unique
-                        sphere of innovation. Whether it&apos;s tech, sustainability, healthcare, or any other
-                        niche, there&apos;s a track tailored precisely to your interests. This event offers
-                        startups an unparalleled opportunity to showcase pioneering products and cultivate
-                        essential connections within a dynamic community.
-                    </Typography>
-                </Box>
+            height: "100vh",
 
-                <Box
-                    sx={{
-                        backgroundImage:
-                            "linear-gradient(#BD63C3 10%, #3E15A0 40%, #0e0e0e 100%)",
+            width: "100%",
 
-                        clipPath: "polygon(0 25%, 0% 100%, 42% 100%);",
+            position: "absolute",
 
-                        height: "100vh",
+            bottom: "0",
 
-                        width: "100%",
+            top:"10%",
 
-                        position: "absolute",
+            left: "0",
 
-                        bottom: "0",
+            zIndex: "1",
+          }}
+        ></Box>
+        <Box height={"300px"}></Box>
+      </Box>
+      <TestCards />
+      <Typography
+  variant="body1"
+  color="white"
+  sx={{
+    fontFamily: "Montserrat",
+    textAlign: "center",
+    paddingInline: isLargeScreen ? "6rem" : "3rem",
+    fontSize: isLargeScreen ? "2rem" : "1.2rem",
+    zIndex: "2",
+  }}
+>
+  
+  <Typography
+    variant="h3" 
+    color="white"
+    fontFamily="Montserrat"
+    fontWeight="bold" 
+    marginBottom="1rem" 
+    marginTop="2rem"
+  >
+   Don’t Miss Out – Join Us!
+  </Typography>
 
-                        left: "0",
+  
+  <Button
+    onClick={handleOpen}
+    sx={{
+      padding: padding,
+      textAlign: "center",
+      marginTop: "2vw",
+      marginBottom:"2rem",
+      fontSize: isLargeScreen ? "1.3rem" : "1rem",
+      textTransform: "capitalize",
+      fontWeight: "lighter",
+      border: "2.439px solid #5FD2D8",
+      borderRadius: "10px",
+      boxShadow: "0px 0px 27.979px 3.497px #61E0FD;",
+      color: "white",
+    }}
+  >
+    <Typography
+      color="#FFF"
+      textAlign="center"
+      fontFamily="Montserrat"
+      fontSize="20px"
+      fontStyle="normal"
+      fontWeight="500"
+      lineHeight="normal"
+      textTransform="capitalize"
+      
+    >
+      Register Here
+    </Typography>
+  </Button>
+</Typography>
 
-                        zIndex: "1",
-                    }}
-                ></Box>
-                <Box
-
-                    height={'300px'}
-                >
-
-                </Box>
-            </Box>
-
-        </div>
-    );
+    </div>
+  );
 }
 
 export default Emegrge;
