@@ -237,7 +237,7 @@ function Emegrge() {
                     },
                   }}
                   onClick={() => {
-                    //TODO
+                    window.open('https://forms.gle/A3zo4VguVE3hHS7g8', '_blank');
                   }}
                 >
                   School Student
