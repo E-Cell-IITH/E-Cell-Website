@@ -218,7 +218,7 @@ function Emegrge() {
                     },
                   }}
                   onClick={() => {
-                    window.open('https://forms.gle/A3zo4VguVE3hHS7g8', '_blank');
+                    window.open('https://forms.gle/6j59NVZv6bnzC3GU6', '_blank');
                   }}
                 >
                   College Student
