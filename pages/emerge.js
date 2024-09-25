@@ -355,7 +355,7 @@ function Emegrge() {
 
           </Typography>
         </Box>
-
+        
         <Box
           sx={{
             backgroundImage:
@@ -366,6 +366,8 @@ function Emegrge() {
             height: "100vh",
 
             width: "100%",
+
+            display:"none",
 
             position: "absolute",
 
@@ -378,7 +380,7 @@ function Emegrge() {
             zIndex: "1",
           }}
         ></Box>
-        <Box height={"300px"}></Box>
+        <Box height={"100px"}></Box>
       </Box>
       <TestCards />
       <Typography
@@ -387,6 +389,7 @@ function Emegrge() {
   sx={{
     fontFamily: "Montserrat",
     textAlign: "center",
+    
     paddingInline: isLargeScreen ? "6rem" : "3rem",
     fontSize: isLargeScreen ? "2rem" : "1.2rem",
     zIndex: "2",
