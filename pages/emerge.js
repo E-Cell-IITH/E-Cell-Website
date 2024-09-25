@@ -1,3 +1,4 @@
+"use client"
 import React, { useRef, useEffect, useState } from "react";
 
 import Navbar from "../components/first";
@@ -28,6 +29,8 @@ import IconButton from "@mui/material/IconButton";
 import CloseIcon from "@mui/icons-material/Close";
 import SchoolIcon from "@mui/icons-material/School";
 import AccountBalanceIcon from "@mui/icons-material/AccountBalance";
+import Carousel from "react-material-ui-carousel"
+import BorderContainer from "../components/ESummt/BorderContainer";
 import styles from "../styles/startupfair.module.css";
 import { Link } from "@mui/material";
 import InstagramIcon from "@mui/icons-material/Instagram";
@@ -36,6 +39,7 @@ import TwitterIcon from "@mui/icons-material/Twitter";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import YouTubeIcon from "@mui/icons-material/YouTube";
 import TestCards from "../components/ui/TestCards";
+
 // import Carousel from "../components/Carousel";
 
 /* 
@@ -44,7 +48,23 @@ const slides=["https://i.ibb.co/ncrXc2V/1.png",
   "https://i.ibb.co/XXR8kzF/3.png",
   "https://i.ibb.co/yg7BSdM/4.png"]
  */
-
+  const gallery = [
+    "esummit/gallery/20231105_113737.jpg",
+    "esummit/gallery/20231105_114219.jpg",
+    "esummit/gallery/20231105_130848.jpg",
+    "esummit/gallery/Copy of 20220929_122820.jpg",
+    "esummit/gallery/DJI_20231105_162001_538.jpg",
+    "esummit/gallery/DSC02192.jpg",
+    "esummit/gallery/DSC02197.jpg",
+    "esummit/gallery/DSC02199.jpg",
+    "esummit/gallery/DSC02200.jpg",
+    "esummit/gallery/DSC02202.jpg",
+    "esummit/gallery/DSC02211.jpg",
+    "esummit/gallery/DSC02219.jpg",
+    "esummit/gallery/IMG_2679.jpg",
+    "esummit/gallery/IMG_2696.jpg",
+    "esummit/gallery/IMG_2802.jpg",
+  ];
 function Emegrge() {
   const parent = useRef();
 
@@ -439,6 +459,33 @@ function Emegrge() {
     </Typography>
   </Button>
 </Typography>
+<Carousel
+              animation="fade"
+              duration={10}
+              autoPlay={true}
+              navButtonsAlwaysInvisible={true}
+              infiniteLoop={true}
+            >
+              {gallery.map((i, index) => {
+                return (
+                  <center key={index}>
+                    <BorderContainer
+                      heightcss="h-[14rem] sm:h-[30rem] lg:h-[32rem] 2xl:h-[36rem]"
+                      widthcss="w-[21rem] sm:w-[45rem] lg:w-[48rem] 2xl:w-[54rem]"
+                      marginleftcss="ml-[14rem] sm:ml-[45rem] lg:ml-[48rem] 2xl:ml-[54rem]"
+                      margintopcss="mt-[21rem] sm:mt-[30rem] lg:mt-[32rem] 2xl:mt-[36rem] "
+                    >
+                      <div className="flex flex-row gap-[2rem] align-center justify-center my-[auto] mx-[8%] relative w-full z-[-12]">
+                        <div className="flex flex-[2] items-center">
+                          <img src={i} />
+                        </div>
+                      </div>
+                    </BorderContainer>
+                  </center>
+                );
+              })}
+            </Carousel>
+            <div className="h-[5rem]"></div>
 
     </div>
   );
