@@ -28,14 +28,8 @@ import IconButton from "@mui/material/IconButton";
 import CloseIcon from "@mui/icons-material/Close";
 import SchoolIcon from "@mui/icons-material/School";
 import AccountBalanceIcon from "@mui/icons-material/AccountBalance";
-import styles from "../styles/startupfair.module.css";
-import { Link } from "@mui/material";
-import InstagramIcon from "@mui/icons-material/Instagram";
-import LinkedInIcon from "@mui/icons-material/LinkedIn";
-import TwitterIcon from "@mui/icons-material/Twitter";
-import FacebookIcon from "@mui/icons-material/Facebook";
-import YouTubeIcon from "@mui/icons-material/YouTube";
 import TestCards from "../components/ui/TestCards";
+import Head from "next/head";
 // import Carousel from "../components/Carousel";
 
 /* 
@@ -66,6 +60,21 @@ function Emegrge() {
 
   return (
     <div ref={parent}>
+      <Head>
+        <title>
+          E-MERGE 2024 | E-Cell IIT Hyderabad
+        </title>
+        <meta
+          property="og:description"
+          name="description"
+          content="The 2nd edition of E-Merge is set to become the hub of meaningful conversations and impactful connections, taking place on 19th october at IIT Hyderabad. This premier event of the Entrepreneurship Cell, IIT Hyderabad is a cornerstone in the evolving landscape of social enterprise and sustainability, catering to passionate students, emerging entrepreneurs, and established leaders alike."
+        />
+        <meta
+          name="google-site-verification"
+          content="agHaKoDcApHadKU7BhRCOJK0w5SRZtQCG9YxNKZBGvc"
+        />
+      </Head>
+
       <Box sx={{ position: "absolute", top: "60px", left: "80px" }}>
         <Image src={EcellLogo} alt="logo" />
       </Box>
@@ -249,75 +258,6 @@ function Emegrge() {
       </Modal>
 
       <Box sx={{ position: "relative" }}>
-        {/* <Box
-          sx={{
-            minHeight: "100vh",
-
-            display: "flex",
-
-            flexDirection: "column",
-
-            justifyContent: "center",
-
-            alignItems: "center",
-
-            gap: "1rem",
-
-            zIndex: "2",
-          }}
-        >
-          <Typography
-            color="white"
-            textAlign="center"
-            fontFamily="Montserrat"
-            fontStyle="normal"
-            lineHeight="normal"
-            textTransform="uppercase"
-            sx={{
-              textAlign: "center",
-
-              zIndex: "2",
-
-              fontWeight: 700,
-
-              fontSize: isLargeScreen ? "4rem" : "3rem",
-            }}
-          >
-            E-SUMMIT 2024
-          </Typography>
-
-          <Typography
-            variant="body1"
-            color="white"
-            fontFamily="Montserrat"
-            sx={{
-              textAlign: "center",
-
-              paddingInline: isLargeScreen ? "6rem" : "3rem",
-
-              paddingBottom: "2rem",
-
-              fontSize: isLargeScreen ? "2rem" : "1.2rem",
-              // fontSize: "32px",
-
-              zIndex: "2",
-            }}
-          >
-            The highlight of E-Cell&apos;s calendar! This event bridges
-            academia, venture capitalists, and inventive entrepreneurs, bringing
-            together early-stage thinkers, students, corporate leaders, and
-            startups from every corner of the country. Experience a vibrant mix
-            of competitions, workshops, a delectable food festival, enlightening
-            talks, engaging panel discussions, and alumni networking. The
-            standout feature? A three-month pitching competition, offering
-            winners the chance to showcase their innovative ideas before
-            respected industry experts and notable speakers. Join us in shaping
-            the future of entrepreneurship!
-          </Typography>
-        </Box> */}
-
-
-
         <Box
           sx={{
             minHeight: "30vh",
