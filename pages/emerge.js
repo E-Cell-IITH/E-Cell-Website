@@ -485,7 +485,7 @@ function Emegrge() {
                 );
               })}
             </Carousel>
-            <div className="h-[5rem]"></div>
+           
 
     </div>
   );
