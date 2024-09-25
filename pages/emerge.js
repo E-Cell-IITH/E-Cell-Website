@@ -262,6 +262,24 @@ function Emegrge() {
                 >
                   School Student
                 </Button>
+                <Button
+                  variant="contained"
+                  sx={{
+                    width: "100%",
+                    height: "50px",
+                    fontSize: "16px",
+                    background: "linear-gradient(90deg, #FF8E53, #FE6B8B)",
+                    color: "#FFF",
+                    "&:hover": {
+                      background: "linear-gradient(90deg, #FE6B8B, #FF8E53)",
+                    },
+                  }}
+                  onClick={() => {
+                    window.open('https://docs.google.com/forms/d/e/1FAIpQLSeyDSYL538ORpLEjuPpy9BixVK7lBtBUqZsPYUazSg8I74JpA/viewform ', '_blank');
+                  }}
+                >
+                  Others
+                </Button>
               </CardActions>
             </CardContent>
           </Card>
@@ -371,7 +389,7 @@ function Emegrge() {
               zIndex: "2",
             }}
           >
-           The 2nd edition of E-Merge is set to become the hub of meaningful conversations and impactful connections, taking place on 19th october at IIT Hyderabad. This premier event of the Entrepreneurship Cell, IIT Hyderabad is a cornerstone in the evolving landscape of social enterprise and sustainability, catering to passionate students, emerging entrepreneurs, and established leaders alike.
+           The 2nd edition of E-Merge is set to become the hub of meaningful conversations and impactful connections, taking place on 20th October at IIT Hyderabad. This premier event of the Entrepreneurship Cell, IIT Hyderabad is a cornerstone in the evolving landscape of social enterprise and sustainability, catering to passionate students, emerging entrepreneurs, and established leaders alike.
 
           </Typography>
         </Box>
