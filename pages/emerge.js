@@ -243,7 +243,7 @@ function Emegrge() {
                 >
                   College Student
                 </Button>
-                <Button
+                {/* <Button
                   variant="contained"
                   startIcon={<SchoolIcon />}
                   sx={{
@@ -261,7 +261,7 @@ function Emegrge() {
                   }}
                 >
                   School Student
-                </Button>
+                </Button> */}
                 <Button
                   variant="contained"
                   sx={{
