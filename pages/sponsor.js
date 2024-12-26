@@ -980,17 +980,14 @@ const Sponsor = () => {
               }}
             >
               <CardActionArea
-                href="http://www.remarkskill.com/"
+                href="https://tech-gyan.in/"
                 target="_blank"
               >
                 <CardMedia
                   sx={{
-                    width: 210,
-                    height: 173,
-                    marginTop: 5,
-                    marginLeft: 2,
+                    width: 220, height: 30, marginTop: 13, marginLeft: 2.5 
                   }}
-                  image="https://remarkskill.com/wp-content/uploads/logonew.png"
+                  image="https://tech-gyan.in/wp-content/uploads/2021/02/Untitled-7sdx-1024x199.png"
                   title="RemarkSkill"
                 />
               </CardActionArea>
