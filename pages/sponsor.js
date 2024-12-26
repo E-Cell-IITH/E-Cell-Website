@@ -985,7 +985,7 @@ const Sponsor = () => {
               >
                 <CardMedia
                   sx={{
-                    width: 220, height: 30, marginTop: 13, marginLeft: 2.5 
+                    width: 220, height: 40, marginTop: 13, marginLeft: 2.5 
                   }}
                   image="https://tech-gyan.in/wp-content/uploads/2021/02/Untitled-7sdx-1024x199.png"
                   title="RemarkSkill"
