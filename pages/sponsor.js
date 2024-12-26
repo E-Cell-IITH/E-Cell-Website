@@ -967,7 +967,33 @@ const Sponsor = () => {
             >
               Training Partner{" "}
             </p>
-            <Card
+            
+          </div>
+        </Grid>
+      </Grid>
+      <Grid
+        container
+        display="flex"
+        flexDirection="row"
+        alignItems="center"
+        justifyContent="center"
+        rowSpacing={2}
+        gap={0}
+      >
+        <Grid
+          item
+          xs={7}
+          sm={9}
+          lg={5}
+          sx={{
+            spacing: 2,
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
+          <Card
               sx={{
                 minWidth: 250,
                 maxWidth: 250,
@@ -992,7 +1018,48 @@ const Sponsor = () => {
                 />
               </CardActionArea>
             </Card>
-          </div>
+        </Grid>
+        <Grid
+          item
+          xs={7}
+          sm={9}
+          lg={5}
+          sx={{
+            spacing: 2,
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
+          <Card
+              sx={{
+                minWidth: 250,
+                maxWidth: 250,
+                minHeight: 250,
+                maxHeight: 250,
+                transition: "transform .2s ease-in",
+                "&:hover": {
+                  transform: "scale(1.1)",
+                },
+              }}
+            >
+              <CardActionArea
+                href="http://www.remarkskill.com/"
+                target="_blank"
+              >
+                <CardMedia
+                  sx={{
+                    width: 210,
+                    height: 173,
+                    marginTop: 5,
+                    marginLeft: 2,
+                  }}
+                  image="https://remarkskill.com/wp-content/uploads/logonew.png"
+                  title="RemarkSkill"
+                />
+              </CardActionArea>
+            </Card>
         </Grid>
       </Grid>
       <div className="text-center uppercase border-b-2 mt-20 border-white md:w-[25rem] w-[15rem] mx-auto text-white text-xl md:text-3xl pb-2 mb-10  pt-12">
