@@ -9,23 +9,32 @@ import styles from '../styles/workshoppage.module.css';
 export default function Home() {
   const workshopslist = [
     {
-      title: "REMARKSKILL WORKSHOP SERIES<br/> VENUE: IIT HYDERABAD", //HTML code works here
+      title: "TECHGYAN TECHNOLOGIES WORKSHOP SERIES<br/> VENUE: IIT HYDERABAD", //HTML code works here
       description: "", //can even give description
       image:
-        "https://res.cloudinary.com/dn8obuhkt/image/upload/v1701162533/PHOTO-2023-11-28-12-53-29_nb7rel.jpg",
-      link: "https://tbytes.mojo.page/iith40", // registration link
+        "/image.png",
+      link: "https://tech-gyan.in/workshop-iit-hyderabad-checkout/", // registration link
       height: 450, //height and width of image
       width: 536,
     },
-    {
-      title: "REMARKSKILL WORKSHOP SERIES<br/> VENUE: IIT HYDERABAD", //HTML code works here
-      description: "", //can even give description
-      image:
-        "https://res.cloudinary.com/dboy04n6m/image/upload/v1702277876/IIT_HYD_AD_2024_1_gmwpi9.jpg",
-      link: "http://www.remarkskill.com/hyderabad", // registration link
-      height: 450, //height and width of image
-      width: 536,
-    },
+    // {
+    //   title: "REMARKSKILL WORKSHOP SERIES<br/> VENUE: IIT HYDERABAD", //HTML code works here
+    //   description: "", //can even give description
+    //   image:
+    //     "https://res.cloudinary.com/dn8obuhkt/image/upload/v1701162533/PHOTO-2023-11-28-12-53-29_nb7rel.jpg",
+    //   link: "https://tbytes.mojo.page/iith40", // registration link
+    //   height: 450, //height and width of image
+    //   width: 536,
+    // },
+    // {
+    //   title: "REMARKSKILL WORKSHOP SERIES<br/> VENUE: IIT HYDERABAD", //HTML code works here
+    //   description: "", //can even give description
+    //   image:
+    //     "https://res.cloudinary.com/dboy04n6m/image/upload/v1702277876/IIT_HYD_AD_2024_1_gmwpi9.jpg",
+    //   link: "http://www.remarkskill.com/hyderabad", // registration link
+    //   height: 450, //height and width of image
+    //   width: 536,
+    // },
   ];
 
   return <>
