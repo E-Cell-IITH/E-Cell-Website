@@ -128,7 +128,7 @@ function StartupFair() {
               fontSize: fair,
             }}
           >
-            STARTUP FAIR &apos;24
+            STARTUP FAIR &apos;25
           </Typography>
 
           <Link href="/register">
@@ -241,7 +241,7 @@ function StartupFair() {
               fontSize: isLargeScreen ? "4rem" : "3rem",
             }}
           >
-            E-SUMMIT 2024
+            E-SUMMIT 2025
           </Typography>
 
           <Typography
