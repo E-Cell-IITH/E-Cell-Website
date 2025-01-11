@@ -1,10 +1,10 @@
 import Head from "next/head";
-import Competitions from "../components/ESummt/Competitions";
+import Competitions from "../../components/ESummt/Competitions";
 import {
   AboutandTheme,
   StartupfairandGallery,
-} from "../components/ESummt/Components";
-import First from "../components/esummit";
+} from "../../components/ESummt/Components";
+import First from "../../components/esummit";
 
 export default function Home() {
   return (
