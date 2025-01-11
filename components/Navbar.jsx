@@ -56,17 +56,31 @@ const Navbar = () => {
               Team
             </Link>
           </li>
+
           <li className="navigation__item">
             <Link
-              href="/freshers/map"
+              href="/esummit"
               className="navigation__link"
               onClick={() => {
                 navRef.current.checked = false;
               }}
             >
-              Campus Map
+              E Summit
             </Link>
           </li>
+          <li className="navigation__item">
+            <Link
+              href="/startupfair"
+              className="navigation__link"
+              onClick={() => {
+                navRef.current.checked = false;
+              }}
+            >
+              Startup Fair
+            </Link>
+          </li>
+          
+          
           <li className="navigation__item">
             <Link
               href="/mun"
@@ -79,6 +93,7 @@ const Navbar = () => {
               MUN
             </Link>
           </li>
+
           <li className="navigation__item">
             <Link
               href="/sponsor"
@@ -125,28 +140,19 @@ const Navbar = () => {
               E-Merge
             </Link>
           </li>
+          
           <li className="navigation__item">
             <Link
-              href="/startupfair"
+              href="/freshers/map"
               className="navigation__link"
               onClick={() => {
                 navRef.current.checked = false;
               }}
             >
-              Startup Fair
+              Campus Map
             </Link>
           </li>
-          <li className="navigation__item">
-            <Link
-              href="/esummit"
-              className="navigation__link"
-              onClick={() => {
-                navRef.current.checked = false;
-              }}
-            >
-              E Summit
-            </Link>
-          </li>
+          
         </ul>
       </nav>
     </div>
