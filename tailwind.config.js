@@ -15,7 +15,7 @@ module.exports = {
   ],
   theme: {
     fontFamily: {
-      sans: ["montserrat", ...defaultTheme.fontFamily.sans],
+      sans: ["Inter","montserrat", ...defaultTheme.fontFamily.sans],
       serif: [...defaultTheme.fontFamily.serif],
       mono: [...defaultTheme.fontFamily.mono],
     },
