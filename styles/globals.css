@@ -306,7 +306,33 @@ body {
 }
 
 
+@font-face {
+  font-family: "azonix";
+  src: url("/fonts/Azonix.ttf") ;
+}
 
+.azonix{
+  font-family: azonix;
+}
+
+@font-face {
+  font-family: "genome";
+  src: url("/fonts/genome.ttf") ;
+}
+
+.genome{
+  font-family: genome;
+}
+
+
+@font-face {
+  font-family: "cyber";
+  src: url("/fonts/cybercity.otf") ;
+}
+
+.cyber{
+  font-family: cyber;
+}
 
 @media screen and (max-width: 1024px) {
   .button-googleMap {
@@ -314,3 +340,10 @@ body {
     font-size: 6px;
   }
 }
+
+
+  @media (max-width: 768px) {
+    .responsive-letter {
+      font-size: inherit !important; /* Match parent size on smaller screens */
+    }
+  }
