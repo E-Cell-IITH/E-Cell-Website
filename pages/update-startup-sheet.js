@@ -2,6 +2,7 @@ import { Button } from "@mui/material";
 import { useEffect } from "react";
 import { auth, provider, signInWithPopup } from "../lib/firebase";
 import { use } from "react";
+import axios from "axios";
 
 function UpdateStartupSheet() {
   const update = async () => {
@@ -19,6 +20,7 @@ function UpdateStartupSheet() {
           }
         );
       } catch (error) {
+        console.log(error);
         alert("Error updating startup sheet"); 
       }
     }
