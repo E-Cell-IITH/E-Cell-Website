@@ -7,6 +7,7 @@ import "@fontsource/josefin-sans";
 
 import "@fontsource/montserrat";
 import { Divider } from "@mui/material";
+import Head from "next/head";
 
 const ESummitPage = () => {
   const handleRegisterClick = () => {
