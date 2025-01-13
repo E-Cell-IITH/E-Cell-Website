@@ -53,101 +53,95 @@ const ESummitPage = () => {
 
       {/* E-SUMMIT */}
       <Typography
-  variant="h2"
-  sx={{
-    fontFamily: "genome, sans-serif", // Default font family
-    letterSpacing: "2px",
-    textTransform: "uppercase",
-    fontSize: {
-      xs: "30px", // Smaller font size for extra small screens
-      sm: "40px", // Slightly larger font for small screens
-      md: "50px", // Default font size for medium screens and up
-    },
-  }}
->
-  <span
-    style={{
-      fontFamily: "genome, sans-serif",
-      marginRight: "10px",
-      fontSize: "inherit", // Inherit from Typography
-    }}
-  >
-    E
-  </span>
-  <span
-    style={{
-      fontFamily: "cybercity",
-      marginRight: "8px",
-      fontSize: "inherit", // Inherit from Typography
-    }}
-  >
-    -
-  </span>
-  <span
-    style={{
-      fontFamily: "azonix",
-      fontSize: "70px",
-      marginRight: "10px",
-      display: "inline-block",
-    }}
-    className="responsive-letter"
-  >
-    S
-  </span>
-  <span
-    style={{
-      fontFamily: "azonix",
-      fontSize: "70px",
-      color: "#FF5100",
-      marginRight: "10px",
-      display: "inline-block",
-    }}
-    className="responsive-letter"
-  >
-    U
-  </span>
-  <span
-    style={{
-      fontFamily: "genome, sans-serif",
-      marginRight: "10px",
-      fontSize: "inherit", // Inherit from Typography
-    }}
-  >
-    M
-  </span>
-  <span
-    style={{
-      fontFamily: "genome, sans-serif",
-      marginRight: "10px",
-      fontSize: "inherit", // Inherit from Typography
-    }}
-  >
-    M
-  </span>
-  <span
-    style={{
-      fontFamily: "genome, sans-serif",
-      marginRight: "10px",
-      fontSize: "inherit", // Inherit from Typography
-    }}
-  >
-    I
-  </span>
-  <span
-    style={{
-      fontFamily: "genome, sans-serif",
-      fontSize: "inherit", // Inherit from Typography
-    }}
-  >
-    T
-  </span>
-</Typography>
-
-
-
-
-
-
+        variant="h2"
+        sx={{
+          fontFamily: "genome, sans-serif", // Default font family
+          letterSpacing: "2px",
+          textTransform: "uppercase",
+          fontSize: {
+            xs: "30px", // Smaller font size for extra small screens
+            sm: "40px", // Slightly larger font for small screens
+            md: "50px", // Default font size for medium screens and up
+          },
+        }}
+      >
+        <span
+          style={{
+            fontFamily: "genome, sans-serif",
+            marginRight: "10px",
+            fontSize: "inherit", // Inherit from Typography
+          }}
+        >
+          E
+        </span>
+        <span
+          style={{
+            fontFamily: "cybercity",
+            marginRight: "8px",
+            fontSize: "inherit", // Inherit from Typography
+          }}
+        >
+          -
+        </span>
+        <span
+          style={{
+            fontFamily: "azonix",
+            fontSize: "70px",
+            marginRight: "10px",
+            display: "inline-block",
+          }}
+          className="responsive-letter"
+        >
+          S
+        </span>
+        <span
+          style={{
+            fontFamily: "azonix",
+            fontSize: "70px",
+            color: "#FF5100",
+            marginRight: "10px",
+            display: "inline-block",
+          }}
+          className="responsive-letter"
+        >
+          U
+        </span>
+        <span
+          style={{
+            fontFamily: "genome, sans-serif",
+            marginRight: "10px",
+            fontSize: "inherit", // Inherit from Typography
+          }}
+        >
+          M
+        </span>
+        <span
+          style={{
+            fontFamily: "genome, sans-serif",
+            marginRight: "10px",
+            fontSize: "inherit", // Inherit from Typography
+          }}
+        >
+          M
+        </span>
+        <span
+          style={{
+            fontFamily: "genome, sans-serif",
+            marginRight: "10px",
+            fontSize: "inherit", // Inherit from Typography
+          }}
+        >
+          I
+        </span>
+        <span
+          style={{
+            fontFamily: "genome, sans-serif",
+            fontSize: "inherit", // Inherit from Typography
+          }}
+        >
+          T
+        </span>
+      </Typography>
 
       {/* Year */}
       <Typography
