@@ -10,7 +10,7 @@ import { Divider } from "@mui/material";
 
 const ESummitPage = () => {
   const handleRegisterClick = () => {
-    alert("Register button clicked!");
+    alert("Registration will start soon. Stay tuned!");
     // Add your redirect or functionality here
   };
 
