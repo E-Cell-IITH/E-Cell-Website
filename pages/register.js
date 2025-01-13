@@ -265,7 +265,7 @@ const Register = () => {
 
     try {
       fetchData = await axios.post(
-        `https://register.ecelliith.org.in/register`,
+        `${process.env.NEXT_PUBLIC_BASE_URL}/register`,
         {
           data: copyData,
           token: idToken,

@@ -50,8 +50,8 @@ function StartupFair() {
     try {
       const result = await signInWithPopup(auth, provider);
       const user = result.user;
-      router.push("/register");
       localStorage.setItem("user", JSON.stringify(user));
+      router.push("/register");
     } catch (error) {
       console.error("Error during login:", error);
     }
