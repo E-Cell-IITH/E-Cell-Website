@@ -446,11 +446,6 @@
   resolved "https://registry.npmjs.org/@humanwhocodes/object-schema/-/object-schema-1.2.1.tgz"
   integrity sha512-ZnQMnLV4e7hDlUvw8H+U8ASL02SS2Gn6+9Ac3wGGLIe7+je2AeAOxPY+izIPJDfFDb7eDjev0Us8MO1iFRN8hA==
 
-"@img/sharp-win32-x64@0.33.0":
-  version "0.33.0"
-  resolved "https://registry.npmjs.org/@img/sharp-win32-x64/-/sharp-win32-x64-0.33.0.tgz"
-  integrity sha512-i3DtP/2ce1yKFj4OzOnOYltOEL/+dp4dc4dJXJBv6god1AFTcmkaA99H/7SwOmkCOBQkbVvA3lCGm3/5nDtf9Q==
-
 "@jridgewell/gen-mapping@^0.3.0", "@jridgewell/gen-mapping@^0.3.2":
   version "0.3.3"
   resolved "https://registry.npmjs.org/@jridgewell/gen-mapping/-/gen-mapping-0.3.3.tgz"
@@ -669,10 +664,10 @@
     react-transition-group "^4.4.2"
     rifm "^0.12.1"
 
-"@next/env@14.2.21":
-  version "14.2.21"
-  resolved "https://registry.npmjs.org/@next/env/-/env-14.2.21.tgz"
-  integrity sha512-lXcwcJd5oR01tggjWJ6SrNNYFGuOOMB9c251wUNkjCpkoXOPkDeF/15c3mnVlBqrW4JJXb2kVxDFhC4GduJt2A==
+"@next/env@14.2.23":
+  version "14.2.23"
+  resolved "https://registry.npmjs.org/@next/env/-/env-14.2.23.tgz"
+  integrity sha512-CysUC9IO+2Bh0omJ3qrb47S8DtsTKbFidGm6ow4gXIG6reZybqxbkH2nhdEm1tC8SmgzDdpq3BIML0PWsmyUYA==
 
 "@next/eslint-plugin-next@12.2.5":
   version "12.2.5"
@@ -681,10 +676,15 @@
   dependencies:
     glob "7.1.7"
 
-"@next/swc-win32-x64-msvc@14.2.21":
-  version "14.2.21"
-  resolved "https://registry.npmjs.org/@next/swc-win32-x64-msvc/-/swc-win32-x64-msvc-14.2.21.tgz"
-  integrity sha512-sT6+llIkzpsexGYZq8cjjthRyRGe5cJVhqh12FmlbxHqna6zsDDK8UNaV7g41T6atFHCJUPeLb3uyAwrBwy0NA==
+"@next/swc-linux-x64-gnu@14.2.23":
+  version "14.2.23"
+  resolved "https://registry.npmjs.org/@next/swc-linux-x64-gnu/-/swc-linux-x64-gnu-14.2.23.tgz"
+  integrity sha512-Ybfqlyzm4sMSEQO6lDksggAIxnvWSG2cDWnG2jgd+MLbHYn2pvFA8DQ4pT2Vjk3Cwrv+HIg7vXJ8lCiLz79qoQ==
+
+"@next/swc-linux-x64-musl@14.2.23":
+  version "14.2.23"
+  resolved "https://registry.npmjs.org/@next/swc-linux-x64-musl/-/swc-linux-x64-musl-14.2.23.tgz"
+  integrity sha512-OSQX94sxd1gOUz3jhhdocnKsy4/peG8zV1HVaW6DLEbEmRRtUCUQZcKxUD9atLYa3RZA+YJx+WZdOnTkDuNDNA==
 
 "@nodelib/fs.scandir@2.1.5":
   version "2.1.5"
@@ -760,18 +760,12 @@
     "@types/react" "*"
 
 "@types/react@*", "@types/react@^17.0.0 || ^18.0.0":
-  version "18.0.17"
-  resolved "https://registry.npmjs.org/@types/react/-/react-18.0.17.tgz"
-  integrity sha512-38ETy4tL+rn4uQQi7mB81G7V1g0u2ryquNmsVIOKUAEIDK+3CUjZ6rSRpdvS99dNBnkLFL83qfmtLacGOTIhwQ==
+  version "18.3.18"
+  resolved "https://registry.npmjs.org/@types/react/-/react-18.3.18.tgz"
+  integrity sha512-t4yC+vtgnkYjNSKlFx1jkAhH8LgTo2N/7Qvi83kdEaUtMDiwpbLAktKDaAMlRcJ5eSxZkH74eEGt1ky31d7kfQ==
   dependencies:
     "@types/prop-types" "*"
-    "@types/scheduler" "*"
     csstype "^3.0.2"
-
-"@types/scheduler@*":
-  version "0.16.2"
-  resolved "https://registry.npmjs.org/@types/scheduler/-/scheduler-0.16.2.tgz"
-  integrity sha512-hppQEBDmlwhFAXKJX2KnWLYu5yMfi91yazPb2l+lbJiwW+wdo1gNeRA+3RgNSO39WYX2euey41KEwnqesU2Jew==
 
 "@typescript-eslint/parser@^5.21.0":
   version "5.33.1"
@@ -2329,12 +2323,12 @@ natural-compare@^1.4.0:
   resolved "https://registry.npmjs.org/natural-compare/-/natural-compare-1.4.0.tgz"
   integrity sha512-OWND8ei3VtNC9h7V60qff3SVobHr996CTwgxubgyQYEpg290h9J0buyECNNJexkFm5sOajh5G116RYA1c8ZMSw==
 
-next@^14.2.21:
-  version "14.2.21"
-  resolved "https://registry.npmjs.org/next/-/next-14.2.21.tgz"
-  integrity sha512-rZmLwucLHr3/zfDMYbJXbw0ZeoBpirxkXuvsJbk7UPorvPYZhP7vq7aHbKnU7dQNCYIimRrbB2pp3xmf+wsYUg==
+next@^14.2.23:
+  version "14.2.23"
+  resolved "https://registry.npmjs.org/next/-/next-14.2.23.tgz"
+  integrity sha512-mjN3fE6u/tynneLiEg56XnthzuYw+kD7mCujgVqioxyPqbmiotUCGJpIZGS/VaPg3ZDT1tvWxiVyRzeqJFm/kw==
   dependencies:
-    "@next/env" "14.2.21"
+    "@next/env" "14.2.23"
     "@swc/helpers" "0.5.5"
     busboy "1.6.0"
     caniuse-lite "^1.0.30001579"
@@ -2342,15 +2336,15 @@ next@^14.2.21:
     postcss "8.4.31"
     styled-jsx "5.1.1"
   optionalDependencies:
-    "@next/swc-darwin-arm64" "14.2.21"
-    "@next/swc-darwin-x64" "14.2.21"
-    "@next/swc-linux-arm64-gnu" "14.2.21"
-    "@next/swc-linux-arm64-musl" "14.2.21"
-    "@next/swc-linux-x64-gnu" "14.2.21"
-    "@next/swc-linux-x64-musl" "14.2.21"
-    "@next/swc-win32-arm64-msvc" "14.2.21"
-    "@next/swc-win32-ia32-msvc" "14.2.21"
-    "@next/swc-win32-x64-msvc" "14.2.21"
+    "@next/swc-darwin-arm64" "14.2.23"
+    "@next/swc-darwin-x64" "14.2.23"
+    "@next/swc-linux-arm64-gnu" "14.2.23"
+    "@next/swc-linux-arm64-musl" "14.2.23"
+    "@next/swc-linux-x64-gnu" "14.2.23"
+    "@next/swc-linux-x64-musl" "14.2.23"
+    "@next/swc-win32-arm64-msvc" "14.2.23"
+    "@next/swc-win32-ia32-msvc" "14.2.23"
+    "@next/swc-win32-x64-msvc" "14.2.23"
 
 no-case@^3.0.4:
   version "3.0.4"
@@ -2627,7 +2621,14 @@ quick-lru@^5.1.1:
   resolved "https://registry.npmjs.org/quick-lru/-/quick-lru-5.1.1.tgz"
   integrity sha512-WuyALRjWPDGtt/wzJiadO5AXY+8hZ80hVpe6MyivgraREW751X3SbhRvG3eLKOYN+8VEvqLcf3wdnt44Z4S4SA==
 
-"react-dom@^16.0.0 || ^17.0.0 || ^18.0.0", "react-dom@^17.0.0 || ^18.0.0", "react-dom@^17.0.2 || ^18.0.0", react-dom@^18.0.0, react-dom@^18.2.0, "react-dom@>= 16.8.0", react-dom@>=16.6.0, "react-dom@>=16.8 || ^17.0.0", react-dom@18.2.0:
+react-device-detect@^2.2.3:
+  version "2.2.3"
+  resolved "https://registry.npmjs.org/react-device-detect/-/react-device-detect-2.2.3.tgz"
+  integrity sha512-buYY3qrCnQVlIFHrC5UcUoAj7iANs/+srdkwsnNjI7anr3Tt7UY6MqNxtMLlr0tMBied0O49UZVK8XKs3ZIiPw==
+  dependencies:
+    ua-parser-js "^1.0.33"
+
+"react-dom@^16.0.0 || ^17.0.0 || ^18.0.0", "react-dom@^17.0.0 || ^18.0.0", "react-dom@^17.0.2 || ^18.0.0", react-dom@^18.0.0, react-dom@^18.2.0, "react-dom@>= 0.14.0", "react-dom@>= 16.8 || ^18.2.0", "react-dom@>= 16.8.0", react-dom@>=16.6.0, "react-dom@>=16.8 || ^17.0.0", react-dom@18.2.0:
   version "18.2.0"
   resolved "https://registry.npmjs.org/react-dom/-/react-dom-18.2.0.tgz"
   integrity sha512-6IMTriUmvsjHUjNtEDudZfuDQUoWXVxKHhlEGSk81n4YFS+r/Kl99wXiwlVXtPBtJenozv2P+hxDsw9eA7Xo6g==
@@ -2692,6 +2693,11 @@ react-material-ui-carousel@^3.4.2:
     "@mui/system" "^5.4.1"
     framer-motion "^4.1.17"
 
+react-next-tilt@^0.4.3:
+  version "0.4.3"
+  resolved "https://registry.npmjs.org/react-next-tilt/-/react-next-tilt-0.4.3.tgz"
+  integrity sha512-zvvYa0g1xRGEAE2q7HHbQ68NCShrbhsKkczQ2IsoQulgXxbEIN9GILzGv4KvqvvCN/cZlSv8k9phpsG27RmSoQ==
+
 react-responsive-carousel@^3.2.23:
   version "3.2.23"
   resolved "https://registry.npmjs.org/react-responsive-carousel/-/react-responsive-carousel-3.2.23.tgz"
@@ -2716,7 +2722,7 @@ react-transition-group@^4.4.2, react-transition-group@^4.4.5:
     loose-envify "^1.4.0"
     prop-types "^15.6.2"
 
-react@*, "react@^16.0.0 || ^17.0.0 || ^18.0.0", "react@^17.0.0 || ^18.0.0", "react@^17.0.1 || ^18.0.0", "react@^17.0.2 || ^18.0.0", react@^18.0.0, react@^18.2.0, "react@>= 16.8.0", "react@>= 16.8.0 || 17.x.x || ^18.0.0-0", react@>=15, react@>=16.6.0, react@>=16.8, "react@>=16.8 || ^17.0.0", react@>=16.8.0, react@>=16.8.6, react@18.2.0:
+react@*, "react@^16.0.0 || ^17.0.0 || ^18.0.0", "react@^17.0.0 || ^18.0.0", "react@^17.0.1 || ^18.0.0", "react@^17.0.2 || ^18.0.0", react@^18.0.0, react@^18.2.0, "react@>= 0.14.0", "react@>= 16.8 || ^18.2.0", "react@>= 16.8.0", "react@>= 16.8.0 || 17.x.x || ^18.0.0-0", react@>=15, react@>=16.6.0, react@>=16.8, "react@>=16.8 || ^17.0.0", react@>=16.8.0, react@>=16.8.6:
   version "18.2.0"
   resolved "https://registry.npmjs.org/react/-/react-18.2.0.tgz"
   integrity sha512-/3IjMdb2L9QbBdWiW5e3P2/npwMBaU9mHCSCUzNln0ZCYbcfTsGbTJrU/kGemdH2IWmB2ioZ+zkxtmq6g09fGQ==
@@ -3155,6 +3161,11 @@ type-fest@^0.20.2:
   resolved "https://registry.npmjs.org/typescript/-/typescript-5.1.3.tgz"
   integrity sha512-XH627E9vkeqhlZFQuL+UsyAXEnibT0kWR2FWONlr4sTjvxyJYnyefgrkyECLzM5NenmKzRAy2rR/OlYLA1HkZw==
 
+ua-parser-js@^1.0.33:
+  version "1.0.40"
+  resolved "https://registry.npmjs.org/ua-parser-js/-/ua-parser-js-1.0.40.tgz"
+  integrity sha512-z6PJ8Lml+v3ichVojCiB8toQJBuwR42ySM4ezjXIqXK3M0HczmKQ3LF4rhU55PfD99KEEXQG6yb7iOMyvYuHew==
+
 unbox-primitive@^1.0.2:
   version "1.0.2"
   resolved "https://registry.npmjs.org/unbox-primitive/-/unbox-primitive-1.0.2.tgz"
@@ -3194,6 +3205,11 @@ validator@^13.11.0:
   version "13.11.0"
   resolved "https://registry.npmjs.org/validator/-/validator-13.11.0.tgz"
   integrity sha512-Ii+sehpSfZy+At5nPdnyMhx78fEoPDkR2XW/zimHEL3MyGJQOCQ7WeP20jPYRz7ZCpcKLB21NxuXHF3bxjStBQ==
+
+web-vitals@^4.2.4:
+  version "4.2.4"
+  resolved "https://registry.npmjs.org/web-vitals/-/web-vitals-4.2.4.tgz"
+  integrity sha512-r4DIlprAGwJ7YM11VZp4R884m0Vmgr6EAKe3P+kO0PPj3Unqyvv59rczf6UiGcb9Z8QxZVcqKNwv/g0WNdWwsw==
 
 which-boxed-primitive@^1.0.2:
   version "1.0.2"
