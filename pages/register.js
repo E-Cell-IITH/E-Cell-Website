@@ -119,7 +119,7 @@ const Field = ({
         name={name}
         value={value}
         onChange={onChange}
-        inputProps={{readOnly: disabled}}
+        inputProps={{ readOnly: disabled }}
         sx={{
           "& .MuiInputBase-input": {
             color: "#7E94F8",
@@ -245,24 +245,8 @@ const Register = () => {
       return;
     }
 
-    var fetchData ;
-
-    try{
-      fetchData = await axios.post(
-        // `https://ecell.kludge.in:3001/input/signup`,
-        `https://register.ecelliith.org.in/register`,
-        {
-          "data": data,
-          "token": idToken
-        }
-      );
-    } 
-    catch (error) {
-      alert("Some error occured! Please try again later.");
-      return;
-    }
-
-
+    var fetchData;
+    const copyData = { ...data };
     setData({
       sname: "",
       fname: "",
@@ -278,6 +262,19 @@ const Register = () => {
       city: "",
       about: "",
     });
+
+    try {
+      fetchData = await axios.post(
+        `https://register.ecelliith.org.in/register`,
+        {
+          data: copyData,
+          token: idToken,
+        }
+      );
+    } catch (error) {
+      alert("Some error occured! Please try again later.");
+      return;
+    }
 
     const data2 = fetchData.data;
     alert(data2.message);
