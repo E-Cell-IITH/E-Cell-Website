@@ -1,6 +1,6 @@
 import CardMedia from "@mui/material/CardMedia";
 import isEmail from "validator/lib/isEmail";
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import { Box, Button, Typography } from "@mui/material";
 import Head from "next/head";
 import { gsap } from "gsap";
@@ -26,6 +26,7 @@ const Field = ({
   onChange,
   isOption,
   options,
+  disabled = false, // Added a disabled prop
 }) => {
   let input = <></>;
   const [selectOpen, setSelectOpen] = useState(false);
@@ -34,93 +35,31 @@ const Field = ({
     setSelectOpen(false);
   };
 
-  if (isOption)
+  if (isOption) {
     input = (
-      <>
-        <FormControl fullWidth variant="standard">
-          <Select
-            required
-            displayEmpty
-            renderValue={(selected) => {
-              if (selected.length === 0) {
-                return <em>{placeholder}</em>;
-              }
-              return selected;
-            }}
-            inputProps={{ "aria-label": "Without label" }}
-            name={name}
-            value={value}
-            onChange={(e) => {
-              setSelectOpen(false);
-              onChange(e);
-            }}
-            open={selectOpen}
-            onOpen={() => {
-              window.addEventListener("scroll", closeMenu);
-              setSelectOpen(true);
-            }}
-            onClose={() => setSelectOpen(false)}
-            sx={{
-              "& .MuiInputBase-input": {
-                color: "#7E94F8",
-                fontFamily: "Montserrat",
-                fontSize: "1.16706rem",
-                fontStyle: "normal",
-                fontWeight: 500,
-                lineHeight: "normal",
-                borderBottom: "2px solid rgba(201, 201, 201, 0.50)",
-              },
-              "& .MuiInputBase-input::placeholder": {
-                color: "#44447A",
-                fontFamily: "Montserrat",
-                fontSize: "0.86881rem",
-                fontStyle: "normal",
-                fontWeight: 500,
-                lineHeight: "normal",
-                opacity: "100%",
-              },
-            }}
-            MenuProps={{
-              PaperProps: {
-                sx: {
-                  "& .MuiMenuItem-root:hover": {
-                    color: "black",
-                  },
-                  "& .Mui-selected": {
-                    color: "black",
-                  },
-                },
-              },
-              disableScrollLock: true,
-            }}
-          >
-            {options.map((el, key) => (
-              <MenuItem
-                sx={{
-                  borderBottom: "1px solid white",
-                  backgroundColor: "#32329B",
-                  color: "white",
-                }}
-                key={key}
-                value={el}
-              >
-                {el}
-              </MenuItem>
-            ))}
-          </Select>
-        </FormControl>
-      </>
-    );
-  else
-    input = (
-      <>
-        <TextField
-          fullWidth
-          placeholder={placeholder}
-          variant="standard"
+      <FormControl fullWidth variant="standard">
+        <Select
+          required
+          displayEmpty
+          renderValue={(selected) => {
+            if (selected.length === 0) {
+              return <em>{placeholder}</em>;
+            }
+            return selected;
+          }}
+          inputProps={{ "aria-label": "Without label" }}
           name={name}
           value={value}
-          onChange={onChange}
+          onChange={(e) => {
+            setSelectOpen(false);
+            onChange(e);
+          }}
+          open={selectOpen}
+          onOpen={() => {
+            window.addEventListener("scroll", closeMenu);
+            setSelectOpen(true);
+          }}
+          onClose={() => setSelectOpen(false)}
           sx={{
             "& .MuiInputBase-input": {
               color: "#7E94F8",
@@ -141,9 +80,69 @@ const Field = ({
               opacity: "100%",
             },
           }}
-        />
-      </>
+          MenuProps={{
+            PaperProps: {
+              sx: {
+                "& .MuiMenuItem-root:hover": {
+                  color: "black",
+                },
+                "& .Mui-selected": {
+                  color: "black",
+                },
+              },
+            },
+            disableScrollLock: true,
+          }}
+        >
+          {options.map((el, key) => (
+            <MenuItem
+              sx={{
+                borderBottom: "1px solid white",
+                backgroundColor: "#32329B",
+                color: "white",
+              }}
+              key={key}
+              value={el}
+            >
+              {el}
+            </MenuItem>
+          ))}
+        </Select>
+      </FormControl>
     );
+  } else {
+    input = (
+      <TextField
+        fullWidth
+        placeholder={placeholder}
+        variant="standard"
+        name={name}
+        value={value}
+        onChange={onChange}
+        inputProps={{ readOnly: disabled }}
+        sx={{
+          "& .MuiInputBase-input": {
+            color: "#7E94F8",
+            fontFamily: "Montserrat",
+            fontSize: "1.16706rem",
+            fontStyle: "normal",
+            fontWeight: 500,
+            lineHeight: "normal",
+            borderBottom: "2px solid rgba(201, 201, 201, 0.50)",
+          },
+          "& .MuiInputBase-input::placeholder": {
+            color: "#44447A",
+            fontFamily: "Montserrat",
+            fontSize: "0.86881rem",
+            fontStyle: "normal",
+            fontWeight: 500,
+            lineHeight: "normal",
+            opacity: "100%",
+          },
+        }}
+      />
+    );
+  }
 
   return (
     <>
@@ -168,6 +167,10 @@ const Field = ({
 };
 
 const Register = () => {
+  const [user, setUser] = useState(null);
+  const router = useRouter();
+  const [idToken, setIdToken] = useState("");
+
   const [data, setData] = useState({
     sname: "",
     fname: "",
@@ -222,6 +225,19 @@ const Register = () => {
     return true;
   }
 
+  useEffect(() => {
+    const storedUser = localStorage.getItem("user");
+    if (storedUser) {
+      const parsedUser = JSON.parse(storedUser);
+      setUser(parsedUser);
+      setData((prev) => ({ ...prev, pocname: parsedUser.displayName }));
+      setData((prev) => ({ ...prev, email: parsedUser.email }));
+      setIdToken(parsedUser.stsTokenManager.accessToken);
+    } else {
+      router.push("/");
+    }
+  }, [router]);
+
   async function handleSubmit(e) {
     e.preventDefault();
 
@@ -229,11 +245,8 @@ const Register = () => {
       return;
     }
 
-    const fetchData = await axios.post(
-      `https://ecell.kludge.in:3001/input/signup`,
-      data
-    );
-
+    var fetchData;
+    const copyData = { ...data };
     setData({
       sname: "",
       fname: "",
@@ -250,10 +263,23 @@ const Register = () => {
       about: "",
     });
 
-    const data2 = fetchData.data;
-    if (data2.alert === true) {
-      alert(data2.message);
+    try {
+      fetchData = await axios.post(
+        `${process.env.NEXT_PUBLIC_BASE_URL}/register`,
+        {
+          data: copyData,
+          token: idToken,
+        }
+      );
+    } catch (error) {
+      alert("Some error occured! Please try again later.");
+      return;
     }
+
+    const data2 = fetchData.data;
+    alert(data2.message);
+
+    router.push("/");
   }
 
   const states = [
@@ -315,6 +341,7 @@ const Register = () => {
       name: "pocname",
       value: data.pocname,
       onChange: onChange,
+      disabled: true,
     },
     {
       label: "Email ID",
@@ -322,6 +349,7 @@ const Register = () => {
       name: "email",
       value: data.email,
       onChange: onChange,
+      disabled: true,
     },
     {
       label: "Contact No.",
@@ -438,7 +466,7 @@ const Register = () => {
                   WebkitTextFillColor: "transparent",
                 }}
               >
-                Tell us about your StartuP...
+                Tell us about your Startup...
               </Typography>
             </Grid>
             <Grid item xl={12} lg={12} md={3} sm={3} xs={3}>
