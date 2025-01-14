@@ -1,15 +1,17 @@
+import Link from "next/link";
+import Image from "next/image";
+import { isMobile } from "react-device-detect";
 
-import Link from "next/link"
-import Image from "next/image"
-import { isMobile } from "react-device-detect"
-
-const Navbar = () => {
-  let ml = isMobile ? "0" : "8vw"
+const EsummitNavbar = () => {
+  let ml = isMobile ? "0" : "8vw";
   return (
     <header>
-      <div className="flex flex-wrap py-8 flex items-center justify-center" style={{marginLeft: ml}}>
-        <Link href="https://ecelliith.org.in" className="flex-shrink-0">
-          <Image 
+      <div
+        className="flex flex-wrap py-8 flex items-center justify-center"
+        style={{ marginLeft: ml }}
+      >
+        <Link href="/" className="flex-shrink-0">
+          <Image
             src="/esummit25/ecell_logo.png"
             alt="E-Cell IIT Hyderabad Logo"
             width={120}
@@ -24,17 +26,27 @@ const Navbar = () => {
             {[
               "Home",
               "Event",
-              "Accommodation",
+              "Tickets",
               "Sponsor",
               "Speakers",
               "Agenda",
-              "Contact us",
+              // "Contact us",
               "Register",
+              "Main Website",
             ].map((item) => (
               <li key={item}>
                 <Link
-                  href={`/esummit/${item.toLowerCase().replace(" ", "-")}`}
+                  href={
+                    item.toLowerCase() === "home"
+                      ? `/esummit` : item.toLowerCase() === "main website" ? '/' 
+                      : `/esummit/${item.toLowerCase().replace(" ", "-")}`
+                  }
                   className="text-white hover:text-gray-300 transition-colors text-xl"
+                  style={{
+                    fontSize: "1rem",
+                    fontWeight: "400",
+                    fontFamily: "Montserrat",
+                  }}
                 >
                   {item}
                 </Link>
@@ -44,7 +56,7 @@ const Navbar = () => {
         </nav>
       </div>
     </header>
-  )
-}
+  );
+};
 
-export default Navbar;
+export default EsummitNavbar;

@@ -50,9 +50,9 @@ function MyApp({ Component, pageProps }) {
               `,
             }}
           />
-          <Navbar />
+          <Navbar esummit={router.pathname.startsWith("/esummit")} />
           <Component {...pageProps} />
-          <Fifth esummit={router.pathname === "/esummit"} />
+          <Fifth esummit={router.pathname.startsWith("/esummit")} />
         </ThemeProvider>
       </React.Fragment>
     </>

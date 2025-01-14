@@ -2,12 +2,13 @@ import React from "react";
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
-import ESummit25 from "/public/ESummit25.png";
+import ESummit25 from "/public//esummit25/bg.png";
 import "@fontsource/josefin-sans";
 
 import "@fontsource/montserrat";
 import { Divider } from "@mui/material";
 import Head from "next/head";
+import EsummitNavbar from "../../components/esummit25/navbar";
 
 const ESummitPage = () => {
   const handleRegisterClick = () => {
@@ -60,6 +61,7 @@ const ESummitPage = () => {
       </Head>
       <Box
         sx={{
+          position: "relative",
           width: "100vw",
           height: "100vh",
           backgroundImage: `url(${ESummit25.src})`,
@@ -76,6 +78,17 @@ const ESummitPage = () => {
           boxSizing: "border-box",
         }}
       >
+        <Box
+          sx={{
+            position: "absolute", 
+            top: 0,
+            left: 0,
+            width: "100%",
+            zIndex: 10, 
+          }}
+        >
+          <EsummitNavbar />
+        </Box>
         {/* Presents */}
         <Typography
           variant="subtitle1"
