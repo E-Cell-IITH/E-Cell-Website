@@ -8,7 +8,7 @@ import Link from "next/link";
 import Device from "./Device/Device";
 import { isMobile } from "react-device-detect";
 import Button from "@mui/material/Button";
-import { Box } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 
 const josefinSans = Josefin_Sans({ subsets: ["latin"], display: "swap" });
 
@@ -167,18 +167,18 @@ const Panel = () => {
       }}
     >
       {/* <br /> */}
-      <div
+      <Typography
         className="flex flex-wrap justify-center"
-        style={{
-          fontSize: "1.7rem",
+        sx={{
+          fontSize:{md: "1.7rem", sm: "1.5rem", xs: "1.2rem"},
           fontWeight: "500",
           textAlign: "center",
           marginBottom: "2rem",
-          letterSpacing: "0.5rem",
+          letterSpacing: {md: "0.5rem", sm: "0.4rem", xs: "0.3rem"},
         }}
       >
         BUY&nbsp;ESUMMIT&nbsp;PASS
-      </div>
+      </Typography>
       <div
         style={{
           display: "flex",
