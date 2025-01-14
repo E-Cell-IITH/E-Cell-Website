@@ -2,15 +2,90 @@ import React from "react";
 import EsummitNavbar from "../../components/esummit25/navbar";
 import { Josefin_Sans } from "next/font/google";
 import { Tilt } from "react-next-tilt";
-import PASSDATA from "./passdata";
-import Link from "next/link";
-
-import Device from "./Device/Device";
-import { isMobile } from "react-device-detect";
 import Button from "@mui/material/Button";
 import { Box, Typography } from "@mui/material";
 
 const josefinSans = Josefin_Sans({ subsets: ["latin"], display: "swap" });
+
+
+const PASSDATA = [
+  {
+      title: "STANDARD",
+      co1: "All Speaker Sessions",
+      co2: "Startup Fair",
+      co3: "Food Carnival",
+      co4: "Fetching Fortune Spectator",
+      co5: "Networking Dinner",
+      co6: "Accommodation",
+      co7: "(2 Days 1 Night)",
+      price: "699",
+      titlecolor: "#ffffff",
+      cardcolor: "linear-gradient(90deg, rgba(153,153,153,0.100717787114846) 0%, rgba(153,153,153,0.1962359943977591) 100%)",
+      cl1:"#FFFFFF",
+      cl2:"#FFFFFF",
+      cl3:"#FFFFFF",
+      cl4:"#d3d3d3",
+      cl5:"#d3d3d3",
+      cl6:"#d3d3d3",
+      cl7:"#d3d3d3",
+      td4:"line-through",
+      td5:"line-through",
+      td6:"line-through",
+      td7:"line-through",
+      bw: "2px",
+
+  },
+  {
+      title: "VALUE FOR MONEY",
+      co1: "All Speaker Sessions",
+      co2: "Startup Fair",
+      co3: "Food Carnival",
+      co4: "Fetching Fortune Spectator",
+      co5: "Networking Dinner",
+      co6: "Accommodation",
+      co7: "(2 Days 1 Night)",
+      price: "999",
+      titlecolor: "#ffffff",
+      cardcolor: "linear-gradient(90deg, rgba(153,153,153,0.356796218487395) 0%, rgba(153,153,153,0.2911939775910365) 100%)",
+      cl1:"#FFFFFF",
+      cl2:"#FFFFFF",
+      cl3:"#FFFFFF",
+      cl4:"#FFFFFF",
+      cl5:"#d3d3d3",
+      cl6:"#d3d3d3",
+      cl7:"#d3d3d3",
+      td4:"",
+      td5:"line-through",
+      td6:"line-through",
+      td7:"line-through",
+      bw: "6px",
+  },
+  {
+      title: "PREMIUM",
+      co1: "All Speaker Sessions",
+      co2: "Startup Fair",
+      co3: "Food Carnival",
+      co4: "Fetching Fortune Spectator",
+      co5: "Networking Dinner",
+      co6: "Accommodation",
+      co7: "(2 Days 1 Night)",
+      price: "1699",
+      titlecolor: "#FFD400",
+      cardcolor: "linear-gradient(90deg, rgba(153,153,153,0.100717787114846) 0%, rgba(153,153,153,0.1962359943977591) 100%)",
+      cl1:"#ffffff",
+      cl2:"#ffffff",
+      cl3:"#ffffff",
+      cl4:"#ffffff",
+      cl5:"#ffffff",
+      cl6:"#ffffff",
+      cl7:"#ffffff",
+      td4:"",
+      td5:"",
+      td6:"",
+      td7:"",
+      bw: "2px",
+  }
+];
 
 const Card = ({
   titlecolor,
