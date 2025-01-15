@@ -35,6 +35,8 @@ const EsummitNavbar = () => {
       style={{
         marginLeft: isBiggerThan1150 ? "5rem" : "0",
         marginRight: isBiggerThan1150 ? "5rem" : "0",
+        paddingTop: isBiggerThan1024 ? "2rem" : "0",
+        paddingBottom: isBiggerThan1024 ? "5rem" : "0",
       }}
     >
       <ToastContainer
