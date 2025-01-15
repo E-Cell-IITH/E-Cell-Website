@@ -250,8 +250,10 @@ const Panel = () => {
           textAlign: "center",
           marginBottom: "2rem",
           letterSpacing: {md: "0.5rem", sm: "0.4rem", xs: "0.3rem"},
+          
         }}
       >
+
         BUY&nbsp;ESUMMIT&nbsp;PASS
       </Typography>
       <div
@@ -291,10 +293,11 @@ const Panel = () => {
           />
         ))}
         <br />
+        {/* <br />
         <br />
         <br />
         <br />
-        <br />
+        <br /> */}
       </div>
     </div>
   );
@@ -316,12 +319,12 @@ function MainPasses() {
         // width: "100vw",
         height: "100vh",
         // overflowX: "hidden",
-        // overflowY: "hidden",
+        overflowY: "hidden",
       }}
     >
       <Box
         sx={{
-          position: "relative",
+          position: "static",
           top: 0,
           left: 0,
           width: "100%",
@@ -338,7 +341,7 @@ function MainPasses() {
           left: 0,
           width: "100%",
           height: "100%",
-          overflowY: "scroll", // Make content scrollable
+          overflowY: "auto", // Make content scrollable
           padding: "2rem 0",
           overflowX: "hidden",
         }}
