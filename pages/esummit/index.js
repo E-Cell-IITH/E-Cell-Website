@@ -7,11 +7,15 @@ import "@fontsource/josefin-sans";
 
 import "@fontsource/montserrat";
 import { Divider } from "@mui/material";
+import { useRouter } from "next/router";
 
 const ESummitPage = () => {
+  const router = useRouter();
+
   const handleRegisterClick = () => {
-    alert("Registration will start soon. Stay tuned!");
+    // alert("Registration will start soon. Stay tuned!");
     // Add your redirect or functionality here
+    router.replace("/esummit/register");
   };
 
   const redirectToCalender = () => {
