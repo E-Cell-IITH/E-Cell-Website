@@ -4,17 +4,114 @@ import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import ESummit25 from "/public//esummit25/bg.png";
 import "@fontsource/josefin-sans";
-
+import {Tilt} from "react-next-tilt";
 import "@fontsource/montserrat";
 import { Divider } from "@mui/material";
 import Head from "next/head";
 import EsummitNavbar from "../../components/esummit25/navbar";
+import { Josefin_Sans } from "next/font/google";
+const josefinSans = Josefin_Sans({ subsets: ["latin"], display: "swap" });
+
+import { useMediaQuery } from "@mui/material";
+
+
+const Aboutus = () => {
+  const isBiggerThan1150 = useMediaQuery("(min-width: 1150px)");
+  const isBiggerThan1024 = useMediaQuery("(min-width: 1024px)");
+  return (
+    <Tilt
+      scale={1.00}
+      tiltMaxAngleX={0}
+      tiltMaxAngleY={0}
+      style={{ borderRadius: "12px" }}
+    >
+      <Box
+        sx={{
+          background: "rgba(211, 211, 211, 0.1)", // Adjust background opacity here
+          paddingTop: "3rem",
+          paddingLeft: "3rem",
+          paddingRight: "3rem",
+          paddingBottom: "1rem",
+          margin: "0.5rem",
+          minWidth: "20vw",
+          boxShadow: "0 4px 8px rgba(0, 0, 0, 0.2)",
+          borderWidth: "2px",
+          borderColor: "#d3d3d3",
+          maxWidth:isBiggerThan1024?"50vw":"85vw"
+        }}
+      >
+        <Typography
+          class={josefinSans.className}
+          variant="h4"
+          style={{fontSize:"2.5rem",fontWeight:600, float:"left"}}>
+          AB<span style={{ color: "#FF5100", fontWeight:600 }}>O</span>UT US
+        </Typography>
+        <br />
+        <Box style={{ fontSize: "1.0rem", paddingTop:"4rem", textAlign:"justify"}}>
+          <span style={{ color: "#FFFFFF" }}>
+          We&apos;re the Entrepreneurship Cell at IIT Hyderabad, driven by passion, hard work, and a relentless pursuit of success. Our space is where ideas meet action—a hub where dreams become reality. We&apos;re enthusiasts who thrive on ideation, turning concepts into growing businesses. {<br/>}{<br/>}
+          Our aim is clear: to support entrepreneurship and innovation within and beyond our campus. We recognize the importance of new business ideas and guide students, providing market exposure and pathways for their startups. We&apos;re a platform that fosters collaboration between students and businesses, offering mentorship from idea conception to product completion.
+          {<br/>}{<br/>}
+          Join us to <span style={{ color: "#FF5100", fontWeight:600 }}>THINK</span> big, <span style={{ color: "#FF5100", fontWeight:600 }}>BUILD</span> ambitiously, and <span style={{ color: "#FF5100", fontWeight:600 }}>INSPIRE</span> change through entrepreneurship.
+          </span>
+        </Box>
+      </Box>
+    </Tilt>
+  );
+};
+
+const Theme = () => {
+  const isBiggerThan1150 = useMediaQuery("(min-width: 1150px)");
+  const isBiggerThan1024 = useMediaQuery("(min-width: 1024px)");
+  return (
+    <Tilt
+      scale={1.00}
+      tiltMaxAngleX={0}
+      tiltMaxAngleY={0}
+      style={{ borderRadius: "12px", marginTop:"2rem" }}
+    >
+      <Box
+        sx={{
+          background: "rgba(211, 211, 211, 0.1)", // Adjust background opacity here
+          paddingTop: "3rem",
+          paddingLeft: "3rem",
+          paddingRight: "3rem",
+          paddingBottom: "1rem",
+          margin: "0.5rem",
+          minWidth: "20vw",
+          boxShadow: "0 4px 8px rgba(0, 0, 0, 0.2)",
+          borderWidth: "2px",
+          borderColor: "#d3d3d3",
+          maxWidth:isBiggerThan1024?"50vw":"85vw"
+        }}
+      >
+        <Typography
+          class={josefinSans.className}
+          variant="h4"
+          style={{fontSize:"2.5rem",fontWeight:600, float:"left"}}>
+          THEME
+        </Typography>
+        <br />
+        <Box style={{ fontSize: "1.0rem", paddingTop:"4rem", textAlign:"justify"}}>
+          <span style={{ color: "#FFFFFF" }}>
+          The theme of <span style={{ color: "#FF5100", fontWeight:600 }}>&quot;Anomaly&quot;</span> at E-Cell IITH celebrates individuals who challenge societal norms and conventional patterns, transforming from misfits and rebels into pioneers of innovation. 
+          This movement recognizes that true progress arises from questioning the status quo and taking bold risks, allowing creativity and strategy to collide in uncharted territories. 
+          By nurturing these visionaries, E-Cell IITH empowers them to unlock new possibilities and shape a limitless future, illustrating that the audacity to defy expectations is what drives meaningful change.
+          </span>
+        </Box>
+      </Box>
+    </Tilt>
+  );
+};
+
 
 const ESummitPage = () => {
   const handleRegisterClick = () => {
     alert("Registration will start soon. Stay tuned!");
     // Add your redirect or functionality here
   };
+
+  
 
   const redirectToCalender = () => {
     const formatDateToUTCString = (date) => {
@@ -50,7 +147,7 @@ const ESummitPage = () => {
   };
 
   return (
-    <>
+    <div>
       <Head>
         <title>E-Summit 2025</title>
         <meta
@@ -68,16 +165,19 @@ const ESummitPage = () => {
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
+          backgroundAttachment: "fixed", // This makes the background fixed
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
           justifyContent: "center",
           color: "white",
           textAlign: "center",
-          padding: { xs: "80px 20px 0", sm: "100px 40px 0" }, // Responsive padding for navbar space
+          padding: { xs: "80px 20px 0", sm: "100px 40px 0" },
           boxSizing: "border-box",
+          overflowY: "auto", // Ensures content scrolls
         }}
       >
+
         <Box
           sx={{
             position: "absolute", 
@@ -296,7 +396,34 @@ const ESummitPage = () => {
           </Button>
         </Box>
       </Box>
-    </>
+
+      <Box
+        sx={{
+          position: "relative",
+          width: "100vw",
+          height: "auto",
+          backgroundImage: `url(${ESummit25.src})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+          backgroundAttachment: "fixed", // This makes the background fixed
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          justifyContent: "center",
+          color: "white",
+          textAlign: "center",
+          padding: { xs: "80px 20px 0", sm: "100px 40px 0" },
+          boxSizing: "border-box",
+          overflowY: "auto", // Ensures content scrolls
+        }}
+      >
+        <Aboutus />
+        <Theme />
+        <br></br>
+      </Box>
+      
+    </div>
   );
 };
 
