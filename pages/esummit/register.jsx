@@ -92,7 +92,11 @@ const ESummitRegistrationPage = () => {
             data: JSON.stringify({
               college: institute == "IITH Student" ? "IITH" : instituteName,
               roll: institute == "IITH Student" ? rollNumber : "N/A",
+              gender: gender,
+              degree: degree,
+              coupon: couponCode,
             }),
+            contact_number: phoneNumber,
             otp,
           }
         );
