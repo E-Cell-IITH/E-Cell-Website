@@ -50,7 +50,7 @@ const Aboutus = () => {
         <Box style={{ fontSize: "1.0rem", paddingTop:"4rem", textAlign:"justify"}}>
           <span style={{ color: "#FFFFFF" }}>
           We&apos;re the Entrepreneurship Cell at IIT Hyderabad, driven by passion, hard work, and a relentless pursuit of success. Our space is where ideas meet action—a hub where dreams become reality. We&apos;re enthusiasts who thrive on ideation, turning concepts into growing businesses. {<br/>}{<br/>}
-          Our aim is clear: to support entrepreneurship and innovation within and beyond our campus. We recognize the importance of new business ideas and guide students, providing market exposure and pathways for their startups. We're a platform that fosters collaboration between students and businesses, offering mentorship from idea conception to product completion.
+          Our aim is clear: to support entrepreneurship and innovation within and beyond our campus. We recognize the importance of new business ideas and guide students, providing market exposure and pathways for their startups. We&apos;re a platform that fosters collaboration between students and businesses, offering mentorship from idea conception to product completion.
           {<br/>}{<br/>}
           Join us to <span style={{ color: "#FF5100", fontWeight:600 }}>THINK</span> big, <span style={{ color: "#FF5100", fontWeight:600 }}>BUILD</span> ambitiously, and <span style={{ color: "#FF5100", fontWeight:600 }}>INSPIRE</span> change through entrepreneurship.
           </span>
@@ -94,7 +94,7 @@ const Theme = () => {
         <br />
         <Box style={{ fontSize: "1.0rem", paddingTop:"4rem", textAlign:"justify"}}>
           <span style={{ color: "#FFFFFF" }}>
-          The theme of <span style={{ color: "#FF5100", fontWeight:600 }}>"Anomaly"</span> at E-Cell IITH celebrates individuals who challenge societal norms and conventional patterns, transforming from misfits and rebels into pioneers of innovation. 
+          The theme of <span style={{ color: "#FF5100", fontWeight:600 }}>&quot;Anomaly&quot;</span> at E-Cell IITH celebrates individuals who challenge societal norms and conventional patterns, transforming from misfits and rebels into pioneers of innovation. 
           This movement recognizes that true progress arises from questioning the status quo and taking bold risks, allowing creativity and strategy to collide in uncharted territories. 
           By nurturing these visionaries, E-Cell IITH empowers them to unlock new possibilities and shape a limitless future, illustrating that the audacity to defy expectations is what drives meaningful change.
           </span>
