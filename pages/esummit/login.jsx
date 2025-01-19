@@ -33,10 +33,11 @@ const ESummitLoginPage = () => {
     try {
       const response = await axios.post(
         "https://register.ecelliith.org.in/signin",
-        { email, otp }
+        { email, otp },
+        { withCredentials: true }
       );
       if (response.data.message) {
-        router.replace(redirectTo);
+        // router.replace(redirectTo);
       } else {
         alert("Invalid OTP");
       }

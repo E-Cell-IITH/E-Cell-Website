@@ -12,7 +12,7 @@ import {
 } from "@mui/material";
 import axios from "axios";
 import Link from "next/link";
-import { useState } from "react";
+import { useState , useEffect} from "react";
 import { KeyboardArrowDown } from "@mui/icons-material";
 import { useRouter } from "next/router";
 import EsummitNavbar from "../../components/esummit25/navbar";
@@ -40,6 +40,30 @@ const ESummitRegistrationPage = () => {
   const [industry, setIndustry] = useState("");
 
   const router = useRouter();
+  const [loading, setLoading] = useState(true); 
+
+  const handleGetUserDetails = async () => {
+    try {
+      const response = await axios.get(`${BASE_URL}/me`, { withCredentials: true });
+
+      if (response.data.message) {
+        router.replace("/esummit/tickets");
+      }
+    } catch (error) {
+      if (error.response && error.response.status === 401) {
+        console.error("Unauthorized - Redirecting to login...");
+      } else {
+        console.error("Error getting user details:", error);
+      }
+    } finally {
+      setLoading(false); 
+    }
+  };
+
+  useEffect(() => {
+    handleGetUserDetails();
+  }, []); 
+
 
   const handleEmailChange = (e) => {
     setEmail(e.target.value);
@@ -70,9 +94,9 @@ const ESummitRegistrationPage = () => {
   const handleSendOtp = async () => {
     setLoadingSendOTPButton(true);
     try {
-      const response = await axios.post(`${BASE_URL}/signup/otp/send`, {
+      const response = await axios.post(`${BASE_URL}/signup/otp/send`,{
         email,
-      });
+      },  { withCredentials: true });
   
       if (response.data.message) {
         setDisableSendOTPButton(true);
@@ -105,7 +129,7 @@ const ESummitRegistrationPage = () => {
       const response = await axios.post(`${BASE_URL}/signup/otp/verify`, {
         email,
         otp,
-      });
+      }, { withCredentials: true });
   
       if (response.data.message) {
         setDisableSendOTPButton(true);
@@ -155,7 +179,7 @@ const ESummitRegistrationPage = () => {
           }),
           contact_number: phoneNumber,
           otp,
-        });
+        },  { withCredentials: true });
   
         if (response.data.message) {
           toast.success("Successfully signed up", {
@@ -184,6 +208,22 @@ const ESummitRegistrationPage = () => {
       setLoadingSignUpButton(false);
     }
   };
+
+  if (loading) {
+    return (
+      <Box
+        sx={{
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
+          height: '100vh',
+          backgroundColor: 'rgba(0, 0, 0, 0.5)',
+        }}
+      >
+        <CircularProgress color="secondary" /> 
+      </Box>
+    );
+  }
   
   return (
     <Box
