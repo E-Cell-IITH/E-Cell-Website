@@ -54,7 +54,17 @@ const ESummitLoginPage = () => {
         overflow: "hidden",
       }}
     >
-     <EsummitNavbar />
+      <Box
+          sx={{
+            position: "absolute", 
+            top: 0,
+            left: 0,
+            width: "100%",
+            zIndex: 10, 
+          }}
+        >
+          <EsummitNavbar />
+        </Box>
       <Container maxWidth="sm">
         <Box
           sx={{

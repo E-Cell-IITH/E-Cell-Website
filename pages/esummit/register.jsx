@@ -16,6 +16,8 @@ import { useState } from "react";
 import { KeyboardArrowDown } from "@mui/icons-material";
 import { useRouter } from "next/router";
 import EsummitNavbar from "../../components/esummit25/navbar";
+import { toast } from 'react-toastify';
+
 
 const ESummitRegistrationPage = () => {
   const [step, setStep] = useState(1);
@@ -64,59 +66,73 @@ const ESummitRegistrationPage = () => {
   }
 
   const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL;
-  
 
   const handleSendOtp = async () => {
     setLoadingSendOTPButton(true);
     try {
-      const response = await axios.post(
-        `${BASE_URL}/signup/otp/send`,
-        {
-          email,
-        }
-      );
-
+      const response = await axios.post(`${BASE_URL}/signup/otp/send`, {
+        email,
+      });
+  
       if (response.data.message) {
         setDisableSendOTPButton(true);
-        // setDisableVerifyOTPButton(false);
-        // setTimeout(() => {
-        //   setDisableSendOTPButton(false);
-        // }, 60000);
+        toast.success("OTP sent successfully", {
+          autoClose: 3000,
+        });
       } else {
-        console.error("Error sending OTP:", response.data.error);
-        alert(`Error sending OTP: ${response.data.error}`);
+        toast.error(`Error sending OTP: ${response.data.error || 'Unknown error'}`, {
+          autoClose: 3000,
+        });
       }
     } catch (error) {
-      console.error("Error sending OTP:", error);
+      if (error.response && error.response.data && error.response.data.error) {
+        toast.error(`Error sending OTP: ${error.response.data.error}`, {
+          autoClose: 3000,
+        });
+      } else {
+        toast.error(`Error sending OTP: ${error.message || 'Unknown error'}`, {
+          autoClose: 3000,
+        });
+      }
     }
     setLoadingSendOTPButton(false);
   };
+  
 
   const handleVerifyOtp = async () => {
     setLoadingVerifyOTPButton(true);
     try {
-      const response = await axios.post(
-        `${BASE_URL}/signup/otp/verify`,
-        {
-          email,
-          otp,
-        }
-      );
-
+      const response = await axios.post(`${BASE_URL}/signup/otp/verify`, {
+        email,
+        otp,
+      });
+  
       if (response.data.message) {
         setDisableSendOTPButton(true);
         setVerified(true);
         setDisableVerifyOTPButton(true);
+        toast.success("OTP verified successfully", {
+          autoClose: 3000,
+        });
       } else {
-        console.error("Error verifying OTP:", response.data.error);
-        alert(`Invalid OTP`);
+        toast.error("Invalid OTP", {
+          autoClose: 3000,
+        });
       }
     } catch (error) {
-      console.error("Error verifying OTP:", error);
+      if (error.response && error.response.data && error.response.data.error) {
+        toast.error(`Error verifying OTP: ${error.response.data.error}`, {
+          autoClose: 3000,
+        });
+      } else {
+        toast.error(`Error verifying OTP: ${error.message || 'Unknown error'}`, {
+          autoClose: 3000,
+        });
+      }
     }
     setLoadingVerifyOTPButton(false);
   };
-
+  
   const handleBack = () => {
     if (step == 2) setStep(1);
     else router.replace("/esummit");
@@ -127,36 +143,48 @@ const ESummitRegistrationPage = () => {
     else {
       setLoadingSignUpButton(true);
       try {
-        const response = await axios.post(
-          `${BASE_URL}/signup`,
-          {
-            email,
-            name,
-            data: JSON.stringify({
-              degree: degree,
-              coupon: couponCode,
-              role: userRole,
-              industry: industry,
-              institute: instituteName,
-            }),
-            contact_number: phoneNumber,
-            otp,
-          }
-        );
-
+        const response = await axios.post(`${BASE_URL}/signup`, {
+          email,
+          name,
+          data: JSON.stringify({
+            degree: degree,
+            coupon: couponCode,
+            role: userRole,
+            industry: industry,
+            institute: instituteName,
+          }),
+          contact_number: phoneNumber,
+          otp,
+        });
+  
         if (response.data.message) {
-          router.replace("/esummit");
+          toast.success("Successfully signed up", {
+            autoClose: 3000,
+          });
+          // router.replace("/esummit/tickets");
+          setTimeout(() => {
+            router.replace("/esummit/tickets");
+          }, 2000);
         } else {
-          console.error("Error sending OTP:", response.data.error);
-          alert(`Error sending OTP: ${response.data.error}`);
+          toast.error(`${response.data.error}`, {
+            autoClose: 3000,
+          });
         }
       } catch (error) {
-        console.error("Error sending OTP:", error);
+        if (error.response && error.response.data && error.response.data.error) {
+          toast.error(`${error.response.data.error}`, {
+            autoClose: 3000,
+          });
+        } else {
+          toast.error(`Error: ${error.message || 'Unknown error'}`, {
+            autoClose: 3000,
+          });
+        }
       }
       setLoadingSignUpButton(false);
     }
   };
-
+  
   return (
     <Box
       sx={{
@@ -166,11 +194,21 @@ const ESummitRegistrationPage = () => {
         overflow: "hidden",
       }}
     >
-      <EsummitNavbar />
+      <Box
+        sx={{
+          position: "absolute",
+          top: 0,
+          left: 0,
+          width: "100%",
+          zIndex: 10,
+        }}
+      >
+        <EsummitNavbar />
+      </Box>
       <Container maxWidth="sm">
         <Box
           sx={{
-            mt: 15,
+            mt: 22,
             display: "flex",
             flexDirection: "column",
             alignItems: "center",
@@ -180,7 +218,7 @@ const ESummitRegistrationPage = () => {
             component="h1"
             variant="h4"
             sx={{
-              mb: 4,
+              mb: 0,
               fontWeight: 500,
               letterSpacing: "0.1em",
               color: "white",
@@ -675,7 +713,13 @@ const ESummitRegistrationPage = () => {
                 backgroundColor: `${
                   (verified && step == 1 && name != "") ||
                   (step == 2 &&
-                    isValidPhoneNumber(phoneNumber) && degree != "" && userRole != "" && loadingSignUpButton == false && (userRole === "Student" ? instituteName != "" : industry != ""))
+                    isValidPhoneNumber(phoneNumber) &&
+                    degree != "" &&
+                    userRole != "" &&
+                    loadingSignUpButton == false &&
+                    (userRole === "Student"
+                      ? instituteName != ""
+                      : industry != ""))
                     ? "#ff4500"
                     : "rgba(1, 1, 1, 0.13)"
                 } !important`,
@@ -688,7 +732,13 @@ const ESummitRegistrationPage = () => {
               disabled={
                 (verified && step == 1 && name != "") ||
                 (step == 2 &&
-                  isValidPhoneNumber(phoneNumber)  && degree != "" && userRole != "" && loadingSignUpButton == false && (userRole === "Student" ? instituteName != "" : industry != ""))
+                  isValidPhoneNumber(phoneNumber) &&
+                  degree != "" &&
+                  userRole != "" &&
+                  loadingSignUpButton == false &&
+                  (userRole === "Student"
+                    ? instituteName != ""
+                    : industry != ""))
                   ? false
                   : true
               }
