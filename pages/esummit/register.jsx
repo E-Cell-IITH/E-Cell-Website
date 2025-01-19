@@ -12,12 +12,11 @@ import {
 } from "@mui/material";
 import axios from "axios";
 import Link from "next/link";
-import { useState , useEffect} from "react";
+import { useState, useEffect } from "react";
 import { KeyboardArrowDown } from "@mui/icons-material";
 import { useRouter } from "next/router";
 import EsummitNavbar from "../../components/esummit25/navbar";
-import { toast } from 'react-toastify';
-
+import { toast } from "react-toastify";
 
 const ESummitRegistrationPage = () => {
   const [step, setStep] = useState(1);
@@ -40,11 +39,13 @@ const ESummitRegistrationPage = () => {
   const [industry, setIndustry] = useState("");
 
   const router = useRouter();
-  const [loading, setLoading] = useState(true); 
+  const [loading, setLoading] = useState(false);
 
   const handleGetUserDetails = async () => {
     try {
-      const response = await axios.get(`${BASE_URL}/me`, { withCredentials: true });
+      const response = await axios.get(`${BASE_URL}/me`, {
+        withCredentials: true,
+      });
 
       if (response.data.message) {
         router.replace("/esummit/tickets");
@@ -56,14 +57,13 @@ const ESummitRegistrationPage = () => {
         console.error("Error getting user details:", error);
       }
     } finally {
-      setLoading(false); 
+      setLoading(false);
     }
   };
 
   useEffect(() => {
     handleGetUserDetails();
-  }, []); 
-
+  }, []);
 
   const handleEmailChange = (e) => {
     setEmail(e.target.value);
@@ -94,19 +94,26 @@ const ESummitRegistrationPage = () => {
   const handleSendOtp = async () => {
     setLoadingSendOTPButton(true);
     try {
-      const response = await axios.post(`${BASE_URL}/signup/otp/send`,{
-        email,
-      },  { withCredentials: true });
-  
+      const response = await axios.post(
+        `${BASE_URL}/signup/otp/send`,
+        {
+          email,
+        },
+        { withCredentials: true }
+      );
+
       if (response.data.message) {
         setDisableSendOTPButton(true);
         toast.success("OTP sent successfully", {
           autoClose: 3000,
         });
       } else {
-        toast.error(`Error sending OTP: ${response.data.error || 'Unknown error'}`, {
-          autoClose: 3000,
-        });
+        toast.error(
+          `Error sending OTP: ${response.data.error || "Unknown error"}`,
+          {
+            autoClose: 3000,
+          }
+        );
       }
     } catch (error) {
       if (error.response && error.response.data && error.response.data.error) {
@@ -114,23 +121,27 @@ const ESummitRegistrationPage = () => {
           autoClose: 3000,
         });
       } else {
-        toast.error(`Error sending OTP: ${error.message || 'Unknown error'}`, {
+        toast.error(`Error sending OTP: ${error.message || "Unknown error"}`, {
           autoClose: 3000,
         });
       }
+    } finally {
+      setLoadingSendOTPButton(false);
     }
-    setLoadingSendOTPButton(false);
   };
-  
 
   const handleVerifyOtp = async () => {
     setLoadingVerifyOTPButton(true);
     try {
-      const response = await axios.post(`${BASE_URL}/signup/otp/verify`, {
-        email,
-        otp,
-      }, { withCredentials: true });
-  
+      const response = await axios.post(
+        `${BASE_URL}/signup/otp/verify`,
+        {
+          email,
+          otp,
+        },
+        { withCredentials: true }
+      );
+
       if (response.data.message) {
         setDisableSendOTPButton(true);
         setVerified(true);
@@ -149,14 +160,17 @@ const ESummitRegistrationPage = () => {
           autoClose: 3000,
         });
       } else {
-        toast.error(`Error verifying OTP: ${error.message || 'Unknown error'}`, {
-          autoClose: 3000,
-        });
+        toast.error(
+          `Error verifying OTP: ${error.message || "Unknown error"}`,
+          {
+            autoClose: 3000,
+          }
+        );
       }
     }
     setLoadingVerifyOTPButton(false);
   };
-  
+
   const handleBack = () => {
     if (step == 2) setStep(1);
     else router.replace("/esummit");
@@ -167,20 +181,24 @@ const ESummitRegistrationPage = () => {
     else {
       setLoadingSignUpButton(true);
       try {
-        const response = await axios.post(`${BASE_URL}/signup`, {
-          email,
-          name,
-          data: JSON.stringify({
-            degree: degree,
-            coupon: couponCode,
-            role: userRole,
-            industry: industry,
-            institute: instituteName,
-          }),
-          contact_number: phoneNumber,
-          otp,
-        },  { withCredentials: true });
-  
+        const response = await axios.post(
+          `${BASE_URL}/signup`,
+          {
+            email,
+            name,
+            data: JSON.stringify({
+              degree: degree,
+              coupon: couponCode,
+              role: userRole,
+              industry: industry,
+              institute: instituteName,
+            }),
+            contact_number: phoneNumber,
+            otp,
+          },
+          { withCredentials: true }
+        );
+
         if (response.data.message) {
           toast.success("Successfully signed up", {
             autoClose: 3000,
@@ -195,12 +213,16 @@ const ESummitRegistrationPage = () => {
           });
         }
       } catch (error) {
-        if (error.response && error.response.data && error.response.data.error) {
+        if (
+          error.response &&
+          error.response.data &&
+          error.response.data.error
+        ) {
           toast.error(`${error.response.data.error}`, {
             autoClose: 3000,
           });
         } else {
-          toast.error(`Error: ${error.message || 'Unknown error'}`, {
+          toast.error(`Error: ${error.message || "Unknown error"}`, {
             autoClose: 3000,
           });
         }
@@ -213,18 +235,18 @@ const ESummitRegistrationPage = () => {
     return (
       <Box
         sx={{
-          display: 'flex',
-          justifyContent: 'center',
-          alignItems: 'center',
-          height: '100vh',
-          backgroundColor: 'rgba(0, 0, 0, 0.5)',
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          height: "100vh",
+          backgroundColor: "rgba(0, 0, 0, 0.5)",
         }}
       >
-        <CircularProgress color="secondary" /> 
+        <CircularProgress color="secondary" />
       </Box>
     );
   }
-  
+
   return (
     <Box
       sx={{
@@ -343,10 +365,13 @@ const ESummitRegistrationPage = () => {
                     onClick={handleSendOtp}
                   >
                     {loadingSendOTPButton ? (
+                      <>
                       <CircularProgress
                         size={24}
                         sx={{ position: "absolute" }}
-                      />
+                        />
+                        <span>{"Send OTP"}</span>
+                        </>
                     ) : (
                       "Send OTP"
                     )}
@@ -398,10 +423,13 @@ const ESummitRegistrationPage = () => {
                     disabled={disableVerifyOTPButton || loadingVerifyOTPButton}
                   >
                     {loadingVerifyOTPButton ? (
+                      <>
                       <CircularProgress
                         size={24}
                         sx={{ position: "absolute" }}
                       />
+                      <span>{"Verify OTP"}</span>
+                      </>
                     ) : (
                       "Verify OTP"
                     )}
@@ -724,6 +752,7 @@ const ESummitRegistrationPage = () => {
                     value={phoneNumber}
                     onChange={(e) => setPhoneNumber(e.target.value)}
                     sx={{
+                      mb: 2,
                       "& .MuiOutlinedInput-root": {
                         "& fieldset": {
                           border: "0.5px solid rgb(153, 153, 153)",
@@ -748,24 +777,22 @@ const ESummitRegistrationPage = () => {
               fullWidth
               variant="contained"
               sx={{
-                mt: 2,
                 mb: 2,
-                backgroundColor: `${
-                  (verified && step == 1 && name != "") ||
-                  (step == 2 &&
-                    isValidPhoneNumber(phoneNumber) &&
-                    degree != "" &&
-                    userRole != "" &&
-                    loadingSignUpButton == false &&
-                    (userRole === "Student"
-                      ? instituteName != ""
-                      : industry != ""))
-                    ? "#ff4500"
-                    : "rgba(1, 1, 1, 0.13)"
-                } !important`,
-                color: "white !important",
+                borderRadius: "0",
+                color: "white !importan",
+                fontFamily: "Montserrat, sans-serif",
+                fontSize: { xs: "1rem", sm: "1rem", md: "1.2rem" },
+                fontWeight: "600",
+                textTransform: "uppercase",
+                "&.MuiButton-contained": {
+                  backgroundColor: "#FF5100",
+                },
                 "&:hover": {
-                  backgroundColor: "#e63900 !important",
+                  backgroundColor: "#B73A00",
+                },
+                "&.Mui-disabled": {
+                  color: "grey !important",
+                  backgroundColor: "rgba(1, 1, 1, 0.13) !important",
                 },
               }}
               onClick={handleNext}
@@ -781,11 +808,16 @@ const ESummitRegistrationPage = () => {
                     : industry != ""))
                   ? false
                   : true
+
+                  || loadingSignUpButton
               }
             >
               {step == 2 ? (
                 loadingSignUpButton ? (
+                  <>
                   <CircularProgress size={24} sx={{ position: "absolute" }} />
+                  <span>{"Sign Up"}</span>
+                  </>
                 ) : (
                   "Sign Up"
                 )
@@ -797,11 +829,17 @@ const ESummitRegistrationPage = () => {
               fullWidth
               variant="outlined"
               sx={{
-                mb: 2,
+                borderRadius: "0",
                 color: "white",
-                borderColor: "rgb(153, 153, 153)",
+                mb: 2,
+                borderColor: "white",
+                fontFamily: "Montserrat, sans-serif",
+                fontSize: { xs: "1rem", sm: "1rem", md: "1.2rem" },
+                textTransform: "uppercase",
+                fontWeight: "500",
                 "&:hover": {
-                  borderColor: "rgba(255,255,255,0.2)",
+                  backgroundColor: "rgba(255, 255, 255, 0.2)",
+                  borderColor: "white",
                 },
               }}
               onClick={handleBack}
