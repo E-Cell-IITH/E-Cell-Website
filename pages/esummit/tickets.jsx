@@ -327,15 +327,20 @@ function MainPasses() {
   const [modalOpen, setModalOpen] = useState(false);
   const [price, setPrice] = useState(0);
 
-  const handleGetUserDetails = async () => {
+  const paymentInitiate = async (amt) => {
     try {
       const token = localStorage.getItem("token");
-      const response = await axios.get(`${BASE_URL}/me`, {
-        headers: {
-          Authorization: `Bearer ${token}`,
-        },
-        withCredentials: true,
-      });
+      const response = await axios.post(
+        `${BASE_URL}/paymentInitiate`, 
+        {
+          amount: amt,
+        }, 
+        {
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
+        }
+      );
 
       if (response.data.message) {
         return {
@@ -351,7 +356,7 @@ function MainPasses() {
 
   const handleBuyNow = async (price) => {
     setPrice(price);
-    const userDetails = await handleGetUserDetails();
+    const userDetails = await paymentInitiate();
     if (!userDetails || !userDetails.email) {
       window.location.href = "/esummit/login?redirectTo=/esummit/tickets";
       return;
