@@ -42,6 +42,9 @@ const ESummitLoginPage = () => {
     setOtp(e.target.value);
     setDisableLoginButton(!email || !e.target.value);
   };
+  const storeToken = (token) => {
+    localStorage.setItem("token", token);
+  };
 
   const handleSendOtp = async () => {
     setLoadingSendOTPButton(true);
@@ -88,6 +91,7 @@ const ESummitLoginPage = () => {
         { withCredentials: true }
       );
       if (response.data.message) {
+        storeToken(response.data.token);
         toast.success("Logged in successfully", {
           autoClose: 3000,
         });

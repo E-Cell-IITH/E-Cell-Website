@@ -1,91 +1,105 @@
-import React from "react";
+// import React from "react";
 import EsummitNavbar from "../../components/esummit25/navbar";
 import { Josefin_Sans } from "next/font/google";
 import { Tilt } from "react-next-tilt";
 import Button from "@mui/material/Button";
-import { Box, Typography } from "@mui/material";
+
+import {
+  Box,
+  Typography,
+  Dialog,
+  DialogTitle,
+  DialogActions,
+  DialogContent,
+} from "@mui/material";
+import React, { useState, useEffect, use } from "react";
+import axios from "axios";
+import { toast } from "react-toastify";
 
 const josefinSans = Josefin_Sans({ subsets: ["latin"], display: "swap" });
 
-
 const PASSDATA = [
   {
-      title: "STANDARD",
-      co1: "All Speaker Sessions",
-      co2: "Startup Fair",
-      co3: "Food Carnival",
-      co4: "Fetching Fortune Spectator",
-      co5: "Networking Dinner",
-      co6: "Accommodation",
-      co7: "(2 Days 1 Night)",
-      price: "699",
-      titlecolor: "#ffffff",
-      cardcolor: "linear-gradient(90deg, rgba(153,153,153,0.100717787114846) 0%, rgba(153,153,153,0.1962359943977591) 100%)",
-      cl1:"#FFFFFF",
-      cl2:"#FFFFFF",
-      cl3:"#FFFFFF",
-      cl4:"#d3d3d3",
-      cl5:"#d3d3d3",
-      cl6:"#d3d3d3",
-      cl7:"#d3d3d3",
-      td4:"line-through",
-      td5:"line-through",
-      td6:"line-through",
-      td7:"line-through",
-      bw: "2px",
-
+    title: "STANDARD",
+    co1: "All Speaker Sessions",
+    co2: "Startup Fair",
+    co3: "Food Carnival",
+    co4: "Fetching Fortune Spectator",
+    co5: "Networking Dinner",
+    co6: "Accommodation",
+    co7: "(2 Days 1 Night)",
+    price: "699",
+    titlecolor: "#ffffff",
+    cardcolor:
+      "linear-gradient(90deg, rgba(153,153,153,0.100717787114846) 0%, rgba(153,153,153,0.1962359943977591) 100%)",
+    cl1: "#FFFFFF",
+    cl2: "#FFFFFF",
+    cl3: "#FFFFFF",
+    cl4: "#d3d3d3",
+    cl5: "#d3d3d3",
+    cl6: "#d3d3d3",
+    cl7: "#d3d3d3",
+    td4: "line-through",
+    td5: "line-through",
+    td6: "line-through",
+    td7: "line-through",
+    bw: "2px",
   },
   {
-      title: "VALUE FOR MONEY",
-      co1: "All Speaker Sessions",
-      co2: "Startup Fair",
-      co3: "Food Carnival",
-      co4: "Fetching Fortune Spectator",
-      co5: "Networking Dinner",
-      co6: "Accommodation",
-      co7: "(2 Days 1 Night)",
-      price: "999",
-      titlecolor: "#ffffff",
-      cardcolor: "linear-gradient(90deg, rgba(153,153,153,0.356796218487395) 0%, rgba(153,153,153,0.2911939775910365) 100%)",
-      cl1:"#FFFFFF",
-      cl2:"#FFFFFF",
-      cl3:"#FFFFFF",
-      cl4:"#FFFFFF",
-      cl5:"#d3d3d3",
-      cl6:"#d3d3d3",
-      cl7:"#d3d3d3",
-      td4:"",
-      td5:"line-through",
-      td6:"line-through",
-      td7:"line-through",
-      bw: "6px",
+    title: "VALUE FOR MONEY",
+    co1: "All Speaker Sessions",
+    co2: "Startup Fair",
+    co3: "Food Carnival",
+    co4: "Fetching Fortune Spectator",
+    co5: "Networking Dinner",
+    co6: "Accommodation",
+    co7: "(2 Days 1 Night)",
+    price: "999",
+    titlecolor: "#ffffff",
+    cardcolor:
+      "linear-gradient(90deg, rgba(153,153,153,0.356796218487395) 0%, rgba(153,153,153,0.2911939775910365) 100%)",
+    cl1: "#FFFFFF",
+    cl2: "#FFFFFF",
+    cl3: "#FFFFFF",
+    cl4: "#FFFFFF",
+    cl5: "#d3d3d3",
+    cl6: "#d3d3d3",
+    cl7: "#d3d3d3",
+    td4: "",
+    td5: "line-through",
+    td6: "line-through",
+    td7: "line-through",
+    bw: "6px",
   },
   {
-      title: "PREMIUM",
-      co1: "All Speaker Sessions",
-      co2: "Startup Fair",
-      co3: "Food Carnival",
-      co4: "Fetching Fortune Spectator",
-      co5: "Networking Dinner",
-      co6: "Accommodation",
-      co7: "(2 Days 1 Night)",
-      price: "1699",
-      titlecolor: "#FFD400",
-      cardcolor: "linear-gradient(90deg, rgba(153,153,153,0.100717787114846) 0%, rgba(153,153,153,0.1962359943977591) 100%)",
-      cl1:"#ffffff",
-      cl2:"#ffffff",
-      cl3:"#ffffff",
-      cl4:"#ffffff",
-      cl5:"#ffffff",
-      cl6:"#ffffff",
-      cl7:"#ffffff",
-      td4:"",
-      td5:"",
-      td6:"",
-      td7:"",
-      bw: "2px",
-  }
+    title: "PREMIUM",
+    co1: "All Speaker Sessions",
+    co2: "Startup Fair",
+    co3: "Food Carnival",
+    co4: "Fetching Fortune Spectator",
+    co5: "Networking Dinner",
+    co6: "Accommodation",
+    co7: "(2 Days 1 Night)",
+    price: "1699",
+    titlecolor: "#FFD400",
+    cardcolor:
+      "linear-gradient(90deg, rgba(153,153,153,0.100717787114846) 0%, rgba(153,153,153,0.1962359943977591) 100%)",
+    cl1: "#ffffff",
+    cl2: "#ffffff",
+    cl3: "#ffffff",
+    cl4: "#ffffff",
+    cl5: "#ffffff",
+    cl6: "#ffffff",
+    cl7: "#ffffff",
+    td4: "",
+    td5: "",
+    td6: "",
+    td7: "",
+    bw: "2px",
+  },
 ];
+
+const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL;
 
 const Card = ({
   titlecolor,
@@ -111,6 +125,7 @@ const Card = ({
   td6,
   td7,
   bw,
+  handleBuyNow,
 }) => {
   return (
     <Tilt
@@ -218,6 +233,7 @@ const Card = ({
                   backgroundColor: "#B73A00",
                 },
               }}
+              onClick={() => handleBuyNow(price)}
             >
               Buy Now
             </Button>
@@ -228,13 +244,15 @@ const Card = ({
   );
 };
 
-const Panel = () => {
+const Panel = ({ handleBuyNow }) => {
   return (
     <div
       style={{
         color: "white",
         fontSize: "24px",
-        padding: "20px",
+        paddingLeft: "20px",
+        paddingRight: "20px",
+        paddingBottom: "20px",
         borderRadius: "10px",
         maxWidth: "95%",
         height: "auto",
@@ -245,15 +263,13 @@ const Panel = () => {
       <Typography
         className="flex flex-wrap justify-center"
         sx={{
-          fontSize:{md: "1.7rem", sm: "1.5rem", xs: "1.2rem"},
+          fontSize: { md: "1.7rem", sm: "1.5rem", xs: "1.2rem" },
           fontWeight: "500",
           textAlign: "center",
           marginBottom: "2rem",
-          letterSpacing: {md: "0.5rem", sm: "0.4rem", xs: "0.3rem"},
-          
+          letterSpacing: { md: "0.5rem", sm: "0.4rem", xs: "0.3rem" },
         }}
       >
-
         BUY&nbsp;ESUMMIT&nbsp;PASS
       </Typography>
       <div
@@ -290,6 +306,7 @@ const Panel = () => {
             td6={pass.td6}
             td7={pass.td7}
             bw={pass.bw}
+            handleBuyNow={handleBuyNow}
           />
         ))}
         <br />
@@ -304,6 +321,67 @@ const Panel = () => {
 };
 
 function MainPasses() {
+  const [username, setUsername] = useState("");
+  const [useremail, setUserEmail] = useState("");
+  const [loading, setLoading] = useState(false);
+  const [modalOpen, setModalOpen] = useState(false);
+  const [price, setPrice] = useState(0);
+
+  const handleGetUserDetails = async () => {
+    try {
+      const token = localStorage.getItem("token");
+      const response = await axios.get(`${BASE_URL}/me`, {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+        withCredentials: true,
+      });
+
+      if (response.data.message) {
+        return {
+          name: response.data.user.name,
+          email: response.data.user.email,
+        };
+      }
+    } catch (error) {
+      console.error("Failed to fetch user details:", error);
+      return null;
+    }
+  };
+
+  const handleBuyNow = async (price) => {
+    setPrice(price);
+    const userDetails = await handleGetUserDetails();
+    if (!userDetails || !userDetails.email) {
+      window.location.href = "/esummit/login?redirectTo=/esummit/tickets";
+      return;
+    }
+    setUserEmail(userDetails.email);
+    setUsername(userDetails.name);
+
+    setModalOpen(true);
+
+    console.log(userDetails.email);
+    // Proceed with the payment or other actions
+  };
+
+  const handleContinue = () => {
+    setModalOpen(false);
+    if (price === 0) {
+      toast.error("Something went wrong. Please try again later.", {
+        autoClose: 3000,
+      });
+      return;
+    }
+  };
+
+  const handleUseDifferentAccount = () => {
+    setModalOpen(false);
+    console.log("User chooses to log in with a different account");
+    localStorage.removeItem("token");
+    window.location.href = "/esummit/login?redirectTo=/esummit/tickets";
+  };
+
   return (
     <div
       suppressHydrationWarning
@@ -319,7 +397,7 @@ function MainPasses() {
         // width: "100vw",
         height: "100vh",
         // overflowX: "hidden",
-        overflowY: "hidden",
+        overflowY: "auto",
       }}
     >
       <Box
@@ -334,19 +412,59 @@ function MainPasses() {
         <EsummitNavbar />
       </Box>
 
+      <Dialog
+        open={modalOpen}
+        onClose={() => setModalOpen(false)}
+        aria-labelledby="user-confirmation-dialog"
+        aria-describedby="user-confirmation-dialog-description"
+        PaperProps={{
+          sx: {
+            backgroundColor: "#37477d", // Set dialog background color
+            color: "white", // Set text color for better contrast
+            borderRadius: "12px", // Optional: Rounded corners
+          },
+        }}
+      >
+        <DialogTitle id="user-confirmation-dialog">
+          Confirm Your Account
+        </DialogTitle>
+        <DialogContent>
+          <Typography>
+            You are logged in as <strong>{`${username}<${useremail}>`}</strong>.
+          </Typography>
+          <Typography>
+            Do you want to continue with this account or use a different one?
+          </Typography>
+        </DialogContent>
+        <DialogActions>
+          <Button
+            onClick={handleUseDifferentAccount}
+            variant="outlined"
+            color="error"
+          >
+            Use Different Account
+          </Button>
+          <Button
+            onClick={handleContinue}
+            variant="contained"
+            color="primary"
+            autoFocus
+          >
+            Continue
+          </Button>
+        </DialogActions>
+      </Dialog>
       <div
         style={{
           position: "relative",
           top: 0,
           left: 0,
           width: "100%",
-          height: "100%",
-          overflowY: "auto", // Make content scrollable
-          padding: "2rem 0",
+          overflowY: "auto",
           overflowX: "hidden",
         }}
       >
-        <Panel />
+        <Panel handleBuyNow={handleBuyNow} />
       </div>
     </div>
   );

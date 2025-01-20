@@ -9,6 +9,7 @@ import {
   CircularProgress,
   Select,
   InputLabel,
+  Modal,
 } from "@mui/material";
 import axios from "axios";
 import Link from "next/link";
@@ -39,26 +40,41 @@ const ESummitRegistrationPage = () => {
   const [industry, setIndustry] = useState("");
 
   const router = useRouter();
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
+  const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL;
+  const [modalIsOpen, setModalIsOpen] = useState(false);
+  const [username, setUsername] = useState("");
 
   const handleGetUserDetails = async () => {
+    setLoading(true);
     try {
+      const token = localStorage.getItem("token");
       const response = await axios.get(`${BASE_URL}/me`, {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
         withCredentials: true,
       });
 
       if (response.data.message) {
-        router.replace("/esummit/tickets");
+        setUsername(response.data.user.name)
+        setModalIsOpen(true);
       }
+    } catch (error) {}
+    setLoading(false);
+  };
+
+  const handleLogout = async () => {
+    try {
+      localStorage.removeItem("token");
+      router.reload();
     } catch (error) {
-      if (error.response && error.response.status === 401) {
-        console.error("Unauthorized - Redirecting to login...");
-      } else {
-        console.error("Error getting user details:", error);
-      }
-    } finally {
-      setLoading(false);
+      console.error("Error logging out:", error);
     }
+  };
+
+  const handleBuyPasses = () => {
+    router.replace("/esummit/tickets");
   };
 
   useEffect(() => {
@@ -88,8 +104,6 @@ const ESummitRegistrationPage = () => {
     const indianPhoneRegex = /^[6-9]\d{9}$/;
     return indianPhoneRegex.test(phoneNumber);
   }
-
-  const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL;
 
   const handleSendOtp = async () => {
     setLoadingSendOTPButton(true);
@@ -176,6 +190,10 @@ const ESummitRegistrationPage = () => {
     else router.replace("/esummit");
   };
 
+  const storeToken = (token) => {
+    localStorage.setItem("token", token);
+  };
+
   const handleNext = async () => {
     if (step == 1) setStep(2);
     else {
@@ -200,10 +218,10 @@ const ESummitRegistrationPage = () => {
         );
 
         if (response.data.message) {
+          storeToken(response.data.token);
           toast.success("Successfully signed up", {
             autoClose: 3000,
           });
-          // router.replace("/esummit/tickets");
           setTimeout(() => {
             router.replace("/esummit/tickets");
           }, 2000);
@@ -229,6 +247,20 @@ const ESummitRegistrationPage = () => {
       }
       setLoadingSignUpButton(false);
     }
+  };
+
+  const modalStyle = {
+    position: "absolute",
+    top: "50%",
+    left: "50%",
+    transform: "translate(-50%, -50%)",
+    width: 500,
+    bgcolor: "background.paper",
+    boxShadow: 24,
+    borderRadius: 2,
+    p: 4,
+    textAlign: "center",
+    background: "#37477d",
   };
 
   if (loading) {
@@ -267,6 +299,81 @@ const ESummitRegistrationPage = () => {
       >
         <EsummitNavbar />
       </Box>
+      <Modal
+        open={modalIsOpen}
+        onClose={() => setModalIsOpen(false)}
+        aria-labelledby="already-registered-title"
+        aria-describedby="already-registered-description"
+      >
+        <Box sx={modalStyle}>
+          <Typography
+            id="already-registered-title"
+            variant="h6"
+            component="h2"
+            color={"white"}
+            gutterBottom
+          >
+            {username
+              ? `Hi ${username}, you are already registered for E-Summit 2025.`
+              : `You are already registered for E-Summit 2025.`}
+          </Typography>
+          {/* Optional description */}
+          {/* <Typography
+      id="already-registered-description"
+      sx={{ mb: 2 }}
+      color="text.secondary"
+    >
+      Select an option below to continue:
+    </Typography> */}
+          <Box
+            sx={{
+              display: "flex",
+              flexDirection: { xs: "column", sm: "row" }, // Stack buttons on small screens
+              gap: 2,
+              width: "100%",
+            }}
+          >
+            <Button
+              fullWidth // Ensures the button takes up the full width of its container
+              variant="contained"
+              // color="secondary"
+              onClick={handleLogout}
+              sx={{
+                textTransform: "none", // Keeps the text casing as written
+                fontWeight: "bold",
+                "&.MuiButton-contained": {
+                  backgroundColor: "#b23b3b",
+                },
+                "&:hover": {
+                  backgroundColor: "#B73A00",
+                },
+              }}
+            >
+              Logout, Use Another Account
+            </Button>
+
+            <Button
+              fullWidth
+              variant="contained"
+              color="primary"
+              onClick={handleBuyPasses}
+              sx={{
+                textTransform: "none",
+                fontWeight: "bold",
+                "&.MuiButton-contained": {
+                  backgroundColor: " #22B050",
+                },
+                "&:hover": {
+                  backgroundColor: "#a2b223",
+                },
+              }}
+            >
+              Buy Passes
+            </Button>
+          </Box>
+        </Box>
+      </Modal>
+
       <Container maxWidth="sm">
         <Box
           sx={{
@@ -366,12 +473,12 @@ const ESummitRegistrationPage = () => {
                   >
                     {loadingSendOTPButton ? (
                       <>
-                      <CircularProgress
-                        size={24}
-                        sx={{ position: "absolute" }}
+                        <CircularProgress
+                          size={24}
+                          sx={{ position: "absolute" }}
                         />
                         <span>{"Send OTP"}</span>
-                        </>
+                      </>
                     ) : (
                       "Send OTP"
                     )}
@@ -424,11 +531,11 @@ const ESummitRegistrationPage = () => {
                   >
                     {loadingVerifyOTPButton ? (
                       <>
-                      <CircularProgress
-                        size={24}
-                        sx={{ position: "absolute" }}
-                      />
-                      <span>{"Verify OTP"}</span>
+                        <CircularProgress
+                          size={24}
+                          sx={{ position: "absolute" }}
+                        />
+                        <span>{"Verify OTP"}</span>
                       </>
                     ) : (
                       "Verify OTP"
@@ -807,16 +914,14 @@ const ESummitRegistrationPage = () => {
                     ? instituteName != ""
                     : industry != ""))
                   ? false
-                  : true
-
-                  || loadingSignUpButton
+                  : true || loadingSignUpButton
               }
             >
               {step == 2 ? (
                 loadingSignUpButton ? (
                   <>
-                  <CircularProgress size={24} sx={{ position: "absolute" }} />
-                  <span>{"Sign Up"}</span>
+                    <CircularProgress size={24} sx={{ position: "absolute" }} />
+                    <span>{"Sign Up"}</span>
                   </>
                 ) : (
                   "Sign Up"
