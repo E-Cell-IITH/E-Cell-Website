@@ -17,6 +17,7 @@ import Image from "next/image";
 import Typography from "@mui/material/Typography";
 
 import useMediaQuery from "@mui/material/useMediaQuery";
+import { useRouter } from "next/router";
 
 import Button from "@mui/material/Button";
 import styles from "../styles/startupfair.module.css";
@@ -27,8 +28,11 @@ import TwitterIcon from "@mui/icons-material/Twitter";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import YouTubeIcon from "@mui/icons-material/YouTube";
 
+import { auth, provider, signInWithPopup } from "../lib/firebase";
+
 function StartupFair() {
   const parent = useRef();
+  const router = useRouter();
 
   const tl = useRef();
 
@@ -41,6 +45,17 @@ function StartupFair() {
   const fair = isLargeScreen ? "7rem" : isMediumScreen ? "2rem" : "2.8rem";
   const presents = isLargeScreen ? "1.4rem" : "1rem";
   const padding = isLargeScreen ? "1rem 2.4rem" : "0.5rem 1rem";
+
+  const handleLogin = async () => {
+    try {
+      const result = await signInWithPopup(auth, provider);
+      const user = result.user;
+      router.push("/register");
+      localStorage.setItem("user", JSON.stringify(user));
+    } catch (error) {
+      console.error("Error during login:", error);
+    }
+  };
 
   return (
     <div ref={parent}>
@@ -131,7 +146,7 @@ function StartupFair() {
             STARTUP FAIR &apos;25
           </Typography>
 
-          <Link href="/register">
+          {/* <Link href="/register"> */}
             <Button
               sx={{
                 padding: padding,
@@ -145,6 +160,7 @@ function StartupFair() {
                 boxShadow: "0px 0px 27.979px 3.497px #61E0FD;",
                 color: "white",
               }}
+              onClick={handleLogin}
               // className={styles.borderGradient}
             >
               <Typography
@@ -160,7 +176,7 @@ function StartupFair() {
                 Register Here
               </Typography>
             </Button>
-          </Link>
+          {/* </Link> */}
         </Box>
         <Box
           sx={{

@@ -2,9 +2,12 @@ import * as React from "react";
 import Link from "next/link";
 import { useRef } from "react";
 
-const Navbar = () => {
+const Navbar = ({esummit = false}) => {
   const [checked, setChecked] = React.useState(false);
   const navRef = useRef();
+  if (esummit) {
+    return <></>
+  }
   return (
     <div className="navigation">
       <input
