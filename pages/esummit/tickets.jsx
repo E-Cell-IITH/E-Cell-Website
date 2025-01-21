@@ -495,7 +495,7 @@ function MainPasses() {
         <Panel handleBuyNow={handleBuyNow} />
         <PayDialogSlide
         open={isDialogOpen}
-        onClose={() => setIsDialogOpen(false)}
+        onClose={() => {setIsDialogOpen(false); setModalOpen(false)}}
         title={title}
         price={price}
         width={isBiggerThan1024 ? "40%" : "90%"}
