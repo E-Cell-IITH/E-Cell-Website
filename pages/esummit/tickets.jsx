@@ -4,6 +4,8 @@ import { Josefin_Sans } from "next/font/google";
 import { Tilt } from "react-next-tilt";
 import Button from "@mui/material/Button";
 
+import { useMediaQuery } from "@mui/material";
+
 import {
   Box,
   Typography,
@@ -14,7 +16,11 @@ import {
 } from "@mui/material";
 import React, { useState, useEffect, use } from "react";
 import axios from "axios";
-import { toast } from "react-toastify";
+import { toast, ToastContainer } from "react-toastify";
+
+import "react-toastify/dist/ReactToastify.css";
+
+import PayDialogSlide from "./pay.tsx";
 
 const josefinSans = Josefin_Sans({ subsets: ["latin"], display: "swap" });
 
@@ -28,7 +34,7 @@ const PASSDATA = [
     co5: "Networking Dinner",
     co6: "Accommodation",
     co7: "(2 Days 1 Night)",
-    price: "699",
+    price: " ̶1̶9̶9̶ Free",
     titlecolor: "#ffffff",
     cardcolor:
       "linear-gradient(90deg, rgba(153,153,153,0.100717787114846) 0%, rgba(153,153,153,0.1962359943977591) 100%)",
@@ -54,7 +60,7 @@ const PASSDATA = [
     co5: "Networking Dinner",
     co6: "Accommodation",
     co7: "(2 Days 1 Night)",
-    price: "999",
+    price: "399",
     titlecolor: "#ffffff",
     cardcolor:
       "linear-gradient(90deg, rgba(153,153,153,0.356796218487395) 0%, rgba(153,153,153,0.2911939775910365) 100%)",
@@ -80,7 +86,7 @@ const PASSDATA = [
     co5: "Networking Dinner",
     co6: "Accommodation",
     co7: "(2 Days 1 Night)",
-    price: "1699",
+    price: "Unveiling Soon",
     titlecolor: "#FFD400",
     cardcolor:
       "linear-gradient(90deg, rgba(153,153,153,0.100717787114846) 0%, rgba(153,153,153,0.1962359943977591) 100%)",
@@ -127,6 +133,7 @@ const Card = ({
   bw,
   handleBuyNow,
 }) => {
+  
   return (
     <Tilt
       scale={1.05}
@@ -213,10 +220,13 @@ const Card = ({
             }}
           >
             <div style={{ fontWeight: "normal" }}>
-              {String.fromCharCode(0x20b9)}
+              {title==="PREMIUM"?"":String.fromCharCode(0x20b9)}
               {price}
             </div>
-
+            {title === "PREMIUM" ? 
+              <></>
+            :
+            
             <Button
               variant="contained"
               sx={{
@@ -233,10 +243,13 @@ const Card = ({
                   backgroundColor: "#B73A00",
                 },
               }}
-              onClick={() => handleBuyNow(price)}
+              onClick={() => handleBuyNow(price, title)}
             >
               Buy Now
             </Button>
+            }
+
+            
           </div>
         </div>
       </Box>
@@ -326,6 +339,8 @@ function MainPasses() {
   const [loading, setLoading] = useState(false);
   const [modalOpen, setModalOpen] = useState(false);
   const [price, setPrice] = useState(0);
+  const [title, setTitle] = useState("");
+  const [isDialogOpen, setIsDialogOpen] = useState(false);
 
   const paymentInitiate = async (amount) => {
     try {
@@ -356,8 +371,9 @@ function MainPasses() {
     }
   };
 
-  const handleBuyNow = async (price) => {
+  const handleBuyNow = async (price, title) => {
     setPrice(price);
+    setTitle(title);
     const userDetails = await paymentInitiate(price);
     if (!userDetails || !userDetails.email) {
       window.location.href = "/esummit/login?redirectTo=/esummit/tickets";
@@ -367,9 +383,11 @@ function MainPasses() {
     setUsername(userDetails.name);
 
     setModalOpen(true);
-
+    setIsDialogOpen(true);
     console.log(userDetails.email);
     // Proceed with the payment or other actions
+
+
   };
 
   const handleContinue = () => {
@@ -389,6 +407,8 @@ function MainPasses() {
     window.location.href = "/esummit/login?redirectTo=/esummit/tickets";
   };
 
+  const isBiggerThan1024 = useMediaQuery("(min-width: 1024px)");
+
   return (
     <div
       suppressHydrationWarning
@@ -407,6 +427,7 @@ function MainPasses() {
         overflowY: "auto",
       }}
     >
+      <ToastContainer />
       <Box
         sx={{
           position: "static",
@@ -472,6 +493,13 @@ function MainPasses() {
         }}
       >
         <Panel handleBuyNow={handleBuyNow} />
+        <PayDialogSlide
+        open={isDialogOpen}
+        onClose={() => setIsDialogOpen(false)}
+        title={title}
+        price={price}
+        width={isBiggerThan1024 ? "40%" : "90%"}
+      />
       </div>
     </div>
   );
