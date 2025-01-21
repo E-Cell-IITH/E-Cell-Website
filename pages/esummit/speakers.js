@@ -3,23 +3,94 @@ import { Josefin_Sans } from "next/font/google";
 import { Box, Typography } from "@mui/material";
 import speaker from "/public/speaker1.png";
 import ESummit25 from "/public/ESummit25.png";
-import Link from "next/link";
 
 const josefinSans = Josefin_Sans({ subsets: ["latin"], display: "swap" });
 
+const sponsors1 = [
+  { name: "Speaker", image: speaker.src, link: "https://example.com/speaker1" },
+  { name: "Speaker", image: speaker.src, link: "https://example.com/speaker2" },
+  { name: "Speaker", image: speaker.src, link: "https://example.com/speaker3" },
+  { name: "Speaker", image: speaker.src, link: "https://example.com/speaker4" },
+  { name: "Speaker", image: speaker.src, link: "https://example.com/speaker5" },
+  { name: "Speaker", image: speaker.src, link: "https://example.com/speaker6" },
+  { name: "Speaker", image: speaker.src, link: "https://example.com/speaker7" },
+];
 
-//Would later remove the link from this
-const sponsors = [
-  { name: "Speaker", image: speaker.src, link: "https://example.com/speaker1" },
-  { name: "Speaker", image: speaker.src, link: "https://example.com/speaker1" },
-  { name: "Speaker", image: speaker.src, link: "https://example.com/speaker1" },
-  { name: "Speaker", image: speaker.src, link: "https://example.com/speaker1" },
-  { name: "Speaker", image: speaker.src, link: "https://example.com/speaker1" },
-  { name: "Speaker", image: speaker.src, link: "https://example.com/speaker1" },
-  { name: "Speaker", image: speaker.src, link: "https://example.com/speaker1" },
+const sponsors2 = [
+  {
+    name: "Devvrat Arya",
+    designation: "VP of Technology, Pepperfry",
+    image:
+      "https://res.cloudinary.com/dwsverefw/image/upload/v1670833558/ecell/speakers/Devvrat_Arya_-_VP_of_Technology_Pepperfry_lzztpf.png",
+  },
+  {
+    name: "Akhil Gupta",
+    designation: "Founder, Nobroker",
+    image:
+      "https://res.cloudinary.com/dwsverefw/image/upload/v1670833558/ecell/speakers/Akhil_Gupta_Founder_Nobroker_vf0ro7.png",
+  },
+  {
+    name: "Pankaj Agarwal",
+    designation: "Founder and CEO, Taghive",
+    image:
+      "https://res.cloudinary.com/dwsverefw/image/upload/v1670833558/ecell/speakers/Pankaj_Agarwal_Founder_and_CEO_Taghive.jpg_zmxiir.png",
+  },
+  {
+    name: "Tapan Mishra",
+    designation: "Former Director, SAC ISRO",
+    image:
+      "https://res.cloudinary.com/dwsverefw/image/upload/v1670833559/ecell/speakers/Tapan_Misra_Former_Director_SAC_ISRO_ryyzhk.png",
+  },
+  {
+    name: "TN Hari",
+    designation: "HR Head, BigBasket",
+    image:
+      "https://res.cloudinary.com/dwsverefw/image/upload/v1670833559/ecell/speakers/TN_Hari_-_HR_Head_BigBasket_zni0io.png",
+  },
+  {
+    name: "Dr. Onkar Rai",
+    designation: "Director General, STPI",
+    description: "Speaker Description here",
+    image:
+      "https://res.cloudinary.com/dwsverefw/image/upload/v1670833558/ecell/speakers/Dr._Onkar_Rai_-_Director_General_STPI_xri0c6.png",
+  },
+  {
+    name: "Bhagwan Chowdary",
+    designation: "Professor of Finance, ISB",
+    description: "Speaker Description here",
+    image:
+      "https://res.cloudinary.com/dwsverefw/image/upload/v1670833558/ecell/speakers/Bhagwan_Chowdary_-_Professor_of_Finance_ISB_iyeal4.png",
+  },
+  {
+    name: "Shashank Randev",
+    designation: "Founder VC, 100X.VC",
+    image:
+      "https://res.cloudinary.com/dwsverefw/image/upload/v1670833559/ecell/speakers/Shashank_Randev_-_Founder_VC_100X.VC_zftu1y.png",
+  },
+  {
+    name: "V. Krishna Mohan",
+    designation: "Executive Director, Bharat Biotech",
+    image:
+      "https://res.cloudinary.com/dwsverefw/image/upload/v1670833559/ecell/speakers/V._Krishna_Mohan_-_Executive_Director_Bharat_Biotech_ijutbx.png",
+  },
+  {
+    name: "SK Jana",
+    designation: "Director R&D, Serum Institute",
+    image:
+      "https://res.cloudinary.com/dwsverefw/image/upload/v1670833559/ecell/speakers/SK_Jana_-_Director_R_D_and_Manufacturing_Serum_Institute_jwrjj2.png",
+  },
+  {
+    name: "Padma Srivastava",
+    designation: "Neurologist, AIIMS",
+    image:
+      "https://res.cloudinary.com/dwsverefw/image/upload/v1670833558/ecell/speakers/Padma_Srivastava_-_Neurologist_AIIMS_iarlr2.png",
+  },
 ];
 
 function Marquee({ sponsors, topPosition }) {
+  // Hardcoded it to make it endless
+  const extendedSponsors = [...sponsors, ...sponsors, ...sponsors, ...sponsors];
+
   return (
     <div
       style={{
@@ -34,12 +105,13 @@ function Marquee({ sponsors, topPosition }) {
       <div
         style={{
           display: "flex",
-          animation: "scrollLeft 20s linear infinite",
+          animation: "scrollLeft 60s linear infinite", // Keep the speed same for both marquees
           gap: "0px",
           height: "100%",
+          width: "max-content",
         }}
       >
-        {sponsors.map((sponsor, index) => (
+        {extendedSponsors.map((sponsor, index) => (
           <div
             key={index}
             style={{
@@ -64,68 +136,60 @@ function Marquee({ sponsors, topPosition }) {
                 marginBottom: "10px",
               }}
             ></div>
+
+       
             <div
               style={{
-                width: "160px",
-                height: "24px",
-                backgroundColor: "#FFFFFF",
+                width: "151px",
+                height: "48px",
+                margin: "0 auto",
                 textAlign: "center",
-                lineHeight: "24px",
-                opacity: "0",
-                marginLeft: "auto",
-                marginRight: "auto",
-              }}
-            >
-              <span style={{ color: "#000", fontSize: "14px" }}>
-                {sponsor.name}
-              </span>
-            </div>
-          </div>
-        ))}
-        {sponsors.map((sponsor, index) => (
-          <div
-            key={index + sponsors.length}
-            style={{
-              display: "flex",
-              flexDirection: "column",
-              width: "205.884px",
-              height: "273px",
-              flexShrink: 0,
-              marginRight: "20px",
-              border: "2px solid #FFF",
-              background: "rgba(143, 135, 135, 0.10)",
-              padding: "10px",
-            }}
-          >
-            <div
-              style={{
-                width: "181px",
-                height: "182px",
-                flexShrink: 0,
                 borderRadius: "4px",
-                background: `url(${sponsor.image}) lightgray 50% / cover no-repeat`,
-                marginBottom: "10px",
-              }}
-            ></div>
-            <div
-              style={{
-                width: "160px",
-                height: "24px",
-                backgroundColor: "#FFFFFF",
-                textAlign: "center",
-                lineHeight: "24px",
-                opacity: "0",
-                marginLeft: "auto",
-                marginRight: "auto",
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
               }}
             >
-              <span style={{ color: "#000", fontSize: "14px" }}>
+              <Typography
+                sx={{
+                  fontFamily: "Inter",
+                  fontSize: "18px",
+                  fontWeight: 400,
+                  lineHeight: "24.2px",
+                  color: "#FFFFFF",
+                }}
+              >
                 {sponsor.name}
-              </span>
+              </Typography>
+            </div>
+
+            <div
+              style={{
+                width: "96px",
+                height: "19px",
+                gap: "0px",
+                backgroundColor: "transparent",
+                marginTop: "10px", 
+              }}
+            >
+              <Typography
+                sx={{
+                  fontFamily: "Inter",
+                  fontSize: "13px",
+                  fontWeight: 200,
+                  lineHeight: "normal",
+                  whiteSpace: "nowrap", 
+                  fontStyle: "normal",
+                  color: "#FFFFFF",
+                }}
+              >
+                {sponsor.designation}
+              </Typography>
             </div>
           </div>
         ))}
       </div>
+
       <style jsx>{`
         @keyframes scrollLeft {
           from {
@@ -135,6 +199,11 @@ function Marquee({ sponsors, topPosition }) {
             transform: translateX(-100%);
           }
         }
+
+        div {
+          will-change: transform;
+        }
+
         @media (max-width: 1200px) {
           div {
             left: 0;
@@ -173,28 +242,6 @@ function Marquee({ sponsors, topPosition }) {
 }
 
 function SponsorsMain() {
-  const sponsors1 = [
-    { name: "Speaker", image: speaker.src, link: "https://example.com/speaker1" },
-    { name: "Speaker", image: speaker.src, link: "https://example.com/speaker1" },
-    { name: "Speaker", image: speaker.src, link: "https://example.com/speaker1" },
-    { name: "Speaker", image: speaker.src, link: "https://example.com/speaker1" },
-    { name: "Speaker", image: speaker.src, link: "https://example.com/speaker1" },
-    { name: "Speaker", image: speaker.src, link: "https://example.com/speaker1" },
-    { name: "Speaker", image: speaker.src, link: "https://example.com/speaker1" },
-  ];
-  //Would edit the names and add text later when I would receive it.
-  
-
-  const sponsors2 = [
-    { name: "Speaker", image: speaker.src, link: "https://example.com/speaker2" },
-    { name: "Speaker", image: speaker.src, link: "https://example.com/speaker2" },
-    { name: "Speaker", image: speaker.src, link: "https://example.com/speaker2" },
-    { name: "Speaker", image: speaker.src, link: "https://example.com/speaker2" },
-    { name: "Speaker", image: speaker.src, link: "https://example.com/speaker2" },
-    { name: "Speaker", image: speaker.src, link: "https://example.com/speaker2" },
-    { name: "Speaker", image: speaker.src, link: "https://example.com/speaker2" },
-  ];
-
   return (
     <div
       suppressHydrationWarning
@@ -280,31 +327,14 @@ function SponsorsMain() {
               fontSize: "32px",
               fontWeight: 500,
               lineHeight: "32px",
-              textAlign: "center",
               color: "#FFF",
-              marginBottom: "30px",
             }}
           >
             PAST SPEAKERS
           </Typography>
         </div>
 
-        <Marquee sponsors={sponsors2} topPosition="706px" />
-
-        <div
-          style={{
-            position: "absolute",
-            top: "746px",
-            left: "209px",
-            width: "1315px",
-            height: "273px",
-            gap: "0px",
-            opacity: "0",
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-          }}
-        ></div>
+        <Marquee sponsors={sponsors2} topPosition="738px" />
       </div>
     </div>
   );
