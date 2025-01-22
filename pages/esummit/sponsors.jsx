@@ -1,5 +1,5 @@
 import React from "react";
-import EsummitNavbar from "../../components/esummit25/navbar";
+import EsummitNavbar from "../../components/ESummt/navbar";
 import { Josefin_Sans } from "next/font/google";
 import { Tilt } from "react-next-tilt";
 import Button from "@mui/material/Button";
