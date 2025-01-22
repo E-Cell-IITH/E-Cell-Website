@@ -20,7 +20,7 @@ import { toast, ToastContainer } from "react-toastify";
 
 import "react-toastify/dist/ReactToastify.css";
 
-import PayDialogSlide from "./pay.tsx";
+import PayDialogSlide from "../../components/ESummt/pay";
 
 const josefinSans = Josefin_Sans({ subsets: ["latin"], display: "swap" });
 
@@ -133,7 +133,6 @@ const Card = ({
   bw,
   handleBuyNow,
 }) => {
-  
   return (
     <Tilt
       scale={1.05}
@@ -220,36 +219,33 @@ const Card = ({
             }}
           >
             <div style={{ fontWeight: "normal" }}>
-              {title==="PREMIUM"?"":String.fromCharCode(0x20b9)}
+              {title === "PREMIUM" ? "" : String.fromCharCode(0x20b9)}
               {price}
             </div>
-            {title === "PREMIUM" ? 
+            {title === "PREMIUM" ? (
               <></>
-            :
-            
-            <Button
-              variant="contained"
-              sx={{
-                borderRadius: "0",
-                color: "white",
-                fontFamily: "Josefin Sans",
-                fontSize: { xs: "0.7rem", sm: "0.8rem", md: "1.2rem" },
-                fontWeight: "700",
-                textTransform: "none",
-                "&.MuiButton-contained": {
-                  backgroundColor: "#FF5100",
-                },
-                "&:hover": {
-                  backgroundColor: "#B73A00",
-                },
-              }}
-              onClick={() => handleBuyNow(price, title)}
-            >
-              Buy Now
-            </Button>
-            }
-
-            
+            ) : (
+              <Button
+                variant="contained"
+                sx={{
+                  borderRadius: "0",
+                  color: "white",
+                  fontFamily: "Josefin Sans",
+                  fontSize: { xs: "0.7rem", sm: "0.8rem", md: "1.2rem" },
+                  fontWeight: "700",
+                  textTransform: "none",
+                  "&.MuiButton-contained": {
+                    backgroundColor: "#FF5100",
+                  },
+                  "&:hover": {
+                    backgroundColor: "#B73A00",
+                  },
+                }}
+                onClick={() => handleBuyNow(price, title)}
+              >
+                Buy Now
+              </Button>
+            )}
           </div>
         </div>
       </Box>
@@ -343,12 +339,17 @@ function MainPasses() {
   const [isDialogOpen, setIsDialogOpen] = useState(false);
 
   const paymentInitiate = async (amount) => {
+    console.log(amount);
     try {
       const token = localStorage.getItem("token");
       console.log("Token: ", token);
 
+      if (!Number(amount)) {
+        amount = -1;
+      }
+
       var data = {
-        "amount": Number(amount),
+        amount: Number(amount),
       };
       console.log("Request Data:", data); // Ensure this is an object
 
@@ -363,6 +364,7 @@ function MainPasses() {
         return {
           name: response.data.user.name,
           email: response.data.user.email,
+          ticketId: response.data.ticketId,
         };
       }
     } catch (error) {
@@ -379,15 +381,19 @@ function MainPasses() {
       window.location.href = "/esummit/login?redirectTo=/esummit/tickets";
       return;
     }
+    if (userDetails.ticketId != -1) {
+      //Show you already have a ticket
+      toast.error("You already purchased one ticket!, Please try with different account.", {
+        autoClose: 5000,
+      });
+      return;
+    }
     setUserEmail(userDetails.email);
     setUsername(userDetails.name);
 
     setModalOpen(true);
-    setIsDialogOpen(true);
     console.log(userDetails.email);
     // Proceed with the payment or other actions
-
-
   };
 
   const handleContinue = () => {
@@ -398,6 +404,7 @@ function MainPasses() {
       });
       return;
     }
+    setIsDialogOpen(true);
   };
 
   const handleUseDifferentAccount = () => {
@@ -494,12 +501,15 @@ function MainPasses() {
       >
         <Panel handleBuyNow={handleBuyNow} />
         <PayDialogSlide
-        open={isDialogOpen}
-        onClose={() => {setIsDialogOpen(false); setModalOpen(false)}}
-        title={title}
-        price={price}
-        width={isBiggerThan1024 ? "40%" : "90%"}
-      />
+          open={isDialogOpen}
+          onClose={() => {
+            setIsDialogOpen(false);
+            setModalOpen(false);
+          }}
+          title={title}
+          price={price}
+          width={isBiggerThan1024 ? "40%" : "90%"}
+        />
       </div>
     </div>
   );

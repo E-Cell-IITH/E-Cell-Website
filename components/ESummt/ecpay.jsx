@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { QRCode } from "react-qrcode-logo";
 import axios from "axios";
+import { toast } from "react-toastify";
 
 const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL;
 
@@ -22,20 +23,36 @@ const PaymentPortal = ({ title, price, logoLink }) => {
     setResponseMessage(""); // Clear previous messages
 
     if (price === " ̶1̶9̶9̶ Free"){
-        price = 0;
+        price = -1;
         setTransactionId("x0443245");
     }
 
     if (price === "399"){
         price = 399;
     }
+    const token = localStorage.getItem("token");
 
     try {
       const response = await axios.post(BASE_URL+"/transactionID ", {
         txn_id: transactionId,
         amount: price,
+      }, {
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${token}`,
+        }
       });
-      setResponseMessage(response.data.message || "Transaction ID submitted successfully!");
+      // setResponseMessage(response.data.message || "Transaction ID submitted successfully!");
+      if (response.data.message) {
+        toast.success("Transaction ID submitted successfully!", {
+          autoClose: 3000,
+        });
+        setTimeout(() => {
+          router.replace("/esummit");
+        }, 2000);
+      }
+
+
     } catch (error) {
       setResponseMessage("Error submitting transaction ID. Please try again.");
     } finally {
