@@ -16,8 +16,9 @@ import Link from "next/link";
 import { useState, useEffect } from "react";
 import { KeyboardArrowDown } from "@mui/icons-material";
 import { useRouter } from "next/router";
-import EsummitNavbar from "../../components/esummit25/navbar";
+import EsummitNavbar from "../../components/ESummt/navbar";
 import { toast } from "react-toastify";
+import Head from "next/head";
 
 const ESummitRegistrationPage = () => {
   const [step, setStep] = useState(1);

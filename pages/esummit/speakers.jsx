@@ -3,7 +3,7 @@ import { Josefin_Sans, Inter } from "next/font/google";
 import { Box, Typography } from "@mui/material";
  import speaker from "/public/speaker1.png";
 import ESummit25 from "/public/ESummit25.png";
-import EsummitNavbar from "../../components/esummit25/navbar";
+import EsummitNavbar from "../../components/ESummt/navbar";
 
 const josefinSans = Josefin_Sans({ subsets: ["latin"], display: "swap" });
 

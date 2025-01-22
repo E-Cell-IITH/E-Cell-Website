@@ -10,8 +10,9 @@ import {
 import axios from "axios";
 import { useState } from "react";
 import { useRouter } from "next/router";
-import EsummitNavbar from "../../components/esummit25/navbar";
+import EsummitNavbar from "../../components/ESummt/navbar";
 import { toast } from "react-toastify";
+import Head from "next/head";
 
 const ESummitLoginPage = () => {
   const router = useRouter();

@@ -8,7 +8,7 @@ import {Tilt} from "react-next-tilt";
 import "@fontsource/montserrat";
 import { Divider } from "@mui/material";
 import Head from "next/head";
-import EsummitNavbar from "../../components/esummit25/navbar";
+import EsummitNavbar from "../../components/ESummt/navbar";
 import { Josefin_Sans } from "next/font/google";
 const josefinSans = Josefin_Sans({ subsets: ["latin"], display: "swap" });
 
@@ -107,8 +107,9 @@ const Theme = () => {
 
 const ESummitPage = () => {
   const handleRegisterClick = () => {
-    alert("Registration will start soon. Stay tuned!");
+    // alert("Registration will start soon. Stay tuned!");
     // Add your redirect or functionality here
+    window.location.href = "/esummit/register";
   };
 
   
