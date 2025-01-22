@@ -48,13 +48,19 @@ const PaymentPortal = ({ title, price, logoLink, userID }) => {
           autoClose: 3000,
         });
         setTimeout(() => {
-          router.replace("/esummit");
+          window.location.href = "/esummit";
         }, 2000);
       }
 
 
     } catch (error) {
       setResponseMessage("Error submitting transaction ID. Please try again.");
+      toast.error(
+        `Error: ${error.response.data.error || "Unknown error occurred"}`,
+        {
+          autoClose: 3000,
+        }
+      );
     } finally {
       setIsSubmitting(false);
     }
