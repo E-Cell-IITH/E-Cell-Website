@@ -122,183 +122,196 @@ const ESummitLoginPage = () => {
   };
 
   return (
-    <Box
-      sx={{
-        minHeight: "100vh",
-        background: "url(/esummit25/bg.png) no-repeat center center/cover",
-        position: "relative",
-        overflow: "hidden",
-      }}
-    >
+    <>
+      <Head>
+        <title>E-Summit 2025</title>
+        <meta
+          name="google-site-verification"
+          content="agHaKoDcApHadKU7BhRCOJK0w5SRZtQCG9YxNKZBGvc"
+        />
+        <link rel="canonical" href="https://ecell.iith.ac.in/esummit" />
+      </Head>
       <Box
         sx={{
-          position: "absolute",
-          top: 0,
-          left: 0,
-          width: "100%",
-          zIndex: 10,
+          minHeight: "100vh",
+          background: "url(/esummit25/bg.png) no-repeat center center/cover",
+          position: "relative",
+          overflow: "hidden",
         }}
       >
-        <EsummitNavbar />
-      </Box>
-      <Container maxWidth="sm">
         <Box
           sx={{
-            mt: 22,
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
+            position: "absolute",
+            top: 0,
+            left: 0,
+            width: "100%",
+            zIndex: 10,
           }}
         >
-          <Typography
-            component="h1"
-            variant="h4"
+          <EsummitNavbar />
+        </Box>
+        <Container maxWidth="sm">
+          <Box
             sx={{
-              mb: 0,
-              fontWeight: 500,
-              letterSpacing: "0.1em",
-              color: "white",
+              mt: 22,
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
             }}
           >
-            LOGIN
-          </Typography>
-          <Box sx={{ width: "100%", mt: 1 }}>
-            <Box sx={{ position: "relative", width: "100%", mb: 2 }}>
-              <TextField
-                fullWidth
-                placeholder="Enter your email"
-                variant="outlined"
-                value={email}
-                onChange={handleEmailChange}
-                sx={{
-                  "& .MuiOutlinedInput-root": {
-                    "& fieldset": {
-                      border: "0.5px solid rgb(153, 153, 153)",
+            <Typography
+              component="h1"
+              variant="h4"
+              sx={{
+                mb: 0,
+                fontWeight: 500,
+                letterSpacing: "0.1em",
+                color: "white",
+              }}
+            >
+              LOGIN
+            </Typography>
+            <Box sx={{ width: "100%", mt: 1 }}>
+              <Box sx={{ position: "relative", width: "100%", mb: 2 }}>
+                <TextField
+                  fullWidth
+                  placeholder="Enter your email"
+                  variant="outlined"
+                  value={email}
+                  onChange={handleEmailChange}
+                  sx={{
+                    "& .MuiOutlinedInput-root": {
+                      "& fieldset": {
+                        border: "0.5px solid rgb(153, 153, 153)",
+                      },
+                      "& input::placeholder": {
+                        color: "white",
+                      },
+                      "& input": {
+                        color: "white",
+                      },
+                      "&:hover fieldset": {
+                        borderColor: "rgba(255, 255, 255, 0.8)",
+                      },
                     },
-                    "& input::placeholder": {
-                      color: "white",
+                  }}
+                />
+                <Button
+                  variant="contained"
+                  sx={{
+                    width: "25%",
+                    position: "absolute",
+                    right: 0,
+                    backgroundColor: `${
+                      disableSendOTPButton
+                        ? "rgba(1, 1, 1, 0.12) !important"
+                        : "rgba(255, 81, 0, 0.61) !important"
+                    }`,
+                    color: "white !important",
+                    "&:hover": {
+                      backgroundColor: "rgba(255, 81, 0, 0.8) !important",
                     },
-                    "& input": {
-                      color: "white",
+                    height: "100%",
+                    borderRadius: "2px",
+                    textTransform: "none",
+                    marginBottom: "16px",
+                  }}
+                  disabled={disableSendOTPButton || loadingSendOTPButton}
+                  onClick={handleSendOtp}
+                >
+                  {loadingSendOTPButton ? (
+                    <>
+                      <CircularProgress
+                        size={24}
+                        sx={{ position: "absolute" }}
+                      />
+                      <span>{"Send OTP"}</span>
+                    </>
+                  ) : (
+                    "Send OTP"
+                  )}
+                </Button>
+              </Box>
+              <Box sx={{ position: "relative", width: "100%", mb: 2 }}>
+                <TextField
+                  fullWidth
+                  placeholder="Enter OTP"
+                  variant="outlined"
+                  value={otp}
+                  onChange={handleOtpChange}
+                  sx={{
+                    "& .MuiOutlinedInput-root": {
+                      "& fieldset": {
+                        border: "0.5px solid rgb(153, 153, 153)",
+                      },
+                      "& input::placeholder": {
+                        color: "white",
+                      },
+                      "& input": {
+                        color: "white",
+                      },
+                      "&:hover fieldset": {
+                        borderColor: "rgba(255, 255, 255, 0.8)",
+                      },
                     },
-                    "&:hover fieldset": {
-                      borderColor: "rgba(255, 255, 255, 0.8)",
-                    },
-                  },
-                }}
-              />
+                  }}
+                />
+              </Box>
               <Button
+                fullWidth
                 variant="contained"
                 sx={{
-                  width: "25%",
-                  position: "absolute",
-                  right: 0,
-                  backgroundColor: `${
-                    disableSendOTPButton
-                      ? "rgba(1, 1, 1, 0.12) !important"
-                      : "rgba(255, 81, 0, 0.61) !important"
-                  }`,
-                  color: "white !important",
-                  "&:hover": {
-                    backgroundColor: "rgba(255, 81, 0, 0.8) !important",
+                  mb: 2,
+                  borderRadius: "0",
+                  color: "white",
+                  // width: { lg: "24.5rem", sm: "20rem", xs: "10rem" },
+                  fontFamily: "Montserrat, sans-serif",
+                  fontSize: { xs: "1rem", sm: "1rem", md: "1.2rem" },
+                  fontWeight: "700",
+                  letterSpacing: "3.6px",
+                  textTransform: "uppercase",
+                  "&.MuiButton-contained": {
+                    backgroundColor: "#FF5100",
                   },
-                  height: "100%",
-                  borderRadius: "2px",
-                  textTransform: "none",
-                  marginBottom: "16px",
+                  "&:hover": {
+                    backgroundColor: "#B73A00",
+                  },
+                  "&.Mui-disabled": {
+                    color: "grey !important",
+                    backgroundColor: "rgba(1, 1, 1, 0.13) !important",
+                  },
                 }}
-                disabled={disableSendOTPButton || loadingSendOTPButton}
-                onClick={handleSendOtp}
+                disabled={disableLoginButton || loadingLoginButton}
+                onClick={handleLogin}
               >
-                {loadingSendOTPButton ? (
+                {loadingLoginButton ? (
                   <>
-                  <CircularProgress size={24} sx={{ position: "absolute" }} />
-                  <span>{"Send OTP"}</span>
+                    <CircularProgress size={32} sx={{ position: "absolute" }} />
+                    <span>{"Login"}</span>
                   </>
                 ) : (
-                  "Send OTP"
+                  "Login"
                 )}
               </Button>
-            </Box>
-            <Box sx={{ position: "relative", width: "100%", mb: 2 }}>
-              <TextField
-                fullWidth
-                placeholder="Enter OTP"
-                variant="outlined"
-                value={otp}
-                onChange={handleOtpChange}
-                sx={{
-                  "& .MuiOutlinedInput-root": {
-                    "& fieldset": {
-                      border: "0.5px solid rgb(153, 153, 153)",
-                    },
-                    "& input::placeholder": {
-                      color: "white",
-                    },
-                    "& input": {
-                      color: "white",
-                    },
-                    "&:hover fieldset": {
-                      borderColor: "rgba(255, 255, 255, 0.8)",
-                    },
-                  },
-                }}
-              />
-            </Box>
-            <Button
-              fullWidth
-              variant="contained"
-              sx={{
-                mb: 2,
-                borderRadius: "0",
-                color: "white",
-                // width: { lg: "24.5rem", sm: "20rem", xs: "10rem" },
-                fontFamily: "Montserrat, sans-serif",
-                fontSize: { xs: "1rem", sm: "1rem", md: "1.2rem" },
-                fontWeight: "700",
-                letterSpacing: "3.6px",
-                textTransform: "uppercase",
-                "&.MuiButton-contained": {
-                  backgroundColor: "#FF5100",
-                },
-                "&:hover": {
-                  backgroundColor: "#B73A00",
-                },
-                "&.Mui-disabled": {
-                  color: "grey !important",
-                  backgroundColor: "rgba(1, 1, 1, 0.13) !important",
-                },
-              }}
-              disabled={disableLoginButton || loadingLoginButton}
-              onClick={handleLogin}
-            >
-              {loadingLoginButton ? (
-                <>
-                  <CircularProgress size={32} sx={{ position: "absolute" }} />
-                  <span>{"Login"}</span>
-                </>
-              ) : (
-                "Login"
-              )}
-            </Button>
-            <Box sx={{ textAlign: "center", mb: 3 }}>
-              <Typography
-                variant="body2"
-                sx={{ color: "rgba(255,255,255,0.7)" }}
-              >
-                New Here?{" "}
-                <Link
-                  href="/esummit/register"
-                  style={{ color: "#ff4500", textDecoration: "none" }}
+              <Box sx={{ textAlign: "center", mb: 3 }}>
+                <Typography
+                  variant="body2"
+                  sx={{ color: "rgba(255,255,255,0.7)" }}
                 >
-                  Register
-                </Link>
-              </Typography>
+                  New Here?{" "}
+                  <Link
+                    href="/esummit/register"
+                    style={{ color: "#ff4500", textDecoration: "none" }}
+                  >
+                    Register
+                  </Link>
+                </Typography>
+              </Box>
             </Box>
           </Box>
-        </Box>
-      </Container>
-    </Box>
+        </Container>
+      </Box>
+    </>
   );
 };
 

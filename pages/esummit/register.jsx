@@ -57,7 +57,7 @@ const ESummitRegistrationPage = () => {
       });
 
       if (response.data.message) {
-        setUsername(response.data.user.name)
+        setUsername(response.data.user.name);
         setModalIsOpen(true);
       }
     } catch (error) {}
@@ -280,158 +280,143 @@ const ESummitRegistrationPage = () => {
   }
 
   return (
-    <Box
-      sx={{
-        minHeight: "100vh",
-        background: "url(/esummit25/bg.png) no-repeat center center/cover",
-        position: "relative",
-        overflow: "hidden",
-      }}
-    >
+    <>
+      <Head>
+        <title>Register For E-Summit 2025</title>
+        <meta
+          name="google-site-verification"
+          content="agHaKoDcApHadKU7BhRCOJK0w5SRZtQCG9YxNKZBGvc"
+        />
+        <link rel="canonical" href="https://ecell.iith.ac.in/esummit" />
+      </Head>
       <Box
         sx={{
-          position: "absolute",
-          top: 0,
-          left: 0,
-          width: "100%",
-          zIndex: 10,
+          minHeight: "100vh",
+          background: "url(/esummit25/bg.png) no-repeat center center/cover",
+          position: "relative",
+          overflow: "hidden",
         }}
       >
-        <EsummitNavbar />
-      </Box>
-      <Modal
-        open={modalIsOpen}
-        onClose={() => setModalIsOpen(false)}
-        aria-labelledby="already-registered-title"
-        aria-describedby="already-registered-description"
-      >
-        <Box sx={modalStyle}>
-          <Typography
-            id="already-registered-title"
-            variant="h6"
-            component="h2"
-            color={"white"}
-            gutterBottom
-          >
-            {username
-              ? `Hi ${username}, you are already registered for E-Summit 2025.`
-              : `You are already registered for E-Summit 2025.`}
-          </Typography>
-          {/* Optional description */}
-          {/* <Typography
+        <Box
+          sx={{
+            position: "absolute",
+            top: 0,
+            left: 0,
+            width: "100%",
+            zIndex: 10,
+          }}
+        >
+          <EsummitNavbar />
+        </Box>
+        <Modal
+          open={modalIsOpen}
+          onClose={() => setModalIsOpen(false)}
+          aria-labelledby="already-registered-title"
+          aria-describedby="already-registered-description"
+        >
+          <Box sx={modalStyle}>
+            <Typography
+              id="already-registered-title"
+              variant="h6"
+              component="h2"
+              color={"white"}
+              gutterBottom
+            >
+              {username
+                ? `Hi ${username}, you are already registered for E-Summit 2025.`
+                : `You are already registered for E-Summit 2025.`}
+            </Typography>
+            {/* Optional description */}
+            {/* <Typography
       id="already-registered-description"
       sx={{ mb: 2 }}
       color="text.secondary"
     >
       Select an option below to continue:
     </Typography> */}
+            <Box
+              sx={{
+                display: "flex",
+                flexDirection: { xs: "column", sm: "row" }, // Stack buttons on small screens
+                gap: 2,
+                width: "100%",
+              }}
+            >
+              <Button
+                fullWidth // Ensures the button takes up the full width of its container
+                variant="contained"
+                // color="secondary"
+                onClick={handleLogout}
+                sx={{
+                  textTransform: "none", // Keeps the text casing as written
+                  fontWeight: "bold",
+                  "&.MuiButton-contained": {
+                    backgroundColor: "#b23b3b",
+                  },
+                  "&:hover": {
+                    backgroundColor: "#B73A00",
+                  },
+                }}
+              >
+                Logout, Use Another Account
+              </Button>
+
+              <Button
+                fullWidth
+                variant="contained"
+                color="primary"
+                onClick={handleBuyPasses}
+                sx={{
+                  textTransform: "none",
+                  fontWeight: "bold",
+                  "&.MuiButton-contained": {
+                    backgroundColor: " #22B050",
+                  },
+                  "&:hover": {
+                    backgroundColor: "#a2b223",
+                  },
+                }}
+              >
+                Buy Passes
+              </Button>
+            </Box>
+          </Box>
+        </Modal>
+
+        <Container maxWidth="sm">
           <Box
             sx={{
+              mt: 22,
               display: "flex",
-              flexDirection: { xs: "column", sm: "row" }, // Stack buttons on small screens
-              gap: 2,
-              width: "100%",
+              flexDirection: "column",
+              alignItems: "center",
             }}
           >
-            <Button
-              fullWidth // Ensures the button takes up the full width of its container
-              variant="contained"
-              // color="secondary"
-              onClick={handleLogout}
+            <Typography
+              component="h1"
+              variant="h4"
               sx={{
-                textTransform: "none", // Keeps the text casing as written
-                fontWeight: "bold",
-                "&.MuiButton-contained": {
-                  backgroundColor: "#b23b3b",
-                },
-                "&:hover": {
-                  backgroundColor: "#B73A00",
-                },
+                mb: 0,
+                fontWeight: 500,
+                letterSpacing: "0.1em",
+                color: "white",
+                fontFamily: "Josefin Sans, sans-serif",
               }}
             >
-              Logout, Use Another Account
-            </Button>
+              REGISTER
+            </Typography>
 
-            <Button
-              fullWidth
-              variant="contained"
-              color="primary"
-              onClick={handleBuyPasses}
-              sx={{
-                textTransform: "none",
-                fontWeight: "bold",
-                "&.MuiButton-contained": {
-                  backgroundColor: " #22B050",
-                },
-                "&:hover": {
-                  backgroundColor: "#a2b223",
-                },
-              }}
-            >
-              Buy Passes
-            </Button>
-          </Box>
-        </Box>
-      </Modal>
-
-      <Container maxWidth="sm">
-        <Box
-          sx={{
-            mt: 22,
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-          }}
-        >
-          <Typography
-            component="h1"
-            variant="h4"
-            sx={{
-              mb: 0,
-              fontWeight: 500,
-              letterSpacing: "0.1em",
-              color: "white",
-              fontFamily: "Josefin Sans, sans-serif",
-            }}
-          >
-            REGISTER
-          </Typography>
-
-          <Box component="form" sx={{ width: "100%", mt: 1 }}>
-            {step == 1 ? (
-              <>
-                <TextField
-                  fullWidth
-                  placeholder="Enter your name"
-                  variant="outlined"
-                  value={name}
-                  onChange={(e) => setName(e.target.value)}
-                  sx={{
-                    mb: 2,
-                    "& .MuiOutlinedInput-root": {
-                      "& fieldset": {
-                        border: "0.5px solid rgb(153, 153, 153)",
-                      },
-                      "& input::placeholder": {
-                        color: "white",
-                      },
-                      "& input": {
-                        color: "white",
-                      },
-                      "&:hover fieldset": {
-                        borderColor: "rgba(255, 255, 255, 0.8)",
-                      },
-                    },
-                  }}
-                />
-                <Box sx={{ position: "relative", width: "100%", mb: 2 }}>
+            <Box component="form" sx={{ width: "100%", mt: 1 }}>
+              {step == 1 ? (
+                <>
                   <TextField
                     fullWidth
-                    placeholder="Enter your email"
+                    placeholder="Enter your name"
                     variant="outlined"
-                    value={email}
-                    onChange={handleEmailChange}
+                    value={name}
+                    onChange={(e) => setName(e.target.value)}
                     sx={{
+                      mb: 2,
                       "& .MuiOutlinedInput-root": {
                         "& fieldset": {
                           border: "0.5px solid rgb(153, 153, 153)",
@@ -448,182 +433,132 @@ const ESummitRegistrationPage = () => {
                       },
                     }}
                   />
-                  <Button
-                    variant="contained"
-                    sx={{
-                      width: "25%",
-                      position: "absolute",
-                      right: 0,
-                      backgroundColor: `${
-                        disableSendOTPButton
+                  <Box sx={{ position: "relative", width: "100%", mb: 2 }}>
+                    <TextField
+                      fullWidth
+                      placeholder="Enter your email"
+                      variant="outlined"
+                      value={email}
+                      onChange={handleEmailChange}
+                      sx={{
+                        "& .MuiOutlinedInput-root": {
+                          "& fieldset": {
+                            border: "0.5px solid rgb(153, 153, 153)",
+                          },
+                          "& input::placeholder": {
+                            color: "white",
+                          },
+                          "& input": {
+                            color: "white",
+                          },
+                          "&:hover fieldset": {
+                            borderColor: "rgba(255, 255, 255, 0.8)",
+                          },
+                        },
+                      }}
+                    />
+                    <Button
+                      variant="contained"
+                      sx={{
+                        width: "25%",
+                        position: "absolute",
+                        right: 0,
+                        backgroundColor: `${
+                          disableSendOTPButton
+                            ? "rgba(1, 1, 1, 0.12) !important"
+                            : "rgba(255, 81, 0, 0.61) !important"
+                        }`,
+                        color: "white !important",
+                        "&:hover": {
+                          backgroundColor: "rgba(255, 81, 0, 0.8) !important",
+                        },
+                        height: "100%",
+                        borderRadius: "2px",
+                        textTransform: "none",
+                        marginBottom: "16px",
+                      }}
+                      disabled={disableSendOTPButton || loadingSendOTPButton}
+                      onClick={handleSendOtp}
+                    >
+                      {loadingSendOTPButton ? (
+                        <>
+                          <CircularProgress
+                            size={24}
+                            sx={{ position: "absolute" }}
+                          />
+                          <span>{"Send OTP"}</span>
+                        </>
+                      ) : (
+                        "Send OTP"
+                      )}
+                    </Button>
+                  </Box>
+                  <Box sx={{ position: "relative", width: "100%", mb: 2 }}>
+                    <TextField
+                      fullWidth
+                      placeholder="Enter OTP"
+                      variant="outlined"
+                      value={otp}
+                      onChange={handleOTPChange}
+                      sx={{
+                        "& .MuiOutlinedInput-root": {
+                          "& fieldset": {
+                            border: "0.5px solid rgb(153, 153, 153)",
+                          },
+                          "& input::placeholder": {
+                            color: "white",
+                          },
+                          "& input": {
+                            color: "white",
+                          },
+                          "&:hover fieldset": {
+                            borderColor: "rgba(255, 255, 255, 0.8)",
+                          },
+                        },
+                      }}
+                    />
+                    <Button
+                      variant="contained"
+                      sx={{
+                        width: "25%",
+                        position: "absolute",
+                        right: 0,
+                        backgroundColor: disableVerifyOTPButton
                           ? "rgba(1, 1, 1, 0.12) !important"
-                          : "rgba(255, 81, 0, 0.61) !important"
-                      }`,
-                      color: "white !important",
-                      "&:hover": {
-                        backgroundColor: "rgba(255, 81, 0, 0.8) !important",
-                      },
-                      height: "100%",
-                      borderRadius: "2px",
-                      textTransform: "none",
-                      marginBottom: "16px",
-                    }}
-                    disabled={disableSendOTPButton || loadingSendOTPButton}
-                    onClick={handleSendOtp}
-                  >
-                    {loadingSendOTPButton ? (
-                      <>
-                        <CircularProgress
-                          size={24}
-                          sx={{ position: "absolute" }}
-                        />
-                        <span>{"Send OTP"}</span>
-                      </>
-                    ) : (
-                      "Send OTP"
-                    )}
-                  </Button>
-                </Box>
-                <Box sx={{ position: "relative", width: "100%", mb: 2 }}>
+                          : "rgba(255, 81, 0, 0.61) !important",
+                        color: "white !important",
+                        "&:hover": {
+                          backgroundColor: "rgba(255, 81, 0, 0.8) !important",
+                        },
+                        height: "100%",
+                        borderRadius: "2px",
+                        textTransform: "none",
+                        marginBottom: "16px",
+                      }}
+                      onClick={handleVerifyOtp}
+                      disabled={
+                        disableVerifyOTPButton || loadingVerifyOTPButton
+                      }
+                    >
+                      {loadingVerifyOTPButton ? (
+                        <>
+                          <CircularProgress
+                            size={24}
+                            sx={{ position: "absolute" }}
+                          />
+                          <span>{"Verify OTP"}</span>
+                        </>
+                      ) : (
+                        "Verify OTP"
+                      )}
+                    </Button>
+                  </Box>
                   <TextField
                     fullWidth
-                    placeholder="Enter OTP"
+                    placeholder="Enter Coupon Code (optional)"
                     variant="outlined"
-                    value={otp}
-                    onChange={handleOTPChange}
-                    sx={{
-                      "& .MuiOutlinedInput-root": {
-                        "& fieldset": {
-                          border: "0.5px solid rgb(153, 153, 153)",
-                        },
-                        "& input::placeholder": {
-                          color: "white",
-                        },
-                        "& input": {
-                          color: "white",
-                        },
-                        "&:hover fieldset": {
-                          borderColor: "rgba(255, 255, 255, 0.8)",
-                        },
-                      },
-                    }}
-                  />
-                  <Button
-                    variant="contained"
-                    sx={{
-                      width: "25%",
-                      position: "absolute",
-                      right: 0,
-                      backgroundColor: disableVerifyOTPButton
-                        ? "rgba(1, 1, 1, 0.12) !important"
-                        : "rgba(255, 81, 0, 0.61) !important",
-                      color: "white !important",
-                      "&:hover": {
-                        backgroundColor: "rgba(255, 81, 0, 0.8) !important",
-                      },
-                      height: "100%",
-                      borderRadius: "2px",
-                      textTransform: "none",
-                      marginBottom: "16px",
-                    }}
-                    onClick={handleVerifyOtp}
-                    disabled={disableVerifyOTPButton || loadingVerifyOTPButton}
-                  >
-                    {loadingVerifyOTPButton ? (
-                      <>
-                        <CircularProgress
-                          size={24}
-                          sx={{ position: "absolute" }}
-                        />
-                        <span>{"Verify OTP"}</span>
-                      </>
-                    ) : (
-                      "Verify OTP"
-                    )}
-                  </Button>
-                </Box>
-                <TextField
-                  fullWidth
-                  placeholder="Enter Coupon Code (optional)"
-                  variant="outlined"
-                  value={couponCode}
-                  onChange={(e) => setCouponCode(e.target.value)}
-                  sx={{
-                    mb: 2,
-                    "& .MuiOutlinedInput-root": {
-                      "& fieldset": {
-                        border: "0.5px solid rgb(153, 153, 153)",
-                      },
-                      "& input::placeholder": {
-                        color: "white",
-                      },
-                      "& input": {
-                        color: "white",
-                      },
-                      "&:hover fieldset": {
-                        borderColor: "rgba(255, 255, 255, 0.8)",
-                      },
-                    },
-                  }}
-                />
-              </>
-            ) : (
-              <>
-                <TextField
-                  select
-                  fullWidth
-                  value={userRole}
-                  onChange={(e) => setUserRole(e.target.value)}
-                  variant="outlined"
-                  SelectProps={{
-                    IconComponent: KeyboardArrowDown,
-                    displayEmpty: true,
-                    sx: {
-                      mb: 2,
-                      color: "white",
-                      "& .MuiSvgIcon-root": {
-                        color: "white",
-                      },
-                    },
-                  }}
-                  sx={{
-                    "& .MuiOutlinedInput-root": {
-                      "& fieldset": {
-                        border: "0.5px solid rgb(153, 153, 153)",
-                      },
-                      "& .MuiSelect-select": {
-                        color: userRole ? "white" : "rgba(255, 255, 255, 0.5)",
-                      },
-                      "&:hover fieldset": {
-                        borderColor: "rgba(255, 255, 255, 0.8)",
-                      },
-                    },
-                    "& .MuiSelect-icon": {
-                      color: "white",
-                    },
-                  }}
-                >
-                  <MenuItem value="" disabled>
-                    Which of the following describes you the best?
-                  </MenuItem>
-                  {[
-                    "Student",
-                    "Founder",
-                    "Aspiring Founder",
-                    "Professional",
-                  ].map((option) => (
-                    <MenuItem key={option} value={option}>
-                      {option}
-                    </MenuItem>
-                  ))}
-                </TextField>
-                {userRole == "Student" ? (
-                  <TextField
-                    fullWidth
-                    placeholder="Enter your institute name"
-                    variant="outlined"
-                    value={instituteName}
-                    onChange={(e) => setInstituteName(e.target.value)}
+                    value={couponCode}
+                    onChange={(e) => setCouponCode(e.target.value)}
                     sx={{
                       mb: 2,
                       "& .MuiOutlinedInput-root": {
@@ -642,14 +577,15 @@ const ESummitRegistrationPage = () => {
                       },
                     }}
                   />
-                ) : (
+                </>
+              ) : (
+                <>
                   <TextField
                     select
                     fullWidth
-                    value={industry}
-                    onChange={(e) => setIndustry(e.target.value)}
+                    value={userRole}
+                    onChange={(e) => setUserRole(e.target.value)}
                     variant="outlined"
-                    placeholder="Select your area of focus"
                     SelectProps={{
                       IconComponent: KeyboardArrowDown,
                       displayEmpty: true,
@@ -667,7 +603,7 @@ const ESummitRegistrationPage = () => {
                           border: "0.5px solid rgb(153, 153, 153)",
                         },
                         "& .MuiSelect-select": {
-                          color: industry
+                          color: userRole
                             ? "white"
                             : "rgba(255, 255, 255, 0.5)",
                         },
@@ -681,68 +617,145 @@ const ESummitRegistrationPage = () => {
                     }}
                   >
                     <MenuItem value="" disabled>
-                      Select your area of focus
+                      Which of the following describes you the best?
                     </MenuItem>
                     {[
-                      "Technology",
-                      "Finance",
-                      "Healthcare",
-                      "Education",
-                      "Marketing",
-                      "Other",
+                      "Student",
+                      "Founder",
+                      "Aspiring Founder",
+                      "Professional",
                     ].map((option) => (
                       <MenuItem key={option} value={option}>
                         {option}
                       </MenuItem>
                     ))}
                   </TextField>
-                )}
-                <TextField
-                  select
-                  fullWidth
-                  value={degree}
-                  onChange={(e) => setDegree(e.target.value)}
-                  variant="outlined"
-                  SelectProps={{
-                    IconComponent: KeyboardArrowDown,
-                    displayEmpty: true,
-                    sx: {
-                      mb: 2,
-                      color: "white",
-                      "& .MuiSvgIcon-root": {
+                  {userRole == "Student" ? (
+                    <TextField
+                      fullWidth
+                      placeholder="Enter your institute name"
+                      variant="outlined"
+                      value={instituteName}
+                      onChange={(e) => setInstituteName(e.target.value)}
+                      sx={{
+                        mb: 2,
+                        "& .MuiOutlinedInput-root": {
+                          "& fieldset": {
+                            border: "0.5px solid rgb(153, 153, 153)",
+                          },
+                          "& input::placeholder": {
+                            color: "white",
+                          },
+                          "& input": {
+                            color: "white",
+                          },
+                          "&:hover fieldset": {
+                            borderColor: "rgba(255, 255, 255, 0.8)",
+                          },
+                        },
+                      }}
+                    />
+                  ) : (
+                    <TextField
+                      select
+                      fullWidth
+                      value={industry}
+                      onChange={(e) => setIndustry(e.target.value)}
+                      variant="outlined"
+                      placeholder="Select your area of focus"
+                      SelectProps={{
+                        IconComponent: KeyboardArrowDown,
+                        displayEmpty: true,
+                        sx: {
+                          mb: 2,
+                          color: "white",
+                          "& .MuiSvgIcon-root": {
+                            color: "white",
+                          },
+                        },
+                      }}
+                      sx={{
+                        "& .MuiOutlinedInput-root": {
+                          "& fieldset": {
+                            border: "0.5px solid rgb(153, 153, 153)",
+                          },
+                          "& .MuiSelect-select": {
+                            color: industry
+                              ? "white"
+                              : "rgba(255, 255, 255, 0.5)",
+                          },
+                          "&:hover fieldset": {
+                            borderColor: "rgba(255, 255, 255, 0.8)",
+                          },
+                        },
+                        "& .MuiSelect-icon": {
+                          color: "white",
+                        },
+                      }}
+                    >
+                      <MenuItem value="" disabled>
+                        Select your area of focus
+                      </MenuItem>
+                      {[
+                        "Technology",
+                        "Finance",
+                        "Healthcare",
+                        "Education",
+                        "Marketing",
+                        "Other",
+                      ].map((option) => (
+                        <MenuItem key={option} value={option}>
+                          {option}
+                        </MenuItem>
+                      ))}
+                    </TextField>
+                  )}
+                  <TextField
+                    select
+                    fullWidth
+                    value={degree}
+                    onChange={(e) => setDegree(e.target.value)}
+                    variant="outlined"
+                    SelectProps={{
+                      IconComponent: KeyboardArrowDown,
+                      displayEmpty: true,
+                      sx: {
+                        mb: 2,
+                        color: "white",
+                        "& .MuiSvgIcon-root": {
+                          color: "white",
+                        },
+                      },
+                    }}
+                    sx={{
+                      "& .MuiOutlinedInput-root": {
+                        "& fieldset": {
+                          border: "0.5px solid rgb(153, 153, 153)",
+                        },
+                        "& .MuiSelect-select": {
+                          color: degree ? "white" : "rgba(255, 255, 255, 0.5)",
+                        },
+                        "&:hover fieldset": {
+                          borderColor: "rgba(255, 255, 255, 0.8)",
+                        },
+                      },
+                      "& .MuiSelect-icon": {
                         color: "white",
                       },
-                    },
-                  }}
-                  sx={{
-                    "& .MuiOutlinedInput-root": {
-                      "& fieldset": {
-                        border: "0.5px solid rgb(153, 153, 153)",
-                      },
-                      "& .MuiSelect-select": {
-                        color: degree ? "white" : "rgba(255, 255, 255, 0.5)",
-                      },
-                      "&:hover fieldset": {
-                        borderColor: "rgba(255, 255, 255, 0.8)",
-                      },
-                    },
-                    "& .MuiSelect-icon": {
-                      color: "white",
-                    },
-                  }}
-                >
-                  <MenuItem value="" disabled>
-                    Degree
-                  </MenuItem>
-                  {["Graduate", "Post Graduate", "Doctorate", "School"].map(
-                    (option) => (
-                      <MenuItem key={option} value={option}>
-                        {option}
-                      </MenuItem>
-                    )
-                  )}
-                </TextField>
-                {/* <TextField
+                    }}
+                  >
+                    <MenuItem value="" disabled>
+                      Degree
+                    </MenuItem>
+                    {["Graduate", "Post Graduate", "Doctorate", "School"].map(
+                      (option) => (
+                        <MenuItem key={option} value={option}>
+                          {option}
+                        </MenuItem>
+                      )
+                    )}
+                  </TextField>
+                  {/* <TextField
                   select
                   fullWidth
                   value={degree}
@@ -785,7 +798,7 @@ const ESummitRegistrationPage = () => {
                     </MenuItem>
                   ))}
                 </TextField> */}
-                {/* <TextField
+                  {/* <TextField
                   select
                   fullWidth
                   value={gender}
@@ -828,169 +841,173 @@ const ESummitRegistrationPage = () => {
                     </MenuItem>
                   ))}
                 </TextField> */}
-                <Box sx={{ display: "flex", gap: 1 }}>
-                  <TextField
-                    placeholder="+91"
-                    variant="outlined"
-                    disabled
-                    sx={{
-                      width: "12%",
-                      "& .MuiOutlinedInput-root": {
-                        "& fieldset": {
-                          border: "0.5px solid rgb(153, 153, 153)",
+                  <Box sx={{ display: "flex", gap: 1 }}>
+                    <TextField
+                      placeholder="+91"
+                      variant="outlined"
+                      disabled
+                      sx={{
+                        width: "12%",
+                        "& .MuiOutlinedInput-root": {
+                          "& fieldset": {
+                            border: "0.5px solid rgb(153, 153, 153)",
+                          },
+                          "&.Mui-disabled": {
+                            "& fieldset": {
+                              border: "0.5px solid rgb(153, 153, 153)",
+                            },
+                            "& input::placeholder": {
+                              color: "white",
+                              opacity: 1,
+                              "-webkit-text-fill-color": "white",
+                            },
+                          },
                         },
-                        "&.Mui-disabled": {
+                      }}
+                    />
+                    <TextField
+                      fullWidth
+                      placeholder="Mobile Number"
+                      variant="outlined"
+                      value={phoneNumber}
+                      onChange={(e) => setPhoneNumber(e.target.value)}
+                      sx={{
+                        mb: 2,
+                        "& .MuiOutlinedInput-root": {
                           "& fieldset": {
                             border: "0.5px solid rgb(153, 153, 153)",
                           },
                           "& input::placeholder": {
                             color: "white",
-                            opacity: 1,
-                            "-webkit-text-fill-color": "white",
+                            opacity: 0.7,
+                          },
+                          "& input": {
+                            color: "white",
+                          },
+                          "&:hover fieldset": {
+                            borderColor: "rgba(255, 255, 255, 0.8)",
                           },
                         },
-                      },
-                    }}
-                  />
-                  <TextField
-                    fullWidth
-                    placeholder="Mobile Number"
-                    variant="outlined"
-                    value={phoneNumber}
-                    onChange={(e) => setPhoneNumber(e.target.value)}
-                    sx={{
-                      mb: 2,
-                      "& .MuiOutlinedInput-root": {
-                        "& fieldset": {
-                          border: "0.5px solid rgb(153, 153, 153)",
-                        },
-                        "& input::placeholder": {
-                          color: "white",
-                          opacity: 0.7,
-                        },
-                        "& input": {
-                          color: "white",
-                        },
-                        "&:hover fieldset": {
-                          borderColor: "rgba(255, 255, 255, 0.8)",
-                        },
-                      },
-                    }}
-                  />
-                </Box>
-              </>
-            )}
-            <Button
-              fullWidth
-              variant="contained"
-              sx={{
-                mb: 2,
-                borderRadius: "0",
-                color: "white !importan",
-                fontFamily: "Montserrat, sans-serif",
-                fontSize: { xs: "1rem", sm: "1rem", md: "1.2rem" },
-                fontWeight: "600",
-                textTransform: "uppercase",
-                "&.MuiButton-contained": {
-                  backgroundColor: "#FF5100",
-                },
-                "&:hover": {
-                  backgroundColor: "#B73A00",
-                },
-                "&.Mui-disabled": {
-                  color: "grey !important",
-                  backgroundColor: "rgba(1, 1, 1, 0.13) !important",
-                },
-              }}
-              onClick={handleNext}
-              disabled={
-                (verified && step == 1 && name != "") ||
-                (step == 2 &&
-                  isValidPhoneNumber(phoneNumber) &&
-                  degree != "" &&
-                  userRole != "" &&
-                  loadingSignUpButton == false &&
-                  (userRole === "Student"
-                    ? instituteName != ""
-                    : industry != ""))
-                  ? false
-                  : true || loadingSignUpButton
-              }
-            >
-              {step == 2 ? (
-                loadingSignUpButton ? (
-                  <>
-                    <CircularProgress size={24} sx={{ position: "absolute" }} />
-                    <span>{"Sign Up"}</span>
-                  </>
-                ) : (
-                  "Sign Up"
-                )
-              ) : (
-                "Next"
+                      }}
+                    />
+                  </Box>
+                </>
               )}
-            </Button>
-            <Button
-              fullWidth
-              variant="outlined"
-              sx={{
-                borderRadius: "0",
-                color: "white",
-                mb: 2,
-                borderColor: "white",
-                fontFamily: "Montserrat, sans-serif",
-                fontSize: { xs: "1rem", sm: "1rem", md: "1.2rem" },
-                textTransform: "uppercase",
-                fontWeight: "500",
-                "&:hover": {
-                  backgroundColor: "rgba(255, 255, 255, 0.2)",
-                  borderColor: "white",
-                },
-              }}
-              onClick={handleBack}
-            >
-              Back
-            </Button>
-            <Box sx={{ textAlign: "center", mb: 3 }}>
-              <Typography
-                variant="body2"
-                sx={{ color: "rgba(255,255,255,0.7)" }}
-              >
-                Already have an account?{" "}
-                <Link
-                  href="/esummit/login"
-                  style={{ color: "#ff4500", textDecoration: "none" }}
-                >
-                  Login Now
-                </Link>
-              </Typography>
-            </Box>
-            <Box sx={{ width: "100%", mt: 4 }}>
-              <LinearProgress
-                variant="determinate"
-                value={step * 50}
+              <Button
+                fullWidth
+                variant="contained"
                 sx={{
-                  height: 8,
-                  mb: 1,
-                  bgcolor: "rgba(255,255,255,0.1)",
-                  "& .MuiLinearProgress-bar": {
-                    bgcolor: "rgb(255, 255, 255)",
+                  mb: 2,
+                  borderRadius: "0",
+                  color: "white !importan",
+                  fontFamily: "Montserrat, sans-serif",
+                  fontSize: { xs: "1rem", sm: "1rem", md: "1.2rem" },
+                  fontWeight: "600",
+                  textTransform: "uppercase",
+                  "&.MuiButton-contained": {
+                    backgroundColor: "#FF5100",
+                  },
+                  "&:hover": {
+                    backgroundColor: "#B73A00",
+                  },
+                  "&.Mui-disabled": {
+                    color: "grey !important",
+                    backgroundColor: "rgba(1, 1, 1, 0.13) !important",
                   },
                 }}
-              />
-              <Box sx={{ display: "flex", justifyContent: "center", mb: 10 }}>
+                onClick={handleNext}
+                disabled={
+                  (verified && step == 1 && name != "") ||
+                  (step == 2 &&
+                    isValidPhoneNumber(phoneNumber) &&
+                    degree != "" &&
+                    userRole != "" &&
+                    loadingSignUpButton == false &&
+                    (userRole === "Student"
+                      ? instituteName != ""
+                      : industry != ""))
+                    ? false
+                    : true || loadingSignUpButton
+                }
+              >
+                {step == 2 ? (
+                  loadingSignUpButton ? (
+                    <>
+                      <CircularProgress
+                        size={24}
+                        sx={{ position: "absolute" }}
+                      />
+                      <span>{"Sign Up"}</span>
+                    </>
+                  ) : (
+                    "Sign Up"
+                  )
+                ) : (
+                  "Next"
+                )}
+              </Button>
+              <Button
+                fullWidth
+                variant="outlined"
+                sx={{
+                  borderRadius: "0",
+                  color: "white",
+                  mb: 2,
+                  borderColor: "white",
+                  fontFamily: "Montserrat, sans-serif",
+                  fontSize: { xs: "1rem", sm: "1rem", md: "1.2rem" },
+                  textTransform: "uppercase",
+                  fontWeight: "500",
+                  "&:hover": {
+                    backgroundColor: "rgba(255, 255, 255, 0.2)",
+                    borderColor: "white",
+                  },
+                }}
+                onClick={handleBack}
+              >
+                Back
+              </Button>
+              <Box sx={{ textAlign: "center", mb: 3 }}>
                 <Typography
                   variant="body2"
                   sx={{ color: "rgba(255,255,255,0.7)" }}
                 >
-                  {step}/2
+                  Already have an account?{" "}
+                  <Link
+                    href="/esummit/login"
+                    style={{ color: "#ff4500", textDecoration: "none" }}
+                  >
+                    Login Now
+                  </Link>
                 </Typography>
+              </Box>
+              <Box sx={{ width: "100%", mt: 4 }}>
+                <LinearProgress
+                  variant="determinate"
+                  value={step * 50}
+                  sx={{
+                    height: 8,
+                    mb: 1,
+                    bgcolor: "rgba(255,255,255,0.1)",
+                    "& .MuiLinearProgress-bar": {
+                      bgcolor: "rgb(255, 255, 255)",
+                    },
+                  }}
+                />
+                <Box sx={{ display: "flex", justifyContent: "center", mb: 10 }}>
+                  <Typography
+                    variant="body2"
+                    sx={{ color: "rgba(255,255,255,0.7)" }}
+                  >
+                    {step}/2
+                  </Typography>
+                </Box>
               </Box>
             </Box>
           </Box>
-        </Box>
-      </Container>
-    </Box>
+        </Container>
+      </Box>
+    </>
   );
 };
 

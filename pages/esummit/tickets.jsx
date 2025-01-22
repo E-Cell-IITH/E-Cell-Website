@@ -383,9 +383,12 @@ function MainPasses() {
     }
     if (userDetails.ticketId != -1) {
       //Show you already have a ticket
-      toast.error("You already purchased one ticket!, Please try with different account.", {
-        autoClose: 5000,
-      });
+      toast.error(
+        "You already purchased one ticket!, Please try with different account.",
+        {
+          autoClose: 5000,
+        }
+      );
       return;
     }
     setUserEmail(userDetails.email);
@@ -417,101 +420,112 @@ function MainPasses() {
   const isBiggerThan1024 = useMediaQuery("(min-width: 1024px)");
 
   return (
-    <div
-      suppressHydrationWarning
-      suppressContentEditableWarning
-      className={josefinSans.className}
-      style={{
-        position: "relative",
-        backgroundImage: "url('/esummit25/bg.png')",
-        backgroundAttachment: "fixed",
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        backgroundRepeat: "no-repeat",
-        // width: "100vw",
-        height: "100vh",
-        // overflowX: "hidden",
-        overflowY: "auto",
-      }}
-    >
-      <ToastContainer />
-      <Box
-        sx={{
-          position: "static",
-          top: 0,
-          left: 0,
-          width: "100%",
-          zIndex: 10,
-        }}
-      >
-        <EsummitNavbar />
-      </Box>
-
-      <Dialog
-        open={modalOpen}
-        onClose={() => setModalOpen(false)}
-        aria-labelledby="user-confirmation-dialog"
-        aria-describedby="user-confirmation-dialog-description"
-        PaperProps={{
-          sx: {
-            backgroundColor: "#37477d", // Set dialog background color
-            color: "white", // Set text color for better contrast
-            borderRadius: "12px", // Optional: Rounded corners
-          },
-        }}
-      >
-        <DialogTitle id="user-confirmation-dialog">
-          Confirm Your Account
-        </DialogTitle>
-        <DialogContent>
-          <Typography>
-            You are logged in as <strong>{`${username}<${useremail}>`}</strong>.
-          </Typography>
-          <Typography>
-            Do you want to continue with this account or use a different one?
-          </Typography>
-        </DialogContent>
-        <DialogActions>
-          <Button
-            onClick={handleUseDifferentAccount}
-            variant="outlined"
-            color="error"
-          >
-            Use Different Account
-          </Button>
-          <Button
-            onClick={handleContinue}
-            variant="contained"
-            color="primary"
-            autoFocus
-          >
-            Continue
-          </Button>
-        </DialogActions>
-      </Dialog>
+    <>
+      <Head>
+        <title>Buy Tickets For E-Summit 2025</title>
+        <meta
+          name="google-site-verification"
+          content="agHaKoDcApHadKU7BhRCOJK0w5SRZtQCG9YxNKZBGvc"
+        />
+        <link rel="canonical" href="https://ecell.iith.ac.in/esummit" />
+      </Head>
       <div
+        suppressHydrationWarning
+        suppressContentEditableWarning
+        className={josefinSans.className}
         style={{
           position: "relative",
-          top: 0,
-          left: 0,
-          width: "100%",
+          backgroundImage: "url('/esummit25/bg.png')",
+          backgroundAttachment: "fixed",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+          // width: "100vw",
+          height: "100vh",
+          // overflowX: "hidden",
           overflowY: "auto",
-          overflowX: "hidden",
         }}
       >
-        <Panel handleBuyNow={handleBuyNow} />
-        <PayDialogSlide
-          open={isDialogOpen}
-          onClose={() => {
-            setIsDialogOpen(false);
-            setModalOpen(false);
+        <ToastContainer />
+        <Box
+          sx={{
+            position: "static",
+            top: 0,
+            left: 0,
+            width: "100%",
+            zIndex: 10,
           }}
-          title={title}
-          price={price}
-          width={isBiggerThan1024 ? "40%" : "90%"}
-        />
+        >
+          <EsummitNavbar />
+        </Box>
+
+        <Dialog
+          open={modalOpen}
+          onClose={() => setModalOpen(false)}
+          aria-labelledby="user-confirmation-dialog"
+          aria-describedby="user-confirmation-dialog-description"
+          PaperProps={{
+            sx: {
+              backgroundColor: "#37477d", // Set dialog background color
+              color: "white", // Set text color for better contrast
+              borderRadius: "12px", // Optional: Rounded corners
+            },
+          }}
+        >
+          <DialogTitle id="user-confirmation-dialog">
+            Confirm Your Account
+          </DialogTitle>
+          <DialogContent>
+            <Typography>
+              You are logged in as{" "}
+              <strong>{`${username}<${useremail}>`}</strong>.
+            </Typography>
+            <Typography>
+              Do you want to continue with this account or use a different one?
+            </Typography>
+          </DialogContent>
+          <DialogActions>
+            <Button
+              onClick={handleUseDifferentAccount}
+              variant="outlined"
+              color="error"
+            >
+              Use Different Account
+            </Button>
+            <Button
+              onClick={handleContinue}
+              variant="contained"
+              color="primary"
+              autoFocus
+            >
+              Continue
+            </Button>
+          </DialogActions>
+        </Dialog>
+        <div
+          style={{
+            position: "relative",
+            top: 0,
+            left: 0,
+            width: "100%",
+            overflowY: "auto",
+            overflowX: "hidden",
+          }}
+        >
+          <Panel handleBuyNow={handleBuyNow} />
+          <PayDialogSlide
+            open={isDialogOpen}
+            onClose={() => {
+              setIsDialogOpen(false);
+              setModalOpen(false);
+            }}
+            title={title}
+            price={price}
+            width={isBiggerThan1024 ? "40%" : "90%"}
+          />
+        </div>
       </div>
-    </div>
+    </>
   );
 }
 
