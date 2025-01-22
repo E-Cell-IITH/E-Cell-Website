@@ -5,13 +5,13 @@ import { toast } from "react-toastify";
 
 const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL;
 
-const PaymentPortal = ({ title, price, logoLink }) => {
+const PaymentPortal = ({ title, price, logoLink, userID }) => {
   const [transactionId, setTransactionId] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [responseMessage, setResponseMessage] = useState("");
 
   // Construct the QR code link dynamically using the price value
-  const qrCodeLink = `upi://pay?pa=bhaskaraa45@ybl&pn=Bhaskar&am=${price}&cu=INR&tn=E-Summit2025`;
+  const qrCodeLink = `upi://pay?pa=avantikanair204@okhdfcbank&pn=E-Cell, IIT Hyderabad&am=${price}&cu=INR&tn=E-Summit2025-${userID}`;
 
   // Handle transaction ID submission
   const handleSubmit = async () => {

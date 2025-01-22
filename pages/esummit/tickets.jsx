@@ -332,6 +332,7 @@ const Panel = ({ handleBuyNow }) => {
 function MainPasses() {
   const [username, setUsername] = useState("");
   const [useremail, setUserEmail] = useState("");
+  const [userid, setUserID] = useState(-1);
   const [loading, setLoading] = useState(false);
   const [modalOpen, setModalOpen] = useState(false);
   const [price, setPrice] = useState(0);
@@ -365,6 +366,7 @@ function MainPasses() {
           name: response.data.user.name,
           email: response.data.user.email,
           ticketId: response.data.ticketId,
+          userId: response.data.user.id,
         };
       }
     } catch (error) {
@@ -391,11 +393,11 @@ function MainPasses() {
       );
       return;
     }
+    setUserID(userDetails.userId);
     setUserEmail(userDetails.email);
     setUsername(userDetails.name);
 
     setModalOpen(true);
-    console.log(userDetails.email);
     // Proceed with the payment or other actions
   };
 
@@ -522,6 +524,7 @@ function MainPasses() {
             title={title}
             price={price}
             width={isBiggerThan1024 ? "40%" : "90%"}
+            userID={userid}
           />
         </div>
       </div>
