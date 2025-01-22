@@ -3,6 +3,7 @@ import { Josefin_Sans, Inter } from "next/font/google";
 import { Box, Typography } from "@mui/material";
  import speaker from "/public/speaker1.png";
 import ESummit25 from "/public/ESummit25.png";
+import EsummitNavbar from "../../components/esummit25/navbar";
 
 const josefinSans = Josefin_Sans({ subsets: ["latin"], display: "swap" });
 
@@ -94,12 +95,13 @@ function Marquee({ sponsors, topPosition }) {
       style={{
         position: "absolute",
         top: topPosition,
-        left: "214px",
+        left: "px",
         width: "1315px",
         height: "273px",
         overflow: "hidden",
       }}
     >
+      
       <div
         style={{
           display: "flex",
@@ -241,6 +243,7 @@ function Marquee({ sponsors, topPosition }) {
 
 function SponsorsMain() {
   return (
+    
     <div
       suppressHydrationWarning
       suppressContentEditableWarning
@@ -254,8 +257,12 @@ function SponsorsMain() {
         backgroundRepeat: "no-repeat",
         height: "100vh",
         overflowY: "hidden",
+        
       }}
+      
     >
+       <EsummitNavbar />
+      
       <Box
         sx={{
           position: "relative",
@@ -281,32 +288,30 @@ function SponsorsMain() {
         <Typography
           sx={{
             position: "absolute",
-            top: "230px",
+            top: "5px",
             left: "214px",
             width: "165px",
             height: "32px",
             gap: "0px",
             fontFamily: "Josefin Sans",
             fontSize: "32px",
+            whiteSpace: "nowrap",
             fontWeight: 500,
             lineHeight: "32px",
-            textAlign: "left",
-            textUnderlinePosition: "from-font",
-            textDecorationSkipInk: "none",
             color: "#FFF",
           }}
         >
-          SPEAKERS
+         PAST SPEAKERS
         </Typography>
 
-        <Marquee sponsors={sponsors1} topPosition="306px" />
+        <Marquee sponsors={sponsors2} topPosition="60px" />
 
         <div
           style={{
             height: "50px",
           }}
         ></div>
-
+{/* 
         <div
           style={{
             position: "absolute",
@@ -332,7 +337,7 @@ function SponsorsMain() {
           </Typography>
         </div>
 
-        <Marquee sponsors={sponsors2} topPosition="738px" />
+        <Marquee sponsors={sponsors2} topPosition="738px" /> */}
       </div>
     </div>
   );
