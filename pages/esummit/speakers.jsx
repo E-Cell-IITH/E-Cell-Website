@@ -4,6 +4,8 @@ import { Box, Typography } from "@mui/material";
  import speaker from "/public/speaker1.png";
 import ESummit25 from "/public/ESummit25.png";
 import EsummitNavbar from "../../components/ESummt/navbar";
+import { useMediaQuery } from "@mui/material";
+
 
 const josefinSans = Josefin_Sans({ subsets: ["latin"], display: "swap" });
 
@@ -95,9 +97,10 @@ function Marquee({ sponsors, topPosition }) {
       style={{
         position: "absolute",
         top: topPosition,
-        left: "px",
+        padding: "0 20px", 
         width: "1315px",
         height: "273px",
+        boxSizing: "border-box",  
         overflow: "hidden",
       }}
     >
@@ -169,7 +172,7 @@ function Marquee({ sponsors, topPosition }) {
                 height: "19px",
                 gap: "0px",
                 backgroundColor: "transparent",
-                marginTop: "10px", // Space between name and designation
+                marginTop: "10px", 
               }}
             >
               <Typography
@@ -178,7 +181,7 @@ function Marquee({ sponsors, topPosition }) {
                   fontSize: "13px",
                   fontWeight: 200,
                   lineHeight: "normal",
-                  whiteSpace: "nowrap", // Prevent text from wrapping
+                  whiteSpace: "nowrap",
                   fontStyle: "normal",
                   color: "#FFFFFF",
                 }}
@@ -242,8 +245,12 @@ function Marquee({ sponsors, topPosition }) {
 }
 
 function SponsorsMain() {
+  const isXs = useMediaQuery("(max-width: 480px)");
+  const isSm = useMediaQuery("(max-width: 768px)");
+
+  const topPosition = isXs ? "80px" : isSm ? "60px" : "60px"; // Changed here
+
   return (
-    
     <div
       suppressHydrationWarning
       suppressContentEditableWarning
@@ -257,12 +264,10 @@ function SponsorsMain() {
         backgroundRepeat: "no-repeat",
         height: "100vh",
         overflowY: "hidden",
-        
       }}
-      
     >
-       <EsummitNavbar />
-      
+      <EsummitNavbar />
+
       <Box
         sx={{
           position: "relative",
@@ -288,56 +293,37 @@ function SponsorsMain() {
         <Typography
           sx={{
             position: "absolute",
-            top: "5px",
-            left: "214px",
-            width: "165px",
+            top: { xs: "30px", sm: "5px" },
+            left: { xs: "50%", sm: "214px" },
+            transform: { xs: "translateX(-50%)", sm: "none" },
+            width: { xs: "auto", sm: "165px" },
             height: "32px",
             gap: "0px",
             fontFamily: "Josefin Sans",
-            fontSize: "32px",
+            fontSize: { xs: "20px", sm: "32px" },
             whiteSpace: "nowrap",
             fontWeight: 500,
             lineHeight: "32px",
             color: "#FFF",
+            textAlign: "center",
           }}
         >
-         PAST SPEAKERS
+          PAST SPEAKERS
         </Typography>
 
-        <Marquee sponsors={sponsors2} topPosition="60px" />
-
-        <div
+        <Marquee
+          sponsors={sponsors2}
+          topPosition={topPosition} 
           style={{
-            height: "50px",
-          }}
-        ></div>
-{/* 
-        <div
-          style={{
-            position: "absolute",
-            top: "672px",
-            left: "209px",
-            width: "273px",
-            height: "32px",
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
+            position: "relative",
+            width: "100%",
+            paddingLeft: "10px", 
+            paddingRight: "10px", //padding aint working
+            boxSizing: "border-box",  
           }}
         >
-          <Typography
-            sx={{
-              fontFamily: "Josefin Sans",
-              fontSize: "32px",
-              fontWeight: 500,
-              lineHeight: "32px",
-              color: "#FFF",
-            }}
-          >
-            PAST SPEAKERS
-          </Typography>
-        </div>
-
-        <Marquee sponsors={sponsors2} topPosition="738px" /> */}
+       
+        </Marquee>
       </div>
     </div>
   );
