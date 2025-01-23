@@ -1,11 +1,10 @@
 import React from "react";
 import { Josefin_Sans, Inter } from "next/font/google";
 import { Box, Typography } from "@mui/material";
- import speaker from "/public/speaker1.png";
+import speaker from "/public/speaker1.png";
 import ESummit25 from "/public/ESummit25.png";
 import EsummitNavbar from "../../components/ESummt/navbar";
 import { useMediaQuery } from "@mui/material";
-
 
 const josefinSans = Josefin_Sans({ subsets: ["latin"], display: "swap" });
 
@@ -88,27 +87,190 @@ const sponsors2 = [
   },
 ];
 
+// function Marquee({ sponsors, topPosition }) {
+//   // Hardcoded it to make it endless
+//   const extendedSponsors = [...sponsors, ...sponsors, ...sponsors, ...sponsors];
+
+//   return (
+//     <div
+//     style={{
+//       position: "absolute",
+//       top: topPosition,
+//       left: "0", // Start from the left edge of the parent
+//       right: "0", // Extend to the right edge of the parent
+//       margin: "0 auto", // Center horizontally within the parent
+//       width: "100%", // Make it span the width of its parent
+//       maxWidth: "100%", // Constrain it to the parent's maxWidth
+//       height: "273px",
+//       boxSizing: "border-box",
+//       overflow: "hidden",
+//     }}
+//   >
+//       <div
+//         style={{
+//           display: "flex",
+//           animation: "scrollLeft 70s linear infinite", // Keep the speed same for both marquees
+//           gap: "0px",
+//           height: "100%",
+//           width: "max-content",
+//         }}
+//       >
+//         {extendedSponsors.map((sponsor, index) => (
+//           <div
+//             key={index}
+//             style={{
+//               display: "flex",
+//               flexDirection: "column",
+//               width: "205.884px",
+//               height: "273px",
+//               flexShrink: 0,
+//               marginRight: "20px",
+//               border: "2px solid #FFF",
+//               background: "rgba(143, 135, 135, 0.10)",
+//               padding: "10px",
+//             }}
+//           >
+//             <div
+//               style={{
+//                 width: "181px",
+//                 height: "182px",
+//                 flexShrink: 0,
+//                 borderRadius: "4px",
+//                 background: `url(${sponsor.image}) lightgray 50% / cover no-repeat`,
+//                 marginBottom: "10px",
+//               }}
+//             ></div>
+
+//             {/* Text Box Section */}
+//             <div
+//               style={{
+//                 width: "151px",
+//                 height: "48px",
+//                 margin: "0 auto",
+//                 textAlign: "center",
+//                 borderRadius: "4px",
+//                 display: "flex",
+//                 justifyContent: "center",
+//                 alignItems: "center",
+//               }}
+//             >
+//               <Typography
+//                 sx={{
+//                   fontFamily: "Inter",
+//                   fontSize: "18px",
+//                   fontWeight: 400,
+//                   lineHeight: "24.2px",
+//                   color: "#FFFFFF",
+//                 }}
+//               >
+//                 {sponsor.name}
+//               </Typography>
+//             </div>
+
+//             <div
+//               style={{
+//                 width: "96px",
+//                 height: "19px",
+//                 gap: "0px",
+//                 backgroundColor: "transparent",
+//                 marginTop: "10px",
+//               }}
+//             >
+//               <Typography
+//                 sx={{
+//                   fontFamily: "Inter",
+//                   fontSize: "13px",
+//                   fontWeight: 200,
+//                   lineHeight: "normal",
+//                   whiteSpace: "nowrap",
+//                   fontStyle: "normal",
+//                   color: "#FFFFFF",
+//                 }}
+//               >
+//                 {sponsor.designation}
+//               </Typography>
+//             </div>
+//           </div>
+//         ))}
+//       </div>
+
+//       <style jsx>{`
+//         @keyframes scrollLeft {
+//           from {
+//             transform: translateX(0);
+//           }
+//           to {
+//             transform: translateX(-100%);
+//           }
+//         }
+
+//         div {
+//           will-change: transform;
+//         }
+
+//         @media (max-width: 1200px) {
+//           div {
+//             left: 0;
+//             width: 100%;
+//           }
+
+//           div > div {
+//             width: 33.33%;
+//           }
+//         }
+
+//         @media (max-width: 768px) {
+//           div {
+//             left: 0px;
+//             width: 100%;
+//           }
+
+//           div > div {
+//             width: 50%;
+//           }
+//         }
+
+//         @media (max-width: 480px) {
+//           div {
+//             left: -50px;
+//             width: 100%;
+//           }
+
+//           div > div {
+//             width: 100%;
+//           }
+//         }
+//       `}</style>
+//     </div>
+//   );
+// }
+
 function Marquee({ sponsors, topPosition }) {
-  // Hardcoded it to make it endless
   const extendedSponsors = [...sponsors, ...sponsors, ...sponsors, ...sponsors];
 
   return (
     <div
+      className="marquee-container"
       style={{
         position: "absolute",
         top: topPosition,
-        padding: "0 20px", 
-        width: "1315px",
+        left: "0",
+        right: "0",
+        margin: "0 auto",
+        width: "100%",
+        maxWidth: "100%",
         height: "273px",
-        boxSizing: "border-box",  
-        overflow: "hidden",
+        boxSizing: "border-box",
+        overflowX: "auto",
+        overflowY: "hidden",
+        whiteSpace: "nowrap",
       }}
     >
-      
       <div
+        className="marquee-content"
         style={{
-          display: "flex",
-          animation: "scrollLeft 70s linear infinite", // Keep the speed same for both marquees
+          display: "inline-flex",
+          animation: "scrollLeft 70s linear infinite",
           gap: "0px",
           height: "100%",
           width: "max-content",
@@ -140,7 +302,6 @@ function Marquee({ sponsors, topPosition }) {
               }}
             ></div>
 
-            {/* Text Box Section */}
             <div
               style={{
                 width: "151px",
@@ -172,7 +333,7 @@ function Marquee({ sponsors, topPosition }) {
                 height: "19px",
                 gap: "0px",
                 backgroundColor: "transparent",
-                marginTop: "10px", 
+                marginTop: "10px",
               }}
             >
               <Typography
@@ -203,41 +364,26 @@ function Marquee({ sponsors, topPosition }) {
           }
         }
 
-        div {
-          will-change: transform;
+        .marquee-container:hover .marquee-content {
+          animation-play-state: paused; // Pause animation on hover
         }
 
-        @media (max-width: 1200px) {
-          div {
-            left: 0;
-            width: 100%;
-          }
-
-          div > div {
-            width: 33.33%;
-          }
+        .marquee-container {
+          scrollbar-width: thin; // Show thin scrollbar
+          scrollbar-color: lightgray transparent;
         }
 
-        @media (max-width: 768px) {
-          div {
-            left: 0px;
-            width: 100%;
-          }
-
-          div > div {
-            width: 50%;
-          }
+        .marquee-container::-webkit-scrollbar {
+          height: 8px; // Horizontal scrollbar height
         }
 
-        @media (max-width: 480px) {
-          div {
-            left: -50px;
-            width: 100%;
-          }
+        .marquee-container::-webkit-scrollbar-thumb {
+          background: lightgray; // Scrollbar color
+          border-radius: 4px;
+        }
 
-          div > div {
-            width: 100%;
-          }
+        .marquee-container::-webkit-scrollbar-thumb:hover {
+          background: darkgray; // Scrollbar color on hover
         }
       `}</style>
     </div>
@@ -266,8 +412,6 @@ function SponsorsMain() {
         overflowY: "hidden",
       }}
     >
-      <EsummitNavbar />
-
       <Box
         sx={{
           position: "relative",
@@ -276,7 +420,9 @@ function SponsorsMain() {
           width: "100%",
           zIndex: 10,
         }}
-      ></Box>
+      >
+        <EsummitNavbar />
+      </Box>
 
       <div
         style={{
@@ -311,19 +457,15 @@ function SponsorsMain() {
           PAST SPEAKERS
         </Typography>
 
-        <Marquee
-          sponsors={sponsors2}
-          topPosition={topPosition} 
-          style={{
+        <Box
+          sx={{
+            maxWidth: "85%",
+            margin: "0 auto",
             position: "relative",
-            width: "100%",
-            paddingLeft: "10px", 
-            paddingRight: "10px", //padding aint working
-            boxSizing: "border-box",  
           }}
         >
-       
-        </Marquee>
+          <Marquee sponsors={sponsors2} topPosition={topPosition} />
+        </Box>
       </div>
     </div>
   );

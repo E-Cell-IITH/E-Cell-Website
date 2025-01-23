@@ -20,7 +20,7 @@ const EsummitNavbar = () => {
     { name: "Event", path: "/esummit/event", isComingSoon: true },
     { name: "Tickets", path: "/esummit/tickets", isComingSoon: false },
     { name: "Sponsor", path: "/esummit/sponsors", isComingSoon: true },
-    { name: "Speakers", path: "/esummit/speakers", isComingSoon: true },
+    { name: "Speakers", path: "/esummit/speakers", isComingSoon: false },
     { name: "Agenda", path: "/esummit/agenda", isComingSoon: true },
     { name: "Register", path: "/esummit/register", isComingSoon: false },
     { name: "Main Website", path: "/", isComingSoon: false },
