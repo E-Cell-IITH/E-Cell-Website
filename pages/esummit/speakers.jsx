@@ -5,6 +5,7 @@ import speaker from "/public/speaker1.png";
 import ESummit25 from "/public/ESummit25.png";
 import EsummitNavbar from "../../components/ESummt/navbar";
 import { useMediaQuery } from "@mui/material";
+import Head from "next/head";
 
 const josefinSans = Josefin_Sans({ subsets: ["latin"], display: "swap" });
 
@@ -329,10 +330,10 @@ function Marquee({ sponsors, topPosition }) {
 
             <div
               style={{
-                width: "96px",
-                height: "19px",
-                gap: "0px",
-                backgroundColor: "transparent",
+                width: "100%", // Take full width of the container
+                display: "flex",
+                justifyContent: "center", // Center horizontally
+                alignItems: "center", // Center vertically (optional if needed)
                 marginTop: "10px",
               }}
             >
@@ -342,14 +343,15 @@ function Marquee({ sponsors, topPosition }) {
                   fontSize: "13px",
                   fontWeight: 200,
                   lineHeight: "normal",
-                  whiteSpace: "nowrap",
                   fontStyle: "normal",
                   color: "#FFFFFF",
+                  textAlign: "center", // Center text inside Typography
                 }}
               >
                 {sponsor.designation}
               </Typography>
             </div>
+
           </div>
         ))}
       </div>
@@ -403,7 +405,7 @@ function SponsorsMain() {
       className={josefinSans.className}
       style={{
         position: "relative",
-        backgroundImage: `url(${ESummit25.src})`,
+        backgroundImage: "url(/esummit25/bg.png)",
         backgroundAttachment: "fixed",
         backgroundSize: "cover",
         backgroundPosition: "center",
@@ -412,6 +414,15 @@ function SponsorsMain() {
         overflowY: "hidden",
       }}
     >
+       <Head>
+        <title>E-Summit Speakers </title>
+        <meta
+          name="google-site-verification"
+          content="agHaKoDcApHadKU7BhRCOJK0w5SRZtQCG9YxNKZBGvc"
+        />
+        <link rel="canonical" href="https://ecell.iith.ac.in/esummit" />
+      </Head>
+
       <Box
         sx={{
           position: "relative",
