@@ -244,9 +244,9 @@ const Card = ({
               {String.fromCharCode(0x20b9)}
               {price}
             </div>
-            {/* {title === "PREMIUM" ? (
+            {Number(price) > 1 ? (
               <></>
-            ) : ( */}
+            ) : (
             <Button
               variant="contained"
               sx={{
@@ -267,7 +267,7 @@ const Card = ({
             >
               Buy Now
             </Button>
-            {/* )} */}
+            )}
           </div>
         </div>
       </Box>
