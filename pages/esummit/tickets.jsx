@@ -33,23 +33,26 @@ const PASSDATA = [
     co3: "Food Carnival",
     co4: "Fetching Fortune Spectator",
     co5: "Networking Dinner",
-    co6: "Accommodation",
-    co7: "(2 Days 1 Night)",
+    co6: "Accommodation (2 Days 1 Night)",
+    co7: "One day bootcamp with  Practo founder.",
+    co8: 'Pronite - "The Night to Remember!"',
     price: " ̶1̶9̶9̶ Free",
-    titlecolor: "#ffffff",
+    titlecolor: "#d3d3d3",
     cardcolor:
       "linear-gradient(90deg, rgba(153,153,153,0.100717787114846) 0%, rgba(153,153,153,0.1962359943977591) 100%)",
-    cl1: "#FFFFFF",
-    cl2: "#FFFFFF",
-    cl3: "#FFFFFF",
+    cl1: "#d3d3d3",
+    cl2: "#d3d3d3",
+    cl3: "#d3d3d3",
     cl4: "#d3d3d3",
     cl5: "#d3d3d3",
     cl6: "#d3d3d3",
     cl7: "#d3d3d3",
+    cl8: "#d3d3d3",
     td4: "line-through",
     td5: "line-through",
     td6: "line-through",
     td7: "line-through",
+    td8: "line-through",
     bw: "2px",
   },
   {
@@ -59,23 +62,26 @@ const PASSDATA = [
     co3: "Food Carnival",
     co4: "Fetching Fortune Spectator",
     co5: "Networking Dinner",
-    co6: "Accommodation",
-    co7: "(2 Days 1 Night)",
+    co6: "Accommodation (2 Days 1 Night)",
+    co7: "One day bootcamp with  Practo founder.",
+    co8: 'Pronite - "The Night to Remember!"',
     price: "399",
-    titlecolor: "#ffffff",
+    titlecolor: "#d3d3d3",
     cardcolor:
       "linear-gradient(90deg, rgba(153,153,153,0.356796218487395) 0%, rgba(153,153,153,0.2911939775910365) 100%)",
-    cl1: "#FFFFFF",
-    cl2: "#FFFFFF",
-    cl3: "#FFFFFF",
-    cl4: "#FFFFFF",
+    cl1: "#d3d3d3",
+    cl2: "#d3d3d3",
+    cl3: "#d3d3d3",
+    cl4: "#d3d3d3",
     cl5: "#d3d3d3",
     cl6: "#d3d3d3",
     cl7: "#d3d3d3",
+    cl8: "#d3d3d3",
     td4: "",
     td5: "line-through",
     td6: "line-through",
     td7: "line-through",
+    td8: "line-through",
     bw: "6px",
   },
   {
@@ -85,23 +91,26 @@ const PASSDATA = [
     co3: "Food Carnival",
     co4: "Fetching Fortune Spectator",
     co5: "Networking Dinner",
-    co6: "Accommodation",
-    co7: "(2 Days 1 Night)",
-    price: "Unveiling Soon",
+    co6: "Accommodation (2 Days 1 Night)",
+    co7: "One day bootcamp with  Practo founder.",
+    co8: 'Pronite - "The Night to Remember!"',
+    price: "2499",
     titlecolor: "#FFD400",
     cardcolor:
       "linear-gradient(90deg, rgba(153,153,153,0.100717787114846) 0%, rgba(153,153,153,0.1962359943977591) 100%)",
-    cl1: "#ffffff",
-    cl2: "#ffffff",
-    cl3: "#ffffff",
-    cl4: "#ffffff",
-    cl5: "#ffffff",
-    cl6: "#ffffff",
-    cl7: "#ffffff",
+    cl1: "#d3d3d3",
+    cl2: "#d3d3d3",
+    cl3: "#d3d3d3",
+    cl4: "#d3d3d3",
+    cl5: "#d3d3d3",
+    cl6: "#d3d3d3",
+    cl7: "#d3d3d3",
+    cl8: "#d3d3d3",
     td4: "",
     td5: "",
     td6: "",
     td7: "",
+    td8: "",
     bw: "2px",
   },
 ];
@@ -118,6 +127,7 @@ const Card = ({
   c5,
   c6,
   c7,
+  c8,
   price,
   cardcolor,
   cl1,
@@ -127,10 +137,12 @@ const Card = ({
   cl5,
   cl6,
   cl7,
+  cl8,
   td4,
   td5,
   td6,
   td7,
+  td8,
   bw,
   handleBuyNow,
 }) => {
@@ -143,13 +155,13 @@ const Card = ({
     >
       <Box
         sx={{
-          //   width: {lg:`calc(25vw + ${bw})`},
+          width: { md: `calc(25vw + ${bw})` },
           background: cardcolor,
           paddingTop: "3rem",
-          paddingLeft: "3rem",
-          paddingRight: "3rem",
+          paddingLeft: "2.5rem",
+          paddingRight: "2.5rem",
           paddingBottom: "1rem",
-          margin: "0.5rem",
+          margin: "0.2rem",
           minWidth: "20vw",
           boxShadow: "0 4px 8px rgba(0, 0, 0, 0.2)",
           borderWidth: bw,
@@ -161,13 +173,13 @@ const Card = ({
             style={{
               color: titlecolor,
               fontSize: "1.5rem",
-              marginBottom: "1rem",
+              marginBottom: "0.4rem",
             }}
           >
             {title}
           </div>
           <br />
-          <div style={{ fontSize: "1.3rem" }}>
+          <div style={{ fontSize: "1.1rem" }}>
             <div style={{ color: cl1 }}>{c1}</div>
             <div style={{ color: cl2 }}>{c2}</div>
             <div style={{ color: cl3 }}>{c3}</div>
@@ -207,8 +219,17 @@ const Card = ({
             >
               {c7}
             </div>
+            {/* </div> */}
+            <div
+              style={{
+                color: cl8,
+                textDecoration: td8,
+                fontWeight: td7 === "line-through" ? "lighter" : "normal",
+              }}
+            >
+              {c8}
+            </div>
           </div>
-
           <br />
           <div
             className="flex flex-wrap space-x-5"
@@ -220,33 +241,33 @@ const Card = ({
             }}
           >
             <div style={{ fontWeight: "normal" }}>
-              {title === "PREMIUM" ? "" : String.fromCharCode(0x20b9)}
+              {String.fromCharCode(0x20b9)}
               {price}
             </div>
-            {title === "PREMIUM" ? (
+            {/* {title === "PREMIUM" ? (
               <></>
-            ) : (
-              <Button
-                variant="contained"
-                sx={{
-                  borderRadius: "0",
-                  color: "white",
-                  fontFamily: "Josefin Sans",
-                  fontSize: { xs: "0.7rem", sm: "0.8rem", md: "1.2rem" },
-                  fontWeight: "700",
-                  textTransform: "none",
-                  "&.MuiButton-contained": {
-                    backgroundColor: "#FF5100",
-                  },
-                  "&:hover": {
-                    backgroundColor: "#B73A00",
-                  },
-                }}
-                onClick={() => handleBuyNow(price, title)}
-              >
-                Buy Now
-              </Button>
-            )}
+            ) : ( */}
+            <Button
+              variant="contained"
+              sx={{
+                borderRadius: "0",
+                color: "white",
+                fontFamily: "Josefin Sans",
+                fontSize: { xs: "0.7rem", sm: "0.8rem", md: "1.2rem" },
+                fontWeight: "700",
+                textTransform: "none",
+                "&.MuiButton-contained": {
+                  backgroundColor: "#FF5100",
+                },
+                "&:hover": {
+                  backgroundColor: "#B73A00",
+                },
+              }}
+              onClick={() => handleBuyNow(price, title)}
+            >
+              Buy Now
+            </Button>
+            {/* )} */}
           </div>
         </div>
       </Box>
@@ -302,6 +323,7 @@ const Panel = ({ handleBuyNow }) => {
             c5={pass.co5}
             c6={pass.co6}
             c7={pass.co7}
+            c8={pass.co8}
             price={pass.price}
             cardcolor={pass.cardcolor}
             cl1={pass.cl1}
@@ -311,10 +333,12 @@ const Panel = ({ handleBuyNow }) => {
             cl5={pass.cl5}
             cl6={pass.cl6}
             cl7={pass.cl7}
+            cl8={pass.cl8}
             td4={pass.td4}
             td5={pass.td5}
             td6={pass.td6}
             td7={pass.td7}
+            td8={pass.td8}
             bw={pass.bw}
             handleBuyNow={handleBuyNow}
           />
@@ -334,6 +358,7 @@ function MainPasses() {
   const [username, setUsername] = useState("");
   const [useremail, setUserEmail] = useState("");
   const [userid, setUserID] = useState(-1);
+  const [ticketId, setTicketId] = useState(-1);
   const [loading, setLoading] = useState(false);
   const [modalOpen, setModalOpen] = useState(false);
   const [price, setPrice] = useState(0);
@@ -384,16 +409,17 @@ function MainPasses() {
       window.location.href = "/esummit/login?redirectTo=/esummit/tickets";
       return;
     }
-    if (userDetails.ticketId != -1) {
-      //Show you already have a ticket
-      toast.error(
-        "You already purchased one ticket!, Please try with different account.",
-        {
-          autoClose: 5000,
-        }
-      );
-      return;
-    }
+    // if (userDetails.ticketId != -1) {
+    //   //Show you already have a ticket
+    //   toast.error(
+    //     "You already purchased one ticket!, Please try with different account.",
+    //     {
+    //       autoClose: 5000,
+    //     }
+    //   );
+    //   return;
+    // }
+    setTicketId(userDetails.ticketId);
     setUserID(userDetails.userId);
     setUserEmail(userDetails.email);
     setUsername(userDetails.name);
@@ -403,6 +429,16 @@ function MainPasses() {
   };
 
   const handleContinue = () => {
+      if (ticketId != -1) {
+      //Show you already have a ticket
+      toast.error(
+        "You already purchased one ticket!, Please try with different account.",
+        {
+          autoClose: 5000,
+        }
+      );
+      return;
+    }
     setModalOpen(false);
     if (price === 0) {
       toast.error("Something went wrong. Please try again later.", {
@@ -430,7 +466,7 @@ function MainPasses() {
           name="google-site-verification"
           content="agHaKoDcApHadKU7BhRCOJK0w5SRZtQCG9YxNKZBGvc"
         />
-        <link rel="canonical" href="https://ecell.iith.ac.in/esummit" />
+        <link rel="canonical" href="https://ecell.iith.ac.in/esummit/tickets" />
       </Head>
       <div
         suppressHydrationWarning
@@ -444,7 +480,7 @@ function MainPasses() {
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
           // width: "100vw",
-          height: "100vh",
+          height: "100svh",
           // overflowX: "hidden",
           overflowY: "auto",
         }}
@@ -491,15 +527,26 @@ function MainPasses() {
             <Button
               onClick={handleUseDifferentAccount}
               variant="outlined"
-              color="error"
+              color="inherit"
             >
               Use Different Account
             </Button>
             <Button
               onClick={handleContinue}
               variant="contained"
-              color="primary"
+              // color="info"
               autoFocus
+              sx={{
+                borderRadius: "3px",
+                color: "white",
+                textTransform: "uppercase",
+                "&.MuiButton-contained": {
+                  backgroundColor: "#FF5100",
+                },
+                "&:hover": {
+                  backgroundColor: "#B73A00",
+                },
+              }}
             >
               Continue
             </Button>

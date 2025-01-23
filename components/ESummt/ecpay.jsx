@@ -27,15 +27,15 @@ const PaymentPortal = ({ title, price, logoLink, userID }) => {
         setTransactionId("x0443245");
     }
 
-    if (price === "399"){
-        price = 399;
-    }
+    // if (price === "399"){
+    //     price = 399;
+    // }
     const token = localStorage.getItem("token");
 
     try {
       const response = await axios.post(BASE_URL+"/transactionID ", {
         txn_id: transactionId,
-        amount: price,
+        amount: Number(price),
       }, {
         headers: {
           "Content-Type": "application/json",
