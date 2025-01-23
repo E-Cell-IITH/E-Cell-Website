@@ -396,7 +396,7 @@ function SponsorsMain() {
   const isXs = useMediaQuery("(max-width: 480px)");
   const isSm = useMediaQuery("(max-width: 768px)");
 
-  const topPosition = isXs ? "80px" : isSm ? "60px" : "60px"; // Changed here
+  const topPosition = isXs ? "40px" : isSm ? "40px" : "60px"; // Changed here
 
   return (
     <div
@@ -470,7 +470,7 @@ function SponsorsMain() {
 
         <Box
           sx={{
-            maxWidth: "85%",
+            maxWidth:{xs: "95%", md: "85%"},
             margin: "0 auto",
             position: "relative",
           }}
