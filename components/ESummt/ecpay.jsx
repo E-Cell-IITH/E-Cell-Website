@@ -5,7 +5,7 @@ import { toast } from "react-toastify";
 
 const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL;
 
-const PaymentPortal = ({ title, price, logoLink, userID }) => {
+const PaymentPortal = ({ title, price, logoLink, userID ,accomodation}) => {
   const [transactionId, setTransactionId] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [responseMessage, setResponseMessage] = useState("");
@@ -27,15 +27,14 @@ const PaymentPortal = ({ title, price, logoLink, userID }) => {
         setTransactionId("x0443245");
     }
 
-    // if (price === "399"){
-    //     price = 399;
-    // }
     const token = localStorage.getItem("token");
 
     try {
       const response = await axios.post(BASE_URL+"/transactionID ", {
         txn_id: transactionId,
         amount: Number(price),
+        title: title + (accomodation?" with Accomodation":""),
+        isAccommodation: accomodation,
       }, {
         headers: {
           "Content-Type": "application/json",
@@ -133,7 +132,7 @@ const PaymentPortal = ({ title, price, logoLink, userID }) => {
       >
         <h2 style={{ margin: "0 0 10px 0", fontSize: "1.5rem" }}>ESummit 2025 IITH</h2>
         <p style={{ margin: "0 0 5px 0", fontSize: "1rem" }}>
-          <strong>Ticket:</strong> {title}
+          <strong>Ticket:</strong> {title + (accomodation?" with Accomodation":"")}
         </p>
         <p style={{ margin: "0", fontSize: "1rem" }}>
           <strong>Price:</strong> ₹{price}

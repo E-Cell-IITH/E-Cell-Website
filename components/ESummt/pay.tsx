@@ -18,7 +18,7 @@ const Transition = React.forwardRef(function Transition(
   return <Slide direction="up" ref={ref} {...props} />;
 });
 
-export default function PayDialogSlide({ open, onClose, title, price, logoLink, width , userID}) {
+export default function PayDialogSlide({ open, onClose, title, price, logoLink, width , userID, accommodation}) {
   return (
     <Dialog
       open={open}
@@ -38,7 +38,7 @@ export default function PayDialogSlide({ open, onClose, title, price, logoLink, 
     >
       
       <DialogContent>
-        <PaymentPortal title={title} price={price} logoLink={logoLink} userID={userID}/>
+        <PaymentPortal title={title} price={price} logoLink={logoLink} userID={userID} accomodation={accommodation}/>
       </DialogContent>
       <DialogActions>
         <Button onClick={onClose}>Cancel Transaction</Button>

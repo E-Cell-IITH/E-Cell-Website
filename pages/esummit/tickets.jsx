@@ -4,7 +4,7 @@ import { Josefin_Sans } from "next/font/google";
 import { Tilt } from "react-next-tilt";
 import Button from "@mui/material/Button";
 
-import { useMediaQuery } from "@mui/material";
+import { Checkbox, useMediaQuery } from "@mui/material";
 
 import {
   Box,
@@ -28,124 +28,177 @@ const josefinSans = Josefin_Sans({ subsets: ["latin"], display: "swap" });
 const PASSDATA = [
   {
     title: "STANDARD",
-    co1: "All Speaker Sessions",
-    co2: "Startup Fair",
-    co3: "Food Carnival",
-    co4: "Fetching Fortune Spectator",
-    co5: "Networking Dinner",
-    co6: "Accommodation (2 Days 1 Night)",
-    co7: "One day bootcamp with  Practo founder.",
-    co8: 'Pronite - "The Night to Remember!"',
-    price: " ̶1̶9̶9̶ Free",
+    perks: [
+      "All Speaker Sessions",
+      "Startup Fair",
+      "Food Carnival",
+      "Fetching Fortune Spectator",
+      "Networking Dinner",
+      'Pronite - "The Night to Remember!"',
+      "One day bootcamp with Practo founder.",
+    ],
+    // price: " ̶1̶9̶9̶ Free",
     titlecolor: "#d3d3d3",
     cardcolor:
       "linear-gradient(90deg, rgba(153,153,153,0.100717787114846) 0%, rgba(153,153,153,0.1962359943977591) 100%)",
-    cl1: "#d3d3d3",
-    cl2: "#d3d3d3",
-    cl3: "#d3d3d3",
-    cl4: "#d3d3d3",
-    cl5: "#d3d3d3",
-    cl6: "#d3d3d3",
-    cl7: "#d3d3d3",
-    cl8: "#d3d3d3",
-    td4: "line-through",
-    td5: "line-through",
-    td6: "line-through",
-    td7: "line-through",
-    td8: "line-through",
+    colors: [
+      "#d3d3d3",
+      "#d3d3d3",
+      "#d3d3d3",
+      "#d3d3d3",
+      "#d3d3d3",
+      "#d3d3d3",
+      "#d3d3d3",
+      "#d3d3d3",
+    ],
+    textDecorations: [
+      "none",
+      "none",
+      "none",
+      "line-through",
+      "line-through",
+      "line-through",
+      "line-through",
+      "line-through",
+    ],
     bw: "2px",
   },
   {
     title: "VALUE FOR MONEY",
-    co1: "All Speaker Sessions",
-    co2: "Startup Fair",
-    co3: "Food Carnival",
-    co4: "Fetching Fortune Spectator",
-    co5: "Networking Dinner",
-    co6: "Accommodation (2 Days 1 Night)",
-    co7: "One day bootcamp with  Practo founder.",
-    co8: 'Pronite - "The Night to Remember!"',
-    price: "399",
+    perks: [
+      "All Speaker Sessions",
+      "Startup Fair",
+      "Food Carnival",
+      "Fetching Fortune Spectator",
+      "Networking Dinner",
+      'Pronite - "The Night to Remember!"',
+      "One day bootcamp with Practo founder.",
+    ],
+    // price: "399",
     titlecolor: "#d3d3d3",
     cardcolor:
       "linear-gradient(90deg, rgba(153,153,153,0.356796218487395) 0%, rgba(153,153,153,0.2911939775910365) 100%)",
-    cl1: "#d3d3d3",
-    cl2: "#d3d3d3",
-    cl3: "#d3d3d3",
-    cl4: "#d3d3d3",
-    cl5: "#d3d3d3",
-    cl6: "#d3d3d3",
-    cl7: "#d3d3d3",
-    cl8: "#d3d3d3",
-    td4: "",
-    td5: "line-through",
-    td6: "line-through",
-    td7: "line-through",
-    td8: "line-through",
+    colors: [
+      "#d3d3d3",
+      "#d3d3d3",
+      "#d3d3d3",
+      "#d3d3d3",
+      "#d3d3d3",
+      "#d3d3d3",
+      "#d3d3d3",
+      "#d3d3d3",
+    ],
+    textDecorations: [
+      "none",
+      "none",
+      "none",
+      "none",
+      "line-through",
+      "line-through",
+      "line-through",
+      "line-through",
+    ],
     bw: "6px",
   },
   {
     title: "PREMIUM",
-    co1: "All Speaker Sessions",
-    co2: "Startup Fair",
-    co3: "Food Carnival",
-    co4: "Fetching Fortune Spectator",
-    co5: "Networking Dinner",
-    co6: "Accommodation (2 Days 1 Night)",
-    co7: "One day bootcamp with  Practo founder.",
-    co8: 'Pronite - "The Night to Remember!"',
-    price: "2499",
+    perks: [
+      "All Speaker Sessions",
+      "Startup Fair",
+      "Food Carnival",
+      "Fetching Fortune Spectator",
+      "Networking Dinner",
+      'Pronite - "The Night to Remember!"',
+      "One day bootcamp with Practo founder.",
+      "Accommodation (2 Days 1 Night)",
+    ],
+    // price: "2499",
     titlecolor: "#FFD400",
     cardcolor:
       "linear-gradient(90deg, rgba(153,153,153,0.100717787114846) 0%, rgba(153,153,153,0.1962359943977591) 100%)",
-    cl1: "#d3d3d3",
-    cl2: "#d3d3d3",
-    cl3: "#d3d3d3",
-    cl4: "#d3d3d3",
-    cl5: "#d3d3d3",
-    cl6: "#d3d3d3",
-    cl7: "#d3d3d3",
-    cl8: "#d3d3d3",
-    td4: "",
-    td5: "",
-    td6: "",
-    td7: "",
-    td8: "",
+    colors: [
+      "#d3d3d3",
+      "#d3d3d3",
+      "#d3d3d3",
+      "#d3d3d3",
+      "#d3d3d3",
+      "#d3d3d3",
+      "#d3d3d3",
+      "#d3d3d3",
+    ],
+    textDecorations: [
+      "none",
+      "none",
+      "none",
+      "none",
+      "none",
+      "none",
+      "none",
+      "none",
+    ],
+    bw: "2px",
+  },
+  {
+    title: "STARTUP FAIR PASS",
+    perks: [
+      "Setup a stall at the Startup Fair",
+      "All Speaker Sessions",
+      "Startup Fair",
+      "Food Carnival",
+      "Fetching Fortune Spectator",
+      "Networking Dinner",
+      'Pronite - "The Night to Remember!"',
+      "One day bootcamp with Practo founder.",
+    ],
+    // price: "2499",
+    titlecolor: "#d3d3d3",
+    cardcolor:
+      "linear-gradient(90deg, rgba(153,153,153,0.100717787114846) 0%, rgba(153,153,153,0.1962359943977591) 100%)",
+    colors: [
+      "#d3d3d3",
+      "#d3d3d3",
+      "#d3d3d3",
+      "#d3d3d3",
+      "#d3d3d3",
+      "#d3d3d3",
+      "#d3d3d3",
+      "#d3d3d3",
+    ],
+    textDecorations: [
+      "none",
+      "none",
+      "none",
+      "none",
+      "none",
+      "none",
+      "line-through",
+      "line-through",
+    ],
     bw: "2px",
   },
 ];
 
 const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL;
-
 const Card = ({
+  index,
   titlecolor,
   title,
-  c1,
-  c2,
-  c3,
-  c4,
-  c5,
-  c6,
-  c7,
-  c8,
-  price,
+  perks,
   cardcolor,
-  cl1,
-  cl2,
-  cl3,
-  cl4,
-  cl5,
-  cl6,
-  cl7,
-  cl8,
-  td4,
-  td5,
-  td6,
-  td7,
-  td8,
+  colors,
+  textDecorations,
   bw,
   handleBuyNow,
+  basicPrice,
+  setBasicPrice,
+  valuePrice,
+  setValuePrice,
+  premiumPrice,
+  startupFairPrice,
+  setStartupFairPrice,
 }) => {
+  const [checked, setChecked] = useState(false);
+
   return (
     <Tilt
       scale={1.05}
@@ -180,55 +233,69 @@ const Card = ({
           </div>
           <br />
           <div style={{ fontSize: "1.1rem" }}>
-            <div style={{ color: cl1 }}>{c1}</div>
-            <div style={{ color: cl2 }}>{c2}</div>
-            <div style={{ color: cl3 }}>{c3}</div>
-            <div
-              style={{
-                color: cl4,
-                textDecoration: td4,
-                fontWeight: td4 === "line-through" ? "lighter" : "normal",
-              }}
-            >
-              {c4}
-            </div>
-            <div
-              style={{
-                color: cl5,
-                textDecoration: td5,
-                fontWeight: td5 === "line-through" ? "lighter" : "normal",
-              }}
-            >
-              {c5}
-            </div>
-            <div
-              style={{
-                color: cl6,
-                textDecoration: td6,
-                fontWeight: td6 === "line-through" ? "lighter" : "normal",
-              }}
-            >
-              {c6}
-            </div>
-            <div
-              style={{
-                color: cl7,
-                textDecoration: td7,
-                fontWeight: td7 === "line-through" ? "lighter" : "normal",
-              }}
-            >
-              {c7}
-            </div>
-            {/* </div> */}
-            <div
-              style={{
-                color: cl8,
-                textDecoration: td8,
-                fontWeight: td7 === "line-through" ? "lighter" : "normal",
-              }}
-            >
-              {c8}
-            </div>
+            {perks.map((perk, index) => (
+              <div
+                key={index}
+                style={{
+                  color: colors[index],
+                  textDecoration: textDecorations[index],
+                  fontWeight:
+                    textDecorations[index] === "line-through"
+                      ? "lighter"
+                      : "normal",
+                }}
+              >
+                {perk}
+              </div>
+            ))}
+
+            {title != "PREMIUM" && (
+              <Box
+                sx={{
+                  color: checked ? "white" : "rgb(191, 191, 191)",
+                  fontWeight: "lighter",
+                }}
+              >
+                <Checkbox
+                  defaultChecked={false}
+                  size="small"
+                  sx={{
+                    color: "white",
+                    marginLeft: "0px",
+                    "&.Mui-checked": {
+                      color: "#FF5100",
+                    },
+                    "&.MuiCheckbox-root": {
+                      padding: "0px",
+                    },
+                    marginRight: "0.3rem",
+                    marginBottom: "0.3rem",
+                  }}
+                  onChange={(e) => {
+                    if (e.target.checked) {
+                      setChecked(true);
+                      if (index == 0) {
+                        setBasicPrice(400);
+                      } else if (index == 1) {
+                        setValuePrice(399 + 400);
+                      } else if (index == 3) {
+                        setStartupFairPrice(999 + 400);
+                      }
+                    } else {
+                      setChecked(false);
+                      if (index == 0) {
+                        setBasicPrice(-1);
+                      } else if (index == 1) {
+                        setValuePrice(399);
+                      } else if (index == 3) {
+                        setStartupFairPrice(999);
+                      }
+                    }
+                  }}
+                />
+                {"Accommodation (2 Days 1 Night)"}
+              </Box>
+            )}
           </div>
           <br />
           <div
@@ -242,11 +309,16 @@ const Card = ({
           >
             <div style={{ fontWeight: "normal" }}>
               {String.fromCharCode(0x20b9)}
-              {price}
+              {index === 0
+                ? basicPrice === -1
+                  ? " ̶1̶9̶9̶ Free"
+                  : basicPrice
+                : index === 1
+                ? valuePrice
+                : index == 2
+                ? premiumPrice
+                : startupFairPrice}
             </div>
-            {Number(price) > 1 ? (
-              <></>
-            ) : (
             <Button
               variant="contained"
               sx={{
@@ -263,11 +335,22 @@ const Card = ({
                   backgroundColor: "#B73A00",
                 },
               }}
-              onClick={() => handleBuyNow(price, title)}
+              onClick={() => {
+                handleBuyNow(
+                  index === 0
+                    ? basicPrice
+                    : index === 1
+                    ? valuePrice
+                    : index === 2
+                    ? premiumPrice
+                    : startupFairPrice,
+                  title,
+                  checked
+                );
+              }}
             >
               Buy Now
             </Button>
-            )}
           </div>
         </div>
       </Box>
@@ -275,7 +358,16 @@ const Card = ({
   );
 };
 
-const Panel = ({ handleBuyNow }) => {
+const Panel = ({
+  handleBuyNow,
+  basicPrice,
+  setBasicPrice,
+  valuePrice,
+  setValuePrice,
+  premiumPrice,
+  startupFairPrice,
+  setStartupFairPrice,
+}) => {
   return (
     <div
       style={{
@@ -314,33 +406,24 @@ const Panel = ({ handleBuyNow }) => {
         {PASSDATA.map((pass, index) => (
           <Card
             key={index}
+            index={index}
             titlecolor={pass.titlecolor}
             title={pass.title}
-            c1={pass.co1}
-            c2={pass.co2}
-            c3={pass.co3}
-            c4={pass.co4}
-            c5={pass.co5}
-            c6={pass.co6}
-            c7={pass.co7}
-            c8={pass.co8}
-            price={pass.price}
+            perks={pass.perks}
+            // price={pass.price}
             cardcolor={pass.cardcolor}
-            cl1={pass.cl1}
-            cl2={pass.cl2}
-            cl3={pass.cl3}
-            cl4={pass.cl4}
-            cl5={pass.cl5}
-            cl6={pass.cl6}
-            cl7={pass.cl7}
+            colors={pass.colors}
             cl8={pass.cl8}
-            td4={pass.td4}
-            td5={pass.td5}
-            td6={pass.td6}
-            td7={pass.td7}
-            td8={pass.td8}
+            textDecorations={pass.textDecorations}
             bw={pass.bw}
             handleBuyNow={handleBuyNow}
+            basicPrice={basicPrice}
+            setBasicPrice={setBasicPrice}
+            valuePrice={valuePrice}
+            setValuePrice={setValuePrice}
+            premiumPrice={premiumPrice}
+            startupFairPrice={startupFairPrice}
+            setStartupFairPrice={setStartupFairPrice}
           />
         ))}
         <br />
@@ -364,6 +447,7 @@ function MainPasses() {
   const [price, setPrice] = useState(0);
   const [title, setTitle] = useState("");
   const [isDialogOpen, setIsDialogOpen] = useState(false);
+  const [isAccommodation, setIsAccommodation] = useState(false);
 
   const paymentInitiate = async (amount) => {
     console.log(amount);
@@ -401,24 +485,16 @@ function MainPasses() {
     }
   };
 
-  const handleBuyNow = async (price, title) => {
+  const handleBuyNow = async (price, title, accommodation) => {
     setPrice(price);
     setTitle(title);
+    setIsAccommodation(accommodation);
     const userDetails = await paymentInitiate(price);
     if (!userDetails || !userDetails.email) {
       window.location.href = "/esummit/login?redirectTo=/esummit/tickets";
       return;
     }
-    // if (userDetails.ticketId != -1) {
-    //   //Show you already have a ticket
-    //   toast.error(
-    //     "You already purchased one ticket!, Please try with different account.",
-    //     {
-    //       autoClose: 5000,
-    //     }
-    //   );
-    //   return;
-    // }
+
     setTicketId(userDetails.ticketId);
     setUserID(userDetails.userId);
     setUserEmail(userDetails.email);
@@ -429,7 +505,7 @@ function MainPasses() {
   };
 
   const handleContinue = () => {
-      if (ticketId != -1) {
+    if (ticketId != -1) {
       //Show you already have a ticket
       toast.error(
         "You already purchased one ticket!, Please try with different account.",
@@ -457,6 +533,10 @@ function MainPasses() {
   };
 
   const isBiggerThan1024 = useMediaQuery("(min-width: 1024px)");
+  const [basicPrice, setBasicPrice] = useState(-1);
+  const [valuePrice, setValuePrice] = useState(399);
+  const [startupFairPrice, setStartupFairPrice] = useState(999);
+  const premiumPrice = 2499;
 
   return (
     <>
@@ -562,7 +642,16 @@ function MainPasses() {
             overflowX: "hidden",
           }}
         >
-          <Panel handleBuyNow={handleBuyNow} />
+          <Panel
+            handleBuyNow={handleBuyNow}
+            basicPrice={basicPrice}
+            valuePrice={valuePrice}
+            premiumPrice={premiumPrice}
+            startupFairPrice={startupFairPrice}
+            setBasicPrice={setBasicPrice}
+            setValuePrice={setValuePrice}
+            setStartupFairPrice={setStartupFairPrice}
+          />
           <PayDialogSlide
             open={isDialogOpen}
             onClose={() => {
@@ -573,6 +662,7 @@ function MainPasses() {
             price={price}
             width={isBiggerThan1024 ? "40%" : "90%"}
             userID={userid}
+            accommodation={isAccommodation}
           />
         </div>
       </div>
