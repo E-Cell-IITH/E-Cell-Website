@@ -48,10 +48,11 @@ function StartupFair() {
 
   const handleLogin = async () => {
     try {
-      const result = await signInWithPopup(auth, provider);
-      const user = result.user;
-      router.push("/register");
-      localStorage.setItem("user", JSON.stringify(user));
+      router.push("/esummit/tickets")
+      // const result = await signInWithPopup(auth, provider);
+      // const user = result.user;
+      // router.push("/register");
+      // localStorage.setItem("user", JSON.stringify(user));
     } catch (error) {
       console.error("Error during login:", error);
     }
