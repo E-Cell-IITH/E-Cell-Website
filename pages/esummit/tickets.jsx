@@ -279,7 +279,7 @@ const Card = ({
                       } else if (index == 1) {
                         setValuePrice(399 + 400);
                       } else if (index == 3) {
-                        setStartupFairPrice(999 + 400);
+                        setStartupFairPrice(3999 + 400);
                       }
                     } else {
                       setChecked(false);
@@ -288,7 +288,7 @@ const Card = ({
                       } else if (index == 1) {
                         setValuePrice(399);
                       } else if (index == 3) {
-                        setStartupFairPrice(999);
+                        setStartupFairPrice(3999);
                       }
                     }
                   }}
@@ -535,7 +535,7 @@ function MainPasses() {
   const isBiggerThan1024 = useMediaQuery("(min-width: 1024px)");
   const [basicPrice, setBasicPrice] = useState(-1);
   const [valuePrice, setValuePrice] = useState(399);
-  const [startupFairPrice, setStartupFairPrice] = useState(999);
+  const [startupFairPrice, setStartupFairPrice] = useState(3999);
   const premiumPrice = 2499;
 
   return (
