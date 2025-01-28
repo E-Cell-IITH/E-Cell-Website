@@ -103,6 +103,7 @@ const PASSDATA = [
       "Fetching Fortune Spectator",
       'Pronite - "The Night to Remember!"',
       "One Day Bootcamp",
+      "Accomodation(2 Days 1 Night)"
   
     ],
     // price: "2499",
@@ -186,6 +187,7 @@ const Card = ({
   premiumPrice,
   startupFairPrice,
   setStartupFairPrice,
+  showCheckbox, 
 }) => {
   const [checked, setChecked] = useState(false);
 
@@ -239,58 +241,58 @@ const Card = ({
               </div>
             ))}
 
-{title != "PREMIUM" && (
-  <Box
-    sx={{
-      color: checked ? "white" : "rgb(191, 191, 191)",
-      fontWeight: "lighter",
-    }}
-  >
-    <Checkbox
-      defaultChecked={false}
-      size="small"
-      sx={{
-        color: "white",
-        marginLeft: "0px",
-        "&.Mui-checked": {
-          color: "#FF5100",
-        },
-        "&.MuiCheckbox-root": {
-          padding: "0px",
-        },
-        marginRight: "0.3rem",
-        marginBottom: "0.3rem",
-      }}
-      onChange={(e) => {
-        if (e.target.checked) {
-          setChecked(true);
-          if (index === 0) {
-            setBasicPrice(1100);
-          } else if (index === 1) {
-            setValuePrice(199 + 1100);
-          } else if (index === 2 && valuePrice === 2499) {
-            setValuePrice(2499 + 500); // Add an extra 500 for 3 days, 2 nights accommodation
-          } else if (index === 3) {
-            setStartupFairPrice(3999 + 1100);
-          }
-        } else {
-          setChecked(false);
-          if (index === 0) {
-            setBasicPrice(-1);
-          } else if (index === 1) {
-            setValuePrice(199);
-          } else if (index === 2 && valuePrice === 2999) {
-            setValuePrice(2499); // Remove the extra cost for 3 days, 2 nights accommodation
-          } else if (index === 3) {
-            setStartupFairPrice(3999);
-          }
-        }
-      }}
-    />
-     Accommodation (2 Days 1 Night)
-  </Box>
-)}
-
+            {/* Conditionally render checkbox */}
+            {showCheckbox && index !== 2 && (  // This will hide checkbox for index 2 (BOOTCAMP + ESUMMIT)
+              <Box
+                sx={{
+                  color: checked ? "white" : "rgb(191, 191, 191)",
+                  fontWeight: "lighter",
+                }}
+              >
+                <Checkbox
+                  defaultChecked={false}
+                  size="small"
+                  sx={{
+                    color: "white",
+                    marginLeft: "0px",
+                    "&.Mui-checked": {
+                      color: "#FF5100",
+                    },
+                    "&.MuiCheckbox-root": {
+                      padding: "0px",
+                    },
+                    marginRight: "0.3rem",
+                    marginBottom: "0.3rem",
+                  }}
+                  onChange={(e) => {
+                    if (e.target.checked) {
+                      setChecked(true);
+                      if (index === 0) {
+                        setBasicPrice(1100);
+                      } else if (index === 1) {
+                        setValuePrice(199 + 1100);
+                      } else if (index === 2 && valuePrice === 2499) {
+                        setValuePrice(2499 + 500); // Add an extra 500 for 3 days, 2 nights accommodation
+                      } else if (index === 3) {
+                        setStartupFairPrice(3999 + 1100);
+                      }
+                    } else {
+                      setChecked(false);
+                      if (index === 0) {
+                        setBasicPrice(-1);
+                      } else if (index === 1) {
+                        setValuePrice(199);
+                      } else if (index === 2 && valuePrice === 2999) {
+                        setValuePrice(2499); // Remove the extra cost for 3 days, 2 nights accommodation
+                      } else if (index === 3) {
+                        setStartupFairPrice(3999);
+                      }
+                    }
+                  }}
+                />
+                Accommodation (2 Days 1 Night)
+              </Box>
+            )}
           </div>
           <br />
           <div
@@ -352,6 +354,7 @@ const Card = ({
     </Tilt>
   );
 };
+
 
 const Panel = ({
   handleBuyNow,
@@ -419,6 +422,8 @@ const Panel = ({
             premiumPrice={premiumPrice}
             startupFairPrice={startupFairPrice}
             setStartupFairPrice={setStartupFairPrice}
+            showCheckbox={pass.title !== "BOOTCAMP +  ESUMMIT"}
+
           />
         ))}
         <br />
