@@ -72,7 +72,7 @@ const PASSDATA = [
     // price: "399",
     titlecolor: "#d3d3d3",
     cardcolor:
-      "linear-gradient(90deg, rgba(153,153,153,0.356796218487395) 0%, rgba(153,153,153,0.2911939775910365) 100%)",
+    "linear-gradient(90deg, rgba(153,153,153,0.100717787114846) 0%, rgba(153,153,153,0.1962359943977591) 100%)",
     colors: [
       "#d3d3d3",
       "#d3d3d3",
@@ -265,13 +265,13 @@ const Card = ({
         if (e.target.checked) {
           setChecked(true);
           if (index === 0) {
-            setBasicPrice(400);
+            setBasicPrice(1100);
           } else if (index === 1) {
-            setValuePrice(399 + 400);
+            setValuePrice(399 + 1100);
           } else if (index === 2 && valuePrice === 2499) {
             setValuePrice(2499 + 500); // Add an extra 500 for 3 days, 2 nights accommodation
           } else if (index === 3) {
-            setStartupFairPrice(3999 + 400);
+            setStartupFairPrice(3999 + 1100);
           }
         } else {
           setChecked(false);
@@ -287,9 +287,7 @@ const Card = ({
         }
       }}
     />
-    {index === 2
-      ? "Accommodation (3 Days 2 Nights)"
-      : "Accommodation (2 Days 1 Night)"}
+     Accommodation (2 Days 1 Night)
   </Box>
 )}
 
@@ -373,7 +371,7 @@ const Panel = ({
         paddingLeft: "20px",
         paddingRight: "20px",
         paddingBottom: "20px",
-        borderRadius: "10px",
+        borderRadius: "100px",
         maxWidth: "95%",
         height: "auto",
         margin: "0 auto",
