@@ -66,7 +66,7 @@ const PASSDATA = [
       "Startup Fair",
       "Competitions",
       "Fetching Fortune Spectator",
-      'Pronite - "The Night to Remember!"',
+    
     ],
     // price: "399",
     titlecolor: "#d3d3d3",
@@ -534,7 +534,7 @@ function MainPasses() {
 
   const isBiggerThan1024 = useMediaQuery("(min-width: 1024px)");
   const [basicPrice, setBasicPrice] = useState(-1);
-  const [valuePrice, setValuePrice] = useState(399);
+  const [valuePrice, setValuePrice] = useState(199);
   const [startupFairPrice, setStartupFairPrice] = useState(3999);
   const premiumPrice = 2499;
 
