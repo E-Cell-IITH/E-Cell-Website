@@ -96,7 +96,7 @@ const PASSDATA = [
     bw: "6px",
   },
   {
-    title: "BOOTCAMP + ESUMMIT",
+    title: "BOOTCAMP +  ESUMMIT",
     perks: [
       "All Speaker Sessions",
       "Startup Fair",
