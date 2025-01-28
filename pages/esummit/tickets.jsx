@@ -267,7 +267,7 @@ const Card = ({
           if (index === 0) {
             setBasicPrice(1100);
           } else if (index === 1) {
-            setValuePrice(399 + 1100);
+            setValuePrice(199 + 1100);
           } else if (index === 2 && valuePrice === 2499) {
             setValuePrice(2499 + 500); // Add an extra 500 for 3 days, 2 nights accommodation
           } else if (index === 3) {
@@ -278,7 +278,7 @@ const Card = ({
           if (index === 0) {
             setBasicPrice(-1);
           } else if (index === 1) {
-            setValuePrice(399);
+            setValuePrice(199);
           } else if (index === 2 && valuePrice === 2999) {
             setValuePrice(2499); // Remove the extra cost for 3 days, 2 nights accommodation
           } else if (index === 3) {
