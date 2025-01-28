@@ -1,4 +1,4 @@
-// import React from "react";
+//  import React from "react";
 import EsummitNavbar from "../../components/ESummt/navbar";
 import { Josefin_Sans } from "next/font/google";
 import { Tilt } from "react-next-tilt";
@@ -31,11 +31,8 @@ const PASSDATA = [
     perks: [
       "All Speaker Sessions",
       "Startup Fair",
-      "Food Carnival",
       "Fetching Fortune Spectator",
-      "Networking Dinner",
-      'Pronite - "The Night to Remember!"',
-      "One day bootcamp with Practo founder.",
+      "One Day Bootcamp",
     ],
     // price: " ̶1̶9̶9̶ Free",
     titlecolor: "#d3d3d3",
@@ -55,9 +52,9 @@ const PASSDATA = [
       "none",
       "none",
       "none",
-      "line-through",
-      "line-through",
-      "line-through",
+      "none",
+      "none",
+      "none",
       "line-through",
       "line-through",
     ],
@@ -68,11 +65,9 @@ const PASSDATA = [
     perks: [
       "All Speaker Sessions",
       "Startup Fair",
-      "Food Carnival",
       "Fetching Fortune Spectator",
-      "Networking Dinner",
       'Pronite - "The Night to Remember!"',
-      "One day bootcamp with Practo founder.",
+      "One Day Bootcamp.",
     ],
     // price: "399",
     titlecolor: "#d3d3d3",
@@ -93,7 +88,7 @@ const PASSDATA = [
       "none",
       "none",
       "none",
-      "line-through",
+      "none",
       "line-through",
       "line-through",
       "line-through",
@@ -101,19 +96,17 @@ const PASSDATA = [
     bw: "6px",
   },
   {
-    title: "PREMIUM",
+    title: "BOOTCAMP+ESUMMIT",
     perks: [
       "All Speaker Sessions",
       "Startup Fair",
-      "Food Carnival",
       "Fetching Fortune Spectator",
-      "Networking Dinner",
       'Pronite - "The Night to Remember!"',
-      "One day bootcamp with Practo founder.",
-      "Accommodation (2 Days 1 Night)",
+      "One Day Bootcamp",
+  
     ],
     // price: "2499",
-    titlecolor: "#FFD400",
+    titlecolor: "#d3d3d3",
     cardcolor:
       "linear-gradient(90deg, rgba(153,153,153,0.100717787114846) 0%, rgba(153,153,153,0.1962359943977591) 100%)",
     colors: [
@@ -144,11 +137,9 @@ const PASSDATA = [
       "Setup a stall at the Startup Fair",
       "All Speaker Sessions",
       "Startup Fair",
-      "Food Carnival",
       "Fetching Fortune Spectator",
-      "Networking Dinner",
       'Pronite - "The Night to Remember!"',
-      "One day bootcamp with Practo founder.",
+      "One Day Bootcamp",
     ],
     // price: "2499",
     titlecolor: "#d3d3d3",
@@ -249,53 +240,60 @@ const Card = ({
               </div>
             ))}
 
-            {title != "PREMIUM" && (
-              <Box
-                sx={{
-                  color: checked ? "white" : "rgb(191, 191, 191)",
-                  fontWeight: "lighter",
-                }}
-              >
-                <Checkbox
-                  defaultChecked={false}
-                  size="small"
-                  sx={{
-                    color: "white",
-                    marginLeft: "0px",
-                    "&.Mui-checked": {
-                      color: "#FF5100",
-                    },
-                    "&.MuiCheckbox-root": {
-                      padding: "0px",
-                    },
-                    marginRight: "0.3rem",
-                    marginBottom: "0.3rem",
-                  }}
-                  onChange={(e) => {
-                    if (e.target.checked) {
-                      setChecked(true);
-                      if (index == 0) {
-                        setBasicPrice(400);
-                      } else if (index == 1) {
-                        setValuePrice(399 + 400);
-                      } else if (index == 3) {
-                        setStartupFairPrice(3999 + 400);
-                      }
-                    } else {
-                      setChecked(false);
-                      if (index == 0) {
-                        setBasicPrice(-1);
-                      } else if (index == 1) {
-                        setValuePrice(399);
-                      } else if (index == 3) {
-                        setStartupFairPrice(3999);
-                      }
-                    }
-                  }}
-                />
-                {"Accommodation (2 Days 1 Night)"}
-              </Box>
-            )}
+{title != "PREMIUM" && (
+  <Box
+    sx={{
+      color: checked ? "white" : "rgb(191, 191, 191)",
+      fontWeight: "lighter",
+    }}
+  >
+    <Checkbox
+      defaultChecked={false}
+      size="small"
+      sx={{
+        color: "white",
+        marginLeft: "0px",
+        "&.Mui-checked": {
+          color: "#FF5100",
+        },
+        "&.MuiCheckbox-root": {
+          padding: "0px",
+        },
+        marginRight: "0.3rem",
+        marginBottom: "0.3rem",
+      }}
+      onChange={(e) => {
+        if (e.target.checked) {
+          setChecked(true);
+          if (index === 0) {
+            setBasicPrice(400);
+          } else if (index === 1) {
+            setValuePrice(399 + 400);
+          } else if (index === 2 && valuePrice === 2499) {
+            setValuePrice(2499 + 500); // Add an extra 500 for 3 days, 2 nights accommodation
+          } else if (index === 3) {
+            setStartupFairPrice(3999 + 400);
+          }
+        } else {
+          setChecked(false);
+          if (index === 0) {
+            setBasicPrice(-1);
+          } else if (index === 1) {
+            setValuePrice(399);
+          } else if (index === 2 && valuePrice === 2999) {
+            setValuePrice(2499); // Remove the extra cost for 3 days, 2 nights accommodation
+          } else if (index === 3) {
+            setStartupFairPrice(3999);
+          }
+        }
+      }}
+    />
+    {index === 2
+      ? "Accommodation (3 Days 2 Nights)"
+      : "Accommodation (2 Days 1 Night)"}
+  </Box>
+)}
+
           </div>
           <br />
           <div
@@ -324,7 +322,7 @@ const Card = ({
               sx={{
                 borderRadius: "0",
                 color: "white",
-                fontFamily: "Josefin Sans",
+                fontFamily: josefinSans.className,
                 fontSize: { xs: "0.7rem", sm: "0.8rem", md: "1.2rem" },
                 fontWeight: "700",
                 textTransform: "none",

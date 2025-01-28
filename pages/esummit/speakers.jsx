@@ -395,7 +395,7 @@ function Marquee({ sponsors, topPosition }) {
 function SponsorsMain() {
   const isXs = useMediaQuery("(max-width: 480px)");
   const isSm = useMediaQuery("(max-width: 768px)");
-
+  
   const topPosition = isXs ? "40px" : isSm ? "40px" : "60px"; // Changed here
 
   return (
