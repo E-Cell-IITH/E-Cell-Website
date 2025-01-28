@@ -64,6 +64,7 @@ const PASSDATA = [
     perks: [
       "All Speaker Sessions",
       "Startup Fair",
+      "Competitions",
       "Fetching Fortune Spectator",
       'Pronite - "The Night to Remember!"',
     ],
@@ -100,8 +101,9 @@ const PASSDATA = [
       "Startup Fair",
       "Fetching Fortune Spectator",
       'Pronite - "The Night to Remember!"',
+      "Competitions",
       "One Day Bootcamp",
-      "Accomodation(2 Days 1 Night)"
+      "Accommodation(2 Days 1 Night)"
   
     ],
     // price: "2499",
