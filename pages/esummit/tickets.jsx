@@ -96,7 +96,7 @@ const PASSDATA = [
     bw: "6px",
   },
   {
-    title: "BOOTCAMP+ESUMMIT",
+    title: "BOOTCAMP + ESUMMIT",
     perks: [
       "All Speaker Sessions",
       "Startup Fair",
@@ -139,7 +139,6 @@ const PASSDATA = [
       "Startup Fair",
       "Fetching Fortune Spectator",
       'Pronite - "The Night to Remember!"',
-      "One Day Bootcamp",
     ],
     // price: "2499",
     titlecolor: "#d3d3d3",
