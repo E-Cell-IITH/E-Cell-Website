@@ -66,7 +66,7 @@ const PASSDATA = [
       "Startup Fair",
       "Competitions",
       "Fetching Fortune Spectator",
-    
+      'Pronite - "The Night to Remember!"',
     ],
     // price: "399",
     titlecolor: "#d3d3d3",
