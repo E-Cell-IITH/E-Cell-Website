@@ -66,6 +66,7 @@ const PaymentPortal = ({ title, price, logoLink, userID, accommodation, isOpen }
           amount: Number(finalPrice),
           title: title + (accommodation ? " with Accommodation" : ""),
           isAccommodation: accommodation,
+          couponCode: isCouponApplied ? couponCode : "",
         },
         {
           headers: {
