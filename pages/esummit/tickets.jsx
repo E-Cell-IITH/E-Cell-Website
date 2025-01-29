@@ -255,7 +255,7 @@ const Card = ({
                   fontWeight: "bold",
                 }}
               >
-                Click here for brochure
+                Click here for bootcamp brochure
               </a>
             </div>
           )}
