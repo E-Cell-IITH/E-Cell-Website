@@ -243,6 +243,22 @@ const Card = ({
                 {perk}
               </div>
             ))}
+            {title === "BOOTCAMP +  ESUMMIT" && (
+            <div style={{ marginTop: "10px" }}>
+              <a
+                href="/Brochure.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{
+                  color: "white",
+                  textDecoration: "underline",
+                  fontWeight: "bold",
+                }}
+              >
+                Click here for brochure
+              </a>
+            </div>
+          )}
 
             {showCheckbox && index !== 2 && (
               <Box
