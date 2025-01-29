@@ -187,7 +187,7 @@ const Card = ({
   premiumPrice,
   startupFairPrice,
   setStartupFairPrice,
-  showCheckbox, 
+  showCheckbox,
 }) => {
   const [checked, setChecked] = useState(false);
 
@@ -203,14 +203,17 @@ const Card = ({
           width: { md: `calc(25vw + ${bw})` },
           background: cardcolor,
           paddingTop: "3rem",
-          paddingLeft: "2.5rem",
-          paddingRight: "2.5rem",
+          paddingLeft: "2rem",
+          paddingRight: "2rem",
           paddingBottom: "1rem",
           margin: "0.2rem",
           minWidth: "20vw",
           boxShadow: "0 4px 8px rgba(0, 0, 0, 0.2)",
           borderWidth: bw,
           borderColor: "#d3d3d3",
+          display: "flex",          
+          flexDirection: "column",  
+          height: "100%",          
         }}
       >
         <div>
@@ -225,14 +228,14 @@ const Card = ({
           </div>
           <br />
           <div style={{ fontSize: "1.1rem" }}>
-            {perks.map((perk, index) => (
+            {perks.map((perk, idx) => (
               <div
-                key={index}
+                key={idx}
                 style={{
-                  color: colors[index],
-                  textDecoration: textDecorations[index],
+                  color: colors[idx],
+                  textDecoration: textDecorations[idx],
                   fontWeight:
-                    textDecorations[index] === "line-through"
+                    textDecorations[idx] === "line-through"
                       ? "lighter"
                       : "normal",
                 }}
@@ -241,8 +244,7 @@ const Card = ({
               </div>
             ))}
 
-            {/* Conditionally render checkbox */}
-            {showCheckbox && index !== 2 && (  // This will hide checkbox for index 2 (BOOTCAMP + ESUMMIT)
+            {showCheckbox && index !== 2 && (
               <Box
                 sx={{
                   color: checked ? "white" : "rgb(191, 191, 191)",
@@ -272,7 +274,7 @@ const Card = ({
                       } else if (index === 1) {
                         setValuePrice(199 + 1100);
                       } else if (index === 2 && valuePrice === 2499) {
-                        setValuePrice(2499 + 500); // Add an extra 500 for 3 days, 2 nights accommodation
+                        setValuePrice(2499 + 500);
                       } else if (index === 3) {
                         setStartupFairPrice(3999 + 1100);
                       }
@@ -283,7 +285,7 @@ const Card = ({
                       } else if (index === 1) {
                         setValuePrice(199);
                       } else if (index === 2 && valuePrice === 2999) {
-                        setValuePrice(2499); // Remove the extra cost for 3 days, 2 nights accommodation
+                        setValuePrice(2499);
                       } else if (index === 3) {
                         setStartupFairPrice(3999);
                       }
@@ -294,67 +296,67 @@ const Card = ({
               </Box>
             )}
           </div>
-          <br />
-          <div
-            className="flex flex-wrap space-x-5"
-            style={{
-              marginTop: "1rem",
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "space-between",
+        </div>
+
+        <div style={{ flexGrow: 1 }} />
+
+        <div
+          className="flex flex-wrap space-x-5"
+          style={{
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "space-between",
+          }}
+        >
+          <div style={{ fontWeight: "normal" }}>
+            {String.fromCharCode(0x20b9)}
+            {index === 0
+              ? basicPrice === -1
+                ? " ̶9̶9̶ Free"
+                : basicPrice
+              : index === 1
+              ? valuePrice
+              : index === 2
+              ? premiumPrice
+              : startupFairPrice}
+          </div>
+          <Button
+            variant="contained"
+            sx={{
+              borderRadius: "0",
+              color: "white",
+              fontFamily: josefinSans.style.fontFamily,
+              fontSize: { xs: "0.7rem", sm: "0.8rem", md: "1.2rem" },
+              fontWeight: "700",
+              textTransform: "none",
+              "&.MuiButton-contained": {
+                backgroundColor: "#FF5100",
+              },
+              "&:hover": {
+                backgroundColor: "#B73A00",
+              },
+            }}
+            onClick={() => {
+              handleBuyNow(
+                index === 0
+                  ? basicPrice
+                  : index === 1
+                  ? valuePrice
+                  : index === 2
+                  ? premiumPrice
+                  : startupFairPrice,
+                title,
+                checked
+              );
             }}
           >
-            <div style={{ fontWeight: "normal" }}>
-              {String.fromCharCode(0x20b9)}
-              {index === 0
-                ? basicPrice === -1
-                  ? " ̶1̶9̶9̶ Free"
-                  : basicPrice
-                : index === 1
-                ? valuePrice
-                : index == 2
-                ? premiumPrice
-                : startupFairPrice}
-            </div>
-            <Button
-              variant="contained"
-              sx={{
-                borderRadius: "0",
-                color: "white",
-                fontFamily: josefinSans.className,
-                fontSize: { xs: "0.7rem", sm: "0.8rem", md: "1.2rem" },
-                fontWeight: "700",
-                textTransform: "none",
-                "&.MuiButton-contained": {
-                  backgroundColor: "#FF5100",
-                },
-                "&:hover": {
-                  backgroundColor: "#B73A00",
-                },
-              }}
-              onClick={() => {
-                handleBuyNow(
-                  index === 0
-                    ? basicPrice
-                    : index === 1
-                    ? valuePrice
-                    : index === 2
-                    ? premiumPrice
-                    : startupFairPrice,
-                  title,
-                  checked
-                );
-              }}
-            >
-              Buy Now
-            </Button>
-          </div>
+            Buy Now
+          </Button>
         </div>
       </Box>
     </Tilt>
   );
 };
-
 
 const Panel = ({
   handleBuyNow,

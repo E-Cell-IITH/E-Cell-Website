@@ -1,17 +1,45 @@
-import React, { useState } from "react";
+import React, { useState , useEffect} from "react";
 import { QRCode } from "react-qrcode-logo";
 import axios from "axios";
 import { toast } from "react-toastify";
 
 const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL;
 
-const PaymentPortal = ({ title, price, logoLink, userID ,accomodation}) => {
+const PaymentPortal = ({ title, price, logoLink, userID, accommodation, isOpen }) => {
+  // State variables
   const [transactionId, setTransactionId] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [responseMessage, setResponseMessage] = useState("");
+  const [showCouponInput, setShowCouponInput] = useState(false);
+  const [couponCode, setCouponCode] = useState("");
+  const [isCouponApplied, setIsCouponApplied] = useState(false);
+  const [couponMessage, setCouponMessage] = useState("");
+  const [discountedPrice, setDiscountedPrice] = useState(price);
 
-  // Construct the QR code link dynamically using the price value
-  const qrCodeLink = `upi://pay?pa=avantikanair204@okhdfcbank&pn=E-Cell, IIT Hyderabad&am=${price}&cu=INR&tn=E-Summit2025-${userID}`;
+  const token = typeof window !== "undefined" ? localStorage.getItem("token") : null;
+
+  // Function to generate the QR code link
+  const generateQRCodeLink = (amount) => {
+    return `upi://pay?pa=avantikanair204@okhdfcbank&pn=E-Cell, IIT Hyderabad&am=${amount}&cu=INR&tn=E-Summit2025-${userID}`;
+  };
+
+  // State to hold the QR code link
+  const [qrCodeLink, setQrCodeLink] = useState(generateQRCodeLink(discountedPrice));
+
+  useEffect(() => {
+    if (isOpen) {
+      // Reset all state variables to their initial values
+      setTransactionId("");
+      setIsSubmitting(false);
+      setResponseMessage("");
+      setShowCouponInput(false);
+      setCouponCode("");
+      setIsCouponApplied(false);
+      setCouponMessage("");
+      setDiscountedPrice(price);
+      setQrCodeLink(generateQRCodeLink(price));
+    }
+  }, [isOpen, price]);
 
   // Handle transaction ID submission
   const handleSubmit = async () => {
@@ -22,26 +50,31 @@ const PaymentPortal = ({ title, price, logoLink, userID ,accomodation}) => {
     setIsSubmitting(true);
     setResponseMessage(""); // Clear previous messages
 
-    if (price === " ̶1̶9̶9̶ Free"){
-        price = -1;
-        setTransactionId("x0443245");
+    let finalPrice = discountedPrice;
+
+    // For free tickets, set price to -1 and transaction ID to a placeholder
+    if (price === " ̶1̶9̶9̶ Free") {
+      finalPrice = -1;
+      setTransactionId("x0443245");
     }
 
-    const token = localStorage.getItem("token");
-
     try {
-      const response = await axios.post(BASE_URL+"/transactionID ", {
-        txn_id: transactionId,
-        amount: Number(price),
-        title: title + (accomodation?" with Accomodation":""),
-        isAccommodation: accomodation,
-      }, {
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: `Bearer ${token}`,
+      const response = await axios.post(
+        `${BASE_URL}/transactionID`,
+        {
+          txn_id: transactionId,
+          amount: Number(finalPrice),
+          title: title + (accommodation ? " with Accommodation" : ""),
+          isAccommodation: accommodation,
+        },
+        {
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${token}`,
+          },
         }
-      });
-      // setResponseMessage(response.data.message || "Transaction ID submitted successfully!");
+      );
+
       if (response.data.message) {
         toast.success("Transaction ID submitted successfully!", {
           autoClose: 3000,
@@ -50,27 +83,74 @@ const PaymentPortal = ({ title, price, logoLink, userID ,accomodation}) => {
           window.location.href = "/esummit";
         }, 2000);
       }
-
-
     } catch (error) {
       setResponseMessage("Error submitting transaction ID. Please try again.");
-      toast.error(
-        `Error: ${error.response.data.error || "Unknown error occurred"}`,
-        {
-          autoClose: 3000,
-        }
-      );
+      toast.error(`Error: ${error.response?.data?.error || "Unknown error occurred"}`, {
+        autoClose: 3000,
+      });
     } finally {
       setIsSubmitting(false);
     }
   };
 
-  
+  // Handle coupon code application
+  const handleApplyCoupon = async () => {
+    if (!couponCode) {
+      setCouponMessage("Please enter a coupon code.");
+      return;
+    }
+    setCouponMessage(""); // Clear previous messages
+
+    try {
+      const response = await axios.post(
+        `${BASE_URL}/applyCoupon`,
+        {
+          couponCode: couponCode,
+          originalPrice: Number(price),
+        },
+        {
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${token}`,
+          },
+        }
+      );
+
+      if (response.status === 200) {
+        const { newPrice, message } = response.data;
+        setDiscountedPrice(newPrice);
+        setIsCouponApplied(true);
+        setCouponMessage(message || "Coupon applied successfully!");
+        toast.success(message || "Coupon applied successfully!", {
+          autoClose: 3000,
+        });
+
+        // Update the QR code link with the new price
+        setQrCodeLink(generateQRCodeLink(newPrice));
+      } else {
+        const errorMsg = response.data.error || "Invalid coupon code.";
+        setCouponMessage(errorMsg);
+        toast.error(errorMsg, { autoClose: 3000 });
+      }
+    } catch (error) {
+      const errorMsg = error.response?.data?.error || "Unknown error occurred";
+      setCouponMessage(`Error: ${errorMsg}`);
+      toast.error(`Error: ${errorMsg}`, { autoClose: 3000 });
+    }
+  };
+
+  // Helper function to format price display
+  const formatPriceDisplay = (priceValue) => {
+    if (priceValue === " ̶1̶9̶9̶ Free") {
+      return "Free";
+    }
+    return `₹${priceValue < 0 ? 0 : priceValue}`;
+  };
 
   return (
     <div
       style={{
-        display: "flex",
+        display: isOpen?  "flex" : "none",
         flexDirection: "column",
         alignItems: "center",
         backgroundColor: "#fff",
@@ -132,11 +212,79 @@ const PaymentPortal = ({ title, price, logoLink, userID ,accomodation}) => {
       >
         <h2 style={{ margin: "0 0 10px 0", fontSize: "1.5rem" }}>ESummit 2025 IITH</h2>
         <p style={{ margin: "0 0 5px 0", fontSize: "1rem" }}>
-          <strong>Ticket:</strong> {title + (accomodation?" with Accomodation":"")}
+          <strong>Ticket:</strong> {title + (accommodation ? " with Accommodation" : "")}
         </p>
         <p style={{ margin: "0", fontSize: "1rem" }}>
-          <strong>Price:</strong> ₹{price}
+          <strong>Price:</strong> {formatPriceDisplay(discountedPrice)}
         </p>
+      </div>
+
+      {/* Coupon Code Section */}
+      <div
+        style={{
+          marginTop: "20px",
+          width: "100%",
+          maxWidth: "400px",
+          textAlign: "center",
+        }}
+      >
+        {!isCouponApplied ? (
+          <>
+            {!showCouponInput ? (
+              <p>
+                Do you have a coupon code?{" "}
+                <span
+                  onClick={() => setShowCouponInput(true)}
+                  style={{ color: "#007bff", cursor: "pointer", textDecoration: "underline" }}
+                >
+                  Click here
+                </span>
+              </p>
+            ) : (
+              <div style={{ marginTop: "10px" }}>
+                <input
+                  type="text"
+                  value={couponCode}
+                  onChange={(e) => setCouponCode(e.target.value)}
+                  placeholder="Enter Coupon Code"
+                  style={{
+                    width: "70%",
+                    padding: "10px",
+                    borderRadius: "5px",
+                    border: "1px solid #ccc",
+                    marginBottom: "10px",
+                    marginRight: "5px",
+                  }}
+                />
+                <button
+                  onClick={handleApplyCoupon}
+                  style={{
+                    padding: "10px 20px",
+                    backgroundColor: "#28a745",
+                    color: "#fff",
+                    border: "none",
+                    borderRadius: "5px",
+                    cursor: "pointer",
+                  }}
+                >
+                  Apply
+                </button>
+                {couponMessage && (
+                  <p
+                    style={{
+                      marginTop: "10px",
+                      color: couponMessage.includes("Error") ? "red" : "green",
+                    }}
+                  >
+                    {couponMessage}
+                  </p>
+                )}
+              </div>
+            )}
+          </>
+        ) : (
+          <p style={{ color: "green" }}>{couponMessage}</p>
+        )}
       </div>
 
       {/* Transaction ID Section */}
@@ -150,11 +298,19 @@ const PaymentPortal = ({ title, price, logoLink, userID ,accomodation}) => {
           maxWidth: "400px",
         }}
       >
-        {price===" ̶1̶9̶9̶ Free" && <span style={{textAlign:"center"}}>Enter any key in Transaction ID and submit</span>}
+        {price === " ̶1̶9̶9̶ Free" && (
+          <span style={{ textAlign: "center" }}>
+            Enter any key in Transaction ID and submit
+          </span>
+        )}
         <input
           type="text"
           value={transactionId}
-          onChange={(e) => {price===" ̶1̶9̶9̶ Free"?setTransactionId("0xxx42345"):setTransactionId(e.target.value)}}
+          onChange={(e) =>
+            price === " ̶1̶9̶9̶ Free"
+              ? setTransactionId("0xxx42345")
+              : setTransactionId(e.target.value)
+          }
           placeholder="Enter Transaction ID"
           style={{
             width: "100%",
@@ -189,9 +345,14 @@ const PaymentPortal = ({ title, price, logoLink, userID ,accomodation}) => {
           </p>
         )}
         <br />
-        <span style={{textAlign:"center"}}>Pay by any UPI App and Enter your Transaction ID. After Successful Payment, you will receive a Confirmation Mail.</span>
+        <span style={{ textAlign: "center" }}>
+          Pay by any UPI App and enter your Transaction ID. After successful payment, you will
+          receive a confirmation email.
+        </span>
         <br />
-        <span style={{textAlign:"center", color:"gray"}}>Powered by Web Team, ECell IITH</span>
+        <span style={{ textAlign: "center", color: "gray" }}>
+          Powered by Web Team, ECell IITH
+        </span>
       </div>
     </div>
   );
