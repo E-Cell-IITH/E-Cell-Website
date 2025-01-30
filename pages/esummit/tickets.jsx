@@ -230,102 +230,122 @@ const Card = ({
           </div>
           <br />
           <div style={{ fontSize: "1.1rem" }}>
-            {perks.map((perk, idx) => (
-              <div
-                key={idx}
-                style={{
-                  color: colors[idx],
-                  textDecoration: textDecorations[idx],
-                  fontWeight:
-                    textDecorations[idx] === "line-through"
-                      ? "lighter"
-                      : "normal",
-                }}
-              >
-                {perk}
-              </div>
-            ))}
-            {title === "BOOTCAMP +  ESUMMIT" && (
-              <div style={{ marginTop: "10px" }}>
-                <a
-                  href="/Brochure.pdf"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  style={{
-                    color: "white",
-                    textDecoration: "underline",
-                    fontWeight: "bold",
-                  }}
-                >
-                  Click here for Bootcamp brochure
-                </a>
-              </div>
-            )}
+  {perks.map((perk, idx) => (
+    <div
+      key={idx}
+      style={{
+        color: colors[idx],
+        textDecoration: textDecorations[idx],
+        fontWeight:
+          textDecorations[idx] === "line-through"
+            ? "lighter"
+            : "normal",
+      }}
+    >
+      {perk}
+      {title === "BOOTCAMP +  ESUMMIT" && perk.startsWith("Accommodation") && (
+        <Tooltip title="CLICK HERE FOR ACCOMMODATION RULES">
+          <IconButton
+            sx={{
+              color: "white",
+              padding: 0,
+              marginLeft: "5px",
+            }}
+            onClick={() =>
+              window.open("https://shorturl.at/9y9n3", "_blank")
+            }
+          >
+            <InfoOutlinedIcon fontSize="small" />
+          </IconButton>
+        </Tooltip>
+      )}
+    </div>
+  ))}
 
-            {showCheckbox && index !== 2 && (
-              <Box
-                sx={{
-                  color: checked ? "white" : "rgb(191, 191, 191)",
-                  fontWeight: "lighter",
-                }}
-              >
-                <Checkbox
-                  defaultChecked={false}
-                  size="small"
-                  sx={{
-                    color: "white",
-                    marginLeft: "0px",
-                    "&.Mui-checked": {
-                      color: "#FF5100",
-                    },
-                    "&.MuiCheckbox-root": {
-                      padding: "0px",
-                    },
-                    marginRight: "0.3rem",
-                    marginBottom: "0.3rem",
-                  }}
-                  onChange={(e) => {
-                    if (e.target.checked) {
-                      setChecked(true);
-                      if (index === 0) {
-                        setBasicPrice(1100);
-                      } else if (index === 1) {
-                        setValuePrice(199 + 1100);
-                      } else if (index === 2 && valuePrice === 2499) {
-                        setValuePrice(2499 + 500);
-                      } else if (index === 3) {
-                        setStartupFairPrice(3999 + 1100);
-                      }
-                    } else {
-                      setChecked(false);
-                      if (index === 0) {
-                        setBasicPrice(-1);
-                      } else if (index === 1) {
-                        setValuePrice(199);
-                      } else if (index === 2 && valuePrice === 2999) {
-                        setValuePrice(2499);
-                      } else if (index === 3) {
-                        setStartupFairPrice(3999);
-                      }
-                    }
-                  }}
-                />
-                Accommodation (2 Days 1 Night)
-                <Tooltip title="CLICK HERE FOR ACCOMMODATION GUIDELINES">
-                  <IconButton
-                    sx={{
-                      color: "white",
-                      padding: 0,
-                      marginLeft: "5px",
-                    }}
-                    onClick={() => window.open("https://shorturl.at/9y9n3", "_blank")}
-                  >
-                    <InfoOutlinedIcon fontSize="small" />
-                  </IconButton>
-                </Tooltip>
-              </Box>
-            )}
-          </div>
+  {title === "BOOTCAMP +  ESUMMIT" && (
+    <div style={{ marginTop: "10px" }}>
+      <a
+        href="/Brochure.pdf"
+        target="_blank"
+        rel="noopener noreferrer"
+        style={{
+          color: "white",
+          textDecoration: "underline",
+          fontWeight: "bold",
+        }}
+      >
+        Click here for Bootcamp brochure
+      </a>
+    </div>
+  )}
+
+  {showCheckbox && index !== 2 && (
+    <Box
+      sx={{
+        color: checked ? "white" : "rgb(191, 191, 191)",
+        fontWeight: "lighter",
+      }}
+    >
+      <Checkbox
+        defaultChecked={false}
+        size="small"
+        sx={{
+          color: "white",
+          marginLeft: "0px",
+          "&.Mui-checked": {
+            color: "#FF5100",
+          },
+          "&.MuiCheckbox-root": {
+            padding: "0px",
+          },
+          marginRight: "0.3rem",
+          marginBottom: "0.3rem",
+        }}
+        onChange={(e) => {
+          if (e.target.checked) {
+            setChecked(true);
+            if (index === 0) {
+              setBasicPrice(1100);
+            } else if (index === 1) {
+              setValuePrice(199 + 1100);
+            } else if (index === 2 && valuePrice === 2499) {
+              setValuePrice(2499 + 500);
+            } else if (index === 3) {
+              setStartupFairPrice(3999 + 1100);
+            }
+          } else {
+            setChecked(false);
+            if (index === 0) {
+              setBasicPrice(-1);
+            } else if (index === 1) {
+              setValuePrice(199);
+            } else if (index === 2 && valuePrice === 2999) {
+              setValuePrice(2499);
+            } else if (index === 3) {
+              setStartupFairPrice(3999);
+            }
+          }
+        }}
+      />
+      Accommodation (2 Days 1 Night)
+      <Tooltip title="CLICK HERE FOR ACCOMMODATION GUIDELINES">
+        <IconButton
+          sx={{
+            color: "white",
+            padding: 0,
+            marginLeft: "5px",
+          }}
+          onClick={() =>
+            window.open("https://shorturl.at/9y9n3", "_blank")
+          }
+        >
+          <InfoOutlinedIcon fontSize="small" />
+        </IconButton>
+      </Tooltip>
+    </Box>
+  )}
+</div>
+
         </div>
 
         <div style={{ flexGrow: 1 }} />
