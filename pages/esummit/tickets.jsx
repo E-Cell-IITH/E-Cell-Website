@@ -1,8 +1,10 @@
 //  import React from "react";
 import EsummitNavbar from "../../components/ESummt/navbar";
 import { Josefin_Sans } from "next/font/google";
+import { Tooltip, IconButton } from "@mui/material";
 import { Tilt } from "react-next-tilt";
 import Button from "@mui/material/Button";
+import InfoOutlinedIcon from "@mui/icons-material/InfoOutlined";
 
 import { Checkbox, useMediaQuery } from "@mui/material";
 
@@ -71,7 +73,7 @@ const PASSDATA = [
     // price: "399",
     titlecolor: "#d3d3d3",
     cardcolor:
-    "linear-gradient(90deg, rgba(153,153,153,0.100717787114846) 0%, rgba(153,153,153,0.1962359943977591) 100%)",
+      "linear-gradient(90deg, rgba(153,153,153,0.100717787114846) 0%, rgba(153,153,153,0.1962359943977591) 100%)",
     colors: [
       "#d3d3d3",
       "#d3d3d3",
@@ -104,7 +106,7 @@ const PASSDATA = [
       "Competitions",
       "One Day Bootcamp",
       "Accommodation(2 Days 1 Night)"
-  
+
     ],
     // price: "2499",
     titlecolor: "#d3d3d3",
@@ -211,9 +213,9 @@ const Card = ({
           boxShadow: "0 4px 8px rgba(0, 0, 0, 0.2)",
           borderWidth: bw,
           borderColor: "#d3d3d3",
-          display: "flex",          
-          flexDirection: "column",  
-          height: "100%",          
+          display: "flex",
+          flexDirection: "column",
+          height: "100%",
         }}
       >
         <div>
@@ -244,21 +246,21 @@ const Card = ({
               </div>
             ))}
             {title === "BOOTCAMP +  ESUMMIT" && (
-            <div style={{ marginTop: "10px" }}>
-              <a
-                href="/Brochure.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
-                style={{
-                  color: "white",
-                  textDecoration: "underline",
-                  fontWeight: "bold",
-                }}
-              >
-                Click here for bootcamp brochure
-              </a>
-            </div>
-          )}
+              <div style={{ marginTop: "10px" }}>
+                <a
+                  href="/Brochure.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{
+                    color: "white",
+                    textDecoration: "underline",
+                    fontWeight: "bold",
+                  }}
+                >
+                  Click here for Bootcamp brochure
+                </a>
+              </div>
+            )}
 
             {showCheckbox && index !== 2 && (
               <Box
@@ -309,6 +311,18 @@ const Card = ({
                   }}
                 />
                 Accommodation (2 Days 1 Night)
+                <Tooltip title="CLICK HERE FOR ACCOMMODATION GUIDELINES">
+                  <IconButton
+                    sx={{
+                      color: "white",
+                      padding: 0,
+                      marginLeft: "5px",
+                    }}
+                    onClick={() => window.open("https://shorturl.at/9y9n3", "_blank")}
+                  >
+                    <InfoOutlinedIcon fontSize="small" />
+                  </IconButton>
+                </Tooltip>
               </Box>
             )}
           </div>
@@ -331,10 +345,10 @@ const Card = ({
                 ? " ̶9̶9̶ Free"
                 : basicPrice
               : index === 1
-              ? valuePrice
-              : index === 2
-              ? premiumPrice
-              : startupFairPrice}
+                ? valuePrice
+                : index === 2
+                  ? premiumPrice
+                  : startupFairPrice}
           </div>
           <Button
             variant="contained"
@@ -357,10 +371,10 @@ const Card = ({
                 index === 0
                   ? basicPrice
                   : index === 1
-                  ? valuePrice
-                  : index === 2
-                  ? premiumPrice
-                  : startupFairPrice,
+                    ? valuePrice
+                    : index === 2
+                      ? premiumPrice
+                      : startupFairPrice,
                 title,
                 checked
               );
