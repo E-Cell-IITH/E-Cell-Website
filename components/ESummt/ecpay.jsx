@@ -20,7 +20,7 @@ const PaymentPortal = ({ title, price, logoLink, userID, accommodation, isOpen }
 
   // Function to generate the QR code link
   const generateQRCodeLink = (amount) => {
-    return `upi://pay?pa=avantikanair204@okhdfcbank&pn=E-Cell, IIT Hyderabad&am=${amount}&cu=INR&tn=E-Summit2025-${userID}`;
+    return `upi://pay?pa=jaindevansh05@okaxis&pn=E-Cell, IIT Hyderabad&am=${amount}&cu=INR&tn=E-Summit2025-${userID}`;
   };
 
   // State to hold the QR code link
