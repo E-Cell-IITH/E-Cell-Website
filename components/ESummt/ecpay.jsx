@@ -19,10 +19,12 @@ const PaymentPortal = ({ title, price, logoLink, userID, accommodation, isOpen }
   const token = typeof window !== "undefined" ? localStorage.getItem("token") : null;
 
   // Function to generate the QR code link
-  const generateQRCodeLink = (amount) => {
-    return `upi://pay?pa=avantikanair204@okhdfcbank&pn=E-Cell, IIT Hyderabad&am=${amount}&cu=INR&tn=E-Summit2025-${userID}`;
+   const generateQRCodeLink = (amount) => {
+    const upiID = title === "BOOTCAMP +  ESUMMIT"
+      ? "jaindevansh05@okaxis" 
+      : "avantikanair204@okhdfcbank";
+    return `upi://pay?pa=${upiID}&pn=E-Cell, IIT Hyderabad&am=${amount}&cu=INR&tn=E-Summit2025-${userID}`;
   };
-
   // State to hold the QR code link
   const [qrCodeLink, setQrCodeLink] = useState(generateQRCodeLink(discountedPrice));
 
