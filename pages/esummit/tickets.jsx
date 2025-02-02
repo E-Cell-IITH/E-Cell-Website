@@ -366,7 +366,7 @@ const Card = ({
       {basicPrice === -1 ? (
         <>
           <span style={{ textDecoration: "line-through" }}>99</span> Free
-          <Tooltip title="Put any random number in transaction ID box">
+          <Tooltip title="Put any random number in the  transaction ID box">
             <IconButton
               sx={{
                 color: "white",
@@ -678,7 +678,7 @@ function MainPasses() {
             <Typography>
     On clicking <strong>Continue</strong>, you are accepting our{" "}
     <a
-      href="/T&C.pdf"
+      href="/NewT&C.pdf"
       target="_blank"
       rel="noopener noreferrer"
       style={{
