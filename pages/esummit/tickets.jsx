@@ -34,6 +34,7 @@ const PASSDATA = [
       "All Speaker Sessions",
       "Startup Fair",
       "Fetching Fortune Spectator",
+      
     ],
     // price: " ̶1̶9̶9̶ Free",
     titlecolor: "#d3d3d3",
@@ -358,18 +359,38 @@ const Card = ({
             justifyContent: "space-between",
           }}
         >
-          <div style={{ fontWeight: "normal" }}>
-            {String.fromCharCode(0x20b9)}
-            {index === 0
-              ? basicPrice === -1
-                ? " ̶9̶9̶ Free"
-                : basicPrice
-              : index === 1
-                ? valuePrice
-                : index === 2
-                  ? premiumPrice
-                  : startupFairPrice}
-          </div>
+         <div style={{ fontWeight: "normal", display: "flex", alignItems: "center" }}>
+  {String.fromCharCode(0x20b9)}
+  {index === 0 ? (
+    <>
+      {basicPrice === -1 ? (
+        <>
+          <span style={{ textDecoration: "line-through" }}>99</span> Free
+          <Tooltip title="Put any random number in transaction ID box">
+            <IconButton
+              sx={{
+                color: "white",
+                padding: 0,
+                marginLeft: "5px",
+              }}
+            >
+              <InfoOutlinedIcon fontSize="small" />
+            </IconButton>
+          </Tooltip>
+        </>
+      ) : (
+        basicPrice
+      )}
+    </>
+  ) : index === 1 ? (
+    valuePrice
+  ) : index === 2 ? (
+    premiumPrice
+  ) : (
+    startupFairPrice
+  )}
+</div>
+
           <Button
             variant="contained"
             sx={{
@@ -654,7 +675,24 @@ function MainPasses() {
             <Typography>
               Do you want to continue with this account or use a different one?
             </Typography>
+            <Typography>
+    On clicking <strong>Continue</strong>, you are accepting our{" "}
+    <a
+      href="/T&C.pdf"
+      target="_blank"
+      rel="noopener noreferrer"
+      style={{
+        color: "white",
+        fontWeight: "bold",
+        textDecoration: "underline",
+      }}
+    >
+      Terms and Conditions
+    </a>
+    .
+  </Typography>
           </DialogContent>
+          
           <DialogActions>
             <Button
               onClick={handleUseDifferentAccount}
