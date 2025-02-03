@@ -116,6 +116,7 @@ const EventsCard = ({ url, title, description, redirectionUrl }) => {
               borderRight: "1px solid rgba(255, 255, 255, 0.3)",
               padding: 2,
               fontFamily: "Inter",
+              color: "white",
             }}
           >
             <Typography variant="body1">
