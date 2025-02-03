@@ -301,7 +301,7 @@ const PaymentPortal = ({ title, price, logoLink, userID, accommodation, isOpen }
           maxWidth: "400px",
         }}
       >
-        {price === " ̶1̶9̶9̶ Free" && (
+        {price === " ̶9̶9̶ Free" && (
           <span style={{ textAlign: "center" }}>
             Enter any key in Transaction ID and submit
           </span>
@@ -349,7 +349,9 @@ const PaymentPortal = ({ title, price, logoLink, userID, accommodation, isOpen }
         )}
         <br />
         <span style={{ textAlign: "center" }}>
-          Pay by any UPI App and enter your Transaction ID. After successful payment, you will
+          Pay by any UPI App, preferably Google Pay  and enter your Transaction ID. 
+          <b>If the Transaction ID provided by your UPI app is contains any english alphabets, then please submit the UTR or transation Id from your bank statement.</b>
+           After successful payment, you will
           receive a confirmation email.
         </span>
         <br />
