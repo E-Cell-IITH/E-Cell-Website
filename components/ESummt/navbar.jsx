@@ -17,7 +17,7 @@ const EsummitNavbar = () => {
 
   const navItems = [
     { name: "Home", path: "/esummit", isComingSoon: false },
-    { name: "Event", path: "/esummit/event", isComingSoon: true },
+    { name: "Event", path: "/esummit/events", isComingSoon: false },
     { name: "Tickets", path: "/esummit/tickets", isComingSoon: false },
     { name: "Sponsor", path: "/esummit/sponsors", isComingSoon: true },
     { name: "Speakers", path: "/esummit/speakers", isComingSoon: false },
