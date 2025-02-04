@@ -1,17 +1,10 @@
 import React from "react";
-import {
-  Box,
-  Card,
-  CardContent,
-  CardMedia,
-  Grid,
-  Typography,
-  useMediaQuery,
-} from "@mui/material";
+import { Box, Grid, Typography, useMediaQuery } from "@mui/material";
 import { Josefin_Sans } from "next/font/google";
-import EventsCard, { BigEventsCard } from "../../components/ESummt/evenetsCard";
+import EventsCard from "../../components/ESummt/evenetsCard";
 import EsummitNavbar from "../../components/ESummt/navbar";
 import Image from "next/image";
+import Head from "next/head";
 
 const josefinSans = Josefin_Sans({ subsets: ["latin"], display: "swap" });
 
@@ -53,13 +46,13 @@ const EventsSection = () => {
       image: "/esummit25/ceo-summit.png",
       date: "12/17/1777",
     },
-    {
-      title: "The Stock Simulation Challenge",
-      description:
-        "In collaboration with Stockpro, this competition tests participants' understanding of financial markets and investment skills.",
-      image: "/esummit25/stock.png",
-      date: "12/17/1777",
-    },
+    // {
+    //   title: "The Stock Simulation Challenge",
+    //   description:
+    //     "In collaboration with Stockpro, this competition tests participants' understanding of financial markets and investment skills.",
+    //   image: "/esummit25/stock.png",
+    //   date: "12/17/1777",
+    // },
   ];
 
   return (
@@ -76,6 +69,15 @@ const EventsSection = () => {
         overflowY: "auto",
       }}
     >
+      <Head>
+        <title>E-Summit 2025 Events</title>
+        <meta
+          name="google-site-verification"
+          content="agHaKoDcApHadKU7BhRCOJK0w5SRZtQCG9YxNKZBGvc"
+        />
+        <link rel="canonical" href="https://ecell.iith.ac.in/esummit/events" />
+      </Head>
+
       {/* Navbar */}
       <Box
         sx={{
@@ -92,24 +94,24 @@ const EventsSection = () => {
       {/* Events Section */}
       <Box
         sx={{
-          width:{base: "95vw", xs: "100vw"},
+          width: { base: "95vw", xs: "100vw" },
           maxWidth: "95vw",
           margin: "0 auto",
         }}
       >
-          <Typography
-        className="flex flex-wrap justify-center"
-        color={"white"}
-        sx={{
-          fontSize: { md: "1.7rem", sm: "1.5rem", xs: "1.2rem" },
-          fontWeight: "500",
-          textAlign: "center",
-          marginBottom: "2rem",
-          letterSpacing: { md: "0.5rem", sm: "0.4rem", xs: "0.3rem" },
-        }}
-      >
-       EVENTS
-      </Typography>
+        <Typography
+          className="flex flex-wrap justify-center"
+          color={"white"}
+          sx={{
+            fontSize: { md: "1.7rem", sm: "1.5rem", xs: "1.2rem" },
+            fontWeight: "500",
+            textAlign: "center",
+            marginBottom: "2rem",
+            letterSpacing: { md: "0.5rem", sm: "0.4rem", xs: "0.3rem" },
+          }}
+        >
+          EVENTS
+        </Typography>
         {/* <Typography
           sx={{
             width: { xs: "auto", sm: "165px" },
@@ -153,9 +155,10 @@ const EventsSection = () => {
                     url={event.image}
                     title={event.title}
                     description={event.description}
-                    redirectionUrl={`/esummit25/${event.title
-                      .replace(/\s+/g, "-")
-                      .toLowerCase()}`}
+                    redirectionUrl={`/esummit25/${event.title.replace(
+                      /\s+/g,
+                      "-"
+                    )}.pdf`}
                   />
                 </Grid>
               ))}
@@ -176,9 +179,10 @@ const EventsSection = () => {
                     url={event.image}
                     title={event.title}
                     description={event.description}
-                    redirectionUrl={`/esummit25/${event.title
-                      .replace(/\s+/g, "-")
-                      .toLowerCase()}`}
+                    redirectionUrl={`/esummit25/${event.title.replace(
+                      /\s+/g,
+                      "-"
+                    )}.pdf`}
                   />
                 </Grid>
               ))}
@@ -202,23 +206,44 @@ const EventsSection = () => {
                   url={events[0].image}
                   title={events[0].title}
                   description={events[0].description}
-                  redirectionUrl="/esummit25/speed-networking"
+                  redirectionUrl={`/esummit25/${events[0].title.replace(
+                    /\s+/g,
+                    "-"
+                  )}.pdf`}
                 />
                 <EventsCard
                   url={events[1].image}
                   title={events[1].title}
                   description={events[1].description}
-                  redirectionUrl="/esummit25/startup-olympiad"
+                  redirectionUrl={`/esummit25/${events[1].title.replace(
+                    /\s+/g,
+                    "-"
+                  )}.pdf`}
                 />
               </Grid>
 
               <Grid
+                mt={"40px"}
                 item
                 xs={12}
                 md={4}
                 sx={{ display: "flex", flexDirection: "column", gap: 3 }}
               >
-                <Box>
+                <Box
+                  onClick={() => {
+                    window.open(
+                      `/esummit25/${bigEvents[0].title.replace(
+                        /\s+/g,
+                        "-"
+                      )}.pdf`,
+                      "_blank",
+                      "noopener,noreferrer"
+                    );
+                  }}
+                  sx={{
+                    cursor: "pointer",
+                  }}
+                >
                   <Box
                     sx={{
                       width: 450,
@@ -284,7 +309,7 @@ const EventsSection = () => {
                   </Box>
                 </Box>
 
-                <Box>
+                {/* <Box>
                   <Box
                     sx={{
                       width: 450,
@@ -305,7 +330,6 @@ const EventsSection = () => {
                       fontFamily: "Inter",
                     }}
                   >
-                    {/* Image and Title */}
                     <Image
                       src={bigEvents[1].image}
                       alt={bigEvents[1].title}
@@ -326,8 +350,6 @@ const EventsSection = () => {
                       }}
                     >
                       <Typography
-                        // mt={"16px"}
-                        // ml={"8px"}
                         sx={{
                           fontSize: "22px",
                         }}
@@ -344,7 +366,7 @@ const EventsSection = () => {
                       </Typography>
                     </Grid>
                   </Box>
-                </Box>
+                </Box> */}
               </Grid>
 
               {/* Third Column (Events 3 & 4) */}
@@ -371,13 +393,19 @@ const EventsSection = () => {
                   url={events[2].image}
                   title={events[2].title}
                   description={events[2].description}
-                  redirectionUrl="/esummit25/mad-over-marketing"
+                  redirectionUrl={`/esummit25/${events[2].title.replace(
+                    /\s+/g,
+                    "-"
+                  )}.pdf`}
                 />
                 <EventsCard
                   url={events[3].image}
                   title={events[3].title}
                   description={events[3].description}
-                  redirectionUrl="/esummit25/scavenger-hunt"
+                  redirectionUrl={`/esummit25/${events[3].title.replace(
+                    /\s+/g,
+                    "-"
+                  )}.pdf`}
                 />
               </Grid>
               {/* </div> */}
