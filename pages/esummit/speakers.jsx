@@ -341,7 +341,7 @@ function Marquee({ sponsors, topPosition }) {
         className="marquee-content"
         style={{
           display: "inline-flex",
-          animation: "scrollLeft 1000s linear infinite",
+          animation: "scrollLeft 300s linear infinite",
           gap: "0px",
           height: "100%",
           width: "max-content",
