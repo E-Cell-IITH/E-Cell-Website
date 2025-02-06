@@ -55,7 +55,7 @@ const PaymentPortal = ({ title, price, logoLink, userID, accommodation, isOpen }
     let finalPrice = discountedPrice;
 
     // For free tickets, set price to -1 and transaction ID to a placeholder
-    if (price === " ̶1̶9̶9̶ Free") {
+    if (price === 0 || price == -1) {
       finalPrice = -1;
       setTransactionId("x0443245");
     }
@@ -301,7 +301,7 @@ const PaymentPortal = ({ title, price, logoLink, userID, accommodation, isOpen }
           maxWidth: "400px",
         }}
       >
-        {price === " ̶9̶9̶ Free" && (
+        {price === 0 || price == -1 && (
           <span style={{ textAlign: "center" }}>
             Enter any key in Transaction ID and submit
           </span>
@@ -310,7 +310,7 @@ const PaymentPortal = ({ title, price, logoLink, userID, accommodation, isOpen }
           type="text"
           value={transactionId}
           onChange={(e) =>
-            price === " ̶1̶9̶9̶ Free"
+            price === 0 || price == -1
               ? setTransactionId("0xxx42345")
               : setTransactionId(e.target.value)
           }
