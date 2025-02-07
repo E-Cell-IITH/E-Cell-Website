@@ -408,17 +408,18 @@ const Card = ({
               },
             }}
             onClick={() => {
-              handleBuyNow(
-                index === 0
-                  ? basicPrice
-                  : index === 1
-                    ? valuePrice
-                    : index === 2
-                      ? premiumPrice
-                      : startupFairPrice,
-                title,
-                checked
-              );
+              // handleBuyNow(
+              //   index === 0
+              //     ? basicPrice
+              //     : index === 1
+              //       ? valuePrice
+              //       : index === 2
+              //         ? premiumPrice
+              //         : startupFairPrice,
+              //   title,
+              //   checked
+              // );
+              toast("Registerations Closed. Stay Tuned for more updates!")
             }}
           >
             Buy Now
