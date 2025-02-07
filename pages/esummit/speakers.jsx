@@ -86,6 +86,76 @@ const sponsors2 = [
     image:
       "https://res.cloudinary.com/dwsverefw/image/upload/v1670833558/ecell/speakers/Padma_Srivastava_-_Neurologist_AIIMS_iarlr2.png",
   },
+  {
+    name: "Srihari Maddula",
+    designation: "Director Technology, Eurth Techtronics",
+    image: "/maddula.jpg",
+  },
+  {
+    name: "Dharmesh Mehta",
+    designation: "Partner, LMNX",
+    image: "/dharmesh.webp",
+  },
+  {
+    name: "Anuj Verma",
+    designation: "Asst Professor, Symbiosis University",
+    image: "/anuj.jpg",
+  },
+  {
+    name: "Manoj Kumar",
+    designation: "Product Development Mentor",
+    image: "/manoj_kumar.jpeg",
+  },
+  {
+    name: "Chaitanya Prasanth Yedilla",
+    designation: "CEO, Secure Syntax OPC Pvt Ltd",
+    image: "/chaitanya.JPG",
+  },
+  {
+    name: "Rudrajeet Desai",
+    designation: "Founder and CEO, VideoCX.io",
+    image: "/rudrajeet.jpg",
+  },
+  {
+    name: "Dr. Kaushik Samaddar",
+    designation: "Assistant Professor, SIBM Bengaluru",
+    image: "/kaushik.png",
+  },
+  {
+    name: "Shubham Raj",
+    designation: "Chief Business Officer, Serri",
+    image: "/shubham.png",
+  },
+  {
+    name: "Dr. Saarthak Bakshi",
+    designation: "CEO/Partner, Risaa IVF/Neos Angels",
+    image: "/saarthak.jpeg",
+  },
+  {
+    name: "Nachiket Bhatia",
+    designation: "Director, DBMCI",
+    image: "/nachiket.jpeg",
+  },
+  {
+    name: "Dr. Jagadish Prasad Sahu",
+    designation: "Assistant Professor, IIM Kashipur",
+    image: "/jagadish.jpg",
+  },
+  {
+    name: "CA Akhilesh Sharma",
+    designation: "Founder, Octillion Advisors",
+    image: "/octillon.jpeg",
+  },
+  {
+    name: "Vamshi Mangu",
+    designation: "Director, Adjoint Technologies",
+    image: "/vamshi.JPG",
+  },
+  {
+    name: "Jitansh Arora",
+    designation: "Manager-CEO's Office, Zypp Electric",
+    image: "/jitansh.jpeg",
+  },
 ];
 
 // function Marquee({ sponsors, topPosition }) {
@@ -271,7 +341,7 @@ function Marquee({ sponsors, topPosition }) {
         className="marquee-content"
         style={{
           display: "inline-flex",
-          animation: "scrollLeft 70s linear infinite",
+          animation: "scrollLeft 300s linear infinite",
           gap: "0px",
           height: "100%",
           width: "max-content",
