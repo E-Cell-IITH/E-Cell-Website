@@ -15,6 +15,7 @@ const josefinSans = Josefin_Sans({ subsets: ["latin"], display: "swap" });
 import { useMediaQuery } from "@mui/material";
 
 
+
 const Aboutus = () => {
   const isBiggerThan1150 = useMediaQuery("(min-width: 1150px)");
   const isBiggerThan1024 = useMediaQuery("(min-width: 1024px)");
@@ -372,29 +373,31 @@ const ESummitPage = () => {
           </Button>
 
           {/* Register Button */}
-          <Button
-            variant="contained"
-            onClick={handleRegisterClick}
-            sx={{
+          <a
+            href="/esummit25/schedule.pdf"
+            rel="noopener noreferrer"
+            style={{
               borderRadius: "0",
               color: "white",
-              width: { lg: "24.5rem", sm: "20rem", xs: "10rem" },
+              width: "100%", // Adjusted to fit the container more effectively
+              maxWidth: "24.5rem", // Set max width for larger screens
               fontFamily: "Montserrat, sans-serif",
-              fontSize: { xs: "1rem", sm: "1.5rem", md: "1.8rem" },
+              fontSize: "1rem", // Default font size
               fontWeight: "700",
               letterSpacing: "3.6px",
-
               textTransform: "uppercase",
-              "&.MuiButton-contained": {
-                backgroundColor: "#FF5100",
-              },
-              "&:hover": {
-                backgroundColor: "#B73A00",
-              },
+              backgroundColor: "#FF5100",
+              padding: "1rem",
+              textAlign: "center", // Center text inside the link
+              display: "inline-block", // Makes the link behave like a button
+              transition: "background-color 0.3s", // Smooth transition for hover effect
             }}
+            onMouseEnter={(e) => e.target.style.backgroundColor = "#B73A00"} // Hover effect
+            onMouseLeave={(e) => e.target.style.backgroundColor = "#FF5100"} // Reset on mouse leave
           >
-            REGISTER
-          </Button>
+            SCHEDULE
+          </a>
+
         </Box>
       </Box>
 
