@@ -69,7 +69,7 @@ export default function Home() {
         })}
       </Grid>
     </div>
-
+        <div className="text-white text-center text-xl">For any queries regarding legitimacy of any program please contact - Shikhar Kansal +91 62030 42129</div>
     <br />
     <br />
     <br />
