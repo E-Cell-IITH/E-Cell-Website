@@ -2,7 +2,7 @@ import * as React from "react";
 import Link from "next/link";
 import { useRef } from "react";
 
-const Navbar = ({esummit = false}) => {
+const Navbar = ({ esummit = false }) => {
   const [checked, setChecked] = React.useState(false);
   const navRef = useRef();
   if (esummit) {
@@ -34,7 +34,7 @@ const Navbar = ({esummit = false}) => {
                 navRef.current.checked = false;
               }}
             >
-              Home
+              HOME
             </Link>
           </li>
           {/* <li className="navigation__item">
@@ -82,8 +82,8 @@ const Navbar = ({esummit = false}) => {
               Startup Fair
             </Link>
           </li>
-          
-          
+
+
           <li className="navigation__item">
             <Link
               href="/mun"
@@ -143,7 +143,7 @@ const Navbar = ({esummit = false}) => {
               E-Merge
             </Link>
           </li>
-          
+
           <li className="navigation__item">
             <Link
               href="/freshers/map"
@@ -155,7 +155,7 @@ const Navbar = ({esummit = false}) => {
               Campus Map
             </Link>
           </li>
-          
+
         </ul>
       </nav>
     </div>

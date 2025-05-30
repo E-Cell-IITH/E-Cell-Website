@@ -3,7 +3,7 @@ import First from "../components/first.js";
 import Second from "../components/second";
 import Third from "../components/third";
 import Fourth from "../components/fourth.js";
-import Navbar from "../components/Navbar";
+import Navbar from "../components/first";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import Head from "next/head";
 
@@ -58,7 +58,7 @@ export default function Home() {
         }}
       >
         <First heading={matches ? "E-CELL" : "ENTREPRENEURSHIP CELL"} />
-        <Navbar />
+        <Navbar/>
         <Second />
         <Third />
         <br />
