@@ -1,11 +1,17 @@
 import style from "../styles/first.module.css";
-import Grid from "@mui/material/Grid";
 import Image from "next/image";
-import Box from "@mui/material/Box";
-import { useLayoutEffect, useEffect, useRef } from "react";
+import { useRef, useEffect } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
-import { Typography, useMediaQuery } from "@mui/material";
+
+// MUI Components
+import Grid from "@mui/material/Grid";
+import Box from "@mui/material/Box";
+import Typography from "@mui/material/Typography";
+import useMediaQuery from "@mui/material/useMediaQuery";
+
+// MUI Icons
+import { Warning } from "@mui/icons-material";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -20,11 +26,12 @@ export default function Navbar({
   const iith = useRef();
   const preDescr = useRef();
   const parent = useRef();
+  const warningRef = useRef();
 
   const matchesMd = useMediaQuery("(min-width:900px)");
 
   useEffect(() => {
-    let ctx = gsap.context(() => {
+    const ctx = gsap.context(() => {
       gsap.fromTo(
         "#tagline > *, #smLinks>*",
         {
@@ -59,6 +66,20 @@ export default function Navbar({
           }
         );
       }
+
+      if (warningRef.current) {
+        gsap.fromTo(
+          warningRef.current,
+          { autoAlpha: 0, y: -20 },
+          {
+            autoAlpha: 1,
+            y: 0,
+            duration: 0.8,
+            ease: "power2.out",
+            delay: 0.2,
+          }
+        );
+      }
     }, [parent]);
 
     gsap.fromTo(
@@ -67,6 +88,7 @@ export default function Navbar({
       { autoAlpha: 0, y: 20 },
       { autoAlpha: 1, y: 0 }
     );
+
     gsap.fromTo(
       iith.current,
       0.6,
@@ -78,10 +100,59 @@ export default function Navbar({
     );
 
     return () => ctx.revert();
-  }, []);
+  }, [preOrientation]);
 
   return (
     <div ref={parent}>
+      {/* Warning Banner */}
+      <Box
+        ref={warningRef}
+        sx={{
+          position: "fixed",
+          top: 0,
+          left: "50%",
+          transform: "translateX(-50%)",
+          width: { xs: "90%", sm: "80%", md: "70%" },
+          zIndex: 1000,
+          backgroundColor: "black",
+          border: "1px solid rgba(255, 255, 255, 0.2)",
+          borderRadius: "0 0 8px 8px",
+          boxShadow: "0 4px 20px rgba(0, 0, 0, 0.5)",
+        }}
+      >
+        <Box
+          sx={{
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            px: { xs: 2, md: 3 },
+            py: 1.5,
+          }}
+        >
+          <Box sx={{ display: "flex", alignItems: "center", gap: 2 }}>
+            <Warning 
+              sx={{ 
+                color: "white", 
+                fontSize: { xs: 20, md: 24 },
+              }} 
+            />
+            <Typography
+              sx={{
+                color: "white",
+                fontWeight: 600,
+                fontSize: { xs: "0.8rem", sm: "0.9rem", md: "0.95rem" },
+                lineHeight: 1.4,
+                letterSpacing: "0.3px",
+                textAlign: "center",
+              }}
+            >
+              <strong>IMPORTANT:</strong> E-Cell IIT Hyderabad does not engage with any external companies or individuals for internships or placements. 
+              All official partnerships are listed on our website. For verification or legitimacy of any program, please refer to our website or contact an official team member directly.
+            </Typography>
+          </Box>
+        </Box>
+      </Box>
+
       <br />
       <Box
         sx={{
@@ -144,84 +215,6 @@ export default function Navbar({
         <span>THINK |</span> <span>BUILD |</span> <span>INSPIRE</span>
       </div>}
 
-      {/* <div className={style.box} id="smLinks">
-        <a
-          className={style.pic}
-          href="https://www.instagram.com/ecell_iith/?hl=en"
-          target="_blank"
-          rel="noreferrer noopener"
-        >
-          <Image
-            className={style.images}
-            src="https://res.cloudinary.com/dwsverefw/image/upload/v1665696045/ecell/instagram_kxgpgt.png"
-            alt="Instagram Link"
-            width="20"
-            height="20"
-            layout="responsive"
-          />
-        </a>
-        <a
-          className={style.pic}
-          href="https://in.linkedin.com/company/entrepreneurship-cell-iit-hyderabad"
-          target="_blank"
-          rel="noreferrer noopener"
-        >
-          <Image
-            className={style.images}
-            src="https://res.cloudinary.com/dwsverefw/image/upload/v1665696046/ecell/linkedin_yylzcz.png"
-            alt="Linkedin link"
-            width="20"
-            height="20"
-            layout="responsive"
-          />
-        </a>
-        <a
-          className={style.pic}
-          href="https://twitter.com/ecell_iith"
-          target="_blank"
-          rel="noreferrer noopener"
-        >
-          <Image
-            className={style.images}
-            src="https://res.cloudinary.com/dwsverefw/image/upload/v1665696046/ecell/twitter_fmiaf4.png"
-            alt="Twitter Link"
-            width="20"
-            height="20"
-            layout="responsive"
-          />
-        </a>
-        <a
-          className={style.pic}
-          href="https://www.facebook.com/ecell.iithyd/"
-          target="_blank"
-          rel="noreferrer noopener"
-        >
-          <Image
-            className={style.images}
-            src="https://res.cloudinary.com/dwsverefw/image/upload/v1665696044/ecell/facebook_o9s1ml.png"
-            alt="Facebook Link"
-            width="20"
-            height="20"
-            layout="responsive"
-          />
-        </a>
-        <a
-          className={style.pic}
-          href="https://www.youtube.com/user/ecelliithyderabad"
-          target="_blank"
-          rel="noreferrer noopener"
-        >
-          <Image
-            className={style.images}
-            src="https://res.cloudinary.com/dwsverefw/image/upload/v1665696047/ecell/youtube_arknwl.png"
-            alt="Youtube Link"
-            width="18"
-            height="18"
-            layout="responsive"
-          />
-        </a>
-        <br />
-      </div> */}
       {desc && (
         <div className={style.container2} id="about">
           <div className={style.about}>ABOUT US</div> <br />

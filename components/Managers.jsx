@@ -210,7 +210,7 @@ const media_pub_info = [
 const corp_mark_info = [
   {
     name: 'Aryan S Raj',
-    url: '/team24/aryansraj.png',
+    url: '/team24/Aryansraj.png',
   },
   {
     name: 'Chinmayee Ramidi',
