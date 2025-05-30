@@ -27,8 +27,10 @@ export default function Navbar({
   const preDescr = useRef();
   const parent = useRef();
   const warningRef = useRef();
+  const scrollingTextRef = useRef();
 
   const matchesMd = useMediaQuery("(min-width:900px)");
+  const matchesSm = useMediaQuery("(min-width:600px)");
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -67,18 +69,36 @@ export default function Navbar({
         );
       }
 
+      // Warning banner entrance animation
       if (warningRef.current) {
         gsap.fromTo(
           warningRef.current,
-          { autoAlpha: 0, y: -20 },
+          { autoAlpha: 0, y: -50 },
           {
             autoAlpha: 1,
             y: 0,
-            duration: 0.8,
+            duration: 1,
             ease: "power2.out",
-            delay: 0.2,
+            delay: 0.5,
           }
         );
+      }
+
+      // Continuous scrolling text animation
+      if (scrollingTextRef.current) {
+        const scrollingText = scrollingTextRef.current;
+        const textWidth = scrollingText.scrollWidth;
+        const containerWidth = scrollingText.parentElement.clientWidth;
+        
+        gsap.set(scrollingText, { x: containerWidth });
+        
+        gsap.to(scrollingText, {
+          x: -textWidth,
+          duration: matchesMd ? 25 : 20, // Slower on desktop, faster on mobile
+          ease: "none",
+          repeat: -1,
+          delay: 1.5, // Start after entrance animation
+        });
       }
     }, [parent]);
 
@@ -100,141 +120,143 @@ export default function Navbar({
     );
 
     return () => ctx.revert();
-  }, [preOrientation]);
+  }, [preOrientation, matchesMd]);
+
+  const warningText = "⚠️ IMPORTANT: E-Cell IIT Hyderabad does not engage with any external companies or individuals for internships or placements. All official partnerships are listed on our website. For verification or legitimacy of any program, please refer to our website or contact an official team member directly. ⚠️";
 
   return (
     <div ref={parent}>
-      {/* Warning Banner */}
+      {/* Scrolling Warning Banner */}
       <Box
         ref={warningRef}
         sx={{
           position: "fixed",
           top: 0,
-          left: "50%",
-          transform: "translateX(-50%)",
-          width: { xs: "90%", sm: "80%", md: "70%" },
-          zIndex: 1000,
+          left: 0,
+          right: 0,
+          zIndex: 1001,
           backgroundColor: "black",
-          border: "1px solid rgba(255, 255, 255, 0.2)",
-          borderRadius: "0 0 8px 8px",
-          boxShadow: "0 4px 20px rgba(0, 0, 0, 0.5)",
+          borderBottom: "2px solid #ff6b6b",
+          boxShadow: "0 2px 10px rgba(0, 0, 0, 0.8)",
+          height: { xs: "40px", sm: "45px", md: "50px" },
+          overflow: "hidden",
+          display: "flex",
+          alignItems: "center",
         }}
       >
         <Box
           sx={{
+            position: "relative",
+            width: "100%",
+            height: "100%",
             display: "flex",
             alignItems: "center",
-            justifyContent: "center",
-            px: { xs: 2, md: 3 },
-            py: 1.5,
           }}
         >
-          <Box sx={{ display: "flex", alignItems: "center", gap: 2 }}>
-            <Warning 
-              sx={{ 
-                color: "white", 
-                fontSize: { xs: 20, md: 24 },
-              }} 
-            />
-            <Typography
-              sx={{
-                color: "white",
-                fontWeight: 600,
-                fontSize: { xs: "0.8rem", sm: "0.9rem", md: "0.95rem" },
-                lineHeight: 1.4,
-                letterSpacing: "0.3px",
-                textAlign: "center",
-              }}
-            >
-              <strong>IMPORTANT:</strong> E-Cell IIT Hyderabad does not engage with any external companies or individuals for internships or placements. 
-              All official partnerships are listed on our website. For verification or legitimacy of any program, please refer to our website or contact an official team member directly.
-            </Typography>
-          </Box>
+          <Typography
+            ref={scrollingTextRef}
+            sx={{
+              color: "white",
+              fontWeight: 600,
+              fontSize: { xs: "0.85rem", sm: "0.95rem", md: "1rem" },
+              whiteSpace: "nowrap",
+              letterSpacing: "0.5px",
+              textShadow: "0 1px 3px rgba(0,0,0,0.8)",
+              display: "flex",
+              alignItems: "center",
+              gap: 2,
+            }}
+          >
+            {warningText}
+          </Typography>
         </Box>
       </Box>
 
-      <br />
-      <Box
-        sx={{
-          position: "absolute",
-          width: "100%",
-          height: "100%",
-          background: "linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 1))",
-          top: 0,
-          zIndex: 1,
-        }}
-      ></Box>
-      <div className={style.image} id="ecellLogo">
+      {/* Main Content with top margin to avoid overlap */}
+      <Box sx={{ marginTop: { xs: "40px", sm: "45px", md: "50px" } }}>
+        <br />
+        <Box
+          sx={{
+            position: "absolute",
+            width: "100%",
+            height: "100%",
+            background: "linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 1))",
+            top: 0,
+            zIndex: 1,
+          }}
+        ></Box>
+        <div className={style.image} id="ecellLogo">
+          <Image
+            src="https://res.cloudinary.com/dwsverefw/image/upload/v1665696046/ecell/logo_dshics.png"
+            alt="Ecell Logo"
+            layout="fill"
+            objectFit="contain"
+            priority
+          />
+        </div>
         <Image
-          src="https://res.cloudinary.com/dwsverefw/image/upload/v1665696046/ecell/logo_dshics.png"
-          alt="Ecell Logo"
-          layout="fill"
-          objectFit="contain"
+          src="https://res.cloudinary.com/dwsverefw/image/upload/v1665878886/ecell/hostels_svd8y6.jpg"
           priority
+          layout="fill"
+          objectFit="cover"
+          sx={{ zIndex: 0 }}
+          alt="IIT Hyderabad Hostel"
         />
-      </div>
-      <Image
-        src="https://res.cloudinary.com/dwsverefw/image/upload/v1665878886/ecell/hostels_svd8y6.jpg"
-        priority
-        layout="fill"
-        objectFit="cover"
-        sx={{ zIndex: 0 }}
-        alt="IIT Hyderabad Hostel"
-      />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      {preOrientation ?
-        (<div className={`${style.title} ${style.titlePreOr}`} ref={headingRef}>
-          {heading} <br />
-          <div className={style.title} ref={headingRef} >
-            {subheading}
-          </div>
-          <br />
-        </div>)
-        : (!preOrientation && <div className={style.title} ref={headingRef}>
-          <>
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        {preOrientation ?
+          (<div className={`${style.title} ${style.titlePreOr}`} ref={headingRef}>
             {heading} <br />
-            {subheading}
-          </>
-          <br />
-        </div>)}
-      {!sponsors ? !preOrientation ? (
-        <div className={style.iit} ref={iith}>
-          IIT HYDERABAD <br />
-        </div>
-      ) : ("") : (
-        ""
-      )}
+            <div className={style.title} ref={headingRef} >
+              {subheading}
+            </div>
+            <br />
+          </div>)
+          : (!preOrientation && <div className={style.title} ref={headingRef}>
+            <>
+              {heading} <br />
+              {subheading}
+            </>
+            <br />
+          </div>)}
+        {!sponsors ? !preOrientation ? (
+          <div className={style.iit} ref={iith}>
+            IIT HYDERABAD <br />
+          </div>
+        ) : ("") : (
+          ""
+        )}
 
-      <br />
-      {!preOrientation && <div className={style.think} id="tagline">
-        <span>THINK |</span> <span>BUILD |</span> <span>INSPIRE</span>
-      </div>}
+        <br />
+        {!preOrientation && <div className={style.think} id="tagline">
+          <span>THINK |</span> <span>BUILD |</span> <span>INSPIRE</span>
+        </div>}
 
-      {desc && (
-        <div className={style.container2} id="about">
-          <div className={style.about}>ABOUT US</div> <br />
-          <Grid container spacing={2} justifyContent="center">
-            <Grid item xs={10} md={9} className={style.cont} id="desc">
-              We at IIT Hyderabad&#39;s Entrepreneurship Cell believe in
-              passion, hard effort, and an unquenchable drive for achievement.
-              It is a place that is the confluence of a billion sparks of ideas,
-              a place where the fire of passion mingles with the cold
-              calculation of the brain, and a place where dreams come true. We
-              are people who love nothing more than the thrill of coming up with
-              ideas, working them out into businesses and experiencing the
-              pleasure of watching it all come to fruition.
+        {desc && (
+          <div className={style.container2} id="about">
+            <div className={style.about}>ABOUT US</div> <br />
+            <Grid container spacing={2} justifyContent="center">
+              <Grid item xs={10} md={9} className={style.cont} id="desc">
+                We at IIT Hyderabad&#39;s Entrepreneurship Cell believe in
+                passion, hard effort, and an unquenchable drive for achievement.
+                It is a place that is the confluence of a billion sparks of ideas,
+                a place where the fire of passion mingles with the cold
+                calculation of the brain, and a place where dreams come true. We
+                are people who love nothing more than the thrill of coming up with
+                ideas, working them out into businesses and experiencing the
+                pleasure of watching it all come to fruition.
+              </Grid>
             </Grid>
-          </Grid>
-          <br />
-          <br />
-          <br />
-        </div>
-      )}
+            <br />
+            <br />
+            <br />
+          </div>
+        )}
+      </Box>
     </div>
   );
 }
