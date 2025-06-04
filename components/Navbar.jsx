@@ -68,7 +68,7 @@ const Navbar = ({ esummit = false }) => {
                 navRef.current.checked = false;
               }}
             >
-              CCS
+              Founders Hive
             </Link>
           </li>
 

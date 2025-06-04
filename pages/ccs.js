@@ -177,7 +177,7 @@ const FoundersHivePage = () => {
                     </div>
 
                     {/* Mentor Info */}
-                    <div className="bg-gradient-to-r from-purple-900/20 to-purple-800/20 rounded-2xl p-6 border border-purple-500/20">
+                    <div className="bg-gradient-to-r from-purple-900/20 to-purple-800/20 rounded-2xl p-6 border border-purple-500/20 mr-4">
                       <h3 className="text-2xl font-bold mb-2 text-purple-200">Featured Mentor</h3>
                       <h4 className="text-xl font-semibold mb-2">{sessions[activeTab].mentor.name}</h4>
                       <p className="text-purple-300 mb-3">{sessions[activeTab].mentor.role}</p>
@@ -197,7 +197,7 @@ const FoundersHivePage = () => {
                         return (
                           <div 
                             key={index}
-                            className="flex items-center p-4 bg-gradient-to-r from-gray-800/30 to-gray-900/30 rounded-xl border border-purple-500/10 hover:border-purple-500/30 transition-all duration-300 hover:scale-105"
+                            className="flex items-center justify-center p-4 bg-gradient-to-r from-gray-800/30 to-gray-900/30 rounded-xl border border-purple-500/10 hover:border-purple-500/30 transition-all duration-300 hover:scale-105"
                           >
                             <div className="w-12 h-12 bg-gradient-to-r from-purple-600 to-purple-500 rounded-xl flex items-center justify-center mr-4">
                               <Icon className="w-6 h-6 text-white" />
@@ -270,18 +270,13 @@ const FoundersHivePage = () => {
               
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
                 {[
-                  'gallery-1.jpg',
-                  'gallery-2.jpg', 
-                  'gallery-3.jpg',
-                  'gallery-4.jpg',
-                  'gallery-5.jpg',
-                  'gallery-6.jpg',
-                  'gallery-7.jpg',
-                  'gallery-8.jpg',
-                  'gallery-9.jpg',
-                  'gallery-10.jpg',
-                  'gallery-11.jpg',
-                  'gallery-12.jpg'
+                  'ccs-1.jpeg',
+                  'ccs-2.jpeg', 
+                  'ccs-3.jpeg',
+                  'ccs-4.jpeg',
+                  'ccs-5.jpeg',
+                  'ccs-6.jpeg',
+                  'ccs-7.jpeg',
                 ].map((image, index) => (
                   <div 
                     key={index}
@@ -310,10 +305,7 @@ const FoundersHivePage = () => {
                     {/* Fallback content for missing images */}
                     <div className="absolute inset-0 flex items-center justify-center opacity-50">
                       <div className="text-center">
-                        <div className="w-16 h-16 bg-gradient-to-r from-purple-600 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-3">
-                          <Users className="w-8 h-8 text-white" />
-                        </div>
-                        <p className="text-purple-200 text-sm font-medium">Event Moment {index + 1}</p>
+                        
                       </div>
                     </div>
                     
