@@ -85,7 +85,7 @@ const FoundersHivePage = () => {
               }`}
             >
               <h1 className="text-7xl md:text-9xl font-bold mb-6 bg-gradient-to-r from-white via-purple-200 to-purple-400 bg-clip-text text-transparent animate-pulse">
-                Founders' Hive
+                Founders Hive
               </h1>
               <div className="h-1 w-32 bg-gradient-to-r from-transparent via-purple-500 to-transparent mx-auto mb-8 animate-pulse"></div>
             </div>
@@ -265,7 +265,7 @@ const FoundersHivePage = () => {
                 Event Gallery
               </h2>
               <p className="text-center text-gray-400 mb-12 max-w-2xl mx-auto">
-                Capturing moments of innovation, collaboration, and entrepreneurial spirit from our Founders' Hive sessions
+                Capturing moments of innovation, collaboration, and entrepreneurial spirit from our Founders Hive sessions
               </p>
               
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
