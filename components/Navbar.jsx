@@ -62,6 +62,18 @@ const Navbar = ({ esummit = false }) => {
 
           <li className="navigation__item">
             <Link
+              href="/ccs"
+              className="navigation__link"
+              onClick={() => {
+                navRef.current.checked = false;
+              }}
+            >
+              CCS
+            </Link>
+          </li>
+
+          <li className="navigation__item">
+            <Link
               href="/esummit"
               className="navigation__link"
               onClick={() => {

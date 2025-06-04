@@ -166,8 +166,8 @@ function Emegrge() {
             left: "10px",
           }}
         >
-        
-      </Box>
+
+        </Box>
       </Box>
 
       <Modal
@@ -358,7 +358,7 @@ function Emegrge() {
 
         <Box
           sx={{
-             minHeight: "30vh",
+            minHeight: "30vh",
 
             display: "flex",
 
@@ -373,7 +373,7 @@ function Emegrge() {
             zIndex: "2",
           }}
         >
-         
+
 
           <Typography
             variant="body1"
@@ -389,11 +389,11 @@ function Emegrge() {
               zIndex: "2",
             }}
           >
-           The 2nd edition of E-Merge is set to become the hub of meaningful conversations and impactful connections, taking place on 20th October at IIT Hyderabad. This premier event of the Entrepreneurship Cell, IIT Hyderabad is a cornerstone in the evolving landscape of social enterprise and sustainability, catering to passionate students, emerging entrepreneurs, and established leaders alike.
+            The 2nd edition of E-Merge is set to become the hub of meaningful conversations and impactful connections, taking place on 20th October at IIT Hyderabad. This premier event of the Entrepreneurship Cell, IIT Hyderabad is a cornerstone in the evolving landscape of social enterprise and sustainability, catering to passionate students, emerging entrepreneurs, and established leaders alike.
 
           </Typography>
         </Box>
-        
+
         <Box
           sx={{
             backgroundImage:
@@ -405,13 +405,13 @@ function Emegrge() {
 
             width: "100%",
 
-            display:"none",
+            display: "none",
 
             position: "absolute",
 
             bottom: "0",
 
-            top:"10%",
+            top: "10%",
 
             left: "0",
 
@@ -422,88 +422,87 @@ function Emegrge() {
       </Box>
       <TestCards />
       <Typography
-  variant="body1"
-  color="white"
-  sx={{
-    fontFamily: "Montserrat",
-    textAlign: "center",
-    
-    paddingInline: isLargeScreen ? "6rem" : "3rem",
-    fontSize: isLargeScreen ? "2rem" : "1.2rem",
-    zIndex: "2",
-  }}
->
-  
-  <Typography
-    variant="h3" 
-    color="white"
-    fontFamily="Montserrat"
-    fontWeight="bold" 
-    marginBottom="1rem" 
-    marginTop="2rem"
-  >
-   Don’t Miss Out – Join Us!
-  </Typography>
+        variant="body1"
+        color="white"
+        sx={{
+          fontFamily: "Montserrat",
+          textAlign: "center",
 
-  
-  <Button
-    onClick={handleOpen}
-    sx={{
-      padding: padding,
-      textAlign: "center",
-      marginTop: "2vw",
-      marginBottom:"2rem",
-      fontSize: isLargeScreen ? "1.3rem" : "1rem",
-      textTransform: "capitalize",
-      fontWeight: "lighter",
-      border: "2.439px solid #5FD2D8",
-      borderRadius: "10px",
-      boxShadow: "0px 0px 27.979px 3.497px #61E0FD;",
-      color: "white",
-    }}
-  >
-    <Typography
-      color="#FFF"
-      textAlign="center"
-      fontFamily="Montserrat"
-      fontSize="20px"
-      fontStyle="normal"
-      fontWeight="500"
-      lineHeight="normal"
-      textTransform="capitalize"
-      
-    >
-      Register Here
-    </Typography>
-  </Button>
-</Typography>
-<Carousel
-              animation="fade"
-              duration={10}
-              autoPlay={true}
-              navButtonsAlwaysInvisible={true}
-              infiniteLoop={true}
-            >
-              {gallery.map((i, index) => {
-                return (
-                  <center key={index}>
-                    <BorderContainer
-                      heightcss="h-[14rem] sm:h-[30rem] lg:h-[32rem] 2xl:h-[36rem]"
-                      widthcss="w-[21rem] sm:w-[45rem] lg:w-[48rem] 2xl:w-[54rem]"
-                      marginleftcss="ml-[14rem] sm:ml-[45rem] lg:ml-[48rem] 2xl:ml-[54rem]"
-                      margintopcss="mt-[21rem] sm:mt-[30rem] lg:mt-[32rem] 2xl:mt-[36rem] "
-                    >
-                      <div className="flex flex-row gap-[2rem] align-center justify-center my-[auto] mx-[8%] relative w-full z-[-12]">
-                        <div className="flex flex-[2] items-center">
-                          <img src={i} />
-                        </div>
-                      </div>
-                    </BorderContainer>
-                  </center>
-                );
-              })}
-            </Carousel>
-           
+          paddingInline: isLargeScreen ? "6rem" : "3rem",
+          fontSize: isLargeScreen ? "2rem" : "1.2rem",
+          zIndex: "2",
+        }}
+      >
+
+        <Typography
+          variant="h3"
+          color="white"
+          fontFamily="Montserrat"
+          fontWeight="bold"
+          marginBottom="1rem"
+          marginTop="2rem"
+        >
+          Don’t Miss Out – Join Us!
+        </Typography>
+
+
+        <Button
+          onClick={handleOpen}
+          sx={{
+            padding: padding,
+            textAlign: "center",
+            marginTop: "2vw",
+            marginBottom: "2rem",
+            fontSize: isLargeScreen ? "1.3rem" : "1rem",
+            textTransform: "capitalize",
+            fontWeight: "lighter",
+            border: "2.439px solid #5FD2D8",
+            borderRadius: "10px",
+            boxShadow: "0px 0px 27.979px 3.497px #61E0FD;",
+            color: "white",
+          }}
+        >
+          <Typography
+            color="#FFF"
+            textAlign="center"
+            fontFamily="Montserrat"
+            fontSize="20px"
+            fontStyle="normal"
+            fontWeight="500"
+            lineHeight="normal"
+            textTransform="capitalize"
+
+          >
+            Register Here
+          </Typography>
+        </Button>
+      </Typography>
+      <Carousel
+        animation="fade"
+        duration={10}
+        autoPlay={true}
+        navButtonsAlwaysInvisible={true}
+        infiniteLoop={true}
+      >
+        {gallery.map((i, index) => {
+          return (
+            <center key={index}>
+              <BorderContainer
+                heightcss="h-[14rem] sm:h-[30rem] lg:h-[32rem] 2xl:h-[36rem]"
+                widthcss="w-[21rem] sm:w-[45rem] lg:w-[48rem] 2xl:w-[54rem]"
+                marginleftcss="ml-[14rem] sm:ml-[45rem] lg:ml-[48rem] 2xl:ml-[54rem]"
+                margintopcss="mt-[21rem] sm:mt-[30rem] lg:mt-[32rem] 2xl:mt-[36rem] "
+              >
+                <div className="flex flex-row gap-[2rem] align-center justify-center my-[auto] mx-[8%] relative w-full z-[-12]">
+                  <div className="flex flex-[2] items-center">
+                    <img src={i} />
+                  </div>
+                </div>
+              </BorderContainer>
+            </center>
+          );
+        })}
+      </Carousel>
 
     </div>
   );
