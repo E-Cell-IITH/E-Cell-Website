@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Calendar, MapPin, Users, Clock, ChevronDown, Star, Lightbulb, Award } from 'lucide-react';
+import Button from "@mui/material/Button";
 
 const FoundersHivePage = () => {
   const [activeTab, setActiveTab] = useState('bengaluru');
@@ -22,6 +23,7 @@ const FoundersHivePage = () => {
 
     return () => observer.disconnect();
   }, []);
+
 
   const sessions = {
     bengaluru: {
@@ -97,6 +99,28 @@ const FoundersHivePage = () => {
                 isVisible['hero-subtitle'] ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
               }`}
             >
+            <Button 
+              variant='contained'
+              sx={{
+                background: 'linear-gradient(90deg, #9C27B0, #E040FB)',
+                color: 'white',
+                padding: '16px 40px',
+                fontFamily: "Montserrat",
+                marginBottom: "20px",
+                borderRadius: "5%",
+                fontSize: '1rem',
+                boxShadow: '0 0 15px rgba(156, 39, 176, 0.7), 0 0 30px rgba(224, 64, 251, 0.5)',
+                '&:hover':{
+                  background: "none",
+                  boxShadow: '0 0 15px rgba(156, 39, 176, 0.7), 0 0 30px rgba(224, 64, 251, 0.5)',
+                },
+              }}
+              onClick={() => {
+                window.open("https://forms.gle/4eZC61f8fVBicd428")
+              }}
+            >
+              Register Here 
+            </Button>
               <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
                 Exclusive networking sessions bringing together top student founders,<br />
                 experienced entrepreneurs, and mentors in intimate settings
@@ -219,7 +243,22 @@ const FoundersHivePage = () => {
             </div>
           </div>
         </section>
-
+        {/*Upcoming Sessions*/}
+        <section className="bg-gradient-to-br from-gray-900/50 to-black/50          rounded-3xl border border-purple-500/20 backdrop-blur-sm p-8 md:p-12">
+            <div className="flex flex-col gap-4">
+              <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-white to-purple-200 bg-clip-text text-transparent">
+                Upcoming Sessions
+              </h2>
+              <span className="text-xl font-primary mb-4 ml-8 bg-gradient-to-r from-white to-purple-200 bg-clip-text text-transparent">
+                Bengaluru : 5th July 2025</span>
+              <span className="text-xl font-primary mb-4 ml-8 bg-gradient-to-r from-white to-purple-200 bg-clip-text text-transparent">
+                Hyderabad : To be announced
+              </span>
+              <span className="text-xl font-primary mb-4 ml-8 bg-gradient-to-r from-white to-purple-200 bg-clip-text text-transparent">
+                Pune : To be announced
+              </span>
+            </div>
+        </section>
         {/* Startup Concepts */}
         <section className="py-20 px-6">
           <div className="max-w-6xl mx-auto">
@@ -274,8 +313,6 @@ const FoundersHivePage = () => {
                   'ccs-2.jpeg', 
                   'ccs-3.jpeg',
                   'ccs-4.jpeg',
-                  'ccs-5.jpeg',
-                  'ccs-6.jpeg',
                   'ccs-7.jpeg',
                 ].map((image, index) => (
                   <div 
