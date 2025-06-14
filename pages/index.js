@@ -3,13 +3,13 @@ import First from "../components/first.js";
 import Second from "../components/second";
 import Third from "../components/third";
 import Fourth from "../components/fourth.js";
-import Navbar from "../components/first";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import Head from "next/head";
 
 import { BounceLoader } from "react-spinners";
 import { Box } from "@mui/system";
 import SpeakerCarousel from "../components/SpeakerCarousel.jsx";
+import Navbar from "../components/Navbar.jsx";
 
 export default function Home() {
   const [loading, setLoading] = React.useState(true);
