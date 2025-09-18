@@ -50,7 +50,7 @@ const Navbar = ({ esummit = false }) => {
           </li> */}
           <li className="navigation__item">
             <Link
-              href="/team"
+              href="https://ecelliith.org.in/team"
               className="navigation__link"
               onClick={() => {
                 navRef.current.checked = false;
@@ -98,19 +98,6 @@ const Navbar = ({ esummit = false }) => {
 
           <li className="navigation__item">
             <Link
-              href="/mun"
-              className="navigation__link"
-              onClick={() => {
-                navRef.current.checked = false;
-              }}
-            >
-              {" "}
-              MUN
-            </Link>
-          </li>
-
-          <li className="navigation__item">
-            <Link
               href="/sponsor"
               className="navigation__link"
               onClick={() => {
@@ -146,7 +133,7 @@ const Navbar = ({ esummit = false }) => {
           </li>
           <li className="navigation__item">
             <Link
-              href="/emerge"
+              href="https://ecelliith.org.in/emerge"
               className="navigation__link"
               onClick={() => {
                 navRef.current.checked = false;
